@@ -164,7 +164,7 @@ with st.expander("Step 1: Student & Session Info", expanded=True):
             help="You can edit the preset text here if needed for this specific student."
         )
 
-st.markdown("### Step 2: Select Achieved PCs")
+st.markdown("#### Step 2: Select Achieved PCs")
 selected_pcs = []
 tabs = st.tabs(list(NOS_DATA.keys()))
 for i, unit_key in enumerate(NOS_DATA.keys()):
@@ -175,7 +175,24 @@ for i, unit_key in enumerate(NOS_DATA.keys()):
                     if st.checkbox(pc, key=f"{unit_key}_{lo_key}_{pc}"):
                         selected_pcs.append(f"{unit_key.split(':')[0]} - {pc}")
 
-learning_moment = st.text_area("Step 3: Learning Moment", placeholder="What did they struggle with? What did they say? What specific tool did they use? (e.g., 'Suleman struggled with the crimping tool at first but mastered it by the third try.')")
+# st.markdown("---")
+st.markdown("#### Step 3: Unique Learning Moment / Hook")
+
+# The Formula Guide (A visual reminder for the user)
+st.info("""
+**💡 Pro-Tip for Unique Reports:** Use the 'Observation Formula' for better AI results:
+**[Action]** + **[Specific Tool/Component]** + **[Specific Result or Quote]**
+*Example: 'Struggled with the RJ45 crimping tool at first but corrected the pin alignment manually after a second attempt.'*
+""")
+
+learning_moment = st.text_area(
+    "Observation Notes", 
+    placeholder="What did this specific student do, say, or struggle with during this session?",
+    height=150,
+    help="This is the 'flavor' that makes this report different from the others. Even 1-2 sentences here will make the AI output much more realistic."
+)
+
+# learning_moment = st.text_area("Step 3: Learning Moment", placeholder="What did they struggle with? What did they say? What specific tool did they use? (e.g., 'Suleman struggled with the crimping tool at first but mastered it by the third try.')")
 
 # --- GENERATION LOGIC ---
 if st.button("Generate & Finalize Report"):
