@@ -102,7 +102,7 @@ def save_report_to_history(name, trade_id, unit_codes, text, date):
 
 # --- SIDEBAR ---
 st.sidebar.title("Configuration")
-api_key = st.sidebar.text_input("AIzaSyBqxd-ricU_Mp--Un3e2l5GpNRI5-mFg88", type="password")
+api_key = st.sidebar.text_input("key", type="password")
 
 if api_key:
     try:
