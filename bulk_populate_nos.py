@@ -1,325 +1,177 @@
 import sqlite3
 
-def populate_nsq_data():
+def populate_nsq_social_media_data():
     conn = sqlite3.connect('nsq_audit.db')
     cursor = conn.cursor()
 
     # --- INSERT TRADE ---
-    # Updated to Level 2 based on the provided document
-    cursor.execute("INSERT INTO trades (id, name) VALUES (2, 'NSQ Level 2 Computer Hardware Repairs & Maintenance')")
-    trade_id = 2
+    cursor.execute("INSERT INTO trades (id, name) VALUES (3, 'NSQ Level 2 Social Media Contents Creation and Management')")
+    trade_id = 3
     
     # --- DATA STRUCTURE ---
-    # Format: [Unit Code, Unit Title, [ (LO_Num, LO_Desc, [ (PC_Code, PC_Desc) ]) ]]
     full_nos = [
-        ["ICT/CMR/001/L2", "Occupational Health and Safety in Workplace Environment", [
-            ("LO 1", "Understand Occupational Health and Safety Issues in Computer Operations and Maintenance", [
-                ("PC 1.1", "Explain the importance of wearing clean and appropriate PPE."),
-                ("PC 1.2", "Know workplace safety compliance with regulations, including the Nigerian Factory Health and Safety Act of 2015."),
-                ("PC 1.3", "Demonstrate treatment of cuts, grazes, and wounds."),
-                ("PC 1.4", "Explain the process of reporting accidents, illnesses, and infections."),
-                ("PC 1.5", "Explain the importance of maintaining good personal hygiene."),
-                ("PC 1.6", "Explain the Nigerian Factory Health and Safety Act of 2015 specifically regarding computer operations."),
-                ("PC 1.7", "Explain how to follow general hygiene rules."),
-                ("PC 1.8", "Identify appropriate PPE for various body parts and regulatory protection.")
+        ["ICT/SMC/001/L2", "Occupational Health and Safety", [
+            ("LO 1", "Know Health and Safety Regulations and Requirements", [
+                ("PC 1.1", "Explain what health and safety regulations are and why they are important in the workplace."),
+                ("PC 1.2", "Identify the basic health and safety rules that must be followed in different work environments."),
+                ("PC 1.3", "Follow health and safety guidelines to prevent accidents, and ensure a safe working environment.")
             ]),
-            ("LO 2", "Observe Safety and Security in the Workplace", [
-                ("PC 2.1", "Explain the importance of healthy, safe, and secure workplaces."),
-                ("PC 2.2", "Explain how to report accidents or near misses to appropriate personnel."),
-                ("PC 2.3", "Carry out pollution control and waste disposal of organic and inorganic wastes.")
+            ("LO 2", "Identify and Mitigate Workplace Hazards", [
+                ("PC 2.1", "Recognize common hazards in the workplace, including physical, chemical, and ergonomic risks."),
+                ("PC 2.2", "Explain the importance of hazard prevention and safety measures."),
+                ("PC 2.3", "Identify how to take appropriate actions to reduce risks and maintain a safe working environment.")
             ]),
-            ("LO 3", "Understand Hazards Identification and Mitigation Methods in a Workplace Environment", [
-                ("PC 3.1", "Identify hazards or potential hazards."),
-                ("PC 3.2", "State where to find information about health and workplace hazards."),
-                ("PC 3.3", "Describe types of workplace hazards and how to deal with them."),
-                ("PC 3.4", "Identify hazards that can be addressed personally."),
-                ("PC 3.5", "Identify hazards that should be reported to appropriate personnel."),
-                ("PC 3.6", "Identify hazards that should be reported."),
-                ("PC 3.7", "Identify risk elements in your own workplace environment."),
-                ("PC 3.8", "Describe organizational security procedures and their importance."),
-                ("PC 3.9", "Follow procedures for raising awareness of hazards.")
-            ]),
-            ("LO 4", "Demonstrate Emergency Procedures in a Workplace", [
-                ("PC 4.1", "Describe types of emergencies in the workplace."),
-                ("PC 4.2", "Explain how to locate first-aid equipment and the registered first-aider."),
-                ("PC 4.3", "Describe organizational emergency procedures, particularly for fire."),
-                ("PC 4.4", "State possible causes for fire in the workplace."),
-                ("PC 4.5", "Describe how to minimize the possibility of fire."),
-                ("PC 4.6", "Explain where to find alarms and how to set them off.")
+            ("LO 3", "Know how to Implement Safe Working Practices and Emergency Procedures", [
+                ("PC 3.1", "Describe the importance of following safety guidelines to prevent accidents and injuries."),
+                ("PC 3.2", "Describe the correct steps to take in case of emergencies such as fire, medical incidents, or equipment failures."),
+                ("PC 3.3", "Demonstrate how to follow workplace safety rules and respond effectively to emergency situations.")
             ])
         ]],
-        ["ICT/CMR/002/L2", "Communication", [
-            ("LO 1", "Demonstrate how to Communicate Clearly and Concisely", [
-                ("PC 1.1", "Describe the principles of effective communications in a technical manner."),
-                ("PC 1.2", "Explain how to effectively communicate with clients to understand their needs and provide technical support."),
-                ("PC 1.3", "Explain how to clearly and concisely communicate technical information to colleagues, clients, and stakeholders.")
+        ["ICT/SMC/002/L2", "Teamwork", [
+            ("LO 1", "Know the Principles of Effective Teamwork", [
+                ("PC 1.1", "Identify the characteristics of a successful team and the roles each member plays in social media management."),
+                ("PC 1.2", "Explain the importance of clear communication, active listening, and mutual respect in a team setting."),
+                ("PC 2.3", "Identify how to take appropriate actions to reduce risks and maintain a safe working environment."),
+                ("PC 1.3", "Describe different team dynamics, including collaboration, decision-making and accountability in social media management.")
             ]),
-            ("LO 2", "Understand the Concept of Effective Listening", [
-                ("PC 2.1", "Describe the key elements of effective listening (Attention, Concentration, Comprehension, Retention, and Response)."),
-                ("PC 2.2", "Explain the barriers to effective listening (Distractions, Biases, Language, and Emotional barriers)."),
-                ("PC 2.3", "Describe the benefits of effective listening, such as improved communication and increased customer satisfaction.")
+            ("LO 2", "Demonstrate Problem-Solving and Conflict Resolution Skills in Team Settings", [
+                ("PC 2.1", "Participate in team discussions on how to analyze social media management."),
+                ("PC 2.2", "Address conflicts that may arise within the team in a professional manner, using mediation and negotiation techniques to reach a resolution."),
+                ("PC 2.3", "Evaluate the effectiveness of team problem-solving strategies and suggest improvements to enhance team performance in future projects.")
             ]),
-            ("LO 3", "Understand Effective Technical Documentation", [
-                ("PC 3.1", "Identify how to document technical papers accurately and clearly."),
-                ("PC 3.2", "Inform on the creation of clear and concise user manuals."),
-                ("PC 3.3", "Describe how to maintain up-to-date records of system configurations and maintenance activities."),
-                ("PC 3.4", "Explain how to create visual aids like diagrams and flowcharts to support documentation."),
-                ("PC 3.5", "Describe how to revise and update technical documentation regularly."),
-                ("PC 3.6", "Describe how to ensure documentation complies with relevant industry standards."),
-                ("PC 3.7", "Describe how to ensure documentation is accessible to all audiences, including individuals with disabilities.")
-            ]),
-            ("LO 4", "Understand Emergency Procedures in Workplace", [
-                ("PC 4.1", "Describe how to communicate effectively with colleagues and customers face-to-face."),
-                ("PC 4.2", "Demonstrate effective communication over the phone and via video conferencing."),
-                ("PC 4.3", "Explain how to communicate effectively via email and messaging platforms."),
-                ("PC 4.4", "Explain how to effectively communicate technical information through presentations and reports."),
-                ("PC 4.5", "Describe how to communicate feedback and escalate issues effectively.")
-            ]),
-            ("LO 5", "Understand the Assessment Criteria for Effective Communication", [
-                ("PC 5.1", "Explain how to communicate the accuracy and clarity of technical information."),
-                ("PC 5.2", "Describe how to adapt a communication style to suit different audiences and contexts."),
-                ("PC 5.3", "Explain the importance of timeliness in responding to messages.")
-            ]),
-            ("LO 6", "Knowledge and Understanding", [
-                ("PC 6.1", "Describe the principles of effective communication."),
-                ("PC 6.2", "Explain technical terminology and concepts (e.g., CPU, RAM, Boot Process, Troubleshooting)."),
-                ("PC 6.4", "Describe communication protocols and etiquette, such as active listening, respectful tone, and proper formatting."),
-                ("PC 6.5", "Explain the importance of effective communication in technical environments.")
+            ("LO 3", "Exhibit Leadership and Support Team Development", [
+                ("PC 3.1", "Organize team tasks and delegate responsibilities according to team members' strengths and skills."),
+                ("PC 3.2", "Provide constructive feedback and support to team members, encouraging continuous improvement and skill development."),
+                ("PC 3.3", "Foster a positive team environment by promoting inclusivity, recognizing individual contributions and motivating the team to achieve set goals.")
             ])
         ]],
-        ["ICT/CMR/003/L2", "Teamwork", [
-            ("LO 1", "Understand how to work collaboratively with others", [
-                ("PC 1.1", "Demonstrate a positive and professional attitude by being respectful, punctual, and reliable."),
-                ("PC 1.2", "Explain how to use active listening skills, including maintaining eye contact and asking clarifying questions."),
-                ("PC 1.3", "Explain how to provide and receive feedback, including constructive criticism and positive reinforcement."),
-                ("PC 1.4", "Explain how to work effectively in a team to achieve common goals."),
-                ("PC 1.5", "Describe how to manage conflicts by resolving issues constructively and respectfully.")
+        ["ICT/SMC/003/L2", "Communication", [
+            ("LO 1", "Know the Importance of Effective Communication in Workplace", [
+                ("PC 1.1", "Explain the impact of clear and concise communication on team performance, project success and client satisfaction."),
+                ("PC 1.2", "Identify barriers to effective communication in a technical workplace and strategies to overcome them."),
+                ("PC 1.3", "Describe how cultural differences, language and technical jargon can influence communication in a diverse workplace.")
             ]),
-            ("LO 2", "Understand how to Communicate Effectively with Team members", [
-                ("PC 2.1", "Explain key communication skills, including information sharing and providing feedback within a team."),
-                ("PC 2.2", "Demonstrate professionalism through a positive attitude, respect, punctuality, and reliability.")
+            ("LO 2", "Know Effective Verbal and Non-Verbal Communication Skills", [
+                ("PC 2.1", "Demonstrate verbally with appropriate tone, clarity and technical language when communicating with different stakeholders."),
+                ("PC 2.2", "Demonstrate active listening by accurately interpreting and responding to verbal and non-verbal cues during discussions and meetings."),
+                ("PC 2.3", "Apply non-verbal communication techniques, such as body language and eye contact, to enhance message delivery and understanding.")
             ]),
-            ("LO 3", "Know how to Support Team members", [
-                ("PC 3.1", "Describe problem-solving skills, including key inputs and ideas essential for team members."),
-                ("PC 3.2", "Explain how to adapt to changing circumstances, such as shifting priorities, deadlines, and team dynamics."),
-                ("PC 3.3", "Demonstrate effective teamwork skills, including communication, collaboration, and conflict resolution.")
-            ]),
-            ("LO 4", "Know how to respond to workplace emergence", [
-                ("PC 4.1", "Describe types of emergencies in the workplace."),
-                ("PC 4.2", "Explain how to find first-aid equipment and identify the registered first-aider in the workplace."),
-                ("PC 4.3", "Describe organizational emergency procedures, especially for fire incidents, and how to follow them correctly."),
-                ("PC 4.4", "State possible causes for fire in the workplace."),
-                ("PC 4.5", "Describe how to minimize the possibility of fire in the workplace."),
-                ("PC 4.6", "Explain where to find alarms and how to set them off.")
-            ]),
-            ("LO 5", "Know how to Respect and Value Diversity, Equity, and Inclusivity in a Team", [
-                ("PC 5.1", "Demonstrate an understanding of diverse cultures, customs, and values, and their applications in the workplace."),
-                ("PC 5.2", "Describe how to build and maintain relationships with diverse stakeholders, including colleagues, clients, and community partners."),
-                ("PC 5.3", "Explain how to navigate conflicts and difficult conversations in a respectful, empathetic, and inclusive manner."),
-                ("PC 5.4", "Describe how to foster a culture of feedback and continuous learning where everyone feels valued, heard, and supported."),
-                ("PC 5.5", "Explain how to advocate for diversity, equity, and inclusion in the workplace and the broader community.")
-            ]),
-            ("LO 6", "Demonstrate how to coordinate team members effectively", [
-                ("PC 6.1", "Explain team structures and the roles of each member."),
-                ("PC 6.2", "Describe the effective use of communication methods, including verbal, written, and electronic communication."),
-                ("PC 6.3", "Explain how conflict resolution and negotiation techniques are applied in a team setting.")
-            ]),
-            ("LO 7", "Describe the Knowledge and Understanding of Teamwork", [
-                ("PC 7.1", "Explain the principles of effective teamwork in a project or organization."),
-                ("PC 7.2", "Describe the importance of communication, collaboration, and adaptability in team environments."),
-                ("PC 7.3", "Explain strategies for managing conflict and building trust within teams."),
-                ("PC 7.4", "Describe the benefits of diversity and inclusivity in team settings.")
-            ]),
-            ("LO 8", "Describe the Evidence Requirements for Teamwork Engagements", [
-                ("PC 8.1", "Describe teamwork in a simulated or real-work environment."),
-                ("PC 8.2", "Explain how to obtain written or verbal feedback from team members or supervisors."),
-                ("PC 8.3", "Describe how to document team meetings, decisions, and actions."),
-                ("PC 8.4", "Explain how to reflect on personal teamwork skills and identify areas for improvement.")
+            ("LO 3", "Recognize Digital Tools for Professional Communication", [
+                ("PC 3.1", "Use appropriate digital communication tools to exchange information effectively within a network support team."),
+                ("PC 3.2", "Compose clear and professional emails, reports and other written correspondences to ensure effective communication with stakeholders."),
+                ("PC 3.3", "Ensure confidentiality and security of sensitive information when communicating through digital platforms.")
             ])
         ]],
-        ["ICT/CMR/004/L2", "Disassemble and Assemble Computers", [
-            ("LO 1", "Disassemble and Assemble Personal Computers", [
-                ("PC 1.1", "Demonstrate how to boot the computer systems (cold booting)."),
-                ("PC 1.2", "Demonstrate how to disconnect external cables, including data and power cables."),
-                ("PC 1.3", "Demonstrate how to discharge static electricity using anti-static straps or alternative methods."),
-                ("PC 1.4", "Show how to remove the computer cover."),
-                ("PC 1.5", "Remove key components including front panel, HDD, SSD, power pack, motherboard, CPU, cooling fan, and RAM."),
-                ("PC 1.6", "Connect computer components and replace the computer cover.")
+        ["ICT/SMC/006/L2", "Content Strategy Development", [
+            ("LO 1", "Know the importance of a content calendar", [
+                ("PC 1.1", "Explain a content calendar."),
+                ("PC 1.2", "Identify simple steps to create a content calendar."),
+                ("PC 1.3", "Assemble a weekly content calendar using any content type.")
             ]),
-            ("LO 2", "Replace Motherboards and Processors", [
-                ("PC 2.1", "Remove the old motherboard."),
-                ("PC 2.2", "Identify matching characteristics of the new and old motherboards."),
-                ("PC 2.3", "Replace the old motherboard with the new one."),
-                ("PC 2.4", "Assess the performance of the old processor."),
-                ("PC 2.5", "Replace the old processor with the new one.")
+            ("LO 2", "Know different types of content", [
+                ("PC 2.1", "Explain types of content."),
+                ("PC 2.2", "Identify types of content (Education, Entertainment, Promotion, Broadcast)."),
+                ("PC 2.3", "Explain the importance of using different types of content.")
             ]),
-            ("LO 3", "Replacement of Mass Storage Devices and Random Access Memory", [
-                ("PC 3.1", "Identify factors when replacing mass storage and RAM."),
-                ("PC 3.2", "Remove mass storage devices from the case."),
-                ("PC 3.3", "Replace the integrated drive electronic (IDE) cable."),
-                ("PC 3.4", "Install an internal storage device (HDD/SSD)."),
-                ("PC 3.5", "Replace the IDE cable (duplicate)."),
-                ("PC 3.6", "Install an internal storage device (duplicate).")
+            ("LO 3", "Know how to create trending and viral content", [
+                ("PC 3.1", "Explain what a viral/trending content is."),
+                ("PC 3.2", "Demonstrate ways to create trending topics online."),
+                ("PC 3.3", "Identify online tools to create trending topics in any niche.")
+            ]),
+            ("LO 4", "Know how to plan long-term content strategies", [
+                ("PC 4.1", "Explain long-term content strategies in social media."),
+                ("PC 4.2", "Demonstrate how to plan long-term content strategies."),
+                ("PC 4.3", "Discuss the tools used in planning long term content strategies.")
             ])
         ]],
-        ["ICT/CMR/005/L2", "Faults Trace, Measurement, and Troubleshooting in Computers", [
-            ("LO 1", "Demonstrate Knowledge of Measuring Instruments in Computer Hardware Maintenance and Repairs", [
-                ("PC 1.1", "Explain technical terms including Voltage, Current, Resistance, Capacitance, Inductance, etc."),
-                ("PC 1.2", "Describe measuring instruments such as Analog and Digital Multimeters, Logic probe Testers, etc."),
-                ("PC 1.3", "Apply these measuring instruments to trace faults.")
+        ["ICT/SMC/006/L1", "Brand Identity and Messaging", [
+            ("LO 1", "Know how to create a brand voice and personality", [
+                ("PC 1.1", "Explain a brand’s personality."),
+                ("PC 1.2", "Develop three short social media captions that reflect a unique brand voice."),
+                ("PC 1.3", "Select words for a brand’s voice.")
             ]),
-            ("LO 2", "Apply Basic Troubleshooting Techniques", [
-                ("PC 2.1", "Measure the AC, DC, and Power units of computer hardware."),
-                ("PC 2.2", "Test the functionality of all internal and external components and cables."),
-                ("PC 2.3", "Identify basic error messages and their meanings."),
-                ("PC 2.4", "Identify faulty computer sounds (beep codes) and their meanings."),
-                ("PC 2.5", "Search the World Wide Web for problem-solving tips and tutorials.")
+            ("LO 2", "Know the types of visual identity elements", [
+                ("PC 2.1", "Explain visual identity elements."),
+                ("PC 2.2", "Identify how to use visual identity elements tools (Styles, Fonts, Logos)."),
+                ("PC 2.3", "Demonstrate with any visual identity element how to create a post.")
             ]),
-            ("LO 3", "Perform Testing on Measuring Instruments In Computer Hardware Maintenance and Repairs", [
-                ("PC 3.1", "Perform continuity tests on fuses and cables."),
-                ("PC 3.2", "Measure voltage across the 20-pin ATX Power Connector and other internal drive connectors."),
-                ("PC 3.3", "Follow the specific procedures for testing components as outlined in installation manuals.")
+            ("LO 3", "Know how to write an engaging post and caption for different platforms", [
+                ("PC 3.1", "Identify the elements that makes a post engaging."),
+                ("PC 3.2", "Differentiate between a formal and a casual post."),
+                ("PC 3.3", "Develop a short post for different social media platforms.")
+            ]),
+            ("LO 4", "Know how to adapt your writing style to match each platform’s audience", [
+                ("PC 4.1", "Identify different writing styles for different platforms."),
+                ("PC 4.2", "Demonstrate ways to modify a post from a platform to fit another platform."),
+                ("PC 4.3", "Identify ways to keep a brand’s style consistent across platforms.")
             ])
         ]],
-        ["ICT/CMR/006/L2", "General Maintenance and Repairs of Faulty Computers", [
-            ("LO 1", "Trace Faults During Computer Hardware Maintenance and Repairs", [
-                ("PC 1.1", "Perform the Basic Troubleshooting Procedures."),
-                ("PC 1.2", "Use Measuring Instruments to Trace Faults."),
-                ("PC 1.3", "Locate Faulty Components by Visual Inspection, Open, or Short Circuit Test."),
-                ("PC 1.4", "Use Multimeters to check the Current flow and Voltage on the Motherboard."),
-                ("PC 1.5", "Replace Module or Components with other Spares to eliminate Faults.")
+        ["ICT/SMC/006/L2", "Analytics and Performance Tracking", [
+            ("LO 1", "Know social media analytics", [
+                ("PC 1.1", "Explain social media analytic tools."),
+                ("PC 1.2", "Identify key features in any of the major social media that help improve post performance."),
+                ("PC 1.3", "Demonstrate with a social media analytic tool to check post performance.")
             ]),
-            ("LO 2", "Clean Computer Systems During Hardware Maintenance and Repairs", [
-                ("PC 2.1", "Identify cleaning methods: Blowing, Dusting/Brushing, and Applying solutions."),
-                ("PC 2.2", "Disassemble the Computer Systems for Cleaning or washing."),
-                ("PC 2.3", "Identify the Basic Tools Required: Non-lint Cloth, Isopropyl alcohol, Portable Vacuum, etc."),
-                ("PC 2.4", "Use Isopropyl Alcohol and Brushes to wash Motherboards."),
-                ("PC 2.5", "Heat the Motherboard with workplace stations after washing."),
-                ("PC 2.6", "Use an air blower to remove Dust and Dirt inside the computers.")
+            ("LO 2", "Understanding key metrics in social media platforms", [
+                ("PC 2.1", "Explain what these key metrics mean (Reach, Impressions, Engagement rate, Click through rate)."),
+                ("PC 2.2", "Measure the reach of a social media post."),
+                ("PC 2.3", "Compare two posts based on their Click-Through Rates.")
             ]),
-            ("LO 3", "Know how to Unplug and Plug Computer Components During Troubleshooting", [
-                ("PC 3.1", "Apply “halt on” setting in the CMOS setup Utility."),
-                ("PC 3.2", "Perform plugging and unplugging of internal components for error detection (L2 cache, RAM, etc.)."),
-                ("PC 3.3", "Carry out a “power-on-self” (POST)” check to locate common faults.")
+            ("LO 3", "Know how to analyze post performance and adjust strategies", [
+                ("PC 3.1", "Demonstrate ways to check low performing post."),
+                ("PC 3.2", "Identify changes needed to improve a low-performing post."),
+                ("PC 3.3", "Identify performance adjustment strategies.")
+            ]),
+            ("LO 4", "Understand A/B testing for social media content", [
+                ("PC 4.1", "Explain A/B testing in social media content."),
+                ("PC 4.2", "Measure the performance of two different post formats using A/B testing."),
+                ("PC 4.3", "Compare the results of two different post versions to determine which works better.")
             ])
         ]],
-        ["ICT/CMR/007/L2", "Management of Computer Hardware Maintenance and Repairs", [
-            ("LO 1", "Understand the Procedure to Set up a Computer Hardware Maintenance and Repairs Workshop", [
-                ("PC 1.1", "Describe appropriate equipment and facilities for setting up a workshop."),
-                ("PC 1.2", "Identify appropriate locations for the workshop."),
-                ("PC 1.3", "Describe the appropriate size and layout for the workshop."),
-                ("PC 1.4", "Maintain a clean, safe, and secure workplace environment.")
+        ["ICT/SMC/007/L2", "Social Media Advertising Basics", [
+            ("LO 1", "Know different type of social media adverts", [
+                ("PC 1.1", "Explain the different types of social media adverts."),
+                ("PC 1.2", "Compare image ads and video ads in terms of engagement."),
+                ("PC 1.3", "Identify which type of social media adverts is best for increasing online traffic.")
             ]),
-            ("LO 2", "Apply Managerial and Customer Service Principles to Workshop", [
-                ("PC 2.1", "Describe how to attend to customers with faulty computers."),
-                ("PC 2.2", "Explain the normal documentation process for collecting/returning computers."),
-                ("PC 2.3", "Demonstrate good communication and interpersonal skills."),
-                ("PC 2.4", "Keep good records of incomes, expenses, assets, and liabilities."),
-                ("PC 2.5", "Estimate the cost of repairs for faulty computers.")
+            ("LO 2", "Understand the basics of audience targeting", [
+                ("PC 2.1", "Demonstrate the process a business uses to select the right audience for adverts."),
+                ("PC 2.2", "Compare different audience targeting methods in social media."),
+                ("PC 2.3", "Differentiate between broad and specific audience targeting strategies.")
             ]),
-            ("LO 3", "Raise Funds or Capital for Workshop", [
-                ("PC 3.1", "Propose start-up capital required for the workshop."),
-                ("PC 3.2", "Identify various sources of capital to set up the workshop."),
-                ("PC 3.3", "Explain the Returns on Investment (RoI) for the workshop."),
-                ("PC 3.4", "Maintain good stock control and inventory of spare parts and modules.")
+            ("LO 3", "Know how to set simple adverts budgets and schedules", [
+                ("PC 3.1", "Determine the best way to set a budget for social media advertising."),
+                ("PC 3.2", "Explain the effect of scheduling adverts at the right time for performance."),
+                ("PC 3.3", "Measure the impact of different budget sizes on advertising success.")
+            ]),
+            ("LO 4", "Know how to measure adverts performance and make changes", [
+                ("PC 4.1", "Evaluate the success of a campaign using advertising metrics."),
+                ("PC 4.2", "Differentiate between high-performing and low-performing adverts."),
+                ("PC 4.3", "Implement changes to improve adverts performance based on analytics.")
             ])
         ]],
-        ["ICT/CMR/008/L2", "Fundamentals of Basic Electronics to Computer Hardware Maintenance and Repairs", [
-            ("LO 1", "Understand Applications of Resistors", [
-                ("PC 1.1", "Explain the Color Codes of Small Resistors."),
-                ("PC 1.2", "Identify resistance using four-band and five-band color code systems."),
-                ("PC 1.3", "Connect resistors in Parallel and Series."),
-                ("PC 1.4", "Draw Resistors in Serial and Parallel Configurations."),
-                ("PC 1.5", "Use an Ohmmeter to determine total Resistance."),
-                ("PC 1.6", "Compare Ohmmeter Readings with Calculated Values.")
+        ["ICT/SMC/006/L2", "Managing Brand Reputation", [
+            ("LO 1", "Understand ways to handle negative comments", [
+                ("PC 1.1", "Identify negative comments."),
+                ("PC 1.2", "Identify effective ways to respond to negative comments."),
+                ("PC 1.3", "Explain why staying professional is important when handling negative comments."),
+                ("PC 1.4", "Determine the best approaches to manage repeated negative feedback.")
             ]),
-            ("LO 2", "Apply Capacitors in Computers and Electronic Circuits", [
-                ("PC 2.1", "Explain the meaning of a Capacitor."),
-                ("PC 2.2", "Discuss applications of different types of Capacitors."),
-                ("PC 2.3", "Draw the Symbols of Capacitors."),
-                ("PC 2.4", "Define Capacitance and its SI Unit."),
-                ("PC 2.5", "Connect capacitors in Series and Parallel."),
-                ("PC 2.6", "Draw Capacitors in Serial and Parallel Configurations."),
-                ("PC 2.7", "Use a multimeter to measure current and voltage across capacitor configurations.")
+            ("LO 2", "Know the strategies used to manage misinformation", [
+                ("PC 2.1", "Describe the impact of misinformation on a brand's reputation."),
+                ("PC 2.2", "Identify effective ways to stop misinformation from spreading."),
+                ("PC 2.3", "Develop a response plan for correcting false information about a brand.")
             ]),
-            ("LO 3", "Understand Inductors in Computers and Electronic Circuits", [
-                ("PC 3.1", "Describe an inductor and how it works."),
-                ("PC 3.2", "Define inductance and its SI Unit."),
-                ("PC 3.3", "Discuss applications of inductors in computers."),
-                ("PC 3.4", "Connect inductors in Series and Parallel."),
-                ("PC 3.5", "Draw inductors in serial and parallel configurations."),
-                ("PC 3.6", "Use a Multimeter to measure current and voltage.")
+            ("LO 3", "Understand steps to recover from a brand crisis", [
+                ("PC 3.1", "Explain brand crisis."),
+                ("PC 3.2", "Identify key actions a brand should take during a crisis."),
+                ("PC 3.3", "Explain the role of communication in crisis management."),
+                ("PC 3.4", "Determine ways to rebuild trust with an audience.")
             ]),
-            ("LO 4", "Understand the Concept and Applications of Filters", [
-                ("PC 4.1", "Explain the meaning of a Filter and its Application."),
-                ("PC 4.2", "Use a simple RC circuit to explain a low-pass Filter."),
-                ("PC 4.3", "Draw a simple RC Circuit to illustrate a high-pass Filter."),
-                ("PC 4.4", "Draw a Band Pass Filter Circuit."),
-                ("PC 4.5", "Discuss the Band Stop Filter Circuit and its Applications."),
-                ("PC 4.6", "Construct Low Pass, High Pass, Band Pass, and Band Stop filters.")
-            ]),
-            ("LO 5", "Understand Semiconductors in Computers and Electronic Circuits", [
-                ("PC 5.1", "Discuss Semiconductor materials and the effect of Doping."),
-                ("PC 5.2", "Explain PN Junction Diode and its Composition."),
-                ("PC 5.3", "State the difference between forward biased and reverse biased diodes."),
-                ("PC 5.4", "Apply Diodes in Half Wave, Full Wave, and Bridge Rectification."),
-                ("PC 5.5", "Identify the uses of Zener Diodes.")
-            ]),
-            ("LO 6", "Identify Uses of BJTs and FETs", [
-                ("PC 6.1", "Explain the Physical Configuration and Types of BJTs."),
-                ("PC 6.2", "State basic functions: Switching and Amplification."),
-                ("PC 6.3", "Test the functionality of Transistors."),
-                ("PC 6.4", "State applications of JFET and MOSFET in computers.")
-            ]),
-            ("LO 7", "Understand types and Applications of Optoelectronics", [
-                ("PC 7.1", "Discuss Light Emitting and Light Detecting categories."),
-                ("PC 7.2", "Identify Visible-Light, Blinking, Tricolor, and 7-Segment LEDs."),
-                ("PC 7.3", "Identify Light Detecting Devices (Photoresistors, Solar cells, etc.).")
-            ]),
-            ("LO 8", "Identify Types and uses of Integrated Circuits (ICs)", [
-                ("PC 8.1", "Identify Integrated Circuits on Circuit Boards."),
-                ("PC 8.2", "State Advantages and Disadvantages of Integrated Circuits."),
-                ("PC 8.3", "Identify basic IC Packages: TO-5, Flat Package, and DIL."),
-                ("PC 8.4", "Draw the IC Symbols."),
-                ("PC 8.5", "State uses of Voltage Regulators, 555 Timers, and Op-Amps."),
-                ("PC 8.6", "Construct simple electronic circuits using ICs.")
-            ])
-        ]],
-        ["ICT/CMR/009/L2", "Fundamental Principles of Using Printers, Photocopy Machines, and Scanners", [
-            ("LO 1", "Understand the Basic Operation and Maintenance of Printers", [
-                ("PC 1.1", "Explain various types of printers (Impact; Non-impact)."),
-                ("PC 1.2", "Identify printer components and consumables."),
-                ("PC 1.3", "Describe control panel functions."),
-                ("PC 1.4", "Identify printer interfaces (Parallel, USB, Serial, Wireless, SCSI)."),
-                ("PC 1.5", "Perform Installation and Configuration of Printers."),
-                ("PC 1.6", "Perform Print and Cancel operations."),
-                ("PC 1.7", "Change Printer Settings to Optimize Performance."),
-                ("PC 1.8", "Perform Replacement and Refilling of Cartridge/Toner."),
-                ("PC 1.9", "Connect Printers to a Wired or Wireless Network.")
-            ]),
-            ("LO 2", "Apply Basic Maintenance Procedures to Printers", [
-                ("PC 2.1", "Explain Error Codes and messages of Printers."),
-                ("PC 2.2", "Use Diagnostic Tools to Eliminate Faults."),
-                ("PC 2.3", "Review Service and Installation Manuals."),
-                ("PC 2.4", "Isolate the Problems of the Printers."),
-                ("PC 2.5", "Replace Parts and Consumables as needed."),
-                ("PC 2.6", "Test run the Repaired Printer."),
-                ("PC 2.7", "Install missing Printer Drivers."),
-                ("PC 2.8", "Fix Printer IP-Address problem.")
-            ]),
-            ("LO 3", "Understand Basic Operation and Maintenance of Photocopy Machines", [
-                ("PC 3.1", "Identify parts of a Photocopy Machine."),
-                ("PC 3.2", "Operate Photocopy Machine."),
-                ("PC 3.3", "Replace Toner and Other Consumables."),
-                ("PC 3.4", "Clear Paper Jam and Other Error Messages.")
-            ]),
-            ("LO 4", "Understand Basic Operation and Maintenance of Scanners", [
-                ("PC 4.1", "Identify parts of a Scanner."),
-                ("PC 4.2", "Outline the operation of a Scanner."),
-                ("PC 4.3", "Explain Types of Scanners (Handheld, Flatbed, Specialized)."),
-                ("PC 4.4", "Connect a Scanner to a Computer."),
-                ("PC 4.5", "Perform Installation and Uninstallation of Scanner."),
-                ("PC 4.6", "Use Scanner correctly.")
+            ("LO 4", "Know different methods on how to create a crisis response plan", [
+                ("PC 4.1", "Explain the need for a crisis response plan."),
+                ("PC 4.2", "Describe key elements in a crisis response plan."),
+                ("PC 4.3", "Identify who should be involved in managing a crisis.")
             ])
         ]]
     ]
@@ -338,7 +190,7 @@ def populate_nsq_data():
 
     conn.commit()
     conn.close()
-    print("Successfully populated all 9 Units for NSQ Level 2 Computer Hardware Repairs & Maintenance!")
+    print("Successfully populated all 8 Units for NSQ Level 2 Social Media Contents Creation and Management!")
 
 if __name__ == "__main__":
-    populate_nsq_data()
+    populate_nsq_social_media_data()
