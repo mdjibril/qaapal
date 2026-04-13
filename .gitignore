@@ -4,3 +4,4 @@ __pycache__/
 *.db
 .streamlit/secrets.toml
 NOS/
+.streamlit/
