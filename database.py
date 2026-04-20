@@ -1,10 +1,9 @@
 import streamlit as st
 from sqlalchemy import create_engine, text
+from auth_utils import get_supabase
 
-# Initialize connection using Streamlit's connection pool
+# Initialize connection using Streamlit's connection pool (for other queries)
 def get_engine():
-    # For local development, it falls back to sqlite. 
-    # For production, define [connections.postgres] in .streamlit/secrets.toml
     try:
         return st.connection("postgres", type="sql")
     except:
@@ -15,25 +14,67 @@ conn = get_engine()
 def fetch_trades():
     return conn.query("SELECT id, name FROM trades")
 
+@st.cache_data(ttl=3600)
 def fetch_nested_nos(trade_id):
-    units = conn.query("SELECT id, code, title FROM units WHERE trade_id = :tid", params={"tid": trade_id})
-    nested_data = {}
-    for _, unit in units.iterrows():
-        nested_data[f"{unit['code']}: {unit['title']}"] = fetch_los_and_pcs(unit['id'])
-    return nested_data
+    supabase = get_supabase()
+    # print(f"DEBUG: Querying Supabase for trade_id: {trade_id}") # Check your terminal
+    
+    try:
+        # Step 1: Get Units
+        units_res = supabase.table("units").select("id, code, title").eq("trade_id", trade_id).execute()
+        
+        # Add this check to see if the error is hidden in the response
+        if not units_res.data and hasattr(units_res, 'error') and units_res.error:
+            print(f"SUPABASE API ERROR: {units_res.error}")
 
-def fetch_los_and_pcs(unit_id):
-    los = conn.query("SELECT id, lo_num, desc FROM learning_outcomes WHERE unit_id = :uid", params={"uid": unit_id})
-    lo_structure = {}
-    for _, lo in los.iterrows():
-        pcs = conn.query("SELECT pc_code, desc FROM performance_criteria WHERE lo_id = :lid", params={"lid": lo['id']})
-        lo_structure[f"{lo['lo_num']}: {lo['desc']}"] = [f"{r['pc_code']}: {r['desc']}" for _, r in pcs.iterrows()]
-    return lo_structure
+        units = units_res.data
+            
+        if not units:
+            print("DEBUG: No units found in Supabase for this ID.")
+            return {}
 
-def insert_report(name, trade_id, unit_codes, text, date):
-    with conn.session as session:
-        session.execute(
-            text("INSERT INTO assessment_reports (student_name, trade_id, unit_codes, report_text, assessment_date) VALUES (:n, :t, :u, :r, :d)"),
-            {"n": name, "t": trade_id, "u": unit_codes, "r": text, "d": str(date)}
-        )
-        session.commit()
+        nested_data = {}
+        for u in units:
+            unit_label = f"{u['code']}: {u['title']}"
+            nested_data[unit_label] = {}
+                
+            # Step 2: Get LOs
+            lo_res = supabase.table("learning_outcomes").select("id, lo_num, description").eq("unit_id", u['id']).execute()
+            for lo in lo_res.data:
+                lo_label = f"{lo['lo_num']}: {lo['description']}"
+                    
+                # Step 3: Get PCs
+                pc_res = supabase.table("performance_criteria").select("pc_code, description").eq("lo_id", lo['id']).execute()
+                nested_data[unit_label][lo_label] = [f"{pc['pc_code']}: {pc['description']}" for pc in pc_res.data]
+                    
+        return nested_data
+    except Exception as e:
+        st.error(f"Database Error: {e}")
+        return {}
+
+def insert_report(name, trade_id, unit_codes, report_content, date, user_id):
+    """
+    Inserts report and returns (success_bool, error_message)
+    """
+    supabase = get_supabase()
+    
+    try:
+        if not user_id:
+            return False, "User ID missing from session."
+
+        data = {
+            "student_name": str(name),
+            "trade_id": int(trade_id) if trade_id else None, 
+            "unit_codes": str(unit_codes),
+            "report_text": str(report_content),
+            "assessment_date": str(date),
+            "created_by": user_id  # Supabase client handles UUID objects or strings correctly
+        }
+        
+        supabase.table("assessment_reports").insert(data).execute()
+        return True, None
+
+    except Exception as e:
+        error_str = str(e)
+        print(f"DATABASE INSERT ERROR: {error_str}")
+        return False, error_str

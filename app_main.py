@@ -1,130 +1,69 @@
 import streamlit as st
 import google.generativeai as genai
-from groq import Groq 
-import requests # Added for OpenRouter
-import json
 from docx import Document
 from docx.shared import Inches, Pt
 from io import BytesIO
 import datetime
 import sqlite3
-import time
-import google.api_core.exceptions
 
 # --- CONFIGURATION ---
 st.set_page_config(page_title="NSQ Report Architect", layout="wide")
 
-if 'last_request_time' not in st.session_state:
-    st.session_state.last_request_time = 0
-
-# --- MODULAR AI ROUTER ---
-# --- MODULAR AI ROUTER WITH AUTO-DISCOVERY ---
-def validate_and_generate(provider, model_name, api_key, prompt=None):
-    """
-    Handles API calls with dynamic model discovery for Gemini
-    to avoid 404 and naming convention errors.
-    """
-    api_key = api_key.strip()
-    
-    try:
-        if provider == "Gemini":
-            genai.configure(api_key=api_key)
-            
-            # --- START AUTO-DISCOVERY LOGIC ---
-            # This replicates your old code's success
-            available_models = [m.name for m in genai.list_models() if 'generateContent' in m.supported_generation_methods]
-            
-            # Try to use what the user selected, but if not found, find the best match
-            # e.g., if user selected 'gemini-1.5-flash', look for 'models/gemini-1.5-flash'
-            actual_model_name = None
-            if any(model_name in m for m in available_models):
-                actual_model_name = [m for m in available_models if model_name in m][0]
-            else:
-                # Fallback to the first available model if selection fails
-                actual_model_name = available_models[0]
-            # --- END AUTO-DISCOVERY LOGIC ---
-
-            model = genai.GenerativeModel(actual_model_name)
-            
-            if prompt:
-                response = model.generate_content(prompt)
-                return response.text
-            else:
-                return f"✅ Connected: {actual_model_name}"
-
-        elif provider == "Groq":
-            client = Groq(api_key=api_key)
-            if prompt:
-                completion = client.chat.completions.create(
-                    model=model_name,
-                    messages=[{"role": "user", "content": prompt}],
-                    temperature=0.7
-                )
-                return completion.choices[0].message.content
-            else:
-                client.models.list()
-                return f"✅ Connected: {model_name}"
-
-        elif provider == "OpenRouter":
-            headers = {
-                "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json",
-                "HTTP-Referer": "http://localhost:8501", 
-            }
-            data = {
-                "model": model_name,
-                "messages": [{"role": "user", "content": prompt if prompt else "Hello"}]
-            }
-            response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, data=json.dumps(data))
-            if response.status_code == 200:
-                return response.json()['choices'][0]['message']['content'] if prompt else f"✅ Connected: {model_name}"
-            else:
-                return f"API_ERROR: {response.status_code} - {response.text}"
-
-    except Exception as e:
-        return f"API_ERROR: {str(e)}"
+if 'requests_left' not in st.session_state:
+    st.session_state.requests_left = 15 
 
 # --- WORD EXPORT FUNCTION ---
-def export_to_word(name, date, time_val, atmosphere, report_text, selected_pcs, assessor_name, assessor_id):
+def export_to_word(name, date, time, atmosphere, report_text, selected_pcs, assessor_name, assessor_id):
     doc = Document()
     style = doc.styles['Normal']
     font = style.font
     font.name = 'Arial'
     font.size = Pt(11)
+
     header = doc.add_heading('National Skills Qualification (NSQ) - Assessment Report', 0)
     header.alignment = 1 
+
     table = doc.add_table(rows=3, cols=2)
     table.style = 'Table Grid'
+    
     table.rows[0].cells[0].text = f"Candidate Name: {name}"
     table.rows[0].cells[1].text = f"Date: {date}"
-    table.rows[1].cells[0].text = f"Timeline: {time_val}"
+    table.rows[1].cells[0].text = f"Timeline: {time}"
     table.rows[1].cells[1].text = f"Assessor: {assessor_name}"
     table.rows[2].cells[0].text = f"Atmosphere: {atmosphere}"
     table.rows[2].cells[1].text = "Status: Competent (Progressing)"
+
     doc.add_paragraph("\n")
     doc.add_heading('Observation Narrative & Evidence', level=1)
     doc.add_paragraph(report_text)
+    
+    # --- FORMAL CRITERIA SUMMARY SECTION ---
     doc.add_paragraph("\n")
     doc.add_heading('Mapped Performance Criteria Summary', level=2)
+    
     units_dict = {}
     for pc in selected_pcs:
         parts = pc.split(' - ')
         unit = parts[0]
         criterion = parts[1].split(':')[0] 
-        if unit not in units_dict: units_dict[unit] = []
+        if unit not in units_dict:
+            units_dict[unit] = []
         units_dict[unit].append(criterion)
+
     for unit, pcs in units_dict.items():
         p = doc.add_paragraph(style='List Bullet')
         p.add_run(f"{unit}: ").bold = True
         p.add_run(", ".join(pcs))
+
     doc.add_paragraph("\n")
     doc.add_heading(f'Assessor Signature: _______________________', level=3)
     doc.add_paragraph(f"Verified by {assessor_name} ({assessor_id}) on {date}")
+
     bio = BytesIO()
     doc.save(bio)
     return bio.getvalue()
 
-# --- DB HELPERS ---
+# --- DATABASE UTILITY FUNCTIONS ---
 def get_trades():
     conn = sqlite3.connect('nsq_audit.db')
     cursor = conn.cursor()
@@ -154,43 +93,40 @@ def get_nested_nos(trade_id):
 
 def save_report_to_history(name, trade_id, unit_codes, text, date):
     conn = sqlite3.connect('nsq_audit.db')
-    conn.execute("INSERT INTO assessment_reports (student_name, trade_id, unit_codes, report_text, assessment_date) VALUES (?, ?, ?, ?, ?)", (name, trade_id, unit_codes, text, str(date)))
+    conn.execute("""
+        INSERT INTO assessment_reports (student_name, trade_id, unit_codes, report_text, assessment_date)
+        VALUES (?, ?, ?, ?, ?)
+    """, (name, trade_id, unit_codes, text, str(date)))
     conn.commit()
     conn.close()
 
-# --- SIDEBAR: PROVIDER & CONNECTION CHECK ---
-st.sidebar.subheader("📡 AI Provider Settings")
-ai_provider = st.sidebar.selectbox("Select Provider", ["Gemini", "Groq", "OpenRouter"])
+# --- SIDEBAR ---
+# st.sidebar.title("Configuration")
+st.sidebar.subheader("Configuration")
+api_key = st.sidebar.text_input("gemini-key", type="password")
 
-if ai_provider == "Gemini":
-    target_key = st.sidebar.text_input("Gemini API Key", type="password")
-    # We list simple names; the Router will find the 'models/xxx' version
-    target_model = st.sidebar.selectbox("Gemini Preference", ["gemini-2.5-flash", "gemini-1.5-pro", "gemini-pro"])
-elif ai_provider == "Groq":
-    target_key = st.sidebar.text_input("Groq API Key", type="password")
-    target_model = st.sidebar.selectbox("Groq Model", ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"])
-elif ai_provider == "OpenRouter":
-    target_key = st.sidebar.text_input("OpenRouter Key", type="password")
-    target_model = st.sidebar.selectbox("Model", ["anthropic/claude-3-haiku", "nvidia/nemotron-3-super-120b-a12b:free", "arcee-ai/trinity-large-preview:free", "google/gemma-4-31b-it:free"])
+if api_key:
+    try:
+        genai.configure(api_key=api_key)
+        available_models = [m.name for m in genai.list_models() if 'generateContent' in m.supported_generation_methods]
+        target_model = 'models/gemini-1.5-flash' 
+        if target_model not in available_models:
+            flash_models = [m for m in available_models if 'flash' in m]
+            target_model = flash_models[0] if flash_models else available_models[0]
+        
+        model = genai.GenerativeModel(target_model)
+        st.sidebar.success(f"Connected: {target_model}")
+        # st.sidebar.metric("Requests Left (RPM)", st.session_state.requests_left)
+    except Exception as e:
+        st.sidebar.error(f"Error: {e}")
 
-# THE VERIFICATION BUTTON
-if target_key:
-    if st.sidebar.button("Verify Connection"):
-        with st.sidebar:
-            with st.spinner("Checking..."):
-                res = validate_and_generate(ai_provider, target_model, target_key)
-                if "API_ERROR" in str(res):
-                    st.error(f"❌ {res}")
-                else:
-                    st.success(res) # Shows the "✅ Connected: models/..." message
-
-dev_mode = st.sidebar.checkbox("🛠️ Dev Mode (Skip AI)", value=False)
-
+#Dynamic Assessor Details
 st.sidebar.markdown("---")
 st.sidebar.subheader("General Information")
 assessor_name = st.sidebar.text_input("Assessor Name", value="Jibril Dauda Muhammad")
 assessor_id = st.sidebar.text_input("Assessor ID", value="QAA/XXXX/ICT")
 
+#Environment Presets
 env_options = {
     "Morning (Cool)": "The morning air was cool and the lab was quiet, providing a focused atmosphere with plenty of natural light.",
     "Afternoon (Warm)": "The lab temperature was moderate; the ceiling fans were active to maintain a comfortable working environment during the peak afternoon heat.",
@@ -198,6 +134,7 @@ env_options = {
     "Rainy/Overcast": "Due to the weather, the lab was lit with overhead fluorescent lights; the atmosphere was cool and calm.",
     "Custom": "" 
 }
+
 selected_env_preset = st.sidebar.selectbox("Choose a Preset", list(env_options.keys()))
 default_env_text = env_options[selected_env_preset]
 
@@ -213,14 +150,17 @@ if trades_list:
 else:
     st.stop()
 
-with st.expander("Step 1: Details", expanded=True):
+with st.expander("Details", expanded=True):
     col1, col2 = st.columns(2)
     with col1:
         student_name = st.text_input("Candidate Name")
         assessment_date = st.date_input("Assessment Date", datetime.date.today())
     with col2:
         time_frame = st.text_input("Timeline", placeholder="e.g. 9:00AM – 12:00PM")
-        atmosphere = st.text_area("Atmospheric Details", value=default_env_text)
+        atmosphere = st.text_area("Atmospheric Details", 
+            value=default_env_text, 
+            help="You can edit the preset text here if needed for this specific student."
+        )
 
 st.markdown("#### Step 2: Select Achieved PCs")
 selected_pcs = []
@@ -233,7 +173,9 @@ for i, unit_key in enumerate(NOS_DATA.keys()):
                     if st.checkbox(pc, key=f"{unit_key}_{lo_key}_{pc}"):
                         selected_pcs.append(f"{unit_key.split(':')[0]} - {pc}")
 
-st.markdown("#### Step 3: Unique Learning Moment")
+# st.markdown("---")
+st.markdown("#### Step 3: Unique Learning Moment / Hook")
+
 # The Formula Guide (A visual reminder for the user)
 st.info("""
 **💡 Pro-Tip for Unique Reports:** Use the 'Observation Formula' for better AI results:
@@ -250,24 +192,31 @@ learning_moment = st.text_area(
 
 # --- GENERATION LOGIC ---
 if st.button("Generate & Finalize Report"):
-    current_time = time.time()
-    time_passed = current_time - st.session_state.last_request_time
-    
-    if time_passed < 10 and not dev_mode:
-        st.warning(f"🕒 Rate Limit Protection: Wait {int(10 - time_passed)}s.")
-    elif not selected_pcs:
+    if not selected_pcs:
         st.warning("Select at least one PC.")
-    elif not target_key and not dev_mode:
-        st.warning(f"Please enter the {ai_provider} API key in the sidebar.")
+    elif not assessor_name:
+        st.warning("Please enter the Assessor's name in the sidebar.")
     else:
-        st.session_state.last_request_time = current_time
-        with st.spinner(f"Using {ai_provider} ({target_model}) to synthesize..."):
+        with st.spinner("AI is synthesizing your observation..."):
+            # --- FIX: GET FULL UNIT TITLES ---
+            # This looks at the checkbox labels and finds the unique Units selected
+            # It keeps the whole string before the " - PC" part
+            unique_units = []
+            for pc in selected_pcs:
+                # pc format is "UnitCode: Title - PC Code: Desc"
+                unit_part = pc.split(' - ')[0] 
+                if unit_part not in unique_units:
+                    unique_units.append(unit_part)
             
-            unique_units = list(set([pc.split(' - ')[0] for pc in selected_pcs]))
             unit_header_info = "\n".join(unique_units)
+
+            # FIX 2: Create a very detailed list of PC descriptions for the AI to read
             detailed_criteria_text = "\n".join(selected_pcs)
+            
+            # FIX 3: Force the date into the prompt so it stops using [Insert Date]
             formatted_date = assessment_date.strftime("%B %d, %Y")
 
+            # --- REFINED PROMPT LOGIC ---
             prompt = f"""
             You are a Lead NSQ Assessor. Write a high-level technical narrative for {student_name}.
 
@@ -300,30 +249,52 @@ if st.button("Generate & Finalize Report"):
             15. DONT USE HEAVY DICTIONARY LANGUAGE: The report should be professional but also clear and straightforward. Avoid overly complex sentences that could obscure the candidate's actual performance and the criteria met.
             """
 
-            if dev_mode:
-                ai_narrative = "DEV MODE: AI was skipped. Database and Word functions work."
-            else:
-                ai_narrative = validate_and_generate(ai_provider, target_model, target_key, prompt)
-
-            if isinstance(ai_narrative, str) and "API_ERROR" in ai_narrative:
-                st.error(ai_narrative)
-            else:
+            try:
+                response = model.generate_content(prompt)
+                ai_narrative = response.text
+                
+                # --- PYTHON-GENERATED TRUTH SUMMARY ---
                 summary_block = "\n\n----- SUMMARY OF CRITERIA COVERED -----\n\n"
                 u_dict = {}
                 for item in selected_pcs:
-                    u_code = item.split(' - ')[0].split(':')[0]
-                    pc_code = item.split(' - ')[1].split(':')[0]
+                    u_code = item.split(' - ')[0].split(':')[0] # Gets just 'ICT/CMR/011/L3'
+                    pc_code = item.split(' - ')[1].split(':')[0] # Gets just 'PC 5.1'
                     if u_code not in u_dict: u_dict[u_code] = []
                     u_dict[u_code].append(pc_code)
+                
                 for u, pc_list in u_dict.items():
                     summary_block += f"{u}: {', '.join(pc_list)}\n"
                 
+                # Combine everything
                 full_report_text = ai_narrative + summary_block
-                save_report_to_history(student_name, selected_trade_id, ", ".join(u_dict.keys()), full_report_text, assessment_date)
+                
+                # Save to History
+                units_str = ", ".join(u_dict.keys())
+                save_report_to_history(student_name, selected_trade_id, units_str, full_report_text, assessment_date)
+                
                 st.markdown("### Preview")
                 st.info(full_report_text)
-                doc_bytes = export_to_word(student_name, assessment_date, time_frame, atmosphere, full_report_text, selected_pcs, assessor_name, assessor_id)
                 
+                # Prepare Word Doc
+                doc_bytes = export_to_word(
+                    student_name, 
+                    assessment_date, 
+                    time_frame, 
+                    atmosphere, 
+                    full_report_text, 
+                    selected_pcs,
+                    assessor_name,
+                    assessor_id
+                    
+                )
+                
+                # Download Buttons
                 c1, c2 = st.columns(2)
-                with c1: st.download_button("📥 Word (.docx)", data=doc_bytes, file_name=f"NSQ_{student_name}.docx")
-                with c2: st.download_button("Download Text (.txt)", full_report_text, file_name=f"{student_name}.txt")
+                with c1:
+                    st.download_button("📥 Download Word (.docx)", data=doc_bytes, file_name=f"NSQ_{student_name.replace(' ', '_')}.docx")
+                with c2:
+                    st.download_button("Download Text (.txt)", full_report_text, file_name=f"{student_name}.txt")
+                
+            except Exception as e:
+                st.error(f"Error: {e}")
+                st.session_state.requests_left -= 1
