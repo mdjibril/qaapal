@@ -1,9 +1,11 @@
 import streamlit as st
-from auth_utils import get_supabase
+from auth_utils import get_supabase, get_admin_supabase
 import pandas as pd
 
 def fetch_trades():
-    supabase = get_supabase()
+    # Use the admin client to fetch the trade list to ensure it's always available 
+    # in the sidebar, bypassing RLS restrictions for this specific lookup.
+    supabase = get_admin_supabase()
     try:
         # Fetch trades via Supabase API instead of direct SQL to avoid connection issues
         response = supabase.table("trades").select("id, name").execute()

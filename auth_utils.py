@@ -4,8 +4,8 @@ from supabase import create_client
 
 def get_supabase():
     # Use st.secrets with a default to avoid crashes during debug
-    url = st.secrets.get("connections", {}).get("supabase", {}).get("DATABASE_URL")
-    key = st.secrets.get("connections", {}).get("supabase", {}).get("API_KEY")
+    url = st.secrets.get("connections", {}).get("supabase", {}).get("PROJECT_URL")
+    key = st.secrets.get("connections", {}).get("supabase", {}).get("ANON_KEY")
     
     if not url or not key:
         st.error("Secrets missing! Check Streamlit Cloud Settings > Secrets.")
@@ -36,7 +36,7 @@ def get_supabase():
 
 def get_admin_supabase():
     """Returns a Supabase client initialized with the Service Role Key for administrative tasks."""
-    url = st.secrets.get("connections", {}).get("supabase", {}).get("DATABASE_URL")
+    url = st.secrets.get("connections", {}).get("supabase", {}).get("PROJECT_URL")
     key = st.secrets.get("connections", {}).get("supabase", {}).get("SERVICE_ROLE_KEY")
     
     if not url or not key:

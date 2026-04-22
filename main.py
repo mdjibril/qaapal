@@ -9,6 +9,11 @@ from ai_utils import validate_and_generate
 
 st.set_page_config(page_title="NSQ Portal", layout="wide")
 
+# Define cached functions at the top level to avoid re-definition issues
+@st.cache_data(ttl=600)
+def get_cached_trades():
+    return db.fetch_trades()
+
 if not check_auth():
     login_form()
 else:
@@ -56,12 +61,7 @@ else:
     selected_env_preset = st.sidebar.selectbox("Choose a Preset", list(env_options.keys()))
     st.session_state.default_env_text = env_options[selected_env_preset]
 
-    # 1. Wrap the fetch in a cached function (place this near the top)
-    @st.cache_data(ttl=600) # Caches for 10 minutes
-    def get_cached_trades():
-        return db.fetch_trades()
-
-    # 2. Use the cached version in your sidebar logic
+    # Trade Selection Logic
     st.sidebar.markdown("---")
     trades_df = get_cached_trades()
 
@@ -76,6 +76,8 @@ else:
         st.session_state.selected_trade_id = trades_df.loc[
             trades_df['name'] == selected_name, 'id'
         ].iloc[0]
+    else:
+        st.sidebar.error("⚠️ No trades found. Check Supabase connection or table data.")
 
     # 3. Assessor Info
     st.sidebar.markdown("---")

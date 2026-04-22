@@ -42,8 +42,10 @@ A professional AI-powered assessment report generator for the National Skills Qu
    Create a `.streamlit/secrets.toml` file with your Supabase credentials:
    ```toml
    [connections.supabase]
-   DATABASE_URL = "your_supabase_url"
-   API_KEY = "your_supabase_anon_key"
+   PROJECT_URL = "https://your-project-id.supabase.co"
+   ANON_KEY = "your_supabase_anon_key"
+   SERVICE_ROLE_KEY = "your_supabase_service_role_key"
+   DATABASE_URL = "postgresql://postgres:password@db.your-id.supabase.co:5432/postgres"
    ```
 4. **Run the app:**
    ```bash
