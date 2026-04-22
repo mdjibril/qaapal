@@ -46,13 +46,15 @@ def get_admin_supabase():
     return create_client(url, key)
 
 def get_user_role(user_id):
-    supabase = get_supabase()
+    # Use the admin client to bypass RLS policies when checking user roles.
+    # This ensures the login process can always identify if a user is an admin or assessor.
+    supabase = get_admin_supabase()
     try:
         # Fetch the role from the profile table
         response = supabase.table("user_profiles").select("role").eq("id", user_id).execute()
-        if response.data:
-            return response.data[0].get("role", "admin")
-        return "admin"
+        if response.data and len(response.data) > 0:
+            return response.data[0].get("role", "assessor")
+        return "assessor"
     except Exception as e:
         print(f"Role fetch error: {e}")
         return "assessor"
