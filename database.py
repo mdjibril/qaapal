@@ -1,18 +1,17 @@
 import streamlit as st
-from sqlalchemy import create_engine, text
 from auth_utils import get_supabase
-
-# Initialize connection using Streamlit's connection pool (for other queries)
-def get_engine():
-    try:
-        return st.connection("postgres", type="sql")
-    except:
-        return st.connection("local_db", type="sql", url="sqlite:///nsq_audit.db")
-
-conn = get_engine()
+import pandas as pd
 
 def fetch_trades():
-    return conn.query("SELECT id, name FROM trades")
+    supabase = get_supabase()
+    try:
+        # Fetch trades via Supabase API instead of direct SQL to avoid connection issues
+        response = supabase.table("trades").select("id, name").execute()
+        return pd.DataFrame(response.data)
+    except Exception as e:
+        st.error(f"Database Error while fetching trades: {e}")
+        # Return empty DataFrame with expected columns to prevent downstream crashes
+        return pd.DataFrame(columns=["id", "name"])
 
 @st.cache_data(ttl=3600)
 def fetch_nested_nos(trade_id):
