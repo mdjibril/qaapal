@@ -116,7 +116,7 @@ def main():
             st.warning(f"🕒 Rate Limit Protection: Wait {int(10 - time_passed)}s.")
         elif not selected_pcs:
             st.warning("Please select at least one Performance Criterion above.")
-        elif not key and not dev_mode:
+        elif not dev_mode and not key:
             st.warning(f"Please enter the {provider} API key in the sidebar.")
         else:
             st.session_state.last_request_time = current_time
@@ -127,47 +127,59 @@ def main():
                 detailed_criteria_text = "\n".join(selected_pcs)
                 formatted_date = assessment_date.strftime("%B %d, %Y")
 
-                prompt = f"""
-                You are a Lead NSQ Assessor. Write a high-level technical narrative for {student_name}.
+                system_prompt = f"""You are a Lead NSQ Assessor. Your goal is to write high-level technical narratives that are professional, exhaustive, and map strictly to performance criteria.
 
-                REPORT CONTEXT:
-                - Assessor: {assessor_name} ({assessor_id})
-                - Date: {formatted_date}
-                - Units: {unit_header_info}
-                - Environment: {atmosphere}
-                - The "Hook" (Breaktrough moment): {learning_moment}
+                <strict_rules>
+                ### NARRATIVE STRUCTURE & FLOW
+                1. **The Timeline**: State clearly that the session commenced at {time_frame} and concluded at {time_frame}.
+                2. **Continuous Flow**: Write a "day-in-the-life" professional observation. Use logical transitions (e.g., "Building on this," "Simultaneously," "This led to"). 
+                3. **Volume**: Generate exactly 7 to 9 dense, technical paragraphs. The final output must fit within 2 standard pages.
+                4. **The Hook**: Integrate the breakthrough moment ({learning_moment}) as a central narrative peak where multiple criteria were met simultaneously.
 
-                CRITERIA TO INTEGRATE (The Ingredients):
+                ### CRITERIA INTEGRATION RULES
+                5. **No Staged Sequencing**: Do NOT write one paragraph per PC. Weave 2-3 PCs naturally into every paragraph.
+                6. **Show, Don't Tell**: Instead of stating "the candidate is competent," describe specific technical actions and decisions that prove competence.
+                7. **Mapping**: At the end of every paragraph, list the met criteria in shorthand grouping. Example: (Unit 11-PC 5.1, 5.2).
+                8. **Exhaustive Usage**: You MUST use every PC provided in the user's list exactly once. Do not hallucinate or invent PC codes.
+                9. **Seamlessness**: The reader should understand how the action meets the PC without needing a cross-reference list.
+                
+                ### TONE & LANGUAGE
+                10. **Professionalism**: Maintain a formal, technical tone.
+                11. **Clarity**: Avoid "dictionary-heavy" or overly flowery language. Focus on clear, straightforward procedural descriptions of what the candidate did under direct observation.
+                12. **Coherence**: Ensure each paragraph links logically to the next to form a unified story of the assessment session.
+                </strict_rules>
+
+                <example_paragraph>
+                While navigating the server room environment, the candidate demonstrated high awareness of safety protocols by ensuring all external power cables were disconnected before opening the chassis. Simultaneously, they utilized an anti-static wrist strap to ground themselves, effectively mitigating the risk of ESD damage to the sensitive motherboard components. (ICT/CMR/004/L2-PC 1.2, 1.3).
+                </example_paragraph>"""
+
+                user_prompt = f"""Write the NSQ assessment report for {student_name}.
+
+                <report_context>
+                Candidate: {student_name}
+                Assessor: {assessor_name} ({assessor_id})
+                Date: {formatted_date}
+                Environment: {atmosphere}
+                Breakthrough Moment: {learning_moment}
+                Units: {unit_header_info}
+                </report_context>
+
+                <performance_criteria_to_integrate>
                 {detailed_criteria_text}
+                </performance_criteria_to_integrate>
 
-                STRICT NARRATIVE RULES:
-                1. NO STAGED SEQUENCING: Do not write one paragraph per PC. A single paragraph should naturally weave together 2 or 3 related or non-related PCs.
-                2. CONTINUOUS FLOW: The report must read like a professional "day-in-the-life" observation. Use phrases like "Simultaneously," "This led the candidate to," or "Building on the previous step.", {student_name} commenced the session at {time_frame}, {student_name} ended the session at {time_frame}.
-                3. MINIMUM 8 PARAGRAPHS: Each paragraph must be dense and technical.
-                4. MAXIMUM 10 PARAGRAPHS: Do not exceed 10 paragraphs. Be concise but exhaustive.
-                5. MAXIMUM PAGES: The final report should not exceed 2 pages when formatted in Word with standard margins and font size.
-                6. MAXIMIZE CRITERIA INTEGRATION: Each paragraph should integrate multiple PCs, showing how the candidate's actions and explanations naturally covered several criteria at once.
-                7. MAPPING: Use grouped shorthand at the end of paragraphs. 
-                Example: (Unit 11-PC 5.1, 5.2, 5.4).
-                8. THE HOOK: Do not just "mention" the {learning_moment}; make it a central part of the story where multiple criteria were met during that specific breakthrough.
-                9. AVOID PLACEHOLDERS: Use the provided date and names.
-                10. TONE: The narrative should be formal, technical, and exhaustive, suitable for a professional assessment report.
-                11. DO NOT REPEAT CRITERIA: Each PC should only be referenced once in the narrative, but can be grouped with related PCs for a more natural flow.
-                12. USE ALL PROVIDED CRITERIA: Ensure that every PC in the detailed list is integrated into the narrative, either directly or through inference based on the candidate's actions and explanations.
-                13. NO HALLUCINATION: Do not invent PC numbers outside of the provided list.
-                14. SHOW, DON'T TELL: Instead of saying "the candidate was competent," describe what the candidate did that demonstrated competence, and link those actions to the PCs.
-                15. DONT USE HEAVY DICTIONARY LANGUAGE: The report should be professional but also clear and straightforward. Avoid overly complex sentences that could obscure the candidate's actual performance and the criteria met.
-                16. DONT USE HEAVY DICTIONARY LANGUAGE: The report should be professional and naturally depict step by step procedure of what the candidate will ordinarl do to acheive the performance criteria. noting the candiddate is under direct observation by a quality assurance assesscor
-                17. **READER UNDERSTANDING:** The report should be written so that a reader can easily understand how the candidate's actions and explanations during the session directly relate to the specific performance criteria.
-                18. **SEAMLESS INTEGRATION:** The narrative should seamlessly integrate the criteria into the story of the candidate's performance, making it clear how each criterion was met through their actions and decisions throughout the session, without needing to cross-reference a separate list.
-                19. **COMPREHENSIVE DETAIL:** The narrative should be detailed enough to provide a comprehensive picture of the candidate's performance, including any challenges they faced and how they overcame them, while also clearly demonstrating how they met the required performance criteria in a way that would be evident to an assessor reviewing the report for assessment purposes.
-                20. **COHERENT FLOW:** The paragraphs should be linked together to form a coherent narrative.
-                """
+                Ensure every single PC listed above is integrated into the narrative exactly once."""
 
                 if dev_mode:
                     ai_narrative = "DEV MODE: AI was skipped. Database and Word functions work."
                 else:
-                    ai_narrative = validate_and_generate(provider, target_model, key, prompt)
+                    ai_narrative = validate_and_generate(
+                        provider=provider, 
+                        model_name=target_model, 
+                        api_key=key, 
+                        prompt=user_prompt, 
+                        system_prompt=system_prompt
+                    )
 
                 if isinstance(ai_narrative, str) and "API_ERROR" in ai_narrative:
                     st.error(ai_narrative)

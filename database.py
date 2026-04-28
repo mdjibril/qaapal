@@ -18,6 +18,41 @@ def fetch_trades():
 @st.cache_data(ttl=3600)
 def fetch_nested_nos(trade_id):
     supabase = get_supabase()
+    
+    # ONE query to rule them all: 
+    # Fetch units -> their LOs -> their PCs in one nested structure
+    try:
+        response = supabase.table("units") \
+            .select("code, title, learning_outcomes(lo_num, description, performance_criteria(pc_code, description))") \
+            .eq("trade_id", trade_id) \
+            .execute()
+        
+        raw_units = response.data
+        
+        # Now we transform this nested list into the Dictionary format 
+        # your dashboard.py currently expects: { "Unit: Title": { "LO: Desc": [PC List] } }
+        structured_data = {}
+        
+        for unit in raw_units:
+            unit_key = f"{unit['code']}: {unit['title']}"
+            structured_data[unit_key] = {}
+            
+            for lo in unit.get('learning_outcomes', []):
+                lo_key = f"LO {lo['lo_num']}: {lo['description']}"
+                # Get all PC descriptions for this LO
+                pcs = [f"{pc['pc_code']}: {pc['description']}" for pc in lo.get('performance_criteria', [])]
+                structured_data[unit_key][lo_key] = pcs
+                
+        return structured_data
+
+    except Exception as e:
+        st.error(f"Error fetching NOS: {e}")
+        return {}
+
+
+# @st.cache_data(ttl=3600)
+# def fetch_nested_nos(trade_id):
+    supabase = get_supabase()
     # print(f"DEBUG: Querying Supabase for trade_id: {trade_id}") # Check your terminal
     
     try:
