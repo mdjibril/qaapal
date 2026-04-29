@@ -81,6 +81,14 @@ def login_form():
             # 3. Fetch Role (using the debug-friendly version above)
             st.session_state['user_role'] = get_user_role(auth_res.user.id)
             
+            # Fetch full name and store it in session state
+            admin_client = get_admin_supabase() # Use admin client to bypass RLS for profile fetch
+            profile_response = admin_client.table("user_profiles").select("full_name").eq("id", auth_res.user.id).execute()
+            if profile_response.data and len(profile_response.data) > 0:
+                st.session_state['assessor_full_name'] = profile_response.data[0].get("full_name")
+            else:
+                st.session_state['assessor_full_name'] = "Assessor" # Default if not found
+            
             st.success("Login successful!")
 
             st.rerun()

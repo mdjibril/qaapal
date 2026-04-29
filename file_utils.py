@@ -38,8 +38,11 @@ def export_to_word(name, date, report_text, assessor_name, assessor_id, timeline
             p = doc.add_paragraph(style='List Bullet')
             p.add_run(f"{unit}: ").bold = True
             p.add_run(", ".join(pcs))
-    elif selected_pcs:
-        doc.add_paragraph(f"Units Covered: {selected_pcs}")
+    elif selected_pcs and isinstance(selected_pcs, str):
+        # If it's a comma-separated string of unit codes (from history)
+        p = doc.add_paragraph(style='List Bullet')
+        p.add_run("Units Covered: ").bold = True
+        p.add_run(selected_pcs)
 
     doc.add_paragraph("\n")
     doc.add_heading(f'Assessor Signature: _______________________', level=3)
