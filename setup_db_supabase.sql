@@ -18,5 +18,6 @@ CREATE TABLE public.assessment_reports (
     unit_codes text,
     report_text text,
     assessment_date text,
-    created_at timestamp with time zone DEFAULT timezone('utc'::text, now())
+    created_at timestamp with time zone DEFAULT timezone('utc'::text, now()),
+    created_by uuid REFERENCES auth.users(id) ON DELETE SET NULL
 );

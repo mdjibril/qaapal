@@ -45,9 +45,16 @@ A professional AI-powered assessment report generator for the National Skills Qu
    PROJECT_URL = "https://your-project-id.supabase.co"
    ANON_KEY = "your_supabase_anon_key"
    SERVICE_ROLE_KEY = "your_supabase_service_role_key"
-   DATABASE_URL = "postgresql://postgres:password@db.your-id.supabase.co:5432/postgres"
    ```
-4. **Run the app:**
+4. **Initialize Database:**
+   - Copy the contents of `setup_db_supabase.sql` and run them in the **SQL Editor** of your Supabase dashboard.
+   - Enable RLS or set up policies as required.
+5. **Seed Data:**
+   Set your database environment variables and run the seed script to populate the NOS criteria:
+   ```bash
+   python seed.py
+   ```
+6. **Run the app:**
    ```bash
    streamlit run main.py
    ```
