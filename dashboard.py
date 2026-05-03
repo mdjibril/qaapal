@@ -20,13 +20,14 @@ def render_nos_selection(nos_data):
     for i, unit_key in enumerate(unit_titles):
         with tabs[i]:
             for lo_key, pcs in nos_data[unit_key].items():
+                lo_id = lo_key.split(':')[0].replace("LO", "").strip()
                 with st.expander(lo_key):
                     for pc in pcs:
                         # Unique key is vital to keep checkbox state
                         if st.checkbox(pc, key=f"chk_{unit_key}_{pc}"):
                             # Standardizing the string for the report
                             unit_code = unit_key.split(':')[0]
-                            local_selected_pcs.append(f"{unit_code} - {pc}")
+                            local_selected_pcs.append(f"{unit_code} - {lo_id} - {pc}")
     
     # Store the results in session state so the "Generate" button can access them
     st.session_state.current_selected_pcs = local_selected_pcs
@@ -138,19 +139,21 @@ def main():
 
                 ### CRITERIA INTEGRATION RULES
                 5. **No Staged Sequencing**: Do NOT write one paragraph per PC. Weave 2-3 PCs naturally into every paragraph.
-                6. **Show, Don't Tell**: Instead of stating "the candidate is competent," describe specific technical actions and decisions that prove competence.
-                7. **Mapping**: At the end of every paragraph, list the met criteria in shorthand grouping. Example: (Unit 11-PC 5.1, 5.2).
-                8. **Exhaustive Usage**: You MUST use every PC provided in the user's list exactly once. Do not hallucinate or invent PC codes.
-                9. **Seamlessness**: The reader should understand how the action meets the PC without needing a cross-reference list.
-                
+                6. **Consistency**: Maintain consistent terminology and style throughout the report.
+                7. **Clarity**: Use clear simple english word that a lay man will understand. Avoid technical jargon and complex sentence structures. The report should be easily comprehensible to a wide audience, including those without specialized knowledge in the field.
+                8. **Mapping**: At the end of every paragraph, list the met criteria in a single collapsed shorthand grouping. Do NOT repeat the Unit code within the same group if multiple criteria from that unit are met. 
+                   Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/SMC/004/L2 - LO3:PC 3.3; LO4:PC 4.1).
+                9. **Exhaustive Usage**: You MUST use every PC provided in the user's list exactly once. Do not hallucinate or invent PC codes.
+                10. **Seamlessness**: The reader should understand how the action meets the PC without needing a cross-reference list.
+
                 ### TONE & LANGUAGE
-                10. **Professionalism**: Maintain a formal, technical tone.
-                11. **Clarity**: Avoid "dictionary-heavy" or overly flowery language. Focus on clear, straightforward procedural descriptions of what the candidate did under direct observation.
-                12. **Coherence**: Ensure each paragraph links logically to the next to form a unified story of the assessment session.
+                11. **Professionalism**: Maintain a formal, technical tone.
+                12. **Clarity**: Avoid "dictionary-heavy" or overly flowery language. Focus on clear, straightforward procedural descriptions of what the candidate did under direct observation.
+                13. **Coherence**: Ensure each paragraph links logically to the next to form a unified story of the assessment session.
                 </strict_rules>
 
                 <example_paragraph>
-                While navigating the server room environment, the candidate demonstrated high awareness of safety protocols by ensuring all external power cables were disconnected before opening the chassis. Simultaneously, they utilized an anti-static wrist strap to ground themselves, effectively mitigating the risk of ESD damage to the sensitive motherboard components. (ICT/CMR/004/L2-PC 1.2, 1.3).
+                While navigating the server room environment, the candidate demonstrated high awareness of safety protocols by ensuring all external power cables were disconnected before opening the chassis. Simultaneously, they utilized an anti-static wrist strap to ground themselves, effectively mitigating the risk of ESD damage to the sensitive motherboard components. (ICT/SMC/004/L2 - LO4 - PC 4.2)).
                 </example_paragraph>"""
 
                 user_prompt = f"""Write the NSQ assessment report for {student_name}.
@@ -186,13 +189,17 @@ def main():
                 else:
                     summary_block = "\n\n----- SUMMARY OF CRITERIA COVERED -----\n\n"
                     u_dict = {}
-                    for item in selected_pcs:
-                        u_code = item.split(' - ')[0].split(':')[0]
-                        pc_code = item.split(' - ')[1].split(':')[0]
-                        if u_code not in u_dict: u_dict[u_code] = []
-                        u_dict[u_code].append(pc_code)
-                    for u, pc_list in u_dict.items():
-                        summary_block += f"{u}: {', '.join(pc_list)}\n"
+                    for item in selected_pcs: # Format: "Unit - LO - PC"
+                        parts = item.split(' - ')
+                        if len(parts) >= 3:
+                            u_code = parts[0].strip()
+                            lo_num = parts[1].strip()
+                            pc_code = parts[2].split(':')[0].strip()
+                            u_dict.setdefault(u_code, {}).setdefault(lo_num, []).append(pc_code)
+
+                    for u, lo_map in u_dict.items():
+                        lo_parts = [f"LO {lo}:{', '.join(pcs)}" for lo, pcs in lo_map.items()]
+                        summary_block += f"Unit {u} - {'; '.join(lo_parts)}\n"
                     
                     full_report_text = ai_narrative + summary_block
 

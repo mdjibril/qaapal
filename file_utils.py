@@ -29,15 +29,20 @@ def export_to_word(name, date, report_text, assessor_name, assessor_id, timeline
     
     if selected_pcs and isinstance(selected_pcs, list):
         units_dict = {}
-        for pc in selected_pcs:
-            parts = pc.split(' - ')
-            if len(parts) >= 2:
-                unit, criterion = parts[0], parts[1].split(':')[0]
-                units_dict.setdefault(unit, []).append(criterion)
-        for unit, pcs in units_dict.items():
+        for pc_str in selected_pcs:
+            parts = pc_str.split(' - ')
+            if len(parts) >= 3:
+                unit = parts[0].strip()
+                lo_num = parts[1].strip()
+                lo = f"LO {lo_num}"
+                criterion = parts[2].split(':')[0].strip()
+                units_dict.setdefault(unit, {}).setdefault(lo, []).append(criterion)
+
+        for unit, lo_map in units_dict.items():
             p = doc.add_paragraph(style='List Bullet')
             p.add_run(f"{unit}: ").bold = True
-            p.add_run(", ".join(pcs))
+            lo_parts = [f"{lo}:{', '.join(pcs)}" for lo, pcs in lo_map.items()]
+            p.add_run("; ".join(lo_parts))
     elif selected_pcs and isinstance(selected_pcs, str):
         # If it's a comma-separated string of unit codes (from history)
         p = doc.add_paragraph(style='List Bullet')
