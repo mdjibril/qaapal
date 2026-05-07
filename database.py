@@ -114,3 +114,23 @@ def insert_report(name, trade_id, unit_codes, report_content, date, user_id):
         error_str = str(e)
         print(f"DATABASE INSERT ERROR: {error_str}")
         return False, error_str
+
+def insert_student_statement(user_id, student_name, trade_id, unit_codes, reflection_notes, statement_text):
+    """
+    Inserts a student's personal statement into the database.
+    """
+    supabase = get_supabase()
+    try:
+        data = {
+            "user_id": user_id,
+            "student_name": student_name,
+            "trade_id": int(trade_id) if trade_id else None,
+            "unit_codes": str(unit_codes),
+            "reflection_notes": str(reflection_notes),
+            "statement_text": str(statement_text),
+            "created_by": user_id
+        }
+        supabase.table("student_statements").insert(data).execute()
+        return True, None
+    except Exception as e:
+        return False, str(e)

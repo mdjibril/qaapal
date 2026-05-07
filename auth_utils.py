@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-from supabase import create_client
+from supabase import create_client, ClientOptions
 
 def get_supabase():
     # Use st.secrets with a default to avoid crashes during debug
@@ -11,7 +11,7 @@ def get_supabase():
         st.error("Secrets missing! Check Streamlit Cloud Settings > Secrets.")
         st.stop() # Stops the app here so you can see the error
         
-    client = create_client(url, key)
+    client = _create_base_client(url, key)
     
     # Attach the authenticated session token if it exists
     session = st.session_state.get("supabase_session")
@@ -34,6 +34,12 @@ def get_supabase():
 
     return client
 
+@st.cache_resource
+def _create_base_client(url, key):
+    """Internal cached helper to maintain a single connection pool."""
+    return create_client(url, key, options=ClientOptions(postgrest_client_timeout=60))
+
+@st.cache_resource
 def get_admin_supabase():
     """Returns a Supabase client initialized with the Service Role Key for administrative tasks."""
     url = st.secrets.get("connections", {}).get("supabase", {}).get("PROJECT_URL")
@@ -43,7 +49,7 @@ def get_admin_supabase():
         st.error("SERVICE_ROLE_KEY is missing from secrets! This is required for admin tasks.")
         st.stop()
         
-    return create_client(url, key)
+    return create_client(url, key, options=ClientOptions(postgrest_client_timeout=60))
 
 def get_user_role(user_id):
     # Use the admin client to bypass RLS policies when checking user roles.

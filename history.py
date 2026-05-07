@@ -4,19 +4,43 @@ from file_utils import export_to_word
 import pandas as pd
 
 # Helper function to fetch reports
-def _fetch_reports(user_id, role):
+def _fetch_reports(user_id, role, search_query=None, page=1, page_size=20, assessor_filter=None):
     # Admins use the admin client to bypass RLS on user_profiles for full name retrieval
     client = get_admin_supabase() if role == 'admin' else get_supabase()
     try:
-        # Build query: Admins see all, Assessors see theirs, ordered by the creation timestamp
-        query = client.table("assessment_reports").select("*, user_profiles(full_name)") # Fetch full_name from user_profiles
-        if role != 'admin':
+        # Build query with count="exact" for pagination
+        query = client.table("assessment_reports").select("*, user_profiles(full_name)", count="exact") 
+        
+        # Admin can filter by a specific assessor, otherwise they see all
+        if role == 'admin':
+            if assessor_filter:
+                query = query.eq("created_by", assessor_filter)
+        else:
+            # Assessors only see their own
             query = query.eq("created_by", user_id)
         
-        response = query.order("created_at", desc=True).execute()
-        return response.data
+        if search_query:
+            # Server-side search logic: search student_name OR report_text
+            q = f"%{search_query}%"
+            query = query.or_(f"student_name.ilike.{q},report_text.ilike.{q}")
+
+        start = (page - 1) * page_size
+        end = start + page_size - 1
+        response = query.order("created_at", desc=True).range(start, end).execute()
+        return response.data, response.count
     except Exception as e:
         st.error(f"Error fetching history: {e}")
+        return [], 0
+
+# Helper function for Admin to see all assessors
+def _fetch_assessors():
+    client = get_admin_supabase()
+    try:
+        # Fetch users who are either assessors or admins to populate the filter
+        res = client.table("user_profiles").select("id, full_name").order("full_name").execute()
+        return res.data
+    except Exception as e:
+        st.error(f"Error fetching assessors: {e}")
         return []
 
 # Helper function to delete a report
@@ -91,45 +115,77 @@ def main():
     user_id = st.session_state.user_session.id
     role = st.session_state.user_role
 
-    # Initialize selected_report_ids if not present
-    if 'selected_report_ids' not in st.session_state:
-        st.session_state.selected_report_ids = set()
+    # Initialize pagination and search state
+    if 'history_page' not in st.session_state: st.session_state.history_page = 1
+    if 'selected_report_ids' not in st.session_state: st.session_state.selected_report_ids = set()
+    if 'search_query' not in st.session_state: st.session_state.search_query = ""
+    if 'admin_assessor_filter' not in st.session_state: st.session_state.admin_assessor_filter = "All"
 
-    try:
-        # Load reports into session state if not already loaded or if refresh is requested
-        # Using a button to explicitly refresh the list
-        # Refresh button at the top
-        if st.button("Refresh History"):
-            if 'assessment_reports' in st.session_state:
-                del st.session_state.assessment_reports
-            st.session_state.selected_report_ids = set() # Clear selection on refresh
-            st.rerun() # Rerun to re-fetch reports
+    # Admin-specific Filter UI
+    if role == 'admin':
+        assessors = _fetch_assessors()
+        options = {"All": "All Assessors"}
+        for a in assessors:
+            options[a['id']] = a['full_name']
+        
+        selected_assessor = st.selectbox(
+            "Filter by Assessor", 
+            options=list(options.keys()), 
+            format_func=lambda x: options[x],
+            index=list(options.keys()).index(st.session_state.admin_assessor_filter) if st.session_state.admin_assessor_filter in options else 0
+        )
+        
+        if selected_assessor != st.session_state.admin_assessor_filter:
+            st.session_state.admin_assessor_filter = selected_assessor
+            st.session_state.history_page = 1 # Reset to page 1 on filter change
+            st.rerun()
 
-        if 'assessment_reports' not in st.session_state:
-            st.session_state.assessment_reports = _fetch_reports(user_id, role)
-    except Exception as e:
-        st.error(f"Error fetching history: {e}")
-        st.session_state.assessment_reports = []
-
-    reports = st.session_state.assessment_reports
-    if not reports:
-        st.info("No reports found.")
-        return # Exit early if no reports
-
-    # Search implementation
-    search_query = st.text_input("Search reports by student name or content", "")
+    # Search implementation at the top
+    search_input = st.text_input("Search reports by student name or content", value=st.session_state.search_query)
     
-    filtered_reports = []
-    if search_query:
-        search_query_lower = search_query.lower()
-        for r in reports:
-            student_name = r.get('student_name', '').lower()
-            report_text = r.get('report_text', '').lower()
-            assessor_name = (r.get('user_profiles') or {}).get('full_name', '').lower()
-            if search_query_lower in student_name or search_query_lower in report_text:
-                filtered_reports.append(r)
-    else:
-        filtered_reports = reports
+    # Reset page if search query changes
+    if search_input != st.session_state.search_query:
+        st.session_state.search_query = search_input
+        st.session_state.history_page = 1
+        st.rerun()
+
+    page_size = 20
+    
+    try:
+        # Fetch only the current page of reports based on search
+        reports, total_count = _fetch_reports(
+            user_id, role, 
+            search_query=st.session_state.search_query, 
+            page=st.session_state.history_page, 
+            page_size=page_size,
+            assessor_filter=st.session_state.admin_assessor_filter if st.session_state.admin_assessor_filter != "All" else None
+        )
+    except Exception:
+        reports, total_count = [], 0
+
+    if not reports and not st.session_state.search_query:
+        st.info("No reports found.")
+        if st.button("Refresh"): st.rerun()
+        return
+
+    # Pagination controls UI
+    total_pages = (total_count + page_size - 1) // page_size if total_count > 0 else 1
+    
+    col_p1, col_p2, col_p3 = st.columns([1, 2, 1])
+    with col_p1:
+        if st.session_state.history_page > 1:
+            if st.button("⬅️ Previous"):
+                st.session_state.history_page -= 1
+                st.rerun()
+    with col_p2:
+        st.write(f"Page **{st.session_state.history_page}** of {total_pages} (Total: {total_count})")
+    with col_p3:
+        if st.session_state.history_page < total_pages:
+            if st.button("Next ➡️"):
+                st.session_state.history_page += 1
+                st.rerun()
+
+    filtered_reports = reports
 
     if not filtered_reports:
         st.info("No reports found matching your search criteria.")
@@ -175,8 +231,6 @@ def main():
                             # Reset states
                             st.session_state.selected_report_ids = set()
                             st.session_state.confirm_bulk_delete_active = False
-                            if 'assessment_reports' in st.session_state:
-                                del st.session_state.assessment_reports
                             st.success("Selected reports deleted successfully.")
                             st.rerun()
                         except Exception as e:
@@ -186,8 +240,9 @@ def main():
                         st.session_state.confirm_bulk_delete_active = False
                         st.rerun()
         
-        # Grouping logic for admin
-        if role == 'admin':
+        # Grouping logic for admin: 
+        # Only group if a specific assessor is selected; otherwise, show a flat chronological list.
+        if role == 'admin' and st.session_state.admin_assessor_filter != "All":
             reports_by_assessor = {}
             for r in filtered_reports:
                 assessor_full_name = (r.get('user_profiles') or {}).get('full_name', 'Unknown Assessor')

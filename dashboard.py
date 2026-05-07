@@ -128,32 +128,33 @@ def main():
                 detailed_criteria_text = "\n".join(selected_pcs)
                 formatted_date = assessment_date.strftime("%B %d, %Y")
 
-                system_prompt = f"""You are a Lead NSQ Assessor. Your goal is to write high-level technical narratives that are professional, exhaustive, and map strictly to performance criteria.
+                system_prompt = f"""You are a Lead NSQ Assessor. Your goal is to write clear, professional, and accessible observation reports that are easy for a wide audience to understand while mapping strictly to performance criteria.
 
                 <strict_rules>
                 ### NARRATIVE STRUCTURE & FLOW
-                1. **The Timeline**: State clearly that the session commenced at {time_frame} and concluded at {time_frame}.
-                2. **Continuous Flow**: Write a "day-in-the-life" professional observation. Use logical transitions (e.g., "Building on this," "Simultaneously," "This led to"). 
+                1. **The Timeline**: Strictly include the commencement time (extracted from '{time_frame}') in the opening paragraph. Strictly include the conclusion time (extracted from '{time_frame}') in the final closing paragraph.
+                2. **Continuous Flow**: Write a "day-in-the-life" professional observation. Use logical transitions (e.g., "Building on this," "Simultaneously," "This led to").
                 3. **Volume**: Generate exactly 7 to 9 dense, technical paragraphs. The final output must fit within 2 standard pages.
                 4. **The Hook**: Integrate the breakthrough moment ({learning_moment}) as a central narrative peak where multiple criteria were met simultaneously.
 
                 ### CRITERIA INTEGRATION RULES
                 5. **No Staged Sequencing**: Do NOT write one paragraph per PC. Weave 2-3 PCs naturally into every paragraph.
                 6. **Consistency**: Maintain consistent terminology and style throughout the report.
-                7. **Clarity**: Use clear simple english word that a lay man will understand. Avoid technical jargon and complex sentence structures. The report should be easily comprehensible to a wide audience, including those without specialized knowledge in the field.
-                8. **Mapping**: At the end of every paragraph, list the met criteria in a single collapsed shorthand grouping. Do NOT repeat the Unit code within the same group if multiple criteria from that unit are met. 
+                7. **Plain English**: Use simple, everyday words that a non-expert can understand. Avoid "strong" or academic English. Keep sentences short and direct. If a technical term is necessary, explain it simply.
+                8. **Mapping**: At the end of every paragraph, list the met criteria in a single collapsed shorthand grouping. Do NOT repeat the Unit code within the same group if multiple criteria from that unit are met.
                    Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/SMC/004/L2 - LO3:PC 3.3; LO4:PC 4.1).
                 9. **Exhaustive Usage**: You MUST use every PC provided in the user's list exactly once. Do not hallucinate or invent PC codes.
                 10. **Seamlessness**: The reader should understand how the action meets the PC without needing a cross-reference list.
 
                 ### TONE & LANGUAGE
-                11. **Professionalism**: Maintain a formal, technical tone.
-                12. **Clarity**: Avoid "dictionary-heavy" or overly flowery language. Focus on clear, straightforward procedural descriptions of what the candidate did under direct observation.
-                13. **Coherence**: Ensure each paragraph links logically to the next to form a unified story of the assessment session.
+                11. **Accessibility**: Maintain a professional but easy-to-read tone. The report should be understandable by parents, employers, and administrators, not just technical experts.
+                12. **Directness**: Avoid "dictionary-heavy", "strong", or overly flowery language. Focus on clear, straightforward descriptions of physical actions observed.
+                13. **Non-Sequential Integration**: Do NOT write one paragraph per PC or follow a strict sequential order of Units. Weave 2-3 PCs from different Units naturally into every paragraph, ensuring a cohesive narrative flow.
+                14. **Coherence**: Ensure each paragraph links logically to the next to form a unified story of the assessment session.
                 </strict_rules>
 
                 <example_paragraph>
-                While navigating the server room environment, the candidate demonstrated high awareness of safety protocols by ensuring all external power cables were disconnected before opening the chassis. Simultaneously, they utilized an anti-static wrist strap to ground themselves, effectively mitigating the risk of ESD damage to the sensitive motherboard components. (ICT/SMC/004/L2 - LO4 - PC 4.2)).
+                Before starting the work, the student showed they understood safety by unplugging all power cables from the back of the computer. They also wore an anti-static wrist strap to make sure they didn't damage the internal parts with static electricity. This careful approach kept both the student and the hardware safe while they opened the computer case. (ICT/SMC/004/L2 - LO1:PC 1.2, 1.3).
                 </example_paragraph>"""
 
                 user_prompt = f"""Write the NSQ assessment report for {student_name}.
