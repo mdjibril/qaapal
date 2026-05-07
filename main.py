@@ -1,6 +1,6 @@
 import streamlit as st
 from auth_utils import check_auth, login_form
-import dashboard, history, admin_nos, admin_users, database as db
+import dashboard, history, admin_nos, admin_users, personal_statement, database as db
 import google.generativeai as genai
 from groq import Groq
 import requests, json
@@ -81,7 +81,7 @@ else:
         st.sidebar.text_input("OpenRouter Key", type="password", key="openrouter_api_key_input", on_change=update_api_key_session, args=("openrouter_api_key_input",))
         if st.session_state.target_key == "" and "openrouter_api_key_input" in st.session_state:
             st.session_state.target_key = st.session_state.openrouter_api_key_input
-        st.session_state.target_model = st.sidebar.selectbox("Model", ["tencent/hy3-preview:free", "inclusionai/ling-2.6-1t:free", "z-ai/glm-4.5-air:free", "openai/gpt-oss-120b:free", "poolside/laguna-m.1:free", "liquid/lfm-2.5-1.2b-thinking:free", "nvidia/nemotron-3-super-120b-a12b:free"])
+        st.session_state.target_model = st.sidebar.selectbox("Model", ["inclusionai/ling-2.6-1t:free", "z-ai/glm-4.5-air:free", "openai/gpt-oss-120b:free", "poolside/laguna-m.1:free", "liquid/lfm-2.5-1.2b-thinking:free", "nvidia/nemotron-3-super-120b-a12b:free"])
 
     # THE VERIFICATION BUTTON
     # The target_key is now updated via the on_change callback, so this condition will be more responsive.
@@ -97,7 +97,8 @@ else:
                     else:
                         st.error(f"Verification failed: {res}")
 
-    st.sidebar.checkbox("🛠️ Dev Mode (Skip AI)", key="dev_mode")
+    if role == 'admin':
+        st.sidebar.checkbox("🛠️ Dev Mode (Skip AI)", key="dev_mode")
     
     # 3. Assessor Info
     st.sidebar.markdown("---")
@@ -106,10 +107,18 @@ else:
 
     # 4. Navigation
     st.sidebar.markdown("---")
-    pages = {"Dashboard": dashboard.main, "📜 My History": history.main}
-    if role == 'admin':
-        pages["📚 Manage NOS"] = admin_nos.main
-        pages["👥 User Management"] = admin_users.main
+    
+    if role == 'student':
+        pages = {"✍️ Student Statement": personal_statement.main}
+    else:
+        pages = {
+            "Dashboard": dashboard.main, 
+            "✍️ Student Statement": personal_statement.main,
+            "📜 My History": history.main
+        }
+        if role == 'admin':
+            pages["📚 Manage NOS"] = admin_nos.main
+            pages["👥 User Management"] = admin_users.main
     
     selection = st.sidebar.radio("Navigation", list(pages.keys()))
     
