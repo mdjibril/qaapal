@@ -25,7 +25,7 @@ else:
     role = st.session_state.get('user_role', 'assessor')
     
     # --- CENTRALIZED SIDEBAR ---
-    st.sidebar.title(f"🚀 NSQ Portal v1.0.1")
+    st.sidebar.title(f"🚀 NSQ Portal v1.0.3")
     st.sidebar.caption(f"Logged in as: {role.capitalize()}")
     st.session_state.assessor_name = st.session_state.get('assessor_full_name', 'Jibril Dauda Muhammad')
     st.session_state.assessor_id = st.session_state.get('assessor_id', 'QAA/XXXX/ICT')

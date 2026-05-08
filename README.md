@@ -58,3 +58,21 @@ A professional AI-powered assessment report generator for the National Skills Qu
    ```bash
    streamlit run main.py
    ```
+
+## 🚂 Deployment on Railway.io
+
+1. **Create a new Project:** Link your GitHub repository to Railway.
+2. **Configure Variables:** Add the following environment variables in the Railway dashboard. Note the use of `__` to match Streamlit's secrets structure:
+   - `connections__supabase__PROJECT_URL`
+   - `connections__supabase__ANON_KEY`
+   - `connections__supabase__SERVICE_ROLE_KEY`
+3. **Start Command:** Railway should detect the `requirements.txt` and python environment. Ensure your start command is:
+   ```bash
+   streamlit run main.py --server.port $PORT --server.address 0.0.0.0
+   ```
+   *Note: You can also create a `Procfile` in the root directory with the content:* `web: streamlit run main.py --server.port $PORT --server.address 0.0.0.0`
+4. **Networking:** Railway will automatically provide a public URL once the build is complete.
+
+### 💡 Tips for Production
+- Ensure the `SERVICE_ROLE_KEY` is kept private and only used on the server side.
+- Use a robust AI provider key (like a paid Gemini or Groq tier) to avoid rate limits during high usage.

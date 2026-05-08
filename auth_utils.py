@@ -1,11 +1,29 @@
+import os
 import streamlit as st
 import time
 from supabase import create_client, ClientOptions
 
+def _get_secret(key_path, env_key):
+    """
+    Helper to fetch configuration. 
+    1. Tries Streamlit Secrets (for local & Streamlit Cloud)
+    2. Falls back to OS Environment Variables (for Railway/Docker)
+    """
+    try:
+        val = st.secrets
+        for k in key_path:
+            val = val[k]
+        return val
+    except (KeyError, AttributeError, st.errors.StreamlitSecretNotFoundError):
+        raw_val = os.environ.get(env_key) or os.environ.get(env_key.upper())
+        if raw_val and isinstance(raw_val, str):
+            # Strip whitespace and any accidental wrapping quotes
+            return raw_val.strip().strip('"').strip("'")
+        return raw_val
+
 def get_supabase():
-    # Use st.secrets with a default to avoid crashes during debug
-    url = st.secrets.get("connections", {}).get("supabase", {}).get("PROJECT_URL")
-    key = st.secrets.get("connections", {}).get("supabase", {}).get("ANON_KEY")
+    url = _get_secret(["connections", "supabase", "PROJECT_URL"], "connections__supabase__PROJECT_URL")
+    key = _get_secret(["connections", "supabase", "ANON_KEY"], "connections__supabase__ANON_KEY")
     
     if not url or not key:
         st.error("Secrets missing! Check Streamlit Cloud Settings > Secrets.")
@@ -42,8 +60,8 @@ def _create_base_client(url, key):
 @st.cache_resource
 def get_admin_supabase():
     """Returns a Supabase client initialized with the Service Role Key for administrative tasks."""
-    url = st.secrets.get("connections", {}).get("supabase", {}).get("PROJECT_URL")
-    key = st.secrets.get("connections", {}).get("supabase", {}).get("SERVICE_ROLE_KEY")
+    url = _get_secret(["connections", "supabase", "PROJECT_URL"], "connections__supabase__PROJECT_URL")
+    key = _get_secret(["connections", "supabase", "SERVICE_ROLE_KEY"], "connections__supabase__SERVICE_ROLE_KEY")
     
     if not url or not key:
         st.error("SERVICE_ROLE_KEY is missing from secrets! This is required for admin tasks.")
