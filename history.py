@@ -44,11 +44,16 @@ def _fetch_assessors():
         return []
 
 # Helper function to delete a report
-def _delete_report(report_id, role):
-    # Admins use the service role client to bypass RLS for deletion
-    client = get_admin_supabase() if role == 'admin' else get_supabase()
+def _delete_report(report_id, role, current_user_id):
+    # Use the admin client to ensure the operation completes, 
+    # but strictly enforce ownership for non-admin users.
+    client = get_admin_supabase()
     try:
-        res = client.table("assessment_reports").delete().eq("id", report_id).execute()
+        query = client.table("assessment_reports").delete().eq("id", report_id)
+        if role != 'admin':
+            query = query.eq("created_by", current_user_id)
+        
+        res = query.execute()
         if not res.data:
             st.error(f"Deletion failed: Report {report_id} not found or permission denied.")
             return False
@@ -105,7 +110,7 @@ def display_report_item(r, current_user_id, current_user_role):
             # Single deletion button
             if current_user_role == 'admin' or r.get('created_by') == current_user_id:
                 if st.button("🗑️ Delete Report", key=f"delete_single_{report_id}"):
-                    if _delete_report(report_id, current_user_role):
+                    if _delete_report(report_id, current_user_role, current_user_id):
                         st.toast(f"Report for {r.get('student_name')} deleted.")
                         st.rerun()
 
@@ -218,10 +223,14 @@ def main():
                     c1, c2 = st.columns([0.2, 0.2])
                     if c1.button("Yes, Delete", type="primary", key="confirm_bulk_yes"):
                         try:
-                            # Perform bulk delete in one query for efficiency
-                            client_to_use = get_admin_supabase() if role == 'admin' else supabase
+                            # Use the admin client for bulk delete, filtering by user_id if not admin
+                            admin_client = get_admin_supabase()
                             ids_to_del = list(st.session_state.selected_report_ids)
-                            res = client_to_use.table("assessment_reports").delete().in_("id", ids_to_del).execute()
+                            query = admin_client.table("assessment_reports").delete().in_("id", ids_to_del)
+                            if role != 'admin':
+                                query = query.eq("created_by", user_id)
+                            
+                            res = query.execute()
                             
                             if not res.data:
                                 st.error("Bulk delete failed: No reports were removed. Check permissions.")

@@ -27,6 +27,10 @@ else:
     # --- CENTRALIZED SIDEBAR ---
     st.sidebar.title(f"🚀 NSQ Portal v1.0.1")
     st.sidebar.caption(f"Logged in as: {role.capitalize()}")
+    st.session_state.assessor_name = st.session_state.get('assessor_full_name', 'Jibril Dauda Muhammad')
+    st.session_state.assessor_id = st.session_state.get('assessor_id', 'QAA/XXXX/ICT')
+    st.sidebar.caption(f"👤 Assessor: {st.session_state.assessor_name}")
+    st.sidebar.caption(f"🆔 ID: {st.session_state.assessor_id}")
     
     # Trade Selection Logic
     trades_df = get_cached_trades()
@@ -100,11 +104,7 @@ else:
     if role == 'admin':
         st.sidebar.checkbox("🛠️ Dev Mode (Skip AI)", key="dev_mode")
     
-    # 3. Assessor Info
-    st.sidebar.markdown("---")
-    st.session_state.assessor_name = st.sidebar.text_input("Assessor Name", value=st.session_state.get('assessor_full_name', 'Jibril Dauda Muhammad'))
-    st.session_state.assessor_id = st.sidebar.text_input("Assessor ID", value=st.session_state.get('assessor_id', 'QAA/XXXX/ICT'))
-
+    
     # 4. Navigation
     st.sidebar.markdown("---")
     
