@@ -11,6 +11,23 @@ def render_nos_selection(nos_data):
     Renders checkboxes in a fragment so clicking 
     doesn't trigger a full-page reload/faint.
     """
+    def sync_unit_pcs(u_key, u_data):
+        # Callback to update all PCs in a unit when the master checkbox changes
+        master_val = st.session_state[f"unit_all_{u_key}"]
+        for lo_pcs in u_data.values():
+            for pc in lo_pcs:
+                st.session_state[f"chk_{u_key}_{pc}"] = master_val
+
+    def clear_all_pcs_callback(all_nos_data):
+        # Callback to clear all PCs across all units
+        for u_key, u_data in all_nos_data.items():
+            st.session_state[f"unit_all_{u_key}"] = False # Uncheck master unit checkbox
+            # Iterate through all PCs in the unit and set their state to False
+            # This is necessary because sync_unit_pcs only acts on its own unit
+            for lo_pcs in u_data.values():
+                for pc in lo_pcs:
+                    st.session_state[f"chk_{u_key}_{pc}"] = False
+
     local_selected_pcs = []
     
     # Generate Tabs based on Units
@@ -19,6 +36,15 @@ def render_nos_selection(nos_data):
     
     for i, unit_key in enumerate(unit_titles):
         with tabs[i]:
+            unit_code = unit_key.split(':')[0]
+            # Master checkbox for the entire unit
+            st.checkbox(
+                f"✅ Select All Performance Criteria for {unit_code}", 
+                key=f"unit_all_{unit_key}",
+                on_change=sync_unit_pcs,
+                args=(unit_key, nos_data[unit_key])
+            )
+
             for lo_key, pcs in nos_data[unit_key].items():
                 lo_id = lo_key.split(':')[0].replace("LO", "").strip()
                 with st.expander(lo_key):
@@ -26,9 +52,15 @@ def render_nos_selection(nos_data):
                         # Unique key is vital to keep checkbox state
                         if st.checkbox(pc, key=f"chk_{unit_key}_{pc}"):
                             # Standardizing the string for the report
-                            unit_code = unit_key.split(':')[0]
                             local_selected_pcs.append(f"{unit_code} - {lo_id} - {pc}")
-    
+            
+    # Add a "Clear All" button at the top of the selection area
+    st.button(
+        "🗑️ Clear All Selections", 
+        on_click=clear_all_pcs_callback, 
+        args=(nos_data,), 
+        key="dashboard_clear_all_pcs"
+    )
     # Store the results in session state so the "Generate" button can access them
     st.session_state.current_selected_pcs = local_selected_pcs
 
@@ -134,7 +166,7 @@ def main():
                 ### NARRATIVE STRUCTURE & FLOW
                 1. **The Timeline**: Strictly include the commencement time (extracted from '{time_frame}') in the opening paragraph. Strictly include the conclusion time (extracted from '{time_frame}') in the final closing paragraph.
                 2. **Continuous Flow**: Write a "day-in-the-life" professional observation. Use logical transitions (e.g., "Building on this," "Simultaneously," "This led to").
-                3. **Volume**: Generate exactly 7 to 9 dense, technical paragraphs. The final output must fit within 2 standard pages.
+                3. **Volume**: Generate exactly 9 to 10 dense, technical paragraphs. The final output must fit within 2.5 standard pages.
                 4. **The Hook**: Integrate the breakthrough moment ({learning_moment}) as a central narrative peak where multiple criteria were met simultaneously.
 
                 ### CRITERIA INTEGRATION RULES

@@ -9,19 +9,51 @@ def render_nos_selection_for_student(nos_data):
     Renders checkboxes for the student to select which PCs they want to include 
     in their personal statement.
     """
+    def sync_unit_pcs(u_key, u_data):
+        # Callback to update all PCs in a unit when the master checkbox changes
+        master_val = st.session_state[f"stmt_unit_all_{u_key}"]
+        for lo_pcs in u_data.values():
+            for pc in lo_pcs:
+                st.session_state[f"stmt_chk_{u_key}_{pc}"] = master_val
+
+    def clear_all_pcs_callback(all_nos_data):
+        # Callback to clear all PCs across all units
+        for u_key, u_data in all_nos_data.items():
+            st.session_state[f"stmt_unit_all_{u_key}"] = False
+            for lo_pcs in u_data.values():
+                for pc in lo_pcs:
+                    st.session_state[f"stmt_chk_{u_key}_{pc}"] = False
+
     local_selected_pcs = []
     
     unit_titles = list(nos_data.keys())
+
+    # Add a "Clear All" button at the top of the selection area
+    st.button(
+        "🗑️ Clear All Selections", 
+        on_click=clear_all_pcs_callback, 
+        args=(nos_data,), 
+        key="stmt_clear_all_pcs"
+    )
+
     tabs = st.tabs(unit_titles)
     
     for i, unit_key in enumerate(unit_titles):
         with tabs[i]:
+            unit_code = unit_key.split(':')[0]
+            # Master checkbox for the entire unit
+            st.checkbox(
+                f"✅ Select All Performance Criteria for {unit_code}", 
+                key=f"stmt_unit_all_{unit_key}",
+                on_change=sync_unit_pcs,
+                args=(unit_key, nos_data[unit_key])
+            )
+            
             for lo_key, pcs in nos_data[unit_key].items():
                 lo_id = lo_key.split(':')[0].replace("LO", "").strip()
                 with st.expander(lo_key):
                     for pc in pcs:
                         if st.checkbox(pc, key=f"stmt_chk_{unit_key}_{pc}"):
-                            unit_code = unit_key.split(':')[0]
                             local_selected_pcs.append(f"{unit_code} - {lo_id} - {pc}")
     
     st.session_state.student_selected_pcs = local_selected_pcs
