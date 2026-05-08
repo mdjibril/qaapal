@@ -10,16 +10,25 @@ def _get_secret(key_path, env_key):
     2. Falls back to OS Environment Variables (for Railway/Docker)
     """
     try:
+        # We use a nested get to avoid triggering the StreamlitSecretNotFoundError 
+        # that occurs when using square bracket [k] access on an empty secrets object.
         val = st.secrets
         for k in key_path:
-            val = val[k]
-        return val
-    except (KeyError, AttributeError, st.errors.StreamlitSecretNotFoundError):
-        raw_val = os.environ.get(env_key) or os.environ.get(env_key.upper())
-        if raw_val and isinstance(raw_val, str):
-            # Strip whitespace and any accidental wrapping quotes
-            return raw_val.strip().strip('"').strip("'")
-        return raw_val
+            val = val.get(k)
+            if val is None:
+                break
+        if val is not None:
+            return val
+    except Exception:
+        # If st.secrets fails for any reason (missing file, etc.), we fall back
+        pass
+
+    # Fallback to OS Environment Variables (Railway/Docker)
+    raw_val = os.environ.get(env_key) or os.environ.get(env_key.upper())
+    if raw_val and isinstance(raw_val, str):
+        # Strip whitespace and any accidental wrapping quotes added by UI
+        return raw_val.strip().strip('"').strip("'")
+    return raw_val
 
 def get_supabase():
     url = _get_secret(["connections", "supabase", "PROJECT_URL"], "connections__supabase__PROJECT_URL")
@@ -93,10 +102,10 @@ def login_form():
     password = st.text_input("Password", type="password", key="login_password")
     
     if st.button("Login"):
-        supabase = get_supabase()
         try:
             # 1. Sign In
-            auth_res = get_supabase().auth.sign_in_with_password({"email": email, "password": password})
+            supabase = get_supabase()
+            auth_res = supabase.auth.sign_in_with_password({"email": email, "password": password})
             
             # 2. Set Session
             st.session_state['user_session'] = auth_res.user
