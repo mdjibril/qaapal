@@ -26,11 +26,15 @@ else:
     
     # --- CENTRALIZED SIDEBAR ---
     st.sidebar.title(f"🚀 NSQ Portal v1.0.3")
-    st.sidebar.caption(f"Logged in as: {role.capitalize()}")
     st.session_state.assessor_name = st.session_state.get('assessor_full_name', 'Jibril Dauda Muhammad')
-    st.session_state.assessor_id = st.session_state.get('assessor_id', 'QAA/XXXX/ICT')
-    st.sidebar.caption(f"👤 Assessor: {st.session_state.assessor_name}")
-    st.sidebar.caption(f"🆔 ID: {st.session_state.assessor_id}")
+    # st.session_state.assessor_id = st.session_state.get('assessor_id', 'QAA/XXXX/ICT')
+    name = st.session_state.assessor_name
+    a_id = st.session_state.get('assessor_id', 'QAA/XXXX/ICT')
+
+    st.sidebar.caption(f"Logged in as 👤: {role.capitalize()} <<>> Name: {name.capitalize()}")
+    
+    # st.sidebar.caption(f"👤 Assessor: {st.session_state.assessor_name}")
+    # st.sidebar.caption(f"🆔 ID: {st.session_state.assessor_id}")
     
     # Trade Selection Logic
     trades_df = get_cached_trades()
@@ -85,7 +89,7 @@ else:
         st.sidebar.text_input("OpenRouter Key", type="password", key="openrouter_api_key_input", on_change=update_api_key_session, args=("openrouter_api_key_input",))
         if st.session_state.target_key == "" and "openrouter_api_key_input" in st.session_state:
             st.session_state.target_key = st.session_state.openrouter_api_key_input
-        st.session_state.target_model = st.sidebar.selectbox("Model", ["z-ai/glm-4.5-air:free", "openai/gpt-oss-120b:free", "poolside/laguna-m.1:free", "liquid/lfm-2.5-1.2b-thinking:free", "nvidia/nemotron-3-super-120b-a12b:free"])
+        st.session_state.target_model = st.sidebar.selectbox("Model", ["z-ai/glm-4.5-air:free", "poolside/laguna-m.1:free", "liquid/lfm-2.5-1.2b-thinking:free", "nvidia/nemotron-3-super-120b-a12b:free"])
 
     # THE VERIFICATION BUTTON
     # The target_key is now updated via the on_change callback, so this condition will be more responsive.
