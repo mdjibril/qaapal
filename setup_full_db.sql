@@ -4,9 +4,15 @@
 CREATE TABLE public.user_profiles (
   id uuid REFERENCES auth.users ON DELETE CASCADE NOT NULL PRIMARY KEY,
   email text,
-  role text DEFAULT 'assessor' CHECK (role IN ('admin', 'assessor', 'student')),
+  role text DEFAULT 'assessor',
   full_name text
 );
+
+-- Ensure the role check constraint is up to date if the table already existed
+ALTER TABLE public.user_profiles 
+DROP CONSTRAINT IF EXISTS user_profiles_role_check;
+ALTER TABLE public.user_profiles 
+ADD CONSTRAINT user_profiles_role_check CHECK (role IN ('admin', 'assessor', 'student'));
 
 -- 2. NSQ Structure (NOS)
 CREATE TABLE public.trades (
@@ -44,19 +50,19 @@ CREATE TABLE public.assessment_reports (
     report_text text,
     assessment_date text,
     created_at timestamptz DEFAULT now(),
-    created_by uuid REFERENCES auth.users(id) ON DELETE SET NULL
+    created_by uuid REFERENCES public.user_profiles(id) ON DELETE SET NULL
 );
 
 CREATE TABLE public.student_statements (
     id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
     created_at timestamptz DEFAULT now(),
-    user_id uuid REFERENCES auth.users(id) ON DELETE CASCADE,
+    user_id uuid REFERENCES public.user_profiles(id) ON DELETE CASCADE,
     student_name text NOT NULL,
     trade_id bigint REFERENCES public.trades(id) ON DELETE SET NULL,
     unit_codes text,
     reflection_notes text,
     statement_text text,
-    created_by uuid REFERENCES auth.users(id) ON DELETE SET NULL
+    created_by uuid REFERENCES public.user_profiles(id) ON DELETE SET NULL
 );
 
 CREATE TABLE public.witness_statements (
@@ -69,7 +75,7 @@ CREATE TABLE public.witness_statements (
     unit_codes text,
     witness_notes text,
     statement_text text,
-    created_by uuid REFERENCES auth.users(id) ON DELETE SET NULL
+    created_by uuid REFERENCES public.user_profiles(id) ON DELETE SET NULL
 );
 
 -- 4. Enable Row Level Security (RLS)
