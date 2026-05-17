@@ -134,3 +134,24 @@ def insert_student_statement(user_id, student_name, trade_id, unit_codes, reflec
         return True, None
     except Exception as e:
         return False, str(e)
+
+def insert_witness_statement(user_id, witness_name, witness_role, candidate_name, trade_id, unit_codes, witness_notes, statement_text):
+    """
+    Inserts a witness statement into the database.
+    """
+    supabase = get_supabase()
+    try:
+        data = {
+            "witness_name": witness_name,
+            "witness_role": witness_role,
+            "candidate_name": candidate_name,
+            "trade_id": int(trade_id) if trade_id else None,
+            "unit_codes": str(unit_codes),
+            "witness_notes": str(witness_notes),
+            "statement_text": str(statement_text),
+            "created_by": user_id
+        }
+        supabase.table("witness_statements").insert(data).execute()
+        return True, None
+    except Exception as e:
+        return False, str(e)

@@ -1,6 +1,6 @@
 import streamlit as st
 from auth_utils import check_auth, login_form
-import dashboard, history, admin_nos, admin_users, personal_statement, database as db
+import dashboard, history, admin_nos, admin_users, personal_statement, witness_statement, database as db
 import google.generativeai as genai
 from groq import Groq
 import requests, json
@@ -89,7 +89,7 @@ else:
         st.sidebar.text_input("OpenRouter Key", type="password", key="openrouter_api_key_input", on_change=update_api_key_session, args=("openrouter_api_key_input",))
         if st.session_state.target_key == "" and "openrouter_api_key_input" in st.session_state:
             st.session_state.target_key = st.session_state.openrouter_api_key_input
-        st.session_state.target_model = st.sidebar.selectbox("Model", ["z-ai/glm-4.5-air:free", "poolside/laguna-m.1:free", "liquid/lfm-2.5-1.2b-thinking:free", "nvidia/nemotron-3-super-120b-a12b:free"])
+        st.session_state.target_model = st.sidebar.selectbox("Model", ["z-ai/glm-4.5-air:free", "poolside/laguna-m.1:free", "nvidia/nemotron-3-super-120b-a12b:free", "baidu/qianfan-ocr-fast:free"])
 
     # THE VERIFICATION BUTTON
     # The target_key is now updated via the on_change callback, so this condition will be more responsive.
@@ -118,6 +118,7 @@ else:
         pages = {
             "Dashboard": dashboard.main, 
             "✍️ Student Statement": personal_statement.main,
+            "📑 Witness Statement": witness_statement.main,
             "📜 My History": history.main
         }
         if role == 'admin':

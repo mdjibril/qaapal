@@ -87,7 +87,7 @@ def display_report_item(r, current_user_id, current_user_role):
         st.checkbox("", key=f"selected_{report_id}", value=is_selected, on_change=_on_checkbox_change, args=(report_id,))
     
     with col_expander:
-        with st.expander(f"📅 {r.get('assessment_date')} | 👤 {r.get('student_name')} | 📚 {r.get('unit_codes', 'N/A').split(',')[0]}"):
+        with st.expander(f"📅 {r.get('assessment_date')} | 👤 {r.get('student_name')} | 📚 {r.get('unit_codes', 'N/A')}"):
             st.write(r['report_text'])
 
             doc_bytes = export_to_word(
