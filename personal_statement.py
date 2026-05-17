@@ -2,6 +2,7 @@ import streamlit as st
 import datetime
 import database as db
 from ai_utils import validate_and_generate
+from file_utils import export_personal_statement_to_word
 
 @st.fragment
 def render_nos_selection_for_student(nos_data):
@@ -169,17 +170,29 @@ def main():
         st.subheader("Preview of Your Statement")
         st.write(st.session_state.current_generated_statement)
         
-        if st.button("💾 Save to My Portfolio"):
-            user_id = st.session_state.user_session.id
-            success, err = db.insert_student_statement(
-                user_id=user_id,
-                student_name=student_name,
-                trade_id=trade_id,
-                unit_codes=", ".join(selected_pcs),
-                reflection_notes=reflection,
-                statement_text=st.session_state.current_generated_statement
+        col_save, col_download = st.columns(2)
+        with col_save:
+            if st.button("💾 Save to My Portfolio"):
+                user_id = st.session_state.user_session.id
+                unique_units = sorted(list(set([pc.split(' - ')[0] for pc in selected_pcs])))
+                success, err = db.insert_student_statement(
+                    user_id=user_id,
+                    student_name=student_name,
+                    trade_id=trade_id,
+                    unit_codes=", ".join(unique_units),
+                    reflection_notes=reflection,
+                    statement_text=st.session_state.current_generated_statement
+                )
+                if success:
+                    st.success("Statement saved successfully! You can view this in your portfolio history.")
+                else:
+                    st.error(f"Failed to save: {err}")
+        
+        with col_download:
+            doc_bytes = export_personal_statement_to_word(
+                student_name, 
+                statement_date, 
+                st.session_state.current_generated_statement, 
+                selected_pcs=selected_pcs
             )
-            if success:
-                st.success("Statement saved successfully! You can view this in your portfolio history.")
-            else:
-                st.error(f"Failed to save: {err}")
+            st.download_button("📥 Download Word (.docx)", doc_bytes, f"Statement_{student_name}.docx")

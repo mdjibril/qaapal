@@ -113,7 +113,10 @@ else:
     st.sidebar.markdown("---")
     
     if role == 'student':
-        pages = {"✍️ Student Statement": personal_statement.main}
+        pages = {
+            "✍️ Student Statement": personal_statement.main,
+            "📜 My History": history.main
+        }
     else:
         pages = {
             "Dashboard": dashboard.main, 

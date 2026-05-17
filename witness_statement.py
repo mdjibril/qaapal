@@ -148,13 +148,14 @@ def main():
         col_save, col_word = st.columns(2)
         with col_save:
             if st.button("💾 Save to Database"):
+                unique_units = sorted(list(set([pc.split(' - ')[0] for pc in selected_pcs])))
                 success, err = db.insert_witness_statement(
                     user_id=st.session_state.user_session.id,
                     witness_name=witness_name,
                     witness_role=witness_role,
                     candidate_name=candidate_name,
                     trade_id=trade_id,
-                    unit_codes=", ".join(selected_pcs),
+                    unit_codes=", ".join(unique_units),
                     witness_notes=witness_notes,
                     statement_text=st.session_state.current_witness_statement
                 )
