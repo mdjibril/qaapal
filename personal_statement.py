@@ -112,22 +112,28 @@ def main():
         else:
             with st.spinner("AI is crafting your professional narrative..."):
                 # --- FIRST-PERSON AI PROMPT ---
-                system_prompt = """You are a professional mentor helping a student draft their 'Personal Statement of Competence' for an NSQ Portfolio.
-                Your task is to transform raw reflection notes into a professional narrative written strictly in the FIRST PERSON (using 'I', 'me', 'my').
+                system_prompt = f"""You are a professional mentor helping a student draft their 'Personal Statement of Competence' for an NSQ Portfolio. 
+                Your goal is to transform raw reflection notes into a professional narrative written strictly in the FIRST PERSON (using 'I', 'me', 'my').
                 
-                RULES:
-                1. Tone: Professional, reflective, and confident.
-                2. Perspective: First-person singular only.
-                3. Integration: Weave the selected Performance Criteria (PCs) naturally into the story.
-                4. Reference: Mention the PC code in parentheses, e.g., (PC 1.2), when describing the action that met it.
-                5. Structure: Create a cohesive narrative, not a list. Explain the 'Why' and 'How' of the actions taken."""
+                <strict_rules>
+                1. **Perspective**: Strictly FIRST-PERSON singular.
+                2. **Tone**: Professional, reflective, and technically confident.
+                3. **Volume**: Generate exactly 5 to 6 dense, technical paragraphs.
+                4. **Mapping**: At the end of every paragraph, list the met criteria in a single collapsed shorthand grouping. 
+                   Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/CMR/004/L2 - LO1:PC 1.1, 1.2; LO2:PC 2.1).
+                5. **Exhaustive Usage**: You MUST integrate every PC provided in the list exactly once.
+                6. **Flow**: Create a cohesive narrative story of achievement, not a bulleted list. Explain the 'Why' and 'How' of the actions taken.
+                7. **Accessibility**: Use clear English, explaining technical terms simply where necessary.
+                8. **Technical Expansion**: DO NOT simply repeat the text of a Performance Criterion. Instead, expand upon it with specific, technically accurate details or examples. For instance, if a criterion mentions identifying security threats, specify types like DDOS, DNS spoofing, or DHCP poisoning to demonstrate deep knowledge.
+                </strict_rules>"""
 
                 user_prompt = f"""
                 Student Name: {student_name}
-                Reflection Notes: {reflection}
+                Statement Date: {statement_date}
+                Raw Reflection: {reflection}
                 Performance Criteria to cover: {", ".join(selected_pcs)}
                 
-                Please write a 3-4 paragraph personal statement based on this information."""
+                Write a professional personal statement that weaves all the criteria above into a first-person story of competence."""
 
                 ai_statement = validate_and_generate(
                     provider=provider,
@@ -140,7 +146,22 @@ def main():
                 if "API_ERROR" in str(ai_statement):
                     st.error(ai_statement)
                 else:
-                    st.session_state.current_generated_statement = ai_statement
+                    # Generate mapping summary just like dashboard.py
+                    summary_block = "\n\n----- SUMMARY OF CRITERIA COVERED -----\n\n"
+                    u_dict = {}
+                    for item in selected_pcs:
+                        parts = item.split(' - ')
+                        if len(parts) >= 3:
+                            u_code = parts[0].strip()
+                            lo_num = parts[1].strip()
+                            pc_code = parts[2].split(':')[0].strip()
+                            u_dict.setdefault(u_code, {}).setdefault(lo_num, []).append(pc_code)
+
+                    for u, lo_map in u_dict.items():
+                        lo_parts = [f"LO {lo}:{', '.join(pcs)}" for lo, pcs in lo_map.items()]
+                        summary_block += f"Unit {u} - {'; '.join(lo_parts)}\n"
+                    
+                    st.session_state.current_generated_statement = ai_statement + summary_block
 
     # 4. Display Result and Save Logic
     if 'current_generated_statement' in st.session_state:
