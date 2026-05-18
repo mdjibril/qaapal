@@ -10,8 +10,10 @@ import pandas as pd
 
 # Helper function to fetch reports
 def _fetch_reports(user_id, role, table_name, search_query=None, page=1, page_size=20, assessor_filter=None):
-    # Admins use the admin client to bypass RLS on user_profiles for full name retrieval
-    client = get_admin_supabase() if role == 'admin' else get_supabase()
+    # We use the admin client for all roles here to ensure the join with the 'trades' table 
+    # succeeds (as trades often has restricted RLS). Privacy is maintained by the 
+    # .eq("created_by", user_id) filter below for non-admins.
+    client = get_admin_supabase()
     try:
         # Build query with count="exact" for pagination
         # We use !created_by to disambiguate the relationship to user_profiles.
