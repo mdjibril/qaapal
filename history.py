@@ -97,7 +97,7 @@ def display_report_item(r, current_user_id, current_user_role, table_type):
     raw_date = r.get('assessment_date') or r.get('created_at', 'N/A')
     display_date = raw_date.split('T')[0] if 'T' in str(raw_date) else raw_date
     unit_codes = r.get('unit_codes', 'N/A')
-    trade_name = r.get('trades', {}).get('name', 'Unknown Trade')
+    trade_name = (r.get('trades') or {}).get('name', 'Unknown Trade')
 
     # Clean up unit_codes for the expander header to show only minimal unit numbers (e.g., 1, 4)
     display_units = 'N/A'

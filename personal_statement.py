@@ -119,7 +119,7 @@ def main():
                 <strict_rules>
                 1. **Perspective**: Strictly FIRST-PERSON singular.
                 2. **Tone**: Professional, reflective, and technically confident.
-                3. **Volume**: Generate exactly 5 to 6 dense, technical paragraphs.
+                3. **Volume**: Generate exactly 7 to 8 dense, technical paragraphs.
                 4. **Mapping**: At the end of every paragraph, list the met criteria in a single collapsed shorthand grouping. 
                    Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/CMR/004/L2 - LO1:PC 1.1, 1.2; LO2:PC 2.1).
                 5. **Exhaustive Usage**: You MUST integrate every PC provided in the list exactly once.
@@ -184,7 +184,9 @@ def main():
                     statement_text=st.session_state.current_generated_statement
                 )
                 if success:
-                    st.success("Statement saved successfully! You can view this in your portfolio history.")
+                    st.toast("Statement saved successfully!")
+                    del st.session_state.current_generated_statement
+                    st.rerun()
                 else:
                     st.error(f"Failed to save: {err}")
         

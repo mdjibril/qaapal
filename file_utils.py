@@ -43,15 +43,23 @@ def get_unit_number(unit_code):
 
 def extract_mapping(text):
     """Parses a paragraph to separate narrative from the technical PC mapping block."""
-    # Matches the technical block at the end of the paragraph
-    pattern = r'\((?P<inner>[A-Z0-9/]+\s*-\s*LO.*?)\)'
-    matches = list(re.finditer(pattern, text))
-    if not matches:
+    # Find all parenthesized blocks in the text
+    all_parenthesized_blocks = list(re.finditer(r'\((.*?)\)', text))
+    
+    mapping_match = None
+    if all_parenthesized_blocks:
+        # Iterate backwards to find the last parenthesized block that looks like a mapping
+        for match in reversed(all_parenthesized_blocks):
+            inner_content = match.group(1) # Content inside parentheses
+            # Check if it contains a unit code pattern and 'LO'
+            if re.search(r'^[A-Z0-9/]+\s*-\s*LO', inner_content):
+                mapping_match = match
+                break
+    
+    if not mapping_match:
         return "", "", text
     
-    # Use the last match found in the paragraph
-    match = matches[-1]
-    inner_content = match.group('inner')
+    inner_content = mapping_match.group(1) # Content inside the parentheses
     
     # Split the inner content by semicolon, but only if a new Unit Code follows.
     # We use a 'lookahead' to check for a unit code pattern (caps/numbers/slashes followed by a dash).
@@ -59,7 +67,7 @@ def extract_mapping(text):
     
     unit_nums = []
     mapping_parts = []
-    
+
     for segment in segments:
         if '-' in segment:
             # Separate the Unit part from the LO mapping part
@@ -67,16 +75,20 @@ def extract_mapping(text):
             unit_nums.append(get_unit_number(u_code.strip()))
             mapping_parts.append(mapping.strip())
         else:
-            # Fallback for LOs that might still belong to the previous unit segment
+            # Fallback for LOs that might still belong to the previous unit segment,
+            # or if the segment doesn't contain a dash (e.g., just "PC 1.1")
             mapping_parts.append(segment.strip())
             
     # Remove duplicates and join
-    final_units = ", ".join(sorted(list(set(unit_nums))))
+    final_units = ", ".join(dict.fromkeys(unit_nums))
     final_mapping = "; ".join(mapping_parts)
     
-    # Narrative is the original paragraph text without the mapping block
-    narrative = text.replace(match.group(0), "").strip()
+    # Narrative is the original paragraph text without the full matched block (including parentheses)
+    narrative = text.replace(mapping_match.group(0), "").strip()
     
+    # Clean up any trailing punctuation left by removing the mapping block
+    narrative = re.sub(r'\s*[.,;:]+$', '', narrative).strip()
+
     return final_units, final_mapping, narrative
 
 def _create_official_nsq_template(doc, candidate_name, date, report_text, units_summary, criteria_summary, evidence_type="observation", witness_name=None, witness_role=None):
@@ -236,7 +248,7 @@ def export_to_word(name, date, report_text, assessor_name, assessor_id, timeline
     elif isinstance(selected_pcs, str) and selected_pcs:
         units_list = [u.strip() for u in selected_pcs.split(',') if u.strip()]
 
-    units_summary = ", ".join(sorted(list(set([get_unit_number(u) for u in units_list]))))
+    units_summary = ", ".join(dict.fromkeys([get_unit_number(u) for u in units_list]))
     criteria_summary = "; ".join(criteria_list)
 
     _create_official_nsq_template(
@@ -273,7 +285,7 @@ def export_witness_to_word(witness_name, witness_role, candidate_name, date, sta
             units_list = [u.strip() for u in selected_pcs.split(',') if u.strip()]
         criteria_list = ["Refer to narrative"]
 
-    units_summary = ", ".join(sorted(list(set([get_unit_number(u) for u in units_list]))))
+    units_summary = ", ".join(dict.fromkeys([get_unit_number(u) for u in units_list]))
     criteria_summary = "; ".join(criteria_list)
 
     _create_official_nsq_template(
@@ -312,7 +324,7 @@ def export_personal_statement_to_word(name, date, statement_text, selected_pcs=N
             units_list = [u.strip() for u in selected_pcs.split(',') if u.strip()]
         criteria_list = ["Refer to narrative"]
 
-    units_summary = ", ".join(sorted(list(set([get_unit_number(u) for u in units_list]))))
+    units_summary = ", ".join(dict.fromkeys([get_unit_number(u) for u in units_list]))
     criteria_summary = "; ".join(criteria_list)
 
     _create_official_nsq_template(

@@ -94,7 +94,7 @@ def main():
                 <strict_rules>
                 1. **Perspective**: THIRD PERSON singular only (e.g., 'The candidate demonstrated...', 'I observed {candidate_name} performing...').
                 2. **Tone**: Professional, authoritative, validating, and fact-based.
-                3. **Volume**: Generate exactly 5 to 6 dense, technical paragraphs.
+                3. **Volume**: Generate exactly 7 to 8 dense, technical paragraphs.
                 4. **Mapping**: At the end of every paragraph, list the met criteria in a single collapsed shorthand grouping.
                    Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/CMR/005/L2 - LO1:PC 1.1, 1.2).
                 5. **Exhaustive Usage**: You MUST integrate every single PC provided in the user list exactly once.
@@ -160,7 +160,9 @@ def main():
                     statement_text=st.session_state.current_witness_statement
                 )
                 if success:
-                    st.success("Witness statement saved!")
+                    st.toast("Witness statement saved successfully!")
+                    del st.session_state.current_witness_statement
+                    st.rerun()
                 else:
                     st.error(f"Error saving: {err}")
         

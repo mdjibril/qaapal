@@ -14,6 +14,25 @@ def update_api_key_session(key_name):
     """Callback to update st.session_state.target_key when an API key input changes."""
     st.session_state.target_key = st.session_state[key_name]
 
+def clear_previews_on_trade_change():
+    """Clears generated statement previews and all checkbox selections when the trade changes."""
+    # 1. Clear generated report/statement previews
+    keys_to_clear = [
+        'current_generated_statement', 
+        'current_witness_statement',
+        'student_selected_pcs',
+        'witness_selected_pcs',
+        'current_selected_pcs'
+    ]
+    for key in keys_to_clear:
+        st.session_state.pop(key, None)
+        
+    # 2. Clear individual checkbox states and master unit checkboxes
+    prefixes = ('stmt_chk_', 'wit_chk_', 'chk_', 'stmt_unit_all_', 'wit_unit_all_', 'unit_all_')
+    keys_to_del = [k for k in st.session_state.keys() if k.startswith(prefixes)]
+    for k in keys_to_del:
+        del st.session_state[k]
+
 # Define cached functions at the top level to avoid re-definition issues
 @st.cache_data(ttl=600)
 def get_cached_trades():
@@ -42,9 +61,10 @@ else:
     if not trades_df.empty:
         # We use index to ensure the selector stays on the same item after refresh
         selected_name = st.sidebar.selectbox(
-            "Select Trade", 
-            trades_df['name'], 
-            key="global_trade_select"
+            "Select Trade",
+            trades_df['name'],
+            key="global_trade_select",
+            on_change=clear_previews_on_trade_change
         )
         # Update session state
         st.session_state.selected_trade_id = trades_df.loc[
