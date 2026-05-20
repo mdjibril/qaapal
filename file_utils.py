@@ -101,9 +101,16 @@ def _create_official_nsq_template(doc, candidate_name, date, report_text, units_
     font.name = 'Times New Roman'
     font.size = Pt(12)
 
+    # Set Page Margins to 0.75"
+    section = doc.sections[0]
+    section.top_margin = Inches(0.75)
+    section.bottom_margin = Inches(0.75)
+    section.left_margin = Inches(0.75)
+    section.right_margin = Inches(0.75)
+
     # --- HEADER SECTION (Table 1) ---
     header_table = doc.add_table(rows=1, cols=2)
-    header_table.width = Inches(7.42)
+    header_table.width = Inches(7.0)
     header_table.style = 'Table Grid'
     header_table.cell(0, 0).text = "[LOGO]"
     header_table.cell(0, 1).text = "R.EF: CPN-ARF-02, Performance Evidence Record Form."
@@ -120,6 +127,7 @@ def _create_official_nsq_template(doc, candidate_name, date, report_text, units_
     # --- USER METADATA (Table 2) ---
     meta_table = doc.add_table(rows=1, cols=2)
     meta_table.style = 'Table Grid'
+    meta_table.width = Inches(7.0)
     meta_table.cell(0, 0).text = f"Candidate Name: {candidate_name}"
     meta_table.cell(0, 1).text = f"Units: {units_summary}"
 
@@ -145,10 +153,26 @@ def _create_official_nsq_template(doc, candidate_name, date, report_text, units_
     num_data_rows = max(1, len(paragraphs))
     main_table = doc.add_table(rows=3 + num_data_rows, cols=5)
     main_table.style = 'Table Grid'
-    
-    # Set column widths (Unit: 0.69, LO: 1.50, Content: 5.23)
-    col_widths = [0.69, 1.50, 1.74, 1.74, 1.75]
+    main_table.autofit = False
+    main_table.width = Inches(7.0)
+
+    # Force fixed table layout at XML level to ensure widths are strictly respected
+    tbl = main_table._tbl
+    tblPr = tbl.tblPr
+    if tblPr is None:
+        tblPr = OxmlElement('w:tblPr')
+        tbl.insert(0, tblPr)
+    tblLayout = tblPr.find(qn('w:tblLayout'))
+    if tblLayout is None:
+        tblLayout = OxmlElement('w:tblLayout')
+        tblPr.append(tblLayout)
+    tblLayout.set(qn('w:type'), 'fixed')
+
+    # Set column widths (Unit: 0.58, LO: 1.50, Sub-columns: 1.64 each)
+    # Total width sums to exactly 7.0" to fit perfectly within 0.75" margins
+    col_widths = [0.58, 1.50, 1.64, 1.64, 1.64]
     for i, width in enumerate(col_widths):
+        main_table.columns[i].width = Inches(width)
         for cell in main_table.columns[i].cells:
             cell.width = Inches(width)
 
@@ -194,6 +218,11 @@ def _create_official_nsq_template(doc, candidate_name, date, report_text, units_
             # Merge the narrative cells and insert text
             content_cell = row.cells[2].merge(row.cells[4])
             content_cell.text = narrative
+
+            # Add space after each paragraph to create a clear separation between entries
+            row.cells[0].paragraphs[0].paragraph_format.space_after = Pt(12)
+            row.cells[1].paragraphs[0].paragraph_format.space_after = Pt(12)
+            content_cell.paragraphs[0].paragraph_format.space_after = Pt(12)
 
             # Adjust borders to make multiple rows look like one continuous box
             # We remove the internal horizontal lines between paragraphs
