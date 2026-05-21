@@ -95,7 +95,7 @@ def main():
                 1. **Perspective**: THIRD PERSON singular only (e.g., 'The candidate demonstrated...', 'I observed {candidate_name} performing...').
                 2. **Tone**: Professional, authoritative, validating, and fact-based.
                 3. **Volume**: Generate exactly 7 to 8 dense, technical paragraphs.
-                4. **Mapping**: At the end of every paragraph, list the met criteria in a single collapsed shorthand grouping.
+                4. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria, rather than grouping them at the end of the paragraph. Do NOT repeat the Unit code within the same group if multiple criteria from that unit are met in that sentence.
                    Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/CMR/005/L2 - LO1:PC 1.1, 1.2).
                 5. **Exhaustive Usage**: You MUST integrate every single PC provided in the user list exactly once.
                 6. **Narrative Flow**: Write a "continuous observation" story. Do not use bullet points in the main statement.
