@@ -173,7 +173,7 @@ def main():
                 5. **No Staged Sequencing**: Do NOT write one paragraph per PC. Weave 2-3 PCs naturally into every paragraph.
                 6. **Consistency**: Maintain consistent terminology and style throughout the report.
                 7. **Plain English**: Use simple, everyday words that a non-expert can understand. Avoid "strong" or academic English. Keep sentences short and direct. If a technical term is necessary, explain it simply.
-                8. **Mapping**: At the end of every paragraph, list the met criteria in a single collapsed shorthand grouping. Do NOT repeat the Unit code within the same group if multiple criteria from that unit are met.
+                8. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria, rather than grouping them at the end of the paragraph. Do NOT repeat the Unit code within the same group if multiple criteria from that unit are met in that sentence.
                    Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/SMC/004/L2 - LO3:PC 3.3; LO4:PC 4.1).
                 9. **Exhaustive Usage**: You MUST use every PC provided in the user's list exactly once. Do not hallucinate or invent PC codes.
                 10. **Seamlessness**: The reader should understand how the action meets the PC without needing a cross-reference list.
@@ -186,7 +186,7 @@ def main():
                 </strict_rules>
 
                 <example_paragraph>
-                Before starting the work, the student showed they understood safety by unplugging all power cables from the back of the computer. They also wore an anti-static wrist strap to make sure they didn't damage the internal parts with static electricity. This careful approach kept both the student and the hardware safe while they opened the computer case. (ICT/SMC/004/L2 - LO1:PC 1.2, 1.3).
+                Before starting the work, the student showed they understood safety by unplugging all power cables from the back of the computer. (ICT/SMC/004/L2 - LO1:PC 1.2) They also wore an anti-static wrist strap to make sure they didn't damage the internal parts with static electricity. (ICT/SMC/004/L2 - LO1:PC 1.3) This careful approach kept both the student and the hardware safe while they opened the computer case.
                 </example_paragraph>"""
 
                 user_prompt = f"""Write the NSQ assessment report for {student_name}.

@@ -30,6 +30,32 @@ def set_cell_border(cell, **kwargs):
                 if key in edge_data:
                     element.set(qn('w:{}'.format(key)), str(edge_data[key]))
 
+def set_cell_background(cell, color):
+    """Set cell background color (hex string like 'D9D9D9')."""
+    tc = cell._tc
+    tcPr = tc.get_or_add_tcPr()
+    shd = OxmlElement('w:shd')
+    shd.set(qn('w:val'), 'clear')
+    shd.set(qn('w:color'), 'auto')
+    shd.set(qn('w:fill'), color)
+    tcPr.append(shd)
+
+def add_page_number(run):
+    """Adds a dynamic page number field to a run."""
+    fldChar1 = OxmlElement('w:fldChar')
+    fldChar1.set(qn('w:fldCharType'), 'begin')
+    
+    instrText = OxmlElement('w:instrText')
+    instrText.set(qn('xml:space'), 'preserve')
+    instrText.text = "PAGE"
+    
+    fldChar2 = OxmlElement('w:fldChar')
+    fldChar2.set(qn('w:fldCharType'), 'end')
+    
+    run._r.append(fldChar1)
+    run._r.append(instrText)
+    run._r.append(fldChar2)
+
 def get_unit_number(unit_code):
     """Extracts the numeric part of a unit code (e.g., ICT/SMC/008/L2 -> 8)."""
     try:
@@ -41,28 +67,8 @@ def get_unit_number(unit_code):
     except (ValueError, IndexError):
         return unit_code.strip()
 
-def extract_mapping(text):
-    """Parses a paragraph to separate narrative from the technical PC mapping block."""
-    # Find all parenthesized blocks in the text
-    all_parenthesized_blocks = list(re.finditer(r'\((.*?)\)', text))
-    
-    mapping_match = None
-    if all_parenthesized_blocks:
-        # Iterate backwards to find the last parenthesized block that looks like a mapping
-        for match in reversed(all_parenthesized_blocks):
-            inner_content = match.group(1) # Content inside parentheses
-            # Check if it contains a unit code pattern and 'LO'
-            if re.search(r'^[A-Z0-9/]+\s*-\s*LO', inner_content):
-                mapping_match = match
-                break
-    
-    if not mapping_match:
-        return "", "", text
-    
-    inner_content = mapping_match.group(1) # Content inside the parentheses
-    
+def _parse_single_mapping(inner_content):
     # Split the inner content by semicolon, but only if a new Unit Code follows.
-    # We use a 'lookahead' to check for a unit code pattern (caps/numbers/slashes followed by a dash).
     segments = re.split(r';\s*(?=[A-Z0-9/]+\s*-)', inner_content)
     
     unit_nums = []
@@ -70,26 +76,68 @@ def extract_mapping(text):
 
     for segment in segments:
         if '-' in segment:
-            # Separate the Unit part from the LO mapping part
             u_code, mapping = segment.split('-', 1)
             unit_nums.append(get_unit_number(u_code.strip()))
             mapping_parts.append(mapping.strip())
         else:
-            # Fallback for LOs that might still belong to the previous unit segment,
-            # or if the segment doesn't contain a dash (e.g., just "PC 1.1")
             mapping_parts.append(segment.strip())
             
-    # Remove duplicates and join
     final_units = ", ".join(dict.fromkeys(unit_nums))
     final_mapping = "; ".join(mapping_parts)
-    
-    # Narrative is the original paragraph text without the full matched block (including parentheses)
-    narrative = text.replace(mapping_match.group(0), "").strip()
-    
-    # Clean up any trailing punctuation left by removing the mapping block
-    narrative = re.sub(r'\s*[.,;:]+$', '', narrative).strip()
+    return final_units, final_mapping
 
-    return final_units, final_mapping, narrative
+def parse_report_chunks(text):
+    """
+    Parses the full text and yields chunks of (narrative, unit, mapping, is_last_in_paragraph).
+    """
+    raw_lines = [line.strip() for line in text.splitlines() if line.strip()]
+    merged_lines = []
+    for line in raw_lines:
+        if line.startswith("(") and " - LO" in line and merged_lines:
+            merged_lines[-1] = f"{merged_lines[-1]} {line}"
+        else:
+            merged_lines.append(line)
+            
+    chunks = []
+    
+    for line in merged_lines:
+        parts = re.split(r'(\([A-Z0-9/]+\s*-\s*LO[^)]+\))', line)
+        
+        line_chunks = []
+        narrative_acc = ""
+        
+        for part in parts:
+            part = part.strip()
+            if not part:
+                continue
+                
+            if re.match(r'^\([A-Z0-9/]+\s*-\s*LO[^)]+\)$', part):
+                mapping_str = part[1:-1]
+                u_num, mapping = _parse_single_mapping(mapping_str)
+                # Clean up any trailing punctuation on the narrative
+                cleaned_narrative = re.sub(r'\s*[.,;:]+$', '', narrative_acc.strip()).strip()
+                line_chunks.append({
+                    'narrative': cleaned_narrative,
+                    'unit': u_num,
+                    'mapping': mapping
+                })
+                narrative_acc = ""
+            else:
+                narrative_acc += (" " if narrative_acc else "") + part
+                
+        if narrative_acc.strip():
+            cleaned_narrative = re.sub(r'\s*[.,;:]+$', '', narrative_acc.strip()).strip()
+            line_chunks.append({
+                'narrative': cleaned_narrative,
+                'unit': "",
+                'mapping': ""
+            })
+            
+        for i, lc in enumerate(line_chunks):
+            lc['is_last_in_paragraph'] = (i == len(line_chunks) - 1)
+            chunks.append(lc)
+            
+    return chunks
 
 def _create_official_nsq_template(doc, candidate_name, date, report_text, units_summary, criteria_summary, evidence_type="observation", witness_name=None, witness_role=None):
     """
@@ -107,6 +155,13 @@ def _create_official_nsq_template(doc, candidate_name, date, report_text, units_
     section.bottom_margin = Inches(0.75)
     section.left_margin = Inches(0.75)
     section.right_margin = Inches(0.75)
+
+    # --- ADD PAGE NUMBERS (Footer) ---
+    footer = section.footer
+    footer_p = footer.paragraphs[0]
+    footer_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    footer_run = footer_p.add_run("Page ")
+    add_page_number(footer_run)
 
     # --- HEADER SECTION (Table 1) ---
     header_table = doc.add_table(rows=1, cols=2)
@@ -139,18 +194,12 @@ def _create_official_nsq_template(doc, candidate_name, date, report_text, units_
     # Clean report text: Remove summary block and split into paragraphs
     clean_report = report_text.split("----- SUMMARY OF CRITERIA COVERED -----")[0].strip()
 
-    # Group detached mapping blocks with their parent paragraphs to ensure row alignment
-    raw_lines = [line.strip() for line in clean_report.splitlines() if line.strip()]
-    paragraphs = []
-    for line in raw_lines:
-        if line.startswith("(") and " - LO" in line and paragraphs:
-            paragraphs[-1] = f"{paragraphs[-1]} {line}"
-        else:
-            paragraphs.append(line)
+    # Parse the clean report into chunks (sentence + mapping pairs)
+    chunks = parse_report_chunks(clean_report)
 
     # --- MAIN ACTIVITY GRID (Table 3) ---
-    # We create a table with 3 header rows + one row for every paragraph
-    num_data_rows = max(1, len(paragraphs))
+    # We create a table with 3 header rows + one row for every chunk
+    num_data_rows = max(1, len(chunks))
     main_table = doc.add_table(rows=3 + num_data_rows, cols=5)
     main_table.style = 'Table Grid'
     main_table.autofit = False
@@ -201,37 +250,52 @@ def _create_official_nsq_template(doc, candidate_name, date, report_text, units_
     record_label.text = "Record of observed activity and performance."
     record_label.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
 
+    # --- STYLE HEADER ROWS (Bold + Shading) ---
+    for row_idx in range(3):
+        for cell in main_table.rows[row_idx].cells:
+            set_cell_background(cell, 'EFEFEF') # Light gray shading
+            for paragraph in cell.paragraphs:
+                for run in paragraph.runs:
+                    run.bold = True
+
     # --- DATA ROWS ---
-    if not paragraphs:
+    if not chunks:
         row = main_table.rows[3]
         row.cells[0].text = units_summary
         row.cells[1].text = criteria_summary
         row.cells[2].merge(row.cells[4]).text = clean_report
     else:
-        for i, p_text in enumerate(paragraphs):
-            u_num, mapping, narrative = extract_mapping(p_text)
+        for i, chunk in enumerate(chunks):
             row = main_table.rows[3 + i]
             
-            row.cells[0].text = u_num
-            row.cells[1].text = mapping
+            row.cells[0].text = chunk['unit']
+            row.cells[1].text = chunk['mapping']
+            
+            # 6. Dynamic Font Sizing for long LOs
+            if len(chunk['mapping']) > 25:
+                for p in row.cells[1].paragraphs:
+                    for run in p.runs:
+                        run.font.size = Pt(10)
             
             # Merge the narrative cells and insert text
             content_cell = row.cells[2].merge(row.cells[4])
-            content_cell.text = narrative
+            content_cell.text = chunk['narrative']
 
-            # Add space after each paragraph to create a clear separation between entries
-            row.cells[0].paragraphs[0].paragraph_format.space_after = Pt(12)
-            row.cells[1].paragraphs[0].paragraph_format.space_after = Pt(12)
-            content_cell.paragraphs[0].paragraph_format.space_after = Pt(12)
+            # Add space after each entry. 
+            # If it's the last chunk of a paragraph, use 12pt space. Otherwise 6pt for connected sentences.
+            space = Pt(12) if chunk['is_last_in_paragraph'] else Pt(6)
+            row.cells[0].paragraphs[0].paragraph_format.space_after = space
+            row.cells[1].paragraphs[0].paragraph_format.space_after = space
+            content_cell.paragraphs[0].paragraph_format.space_after = space
 
             # Adjust borders to make multiple rows look like one continuous box
-            # We remove the internal horizontal lines between paragraphs
-            if len(paragraphs) > 1:
-                # If not the last paragraph, remove bottom border
-                if i < len(paragraphs) - 1:
+            # We remove the internal horizontal lines between chunks
+            if len(chunks) > 1:
+                # If not the last chunk, remove bottom border
+                if i < len(chunks) - 1:
                     for cell in row.cells:
                         set_cell_border(cell, bottom={"val": "nil"})
-                # If not the first paragraph, remove top border
+                # If not the first chunk, remove top border
                 if i > 0:
                     for cell in row.cells:
                         set_cell_border(cell, top={"val": "nil"})
@@ -256,8 +320,18 @@ def _create_official_nsq_template(doc, candidate_name, date, report_text, units_
     ]
     
     for i, label in enumerate(sigs):
-        sig_table.cell(i, 0).text = f"{label} __________________"
-        sig_table.cell(i, 1).text = f"Date: {date}"
+        row = sig_table.rows[i]
+        row.height = Inches(0.6) # 3. Make signature rows taller
+        
+        # Add labels and vertical alignment
+        cell_left = sig_table.cell(i, 0)
+        cell_right = sig_table.cell(i, 1)
+        
+        cell_left.text = f"{label} __________________"
+        cell_right.text = f"Date: {date}"
+        
+        cell_left.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
+        cell_right.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
 
 def export_to_word(name, date, report_text, assessor_name, assessor_id, timeline="N/A", atmosphere="N/A", selected_pcs=None):
     """
