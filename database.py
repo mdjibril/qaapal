@@ -155,3 +155,28 @@ def insert_witness_statement(user_id, witness_name, witness_role, candidate_name
         return True, None
     except Exception as e:
         return False, str(e)
+
+def upgrade_org_tier(org_id, new_tier='platform_pass'):
+    """Updates the organization's tier and sets the subscription start date."""
+    supabase = get_admin_supabase()
+    try:
+        # Set subscription_start_date to now() when upgrading
+        supabase.table("organizations").update({"subscription_tier": new_tier, "subscription_start_date": "now()"}).eq("id", org_id).execute()
+        return True, None
+    except Exception as e:
+        return False, str(e)
+def decrement_credits(org_id):
+    """Subtracts one credit from the organization's balance."""
+    supabase = get_admin_supabase()
+    try:
+        # Get current balance
+        res = supabase.table("organizations").select("credits_balance").eq("id", org_id).single().execute()
+        current_balance = res.data.get("credits_balance", 0)
+        
+        if current_balance > 0:
+            supabase.table("organizations").update({"credits_balance": current_balance - 1}).eq("id", org_id).execute()
+            return True
+        return False
+    except Exception as e:
+        print(f"Credit deduction error: {e}")
+        return False

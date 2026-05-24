@@ -97,34 +97,83 @@ def check_auth():
     return st.session_state.get('user_session', None)
 
 def login_form():
-    st.title("🔐 Login to NSQ Portal")
-    email = st.text_input("Email", key="login_email")
-    password = st.text_input("Password", type="password", key="login_password")
+    st.title("🔐 QAAPAL Portal")
+    tab1, tab2 = st.tabs(["Login", "Sign Up"])
     
-    if st.button("Login"):
-        try:
-            # 1. Sign In
-            supabase = get_supabase()
-            auth_res = supabase.auth.sign_in_with_password({"email": email, "password": password})
-            
-            # 2. Set Session
-            st.session_state['user_session'] = auth_res.user
-            st.session_state['supabase_session'] = auth_res.session
-            
-            # 3. Fetch Role (using the debug-friendly version above)
-            st.session_state['user_role'] = get_user_role(auth_res.user.id)
-            
-            # Fetch full name and store it in session state
-            admin_client = get_admin_supabase() # Use admin client to bypass RLS for profile fetch
-            profile_response = admin_client.table("user_profiles").select("full_name").eq("id", auth_res.user.id).execute()
-            if profile_response.data and len(profile_response.data) > 0:
-                st.session_state['assessor_full_name'] = profile_response.data[0].get("full_name")
-            else:
-                st.session_state['assessor_full_name'] = "Assessor" # Default if not found
-            
-            st.success("Login successful!")
+    with tab1:
+        email = st.text_input("Email", key="login_email")
+        password = st.text_input("Password", type="password", key="login_password")
+        if st.button("Login"):
+            try:
+                supabase = get_supabase()
+                auth_res = supabase.auth.sign_in_with_password({"email": email, "password": password})
+                _finalize_login(auth_res)
+            except Exception as e:
+                st.error(f"Login failed: {e}")
 
-            st.rerun()
+    with tab2:
+        new_email = st.text_input("Email", key="signup_email")
+        new_password = st.text_input("Password", type="password", key="signup_pw")
+        full_name = st.text_input("Full Name (e.g. John Doe)")
+        if st.button("Create Free Account"):
+            try:
+                supabase = get_supabase()
+                auth_res = supabase.auth.sign_up({
+                    "email": new_email, 
+                    "password": new_password,
+                    "options": {"data": {"full_name": full_name}}
+                })
+                st.success("Registration successful! You can now login.")
+            except Exception as e:
+                st.error(f"Sign up failed: {e}")
+
+def _finalize_login(auth_res):
+    st.session_state['user_session'] = auth_res.user
+    st.session_state['supabase_session'] = auth_res.session
+    
+    admin_client = get_admin_supabase()
+    # Fetch profile and organization data
+    profile_res = admin_client.table("user_profiles")\
+        .select("role, org_role, full_name, organizations(id, subscription_tier, credits_balance, master_api_key, subscription_start_date)")\
+        .eq("id", auth_res.user.id).execute()
+    
+    # If profile is missing (e.g., trigger failed or delayed), attempt to initialize it (Self-Healing)
+    if not profile_res.data:
+        try:
+            # metadata is stored in user_metadata for the authenticated user object
+            meta = getattr(auth_res.user, 'user_metadata', {}) or {}
+            full_name = meta.get('full_name', 'New User')
             
+            admin_client.table("user_profiles").upsert({
+                "id": auth_res.user.id,
+                "email": auth_res.user.email,
+                "full_name": full_name,
+                "role": "assessor"
+            }).execute()
+            
+            # Re-fetch to include data potentially added by the trigger in the background
+            profile_res = admin_client.table("user_profiles")\
+                .select("role, org_role, full_name, organizations(id, subscription_tier, credits_balance, master_api_key)")\
+                .eq("id", auth_res.user.id).execute()
         except Exception as e:
-            st.error(f"Login failed: {e}")
+            st.error(f"Login error: Could not initialize user profile. {e}")
+            return
+
+    if not profile_res.data:
+        st.error("Login failed: Profile data is unavailable.")
+        return
+
+    prof = profile_res.data[0]
+    # Handle case where organizations join might be None
+    org = prof.get('organizations') or {}
+    
+    st.session_state['user_role'] = prof.get('role', 'assessor') # App Superadmin check
+    st.session_state['org_role'] = prof.get('org_role', 'member') # Org level role
+    st.session_state['assessor_full_name'] = prof.get('full_name')
+    st.session_state['org_id'] = org.get('id', None)
+    st.session_state['subscription_tier'] = org.get('subscription_tier', 'free')
+    st.session_state['credits_balance'] = org.get('credits_balance', 0)
+    st.session_state['master_api_key'] = org.get('master_api_key')
+    st.session_state['subscription_start_date'] = org.get('subscription_start_date')
+    
+    st.rerun()
