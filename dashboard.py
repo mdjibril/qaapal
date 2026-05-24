@@ -141,39 +141,17 @@ def main():
     selected_pcs = st.session_state.get('current_selected_pcs', [])
     st.info(f"Selected: {len(selected_pcs)} Performance Criteria")
 
-    # --- PRE-GENERATION CHECK ---
-    tier = st.session_state.get('subscription_tier', 'free')
-    credits = st.session_state.get('credits_balance', 0)
-    role = st.session_state.get('user_role', 'assessor')
-    is_superadmin = (role == 'admin')
-    
-    is_out_of_credits = (not is_superadmin and tier == 'free' and credits <= 0)
-
-    if is_out_of_credits:
-        st.warning("⚠️ **Credit Limit Reached:** You have used all your free reports.")
-        # Using a unique key for the dashboard upgrade button
-        if st.button("💳 Upgrade for Unlimited Reports ($5/mo)", type="primary", use_container_width=True, key="dash_upgrade_paywall"):
-            from main import mock_payment_dialog
-            mock_payment_dialog(st.session_state.org_id)
-
     # --- GENERATION LOGIC ---
     if st.button("Generate & Finalize Report"):
         current_time = time.time()
         time_passed = current_time - st.session_state.last_request_time
         
-        if is_out_of_credits:
-            from main import mock_payment_dialog
-            mock_payment_dialog(st.session_state.org_id)
-            st.stop()
-        elif not dev_mode and time_passed < 10:
+        if not dev_mode and time_passed < 10:
             st.warning(f"🕒 Rate Limit Protection: Wait {int(10 - time_passed)}s.")
         elif not selected_pcs:
             st.warning("Please select at least one Performance Criterion above.")
         elif not dev_mode and not key:
-            if tier == 'free':
-                st.error("⛔ Platform configuration error: The internal AI key is missing. Please contact your administrator to verify the secrets.toml setup.")
-            else:
-                st.warning(f"Please enter the {provider} API key in the sidebar.")
+            st.warning(f"Please enter the {provider} API key in the sidebar.")
         else:
             st.session_state.last_request_time = current_time
             with st.spinner(f"Using {provider} ({target_model}) to synthesize..."):
@@ -196,7 +174,7 @@ def main():
                 5. **No Staged Sequencing**: Do NOT write one paragraph per PC. Weave 2-3 PCs naturally into every paragraph.
                 6. **Consistency**: Maintain consistent terminology and style throughout the report.
                 7. **Plain English**: Use simple, everyday words that a non-expert can understand. Avoid "strong" or academic English. Keep sentences short and direct. If a technical term is necessary, explain it simply.
-                8. **Mapping**: At the end of every paragraph, list the met criteria in a single collapsed shorthand grouping. Do NOT repeat the Unit code within the same group if multiple criteria from that unit are met.
+                8. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria, rather than grouping them at the end of the paragraph. Do NOT repeat the Unit code within the same group if multiple criteria from that unit are met in that sentence.
                    Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/SMC/004/L2 - LO3:PC 3.3; LO4:PC 4.1).
                 9. **Exhaustive Usage**: You MUST use every PC provided in the user's list exactly once. Do not hallucinate or invent PC codes.
                 10. **Seamlessness**: The reader should understand how the action meets the PC without needing a cross-reference list.
@@ -209,7 +187,7 @@ def main():
                 </strict_rules>
 
                 <example_paragraph>
-                Before starting the work, the student showed they understood safety by unplugging all power cables from the back of the computer. They also wore an anti-static wrist strap to make sure they didn't damage the internal parts with static electricity. This careful approach kept both the student and the hardware safe while they opened the computer case. (ICT/SMC/004/L2 - LO1:PC 1.2, 1.3).
+                Before starting the work, the student showed they understood safety by unplugging all power cables from the back of the computer. (ICT/SMC/004/L2 - LO1:PC 1.2) They also wore an anti-static wrist strap to make sure they didn't damage the internal parts with static electricity. (ICT/SMC/004/L2 - LO1:PC 1.3) This careful approach kept both the student and the hardware safe while they opened the computer case.
                 </example_paragraph>"""
 
                 user_prompt = f"""Write the NSQ assessment report for {student_name}.
@@ -243,11 +221,6 @@ def main():
                 if isinstance(ai_narrative, str) and "API_ERROR" in ai_narrative:
                     st.error(ai_narrative)
                 else:
-                    # Deduct credit for free users
-                    if not is_superadmin and tier == 'free':
-                        db.decrement_credits(st.session_state.org_id)
-                        st.session_state.credits_balance -= 1
-                    
                     summary_block = "\n\n----- SUMMARY OF CRITERIA COVERED -----\n\n"
                     u_dict = {}
                     for item in selected_pcs: # Format: "Unit - LO - PC"
