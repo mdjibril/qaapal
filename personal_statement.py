@@ -126,8 +126,8 @@ def main():
                 1. **Perspective**: Strictly FIRST-PERSON singular.
                 2. **Tone**: Professional, reflective, and technically confident.
                 3. **Volume**: Generate exactly 7 to 8 dense, technical paragraphs.
-                4. **Mapping**: At the end of every paragraph, list the met criteria in a single collapsed shorthand grouping. 
-                   Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/CMR/004/L2 - LO1:PC 1.1, 1.2; LO2:PC 2.1).
+                4. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria, rather than grouping them at the end of the paragraph. Do NOT repeat the Unit code within the same group if multiple criteria from that unit are met in that sentence.
+                   Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/CMR/005/L2 - LO1:PC 1.1, 1.2).
                 5. **Exhaustive Usage**: You MUST integrate every PC provided in the list exactly once.
                 6. **Flow**: Create a cohesive narrative story of achievement, not a bulleted list. Explain the 'Why' and 'How' of the actions taken.
                 7. **Accessibility**: Use clear English, explaining technical terms simply where necessary.
