@@ -85,6 +85,7 @@ We have updated the sidebar to reflect the new billing states and implemented th
 
 ### Phase 2: Production Readiness (Next Branch)
 *   **Environment Variables:** Configure Monnify API keys in Streamlit Secrets/Railway.
+*   **API Key Rotation:** Implement a simple rotation logic for platform AI keys to mitigate rate limits. - **DONE**
 *   **Live Webhooks:** Implement real payment validation and callback handling.
 *   **Domain Mapping:** Finalize the link between the landing page and the app subdomain.
 

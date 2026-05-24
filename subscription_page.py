@@ -4,7 +4,6 @@ from datetime import timedelta
 import database as db
 
 def main():
-    from main import mock_payment_dialog, check_platform_pass_expiry # Local import to avoid circular dependency
     st.title("💳 My Subscription")
 
     user_role = st.session_state.get('user_role', 'assessor')
@@ -43,11 +42,11 @@ def main():
                 st.write(f"**Subscription Start Date:** {start_date.strftime('%B %d, %Y')}")
                 st.write(f"**Estimated Renewal Date:** {expiry_date.strftime('%B %d, %Y')}")
 
-                is_expired = check_platform_pass_expiry() # Use the imported function from main.py
+                is_expired = db.check_platform_pass_expiry()
                 if is_expired:
                     st.error("Your Platform Pass has expired! Please renew to continue enjoying unlimited generations.")
                     if st.button("Renew Platform Pass Now", type="primary", use_container_width=True):
-                        mock_payment_dialog(org_id)
+                        db.mock_payment_dialog(org_id)
                 else:
                     st.success("Your Platform Pass is active!")
                     # Calculate days left relative to the timezone of the start_date
@@ -69,7 +68,7 @@ def main():
         st.info(f"You are currently on the Free plan with {credits_balance} reports remaining.")
         st.write("Upgrade to **Platform Pass** for unlimited report generations and advanced features!")
         if st.button("🚀 Upgrade to Platform Pass ($5/month)", type="primary", use_container_width=True):
-            mock_payment_dialog(org_id)
+            db.mock_payment_dialog(org_id)
             
     st.markdown("---")
     st.caption("For enterprise solutions or custom plans, please contact sales.")

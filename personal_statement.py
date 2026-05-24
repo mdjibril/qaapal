@@ -71,7 +71,7 @@ def main():
 
     # Access shared session info
     provider = st.session_state.get('ai_provider')
-    key = st.session_state.get('target_key')
+    keys = st.session_state.get('target_keys', []) # Now expects a list of keys
     target_model = st.session_state.get('target_model')
 
     # 2. Input Section
@@ -105,13 +105,20 @@ def main():
     st.markdown("---")
     st.subheader("Step 3: Generate Statement")
     
+    # Paywall Check
+    role = st.session_state.get('user_role')
+    tier = st.session_state.get('subscription_tier', 'free')
+    credits = st.session_state.get('credits_balance', 0)
+    is_out_of_credits = (role != 'admin' and tier == 'free' and credits <= 0)
+
     if st.button("Generate My Statement", type="primary"):
-        tier = st.session_state.get('subscription_tier', 'free')
         if not reflection:
             st.error("Please provide some reflection notes first.")
         elif not selected_pcs:
             st.error("Please select at least one PC that you achieved.")
-        elif not key:
+        elif is_out_of_credits:
+            db.mock_payment_dialog(st.session_state.org_id)
+        elif not keys: # Check if keys list is empty
             if tier == 'free':
                 st.error("⛔ Internal AI key missing. Contact administrator.")
             else:
@@ -145,7 +152,7 @@ def main():
                 ai_statement = validate_and_generate(
                     provider=provider,
                     model_name=target_model,
-                    api_key=key,
+                    api_keys=keys, # Pass the list of keys
                     prompt=user_prompt,
                     system_prompt=system_prompt
                 )
@@ -167,6 +174,11 @@ def main():
                     for u, lo_map in u_dict.items():
                         lo_parts = [f"LO {lo}:{', '.join(pcs)}" for lo, pcs in lo_map.items()]
                         summary_block += f"Unit {u} - {'; '.join(lo_parts)}\n"
+                    
+                    # Deduct credit
+                    if tier == 'free':
+                        db.decrement_credits(st.session_state.org_id)
+                        st.session_state.credits_balance -= 1
                     
                     st.session_state.current_generated_statement = ai_statement + summary_block
 

@@ -74,7 +74,7 @@ def main():
     
     trade_id = st.session_state.get('selected_trade_id')
     provider = st.session_state.get('ai_provider')
-    key = st.session_state.get('target_key')
+    keys = st.session_state.get('target_keys', []) # Now expects a list of keys
     target_model = st.session_state.get('target_model')
     atmosphere = st.session_state.get('default_env_text', '')
     assessor_name = st.session_state.get('assessor_name', 'Jibril Dauda Muhammad')
@@ -150,8 +150,8 @@ def main():
             st.warning(f"🕒 Rate Limit Protection: Wait {int(10 - time_passed)}s.")
         elif not selected_pcs:
             st.warning("Please select at least one Performance Criterion above.")
-        elif not dev_mode and not key:
-            st.warning(f"Please enter the {provider} API key in the sidebar.")
+        elif not dev_mode and not keys: # Check if keys list is empty
+            st.warning(f"Please enter the {provider} API key(s) in the sidebar.")
         else:
             st.session_state.last_request_time = current_time
             with st.spinner(f"Using {provider} ({target_model}) to synthesize..."):
@@ -213,7 +213,7 @@ def main():
                     ai_narrative = validate_and_generate(
                         provider=provider, 
                         model_name=target_model, 
-                        api_key=key, 
+                        api_keys=keys, # Pass the list of keys
                         prompt=user_prompt, 
                         system_prompt=system_prompt
                     )
@@ -234,6 +234,11 @@ def main():
                     for u, lo_map in u_dict.items():
                         lo_parts = [f"LO {lo}:{', '.join(pcs)}" for lo, pcs in lo_map.items()]
                         summary_block += f"Unit {u} - {'; '.join(lo_parts)}\n"
+                    
+                    # Deduct credit for free tier users upon successful generation
+                    if not role == 'admin' and st.session_state.get('subscription_tier') == 'free':
+                        db.decrement_credits(st.session_state.org_id)
+                        st.session_state.credits_balance -= 1
                     
                     full_report_text = ai_narrative + summary_block
 

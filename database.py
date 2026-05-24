@@ -1,6 +1,8 @@
 import streamlit as st
 from auth_utils import get_supabase, get_admin_supabase
 import pandas as pd
+import time
+from datetime import datetime, timedelta
 
 def fetch_trades():
     # Use the admin client to fetch the trade list to ensure it's always available 
@@ -180,3 +182,54 @@ def decrement_credits(org_id):
     except Exception as e:
         print(f"Credit deduction error: {e}")
         return False
+
+@st.dialog("💳 Monnify Payment Portal")
+def mock_payment_dialog(org_id):
+    st.write("### Upgrade to Platform Pass")
+    st.write("Process your payment securely using Monnify.")
+    
+    u_session = st.session_state.get('user_session')
+    email = u_session.email if u_session else "user@example.com"
+    # Mock Naira amount for Platform Pass (approx $5 equivalent)
+    amount_naira = 7500
+    
+    with st.container(border=True):
+        st.caption("Order Summary")
+        st.write(f"**Plan:** Platform Pass (Monthly)")
+        st.write(f"**Amount:** ₦{amount_naira:,}.00")
+        st.write(f"**Customer:** {email}")
+
+    st.info("💡 In test mode, clicking 'Pay' simulates a successful response from the Monnify SDK.")
+    
+    if st.button("Pay with Monnify", type="primary", use_container_width=True):
+        with st.spinner("Initializing Monnify Checkout..."):
+            time.sleep(1.5) # Simulate SDK initialization
+            
+            # Simulate the callback/webhook logic from Monnify
+            success, err = upgrade_org_tier(org_id)
+            if success:
+                st.success("✅ Payment Successful!")
+                st.toast("Monnify Reference: MNFY-TEST-998877")
+                st.session_state['subscription_tier'] = 'platform_pass'
+                st.session_state['subscription_start_date'] = datetime.now().isoformat()
+                time.sleep(1)
+                st.rerun()
+            else:
+                st.error(f"Monnify Error: {err}")
+
+def check_platform_pass_expiry():
+    """Checks if the platform_pass subscription has expired."""
+    tier = st.session_state.get('subscription_tier', 'free')
+    start_date_str = st.session_state.get('subscription_start_date')
+
+    if tier == 'platform_pass' and start_date_str:
+        # Parse the date string (e.g., '2024-05-21T12:00:00+00:00')
+        try:
+            start_date = datetime.fromisoformat(start_date_str.replace('Z', '+00:00'))
+        except ValueError:
+            start_date = datetime.strptime(start_date_str, '%Y-%m-%dT%H:%M:%S.%f%z')
+        
+        # Check if one month has passed (using 30 days as a proxy for a month)
+        if datetime.now(start_date.tzinfo) > start_date + timedelta(days=30):
+            return True
+    return False

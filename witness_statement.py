@@ -52,7 +52,7 @@ def main():
         return
 
     provider = st.session_state.get('ai_provider')
-    key = st.session_state.get('target_key')
+    keys = st.session_state.get('target_keys', []) # Now expects a list of keys
     target_model = st.session_state.get('target_model')
 
     st.subheader("Step 1: Witness & Candidate Info")
@@ -83,9 +83,19 @@ def main():
         height=150
     )
 
+    # Paywall Check
+    role = st.session_state.get('user_role')
+    tier = st.session_state.get('subscription_tier', 'free')
+    credits = st.session_state.get('credits_balance', 0)
+    is_out_of_credits = (role != 'admin' and tier == 'free' and credits <= 0)
+
     if st.button("Generate Witness Statement", type="primary"):
         if not witness_notes or not selected_pcs or not witness_name or not candidate_name:
             st.error("Please fill in all details, select at least one PC, and provide observation notes.")
+        elif is_out_of_credits:
+            db.mock_payment_dialog(st.session_state.org_id)
+        elif not keys: # Check if keys list is empty
+            st.warning("Please enter your AI API key(s) in the sidebar.")
         else:
             with st.spinner("Synthesizing formal testimony..."):
                 system_prompt = f"""You are a professional industrial supervisor writing an NSQ Witness Statement.
@@ -115,7 +125,7 @@ def main():
                 ai_output = validate_and_generate(
                     provider=provider,
                     model_name=target_model,
-                    api_key=key,
+                    api_keys=keys, # Pass the list of keys
                     prompt=user_prompt,
                     system_prompt=system_prompt
                 )
@@ -137,6 +147,11 @@ def main():
                     for u, lo_map in u_dict.items():
                         lo_parts = [f"LO {lo}:{', '.join(pcs)}" for lo, pcs in lo_map.items()]
                         summary_block += f"Unit {u} - {'; '.join(lo_parts)}\n"
+                    
+                    # Deduct credit
+                    if tier == 'free':
+                        db.decrement_credits(st.session_state.org_id)
+                        st.session_state.credits_balance -= 1
                     
                     st.session_state.current_witness_statement = ai_output + summary_block
 
