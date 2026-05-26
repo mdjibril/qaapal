@@ -84,15 +84,23 @@ We have updated the sidebar to reflect the new billing states and implemented th
 ---
 
 ### Phase 2: Production Readiness (Next Branch)
-*   **Environment Variables:** Configure Monnify API keys in Streamlit Secrets/Railway.
+*   **Real Monnify Integration:** Transition from mock payment dialogs to the actual Monnify Web SDK/API.
+*   **Vertex AI Transition:** Implement Google Cloud Vertex AI support for the Platform Tier to utilize the $300 GCP credit balance.
+*   **Service Account Management:** Securely store and parse GCP Service Account JSON from secrets to authorize Vertex AI calls.
 *   **API Key Rotation:** Implement a simple rotation logic for platform AI keys to mitigate rate limits. - **DONE**
-*   **Live Webhooks:** Implement real payment validation and callback handling.
+*   **Live Webhooks:** Implement a listener to handle Monnify payment callbacks and update Supabase credits/tiers automatically.
+*   **Hybrid Provider Routing:** Ensure the AI Router supports both simple API keys (for BYOK/Groq/OpenRouter) and IAM-based auth (for Vertex AI).
 *   **Domain Mapping:** Finalize the link between the landing page and the app subdomain.
 
 ## Verification Plan
 
 ### Manual Verification
-1.  **Sign-up Flow:** Register a new user from the UI. Verify that a Personal Organization is created in Supabase with 5 credits and the 'free' tier.
-2.  **Freemium Limits:** Generate 5 reports. Ensure the 6th attempt is successfully blocked by the paywall UI.
-3.  **BYOK Unlock:** Simulate a Stripe upgrade to 'platform_pass'. Verify the sidebar reveals the API key inputs and allows generation without deducting credits.
-4.  **B2B Override (Test):** Manually insert a `master_api_key` for the organization in Supabase. Verify the UI hides personal API key inputs and uses the master key successfully.
+1.  **Sign-up Flow:** Register a new user. Verify organization creation in Supabase with **10 credits** and 'free' tier.
+2.  **Freemium Limits & Deduction:** Generate 10 reports. Verify `credits_balance` decrements each time in both the UI and Supabase. Ensure the 11th attempt triggers the `st.dialog` paywall.
+3.  **API Key Rotation:** Configure multiple Gemini keys in secrets. Simulate a `ResourceExhausted` (429) error and verify the system transparently rotates to the next key.
+4.  **Multi-Provider Fallback:** Deplete or disable all Gemini keys. Verify the system automatically falls back to Groq or OpenRouter using the designated fallback models and keys.
+5.  **BYOK Unlock:** Upgrade to 'platform_pass'. Verify the sidebar reveals provider settings and allows generation without credit deduction.
+6.  **Subscription Lifecycle:** Manually expire a subscription in the DB (>30 days). Verify the UI reflects "Expired" and blocks generation until renewal.
+7.  **Production Gate (Phase 2):** 
+    *   Verify **Vertex AI** authentication using the Service Account JSON structure in secrets.
+    *   Verify **Monnify** payment completion and webhook-driven credit/tier updates.
