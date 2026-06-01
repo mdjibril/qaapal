@@ -130,26 +130,21 @@ else:
         show_byok = (tier == 'platform_pass')
         
         if tier == 'free':
-            key_val_raw = st.secrets.get("INTERNAL_AI_KEY")
-            if key_val_raw:
-                # Split by comma and strip whitespace to get a list of keys
-                st.session_state.target_keys = [k.strip() for k in key_val_raw.split(',') if k.strip()]
+            # Check if Vertex AI is configured
+            sa_json_str = st.secrets.get("vertex_ai", {}).get("service_account_json")
+            if not sa_json_str:
+                st.sidebar.error("⚠️ Vertex AI configuration is missing from secrets.toml!")
             else:
-                st.session_state.target_keys = []
-            
-            if not st.session_state.target_keys:
-                st.sidebar.error("⚠️ Platform AI Key (INTERNAL_AI_KEY) is missing from secrets.toml!")
-            else:
-                st.sidebar.info(f"Using Platform AI ({tier.capitalize()} Tier)")
-            
-            st.session_state.ai_provider = st.secrets.get("INTERNAL_AI_PROVIDER", "Gemini").strip()
-            st.session_state.target_model = st.secrets.get("INTERNAL_AI_MODEL", "gemini-1.5-flash").strip()
-        elif tier == 'enterprise' and st.session_state.get('master_api_key'):
-            m_key = st.session_state.get('master_api_key')
-            st.session_state.target_keys = [k.strip() for k in m_key.split(',') if k.strip()] if m_key else []
-            st.sidebar.info("Using Organization Master Key")
-            st.session_state.ai_provider = "Gemini"
+                st.sidebar.info("Using Platform AI (Free Tier)")
+            st.session_state.ai_provider = "VertexAI"
+            st.session_state.target_model = "gemini-2.5-flash"
+            st.session_state.target_keys = []
+        elif tier in ['pro', 'enterprise']:
+            st.sidebar.info("💼 Pro/Enterprise Plan: Coming Soon! (Using Platform AI)")
+            # Fall back to Platform AI to ensure app keeps functioning
+            st.session_state.ai_provider = "VertexAI"
             st.session_state.target_model = "gemini-1.5-flash"
+            st.session_state.target_keys = []
 
     if show_byok:
         with st.sidebar.expander("📡 AI Provider Settings", expanded=False):
@@ -163,10 +158,8 @@ else:
 
             if st.session_state.ai_provider == "Gemini":
                 st.text_input("Gemini API Key", type="password", key="gemini_api_key_input", on_change=update_api_key_session, args=("gemini_api_key_input",))
-                # Ensure target_keys is set even if no change event fired yet (e.g., initial load)
                 if not st.session_state.target_keys and "gemini_api_key_input" in st.session_state and st.session_state.gemini_api_key_input:
                     st.session_state.target_keys = [k.strip() for k in st.session_state.gemini_api_key_input.split(',') if k.strip()]
-                # We list simple names; the Router will find the 'models/xxx' version
                 st.session_state.target_model = st.selectbox("Gemini Preference", ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2-flash", "gemini-2-flash-lite", "gemini-1.5-flash", "gemini-1.5-flash-lite"])
             elif st.session_state.ai_provider == "Groq":
                 st.text_input("Groq API Key", type="password", key="groq_api_key_input", on_change=update_api_key_session, args=("groq_api_key_input",))
@@ -174,10 +167,10 @@ else:
                     st.session_state.target_keys = [st.session_state.groq_api_key_input.strip()]
                 st.session_state.target_model = st.selectbox("Groq Model", ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"])
             elif st.session_state.ai_provider == "OpenRouter":
-                st.text_input("OpenRouter Key", type="password", key="openrouter_api_key_input", on_change=update_api_key_session, args=("openrouter_api_key_input",))
+                st.text_input("OpenRouter API Key", type="password", key="openrouter_api_key_input", on_change=update_api_key_session, args=("openrouter_api_key_input",))
                 if not st.session_state.target_keys and "openrouter_api_key_input" in st.session_state and st.session_state.openrouter_api_key_input:
                     st.session_state.target_keys = [st.session_state.openrouter_api_key_input.strip()]
-                st.session_state.target_model = st.selectbox("Model", ["z-ai/glm-4.5-air:free", "poolside/laguna-m.1:free", "nvidia/nemotron-3-super-120b-a12b:free", "baidu/qianfan-ocr-fast:free"])
+                st.session_state.target_model = st.selectbox("OpenRouter Model", ["google/gemini-2.0-flash-001", "nvidia/nemotron-3-super-120b-a12b:free", "poolside/laguna-m.1:free"])
 
             # --- AUTOMATED VERIFICATION FLOW ---
             # For BYOK, target_keys will contain a single key. For platform, it might contain multiple.

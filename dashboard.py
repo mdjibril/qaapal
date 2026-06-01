@@ -83,6 +83,9 @@ def main():
 
     user_id = st.session_state.user_session.id
     role = st.session_state.user_role
+    tier = st.session_state.get('subscription_tier', 'free')
+    credits = st.session_state.get('credits_balance', 0)
+    is_out_of_credits = (role != 'admin' and tier == 'free' and credits <= 0)
     
     # st.write(f"Logged in as: {st.session_state.user_session.email}")
     # st.write(f"User ID: {user_id}")
@@ -142,7 +145,10 @@ def main():
     st.info(f"Selected: {len(selected_pcs)} Performance Criteria")
 
     # --- GENERATION LOGIC ---
-    if st.button("Generate & Finalize Report"):
+    if is_out_of_credits:
+        st.warning("⚠️ You have 0 credits remaining. Upgrade to the **Platform Pass** to continue generating reports.")
+
+    if st.button("Generate & Finalize Report", disabled=is_out_of_credits):
         current_time = time.time()
         time_passed = current_time - st.session_state.last_request_time
         
@@ -150,7 +156,9 @@ def main():
             st.warning(f"🕒 Rate Limit Protection: Wait {int(10 - time_passed)}s.")
         elif not selected_pcs:
             st.warning("Please select at least one Performance Criterion above.")
-        elif not dev_mode and not keys: # Check if keys list is empty
+        elif is_out_of_credits:
+            db.mock_payment_dialog(st.session_state.org_id)
+        elif not dev_mode and provider != "VertexAI" and not keys: # Check if keys list is empty
             st.warning(f"Please enter the {provider} API key(s) in the sidebar.")
         else:
             st.session_state.last_request_time = current_time
@@ -236,7 +244,7 @@ def main():
                         summary_block += f"Unit {u} - {'; '.join(lo_parts)}\n"
                     
                     # Deduct credit for free tier users upon successful generation
-                    if not role == 'admin' and st.session_state.get('subscription_tier') == 'free':
+                    if role != 'admin' and tier == 'free':
                         db.decrement_credits(st.session_state.org_id)
                         st.session_state.credits_balance -= 1
                     

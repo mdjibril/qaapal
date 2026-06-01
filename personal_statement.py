@@ -111,14 +111,17 @@ def main():
     credits = st.session_state.get('credits_balance', 0)
     is_out_of_credits = (role != 'admin' and tier == 'free' and credits <= 0)
 
-    if st.button("Generate My Statement", type="primary"):
+    if is_out_of_credits:
+        st.warning("⚠️ You have 0 credits remaining. Upgrade to the **Platform Pass** to continue generating statements.")
+
+    if st.button("Generate My Statement", type="primary", disabled=is_out_of_credits):
         if not reflection:
             st.error("Please provide some reflection notes first.")
         elif not selected_pcs:
             st.error("Please select at least one PC that you achieved.")
         elif is_out_of_credits:
             db.mock_payment_dialog(st.session_state.org_id)
-        elif not keys: # Check if keys list is empty
+        elif provider != "VertexAI" and not keys: # Check if keys list is empty
             if tier == 'free':
                 st.error("⛔ Internal AI key missing. Contact administrator.")
             else:
@@ -176,7 +179,7 @@ def main():
                         summary_block += f"Unit {u} - {'; '.join(lo_parts)}\n"
                     
                     # Deduct credit
-                    if tier == 'free':
+                    if role != 'admin' and tier == 'free':
                         db.decrement_credits(st.session_state.org_id)
                         st.session_state.credits_balance -= 1
                     

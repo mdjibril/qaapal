@@ -85,11 +85,12 @@ We have updated the sidebar to reflect the new billing states and implemented th
 
 ### Phase 2: Production Readiness (Next Branch)
 *   **Real Monnify Integration:** Transition from mock payment dialogs to the actual Monnify Web SDK/API.
-*   **Vertex AI Transition:** Implement Google Cloud Vertex AI support for the Platform Tier to utilize the $300 GCP credit balance.
-*   **Service Account Management:** Securely store and parse GCP Service Account JSON from secrets to authorize Vertex AI calls.
+*   **Vertex AI Transition:** Implement Google Cloud Vertex AI support for the Platform Tier to utilize the $300 GCP credit balance. - **DONE**
+*   **Service Account Management:** Securely store and parse GCP Service Account JSON from secrets to authorize Vertex AI calls. - **DONE**
 *   **API Key Rotation:** Implement a simple rotation logic for platform AI keys to mitigate rate limits. - **DONE**
 *   **Live Webhooks:** Implement a listener to handle Monnify payment callbacks and update Supabase credits/tiers automatically.
-*   **Hybrid Provider Routing:** Ensure the AI Router supports both simple API keys (for BYOK/Groq/OpenRouter) and IAM-based auth (for Vertex AI).
+*   **Hybrid Provider Routing:** Ensure the AI Router supports both simple API keys (for BYOK/Groq/OpenRouter) and IAM-based auth (for Vertex AI). - **DONE**
+*   **Credit Guard UX:** Disable generation buttons and show contextual warnings for users with 0 credits. - **DONE**
 *   **Domain Mapping:** Finalize the link between the landing page and the app subdomain.
 
 ## Verification Plan

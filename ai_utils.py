@@ -1,8 +1,10 @@
+import json
+from google.oauth2 import service_account
+import google.cloud.aiplatform as vertex_ai
 import google.generativeai as genai
 from groq import Groq
-import requests, json
+import requests
 import google.api_core.exceptions
-# import sqlite3
 import streamlit as st
 
 
@@ -18,7 +20,8 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
         api_keys = [api_keys.strip()]
     api_keys = [k.strip() for k in api_keys if k.strip()] # Clean and remove empty strings
 
-    if not api_keys:
+    # For VertexAI we don't need API keys; skip empty check for that provider
+    if provider != "VertexAI" and not api_keys:
         return "API_ERROR: No API keys provided for the selected provider."
 
     # Initialize or get the current key index for Gemini rotation
@@ -82,7 +85,7 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                 # 2. Try OpenRouter Fallback
                 or_fallback_key = st.secrets.get("OPENROUTER_API_KEY")
                 if or_fallback_key:
-                    or_model = st.secrets.get("OPENROUTER_FALLBACK_MODEL", "google/gemini-2.0-flash-001")
+                    or_model = st.secrets.get("OPENROUTER_FALLBACK_MODEL", "poolside/laguna-m.1:free")
                     st.toast(f"🔄 Gemini/Groq exhausted. Attempting OpenRouter ({or_model}) fallback...", icon="⚠️")
                     return validate_and_generate("OpenRouter", or_model, [or_fallback_key], prompt, system_prompt)
 
@@ -106,8 +109,92 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                 client.models.list()
                 return f"✅ Connected: {model_name}"
 
+        elif provider == "VertexAI":
+            # Load service account JSON from secrets
+            sa_json_str = st.secrets.get("vertex_ai", {}).get("service_account_json")
+            if not sa_json_str:
+                return "API_ERROR: Vertex AI service account not configured in secrets."
+            try:
+                sa_info = json.loads(sa_json_str)
+                creds = service_account.Credentials.from_service_account_info(sa_info)
+            except Exception as e:
+                return f"API_ERROR: Failed to parse Vertex AI service account JSON – {e}"
+            # Initialize Vertex AI client (project & location from service account)
+            project_id = sa_info.get("project_id") or sa_info.get("projectId")
+            location = st.secrets.get("vertex_ai", {}).get("location", "us-central1")
+            
+            import vertexai
+            vertexai.init(project=project_id, location=location, credentials=creds)
+
+            # Sequential Fallback logic if generation fails (only for platform/free tier)
+            def trigger_fallback():
+                # 1. Gemini Fallback
+                gemini_key_raw = st.secrets.get("INTERNAL_AI_KEY")
+                if gemini_key_raw:
+                    gemini_keys = [k.strip() for k in gemini_key_raw.split(',') if k.strip()]
+                    gemini_model = st.secrets.get("INTERNAL_AI_MODEL", "gemini-1.5-flash").strip()
+                    st.toast(f"🔄 Vertex AI exhausted/failed. Trying Gemini ({gemini_model}) fallback...", icon="⚠️")
+                    res = validate_and_generate("Gemini", gemini_model, gemini_keys, prompt, system_prompt)
+                    if "API_ERROR" not in str(res):
+                        return res
+
+                # 2. Groq Fallback
+                groq_key = st.secrets.get("GROQ_API_KEY")
+                if groq_key:
+                    groq_model = st.secrets.get("GROQ_FALLBACK_MODEL", "llama-3.3-70b-versatile").strip()
+                    st.toast(f"🔄 Gemini/Vertex exhausted/failed. Trying Groq ({groq_model}) fallback...", icon="⚠️")
+                    res = validate_and_generate("Groq", groq_model, [groq_key], prompt, system_prompt)
+                    if "API_ERROR" not in str(res):
+                        return res
+
+                # 3. OpenRouter Fallback
+                or_key = st.secrets.get("OPENROUTER_API_KEY")
+                if or_key:
+                    or_model = st.secrets.get("OPENROUTER_FALLBACK_MODEL", "google/gemini-2.0-flash-001").strip()
+                    st.toast(f"🔄 Vertex/Gemini/Groq exhausted/failed. Trying OpenRouter ({or_model}) fallback...", icon="⚠️")
+                    res = validate_and_generate("OpenRouter", or_model, [or_key], prompt, system_prompt)
+                    if "API_ERROR" not in str(res):
+                        return res
+
+                return "API_ERROR: Vertex AI failed, and all platform fallbacks (Gemini, Groq, OpenRouter) were exhausted."
+
+            if prompt:
+                try:
+                    if "gemini" in model_name.lower():
+                        from vertexai.generative_models import GenerativeModel
+                        if system_prompt:
+                            model = GenerativeModel(model_name, system_instruction=system_prompt)
+                        else:
+                            model = GenerativeModel(model_name)
+                        response = model.generate_content(prompt)
+                        return response.text
+                    else:
+                        from vertexai.language_models import TextGenerationModel
+                        model = TextGenerationModel.from_pretrained(model_name)
+                        response = model.predict(prompt)
+                        return response.text
+                except Exception as e:
+                    # Trigger fallback chain on generation failure
+                    st.warning(f"Vertex AI prediction failed: {e}")
+                    return trigger_fallback()
+            else:
+                # Connection test
+                try:
+                    if "gemini" in model_name.lower():
+                        from vertexai.generative_models import GenerativeModel
+                        model = GenerativeModel(model_name)
+                        response = model.generate_content("Ping", generation_config={"max_output_tokens": 5})
+                        return f"✅ Connected: Vertex AI ({model_name})"
+                    else:
+                        from vertexai.language_models import TextGenerationModel
+                        model = TextGenerationModel.from_pretrained(model_name)
+                        response = model.predict("Ping")
+                        return f"✅ Connected: Vertex AI ({model_name})"
+                except Exception as e:
+                    return f"API_ERROR: Vertex AI connection test failed – {e}"
+
         elif provider == "OpenRouter":
-            headers = { # OpenRouter doesn't have rotation logic here, use first key
+            headers = {
                 "Authorization": f"Bearer {api_keys[0]}",
                 "Content-Type": "application/json",
                 "HTTP-Referer": "http://localhost:8501", 
