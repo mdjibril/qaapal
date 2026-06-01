@@ -89,12 +89,15 @@ def main():
     credits = st.session_state.get('credits_balance', 0)
     is_out_of_credits = (role != 'admin' and tier == 'free' and credits <= 0)
 
-    if st.button("Generate Witness Statement", type="primary"):
+    if is_out_of_credits:
+        st.warning("⚠️ You have 0 credits remaining. Upgrade to the **Platform Pass** to continue generating testimonies.")
+
+    if st.button("Generate Witness Statement", type="primary", disabled=is_out_of_credits):
         if not witness_notes or not selected_pcs or not witness_name or not candidate_name:
             st.error("Please fill in all details, select at least one PC, and provide observation notes.")
         elif is_out_of_credits:
             db.mock_payment_dialog(st.session_state.org_id)
-        elif not keys: # Check if keys list is empty
+        elif provider != "VertexAI" and not keys: # Check if keys list is empty
             st.warning("Please enter your AI API key(s) in the sidebar.")
         else:
             with st.spinner("Synthesizing formal testimony..."):
@@ -149,7 +152,7 @@ def main():
                         summary_block += f"Unit {u} - {'; '.join(lo_parts)}\n"
                     
                     # Deduct credit
-                    if tier == 'free':
+                    if role != 'admin' and tier == 'free':
                         db.decrement_credits(st.session_state.org_id)
                         st.session_state.credits_balance -= 1
                     

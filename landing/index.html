@@ -3,93 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QAAPAL - AI-Powered NSQ Assessment Reports</title>
+    <title>NSQAssessment — Powered by QAAPAL | AI-Powered NSQ Assessment Reports</title>
+    <meta name="description" content="Generate, map, and export professional National Skills Qualification (NSQ) assessment reports in seconds using AI synthesis and the BYOK (Bring Your Own Key) model.">
+    <meta name="keywords" content="NSQ, National Skills Qualification, NBTE, Assessment Reports, Assessor Portal, AI Report Generator, BYOK">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">🚀 QAAPAL</div>
+    <header class="navbar-wrapper">
+        <nav class="navbar container">
+            <div class="logo">
+                <span class="logo-emoji">⚡</span>
+                <span class="logo-text">NSQAssessment <span class="logo-sub">by QAAPAL</span></span>
+            </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
                 <a href="#pricing">Pricing</a>
-                <a href="https://qaapal.streamlit.app" class="btn btn-outline">Login</a>
+                <a href="#calculator">Savings Calculator</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://qaapal.streamlit.app" class="btn btn-outline" id="nav-login-btn">Login / Sign Up</a>
             </div>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="container">
-            <h1>Write Professional NSQ Reports in <span class="text-gradient">Seconds</span></h1>
-            <p>The AI-powered portal for assessors to generate, map, and export technical narratives that strictly follow NSQ standards.</p>
-            <div class="hero-btns">
-                <a href="https://qaapal.streamlit.app" class="btn btn-primary">Get Started for Free</a>
-                <a href="#features" class="btn btn-secondary">Learn More</a>
-            </div>
-        </div>
+        </nav>
     </header>
 
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Designed for High-Speed Assessment</h2>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-badge animate-fade-in">🚀 AI-Powered Assessor Workspace</div>
+                <h1 class="animate-slide-up">Write Professional NSQ Reports in <span class="text-gradient">Seconds</span></h1>
+                <p class="hero-desc animate-slide-up-delayed">The elite AI portal for vocational assessors to generate, map, and export technical narratives that strictly adhere to National Skills Qualification (NSQ) and NBTE standards.</p>
+                <div class="hero-btns animate-slide-up-delayed">
+                    <a href="https://qaapal.streamlit.app" class="btn btn-primary" id="hero-cta-btn">Get Started for Free</a>
+                    <a href="#features" class="btn btn-secondary">Explore Features</a>
+                </div>
             </div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="icon">🤖</div>
-                    <h3>AI Synthesis</h3>
-                    <p>Transform raw observation notes into 10 paragraphs of technical narrative automatically mapped to LOs.</p>
+            <div class="hero-bg-glow"></div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">How it Works</span>
+                    <h2>Designed for High-Speed Assessment</h2>
+                    <p class="section-desc">Streamline your quality assurance, observation mapping, and portfolio compilation with next-generation AI workflows.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">📄</div>
-                    <h3>Word Export</h3>
-                    <p>One-click download into official NSQ templates, ready for your portfolio or verifier.</p>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon-wrapper">🤖</div>
+                        <h3>AI Synthesis & Mapping</h3>
+                        <p>Convert short, raw assessor observation notes into rich technical narratives mapped directly to Learning Outcomes (LOs) and Performance Criteria (PC).</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-wrapper">📄</div>
+                        <h3>Official Word Export</h3>
+                        <p>Download fully-formatted reports directly into official NSQ portfolio templates with a single click, ready for external verifiers (EVs).</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-wrapper">⚙️</div>
+                        <h3>The BYOK Model</h3>
+                        <p>Use our built-in platform key or Bring Your Own API Key (Gemini, Groq, or OpenRouter) for ultra-low cost, unlimited generations.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="icon">⚖️</div>
-                    <h3>BYOK Model</h3>
-                    <p>Use our platform AI or bring your own API key for unlimited, cost-effective generations.</p>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Plans & Pricing</span>
+                    <h2>Flexible Tiers for Every Assessor</h2>
+                    <p class="section-desc">Choose a plan that matches your volume. Pay for platform access or bring your own API key to control your own AI costs.</p>
+                    
+                    <!-- Billing Toggle -->
+                    <div class="billing-toggle-container">
+                        <span class="toggle-label" id="label-monthly">Monthly</span>
+                        <label class="switch">
+                            <input type="checkbox" id="billing-toggle" aria-label="Toggle between monthly and annual pricing">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="toggle-label" id="label-annually">Annually <span class="discount-badge">Save 20%</span></span>
+                    </div>
                 </div>
+
+                <div class="pricing-grid">
+                    <!-- Free Card -->
+                    <div class="pricing-card" data-price-monthly="0" data-price-yearly="0">
+                        <div class="card-header">
+                            <h3>Free</h3>
+                            <p>For newly registered assessors testing the platform.</p>
+                            <div class="price">$<span class="price-value">0</span><span class="price-period">/forever</span></div>
+                            <div class="annual-billing-note"></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><span>✓</span> 10 Free Reports</li>
+                            <li><span>✓</span> Access to all Trades</li>
+                            <li><span>✓</span> Platform AI (Gemini Flash)</li>
+                            <li><span>✓</span> Standard Word (.docx) Export</li>
+                            <li class="disabled"><span>✗</span> Bring Your Own Key (BYOK)</li>
+                            <li class="disabled"><span>✗</span> Priority Support</li>
+                        </ul>
+                        <a href="https://qaapal.streamlit.app" class="btn btn-outline card-btn" id="pricing-free-btn">Get Started</a>
+                    </div>
+
+                    <!-- Platform Pass Card -->
+                    <div class="pricing-card featured" data-price-monthly="5" data-price-yearly="4">
+                        <div class="badge">Most Popular</div>
+                        <div class="card-header">
+                            <h3>Platform Pass</h3>
+                            <p>For active assessors who want to bring their own key (BYOK).</p>
+                            <div class="price">$<span class="price-value">5</span><span class="price-period">/month</span></div>
+                            <div class="annual-billing-note"></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><span>✓</span> <strong>Unlimited</strong> Report Generations</li>
+                            <li><span>✓</span> Bring Your Own Key (BYOK)</li>
+                            <li><span>✓</span> Connect Gemini, Groq, or OpenRouter</li>
+                            <li><span>✓</span> Priority Word (.docx) Export</li>
+                            <li><span>✓</span> Standard Support</li>
+                            <li class="disabled"><span>✗</span> Shared organization billing</li>
+                        </ul>
+                        <a href="https://qaapal.streamlit.app" class="btn btn-primary card-btn" id="pricing-pass-btn">Upgrade to BYOK</a>
+                    </div>
+
+                    <!-- Pro Card -->
+                    <div class="pricing-card" data-price-monthly="15" data-price-yearly="12">
+                        <div class="card-header">
+                            <h3>Pro</h3>
+                            <p>For professionals who want all-inclusive high-speed platform AI.</p>
+                            <div class="price">$<span class="price-value">15</span><span class="price-period">/month</span></div>
+                            <div class="annual-billing-note"></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><span>✓</span> <strong>Unlimited</strong> Report Generations</li>
+                            <li><span>✓</span> All-Inclusive Platform AI (Gemini Pro)</li>
+                            <li><span>✓</span> No personal API key setup needed</li>
+                            <li><span>✓</span> Priority Word (.docx) Export</li>
+                            <li><span>✓</span> Multi-trade workspace support</li>
+                            <li><span>✓</span> Priority email & chat support</li>
+                        </ul>
+                        <a href="https://qaapal.streamlit.app" class="btn btn-outline card-btn" id="pricing-pro-btn">Go Pro</a>
+                    </div>
+
+                    <!-- Enterprise Card -->
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Enterprise</h3>
+                            <p>For vocational schools, assessment centers & agencies.</p>
+                            <div class="price"><span class="price-value-custom">Custom</span></div>
+                            <div class="annual-billing-note">Contact us for custom seats</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><span>✓</span> <strong>Unlimited</strong> Team Generations</li>
+                            <li><span>✓</span> Shared Organization Workspaces</li>
+                            <li><span>✓</span> Master API Key settings (BYOK or Org-billed)</li>
+                            <li><span>✓</span> Custom Center-Branded templates</li>
+                            <li><span>✓</span> Internal QA Audit workflows</li>
+                            <li><span>✓</span> 24/7 Dedicated Account Manager</li>
+                        </ul>
+                        <a href="mailto:support@nsqassessment.com.ng?subject=Enterprise%20Inquiry" class="btn btn-outline card-btn" id="pricing-enterprise-btn">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section id="calculator" class="calculator-section">
+            <div class="container">
+                <div class="calculator-wrapper">
+                    <div class="calc-info">
+                        <span class="section-subtitle">Smart Savings</span>
+                        <h2>Why Bring Your Own Key?</h2>
+                        <p>Traditional assessment platforms charge high markup fees on every report generation. With our **Platform Pass (BYOK)**, you pay a small flat access fee and plug in your own API key to access AI at wholesale cost.</p>
+                        <p class="api-note">💡 **Gemini API & Groq** offer extremely low pricing (typically less than $0.01 per report generation). That means you keep 95% of what other platforms would charge as markup!</p>
+                    </div>
+                    <div class="calc-box">
+                        <h3>Estimate Your Monthly Savings</h3>
+                        <div class="slider-container">
+                            <label for="reports-slider" class="slider-label">Reports generated per month: <strong id="reports-value">50</strong></label>
+                            <input type="range" id="reports-slider" min="10" max="250" value="50" step="5" class="custom-slider">
+                        </div>
+                        <div class="calc-results">
+                            <div class="result-row">
+                                <span>Traditional Credit Cost ($0.60/ea):</span>
+                                <strong id="cost-traditional">$30.00</strong>
+                            </div>
+                            <div class="result-row">
+                                <span>Platform Pass BYOK ($5 flat + API):</span>
+                                <strong id="cost-byok" class="highlight-cost">$6.00</strong>
+                            </div>
+                            <div class="savings-row">
+                                <span>Your Estimated Savings:</span>
+                                <span id="savings-value">$24.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Comparison Matrix -->
+        <section class="comparison-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Features Checklist</span>
+                    <h2>Compare Plans in Detail</h2>
+                </div>
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Free</th>
+                                <th>Platform Pass (BYOK)</th>
+                                <th>Pro</th>
+                                <th>Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature-name">Monthly Cost</td>
+                                <td>$0</td>
+                                <td>$5 / mo ($4 annual)</td>
+                                <td>$15 / mo ($12 annual)</td>
+                                <td>Custom</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Report Credits</td>
+                                <td>10 Reports Total</td>
+                                <td>Unlimited</td>
+                                <td>Unlimited</td>
+                                <td>Unlimited</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">AI Provider Model</td>
+                                <td>Platform AI (Gemini Flash)</td>
+                                <td>BYOK (Your choice of API)</td>
+                                <td>Platform AI (Gemini Pro)</td>
+                                <td>BYOK or Enterprise Billed</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Word (.docx) Templates</td>
+                                <td>Standard</td>
+                                <td>Standard</td>
+                                <td>Priority Export</td>
+                                <td>Custom Branded Templates</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Workspace Context</td>
+                                <td>Personal</td>
+                                <td>Personal</td>
+                                <td>Personal + Multi-trade</td>
+                                <td>Shared Organization Workspaces</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Support Channel</td>
+                                <td>Standard Forum</td>
+                                <td>Email Support</td>
+                                <td>Priority Support</td>
+                                <td>Dedicated Support Agent</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Frequently Asked Questions</span>
+                    <h2>Have Questions? We Have Answers</h2>
+                </div>
+                <div class="faq-accordion">
+                    <div class="faq-item" id="faq-q1">
+                        <button class="faq-question">What is NSQAssessment and how does it help?</button>
+                        <div class="faq-answer">
+                            <p>NSQAssessment is a dedicated writing portal designed specifically for National Skills Qualification (NSQ) assessors. It takes raw observation summaries or session logs, structures them into detailed technical statements, and maps them to NSQ Performance Criteria (PC) and Learning Outcomes (LO) for standard-compliant assessment reports.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq-q2">
+                        <button class="faq-question">What is the Bring Your Own Key (BYOK) model?</button>
+                        <div class="faq-answer">
+                            <p>The BYOK model allows you to pay a low monthly fee for our platform software while entering your own personal AI API key (Google Gemini, Groq, or OpenRouter). You are then billed directly by the AI provider at wholesale rate. Because AI costs are extremely low (fractions of a cent per page), this saves you significant money over standard flat-rate SaaS platforms that resell AI credits at massive markups.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq-q3">
+                        <button class="faq-question">How do I get an API Key for Gemini or Groq?</button>
+                        <div class="faq-answer">
+                            <p>Getting a key is free and takes under 3 minutes. For Google Gemini, visit Google AI Studio. For Groq, register on the Groq Console. Simply generate a key, copy it, and paste it into your NSQAssessment account settings. The settings are secured using state-of-the-art encryption.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq-q4">
+                        <button class="faq-question">How do the free report credits work?</button>
+                        <div class="faq-answer">
+                            <p>Every newly registered account gets 10 credits free of charge. You can use these to test the AI report generation, explore the trade standards library, and run Word exports. There is no credit card required to try it out.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq-q5">
+                        <button class="faq-question">Are the generated reports compatible with NBTE standards?</button>
+                        <div class="faq-answer">
+                            <p>Yes. The portal generates professional Word documents formatted to align with NBTE (National Board for Technical Education) standards. Once exported, you can download them directly as `.docx` documents and load them directly into your official assessor portfolio or send them to your Internal/External Verifier.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq-q6">
+                        <button class="faq-question">Can I use this for multiple trades or assessors?</button>
+                        <div class="faq-answer">
+                            <p>Yes! Our **Enterprise Plan** allows vocational schools and training centers to set up unified organization workspaces, add multiple assessors under a single billing account, configure a master key to avoid individual setups, and access customized report structures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo-emoji">⚡</span>
+                <span class="footer-logo-text">NSQAssessment</span>
+                <p>Empowering vocational assessors with standard-compliant AI reporting.</p>
+            </div>
+            <div class="footer-links">
+                <p>&copy; 2026 NSQAssessment. Powered by QAAPAL. All rights reserved.</p>
             </div>
         </div>
-    </section>
-
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2>Transparent Pricing</h2>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Free</h3>
-                    <div class="price">$0<span>/forever</span></div>
-                    <ul>
-                        <li>10 Free Reports</li>
-                        <li>Access to all Trades</li>
-                        <li>Platform AI (Gemini)</li>
-                    </ul>
-                    <a href="https://qaapal.streamlit.app" class="btn btn-outline">Sign Up</a>
-                </div>
-                <div class="pricing-card featured">
-                    <div class="badge">Recommended</div>
-                    <h3>Platform Pass</h3>
-                    <div class="price">$5<span>/month</span></div>
-                    <ul>
-                        <li>Unlimited Generations</li>
-                        <li>Bring Your Own Key (BYOK)</li>
-                        <li>Priority Word Export</li>
-                    </ul>
-                    <a href="https://qaapal.streamlit.app" class="btn btn-primary">Upgrade Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 QAAPAL. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
