@@ -1,0 +1,16 @@
+# === Virtual Environments & Cache ===
+venv/
+__pycache__/
+.DS_Store
+
+# === Your Local Folders ===
+NOS/
+archived/
+
+# === Databases ===
+# (Ignore local SQLite databases. Cloud Run is stateless)
+*.db
+
+# === Streamlit Settings & Secrets ===
+# We ignore secrets.toml for security, but allow config.toml (if you have custom styling)
+.streamlit/secrets.toml

@@ -2,11 +2,8 @@ import streamlit as st
 from auth_utils import check_auth, login_form
 import dashboard, history, admin_nos, admin_users, personal_statement, witness_statement, subscription_page, database as db
 from datetime import datetime, timedelta
-import google.generativeai as genai
 import time
-from groq import Groq
 import requests, json
-import google.api_core.exceptions
 from ai_utils import validate_and_generate
 
 st.set_page_config(page_title="NSQ Portal", layout="wide")

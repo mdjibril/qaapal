@@ -1,10 +1,8 @@
 import json
 from google.oauth2 import service_account
-import google.cloud.aiplatform as vertex_ai
-import google.generativeai as genai
+from google import genai
 from groq import Groq
 import requests
-import google.api_core.exceptions
 import streamlit as st
 
 
@@ -38,38 +36,32 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                 current_api_key = api_keys[current_key_index]
                 
                 try:
-                    genai.configure(api_key=current_api_key)
-
-                    # --- START AUTO-DISCOVERY LOGIC ---
-                    available_models = [m.name for m in genai.list_models() if 'generateContent' in m.supported_generation_methods]
-
-                    actual_model_name = None
-                    if any(model_name in m for m in available_models):
-                        actual_model_name = [m for m in available_models if model_name in m][0]
-                    else:
-                        actual_model_name = available_models[0] # Fallback
-                    # --- END AUTO-DISCOVERY LOGIC ---
-
-                    model = genai.GenerativeModel(actual_model_name, system_instruction=system_prompt)
+                    client = genai.Client(api_key=current_api_key)
 
                     if prompt:
-                        response = model.generate_content(prompt)
+                        response = client.models.generate_content(
+                            model=model_name, # Use the model_name directly
+                            contents=prompt,
+                            config={'system_instruction': system_prompt}
+                        )
                         return response.text
                     else:
-                        return f"✅ Connected: {actual_model_name}"
-                except google.api_core.exceptions.ResourceExhausted as e:
-                    st.session_state.current_gemini_key_index = (current_key_index + 1) % num_keys
-                    if num_keys > 1:
-                        st.warning(f"Gemini key {current_key_index+1}/{num_keys} exhausted, trying next key. ({e})")
-                        continue # Try the next key in the loop
-                    else:
-                        return "API_ERROR: The free AI service is currently at capacity. Please try again in a minute or upgrade for priority access."
+                        # For connection test, just try a simple generation to verify connectivity
+                        client.models.generate_content(
+                            model=model_name,
+                            contents="Ping",
+                            config={"max_output_tokens": 10} # Small output to quickly test
+                        )
+                        return f"✅ Connected: {model_name}"
                 except Exception as e:
+                    # Check for rate limiting (429) specifically if possible, or rotate on any error
                     st.session_state.current_gemini_key_index = (current_key_index + 1) % num_keys
                     if num_keys > 1:
-                        st.warning(f"Gemini API call failed with key {current_key_index+1}/{num_keys}, trying next key. ({e})")
+                        st.warning(f"Gemini key {current_key_index+1}/{num_keys} failed/exhausted, trying next key. ({e})")
                         continue # Try the next key in the loop
                     else:
+                        if "429" in str(e):
+                            return "API_ERROR: The free AI service is currently at capacity. Please try again in a minute."
                         return f"API_ERROR: {str(e)}"
 
             # --- FALLBACK MECHANISM ---
@@ -117,17 +109,17 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
             try:
                 sa_info = json.loads(sa_json_str)
                 creds = service_account.Credentials.from_service_account_info(sa_info)
+                # Explicitly add the cloud-platform scope for Vertex AI
+                creds = service_account.Credentials.from_service_account_info(sa_info, scopes=["https://www.googleapis.com/auth/cloud-platform"])
             except Exception as e:
                 return f"API_ERROR: Failed to parse Vertex AI service account JSON – {e}"
             # Initialize Vertex AI client (project & location from service account)
             project_id = sa_info.get("project_id") or sa_info.get("projectId")
             location = st.secrets.get("vertex_ai", {}).get("location", "us-central1")
             
-            import vertexai
-            vertexai.init(project=project_id, location=location, credentials=creds)
-
             # Sequential Fallback logic if generation fails (only for platform/free tier)
             def trigger_fallback():
+                # (Existing fallback logic remains unchanged...)
                 # 1. Gemini Fallback
                 gemini_key_raw = st.secrets.get("INTERNAL_AI_KEY")
                 if gemini_key_raw:
@@ -160,19 +152,24 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
 
             if prompt:
                 try:
-                    if "gemini" in model_name.lower():
-                        from vertexai.generative_models import GenerativeModel
-                        if system_prompt:
-                            model = GenerativeModel(model_name, system_instruction=system_prompt)
-                        else:
-                            model = GenerativeModel(model_name)
-                        response = model.generate_content(prompt)
+                    client = genai.Client(
+                        vertexai=True,
+                        project=project_id,
+                        location=location,
+                        credentials=creds
+                    )
+                    
+                    response = client.models.generate_content(
+                        model=model_name,
+                        contents=prompt,
+                        config={'system_instruction': system_prompt}
+                    )
+                    
+                    if response.text:
                         return response.text
                     else:
-                        from vertexai.language_models import TextGenerationModel
-                        model = TextGenerationModel.from_pretrained(model_name)
-                        response = model.predict(prompt)
-                        return response.text
+                        reason = response.candidates[0].finish_reason if response.candidates else "Unknown"
+                        return f"API_ERROR: Vertex AI returned an empty response. Reason: {reason}"
                 except Exception as e:
                     # Trigger fallback chain on generation failure
                     st.warning(f"Vertex AI prediction failed: {e}")
@@ -180,16 +177,10 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
             else:
                 # Connection test
                 try:
-                    if "gemini" in model_name.lower():
-                        from vertexai.generative_models import GenerativeModel
-                        model = GenerativeModel(model_name)
-                        response = model.generate_content("Ping", generation_config={"max_output_tokens": 5})
-                        return f"✅ Connected: Vertex AI ({model_name})"
-                    else:
-                        from vertexai.language_models import TextGenerationModel
-                        model = TextGenerationModel.from_pretrained(model_name)
-                        response = model.predict("Ping")
-                        return f"✅ Connected: Vertex AI ({model_name})"
+                    client = genai.Client(vertexai=True, project=project_id, location=location, credentials=creds)
+                    # Basic call to check connection
+                    client.models.generate_content(model=model_name, contents="Ping", config={'max_output_tokens': 10})
+                    return f"✅ Connected: Vertex AI ({model_name})"
                 except Exception as e:
                     return f"API_ERROR: Vertex AI connection test failed – {e}"
 
@@ -213,13 +204,6 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                 return response.json()['choices'][0]['message']['content'] if prompt else f"✅ Connected: {model_name}"
             else:
                 return f"API_ERROR: {response.status_code} - {response.text}"
-    
-    except google.api_core.exceptions.ResourceExhausted as e:
-        # This catch is for Groq/OpenRouter if they ever throw this specific exception,
-        # or if Gemini somehow falls through the loop.
-        return "API_ERROR: The AI service is currently at capacity. Please try again in a minute or upgrade for priority access."
-    except google.api_core.exceptions.InvalidArgument as e:
-        return f"API_ERROR: Invalid request. This might be due to a model naming change: {str(e)}"
-    # except Exception as e:
+
     except Exception as e:
         return f"API_ERROR: {str(e)}"
