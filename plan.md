@@ -1,6 +1,6 @@
-# Transition QAAPAL to Freemium SaaS + BYOK Model
+# Transition NSQ Assessment to Freemium SaaS + BYOK Model
 
-This document outlines the technical implementation plan to transition the QAAPAL Streamlit application into a scalable SaaS product. The plan introduces a Freemium model with a BYOK (Bring Your Own Key) upgrade path, while future-proofing the database to support B2B Enterprise organizations later.
+This document outlines the technical implementation plan to transition the NSQ Assessment Streamlit application into a scalable SaaS product. The plan introduces a Freemium model with a BYOK (Bring Your Own Key) upgrade path, while future-proofing the database to support B2B Enterprise organizations later.
 
 ## Phase 1 Conclusion: Infrastructure & UI Ready - **MERGE TO MAIN**
 
@@ -86,9 +86,9 @@ We have updated the sidebar to reflect the new billing states and implemented th
 *   [x] **Vertex AI Transition:** Implement Google Cloud Vertex AI support for the Platform Tier to utilize the $300 GCP credit balance.
 *   [x] **Service Account Management:** Securely store and parse GCP Service Account JSON from secrets to authorize Vertex AI calls.
 *   [x] **API Key Rotation:** Implement a simple rotation logic for platform AI keys to mitigate rate limits.
-*   **Payment Automation Bridge:** Create a Google Apps Script (GAS) to monitor Gmail for "New Sale" emails from Selar/Paystack.
-*   **Webhook Relay:** Configure GAS to parse customer emails and relay them to the Supabase `selar-webhook` Edge Function.
-*   **Payment UX:** Configure **Redirect URL** on Selar product pages to return users to `app.qaapal.com` after purchase.
+*   [x] **Payment Automation Bridge:** Create a Google Apps Script (GAS) to monitor Gmail for "New Sale" emails from Selar/Paystack.
+*   [x] **Webhook Relay Debugging:** Refine GAS parsing logic for Selar Merchant Notifications and verify end-to-end fulfillment.
+*   [x] **Payment UX:** Configure **Redirect URL** on Selar product pages to return users to `app.nsqassessment.com.ng` after purchase.
 *   [x] **Hybrid Provider Routing:** Ensure the AI Router supports both simple API keys (for BYOK/Groq/OpenRouter) and IAM-based auth (for Vertex AI).
 *   [x] **Credit Guard UX:** Disable generation buttons and show contextual warnings for users with 0 credits.
 *   [x] **AI Router Stability & Vertex AI Scope Fixes:** Ensure robust AI provider routing and correct OAuth scopes for Vertex AI.
@@ -97,11 +97,11 @@ We have updated the sidebar to reflect the new billing states and implemented th
 *   [x] **Lazy Loading & Caching:** Optimize History page by fetching metadata first and lazy-loading content with session state caching.
 *   [x] **Enhanced Progress UX:** Utilize `st.status` for granular, transparent feedback during AI generation.
 *   **Landing Page & App Integration:**
-    *   **DNS Configuration:** Map root domain (qaapal.com) to static hosting and `app` subdomain to Railway.
-    *   **CTA Implementation:** Link landing page "Get Started" buttons to the Streamlit URL with intent parameters.
-    *   **Deep Linking Logic:** Update `main.py` to check `st.query_params` for `intent=signup` to auto-toggle the registration tab.
-    *   **Auth Synchronicity:** (Optional) Use Supabase JS on the landing page to toggle "Login" vs "Dashboard" buttons based on session.
-    *   **SEO & Metadata:** Align OpenGraph tags and canonical URLs across both the landing page and the app.
+    *   [ ] **DNS Configuration:** Map root domain (nsqassessment.com.ng) to static hosting and `app` subdomain to Railway.
+    *   [ ] **CTA Implementation:** Link landing page "Get Started" buttons to the Streamlit URL with intent parameters.
+    *   [ ] **Deep Linking Logic:** Update `main.py` to check `st.query_params` for `intent=signup` to auto-toggle the registration tab.
+    *   [ ] **Auth Synchronicity:** (Optional) Use Supabase JS on the landing page to toggle "Login" vs "Dashboard" buttons based on session.
+    *   [ ] **SEO & Metadata:** Align OpenGraph tags and canonical URLs across both the landing page and the app.
 
 ### Phase 3: Advanced Integrations
 *   **Real Monnify Integration:** Transition from Selar to Monnify Web SDK/API for more advanced payment flows, once business registration is complete.

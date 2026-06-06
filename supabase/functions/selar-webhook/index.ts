@@ -41,7 +41,7 @@ Deno.serve(async (req: Request) => {
     const { data: profile, error: profileError } = await supabaseAdmin
       .from('user_profiles')
       .select('org_id')
-      .eq('email', customerEmail)
+      .ilike('email', customerEmail)
       .single()
 
     if (profileError || !profile?.org_id) {
