@@ -2,7 +2,13 @@ venv/
 __pycache__/
 .DS_Store
 *.db
-.streamlit/secrets.toml
 NOS/
 archived/
-.streamlit/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Supabase & Deno locals
+supabase/.temp/
+.env
+*.log
