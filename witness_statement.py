@@ -90,17 +90,20 @@ def main():
     is_out_of_credits = (role != 'admin' and tier == 'free' and credits <= 0)
 
     if is_out_of_credits:
+        selar_base = st.secrets.get("payments", {}).get("selar_link", "https://selar.com/nsqassessment-platformpass")
+        user_email = st.session_state.user_session.email
+        upgrade_link = f"{selar_base}?email={user_email}"
         st.warning("⚠️ You have 0 credits remaining. Upgrade to the **Platform Pass** to continue generating testimonies.")
+        st.link_button("🚀 Upgrade to Platform Pass", upgrade_link)
 
     if st.button("Generate Witness Statement", type="primary", disabled=is_out_of_credits):
         if not witness_notes or not selected_pcs or not witness_name or not candidate_name:
             st.error("Please fill in all details, select at least one PC, and provide observation notes.")
-        elif is_out_of_credits:
-            db.mock_payment_dialog(st.session_state.org_id)
         elif provider != "VertexAI" and not keys: # Check if keys list is empty
             st.warning("Please enter your AI API key(s) in the sidebar.")
         else:
-            with st.spinner("Synthesizing formal testimony..."):
+            with st.status("Synthesizing formal testimony...", expanded=True) as status:
+                st.write("📄 Converting witness notes into formal industrial language...")
                 system_prompt = f"""You are a professional industrial supervisor writing an NSQ Witness Statement.
                 Your goal is to transform raw observation notes into a formal, objective, and validating testimony that maps to specific competency standards.
                 
@@ -125,6 +128,7 @@ def main():
                 
                 Generate a formal, dense witness statement incorporating all these details."""
 
+                st.write(f"🛰️ Dispatching request to {provider}...")
                 ai_output = validate_and_generate(
                     provider=provider,
                     model_name=target_model,
@@ -136,6 +140,7 @@ def main():
                 if "API_ERROR" in str(ai_output):
                     st.error(ai_output)
                 else:
+                    st.write("✅ Validating third-person tone and cross-referencing criteria...")
                     # Generate mapping summary block
                     summary_block = "\n\n----- SUMMARY OF CRITERIA COVERED -----\n\n"
                     u_dict = {}
@@ -157,6 +162,7 @@ def main():
                         st.session_state.credits_balance -= 1
                     
                     st.session_state.current_witness_statement = ai_output + summary_block
+                    status.update(label="✅ Witness Statement Ready!", state="complete", expanded=False)
 
     if 'current_witness_statement' in st.session_state:
         st.markdown("---")

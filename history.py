@@ -16,10 +16,16 @@ def _fetch_reports(user_id, role, table_name, search_query=None, page=1, page_si
     # .eq("created_by", user_id) filter below for non-admins.
     client = get_admin_supabase()
     try:
-        # Build query with count="exact" for pagination
-        # We use !created_by to disambiguate the relationship to user_profiles.
-        # This tells PostgREST exactly which foreign key to use for the join.
-        query = client.table(table_name).select("*, user_profiles!created_by(full_name), trades(name)", count="exact") 
+        # Optimization: Fetch only metadata for the list view to reduce initial load time.
+        # Large text fields (report_text, statement_text, notes) are fetched lazily in display_report_item.
+        if table_name == "witness_statements":
+            metadata_cols = "id, candidate_name, witness_name, witness_role, created_at, created_by, unit_codes, trade_id, user_profiles!created_by(full_name), trades(name)"
+        elif table_name == "student_statements":
+            metadata_cols = "id, student_name, created_at, created_by, unit_codes, trade_id, user_profiles!created_by(full_name), trades(name)"
+        else: # assessment_reports
+            metadata_cols = "id, student_name, assessment_date, created_at, created_by, unit_codes, trade_id, user_profiles!created_by(full_name), trades(name)"
+
+        query = client.table(table_name).select(metadata_cols, count="exact") 
         
         # Admin can filter by a specific assessor, otherwise they see all
         if role == 'admin':
@@ -74,6 +80,10 @@ def _delete_report(report_id, role, current_user_id, table_name):
         
         # Clear cache after successful deletion
         st.cache_data.clear()
+        # Clear from session state text cache if exists
+        cache_key = f"{table_name}_{report_id}"
+        if 'report_content_cache' in st.session_state:
+            st.session_state.report_content_cache.pop(cache_key, None)
         return True
     except Exception as e:
         st.error(f"Error deleting report: {e}")
@@ -97,8 +107,7 @@ def display_report_item(r, current_user_id, current_user_role, table_type):
     report_assessor_name = (r.get('user_profiles') or {}).get('full_name', 'Unknown Assessor')
     report_assessor_id = r.get('created_by', 'ID') # Use created_by as the assessor ID for the report
 
-    # Handle different column names between tables
-    text_content = r.get('report_text') or r.get('statement_text', '')
+    # Handle metadata dates
     raw_date = r.get('assessment_date') or r.get('created_at', 'N/A')
     display_date = raw_date.split('T')[0] if 'T' in str(raw_date) else raw_date
     unit_codes = r.get('unit_codes', 'N/A')
@@ -122,11 +131,35 @@ def display_report_item(r, current_user_id, current_user_role, table_type):
 
     col_checkbox, col_expander = st.columns([0.05, 0.95]) # Adjusted column width for checkbox
     with col_checkbox:
-        st.checkbox("", key=f"selected_{report_id}", value=is_selected, on_change=_on_checkbox_change, args=(report_id,))
+        st.checkbox(
+            "Select report",
+            key=f"selected_{report_id}",
+            value=is_selected,
+            on_change=_on_checkbox_change,
+            args=(report_id,),
+            label_visibility="collapsed"
+        )
     
     with col_expander:
         # Unified minimal header style with icons including trade name
         with st.expander(f"📅 {display_date} | 👤 {r.get('student_name') or r.get('candidate_name')} | 🎓 {trade_name} | 📚 Units:{display_units}"):
+            # --- LAZY LOADING BLOCK ---
+            table_map = {"Assessment Reports": "assessment_reports", "Personal Statements": "student_statements", "Witness Statements": "witness_statements"}
+            target_table = table_map.get(table_type)
+            
+            cache_key = f"{target_table}_{report_id}"
+            
+            if cache_key in st.session_state.report_content_cache:
+                text_content = st.session_state.report_content_cache[cache_key]
+            else:
+                with st.spinner("Loading content..."):
+                    # Fetch the heavy text content only when the expander is opened
+                    col_to_fetch = "report_text" if target_table == "assessment_reports" else "statement_text"
+                    res = get_admin_supabase().table(target_table).select(col_to_fetch).eq("id", report_id).single().execute()
+                    text_content = res.data.get(col_to_fetch) if res.data else "Error: Content not found."
+                    st.session_state.report_content_cache[cache_key] = text_content
+            # ---------------------------
+
             st.write(text_content)
 
             # Determine which export function to use
@@ -187,6 +220,7 @@ def main():
     if 'search_query' not in st.session_state: st.session_state.search_query = ""
     if 'admin_assessor_filter' not in st.session_state: st.session_state.admin_assessor_filter = "All"
     if 'history_type' not in st.session_state: st.session_state.history_type = "Assessment Reports"
+    if 'report_content_cache' not in st.session_state: st.session_state.report_content_cache = {}
 
     # History Type Selector
     if role == 'student':
@@ -321,6 +355,10 @@ def main():
                                 # Clear cache and reset states
                                 st.cache_data.clear()
                                 st.session_state.selected_report_ids = set()
+                                # Clear from text cache
+                                for rid in ids_to_del:
+                                    st.session_state.report_content_cache.pop(f"{target_table}_{rid}", None)
+                                    
                                 st.session_state.confirm_bulk_delete_active = False
                                 st.success("Selected reports deleted successfully.")
                                 st.rerun()

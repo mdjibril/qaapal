@@ -12,6 +12,10 @@ def main():
     credits_balance = st.session_state.get('credits_balance', 0)
     subscription_start_date_str = st.session_state.get('subscription_start_date')
     
+    selar_base = st.secrets.get("payments", {}).get("selar_link", "https://selar.com/nsqassessment-platformpass")
+    user_email = st.session_state.user_session.email
+    upgrade_link = f"{selar_base}?email={user_email}"
+    
     st.markdown("---")
     st.subheader("Current Plan Details")
 
@@ -45,8 +49,7 @@ def main():
                 is_expired = db.check_platform_pass_expiry()
                 if is_expired:
                     st.error("Your Platform Pass has expired! Please renew to continue enjoying unlimited generations.")
-                    if st.button("Renew Platform Pass Now", type="primary", use_container_width=True):
-                        db.mock_payment_dialog(org_id)
+                    st.link_button("Renew Platform Pass Now", upgrade_link, type="primary", use_container_width=True)
                 else:
                     st.success("Your Platform Pass is active!")
                     # Calculate days left relative to the timezone of the start_date
@@ -67,8 +70,7 @@ def main():
         st.subheader("Upgrade Your Plan")
         st.info(f"You are currently on the Free plan with {credits_balance} reports remaining.")
         st.write("Upgrade to **Platform Pass** for unlimited report generations and advanced features!")
-        if st.button("🚀 Upgrade to Platform Pass ($5/month)", type="primary", use_container_width=True):
-            db.mock_payment_dialog(org_id)
+        st.link_button("🚀 Upgrade to Platform Pass ($5/month)", upgrade_link, type="primary", use_container_width=True)
             
     st.markdown("---")
     st.caption("For enterprise solutions or custom plans, please contact sales.")

@@ -1,5 +1,8 @@
 -- NSQ Portal - Unified Database Setup Script
 
+-- 0. Extensions
+CREATE EXTENSION IF NOT EXISTS pg_trgm;
+
 -- 1. User Profiles
 CREATE TABLE public.user_profiles (
   id uuid REFERENCES auth.users ON DELETE CASCADE NOT NULL PRIMARY KEY,

@@ -52,44 +52,6 @@ def fetch_nested_nos(trade_id):
         return {}
 
 
-# @st.cache_data(ttl=3600)
-# def fetch_nested_nos(trade_id):
-    supabase = get_supabase()
-    # print(f"DEBUG: Querying Supabase for trade_id: {trade_id}") # Check your terminal
-    
-    try:
-        # Step 1: Get Units
-        units_res = supabase.table("units").select("id, code, title").eq("trade_id", trade_id).execute()
-        
-        # Add this check to see if the error is hidden in the response
-        if not units_res.data and hasattr(units_res, 'error') and units_res.error:
-            print(f"SUPABASE API ERROR: {units_res.error}")
-
-        units = units_res.data
-            
-        if not units:
-            print("DEBUG: No units found in Supabase for this ID.")
-            return {}
-
-        nested_data = {}
-        for u in units:
-            unit_label = f"{u['code']}: {u['title']}"
-            nested_data[unit_label] = {}
-                
-            # Step 2: Get LOs
-            lo_res = supabase.table("learning_outcomes").select("id, lo_num, description").eq("unit_id", u['id']).execute()
-            for lo in lo_res.data:
-                lo_label = f"{lo['lo_num']}: {lo['description']}"
-                    
-                # Step 3: Get PCs
-                pc_res = supabase.table("performance_criteria").select("pc_code, description").eq("lo_id", lo['id']).execute()
-                nested_data[unit_label][lo_label] = [f"{pc['pc_code']}: {pc['description']}" for pc in pc_res.data]
-                    
-        return nested_data
-    except Exception as e:
-        st.error(f"Database Error: {e}")
-        return {}
-
 def insert_report(name, trade_id, unit_codes, report_content, date, user_id):
     """
     Inserts report and returns (success_bool, error_message)

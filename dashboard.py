@@ -146,7 +146,11 @@ def main():
 
     # --- GENERATION LOGIC ---
     if is_out_of_credits:
+        selar_base = st.secrets.get("payments", {}).get("selar_link", "https://selar.com/nsqassessment-platformpass")
+        user_email = st.session_state.user_session.email
+        upgrade_link = f"{selar_base}?email={user_email}"
         st.warning("⚠️ You have 0 credits remaining. Upgrade to the **Platform Pass** to continue generating reports.")
+        st.link_button("🚀 Upgrade to Platform Pass", upgrade_link)
 
     if st.button("Generate & Finalize Report", disabled=is_out_of_credits):
         current_time = time.time()
@@ -156,13 +160,12 @@ def main():
             st.warning(f"🕒 Rate Limit Protection: Wait {int(10 - time_passed)}s.")
         elif not selected_pcs:
             st.warning("Please select at least one Performance Criterion above.")
-        elif is_out_of_credits:
-            db.mock_payment_dialog(st.session_state.org_id)
         elif not dev_mode and provider != "VertexAI" and not keys: # Check if keys list is empty
             st.warning(f"Please enter the {provider} API key(s) in the sidebar.")
         else:
             st.session_state.last_request_time = current_time
-            with st.spinner(f"Using {provider} ({target_model}) to synthesize..."):
+            with st.status(f"Using {provider} ({target_model}) to synthesize...", expanded=True) as status:
+                st.write("🔍 Preparing assessment context and mapping criteria...")
                 
                 unique_units = list(set([pc.split(' - ')[0] for pc in selected_pcs]))
                 unit_header_info = "\n".join(unique_units)
@@ -218,6 +221,7 @@ def main():
                 if dev_mode:
                     ai_narrative = "DEV MODE: AI was skipped. Database and Word functions work."
                 else:
+                    st.write(f"🤖 Transmitting to {provider} for synthesis...")
                     ai_narrative = validate_and_generate(
                         provider=provider, 
                         model_name=target_model, 
@@ -229,6 +233,7 @@ def main():
                 if isinstance(ai_narrative, str) and "API_ERROR" in ai_narrative:
                     st.error(ai_narrative)
                 else:
+                    st.write("📊 Generating criteria summary block...")
                     summary_block = "\n\n----- SUMMARY OF CRITERIA COVERED -----\n\n"
                     u_dict = {}
                     for item in selected_pcs: # Format: "Unit - LO - PC"
@@ -251,21 +256,21 @@ def main():
                     full_report_text = ai_narrative + summary_block
 
                     # Attempt Database Save
-                    with st.spinner("Saving report to Supabase..."):
-                        success, error_msg = db.insert_report(
-                            student_name, 
-                            trade_id, 
-                            ", ".join(u_dict.keys()),  
-                            full_report_text, 
-                            assessment_date,
-                            user_id 
-                        )
+                    st.write("💾 Finalizing report and saving to Supabase...")
+                    success, error_msg = db.insert_report(
+                        student_name, 
+                        trade_id, 
+                        ", ".join(u_dict.keys()),  
+                        full_report_text, 
+                        assessment_date,
+                        user_id 
+                    )
                     
-                        if success:
-                            st.success("✅ SUCCESS: Report saved to Supabase!")
-                        else:
-                            st.error(f"❌ DATABASE ERROR: {error_msg}")
-                            st.warning("Verify that the 'assessment_reports' table contains a 'created_by' column.")
+                    if success:
+                        st.success("✅ SUCCESS: Report saved to Supabase!")
+                    else:
+                        st.error(f"❌ DATABASE ERROR: {error_msg}")
+                        st.warning("Verify that the 'assessment_reports' table contains a 'created_by' column.")
 
                     st.markdown("### Preview")
                     st.info(full_report_text)

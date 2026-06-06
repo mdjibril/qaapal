@@ -40,7 +40,7 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
 
                     if prompt:
                         response = client.models.generate_content(
-                            model=model_name, # Use the model_name directly
+                            model=model_name, 
                             contents=prompt,
                             config={'system_instruction': system_prompt}
                         )
@@ -50,7 +50,7 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                         client.models.generate_content(
                             model=model_name,
                             contents="Ping",
-                            config={"max_output_tokens": 10} # Small output to quickly test
+                            config={"max_output_tokens": 10}
                         )
                         return f"✅ Connected: {model_name}"
                 except Exception as e:
@@ -108,9 +108,11 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                 return "API_ERROR: Vertex AI service account not configured in secrets."
             try:
                 sa_info = json.loads(sa_json_str)
-                creds = service_account.Credentials.from_service_account_info(sa_info)
-                # Explicitly add the cloud-platform scope for Vertex AI
-                creds = service_account.Credentials.from_service_account_info(sa_info, scopes=["https://www.googleapis.com/auth/cloud-platform"])
+                # Explicitly request the cloud-platform scope to avoid 'invalid_scope' errors
+                creds = service_account.Credentials.from_service_account_info(
+                    sa_info, 
+                    scopes=["https://www.googleapis.com/auth/cloud-platform"]
+                )
             except Exception as e:
                 return f"API_ERROR: Failed to parse Vertex AI service account JSON – {e}"
             # Initialize Vertex AI client (project & location from service account)

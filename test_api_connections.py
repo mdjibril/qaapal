@@ -38,40 +38,6 @@ def test_gemini_studio(secrets):
         except Exception as e:
             print(f"❌ Key {i+1}: Failed - {e}")
 
-# def test_vertex_ai(secrets):
-#     print("\n--- Testing Google Cloud Vertex AI ---")
-#     vertex_cfg = secrets.get("vertex_ai", {})
-#     sa_json_str = vertex_cfg.get("service_account_json")
-#     location = vertex_cfg.get("location", "us-central1")
-#     model_name = secrets.get("INTERNAL_AI_MODEL", "gemini-1.5-flash") # Or specific vertex model
-
-#     if not sa_json_str:
-#         print("⚠️ Vertex AI Service Account JSON not found in secrets.")
-#         return
-
-#     try:
-#         sa_info = json.loads(sa_json_str)
-#         creds = service_account.Credentials.from_service_account_info(sa_info)
-#         project_id = sa_info.get("project_id")
-        
-#         client = genai.Client(
-#             vertexai=True,
-#             project=project_id,
-#             location=location,
-#             credentials=creds
-#         )
-
-#         # Increased tokens further to avoid MAX_TOKENS cutoff during test
-#         response = client.models.generate_content(model=model_name, contents="Ping", config={"max_output_tokens": 100})
-        
-#         print(f"✅ Vertex AI: Success! (Project: {project_id}, Region: {location})")
-#         if response.text:
-#             print(f"📝 Response: {response.text.strip()}")
-#         else:
-#             reason = response.candidates[0].finish_reason if response.candidates else "Unknown"
-#             print(f"⚠️ Response received but contained no text parts. Finish reason: {reason}")
-#     except Exception as e:
-#         print(f"❌ Vertex AI: Failed - {e}")
 def test_vertex_ai(secrets):
     print("\n--- Testing Google Cloud Vertex AI ---")
     vertex_cfg = secrets.get("vertex_ai", {})

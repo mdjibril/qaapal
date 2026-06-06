@@ -112,22 +112,25 @@ def main():
     is_out_of_credits = (role != 'admin' and tier == 'free' and credits <= 0)
 
     if is_out_of_credits:
+        selar_base = st.secrets.get("payments", {}).get("selar_link", "https://selar.com/nsqassessment-platformpass")
+        user_email = st.session_state.user_session.email
+        upgrade_link = f"{selar_base}?email={user_email}"
         st.warning("⚠️ You have 0 credits remaining. Upgrade to the **Platform Pass** to continue generating statements.")
+        st.link_button("🚀 Upgrade to Platform Pass", upgrade_link)
 
     if st.button("Generate My Statement", type="primary", disabled=is_out_of_credits):
         if not reflection:
             st.error("Please provide some reflection notes first.")
         elif not selected_pcs:
             st.error("Please select at least one PC that you achieved.")
-        elif is_out_of_credits:
-            db.mock_payment_dialog(st.session_state.org_id)
         elif provider != "VertexAI" and not keys: # Check if keys list is empty
             if tier == 'free':
                 st.error("⛔ Internal AI key missing. Contact administrator.")
             else:
                 st.warning("Please enter your AI API key in the sidebar.")
         else:
-            with st.spinner("AI is crafting your professional narrative..."):
+            with st.status("AI is crafting your professional narrative...", expanded=True) as status:
+                st.write("🧵 Weaving reflection notes with competency standards...")
                 # --- FIRST-PERSON AI PROMPT ---
                 system_prompt = f"""You are a professional mentor helping a student draft their 'Personal Statement of Competence' for an NSQ Portfolio. 
                 Your goal is to transform raw reflection notes into a professional narrative written strictly in the FIRST PERSON (using 'I', 'me', 'my').
@@ -152,6 +155,7 @@ def main():
                 
                 Write a professional personal statement that weaves all the criteria above into a first-person story of competence."""
 
+                st.write(f"🧠 Prompting {provider} ({target_model})...")
                 ai_statement = validate_and_generate(
                     provider=provider,
                     model_name=target_model,
@@ -163,6 +167,7 @@ def main():
                 if "API_ERROR" in str(ai_statement):
                     st.error(ai_statement)
                 else:
+                    st.write("📝 Finalizing first-person perspective and mapping summary...")
                     # Generate mapping summary just like dashboard.py
                     summary_block = "\n\n----- SUMMARY OF CRITERIA COVERED -----\n\n"
                     u_dict = {}
@@ -184,6 +189,7 @@ def main():
                         st.session_state.credits_balance -= 1
                     
                     st.session_state.current_generated_statement = ai_statement + summary_block
+                    status.update(label="✅ Personal Statement Crafted!", state="complete", expanded=False)
 
     # 4. Display Result and Save Logic
     if 'current_generated_statement' in st.session_state:

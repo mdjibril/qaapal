@@ -76,8 +76,10 @@ else:
             
             if not is_superadmin and tier == 'free' and credits == 0:
                 st.error("Out of credits! Upgrade to Platform Pass.")
-                if st.button("🚀 Upgrade Now", use_container_width=True):
-                    db.mock_payment_dialog(st.session_state.org_id)
+                selar_base = st.secrets.get("payments", {}).get("selar_link", "https://selar.com/nsqassessment-platformpass")
+                user_email = st.session_state.user_session.email
+                upgrade_link = f"{selar_base}?email={user_email}"
+                st.link_button("🚀 Upgrade Now", upgrade_link, use_container_width=True)
 
     st.session_state.assessor_name = st.session_state.get('assessor_full_name', 'Jibril Dauda Muhammad')
     name = st.session_state.assessor_name
