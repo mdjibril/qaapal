@@ -45,7 +45,7 @@ def main():
                 mask = display_df.astype(str).apply(lambda x: x.str.contains(search_query, case=False)).any(axis=1)
                 display_df = display_df[mask]
             
-        st.dataframe(display_df, use_container_width=True)
+        st.dataframe(display_df, width="stretch")
 
     with tab2:
         st.subheader("📝 Edit NOS Content")

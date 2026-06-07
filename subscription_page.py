@@ -49,7 +49,7 @@ def main():
                 is_expired = db.check_platform_pass_expiry()
                 if is_expired:
                     st.error("Your Platform Pass has expired! Please renew to continue enjoying unlimited generations.")
-                    st.link_button("Renew Platform Pass Now", upgrade_link, type="primary", use_container_width=True)
+                    st.link_button("Renew Platform Pass Now", upgrade_link, type="primary", width="stretch")
                 else:
                     st.success("Your Platform Pass is active!")
                     # Calculate days left relative to the timezone of the start_date
@@ -70,7 +70,7 @@ def main():
         st.subheader("Upgrade Your Plan")
         st.info(f"You are currently on the Free plan with {credits_balance} reports remaining.")
         st.write("Upgrade to **Platform Pass** for unlimited report generations and advanced features!")
-        st.link_button("🚀 Upgrade to Platform Pass ($5/month)", upgrade_link, type="primary", use_container_width=True)
+        st.link_button("🚀 Upgrade to Platform Pass (₦7,000/month)", upgrade_link, type="primary", width="stretch")
             
     st.markdown("---")
     st.caption("For enterprise solutions or custom plans, please contact sales.")

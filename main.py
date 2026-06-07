@@ -56,18 +56,17 @@ if "intent" in st.query_params:
 
 # --- PASSWORD RECOVERY DETECTION ---
 # When clicking a reset link, Supabase redirects with a fragment (#) or token.
-# If a session is active but we are not fully logged in yet, or the hash contains recovery:
-if not st.session_state.get('user_session'):
-    # We try to see if the URL contains evidence of a recovery attempt
-    # Note: Streamlit's st.query_params doesn't always catch URL fragments (#) 
-    # but it works if Supabase redirects to a query param.
-    # If the user is authenticated but arrived via recovery:
-    client = db.get_supabase()
-    session = client.auth.get_session()
-    if session and session.user:
-        # If the user is logged in via a recovery token, show the reset form
-        st.session_state["reset_mode"] = True
-        st.session_state['user_session'] = session.user
+# We rely on the 'intent=recovery' query parameter for explicit triggering.
+# The Supabase client handles the internal token exchange automatically.
+if not st.session_state.get('user_session') and not st.session_state.get('reset_mode'):
+    try:
+        client = db.get_supabase()
+        session_res = client.auth.get_session()
+        if session_res:
+            # Only auto-login if it's a standard session, don't force reset mode
+            st.session_state['user_session'] = session_res.user
+    except Exception:
+        pass
 
 if st.session_state.get("reset_mode"):
     reset_password_form()
@@ -94,7 +93,7 @@ else:
     with st.sidebar.container(border=True):
         if is_platform_pass_expired:
             st.error("Platform Pass Expired! Please renew.")
-            if st.button("Renew Platform Pass", use_container_width=True):
+            if st.button("Renew Platform Pass", width="stretch"):
                 db.mock_payment_dialog(st.session_state.org_id)
         else:
             col_plan, col_cred = st.columns(2)
@@ -109,7 +108,7 @@ else:
                 selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
                 user_email = st.session_state.user_session.email
                 upgrade_link = f"{selar_base}?email={user_email}"
-                st.link_button("🚀 Upgrade Now", upgrade_link, use_container_width=True)
+                st.link_button("🚀 Upgrade Now", upgrade_link, width="stretch")
 
     st.session_state.assessor_name = st.session_state.get('assessor_full_name', 'Jibril Dauda Muhammad')
     name = st.session_state.assessor_name
@@ -248,6 +247,8 @@ else:
     selection = st.sidebar.radio("Navigation", list(pages.keys()))
     
     if st.sidebar.button("Logout"):
+        # Explicitly sign out of Supabase to clear persistence
+        db.get_supabase().auth.sign_out()
         st.session_state.clear()
         st.rerun()
 

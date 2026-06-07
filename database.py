@@ -152,8 +152,8 @@ def mock_payment_dialog(org_id):
     
     u_session = st.session_state.get('user_session')
     email = u_session.email if u_session else "user@example.com"
-    # Mock Naira amount for Platform Pass (approx $5 equivalent)
-    amount_naira = 7500
+    # Naira amount for Platform Pass
+    amount_naira = 7000
     
     with st.container(border=True):
         st.caption("Order Summary")
@@ -163,7 +163,7 @@ def mock_payment_dialog(org_id):
 
     st.info("💡 In test mode, clicking 'Pay' simulates a successful response from the Monnify SDK.")
     
-    if st.button("Pay with Monnify", type="primary", use_container_width=True):
+    if st.button("Pay with Monnify", type="primary", width="stretch"):
         with st.spinner("Initializing Monnify Checkout..."):
             time.sleep(1.5) # Simulate SDK initialization
             

@@ -5,12 +5,24 @@ CREATE SCHEMA IF NOT EXISTS extensions;
 -- Install extensions in a dedicated schema to keep the public API clean
 CREATE EXTENSION IF NOT EXISTS pg_trgm WITH SCHEMA extensions;
 
+-- 0.1 Organizations Table
+CREATE TABLE IF NOT EXISTS public.organizations (
+    id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+    name text NOT NULL,
+    subscription_tier text DEFAULT 'free',
+    credits_balance int DEFAULT 10,
+    master_api_key text,
+    subscription_start_date timestamptz DEFAULT now()
+);
+
 -- 1. User Profiles
 CREATE TABLE public.user_profiles (
   id uuid REFERENCES auth.users ON DELETE CASCADE NOT NULL PRIMARY KEY,
   email text,
   role text DEFAULT 'assessor',
   full_name text,
+  org_id uuid REFERENCES public.organizations(id),
+  org_role text DEFAULT 'admin',
   marketing_source text,
   primary_trade text,
   monthly_report_volume text
@@ -117,6 +129,59 @@ CREATE POLICY "Authenticated users can create witness statements" ON public.witn
 CREATE POLICY "Creators can view their own witness statements" ON public.witness_statements FOR SELECT USING (auth.uid() = created_by);
 
 -- 6. Security Hardening
+
+-- 6.1 Automation: New User Trigger Logic
+-- This function runs every time a user signs up in Supabase Auth.
+CREATE OR REPLACE FUNCTION public.handle_new_user_setup()
+RETURNS trigger
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+DECLARE
+    new_org_id uuid;
+    org_name_val text;
+BEGIN
+    -- Extract the organization name from the metadata provided in auth_utils.py
+    org_name_val := COALESCE(new.raw_user_meta_data->>'org_name', 'Personal Workspace');
+
+    -- 1. Create the organization for the new user with 10 free credits
+    INSERT INTO public.organizations (name, subscription_tier, credits_balance)
+    VALUES (org_name_val, 'free', 5)
+    RETURNING id INTO new_org_id;
+
+    -- 2. Create the user profile linked to the new organization
+    INSERT INTO public.user_profiles (
+        id, 
+        email, 
+        full_name, 
+        org_id, 
+        org_role,
+        marketing_source,
+        primary_trade,
+        monthly_report_volume
+    )
+    VALUES (
+        new.id, 
+        new.email, 
+        new.raw_user_meta_data->>'full_name', 
+        new_org_id, 
+        'admin',
+        new.raw_user_meta_data->>'marketing_source',
+        new.raw_user_meta_data->>'primary_trade',
+        new.raw_user_meta_data->>'monthly_volume'
+    );
+
+    RETURN new;
+END;
+$$;
+
+-- Create the trigger on auth.users
+DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
+CREATE TRIGGER on_auth_user_created
+  AFTER INSERT ON auth.users
+  FOR EACH ROW EXECUTE FUNCTION public.handle_new_user_setup();
+
 -- Set search_path and revoke public execute for security definer functions
 -- to prevent search-path hijacking and unauthorized API access.
 
