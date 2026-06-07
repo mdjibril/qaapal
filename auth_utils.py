@@ -102,8 +102,8 @@ def check_auth():
 def login_form():
     st.title("🔐 QAAPAL Portal")
     
-    # Deep Linking: Check if the landing page requested a specific mode
-    modes = ["Login", "Sign Up"]
+    # Deep Linking: Check if the landing page or a reset link requested a specific mode
+    modes = ["Login", "Sign Up", "Forgot Password"]
     default_mode = st.session_state.get("auth_mode", "Login")
     default_index = modes.index(default_mode) if default_mode in modes else 0
 
@@ -120,21 +120,64 @@ def login_form():
             except Exception as e:
                 st.error(f"Login failed: {e}")
 
-    else:
+    elif auth_choice == "Sign Up":
         new_email = st.text_input("Email", key="signup_email")
         new_password = st.text_input("Password", type="password", key="signup_pw")
         full_name = st.text_input("Full Name (e.g. John Doe)")
+        
+        # Determine the redirect URL for email confirmation
+        site_url = get_secret(["connections", "supabase", "SITE_URL"], "SITE_URL") or "https://app.nsqassessment.com.ng"
+
         if st.button("Create Free Account"):
             try:
                 supabase = get_supabase()
                 auth_res = supabase.auth.sign_up({
                     "email": new_email, 
                     "password": new_password,
-                    "options": {"data": {"full_name": full_name}}
+                    "options": {
+                        "data": {"full_name": full_name},
+                        "email_redirect_to": site_url
+                    }
                 })
-                st.success("Registration successful! You can now login.")
+                st.success("Registration successful! Please check your email to confirm your account before logging in.")
             except Exception as e:
                 st.error(f"Sign up failed: {e}")
+
+    elif auth_choice == "Forgot Password":
+        reset_email = st.text_input("Enter your registered email", key="reset_email_input")
+        site_url = get_secret(["connections", "supabase", "SITE_URL"], "SITE_URL") or "https://app.nsqassessment.com.ng"
+        
+        if st.button("Send Reset Link"):
+            try:
+                supabase = get_supabase()
+                supabase.auth.reset_password_for_email(reset_email, {"redirect_to": site_url})
+                st.success(f"If an account exists for {reset_email}, a password reset link has been sent.")
+            except Exception as e:
+                st.error(f"Error: {e}")
+
+def reset_password_form():
+    """Specialized form shown only when a recovery session is active."""
+    st.title("🔄 Reset Your Password")
+    st.info("Please enter your new password below.")
+    
+    new_pw = st.text_input("New Password", type="password")
+    confirm_pw = st.text_input("Confirm New Password", type="password")
+    
+    if st.button("Update Password"):
+        if new_pw != confirm_pw:
+            st.error("Passwords do not match.")
+        elif len(new_pw) < 6:
+            st.error("Password must be at least 6 characters.")
+        else:
+            try:
+                supabase = get_supabase()
+                supabase.auth.update_user({"password": new_pw})
+                st.success("Password updated successfully! You can now login.")
+                time.sleep(2)
+                st.session_state.clear()
+                st.rerun()
+            except Exception as e:
+                st.error(f"Failed to update password: {e}")
 
 def _finalize_login(auth_res):
     st.session_state['user_session'] = auth_res.user

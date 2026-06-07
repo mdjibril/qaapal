@@ -1,7 +1,9 @@
 -- NSQ Portal - Unified Database Setup Script
 
 -- 0. Extensions
-CREATE EXTENSION IF NOT EXISTS pg_trgm;
+CREATE SCHEMA IF NOT EXISTS extensions;
+-- Install extensions in a dedicated schema to keep the public API clean
+CREATE EXTENSION IF NOT EXISTS pg_trgm WITH SCHEMA extensions;
 
 -- 1. User Profiles
 CREATE TABLE public.user_profiles (
@@ -83,11 +85,21 @@ CREATE TABLE public.witness_statements (
 
 -- 4. Enable Row Level Security (RLS)
 ALTER TABLE public.user_profiles ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.trades ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.organizations ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.units ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.learning_outcomes ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.performance_criteria ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.assessment_reports ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.student_statements ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.witness_statements ENABLE ROW LEVEL SECURITY;
 
 -- 5. Policies
+-- NOS Library (Public/Authenticated Read Access)
+CREATE POLICY "Allow authenticated read for trades" ON public.trades FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Allow authenticated read for units" ON public.units FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Allow authenticated read for LOs" ON public.learning_outcomes FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Allow authenticated read for PCs" ON public.performance_criteria FOR SELECT TO authenticated USING (true);
 
 -- Assessment Reports
 CREATE POLICY "Creators can view their own reports" ON public.assessment_reports FOR SELECT USING (auth.uid() = created_by);
@@ -100,3 +112,13 @@ CREATE POLICY "Individuals can view their own student statements" ON public.stud
 -- Witness Statements
 CREATE POLICY "Authenticated users can create witness statements" ON public.witness_statements FOR INSERT WITH CHECK (auth.role() = 'authenticated');
 CREATE POLICY "Creators can view their own witness statements" ON public.witness_statements FOR SELECT USING (auth.uid() = created_by);
+
+-- 6. Security Hardening
+-- Set search_path and revoke public execute for security definer functions
+-- to prevent search-path hijacking and unauthorized API access.
+
+ALTER FUNCTION public.handle_new_user_setup() SET search_path = public;
+REVOKE EXECUTE ON FUNCTION public.handle_new_user_setup() FROM PUBLIC;
+
+ALTER FUNCTION public.rls_auto_enable() SET search_path = public;
+REVOKE EXECUTE ON FUNCTION public.rls_auto_enable() FROM PUBLIC;

@@ -1,5 +1,5 @@
 import streamlit as st
-from auth_utils import check_auth, login_form, get_secret
+from auth_utils import check_auth, login_form, get_secret, reset_password_form
 import dashboard, history, admin_nos, admin_users, personal_statement, witness_statement, subscription_page, database as db
 from datetime import datetime, timedelta
 import time
@@ -46,10 +46,30 @@ if "intent" in st.query_params:
     intent = st.query_params.get("intent")
     if intent == "signup":
         st.session_state["auth_mode"] = "Sign Up"
+    elif intent == "recovery":
+        # This is a fallback if the fragment detection isn't enough
+        st.session_state["reset_mode"] = True
     # Clear params to prevent the UI from being locked to one mode on refresh
     st.query_params.clear()
 
-if not check_auth():
+# --- PASSWORD RECOVERY DETECTION ---
+# When clicking a reset link, Supabase redirects with a fragment (#) or token.
+# If a session is active but we are not fully logged in yet, or the hash contains recovery:
+if not st.session_state.get('user_session'):
+    # We try to see if the URL contains evidence of a recovery attempt
+    # Note: Streamlit's st.query_params doesn't always catch URL fragments (#) 
+    # but it works if Supabase redirects to a query param.
+    # If the user is authenticated but arrived via recovery:
+    client = db.get_supabase()
+    session = client.auth.get_session()
+    if session and session.user:
+        # If the user is logged in via a recovery token, show the reset form
+        st.session_state["reset_mode"] = True
+        st.session_state['user_session'] = session.user
+
+if st.session_state.get("reset_mode"):
+    reset_password_form()
+elif not check_auth():
     login_form()
 else:
     role = st.session_state.get('user_role', 'assessor')
