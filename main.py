@@ -1,12 +1,14 @@
 import streamlit as st
 from auth_utils import check_auth, login_form, get_secret, reset_password_form
 import dashboard, history, admin_nos, admin_users, personal_statement, witness_statement, subscription_page, database as db
-from datetime import datetime, timedelta
-import time
-import requests, json
 from ai_utils import validate_and_generate
 
-st.set_page_config(page_title="NSQ Portal", layout="wide")
+st.set_page_config(
+    page_title="NSQAssessment App | AI-Powered Reports",
+    page_icon="⚡", # You can use an emoji or a path to an image file
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
 # Callback function for API key inputs
 def update_api_key_session(key_name):

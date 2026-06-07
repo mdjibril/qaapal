@@ -6,7 +6,6 @@ from file_utils import (
     export_personal_statement_to_word,
     get_unit_number
 )
-import pandas as pd
 
 # Cached helper function to fetch reports
 @st.cache_data(ttl=300)

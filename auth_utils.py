@@ -99,8 +99,27 @@ def get_user_role(user_id):
 def check_auth():
     return st.session_state.get('user_session', None)
 
+def _get_password_strength(pw):
+    """Calculates password strength score and feedback."""
+    if not pw: return 0.0, "Empty", "gray", []
+    score = 0
+    missing = []
+    if len(pw) >= 8: score += 1
+    else: missing.append("8+ characters")
+    if any(c.isupper() for c in pw): score += 1
+    else: missing.append("uppercase")
+    if any(c.islower() for c in pw): score += 1
+    else: missing.append("lowercase")
+    if any(c.isdigit() for c in pw): score += 1
+    else: missing.append("number")
+    if any(not c.isalnum() for c in pw): score += 1
+    else: missing.append("special character")
+    
+    mapping = {0: (0.05, "Very Weak", "red"), 1: (0.2, "Weak", "orange"), 2: (0.4, "Fair", "yellow"), 3: (0.6, "Good", "blue"), 4: (0.8, "Strong", "green"), 5: (1.0, "Very Strong", "green")}
+    return mapping[score] + (missing,)
+
 def login_form():
-    st.title("🔐 QAAPAL Portal")
+    st.title("🔐 NSQ-Assessment Portal")
     
     # Deep Linking: Check if the landing page or a reset link requested a specific mode
     modes = ["Login", "Sign Up", "Forgot Password"]
@@ -123,25 +142,74 @@ def login_form():
     elif auth_choice == "Sign Up":
         new_email = st.text_input("Email", key="signup_email")
         new_password = st.text_input("Password", type="password", key="signup_pw")
+
+        # Real-time Password Strength Feedback
+        if new_password:
+            strength, label, color, missing = _get_password_strength(new_password)
+            st.progress(strength, text=f"Strength: {label}")
+            if missing and strength < 0.8:
+                st.caption(f"💡 Suggestion: Try adding {', '.join(missing)}")
+
+        new_password_confirm = st.text_input("Confirm Password", type="password", key="signup_pw_confirm")
+        if new_password and new_password_confirm:
+            if new_password != new_password_confirm:
+                st.error("⚠️ Passwords do not match")
+            else:
+                st.success("✅ Passwords match")
+
         full_name = st.text_input("Full Name (e.g. John Doe)")
+        org_name = st.text_input("Organization / Assessment Center Name", help="This will be used for your workspace branding.")
+        
+        col_a, col_b = st.columns(2)
+        with col_a:
+            marketing_source = st.selectbox(
+                "How did you hear about us?",
+                ["Select an option", "LinkedIn", "WhatsApp Group", "NBTE/NSQ Event", "Word of Mouth", "Search Engine", "Other"]
+            )
+        with col_b:
+            report_volume = st.selectbox(
+                "Monthly report volume?",
+                ["1-10 reports", "11-50 reports", "51-100 reports", "100+ reports"]
+            )
+
+        primary_trade_choice = st.text_input("Primary Trade / Sector", placeholder="e.g., ICT, Welding, Fashion Design")
+        
+        tos_consent = st.checkbox("I agree to the Terms of Service and Privacy Policy")
         
         # Determine the redirect URL for email confirmation
         site_url = get_secret(["connections", "supabase", "SITE_URL"], "SITE_URL") or "https://app.nsqassessment.com.ng"
 
         if st.button("Create Free Account"):
-            try:
-                supabase = get_supabase()
-                auth_res = supabase.auth.sign_up({
-                    "email": new_email, 
-                    "password": new_password,
-                    "options": {
-                        "data": {"full_name": full_name},
-                        "email_redirect_to": site_url
-                    }
-                })
-                st.success("Registration successful! Please check your email to confirm your account before logging in.")
-            except Exception as e:
-                st.error(f"Sign up failed: {e}")
+            # Validation Logic
+            if new_password != new_password_confirm:
+                st.error("Passwords do not match.")
+            elif len(new_password) < 6:
+                st.error("Password must be at least 6 characters.")
+            elif not full_name or not org_name or marketing_source == "Select an option":
+                st.error("Please fill in all required fields to help us set up your workspace.")
+            elif not tos_consent:
+                st.error("You must agree to the Terms of Service to continue.")
+            else:
+                # Proceed with Registration
+                try:
+                    supabase = get_supabase()
+                    auth_res = supabase.auth.sign_up({
+                        "email": new_email, 
+                        "password": new_password,
+                        "options": {
+                            "data": {
+                                "full_name": full_name,
+                                "org_name": org_name,
+                                "marketing_source": marketing_source,
+                                "primary_trade": primary_trade_choice,
+                                "monthly_volume": report_volume
+                            },
+                            "email_redirect_to": site_url
+                        }
+                    })
+                    st.success("Registration successful! Please check your email to confirm your account before logging in.")
+                except Exception as e:
+                    st.error(f"Sign up failed: {e}")
 
     elif auth_choice == "Forgot Password":
         reset_email = st.text_input("Enter your registered email", key="reset_email_input")

@@ -10,13 +10,16 @@ CREATE TABLE public.user_profiles (
   id uuid REFERENCES auth.users ON DELETE CASCADE NOT NULL PRIMARY KEY,
   email text,
   role text DEFAULT 'assessor',
-  full_name text
+  full_name text,
+  marketing_source text,
+  primary_trade text,
+  monthly_report_volume text
 );
 
 -- Ensure the role check constraint is up to date if the table already existed
-ALTER TABLE public.user_profiles 
+ALTER TABLE IF EXISTS public.user_profiles 
 DROP CONSTRAINT IF EXISTS user_profiles_role_check;
-ALTER TABLE public.user_profiles 
+ALTER TABLE IF EXISTS public.user_profiles 
 ADD CONSTRAINT user_profiles_role_check CHECK (role IN ('admin', 'assessor', 'student'));
 
 -- 2. NSQ Structure (NOS)

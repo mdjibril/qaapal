@@ -32,7 +32,7 @@ To support both individual users and future B2B Enterprise schools, we will intr
 *   **New Table: `organizations`**
     *   [x] `id` (UUID, Primary Key)
     *   [x] `name` (Text)
-    *   [x] `subscription_tier` (Enum: 'free', 'pro', 'enterprise', 'platform_pass')
+    - [x] `subscription_tier` (Enum: 'free', 'pro', 'enterprise', 'platform_pass') - *Note: Pro is "Coming Soon"*
     *   [x] `master_api_key` (Text, Nullable - for B2B schools paying the AI costs)
     *   [x] `credits_balance` (Int, Default: 5 - for Freemium users)
 *   **Update Table: `user_profiles`**
@@ -54,6 +54,12 @@ We have modified the login system to allow frictionless, self-serve sign-ups so 
 *   [x] Refactor `login_form()` to use `st.tabs(["Login", "Sign Up"])`.
 *   [x] Implement `supabase.auth.sign_up()` in the "Sign Up" tab.
 *   [x] Ensure new sign-ups automatically fetch their newly created `org_id` and role into `st.session_state` so they can bypass the admin approval process.
+*   [x] **Email Confirmation Link:** Ensure `email_redirect_to` is correctly set for signup emails.
+*   [x] **Enhanced Onboarding:** Added Organization Name, Marketing Source, and Sector segmentation fields.
+*   [x] **Password Safety:** Added real-time Password Confirmation matching.
+*   [x] **Password Strength:** Implemented a real-time visual strength meter with suggestions.
+*   [x] **ToS Compliance:** Integrated mandatory Terms of Service consent checkbox.
+*   [x] **Forgot Password Flow:** Implement `supabase.auth.reset_password_for_email()` and handle recovery redirects.
 ---
 
 ### Application Logic & UI
@@ -97,9 +103,10 @@ We have updated the sidebar to reflect the new billing states and implemented th
 *   [x] **Lazy Loading & Caching:** Optimize History page by fetching metadata first and lazy-loading content with session state caching.
 *   [x] **Enhanced Progress UX:** Utilize `st.status` for granular, transparent feedback during AI generation.
 *   **Landing Page & App Integration:**
-    *   [ ] **DNS Configuration:** Map root domain (nsqassessment.com.ng) to static hosting and `app` subdomain to Railway.
-    *   [ ] **CTA Implementation:** Link landing page "Get Started" buttons to the Streamlit URL with intent parameters.
-    *   [ ] **Deep Linking Logic:** Update `main.py` to check `st.query_params` for `intent=signup` to auto-toggle the registration tab.
+    *   [x] **Feature Status:** Mark Pro Plan as "Coming Soon" on Landing Page and handle interim routing in app logic.
+    *   [x] **DNS Configuration:** Point DomainKing nameservers to Netlify; CNAME verified, TXT record verified by Railway.
+    *   [x] **CTA Implementation:** Link landing page "Get Started" buttons to the Streamlit URL using `?intent=signup` parameters.
+    *   [x] **Deep Linking Logic:** Update `main.py` to check `st.query_params` for `intent=signup` and `type=recovery` to auto-toggle the registration/reset tab.
     *   [ ] **Auth Synchronicity:** (Optional) Use Supabase JS on the landing page to toggle "Login" vs "Dashboard" buttons based on session.
     *   [ ] **SEO & Metadata:** Align OpenGraph tags and canonical URLs across both the landing page and the app.
 
