@@ -3,7 +3,7 @@ import streamlit as st
 import time
 from supabase import create_client, ClientOptions
 
-def _get_secret(key_path, env_key):
+def get_secret(key_path, env_key):
     """
     Helper to fetch configuration. 
     1. Tries Streamlit Secrets (for local & Streamlit Cloud)
@@ -14,10 +14,13 @@ def _get_secret(key_path, env_key):
         # that occurs when using square bracket [k] access on an empty secrets object.
         val = st.secrets
         for k in key_path:
-            val = val.get(k)
-            if val is None:
-                break
-        if val is not None:
+            # Using direct access inside try-except to handle AttrDict behavior
+            val = val[k]
+        
+        # Handle case where val might be an empty AttrDict/Dict
+        if isinstance(val, (dict, st.runtime.secrets.AttrDict)) and not val:
+            pass
+        elif val is not None:
             return val
     except Exception:
         # If st.secrets fails for any reason (missing file, etc.), we fall back
@@ -31,8 +34,8 @@ def _get_secret(key_path, env_key):
     return raw_val
 
 def get_supabase():
-    url = _get_secret(["connections", "supabase", "PROJECT_URL"], "connections__supabase__PROJECT_URL")
-    key = _get_secret(["connections", "supabase", "ANON_KEY"], "connections__supabase__ANON_KEY")
+    url = get_secret(["connections", "supabase", "PROJECT_URL"], "connections__supabase__PROJECT_URL")
+    key = get_secret(["connections", "supabase", "ANON_KEY"], "connections__supabase__ANON_KEY")
     
     if not url or not key:
         st.error("Secrets missing! Check Streamlit Cloud Settings > Secrets.")
@@ -69,8 +72,8 @@ def _create_base_client(url, key):
 @st.cache_resource
 def get_admin_supabase():
     """Returns a Supabase client initialized with the Service Role Key for administrative tasks."""
-    url = _get_secret(["connections", "supabase", "PROJECT_URL"], "connections__supabase__PROJECT_URL")
-    key = _get_secret(["connections", "supabase", "SERVICE_ROLE_KEY"], "connections__supabase__SERVICE_ROLE_KEY")
+    url = get_secret(["connections", "supabase", "PROJECT_URL"], "connections__supabase__PROJECT_URL")
+    key = get_secret(["connections", "supabase", "SERVICE_ROLE_KEY"], "connections__supabase__SERVICE_ROLE_KEY")
     
     if not url or not key:
         st.error("SERVICE_ROLE_KEY is missing from secrets! This is required for admin tasks.")
@@ -98,9 +101,15 @@ def check_auth():
 
 def login_form():
     st.title("🔐 QAAPAL Portal")
-    tab1, tab2 = st.tabs(["Login", "Sign Up"])
     
-    with tab1:
+    # Deep Linking: Check if the landing page requested a specific mode
+    modes = ["Login", "Sign Up"]
+    default_mode = st.session_state.get("auth_mode", "Login")
+    default_index = modes.index(default_mode) if default_mode in modes else 0
+
+    auth_choice = st.radio("Mode", modes, index=default_index, horizontal=True, label_visibility="collapsed")
+
+    if auth_choice == "Login":
         email = st.text_input("Email", key="login_email")
         password = st.text_input("Password", type="password", key="login_password")
         if st.button("Login"):
@@ -111,7 +120,7 @@ def login_form():
             except Exception as e:
                 st.error(f"Login failed: {e}")
 
-    with tab2:
+    else:
         new_email = st.text_input("Email", key="signup_email")
         new_password = st.text_input("Password", type="password", key="signup_pw")
         full_name = st.text_input("Full Name (e.g. John Doe)")

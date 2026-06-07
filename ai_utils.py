@@ -3,6 +3,7 @@ from google.oauth2 import service_account
 from google import genai
 from groq import Groq
 import requests
+from auth_utils import get_secret
 import streamlit as st
 
 
@@ -68,16 +69,16 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
             # If all Gemini keys fail during a generation request, try other providers if keys exist in secrets
             if prompt:
                 # 1. Try Groq Fallback
-                groq_fallback_key = st.secrets.get("GROQ_API_KEY")
+                groq_fallback_key = get_secret(["GROQ_API_KEY"], "GROQ_API_KEY")
                 if groq_fallback_key:
-                    groq_model = st.secrets.get("GROQ_FALLBACK_MODEL", "llama-3.3-70b-versatile")
+                    groq_model = get_secret(["GROQ_FALLBACK_MODEL"], "GROQ_FALLBACK_MODEL") or "llama-3.3-70b-versatile"
                     st.toast(f"🔄 Gemini exhausted. Attempting Groq ({groq_model}) fallback...", icon="⚠️")
                     return validate_and_generate("Groq", groq_model, [groq_fallback_key], prompt, system_prompt)
 
                 # 2. Try OpenRouter Fallback
-                or_fallback_key = st.secrets.get("OPENROUTER_API_KEY")
+                or_fallback_key = get_secret(["OPENROUTER_API_KEY"], "OPENROUTER_API_KEY")
                 if or_fallback_key:
-                    or_model = st.secrets.get("OPENROUTER_FALLBACK_MODEL", "poolside/laguna-m.1:free")
+                    or_model = get_secret(["OPENROUTER_FALLBACK_MODEL"], "OPENROUTER_FALLBACK_MODEL") or "poolside/laguna-m.1:free"
                     st.toast(f"🔄 Gemini/Groq exhausted. Attempting OpenRouter ({or_model}) fallback...", icon="⚠️")
                     return validate_and_generate("OpenRouter", or_model, [or_fallback_key], prompt, system_prompt)
 
@@ -103,7 +104,7 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
 
         elif provider == "VertexAI":
             # Load service account JSON from secrets
-            sa_json_str = st.secrets.get("vertex_ai", {}).get("service_account_json")
+            sa_json_str = get_secret(["vertex_ai", "service_account_json"], "vertex_ai__service_account_json")
             if not sa_json_str:
                 return "API_ERROR: Vertex AI service account not configured in secrets."
             try:
@@ -117,34 +118,34 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                 return f"API_ERROR: Failed to parse Vertex AI service account JSON – {e}"
             # Initialize Vertex AI client (project & location from service account)
             project_id = sa_info.get("project_id") or sa_info.get("projectId")
-            location = st.secrets.get("vertex_ai", {}).get("location", "us-central1")
+            location = get_secret(["vertex_ai", "location"], "vertex_ai__location") or "us-central1"
             
             # Sequential Fallback logic if generation fails (only for platform/free tier)
             def trigger_fallback():
                 # (Existing fallback logic remains unchanged...)
                 # 1. Gemini Fallback
-                gemini_key_raw = st.secrets.get("INTERNAL_AI_KEY")
+                gemini_key_raw = get_secret(["INTERNAL_AI_KEY"], "INTERNAL_AI_KEY")
                 if gemini_key_raw:
                     gemini_keys = [k.strip() for k in gemini_key_raw.split(',') if k.strip()]
-                    gemini_model = st.secrets.get("INTERNAL_AI_MODEL", "gemini-1.5-flash").strip()
+                    gemini_model = (get_secret(["INTERNAL_AI_MODEL"], "INTERNAL_AI_MODEL") or "gemini-1.5-flash").strip()
                     st.toast(f"🔄 Vertex AI exhausted/failed. Trying Gemini ({gemini_model}) fallback...", icon="⚠️")
                     res = validate_and_generate("Gemini", gemini_model, gemini_keys, prompt, system_prompt)
                     if "API_ERROR" not in str(res):
                         return res
 
                 # 2. Groq Fallback
-                groq_key = st.secrets.get("GROQ_API_KEY")
+                groq_key = get_secret(["GROQ_API_KEY"], "GROQ_API_KEY")
                 if groq_key:
-                    groq_model = st.secrets.get("GROQ_FALLBACK_MODEL", "llama-3.3-70b-versatile").strip()
+                    groq_model = (get_secret(["GROQ_FALLBACK_MODEL"], "GROQ_FALLBACK_MODEL") or "llama-3.3-70b-versatile").strip()
                     st.toast(f"🔄 Gemini/Vertex exhausted/failed. Trying Groq ({groq_model}) fallback...", icon="⚠️")
                     res = validate_and_generate("Groq", groq_model, [groq_key], prompt, system_prompt)
                     if "API_ERROR" not in str(res):
                         return res
 
                 # 3. OpenRouter Fallback
-                or_key = st.secrets.get("OPENROUTER_API_KEY")
+                or_key = get_secret(["OPENROUTER_API_KEY"], "OPENROUTER_API_KEY")
                 if or_key:
-                    or_model = st.secrets.get("OPENROUTER_FALLBACK_MODEL", "google/gemini-2.0-flash-001").strip()
+                    or_model = (get_secret(["OPENROUTER_FALLBACK_MODEL"], "OPENROUTER_FALLBACK_MODEL") or "google/gemini-2.0-flash-001").strip()
                     st.toast(f"🔄 Vertex/Gemini/Groq exhausted/failed. Trying OpenRouter ({or_model}) fallback...", icon="⚠️")
                     res = validate_and_generate("OpenRouter", or_model, [or_key], prompt, system_prompt)
                     if "API_ERROR" not in str(res):

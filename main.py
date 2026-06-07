@@ -1,5 +1,5 @@
 import streamlit as st
-from auth_utils import check_auth, login_form
+from auth_utils import check_auth, login_form, get_secret
 import dashboard, history, admin_nos, admin_users, personal_statement, witness_statement, subscription_page, database as db
 from datetime import datetime, timedelta
 import time
@@ -41,6 +41,14 @@ def clear_previews_on_trade_change():
 def get_cached_trades():
     return db.fetch_trades()
 
+# --- DEEP LINKING LOGIC ---
+if "intent" in st.query_params:
+    intent = st.query_params.get("intent")
+    if intent == "signup":
+        st.session_state["auth_mode"] = "Sign Up"
+    # Clear params to prevent the UI from being locked to one mode on refresh
+    st.query_params.clear()
+
 if not check_auth():
     login_form()
 else:
@@ -76,7 +84,7 @@ else:
             
             if not is_superadmin and tier == 'free' and credits == 0:
                 st.error("Out of credits! Upgrade to Platform Pass.")
-                selar_base = st.secrets.get("payments", {}).get("selar_link", "https://selar.com/nsqassessment-platformpass")
+                selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
                 user_email = st.session_state.user_session.email
                 upgrade_link = f"{selar_base}?email={user_email}"
                 st.link_button("🚀 Upgrade Now", upgrade_link, use_container_width=True)
@@ -130,7 +138,7 @@ else:
         
         if tier == 'free':
             # Check if Vertex AI is configured
-            sa_json_str = st.secrets.get("vertex_ai", {}).get("service_account_json")
+            sa_json_str = get_secret(["vertex_ai", "service_account_json"], "vertex_ai__service_account_json")
             if not sa_json_str:
                 st.sidebar.error("⚠️ Vertex AI configuration is missing from secrets.toml!")
             else:
