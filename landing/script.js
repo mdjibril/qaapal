@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     periodEl.textContent = '/month';
                     if (annualBillingEl) {
                         const totalBilled = yearlyPrice * 12;
-                        annualBillingEl.textContent = `Billed annually ($${totalBilled}/yr)`;
+                        annualBillingEl.textContent = `Billed annually (₦${totalBilled.toLocaleString()}/yr)`;
                         annualBillingEl.style.display = 'block';
                     }
                 } else {
@@ -59,18 +59,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const reportsCount = parseInt(reportsSlider.value, 10);
         reportsValue.textContent = reportsCount;
 
-        // Traditional SaaS model cost: let's estimate $0.60 per report generation
-        const traditionalCost = reportsCount * 0.60;
+        // Traditional SaaS model cost: let's estimate ₦1,000 per report generation
+        const traditionalCost = reportsCount * 1000;
 
-        // BYOK Model cost: $5 flat fee (Platform Pass) + average API usage cost ($0.02 per report)
-        const byokCost = 5 + (reportsCount * 0.02);
+        // BYOK Model cost: ₦7,000 flat fee (Platform Pass) + average API usage cost (approx ₦30 per report)
+        const byokCost = 7000 + (reportsCount * 30);
 
         // Savings
         const savings = Math.max(0, traditionalCost - byokCost);
 
-        traditionalCostEl.textContent = `$${traditionalCost.toFixed(2)}`;
-        byokCostEl.textContent = `$${byokCost.toFixed(2)}`;
-        savingsEl.textContent = `$${savings.toFixed(2)}`;
+        traditionalCostEl.textContent = `₦${traditionalCost.toLocaleString()}`;
+        byokCostEl.textContent = `₦${byokCost.toLocaleString()}`;
+        savingsEl.textContent = `₦${savings.toLocaleString()}`;
     };
 
     if (reportsSlider) {
@@ -112,4 +112,61 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // ----------------------------------------------------
+    // 4. Mobile Navigation Toggle
+    // ----------------------------------------------------
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
+    const navOverlay = document.getElementById('nav-overlay');
+
+    const closeMenu = () => {
+        hamburgerMenu.classList.remove('active');
+        navLinks.classList.remove('active');
+        navOverlay.classList.remove('active');
+        hamburgerMenu.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+    };
+
+    const openMenu = () => {
+        hamburgerMenu.classList.add('active');
+        navLinks.classList.add('active');
+        navOverlay.classList.add('active');
+        hamburgerMenu.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+    };
+
+    if (hamburgerMenu && navLinks && navOverlay) {
+        hamburgerMenu.addEventListener('click', () => {
+            const isActive = hamburgerMenu.classList.contains('active');
+            isActive ? closeMenu() : openMenu();
+        });
+
+        // Close menu when overlay is clicked
+        navOverlay.addEventListener('click', closeMenu);
+
+        // Close menu when a nav link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    }
+
+    // ----------------------------------------------------
+    // 5. Fixed Navbar Scroll Effect
+    // ----------------------------------------------------
+    const navbarWrapper = document.querySelector('.navbar-wrapper');
+    if (navbarWrapper) {
+        const handleScroll = () => {
+            if (window.scrollY > 20) {
+                navbarWrapper.classList.add('scrolled');
+            } else {
+                navbarWrapper.classList.remove('scrolled');
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        // Run once on load to set initial state
+        handleScroll();
+    }
 });

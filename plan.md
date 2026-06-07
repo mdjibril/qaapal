@@ -32,7 +32,7 @@ To support both individual users and future B2B Enterprise schools, we will intr
 *   **New Table: `organizations`**
     *   [x] `id` (UUID, Primary Key)
     *   [x] `name` (Text)
-    - [x] `subscription_tier` (Enum: 'free', 'pro', 'enterprise', 'platform_pass') - *Note: Pro is "Coming Soon"*
+    - [x] `subscription_tier` (Enum: 'free', 'pro', 'enterprise', 'platform_pass') - *Note: Pro and Enterprise are "Coming Soon"*
     *   [x] `master_api_key` (Text, Nullable - for B2B schools paying the AI costs)
     *   [x] `credits_balance` (Int, Default: 5 - for Freemium users)
 *   **Update Table: `user_profiles`**
@@ -103,7 +103,7 @@ We have updated the sidebar to reflect the new billing states and implemented th
 *   [x] **Lazy Loading & Caching:** Optimize History page by fetching metadata first and lazy-loading content with session state caching.
 *   [x] **Enhanced Progress UX:** Utilize `st.status` for granular, transparent feedback during AI generation.
 *   **Landing Page & App Integration:**
-    *   [x] **Feature Status:** Mark Pro Plan as "Coming Soon" on Landing Page and handle interim routing in app logic.
+    *   [x] **Feature Status:** Mark Pro Plan and Enterprise Plan as "Coming Soon" on Landing Page and handle interim routing in app logic.
     *   [x] **DNS Configuration:** Point DomainKing nameservers to Netlify; CNAME verified, TXT record verified by Railway.
     *   [x] **CTA Implementation:** Link landing page "Get Started" buttons to the Streamlit URL using `?intent=signup` parameters.
     *   [x] **Deep Linking Logic:** Update `main.py` to check `st.query_params` for `intent=signup` and `type=recovery` to auto-toggle the registration/reset tab.
