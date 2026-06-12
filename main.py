@@ -1,5 +1,5 @@
 import streamlit as st
-from auth_utils import check_auth, login_form, get_secret, reset_password_form
+from auth_utils import check_auth, login_form, get_secret, reset_password_form, finalize_session
 import dashboard, history, admin_nos, admin_users, personal_statement, witness_statement, subscription_page, database as db
 from ai_utils import validate_and_generate
 
@@ -63,8 +63,7 @@ if not st.session_state.get('user_session') and not st.session_state.get('reset_
         client = db.get_supabase()
         session_res = client.auth.get_session()
         if session_res:
-            # Only auto-login if it's a standard session, don't force reset mode
-            st.session_state['user_session'] = session_res.user
+            finalize_session(session_res.user, session_res)
     except Exception:
         pass
 

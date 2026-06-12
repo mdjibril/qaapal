@@ -135,7 +135,7 @@ def login_form():
             try:
                 supabase = get_supabase()
                 auth_res = supabase.auth.sign_in_with_password({"email": email, "password": password})
-                _finalize_login(auth_res)
+                finalize_session(auth_res.user, auth_res.session)
             except Exception as e:
                 st.error(f"Login failed: {e}")
 
@@ -247,26 +247,26 @@ def reset_password_form():
             except Exception as e:
                 st.error(f"Failed to update password: {e}")
 
-def _finalize_login(auth_res):
-    st.session_state['user_session'] = auth_res.user
-    st.session_state['supabase_session'] = auth_res.session
+def finalize_session(user, session):
+    st.session_state['user_session'] = user
+    st.session_state['supabase_session'] = session
     
     admin_client = get_admin_supabase()
     # Fetch profile and organization data
     profile_res = admin_client.table("user_profiles")\
         .select("role, org_role, full_name, organizations(id, subscription_tier, credits_balance, master_api_key, subscription_start_date)")\
-        .eq("id", auth_res.user.id).execute()
+        .eq("id", user.id).execute()
     
     # If profile is missing (e.g., trigger failed or delayed), attempt to initialize it (Self-Healing)
     if not profile_res.data:
         try:
             # metadata is stored in user_metadata for the authenticated user object
-            meta = getattr(auth_res.user, 'user_metadata', {}) or {}
+            meta = getattr(user, 'user_metadata', {}) or {}
             full_name = meta.get('full_name', 'New User')
             
             admin_client.table("user_profiles").upsert({
-                "id": auth_res.user.id,
-                "email": auth_res.user.email,
+                "id": user.id,
+                "email": user.email,
                 "full_name": full_name,
                 "role": "assessor"
             }).execute()
@@ -274,7 +274,7 @@ def _finalize_login(auth_res):
             # Re-fetch to include data potentially added by the trigger in the background
             profile_res = admin_client.table("user_profiles")\
                 .select("role, org_role, full_name, organizations(id, subscription_tier, credits_balance, master_api_key)")\
-                .eq("id", auth_res.user.id).execute()
+                .eq("id", user.id).execute()
         except Exception as e:
             st.error(f"Login error: Could not initialize user profile. {e}")
             return

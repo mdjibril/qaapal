@@ -2,6 +2,7 @@ import streamlit as st
 import datetime
 import database as db
 from ai_utils import validate_and_generate
+from auth_utils import get_secret
 from file_utils import export_witness_to_word
 
 @st.fragment
@@ -90,7 +91,7 @@ def main():
     is_out_of_credits = (role != 'admin' and tier == 'free' and credits <= 0)
 
     if is_out_of_credits:
-        selar_base = st.secrets.get("payments", {}).get("selar_link", "https://selar.com/nsqassessment-platformpass")
+        selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
         user_email = st.session_state.user_session.email
         upgrade_link = f"{selar_base}?email={user_email}"
         st.warning("⚠️ You have 0 credits remaining. Upgrade to the **Platform Pass** to continue generating testimonies.")

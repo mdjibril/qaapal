@@ -2,6 +2,7 @@ import streamlit as st
 import datetime
 from datetime import timedelta
 import database as db
+from auth_utils import get_secret
 
 def main():
     st.title("💳 My Subscription")
@@ -12,7 +13,7 @@ def main():
     credits_balance = st.session_state.get('credits_balance', 0)
     subscription_start_date_str = st.session_state.get('subscription_start_date')
     
-    selar_base = st.secrets.get("payments", {}).get("selar_link", "https://selar.com/nsqassessment-platformpass")
+    selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
     user_email = st.session_state.user_session.email
     upgrade_link = f"{selar_base}?email={user_email}"
     

@@ -3,6 +3,7 @@ import datetime
 import time
 from file_utils import export_to_word
 from ai_utils import validate_and_generate
+from auth_utils import get_secret
 import database as db
 
 @st.fragment
@@ -146,7 +147,7 @@ def main():
 
     # --- GENERATION LOGIC ---
     if is_out_of_credits:
-        selar_base = st.secrets.get("payments", {}).get("selar_link", "https://selar.com/nsqassessment-platformpass")
+        selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
         user_email = st.session_state.user_session.email
         upgrade_link = f"{selar_base}?email={user_email}"
         st.warning("⚠️ You have 0 credits remaining. Upgrade to the **Platform Pass** to continue generating reports.")
