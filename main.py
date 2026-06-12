@@ -86,7 +86,7 @@ else:
         credits = 0 # Update local variable
     
     # --- CENTRALIZED SIDEBAR ---
-    st.sidebar.title(f"🚀 NSQ Portal v1.0.3")
+    st.sidebar.title(f"🚀 NSQ Portal v1.0.5")
     
     # Sidebar Billing Widget
     with st.sidebar.container(border=True):
