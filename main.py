@@ -48,6 +48,9 @@ if "intent" in st.query_params:
     intent = st.query_params.get("intent")
     if intent == "signup":
         st.session_state["auth_mode"] = "Sign Up"
+    elif intent == "earlybird":
+        st.session_state["auth_mode"] = "Sign Up"
+        st.session_state["promo_code"] = "EARLYBIRD_100"
     elif intent == "recovery":
         # This is a fallback if the fragment detection isn't enough
         st.session_state["reset_mode"] = True

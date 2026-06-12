@@ -1,3 +1,5 @@
+from curses import meta
+
 from docx import Document
 from docx.shared import Pt, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -164,12 +166,22 @@ def _create_official_nsq_template(doc, candidate_name, date, report_text, units_
     add_page_number(footer_run)
 
     # --- HEADER SECTION (Table 1) ---
-    header_table = doc.add_table(rows=1, cols=2)
+    header_table = doc.add_table(rows=1, cols=1)
     header_table.width = Inches(7.0)
+    rowhead = header_table.rows[0]
+    rowhead.height = Inches(0.6) # 1. Make header row taller
     header_table.style = 'Table Grid'
-    header_table.cell(0, 0).text = "[LOGO]"
-    header_table.cell(0, 1).text = "R.EF: CPN-ARF-02, Performance Evidence Record Form."
-    header_table.cell(0, 1).paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.RIGHT
+    
+    header_cell = header_table.cell(0, 0)
+    header_cell.text = "Ref:ARF02A      NATIONAL SKILLS QUALIFICATION"
+    header_cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
+    
+    # Apply font size and bold to the text in the cell
+    for paragraph in header_cell.paragraphs:
+        paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        for run in paragraph.runs:
+            run.font.size = Pt(14)
+            run.bold = True
 
     # --- UNDERLINED TITLE ---
     p = doc.add_paragraph()
@@ -183,8 +195,16 @@ def _create_official_nsq_template(doc, candidate_name, date, report_text, units_
     meta_table = doc.add_table(rows=1, cols=2)
     meta_table.style = 'Table Grid'
     meta_table.width = Inches(7.0)
-    meta_table.cell(0, 0).text = f"Candidate Name: {candidate_name}"
-    meta_table.cell(0, 1).text = f"Units: {units_summary}"
+    rowmeta = meta_table.rows[0]
+    rowmeta.height = Inches(0.4) # 2. Make metadata row taller
+    
+    cell_candidate = meta_table.cell(0, 0)
+    cell_candidate.text = f"Candidate Name: {candidate_name}"
+    cell_candidate.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
+    cell_units = meta_table.cell(0, 1)
+    cell_units.text = f"Units: {units_summary}"
+    cell_units.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
+
 
     # --- INSTRUCTION BLOCK ---
     instr = doc.add_paragraph("\nThis form can be used for Assessor’s observation of practical workplace activities or Candidates statement of practical activities. NB: Assessor may wish to ask a candidate some questions relating to the activity and record the question and the answer in this form also.")

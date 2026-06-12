@@ -202,7 +202,8 @@ def login_form():
                                 "org_name": org_name,
                                 "marketing_source": marketing_source,
                                 "primary_trade": primary_trade_choice,
-                                "monthly_volume": report_volume
+                                "monthly_volume": report_volume,
+                                "campaign": st.session_state.get("promo_code", "direct")
                             },
                             "email_redirect_to": site_url
                         }
