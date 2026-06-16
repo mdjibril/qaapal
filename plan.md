@@ -110,7 +110,15 @@ We have updated the sidebar to reflect the new billing states and implemented th
     *   [ ] **Auth Synchronicity:** (Optional) Use Supabase JS on the landing page to toggle "Login" vs "Dashboard" buttons based on session.
     *   [ ] **SEO & Metadata:** Align OpenGraph tags and canonical URLs across both the landing page and the app.
 
-### Phase 3: Advanced Integrations
+### Phase 3: Output Refinement & Quality Assurance (User Feedback Implementation)
+*   **Prompt Engineering Overhaul (System Prompt Update):** Shift the AI persona from a "storytelling mindset" to a "process-documentation mindset" to ensure reports are truly audit-ready and compliant with the NSQ framework. Implement the following step-by-step rules:
+    1.  **Enforce the "HOW" (Physical Action Rule):** Mandate that every sentence mapped to a Performance Criterion (PC) contains a verb of physical action or a specific technical interaction. (e.g., instead of "The student showed safety," use "The candidate gripped the insulated handle...").
+    2.  **Eliminate Assessor Bias (Silent Observer Constraint):** Forbid the AI from generating text where the assessor provides hints, asks leading questions, or offers opinions. Record only the candidate's independent decisions, actions, and corrections.
+    3.  **Humanize Linguistic Patterns (Assessor Log Persona):** Shift the persona to a "Field Auditor recording a Technical Log." Add a negative constraint list to avoid AI transition words (e.g., "Moreover", "Additionally") and flowery adjectives. Keep the tone industrial, professional, brief, and factual.
+    4.  **Ground in "Trade Context" (Trade-First Anchoring):** Require the AI to prioritize trade-specific nouns (e.g., RJ45, Multimeter for ICT) over general pedagogical terms. Ensure every paragraph contains trade-specific technical terms.
+    5.  **Reverse-Engineer the PC (Compliance First):** Instruct the AI to look at the PC description and describe the minimum necessary action to prove that specific criteria, ensuring strict alignment with the "Audit-Ready" goal in `launch.md`.
+
+### Phase 4: Advanced Integrations
 *   **Real Monnify Integration:** Transition from Selar to Monnify Web SDK/API for more advanced payment flows, once business registration is complete.
 
 
