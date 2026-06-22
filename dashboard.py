@@ -173,40 +173,47 @@ def main():
                 detailed_criteria_text = "\n".join(selected_pcs)
                 formatted_date = assessment_date.strftime("%B %d, %Y")
 
-                system_prompt = f"""You are a Lead NSQ Assessor. Your goal is to write clear, professional, and accessible observation reports that are easy for a wide audience to understand while mapping strictly to performance criteria.
+                trade_context = trade_id if trade_id else "the specific trade"
+                
+                system_prompt = f"""You are a Field Auditor recording a Technical Log for the NSQ framework. Your goal is to write strict, objective, and audit-ready process-documentation that proves competence without relying on storytelling or assumptions.
 
                 <strict_rules>
+                ### THE "HOW" (PHYSICAL ACTION RULE)
+                1. Every sentence mapped to a Performance Criterion (PC) MUST contain a verb of physical action or a specific technical interaction. 
+                2. Describe the minimum necessary physical action to prove the criteria. Do not say "The candidate showed safety." Instead, say "The candidate gripped the insulated handle of the screwdriver and checked for exposed wires before touching the terminal."
+
+                ### SILENT OBSERVER (NO ASSESSOR BIAS)
+                3. The Assessor is a silent shadow. NEVER use phrases like "I encouraged the student to think about...", "I guided them toward...", or "I observed". 
+                4. Record ONLY the candidate's independent decisions and actions. If the candidate makes a mistake, record the physical mistake and their subsequent attempt to rectify it independently. Do not offer opinions or judgments.
+
+                ### ASSESSOR LOG PERSONA (LINGUISTIC PATTERNS)
+                5. AVOID transition words like "Moreover", "Additionally", "Furthermore", "Notably", "Building on this", or "Simultaneously".
+                6. AVOID flowery or evaluative adjectives like "Impressive", "Excellent", "Great", or "Strong". Use objective terms like "Successful", "Compliant", "Accurate", or "Correct" instead.
+                7. The tone MUST be that of an industrial logbook—professional, brief, direct, and factual.
+
+                ### TRADE CONTEXT
+                8. Prioritize trade-specific nouns for {trade_context} (e.g., RJ45, Multimeter, CMOS battery for ICT) over general terms (e.g., tool, component, part).
+                9. Every paragraph MUST contain at least two technical terms specific to the trade being assessed.
+
                 ### NARRATIVE STRUCTURE & FLOW
-                1. **The Timeline**: Strictly include the commencement time (extracted from '{time_frame}') in the opening paragraph. Strictly include the conclusion time (extracted from '{time_frame}') in the final closing paragraph.
-                2. **Continuous Flow**: Write a "day-in-the-life" professional observation. Use logical transitions (e.g., "Building on this," "Simultaneously," "This led to").
-                3. **Volume**: Generate exactly 9 to 10 dense, technical paragraphs. The final output must fit within 2.5 standard pages.
-                4. **The Hook**: Integrate the breakthrough moment ({learning_moment}) as a central narrative peak where multiple criteria were met simultaneously.
+                10. **The Timeline**: Strictly include the commencement time (extracted from '{time_frame}') in the opening paragraph. Strictly include the conclusion time (extracted from '{time_frame}') in the final closing paragraph.
+                11. **Volume**: Generate exactly 9 to 10 dense, technical paragraphs. The final output must fit within 2.5 standard pages.
+                12. **The Hook**: Integrate the breakthrough moment ({learning_moment}) strictly as factual physical actions where multiple criteria were met.
 
-                ### CRITERIA INTEGRATION RULES
-                5. **No Staged Sequencing**: Do NOT write one paragraph per PC. Weave 2-3 PCs naturally into every paragraph.
-                6. **Consistency**: Maintain consistent terminology and style throughout the report.
-                7. **Plain English**: Use simple, everyday words that a non-expert can understand. Avoid "strong" or academic English. Keep sentences short and direct. If a technical term is necessary, explain it simply.
-                8. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria, rather than grouping them at the end of the paragraph. Do NOT repeat the Unit code within the same group if multiple criteria from that unit are met in that sentence.
-                   Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/SMC/004/L2 - LO3:PC 3.3; LO4:PC 4.1).
-                9. **Exhaustive Usage**: You MUST use every PC provided in the user's list exactly once. Do not hallucinate or invent PC codes.
-                10. **Seamlessness**: The reader should understand how the action meets the PC without needing a cross-reference list.
-
-                ### TONE & LANGUAGE
-                11. **Accessibility**: Maintain a professional but easy-to-read tone. The report should be understandable by parents, employers, and administrators, not just technical experts.
-                12. **Directness**: Avoid "dictionary-heavy", "strong", or overly flowery language. Focus on clear, straightforward descriptions of physical actions observed.
-                13. **Non-Sequential Integration**: Do NOT write one paragraph per PC or follow a strict sequential order of Units. Weave 2-3 PCs from different Units naturally into every paragraph, ensuring a cohesive narrative flow.
-                14. **Coherence**: Ensure each paragraph links logically to the next to form a unified story of the assessment session.
+                ### CRITERIA INTEGRATION & MAPPING
+                13. **Reverse-Engineer the PC**: Look at the PC description and describe the minimum necessary action to prove that specific criteria. 
+                14. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria. Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/SMC/004/L2 - LO3:PC 3.3).
+                15. **Exhaustive Usage**: You MUST use every PC provided in the user's list exactly once. Do not hallucinate or invent PC codes. Weave 2-3 PCs logically into every paragraph.
                 </strict_rules>
 
                 <example_paragraph>
-                Before starting the work, the student showed they understood safety by unplugging all power cables from the back of the computer. (ICT/SMC/004/L2 - LO1:PC 1.2) They also wore an anti-static wrist strap to make sure they didn't damage the internal parts with static electricity. (ICT/SMC/004/L2 - LO1:PC 1.3) This careful approach kept both the student and the hardware safe while they opened the computer case.
+                At 9:00AM, {student_name} initiated the diagnostic sequence. {student_name} disconnected the ATX 24-pin power connector from the motherboard to isolate the power supply unit. (ICT/SMC/004/L2 - LO1:PC 1.2) {student_name} then attached an anti-static wrist strap to the unpainted metal chassis frame to ground themselves prior to handling the RAM modules. (ICT/SMC/004/L2 - LO1:PC 1.3) {student_name} removed the faulty DDR4 RAM module and inserted the replacement, applying even pressure until the retaining clips engaged with an audible click.
                 </example_paragraph>"""
 
                 user_prompt = f"""Write the NSQ assessment report for {student_name}.
 
                 <report_context>
                 Candidate: {student_name}
-                Assessor: {assessor_name} ({assessor_id})
                 Date: {formatted_date}
                 Environment: {atmosphere}
                 Breakthrough Moment: {learning_moment}
@@ -257,7 +264,7 @@ def main():
                     full_report_text = ai_narrative + summary_block
 
                     # Attempt Database Save
-                    st.write("💾 Finalizing report and saving to Supabase...")
+                    st.write("💾 Finalizing report and saving to Database...")
                     success, error_msg = db.insert_report(
                         student_name, 
                         trade_id, 
@@ -268,7 +275,7 @@ def main():
                     )
                     
                     if success:
-                        st.success("✅ SUCCESS: Report saved to Supabase!")
+                        st.success("✅ SUCCESS: Report saved to Database!")
                     else:
                         st.error(f"❌ DATABASE ERROR: {error_msg}")
                         st.warning("Verify that the 'assessment_reports' table contains a 'created_by' column.")

@@ -118,6 +118,14 @@ We have updated the sidebar to reflect the new billing states and implemented th
     4.  **Ground in "Trade Context" (Trade-First Anchoring):** Require the AI to prioritize trade-specific nouns (e.g., RJ45, Multimeter for ICT) over general pedagogical terms. Ensure every paragraph contains trade-specific technical terms.
     5.  **Reverse-Engineer the PC (Compliance First):** Instruct the AI to look at the PC description and describe the minimum necessary action to prove that specific criteria, ensuring strict alignment with the "Audit-Ready" goal in `launch.md`.
 
+### Phase 3.1: Super Admin UI & Controls
+To effectively manage the SaaS platform and monitor system health, a dedicated Super Admin dashboard should be built. Suggested features include:
+*   **System Overview Dashboard:** High-level metrics including total active users, organizations, total reports generated, and aggregated API usage.
+*   **Organization & User Management:** A centralized table to view all organizations, their subscription tiers ('free', 'platform_pass'), and credit balances. Include manual controls to adjust credits, upgrade/downgrade tiers, and manage user access.
+*   **API & Routing Controls:** Live monitoring of AI provider health (Gemini, Groq, OpenRouter). Include manual override toggles to switch the default global fallback models in the event of an API outage.
+*   **Audit Logs & QA Viewer:** A secure interface to view recently generated observation reports (anonymized if needed) to actively QA the "Field Auditor" prompt outputs and ensure NOS alignment.
+*   **Payment & Webhook Logs:** A transaction history table monitoring incoming webhooks (from Selar/Monnify) to quickly diagnose and manually resolve any stuck payment upgrades.
+
 ### Phase 4: Advanced Integrations
 *   **Real Monnify Integration:** Transition from Selar to Monnify Web SDK/API for more advanced payment flows, once business registration is complete.
 
