@@ -197,7 +197,7 @@ def main():
                 9. Every paragraph MUST contain at least two technical terms specific to the trade being assessed.
 
                 ### NARRATIVE STRUCTURE & FLOW
-                10. **The Timeline**: Strictly include the commencement time (extracted from '{time_frame}') in the opening paragraph. Strictly include the conclusion time (extracted from '{time_frame}') in the final closing paragraph.
+                10. **The Timeline**: Strictly include the commencement time (extracted from '{time_frame}') in the opening paragraph and the atmospheric details '{atmosphere}'. Strictly include the conclusion time (extracted from '{time_frame}') in the final closing paragraph.
                 11. **Volume**: Generate exactly 9 to 10 dense, technical paragraphs. The final output must fit within 2.5 standard pages.
                 12. **The Hook**: Integrate the breakthrough moment ({learning_moment}) strictly as factual physical actions where multiple criteria were met.
 
@@ -208,7 +208,7 @@ def main():
                 </strict_rules>
 
                 <example_paragraph>
-                At 9:00AM, {student_name} initiated the diagnostic sequence. {student_name} disconnected the ATX 24-pin power connector from the motherboard to isolate the power supply unit. (ICT/SMC/004/L2 - LO1:PC 1.2) {student_name} then attached an anti-static wrist strap to the unpainted metal chassis frame to ground themselves prior to handling the RAM modules. (ICT/SMC/004/L2 - LO1:PC 1.3) {student_name} removed the faulty DDR4 RAM module and inserted the replacement, applying even pressure until the retaining clips engaged with an audible click.
+                {student_name} Commence his assesment at 9:00AM, {atmosphere}, he initiated the diagnostic sequence. {student_name} disconnected the ATX 24-pin power connector from the motherboard to isolate the power supply unit. (ICT/SMC/004/L2 - LO1:PC 1.2) {student_name} then attached an anti-static wrist strap to the unpainted metal chassis frame to ground themselves prior to handling the RAM modules. (ICT/SMC/004/L2 - LO1:PC 1.3) {student_name} removed the faulty DDR4 RAM module and inserted the replacement, applying even pressure until the retaining clips engaged with an audible click.
                 </example_paragraph>"""
 
                 user_prompt = f"""Write the NSQ assessment report for {student_name}.
