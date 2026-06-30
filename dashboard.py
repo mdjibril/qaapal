@@ -165,11 +165,20 @@ def main():
  
         if not dev_mode and time_passed < 10:
             st.warning(f"🕒 Rate Limit Protection: Wait {int(10 - time_passed)}s.")
+        elif not student_name.strip():
+            st.error("⚠️ **Candidate Name** is required. Please fill in Step 1 before generating.")
+        elif not time_frame.strip():
+            st.error("⚠️ **Timeline** is required. Please fill in Step 1 before generating (e.g. 9:00AM – 12:00PM).")
+        elif not atmosphere.strip():
+            st.error("⚠️ **Atmospheric Details** is required. Please describe the session environment in Step 1.")
+        elif not learning_moment.strip():
+            st.error("⚠️ **Observation Notes** (Step 3) cannot be empty. Describe what the candidate did during the session.")
         elif not selected_pcs:
             st.warning("Please select at least one Performance Criterion above.")
         elif not dev_mode and provider != "VertexAI" and not keys: # Check if keys list is empty
             st.warning(f"Please enter the {provider} API key(s) in the sidebar.")
         else:
+            st.session_state.pop("fb_submitted_dashboard", None)
             st.session_state.last_request_time = current_time
             with st.status(f"Using {provider} ({target_model}) to synthesize...", expanded=True) as status:
                 st.write("🔍 Preparing assessment context and mapping criteria...")

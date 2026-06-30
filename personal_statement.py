@@ -133,7 +133,8 @@ def main():
             else:
                 st.warning("Please enter your AI API key in the sidebar.")
         else:
-            with st.status("AI is crafting your professional narrative...", expanded=True) as status:
+            st.session_state.pop("fb_submitted_personal_statement", None)
+            with st.status("Crafting Personal Statement...", expanded=True) as status:
                 st.write("🧵 Weaving reflection notes with competency standards...")
                 trade_context = st.session_state.get('selected_trade_id', 'the specific trade')
                 system_prompt = f"""You are a trade professional drafting your own 'Personal Statement of Competence' for an NSQ Portfolio. 

@@ -230,30 +230,27 @@ def render_feedback_widget(source_page: str):
     st.markdown("---")
     st.markdown("**Was this output useful?**")
 
+    # Optional comment box is always visible now
+    comment = st.text_area(
+        "Any specific feedback? *(optional)*",
+        max_chars=500,
+        key=f"fb_comment_input_{source_page}",
+        placeholder="e.g. The tone was perfect, or the PC mapping was off..."
+    )
+
     col_up, col_down, col_spacer = st.columns([1, 1, 6])
     user_id = st.session_state.get("user_session", {}).id if st.session_state.get("user_session") else None
 
     with col_up:
         if st.button("👍", key=f"fb_up_{source_page}", help="Yes, it was helpful"):
-            ok, _ = insert_feedback(user_id, 1, source_page)
+            ok, _ = insert_feedback(user_id, 1, source_page, comment)
             if ok:
                 st.session_state[fb_key] = True
                 st.rerun(scope="fragment")
 
     with col_down:
         if st.button("👎", key=f"fb_down_{source_page}", help="Needs improvement"):
-            st.session_state[f"fb_show_comment_{source_page}"] = True
-
-    if st.session_state.get(f"fb_show_comment_{source_page}"):
-        comment = st.text_area(
-            "What could be better? *(optional)*",
-            max_chars=500,
-            key=f"fb_comment_{source_page}",
-            placeholder="e.g. The PC mapping was off, or the tone was too generic..."
-        )
-        if st.button("Submit Feedback", key=f"fb_submit_{source_page}", type="primary"):
             ok, _ = insert_feedback(user_id, -1, source_page, comment)
             if ok:
                 st.session_state[fb_key] = True
-                st.session_state.pop(f"fb_show_comment_{source_page}", None)
                 st.rerun(scope="fragment")

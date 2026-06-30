@@ -132,6 +132,9 @@ To effectively manage the SaaS platform and monitor system health, a dedicated S
 *   [x] **AI Disclaimer UI:** Introduce a visible disclaimer (e.g., `st.caption("⚠️ AI can make mistakes. Please verify generated reports against your field notes.")`) positioned immediately below the "Generate" button on all statement/report forms.
 *   [x] **Refine Remaining System Prompts:** Extend the "Field Auditor" prompt engineering overhaul to both the **Personal Statement** and **Witness Statement** modules, ensuring they adhere strictly to the professional, trade-specific tone and eliminate conversational fluff.
 *   [x] **Security & Data Integrity:** Implemented input sanitization utilities, prompt injection defenses, and added CHECK constraints to database tables for length limits and non-empty fields.
+*   [x] **NSQ Role Tracking:** Added a role selection dropdown (QAA, IQA, EQA) to the sign-up form and linked it to the `user_profiles` schema for better user segmentation.
+*   [x] **Product Feedback Widget:** Implemented a robust in-app feedback system (👍/👎 with optional comment box) that displays after report generation and clears appropriately for new generations.
+*   [x] **Strict Pre-Generation Validation:** Enforced that all critical observation inputs (Candidate Name, Timeline, Atmospheric Details, Observation Notes) are non-empty before allowing AI generation to proceed.
 ### Phase 4: Advanced Integrations
 *   **Real Monnify Integration:** Transition from Selar to Monnify Web SDK/API for more advanced payment flows, once business registration is complete.
 

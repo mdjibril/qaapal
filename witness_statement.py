@@ -108,6 +108,7 @@ def main():
         elif provider != "VertexAI" and not keys: # Check if keys list is empty
             st.warning("Please enter your AI API key(s) in the sidebar.")
         else:
+            st.session_state.pop("fb_submitted_witness_statement", None)
             with st.status("Synthesizing formal testimony...", expanded=True) as status:
                 st.write("📄 Converting witness notes into formal industrial language...")
                 trade_context = st.session_state.get('selected_trade_id', 'the specific trade')
