@@ -160,6 +160,12 @@ def login_form():
         full_name = st.text_input("Full Name (e.g. John Doe)")
         org_name = st.text_input("Organization / Assessment Center Name", help="This will be used for your workspace branding.")
         
+        assessor_role = st.selectbox(
+            "Your NSQ Role",
+            ["Select your role", "QAA (Quality Assurance Assessor)", "IQA (Internal Quality Assessor)", "EQA (External Quality Assessor)"],
+            help="This helps us tailor your experience and segment feedback."
+        )
+
         col_a, col_b = st.columns(2)
         with col_a:
             marketing_source = st.selectbox(
@@ -185,8 +191,8 @@ def login_form():
                 st.error("Passwords do not match.")
             elif len(new_password) < 6:
                 st.error("Password must be at least 6 characters.")
-            elif not full_name or not org_name or marketing_source == "Select an option":
-                st.error("Please fill in all required fields to help us set up your workspace.")
+            elif not full_name or not org_name or marketing_source == "Select an option" or assessor_role == "Select your role":
+                st.error("Please fill in all required fields, including your NSQ Role.")
             elif not tos_consent:
                 st.error("You must agree to the Terms of Service to continue.")
             else:
@@ -203,6 +209,7 @@ def login_form():
                                 "marketing_source": marketing_source,
                                 "primary_trade": primary_trade_choice,
                                 "monthly_volume": report_volume,
+                                "assessor_role": assessor_role.split(" ")[0],  # Store short code: QAA, IQA, or EQA
                                 "campaign": st.session_state.get("promo_code", "direct")
                             },
                             "email_redirect_to": site_url
@@ -255,7 +262,7 @@ def finalize_session(user, session):
     admin_client = get_admin_supabase()
     # Fetch profile and organization data
     profile_res = admin_client.table("user_profiles")\
-        .select("role, org_role, full_name, organizations(id, subscription_tier, credits_balance, master_api_key, subscription_start_date)")\
+        .select("role, org_role, full_name, assessor_role, organizations(id, subscription_tier, credits_balance, master_api_key, subscription_start_date)")\
         .eq("id", user.id).execute()
     
     # If profile is missing (e.g., trigger failed or delayed), attempt to initialize it (Self-Healing)
@@ -291,6 +298,7 @@ def finalize_session(user, session):
     st.session_state['user_role'] = prof.get('role', 'assessor') # App Superadmin check
     st.session_state['org_role'] = prof.get('org_role', 'member') # Org level role
     st.session_state['assessor_full_name'] = prof.get('full_name')
+    st.session_state['assessor_role'] = prof.get('assessor_role')  # QAA, IQA, or EQA
     st.session_state['org_id'] = org.get('id', None)
     st.session_state['subscription_tier'] = org.get('subscription_tier', 'free')
     st.session_state['credits_balance'] = org.get('credits_balance', 0)

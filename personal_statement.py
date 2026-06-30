@@ -211,6 +211,8 @@ def main():
                     status.update(label="✅ Personal Statement Crafted!", state="complete", expanded=False)
 
     st.caption("⚠️ **Disclaimer:** AI can make mistakes. Please verify that the generated statement accurately reflects your reflection notes.")
+    if st.session_state.get('current_generated_statement'):
+        db.render_feedback_widget("personal_statement")
 
     # 4. Display Result and Save Logic
     if 'current_generated_statement' in st.session_state:

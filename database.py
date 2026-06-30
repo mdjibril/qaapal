@@ -195,3 +195,65 @@ def check_platform_pass_expiry():
         if datetime.now(start_date.tzinfo) > start_date + timedelta(days=30):
             return True
     return False
+
+def insert_feedback(user_id, rating, source_page, comment=None):
+    """
+    Inserts a product feedback record.
+    rating: 1 for thumbs up, -1 for thumbs down.
+    source_page: 'dashboard', 'personal_statement', or 'witness_statement'
+    """
+    supabase = get_admin_supabase()
+    try:
+        data = {
+            "user_id": user_id,
+            "assessor_role": st.session_state.get("assessor_role"),
+            "rating": rating,
+            "comment": comment[:500] if comment else None,
+            "source_page": source_page,
+        }
+        supabase.table("product_feedback").insert(data).execute()
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
+@st.fragment
+def render_feedback_widget(source_page: str):
+    """
+    Renders a compact 👍 / 👎 feedback widget.
+    source_page: identifies which page is calling it ('dashboard', 'personal_statement', 'witness_statement')
+    """
+    fb_key = f"fb_submitted_{source_page}"
+    if st.session_state.get(fb_key):
+        st.success("✅ Thanks for your feedback!", icon="🙏")
+        return
+
+    st.markdown("---")
+    st.markdown("**Was this output useful?**")
+
+    col_up, col_down, col_spacer = st.columns([1, 1, 6])
+    user_id = st.session_state.get("user_session", {}).id if st.session_state.get("user_session") else None
+
+    with col_up:
+        if st.button("👍", key=f"fb_up_{source_page}", help="Yes, it was helpful"):
+            ok, _ = insert_feedback(user_id, 1, source_page)
+            if ok:
+                st.session_state[fb_key] = True
+                st.rerun(scope="fragment")
+
+    with col_down:
+        if st.button("👎", key=f"fb_down_{source_page}", help="Needs improvement"):
+            st.session_state[f"fb_show_comment_{source_page}"] = True
+
+    if st.session_state.get(f"fb_show_comment_{source_page}"):
+        comment = st.text_area(
+            "What could be better? *(optional)*",
+            max_chars=500,
+            key=f"fb_comment_{source_page}",
+            placeholder="e.g. The PC mapping was off, or the tone was too generic..."
+        )
+        if st.button("Submit Feedback", key=f"fb_submit_{source_page}", type="primary"):
+            ok, _ = insert_feedback(user_id, -1, source_page, comment)
+            if ok:
+                st.session_state[fb_key] = True
+                st.session_state.pop(f"fb_show_comment_{source_page}", None)
+                st.rerun(scope="fragment")

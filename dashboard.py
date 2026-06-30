@@ -273,6 +273,7 @@ def main():
                         st.session_state.credits_balance -= 1
                     
                     full_report_text = ai_narrative + summary_block
+                    st.session_state['current_assessment_report'] = full_report_text
 
                     # Attempt Database Save
                     st.write("💾 Finalizing report and saving to Database...")
@@ -308,6 +309,8 @@ def main():
                     with c2: st.download_button("Download Text (.txt)", full_report_text, file_name=f"{student_name}.txt")
 
     st.caption("⚠️ **Disclaimer:** AI can make mistakes. Please verify that the generated report accurately reflects your field observation notes.")
+    if st.session_state.get('current_assessment_report'):
+        db.render_feedback_widget("dashboard")
 
 # --- IMPORTANT: ADD THIS AT THE BOTTOM ---
 if __name__ == "__main__":

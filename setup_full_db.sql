@@ -26,7 +26,8 @@ CREATE TABLE public.user_profiles (
   org_role text DEFAULT 'admin',
   marketing_source text,
   primary_trade text,
-  monthly_report_volume text
+  monthly_report_volume text,
+  assessor_role text DEFAULT NULL  -- NSQ assessor role: QAA, IQA, or EQA
 );
 
 -- Ensure the role check constraint is up to date if the table already existed
@@ -34,6 +35,14 @@ ALTER TABLE IF EXISTS public.user_profiles
 DROP CONSTRAINT IF EXISTS user_profiles_role_check;
 ALTER TABLE IF EXISTS public.user_profiles 
 ADD CONSTRAINT user_profiles_role_check CHECK (role IN ('admin', 'assessor', 'student'));
+
+-- Add assessor_role if it doesn't already exist (migration-safe)
+ALTER TABLE IF EXISTS public.user_profiles
+ADD COLUMN IF NOT EXISTS assessor_role text DEFAULT NULL;
+ALTER TABLE IF EXISTS public.user_profiles
+DROP CONSTRAINT IF EXISTS user_profiles_assessor_role_check;
+ALTER TABLE IF EXISTS public.user_profiles
+ADD CONSTRAINT user_profiles_assessor_role_check CHECK (assessor_role IN ('QAA', 'IQA', 'EQA') OR assessor_role IS NULL);
 
 -- 2. NSQ Structure (NOS)
 CREATE TABLE public.trades (
@@ -232,3 +241,23 @@ CREATE TRIGGER on_credit_update
 --     AND last_credit_depletion <= now() - interval '7 days';
 --   $$
 -- );
+
+-- ==============================================================
+-- 9. Product Feedback Table
+-- Stores in-app thumbs up/down ratings with optional comments.
+-- ==============================================================
+CREATE TABLE IF NOT EXISTS public.product_feedback (
+    id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+    created_at timestamptz DEFAULT now(),
+    user_id uuid REFERENCES public.user_profiles(id) ON DELETE SET NULL,
+    assessor_role text,            -- QAA, IQA, EQA (snapshotted at time of feedback)
+    rating smallint NOT NULL CHECK (rating IN (1, -1)), -- 1 = thumbs up, -1 = thumbs down
+    comment text CHECK (char_length(comment) <= 500),
+    source_page text NOT NULL      -- 'dashboard', 'personal_statement', 'witness_statement'
+);
+
+ALTER TABLE public.product_feedback ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Users can insert their own feedback" ON public.product_feedback FOR INSERT WITH CHECK (auth.uid() = user_id);
+CREATE POLICY "Only admins can view all feedback" ON public.product_feedback FOR SELECT USING (
+    EXISTS (SELECT 1 FROM public.user_profiles WHERE id = auth.uid() AND role = 'admin')
+);

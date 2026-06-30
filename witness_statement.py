@@ -191,6 +191,8 @@ def main():
                     status.update(label="✅ Witness Statement Ready!", state="complete", expanded=False)
 
     st.caption("⚠️ **Disclaimer:** AI can make mistakes. Please verify that the generated testimony accurately reflects your observation notes.")
+    if st.session_state.get('current_witness_statement'):
+        db.render_feedback_widget("witness_statement")
 
     if 'current_witness_statement' in st.session_state:
         st.markdown("---")
