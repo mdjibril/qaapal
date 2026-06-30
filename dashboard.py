@@ -77,9 +77,10 @@ def main():
     provider = st.session_state.get('ai_provider')
     keys = st.session_state.get('target_keys', []) # Now expects a list of keys
     target_model = st.session_state.get('target_model')
-    atmosphere = st.session_state.get('default_env_text', '')
+    if "dash_atmosphere" not in st.session_state:
+        st.session_state.dash_atmosphere = st.session_state.get('default_env_text', '')
     assessor_name = st.session_state.get('assessor_name', 'Jibril Dauda Muhammad')
-    assessor_id = st.session_state.get('assessor_id', 'QAA/XXXX/ICT')
+    # assessor_id = st.session_state.get('assessor_id', 'QAA/XXXX/ICT')
     dev_mode = st.session_state.get('dev_mode', False)
 
     user_id = st.session_state.user_session.id
@@ -110,7 +111,7 @@ def main():
             assessment_date = st.date_input("Assessment Date", datetime.date.today(), key="dash_assessment_date")
         with col2:
             time_frame = st.text_input("Timeline", placeholder="e.g. 9:00AM – 12:00PM", key="dash_timeline")
-            atmosphere = st.text_area("Atmospheric Details", value=atmosphere, key="dash_atmosphere")
+            atmosphere = st.text_area("Atmospheric Details", key="dash_atmosphere")
 
     
     st.markdown("#### Step 2: Select Achieved PCs")
@@ -286,8 +287,7 @@ def main():
                         student_name, 
                         assessment_date, 
                         full_report_text, 
-                        assessor_name, 
-                        assessor_id,
+                        assessor_name,
                         timeline=time_frame,
                         atmosphere=atmosphere,
                         selected_pcs=selected_pcs

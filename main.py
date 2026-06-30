@@ -38,6 +38,20 @@ def clear_previews_on_trade_change():
     for k in keys_to_del:
         del st.session_state[k]
 
+ENV_OPTIONS = {
+    "Morning (Cool)": "The morning air was cool and the lab was quiet, providing a focused atmosphere with plenty of natural light.",
+    "Afternoon (Warm)": "The lab temperature was moderate; the ceiling fans were active to maintain a comfortable working environment during the peak afternoon heat.",
+    "Technical/Busy": "The lab was active with the hum of server fans and multiple workstations in use, creating a realistic, high-energy technical environment.",
+    "Rainy/Overcast": "Due to the weather, the lab was lit with overhead fluorescent lights; the atmosphere was cool and calm.",
+    "Custom": ""
+}
+
+def update_environment_preset():
+    """Apply the selected environment preset to the dashboard atmosphere field."""
+    preset_text = ENV_OPTIONS[st.session_state.env_preset]
+    st.session_state.default_env_text = preset_text
+    st.session_state.dash_atmosphere = preset_text
+
 # Define cached functions at the top level to avoid re-definition issues
 @st.cache_data(ttl=600)
 def get_cached_trades():
@@ -139,15 +153,17 @@ else:
     else:
         st.sidebar.error("⚠️ No trades found. Check Supabase connection or table data.")
 
-    env_options = {
-        "Morning (Cool)": "The morning air was cool and the lab was quiet, providing a focused atmosphere with plenty of natural light.",
-        "Afternoon (Warm)": "The lab temperature was moderate; the ceiling fans were active to maintain a comfortable working environment during the peak afternoon heat.",
-        "Technical/Busy": "The lab was active with the hum of server fans and multiple workstations in use, creating a realistic, high-energy technical environment.",
-        "Rainy/Overcast": "Due to the weather, the lab was lit with overhead fluorescent lights; the atmosphere was cool and calm.",
-        "Custom": "" 
-    }
-    selected_env_preset = st.sidebar.selectbox("Choose a Preset", list(env_options.keys()))
-    st.session_state.default_env_text = env_options[selected_env_preset]
+    if "env_preset" not in st.session_state:
+        st.session_state.env_preset = "Morning (Cool)"
+        update_environment_preset()
+
+    selected_env_preset = st.sidebar.selectbox(
+        "Choose a Preset",
+        list(ENV_OPTIONS.keys()),
+        key="env_preset",
+        on_change=update_environment_preset
+    )
+    st.session_state.default_env_text = ENV_OPTIONS[selected_env_preset]
 
 
     # --- AI KEY INHERITANCE ---
