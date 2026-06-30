@@ -353,7 +353,7 @@ def _create_official_nsq_template(doc, candidate_name, date, report_text, units_
         cell_left.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
         cell_right.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
 
-def export_to_word(name, date, report_text, assessor_name, assessor_id, timeline="N/A", atmosphere="N/A", selected_pcs=None):
+def export_to_word(name, date, report_text, assessor_name, timeline="N/A", atmosphere="N/A", selected_pcs=None):
     """
     Generates a standardized NSQ Word report.
     """
