@@ -9,7 +9,7 @@ from file_utils import (
 
 # Cached helper function to fetch reports
 @st.cache_data(ttl=300)
-def _fetch_reports(user_id, role, table_name, search_query=None, page=1, page_size=20, assessor_filter=None):
+def _fetch_reports(user_id, role, table_name, search_query=None, page=1, page_size=20, assessor_filter=None, date_filter=None):
     # We use the admin client for all roles here to ensure the join with the 'trades' table 
     # succeeds (as trades often has restricted RLS). Privacy is maintained by the 
     # .eq("created_by", user_id) filter below for non-admins.
@@ -41,6 +41,17 @@ def _fetch_reports(user_id, role, table_name, search_query=None, page=1, page_si
                 query = query.or_(f"student_name.ilike.{q},report_text.ilike.{q}")
             else:
                 query = query.or_(f"student_name.ilike.{q},statement_text.ilike.{q}")
+
+        if date_filter:
+            if len(date_filter) == 2:
+                start_date, end_date = date_filter
+            elif len(date_filter) == 1:
+                start_date = end_date = date_filter[0]
+            else:
+                start_date = end_date = None
+                
+            if start_date and end_date:
+                query = query.gte("created_at", f"{start_date}T00:00:00+00:00").lte("created_at", f"{end_date}T23:59:59+00:00")
 
         start = (page - 1) * page_size
         end = start + page_size - 1
@@ -101,6 +112,8 @@ def _on_checkbox_change(report_id):
 def display_report_item(r, current_user_id, current_user_role, table_type):
     report_id = r['id']
     is_selected = report_id in st.session_state.selected_report_ids
+    selection_key = f"selected_{report_id}"
+    st.session_state[selection_key] = is_selected
 
     # Determine the assessor's name and ID for this specific report
     report_assessor_name = (r.get('user_profiles') or {}).get('full_name', 'Unknown Assessor')
@@ -132,8 +145,7 @@ def display_report_item(r, current_user_id, current_user_role, table_type):
     with col_checkbox:
         st.checkbox(
             "Select report",
-            key=f"selected_{report_id}",
-            value=is_selected,
+            key=selection_key,
             on_change=_on_checkbox_change,
             args=(report_id,),
             label_visibility="collapsed"
@@ -220,6 +232,7 @@ def main():
     if 'admin_assessor_filter' not in st.session_state: st.session_state.admin_assessor_filter = "All"
     if 'history_type' not in st.session_state: st.session_state.history_type = "Assessment Reports"
     if 'report_content_cache' not in st.session_state: st.session_state.report_content_cache = {}
+    if 'date_filter_state' not in st.session_state: st.session_state.date_filter_state = []
 
     # History Type Selector
     if role == 'student':
@@ -255,12 +268,17 @@ def main():
             st.session_state.history_page = 1
             st.cache_data.clear()
 
-    # Search implementation at the top
-    search_input = st.text_input("Search reports by student name or content", value=st.session_state.search_query)
+    # Search and Filter implementation at the top
+    col_search, col_date = st.columns([0.6, 0.4])
+    with col_search:
+        search_input = st.text_input("Search reports by student name or content", value=st.session_state.search_query)
+    with col_date:
+        date_input = st.date_input("Filter by Date Range", value=st.session_state.date_filter_state, key="date_picker")
     
-    # Reset page if search query changes but don't rerun yet
-    if search_input != st.session_state.search_query:
+    # Reset page if search query or date changes
+    if search_input != st.session_state.search_query or date_input != st.session_state.date_filter_state:
         st.session_state.search_query = search_input
+        st.session_state.date_filter_state = date_input
         st.session_state.history_page = 1
         st.cache_data.clear()
 
@@ -275,7 +293,8 @@ def main():
                 search_query=st.session_state.search_query, 
                 page=st.session_state.history_page, 
                 page_size=page_size,
-                assessor_filter=st.session_state.admin_assessor_filter if st.session_state.admin_assessor_filter != "All" else None
+                assessor_filter=st.session_state.admin_assessor_filter if st.session_state.admin_assessor_filter != "All" else None,
+                date_filter=st.session_state.date_filter_state
             )
         except Exception:
             reports, total_count = [], 0
@@ -308,7 +327,7 @@ def main():
         st.info("No reports found matching your search criteria.")
     else:
         # --- Bulk Actions Toolbar ---
-        col_select, col_delete = st.columns([0.2, 0.8])
+        col_select, col_download, col_delete = st.columns([0.2, 0.4, 0.4])
         
         with col_select:
             # Select All logic
@@ -324,6 +343,35 @@ def main():
                     for rid in all_filtered_ids:
                         st.session_state.selected_report_ids.discard(rid)
                         st.session_state[f"selected_{rid}"] = False
+
+        with col_download:
+            if st.session_state.selected_report_ids:
+                if st.session_state.get('last_zip_selection') != st.session_state.selected_report_ids:
+                    st.session_state.bulk_zip_bytes = None
+                
+                if st.session_state.get('bulk_zip_bytes') is None:
+                    if st.button(f"📦 Prepare {len(st.session_state.selected_report_ids)} Selected for Download", type="primary"):
+                        with st.spinner("Fetching data and generating ZIP..."):
+                            from file_utils import create_zip_from_reports
+                            admin_client = get_admin_supabase()
+                            ids_to_dl = list(st.session_state.selected_report_ids)
+                            col_to_fetch = "report_text" if target_table == "assessment_reports" else "statement_text"
+                            res = admin_client.table(target_table).select(f"*, user_profiles!created_by(full_name)").in_("id", ids_to_dl).execute()
+                            full_reports = res.data
+                            if full_reports:
+                                for r in full_reports:
+                                    r['text_content'] = r.get(col_to_fetch, '')
+                                st.session_state.bulk_zip_bytes = create_zip_from_reports(full_reports, st.session_state.history_type)
+                                st.session_state.last_zip_selection = set(st.session_state.selected_report_ids)
+                                st.rerun()
+                else:
+                    st.download_button(
+                        label="📥 Download Prepared ZIP",
+                        data=st.session_state.bulk_zip_bytes,
+                        file_name=f"Bulk_Export_{st.session_state.history_type.replace(' ', '_')}.zip",
+                        mime="application/zip",
+                        type="primary"
+                    )
 
         with col_delete:
             if st.session_state.selected_report_ids:

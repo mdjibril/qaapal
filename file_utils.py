@@ -8,6 +8,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from io import BytesIO
 import re
+import zipfile
 
 def set_cell_border(cell, **kwargs):
     """
@@ -462,4 +463,56 @@ def export_personal_statement_to_word(name, date, statement_text, selected_pcs=N
 
     bio = BytesIO()
     doc.save(bio)
+    return bio.getvalue()
+
+def create_zip_from_reports(reports, table_type):
+    """
+    Takes a list of fetched report dictionaries (with full text) and the table_type.
+    Returns a ZIP file containing the Word documents as bytes.
+    """
+    bio = BytesIO()
+    with zipfile.ZipFile(bio, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        for r in reports:
+            raw_date = r.get('assessment_date') or r.get('created_at', 'N/A')
+            display_date = raw_date.split('T')[0] if 'T' in str(raw_date) else raw_date
+            
+            assessor_name = (r.get('user_profiles') or {}).get('full_name', 'Unknown Assessor')
+            student_name = r.get('student_name') or r.get('candidate_name', 'Student')
+            unit_codes = r.get('unit_codes', 'N/A')
+            text_content = r.get('text_content', '')
+            
+            if table_type == "Assessment Reports":
+                doc_bytes = export_to_word(
+                    name=student_name, 
+                    date=display_date, 
+                    report_text=text_content, 
+                    assessor_name=assessor_name,
+                    selected_pcs=unit_codes
+                )
+            elif table_type == "Personal Statements":
+                doc_bytes = export_personal_statement_to_word(
+                    name=student_name,
+                    date=display_date,
+                    statement_text=text_content,
+                    selected_pcs=unit_codes
+                )
+            elif table_type == "Witness Statements":
+                witness_name = r.get('witness_name', 'Witness')
+                witness_role = r.get('witness_role', 'Supervisor')
+                doc_bytes = export_witness_to_word(
+                    witness_name=witness_name,
+                    witness_role=witness_role,
+                    candidate_name=student_name,
+                    date=display_date,
+                    statement_text=text_content,
+                    selected_pcs=unit_codes
+                )
+            else:
+                continue
+                
+            safe_name = re.sub(r'[^A-Za-z0-9_\-\.]', '_', student_name)
+            report_id = r.get('id', '')
+            filename = f"NSQ_{safe_name}_{report_id}.docx"
+            zipf.writestr(filename, doc_bytes)
+            
     return bio.getvalue()

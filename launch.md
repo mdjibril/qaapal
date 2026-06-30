@@ -48,22 +48,23 @@ This document outlines the high-conversion launch sequence for `nsqassessment.co
 
 ---
 
-### Day 3: The "Early Bird" Launch
-**Time:** 7:00 PM (Relaxed evening time)
+### 🚀 Today's Launch Offer
+
+**Time:** Anytime today
 **Format:** Link + Scarcity Offer
 
 **Script:**
 > "🚀 **NSQ Assessment Portal is now LIVE!**
 > 
-> You can now automate your Observation Reports, Personal Statements, and Witness Testimonies at: https://nsqassessment.com.ng
+> You can now automate your Observation Reports, Personal Statements, and Witness Testimonies instantly at: https://nsqassessment.com.ng
 > 
-> **The Launch Offer:**
-> 1. Every new account gets **5 FREE credits** to try it out.
-> 2. **Early Bird Bonus:** The first 100 people to use their free credits will be upgraded to the **'Platform Pass'** (Pro Tier) for free. This allows you to use the tool with your own API keys without credit limits.
+> **🎁 Our Launch Offer:**
+> 1. **5 FREE Credits Weekly:** Every new account gets 5 free generations, which automatically renew every 7 days!
+> 2. **Early Bird Bonus:** The first 100 people to sign up today will get the **'Platform Pass'** (Pro Tier) for free. This allows you to bring your own API keys and generate unlimited reports.
 > 
-> Claim your spot here: https://nsqassessment.com.ng?intent=earlybird
+> ⏳ Claim your spot and free credits here: https://nsqassessment.com.ng?intent=earlybird
 > 
-> Let's make our assessment process faster and more accurate!"
+> Let's make our assessment process faster, more professional, and 100% stress-free!"
 
 ---
 

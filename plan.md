@@ -110,8 +110,8 @@ We have updated the sidebar to reflect the new billing states and implemented th
     *   [ ] **Auth Synchronicity:** (Optional) Use Supabase JS on the landing page to toggle "Login" vs "Dashboard" buttons based on session.
     *   [ ] **SEO & Metadata:** Align OpenGraph tags and canonical URLs across both the landing page and the app.
 
-### Phase 3: Output Refinement & Quality Assurance (User Feedback Implementation)
-*   **Prompt Engineering Overhaul (System Prompt Update):** Shift the AI persona from a "storytelling mindset" to a "process-documentation mindset" to ensure reports are truly audit-ready and compliant with the NSQ framework. Implement the following step-by-step rules:
+### Phase 3: Output Refinement & Quality Assurance (User Feedback Implementation) - **COMPLETED**
+*   [x] **Prompt Engineering Overhaul (System Prompt Update):** Shift the AI persona from a "storytelling mindset" to a "process-documentation mindset" to ensure reports are truly audit-ready and compliant with the NSQ framework. Implement the following step-by-step rules:
     1.  **Enforce the "HOW" (Physical Action Rule):** Mandate that every sentence mapped to a Performance Criterion (PC) contains a verb of physical action or a specific technical interaction. (e.g., instead of "The student showed safety," use "The candidate gripped the insulated handle...").
     2.  **Eliminate Assessor Bias (Silent Observer Constraint):** Forbid the AI from generating text where the assessor provides hints, asks leading questions, or offers opinions. Record only the candidate's independent decisions, actions, and corrections.
     3.  **Humanize Linguistic Patterns (Assessor Log Persona):** Shift the persona to a "Field Auditor recording a Technical Log." Add a negative constraint list to avoid AI transition words (e.g., "Moreover", "Additionally") and flowery adjectives. Keep the tone industrial, professional, brief, and factual.
@@ -126,6 +126,12 @@ To effectively manage the SaaS platform and monitor system health, a dedicated S
 *   **Audit Logs & QA Viewer:** A secure interface to view recently generated observation reports (anonymized if needed) to actively QA the "Field Auditor" prompt outputs and ensure NOS alignment.
 *   **Payment & Webhook Logs:** A transaction history table monitoring incoming webhooks (from Selar/Monnify) to quickly diagnose and manually resolve any stuck payment upgrades.
 
+### Phase 3.2: User Experience & Utility Updates
+*   [x] **Auto-Renewing Credits:** Update the `organizations` table to include a `last_credit_renewal_date`. Implement logic (lazy evaluation on login/generation or via cron job) to auto-replenish 5 credits for 'free' tier users every 7 days.
+*   [x] **Bulk Report Download (ZIP):** Add a feature to the History/Dashboard page allowing assessors to filter reports by a specific date, select them in bulk, and download them packaged in a single ZIP file.
+*   [x] **AI Disclaimer UI:** Introduce a visible disclaimer (e.g., `st.caption("⚠️ AI can make mistakes. Please verify generated reports against your field notes.")`) positioned immediately below the "Generate" button on all statement/report forms.
+*   [x] **Refine Remaining System Prompts:** Extend the "Field Auditor" prompt engineering overhaul to both the **Personal Statement** and **Witness Statement** modules, ensuring they adhere strictly to the professional, trade-specific tone and eliminate conversational fluff.
+*   [x] **Security & Data Integrity:** Implemented input sanitization utilities, prompt injection defenses, and added CHECK constraints to database tables for length limits and non-empty fields.
 ### Phase 4: Advanced Integrations
 *   **Real Monnify Integration:** Transition from Selar to Monnify Web SDK/API for more advanced payment flows, once business registration is complete.
 
