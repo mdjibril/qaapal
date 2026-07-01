@@ -187,6 +187,7 @@ def main():
                 unit_header_info = "\n".join(unique_units)
                 detailed_criteria_text = "\n".join(selected_pcs)
                 formatted_date = assessment_date.strftime("%B %d, %Y")
+                candidate_first_name = student_name.strip().split()[0]
 
                 trade_context = trade_id if trade_id else "the specific trade"
                 
@@ -216,18 +217,20 @@ def main():
                 10. **The Timeline**: Strictly include the commencement time (extracted from '{time_frame}') in the opening paragraph and the atmospheric details '{atmosphere}'. Strictly include the conclusion time (extracted from '{time_frame}') in the final closing paragraph.
                 11. **Volume**: Generate exactly 9 to 10 dense, technical paragraphs. The final output must fit within 2.5 standard pages.
                 12. **The Hook**: Integrate the breakthrough moment strictly as factual physical actions where multiple criteria were met.
+                13. **Candidate Name Usage**: Use the candidate's full name "{student_name}" only once, in the opening paragraph. After that first full-name mention, refer to the candidate only as "{candidate_first_name}". Do not repeat the full name in later paragraphs.
 
                 ### CRITERIA INTEGRATION & MAPPING
-                13. **Reverse-Engineer the PC**: Look at the PC description and describe the minimum necessary action to prove that specific criteria. 
-                14. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria. Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/SMC/004/L2 - LO3:PC 3.3).
-                15. **Exhaustive Usage**: You MUST use every PC provided in the user's list exactly once. Do not hallucinate or invent PC codes. Weave 2-3 PCs logically into every paragraph.
+                14. **Reverse-Engineer the PC**: Look at the PC description and describe the minimum necessary action to prove that specific criteria. 
+                15. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria. Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/SMC/004/L2 - LO3:PC 3.3).
+                16. **Exhaustive Usage**: You MUST use every PC provided in the user's list exactly once. Do not hallucinate or invent PC codes. Weave 2-3 PCs logically into every paragraph.
                 </strict_rules>
 
                 <example_paragraph>
-                {student_name} Commence his assesment at 9:00AM, {atmosphere}, he initiated the diagnostic sequence. {student_name} disconnected the ATX 24-pin power connector from the motherboard to isolate the power supply unit. (ICT/SMC/004/L2 - LO1:PC 1.2) {student_name} then attached an anti-static wrist strap to the unpainted metal chassis frame to ground themselves prior to handling the RAM modules. (ICT/SMC/004/L2 - LO1:PC 1.3) {student_name} removed the faulty DDR4 RAM module and inserted the replacement, applying even pressure until the retaining clips engaged with an audible click.
+                {student_name} commenced the assessment at 9:00AM, {atmosphere}, and initiated the diagnostic sequence. {candidate_first_name} disconnected the ATX 24-pin power connector from the motherboard to isolate the power supply unit. (ICT/SMC/004/L2 - LO1:PC 1.2) {candidate_first_name} then attached an anti-static wrist strap to the unpainted metal chassis frame to ground themselves prior to handling the RAM modules. (ICT/SMC/004/L2 - LO1:PC 1.3) {candidate_first_name} removed the faulty DDR4 RAM module and inserted the replacement, applying even pressure until the retaining clips engaged with an audible click.
                 </example_paragraph>"""
 
                 user_prompt = f"""Write the NSQ assessment report for {student_name}.
+                Use the full candidate name only in the opening paragraph; after that use "{candidate_first_name}".
 
                 <report_context>
                 Candidate: {student_name}
