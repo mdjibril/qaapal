@@ -41,11 +41,15 @@ def get_supabase():
         st.error("Secrets missing! Check Streamlit Cloud Settings > Secrets.")
         st.stop() # Stops the app here so you can see the error
         
-    client = _create_base_client(url, key)
+    # Do not cache the user-scoped client. Streamlit cached resources are shared
+    # across browser sessions, while postgrest.auth() mutates the client with a
+    # bearer token. Reusing it can cross-reference one user's session with another.
+    client = create_client(url, key, options=ClientOptions(postgrest_client_timeout=60))
     
     # Attach the authenticated session token if it exists
     session = st.session_state.get("supabase_session")
-    if session:
+    user = st.session_state.get("user_session")
+    if session and user:
         # Check if the token is expired or about to expire (within 60 seconds)
         # Supabase session objects include 'expires_at' as a Unix timestamp
         if hasattr(session, 'expires_at') and session.expires_at < time.time() + 60:
@@ -63,11 +67,6 @@ def get_supabase():
         client.postgrest.auth(session.access_token)
 
     return client
-
-@st.cache_resource
-def _create_base_client(url, key):
-    """Internal cached helper to maintain a single connection pool."""
-    return create_client(url, key, options=ClientOptions(postgrest_client_timeout=60))
 
 @st.cache_resource
 def get_admin_supabase():
@@ -97,7 +96,17 @@ def get_user_role(user_id):
 
 
 def check_auth():
-    return st.session_state.get('user_session', None)
+    user = st.session_state.get('user_session')
+    session = st.session_state.get('supabase_session')
+    if not user or not session:
+        return None
+
+    session_user = getattr(session, 'user', None)
+    if session_user and getattr(session_user, 'id', None) != getattr(user, 'id', None):
+        st.session_state.clear()
+        return None
+
+    return user
 
 def _get_password_strength(pw):
     """Calculates password strength score and feedback."""
@@ -256,6 +265,7 @@ def reset_password_form():
                 st.error(f"Failed to update password: {e}")
 
 def finalize_session(user, session):
+    st.session_state.clear()
     st.session_state['user_session'] = user
     st.session_state['supabase_session'] = session
     
