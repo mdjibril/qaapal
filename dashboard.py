@@ -178,7 +178,12 @@ def main():
         elif not dev_mode and provider != "VertexAI" and not keys: # Check if keys list is empty
             st.warning(f"Please enter the {provider} API key(s) in the sidebar.")
         else:
-            st.session_state.pop("fb_submitted_dashboard", None)
+            for key in (
+                "current_assessment_report",
+                "fb_submitted_dashboard",
+                "fb_comment_input_dashboard",
+            ):
+                st.session_state.pop(key, None)
             st.session_state.last_request_time = current_time
             with st.status(f"Using {provider} ({target_model}) to synthesize...", expanded=True) as status:
                 st.write("🔍 Preparing assessment context and mapping criteria...")
