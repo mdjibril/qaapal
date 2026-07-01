@@ -135,7 +135,8 @@ CREATE POLICY "Individuals can create their own student statements" ON public.st
 CREATE POLICY "Individuals can view their own student statements" ON public.student_statements FOR SELECT USING (auth.uid() = created_by);
 
 -- Witness Statements
-CREATE POLICY "Authenticated users can create witness statements" ON public.witness_statements FOR INSERT WITH CHECK (auth.role() = 'authenticated');
+DROP POLICY IF EXISTS "Authenticated users can create witness statements" ON public.witness_statements;
+CREATE POLICY "Creators can create their own witness statements" ON public.witness_statements FOR INSERT WITH CHECK (auth.uid() = created_by);
 CREATE POLICY "Creators can view their own witness statements" ON public.witness_statements FOR SELECT USING (auth.uid() = created_by);
 
 -- 6. Security Hardening

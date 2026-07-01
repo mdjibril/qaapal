@@ -166,7 +166,10 @@ def display_report_item(r, current_user_id, current_user_role, table_type):
                 with st.spinner("Loading content..."):
                     # Fetch the heavy text content only when the expander is opened
                     col_to_fetch = "report_text" if target_table == "assessment_reports" else "statement_text"
-                    res = get_admin_supabase().table(target_table).select(col_to_fetch).eq("id", report_id).single().execute()
+                    query = get_admin_supabase().table(target_table).select(col_to_fetch).eq("id", report_id)
+                    if current_user_role != 'admin':
+                        query = query.eq("created_by", current_user_id)
+                    res = query.single().execute()
                     text_content = res.data.get(col_to_fetch) if res.data else "Error: Content not found."
                     st.session_state.report_content_cache[cache_key] = text_content
             # ---------------------------
@@ -356,7 +359,10 @@ def main():
                             admin_client = get_admin_supabase()
                             ids_to_dl = list(st.session_state.selected_report_ids)
                             col_to_fetch = "report_text" if target_table == "assessment_reports" else "statement_text"
-                            res = admin_client.table(target_table).select(f"*, user_profiles!created_by(full_name)").in_("id", ids_to_dl).execute()
+                            query = admin_client.table(target_table).select(f"*, user_profiles!created_by(full_name)").in_("id", ids_to_dl)
+                            if role != 'admin':
+                                query = query.eq("created_by", user_id)
+                            res = query.execute()
                             full_reports = res.data
                             if full_reports:
                                 for r in full_reports:
