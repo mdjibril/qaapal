@@ -82,3 +82,30 @@ This document outlines the high-conversion launch sequence for `nsqassessment.co
 
 ---
 *Developed for QAAPAL v1.1.0*
+
+---
+
+## 🔑 How to Get Your Own API Keys (For Platform Pass Users)
+
+If you are on the **Platform Pass**, you can bring your own API keys to generate unlimited reports without depleting credits. Here is how to get them:
+
+### 1. Google Gemini (Recommended for best quality)
+1. Go to [Google AI Studio](https://aistudio.google.com/).
+2. Sign in with your Google account.
+3. Click on **Get API Key** in the left sidebar.
+4. Click **Create API Key**.
+5. Copy the generated key and paste it into the "Gemini API Key" field in the sidebar of the NSQ Assessment Portal.
+
+### 2. Groq (Recommended for lightning-fast generation)
+1. Go to the [Groq Console](https://console.groq.com/keys).
+2. Create an account or sign in.
+3. Navigate to **API Keys** in the left menu.
+4. Click **Create API Key**.
+5. Copy the key and paste it into the "Groq API Key" field in the app.
+
+### 3. OpenRouter (Access to various open-source models)
+1. Go to [OpenRouter](https://openrouter.ai/).
+2. Sign in or create an account.
+3. Click on your profile in the top right, then go to **Keys**.
+4. Click **Create Key**.
+5. Copy the key and paste it into the "OpenRouter API Key" field in the app.

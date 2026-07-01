@@ -142,8 +142,8 @@ To effectively manage the SaaS platform and monitor system health, a dedicated S
 ## Verification Plan
 
 ### Manual Verification
-1.  **Sign-up Flow:** Register a new user. Verify organization creation in Supabase with **10 credits** and 'free' tier.
-2.  **Freemium Limits & Deduction:** Generate 10 reports. Verify `credits_balance` decrements each time in both the UI and Supabase. Ensure the 11th attempt triggers the `st.dialog` paywall.
+1.  **Sign-up Flow:** Register a new user. Verify organization creation in Supabase with **5 credits** and 'free' tier.
+2.  **Freemium Limits & Deduction:** Generate 5 reports. Verify `credits_balance` decrements each time in both the UI and Supabase. Ensure the 6th attempt triggers the `st.dialog` paywall.
 3.  **API Key Rotation:** Configure multiple Gemini keys in secrets. Simulate a `ResourceExhausted` (429) error and verify the system transparently rotates to the next key.
 4.  **Multi-Provider Fallback:** Deplete or disable all Gemini keys. Verify the system automatically falls back to Groq or OpenRouter using the designated fallback models and keys.
 5.  **BYOK Unlock:** Upgrade to 'platform_pass'. Verify the sidebar reveals provider settings and allows generation without credit deduction.
