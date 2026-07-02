@@ -1,6 +1,6 @@
 import streamlit as st
 from auth_utils import check_auth, login_form, get_secret, reset_password_form, finalize_session
-import dashboard, history, admin_nos, admin_users, admin_feedback, personal_statement, witness_statement, subscription_page, database as db
+import dashboard, history, admin_nos, admin_users, admin_feedback, admin_dashboard, personal_statement, witness_statement, subscription_page, database as db
 from ai_utils import validate_and_generate
 
 st.set_page_config(
@@ -259,6 +259,7 @@ else:
             "💳 My Subscription": subscription_page.main
         }
         if role == 'admin':
+            pages["🛡️ Super Admin Dashboard"] = admin_dashboard.main
             pages["📚 Manage NOS"] = admin_nos.main
             pages["👥 User Management"] = admin_users.main
             pages["💬 View Feedback"] = admin_feedback.main

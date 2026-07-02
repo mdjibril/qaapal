@@ -141,6 +141,19 @@ To effectively manage the SaaS platform and monitor system health, a dedicated S
 
 ## Verification Plan
 
+### SEECURITY Verification
+*   [x] **IDOR Review - History Reads:** Verified report history access paths for `assessment_reports`, `student_statements`, and `witness_statements`. Confirmed non-admin list queries are scoped by `created_by = user_id`.
+*   [x] **IDOR Fix - Lazy Content Fetch:** Added ownership enforcement to the lazy report content fetch in `history.py`, so non-admin users can only load full text for records where `created_by` matches their user ID.
+*   [x] **IDOR Fix - Bulk ZIP Export:** Added ownership enforcement to the bulk download query in `history.py`, so selected IDs cannot be used to export another user's reports.
+*   [x] **IDOR Review - Delete Operations:** Verified single and bulk delete operations already apply `created_by = user_id` for non-admin users while allowing admin access.
+*   [x] **RLS Fix - Witness Statement Inserts:** Updated `setup_full_db.sql` to replace the broad authenticated insert policy with `WITH CHECK (auth.uid() = created_by)` for `public.witness_statements`.
+*   [x] **Login Page Security Review:** Reviewed login, sign-up, password reset, session finalization, and logout flow for stale user state and profile cross-reference risks.
+*   [x] **Session Cross-Reference Fix:** Removed caching from the user-scoped Supabase client in `auth_utils.py` because `postgrest.auth()` mutates the client with a bearer token and cached Streamlit resources can be shared across browser sessions.
+*   [x] **Session State Isolation:** Updated `finalize_session()` to clear old Streamlit session state before storing the newly authenticated user/session and loading profile/org data.
+*   [x] **Auth Consistency Check:** Tightened `check_auth()` so the app only treats authentication as valid when both `user_session` and `supabase_session` exist and refer to the same Supabase user.
+*   [x] **Verification Command:** Confirmed Python syntax with `python3 -m py_compile auth_utils.py main.py database.py history.py dashboard.py personal_statement.py witness_statement.py subscription_page.py`.
+*   [x] **Production DB Follow-Up:** Apply the updated witness statement RLS policy from `setup_full_db.sql` in the live Supabase SQL Editor if it has not already been applied.
+
 ### Manual Verification
 1.  **Sign-up Flow:** Register a new user. Verify organization creation in Supabase with **5 credits** and 'free' tier.
 2.  **Freemium Limits & Deduction:** Generate 5 reports. Verify `credits_balance` decrements each time in both the UI and Supabase. Ensure the 6th attempt triggers the `st.dialog` paywall.

@@ -47,7 +47,7 @@ def main():
                 
                 # --- PLAN MANAGEMENT SECTION ---
                 st.markdown("---")
-                st.subheader("🛠️ Plan Management")
+                st.subheader("🛠️ Plan & Credit Management")
                 
                 # Filter out admins for management to prevent self-lockout
                 manageable_df = df[df['Role'] != 'admin']
@@ -56,23 +56,40 @@ def main():
                     selected_users = st.multiselect(
                         "Select Users to Update (Batch or Single)",
                         options=manageable_df.to_dict('records'),
-                        format_func=lambda x: f"{x['Full Name']} ({x['Email']}) | Current: {x['Plan']}"
+                        format_func=lambda x: f"{x['Full Name']} ({x['Email']}) | Plan: {x['Plan']} | Credits: {x['Credits']}"
                     )
                     
                     if selected_users:
-                        new_tier = st.selectbox(
-                            "Select Target Plan", 
-                            ['free', 'platform_pass', 'pro', 'enterprise'],
-                            format_func=lambda x: x.replace('_', ' ').title()
-                        )
+                        col_plan, col_cred = st.columns(2)
                         
-                        if st.button(f"Apply {new_tier.title()} to {len(selected_users)} Account(s)"):
-                            with st.spinner("Updating subscription tiers..."):
-                                for user in selected_users:
-                                    if user['org_id']:
-                                        db.upgrade_org_tier(user['org_id'], new_tier)
-                                st.success("Update complete!")
-                                st.rerun()
+                        with col_plan:
+                            new_tier = st.selectbox(
+                                "Select Target Plan", 
+                                ['free', 'platform_pass', 'pro', 'enterprise'],
+                                format_func=lambda x: x.replace('_', ' ').title()
+                            )
+                            if st.button(f"Apply {new_tier.title()} Plan"):
+                                with st.spinner("Updating subscription tiers..."):
+                                    for user in selected_users:
+                                        if user['org_id']:
+                                            db.upgrade_org_tier(user['org_id'], new_tier)
+                                    st.success("Plan update complete!")
+                                    st.rerun()
+                                    
+                        with col_cred:
+                            if len(selected_users) == 1:
+                                current_cred = selected_users[0]['Credits']
+                                new_credits = st.number_input("Set Credit Balance", min_value=0, value=int(current_cred), step=1)
+                                if st.button("Update Credits"):
+                                    if selected_users[0]['org_id']:
+                                        success, err = db.update_org_credits(selected_users[0]['org_id'], new_credits)
+                                        if success:
+                                            st.success("Credits updated successfully!")
+                                            st.rerun()
+                                        else:
+                                            st.error(f"Failed to update credits: {err}")
+                            else:
+                                st.info("Credit adjustments must be done for a single user at a time.")
                 else:
                     st.info("No student or assessor accounts found to manage.")
 

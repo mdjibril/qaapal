@@ -196,12 +196,14 @@ def login_form():
 
         if st.button("Create Free Account"):
             # Validation Logic
-            if new_password != new_password_confirm:
+            if not new_email or not new_password or not new_password_confirm or not full_name or not org_name or not primary_trade_choice:
+                st.error("Please fill in all text fields before submitting.")
+            elif marketing_source == "Select an option" or assessor_role == "Select your role":
+                st.error("Please select an option for all dropdown fields.")
+            elif new_password != new_password_confirm:
                 st.error("Passwords do not match.")
             elif len(new_password) < 6:
                 st.error("Password must be at least 6 characters.")
-            elif not full_name or not org_name or marketing_source == "Select an option" or assessor_role == "Select your role":
-                st.error("Please fill in all required fields, including your NSQ Role.")
             elif not tos_consent:
                 st.error("You must agree to the Terms of Service to continue.")
             else:

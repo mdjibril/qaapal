@@ -254,3 +254,39 @@ def render_feedback_widget(source_page: str):
             if ok:
                 st.session_state[fb_key] = True
                 st.rerun(scope="fragment")
+
+def fetch_system_metrics():
+    """Fetches high level counts for the superadmin dashboard."""
+    supabase = get_admin_supabase()
+    metrics = {"total_users": 0, "total_orgs": 0, "total_reports": 0}
+    try:
+        res_users = supabase.table("user_profiles").select("id", count="exact").execute()
+        metrics["total_users"] = res_users.count if hasattr(res_users, 'count') and res_users.count else len(res_users.data)
+        
+        res_orgs = supabase.table("organizations").select("id", count="exact").execute()
+        metrics["total_orgs"] = res_orgs.count if hasattr(res_orgs, 'count') and res_orgs.count else len(res_orgs.data)
+        
+        res_reports = supabase.table("assessment_reports").select("id", count="exact").execute()
+        metrics["total_reports"] = res_reports.count if hasattr(res_reports, 'count') and res_reports.count else len(res_reports.data)
+    except Exception as e:
+        print(f"Metrics fetch error: {e}")
+    return metrics
+
+def fetch_recent_reports(limit=50):
+    """Fetches recent reports for QA by admins."""
+    supabase = get_admin_supabase()
+    try:
+        response = supabase.table("assessment_reports").select("*").order("created_at", desc=True).limit(limit).execute()
+        return response.data
+    except Exception as e:
+        print(f"Error fetching recent reports: {e}")
+        return []
+
+def update_org_credits(org_id, new_balance):
+    """Manually adjust credits for an organization."""
+    supabase = get_admin_supabase()
+    try:
+        supabase.table("organizations").update({"credits_balance": new_balance}).eq("id", org_id).execute()
+        return True, None
+    except Exception as e:
+        return False, str(e)
