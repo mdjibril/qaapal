@@ -226,7 +226,7 @@ def main():
 
                 ### CRITERIA INTEGRATION & MAPPING
                 14. **Reverse-Engineer the PC**: Look at the PC description and describe the minimum necessary action to prove that specific criteria. 
-                15. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria. Format: (UnitCode - LO#:PC #, #; LO#:PC #, #). Example: (ICT/SMC/004/L2 - LO3:PC 3.3).
+                15. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria. The format MUST BE EXACTLY: (UnitCode - LO#:PC #.#). Do NOT deviate from this format. Example: (ICT/SMC/004/L2 - LO3:PC 3.3). NEVER omit the "LO" prefix.
                 16. **Exhaustive Usage**: You MUST use every PC provided in the user's list exactly once. Do not hallucinate or invent PC codes. Weave 2-3 PCs logically into every paragraph.
                 </strict_rules>
 

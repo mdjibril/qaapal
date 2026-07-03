@@ -141,86 +141,94 @@ def display_report_item(r, current_user_id, current_user_role, table_type):
         except Exception:
             display_units = unit_codes
 
-    col_checkbox, col_expander = st.columns([0.05, 0.95]) # Adjusted column width for checkbox
-    with col_checkbox:
-        st.checkbox(
-            "Select report",
-            key=selection_key,
-            on_change=_on_checkbox_change,
-            args=(report_id,),
-            label_visibility="collapsed"
-        )
-    
-    with col_expander:
-        # Unified minimal header style with icons including trade name
-        with st.expander(f"📅 {display_date} | 👤 {r.get('student_name') or r.get('candidate_name')} | 🎓 {trade_name} | 📚 Units:{display_units}"):
-            # --- LAZY LOADING BLOCK ---
-            table_map = {"Assessment Reports": "assessment_reports", "Personal Statements": "student_statements", "Witness Statements": "witness_statements"}
-            target_table = table_map.get(table_type)
-            
-            cache_key = f"{target_table}_{report_id}"
-            
-            if cache_key in st.session_state.report_content_cache:
-                text_content = st.session_state.report_content_cache[cache_key]
-            else:
-                with st.spinner("Loading content..."):
-                    # Fetch the heavy text content only when the expander is opened
-                    col_to_fetch = "report_text" if target_table == "assessment_reports" else "statement_text"
-                    query = get_admin_supabase().table(target_table).select(col_to_fetch).eq("id", report_id)
-                    if current_user_role != 'admin':
-                        query = query.eq("created_by", current_user_id)
-                    res = query.single().execute()
-                    text_content = res.data.get(col_to_fetch) if res.data else "Error: Content not found."
-                    st.session_state.report_content_cache[cache_key] = text_content
-            # ---------------------------
+    with st.container(border=True):
+        col_checkbox, col_info = st.columns([0.05, 0.95])
+        with col_checkbox:
+            st.markdown("<br>", unsafe_allow_html=True) # visual alignment spacer
+            st.checkbox(
+                "Select report",
+                key=selection_key,
+                on_change=_on_checkbox_change,
+                args=(report_id,),
+                label_visibility="collapsed"
+            )
+        
+        with col_info:
+            candidate_name = r.get('student_name') or r.get('candidate_name')
+            st.markdown(f"**{candidate_name}** — {trade_name}")
+            st.caption(f"📅 **{display_date}** | 📚 **Units:** {display_units}")
 
-            st.write(text_content)
-
-            # Determine which export function to use
-            if table_type == "Assessment Reports":
-                doc_bytes = export_to_word(
-                    r['student_name'], 
-                    display_date, 
-                    text_content, 
-                    report_assessor_name,
-                    report_assessor_id,
-                    selected_pcs=unit_codes
-                )
-            elif table_type == "Personal Statements":
-                doc_bytes = export_personal_statement_to_word(
-                    r['student_name'],
-                    display_date,
-                    text_content,
-                    selected_pcs=unit_codes
-                )
-            elif table_type == "Witness Statements":
-                doc_bytes = export_witness_to_word(
-                    r.get('witness_name', 'Witness'),
-                    r.get('witness_role', 'Supervisor'),
-                    r.get('candidate_name', 'Student'),
-                    display_date,
-                    text_content,
-                    selected_pcs=unit_codes
-                )
-            else:
-                doc_bytes = None
-
-            if doc_bytes:
-                st.download_button(
-                    label="📥 Download Word",
-                    data=doc_bytes,
-                    file_name=f"NSQ_{r.get('student_name') or r.get('candidate_name')}.docx",
-                    key=f"dl_{report_id}"
-                )
-            
-            # Single deletion button
-            if current_user_role == 'admin' or r.get('created_by') == current_user_id:
+            with st.expander("View Content & Actions"):
+                # --- LAZY LOADING BLOCK ---
                 table_map = {"Assessment Reports": "assessment_reports", "Personal Statements": "student_statements", "Witness Statements": "witness_statements"}
-                if st.button("🗑️ Delete Report", key=f"delete_single_{report_id}"):
-                    with st.spinner("Deleting report..."):
-                        if _delete_report(report_id, current_user_role, current_user_id, table_map[table_type]):
-                            st.toast(f"Report for {r.get('student_name')} deleted.", icon="✅")
-                            st.rerun()
+                target_table = table_map.get(table_type)
+                
+                cache_key = f"{target_table}_{report_id}"
+                
+                if cache_key in st.session_state.report_content_cache:
+                    text_content = st.session_state.report_content_cache[cache_key]
+                else:
+                    with st.spinner("Loading content..."):
+                        # Fetch the heavy text content only when the expander is opened
+                        col_to_fetch = "report_text" if target_table == "assessment_reports" else "statement_text"
+                        query = get_admin_supabase().table(target_table).select(col_to_fetch).eq("id", report_id)
+                        if current_user_role != 'admin':
+                            query = query.eq("created_by", current_user_id)
+                        res = query.single().execute()
+                        text_content = res.data.get(col_to_fetch) if res.data else "Error: Content not found."
+                        st.session_state.report_content_cache[cache_key] = text_content
+                # ---------------------------
+
+                st.write(text_content)
+                st.divider()
+
+                # Determine which export function to use
+                if table_type == "Assessment Reports":
+                    doc_bytes = export_to_word(
+                        r['student_name'], 
+                        display_date, 
+                        text_content, 
+                        report_assessor_name,
+                        report_assessor_id,
+                        selected_pcs=unit_codes
+                    )
+                elif table_type == "Personal Statements":
+                    doc_bytes = export_personal_statement_to_word(
+                        r['student_name'],
+                        display_date,
+                        text_content,
+                        selected_pcs=unit_codes
+                    )
+                elif table_type == "Witness Statements":
+                    doc_bytes = export_witness_to_word(
+                        r.get('witness_name', 'Witness'),
+                        r.get('witness_role', 'Supervisor'),
+                        r.get('candidate_name', 'Student'),
+                        display_date,
+                        text_content,
+                        selected_pcs=unit_codes
+                    )
+                else:
+                    doc_bytes = None
+
+                c1, c2 = st.columns(2)
+                with c1:
+                    if doc_bytes:
+                        st.download_button(
+                            label="📥 Download Word Document",
+                            data=doc_bytes,
+                            file_name=f"NSQ_{candidate_name}.docx",
+                            key=f"dl_{report_id}",
+                            use_container_width=True
+                        )
+                with c2:
+                    # Single deletion button
+                    if current_user_role == 'admin' or r.get('created_by') == current_user_id:
+                        if st.button("🗑️ Delete Report", key=f"delete_single_{report_id}", use_container_width=True):
+                            with st.spinner("Deleting report..."):
+                                if _delete_report(report_id, current_user_role, current_user_id, table_map[table_type]):
+                                    st.toast(f"Report for {candidate_name} deleted.", icon="✅")
+                                    st.rerun()
 
 def main():
     st.title("📋 Assessment History")
@@ -272,11 +280,21 @@ def main():
             st.cache_data.clear()
 
     # Search and Filter implementation at the top
-    col_search, col_date = st.columns([0.6, 0.4])
+    col_search, col_date, col_size = st.columns([0.5, 0.3, 0.2])
     with col_search:
         search_input = st.text_input("Search reports by student name or content", value=st.session_state.search_query)
     with col_date:
         date_input = st.date_input("Filter by Date Range", value=st.session_state.date_filter_state, key="date_picker")
+    with col_size:
+        page_size_options = [20, 50, 100, 500]
+        current_page_size = st.session_state.get('history_page_size', 20)
+        idx = page_size_options.index(current_page_size) if current_page_size in page_size_options else 0
+        page_size = st.selectbox("Items per page", page_size_options, index=idx, key="page_size_selector")
+        
+    if page_size != current_page_size:
+        st.session_state.history_page_size = page_size
+        st.session_state.history_page = 1
+        st.rerun()
     
     # Reset page if search query or date changes
     if search_input != st.session_state.search_query or date_input != st.session_state.date_filter_state:
@@ -284,8 +302,7 @@ def main():
         st.session_state.date_filter_state = date_input
         st.session_state.history_page = 1
         st.cache_data.clear()
-
-    page_size = 20
+        st.rerun()
     
     # Fetch with loading spinner
     with st.spinner("Loading reports..."):

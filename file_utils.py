@@ -96,7 +96,7 @@ def parse_report_chunks(text):
     raw_lines = [line.strip() for line in text.splitlines() if line.strip()]
     merged_lines = []
     for line in raw_lines:
-        if line.startswith("(") and " - LO" in line and merged_lines:
+        if re.match(r'^\([A-Z0-9/]+\s*-\s*(?:LO)?\s*\d+', line) and merged_lines:
             merged_lines[-1] = f"{merged_lines[-1]} {line}"
         else:
             merged_lines.append(line)
@@ -104,7 +104,7 @@ def parse_report_chunks(text):
     chunks = []
     
     for line in merged_lines:
-        parts = re.split(r'(\([A-Z0-9/]+\s*-\s*LO[^)]+\))', line)
+        parts = re.split(r'(\([A-Z0-9/]+\s*-\s*(?:LO)?\s*\d+[^)]*\))', line)
         
         line_chunks = []
         narrative_acc = ""
@@ -114,7 +114,7 @@ def parse_report_chunks(text):
             if not part:
                 continue
                 
-            if re.match(r'^\([A-Z0-9/]+\s*-\s*LO[^)]+\)$', part):
+            if re.match(r'^\([A-Z0-9/]+\s*-\s*(?:LO)?\s*\d+[^)]*\)$', part):
                 mapping_str = part[1:-1]
                 u_num, mapping = _parse_single_mapping(mapping_str)
                 # Clean up any trailing punctuation on the narrative
