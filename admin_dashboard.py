@@ -32,7 +32,7 @@ def main():
                 # Select important columns for viewing
                 view_cols = ['created_at', 'student_name', 'trade_id', 'created_by']
                 available_cols = [c for c in view_cols if c in df.columns]
-                st.dataframe(df[available_cols] if available_cols else df, use_container_width=True)
+                st.dataframe(df[available_cols] if available_cols else df, width='stretch')
                 
                 # Allow inspecting a specific report
                 st.markdown("---")
@@ -48,14 +48,23 @@ def main():
         st.write("Current API configuration loaded from `st.secrets`:")
         
         # We don't expose actual keys, just their presence
-        gemini_present = "gemini_api_key" in st.secrets
-        groq_present = "groq_api_key" in st.secrets
-        vertex_present = "vertex_ai" in st.secrets
+        import os
+        try:
+            gemini_present = "INTERNAL_AI_KEY" in st.secrets or "INTERNAL_AI_KEY" in os.environ
+            groq_present = "GROQ_API_KEY" in st.secrets or "GROQ_API_KEY" in os.environ
+            openrouter_present = "OPENROUTER_API_KEY" in st.secrets or "OPENROUTER_API_KEY" in os.environ
+            vertex_present = "vertex_ai" in st.secrets or "VERTEX_AI" in os.environ
+        except Exception:
+            gemini_present = "INTERNAL_AI_KEY" in os.environ
+            groq_present = "GROQ_API_KEY" in os.environ
+            openrouter_present = "OPENROUTER_API_KEY" in os.environ
+            vertex_present = "VERTEX_AI" in os.environ
         
-        c1, c2, c3 = st.columns(3)
+        c1, c2, c3, c4 = st.columns(4)
         c1.metric("Gemini Key", "Configured" if gemini_present else "Missing")
         c2.metric("Groq Key", "Configured" if groq_present else "Missing")
-        c3.metric("Vertex AI", "Configured" if vertex_present else "Missing")
+        c3.metric("Openrouter Key", "Configured" if openrouter_present else "Missing")
+        c4.metric("Vertex AI", "Configured" if vertex_present else "Missing")
         
         st.info("API Routing fallback strategy is currently managed directly via Streamlit secrets and environment variables.")
         
@@ -67,5 +76,5 @@ def main():
             {"date": "2026-07-01 10:00", "provider": "Selar", "status": "SUCCESS", "amount": "₦7000", "org_email": "test@org.com"},
             {"date": "2026-07-02 08:30", "provider": "Monnify", "status": "FAILED", "amount": "₦7000", "org_email": "failed@org.com"}
         ]
-        st.dataframe(pd.DataFrame(mock_logs), use_container_width=True)
+        st.dataframe(pd.DataFrame(mock_logs), width='stretch')
         st.info("Note: Actual webhook processing runs externally via your email listener updating Supabase functions.")

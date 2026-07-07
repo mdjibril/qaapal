@@ -56,7 +56,7 @@ def main():
                     "User Email": st.column_config.TextColumn("User Email", width="medium")
                 },
                 hide_index=True,
-                use_container_width=True
+                width='stretch'
             )
         else:
             st.info("No feedback has been submitted yet.")

@@ -219,12 +219,12 @@ def display_report_item(r, current_user_id, current_user_role, table_type):
                             data=doc_bytes,
                             file_name=f"NSQ_{candidate_name}.docx",
                             key=f"dl_{report_id}",
-                            use_container_width=True
+                            width='stretch'
                         )
                 with c2:
                     # Single deletion button
                     if current_user_role == 'admin' or r.get('created_by') == current_user_id:
-                        if st.button("🗑️ Delete Report", key=f"delete_single_{report_id}", use_container_width=True):
+                        if st.button("🗑️ Delete Report", key=f"delete_single_{report_id}", width='stretch'):
                             with st.spinner("Deleting report..."):
                                 if _delete_report(report_id, current_user_role, current_user_id, table_map[table_type]):
                                     st.toast(f"Report for {candidate_name} deleted.", icon="✅")
