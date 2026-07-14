@@ -120,11 +120,14 @@ else:
             col_cred.caption(f"**Credits:** {credit_display}")
             
             if not is_superadmin and tier == 'free' and credits == 0:
-                st.error("Out of credits! Upgrade to Platform Pass.")
+                st.error("Out of credits!")
                 selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
+                selar_lifetime_base = get_secret(["payments", "selar_lifetime_link"], "payments__selar_lifetime_link") or "https://selar.com/nsqassessment-lifetime"
                 user_email = st.session_state.user_session.email
                 upgrade_link = f"{selar_base}?email={user_email}"
-                st.link_button("🚀 Upgrade Now", upgrade_link, width="stretch")
+                lifetime_upgrade_link = f"{selar_lifetime_base}?email={user_email}"
+                st.link_button("🚀 Upgrade to Platform Pass", upgrade_link, use_container_width=True)
+                st.link_button("💎 Get Lifetime Tier", lifetime_upgrade_link, use_container_width=True)
 
     st.session_state.assessor_name = st.session_state.get('assessor_full_name', 'Jibril Dauda Muhammad')
     name = st.session_state.assessor_name

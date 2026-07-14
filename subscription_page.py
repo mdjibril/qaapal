@@ -14,8 +14,10 @@ def main():
     subscription_start_date_str = st.session_state.get('subscription_start_date')
     
     selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
+    selar_lifetime_base = get_secret(["payments", "selar_lifetime_link"], "payments__selar_lifetime_link") or "https://selar.com/nsqassessment-lifetime"
     user_email = st.session_state.user_session.email
     upgrade_link = f"{selar_base}?email={user_email}"
+    lifetime_upgrade_link = f"{selar_lifetime_base}?email={user_email}"
     
     st.markdown("---")
     st.subheader("Current Plan Details")
@@ -82,7 +84,7 @@ def main():
         with col_up1:
             st.link_button("🚀 Upgrade to Platform Pass (₦3,500/mo)", upgrade_link, type="primary", use_container_width=True)
         with col_up2:
-            st.link_button("💎 Get Lifetime Tier (₦10,000 One-time)", upgrade_link, type="secondary", use_container_width=True)
+            st.link_button("💎 Get Lifetime Tier (₦10,000 One-time)", lifetime_upgrade_link, type="secondary", use_container_width=True)
             
     st.markdown("---")
     st.caption("For enterprise solutions or custom plans, please contact sales.")

@@ -117,10 +117,16 @@ def main():
 
     if is_out_of_credits:
         selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
+        selar_lifetime_base = get_secret(["payments", "selar_lifetime_link"], "payments__selar_lifetime_link") or "https://selar.com/nsqassessment-lifetime"
         user_email = st.session_state.user_session.email
         upgrade_link = f"{selar_base}?email={user_email}"
-        st.warning("⚠️ You have 0 credits remaining. Upgrade to the **Platform Pass** to continue generating statements.")
-        st.link_button("🚀 Upgrade to Platform Pass", upgrade_link)
+        lifetime_upgrade_link = f"{selar_lifetime_base}?email={user_email}"
+        st.warning("⚠️ You have 0 credits remaining. Upgrade to continue generating statements.")
+        col_up1, col_up2 = st.columns(2)
+        with col_up1:
+            st.link_button("🚀 Upgrade to Platform Pass", upgrade_link, use_container_width=True)
+        with col_up2:
+            st.link_button("💎 Get Lifetime Tier", lifetime_upgrade_link, use_container_width=True)
 
     if st.button("Generate My Statement", type="primary", disabled=is_out_of_credits):
         if not reflection:

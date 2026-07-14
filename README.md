@@ -74,6 +74,7 @@ A professional AI-powered assessment report generator for the National Skills Qu
    
    [payments]
    selar_link = "https://selar.co/your-link"
+   selar_lifetime_link = "https://selar.co/your-lifetime-link"
    
    [SITE_URL]
    "https://app.nsqassessment.com.ng"
@@ -99,6 +100,8 @@ A professional AI-powered assessment report generator for the National Skills Qu
    - `connections__supabase__ANON_KEY`
    - `connections__supabase__SERVICE_ROLE_KEY`
    - `vertex_ai__service_account_json`
+   - `payments__selar_link`
+   - `payments__selar_lifetime_link`
    - `BRIDGE_SECRET` (For webhook security)
 3. **Start Command:** Railway should detect the `requirements.txt` and python environment. Ensure your start command is:
    ```bash
