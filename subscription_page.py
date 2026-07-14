@@ -69,9 +69,20 @@ def main():
     elif current_tier == 'free':
         st.markdown("---")
         st.subheader("Upgrade Your Plan")
-        st.info(f"You are currently on the Free plan with {credits_balance} reports remaining.")
-        st.write("Upgrade to **Platform Pass** for unlimited report generations and advanced features!")
-        st.link_button("🚀 Upgrade to Platform Pass (₦7,000/month)", upgrade_link, type="primary", width="stretch")
+        
+        if credits_balance <= 0:
+            st.error("You have run out of free credits.")
+            st.info("💡 You can wait for 7 days for your free credits to automatically renew, or upgrade now for unlimited access!")
+        else:
+            st.info(f"You are currently on the Free plan with {credits_balance} reports remaining.")
+            
+        st.write("Upgrade to **Platform Pass** or our **Lifetime Tier** for unlimited report generations and advanced features!")
+        
+        col_up1, col_up2 = st.columns(2)
+        with col_up1:
+            st.link_button("🚀 Upgrade to Platform Pass (₦3,500/mo)", upgrade_link, type="primary", use_container_width=True)
+        with col_up2:
+            st.link_button("💎 Get Lifetime Tier (₦10,000 One-time)", upgrade_link, type="secondary", use_container_width=True)
             
     st.markdown("---")
     st.caption("For enterprise solutions or custom plans, please contact sales.")

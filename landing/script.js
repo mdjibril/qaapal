@@ -169,4 +169,99 @@ document.addEventListener('DOMContentLoaded', () => {
         // Run once on load to set initial state
         handleScroll();
     }
+
+    // ----------------------------------------------------
+    // 6. Testimonials Carousel (Endless 3D Rotate)
+    // ----------------------------------------------------
+    const track = document.getElementById('carouselTrack');
+    if (track) {
+        const slides = Array.from(track.children);
+        let currentIndex = 0;
+        let carouselInterval;
+
+        function updateContainerHeight() {
+            let maxHeight = 0;
+            slides.forEach(slide => {
+                slide.style.position = 'relative'; // temporarily relative to measure
+                const h = slide.getBoundingClientRect().height;
+                if (h > maxHeight) maxHeight = h;
+                slide.style.position = 'absolute'; // revert
+            });
+            track.parentElement.style.height = `${maxHeight + 40}px`; // Add padding
+        }
+
+        function updateCarousel() {
+            const total = slides.length;
+            slides.forEach((slide, index) => {
+                // Calculate relative position to active slide
+                let rel = (index - (currentIndex % total));
+                
+                // Wrap around for seamless infinite rotation
+                if (rel > Math.floor(total / 2)) rel -= total;
+                if (rel < -Math.floor(total / 2)) rel += total;
+                
+                if (rel === 0) {
+                    // Active slide in the middle
+                    slide.style.transform = `translateX(0) scale(1)`;
+                    slide.style.opacity = '1';
+                    slide.style.zIndex = '5';
+                    slide.style.pointerEvents = 'auto';
+                } else if (Math.abs(rel) === 1) {
+                    // Immediate siblings
+                    const sign = Math.sign(rel);
+                    slide.style.transform = `translateX(${sign * 70}%) scale(0.85)`;
+                    slide.style.opacity = '0.4';
+                    slide.style.zIndex = '4';
+                    slide.style.pointerEvents = 'auto';
+                } else {
+                    // Outer siblings (wrap behind)
+                    const sign = Math.sign(rel);
+                    slide.style.transform = `translateX(${sign * 110}%) scale(0.65)`;
+                    slide.style.opacity = '0.1';
+                    slide.style.zIndex = '3';
+                    slide.style.pointerEvents = 'none';
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex++;
+            updateCarousel();
+        }
+
+        function startCarousel() {
+            carouselInterval = setInterval(nextSlide, 4500); // Wait 4.5s
+        }
+
+        function stopCarousel() {
+            clearInterval(carouselInterval);
+        }
+
+        slides.forEach((slide, index) => {
+            slide.addEventListener('click', () => {
+                const total = slides.length;
+                let rel = (index - (currentIndex % total));
+                if (rel > Math.floor(total / 2)) rel -= total;
+                if (rel < -Math.floor(total / 2)) rel += total;
+                
+                if (rel !== 0) {
+                    currentIndex += rel;
+                    updateCarousel();
+                    stopCarousel();
+                    startCarousel();
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            updateContainerHeight();
+            updateCarousel();
+        });
+        
+        setTimeout(() => {
+            updateContainerHeight();
+            updateCarousel();
+            startCarousel();
+        }, 150);
+    }
 });

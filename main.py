@@ -194,7 +194,8 @@ else:
 
     if show_byok:
         with st.sidebar.expander("📡 AI Provider Settings", expanded=False):
-            st.session_state.ai_provider = st.selectbox("Provider", ["Gemini", "Groq", "OpenRouter"])
+            providers = ["VertexAI", "Gemini", "Groq", "OpenRouter"] if role == 'admin' else ["Gemini", "Groq", "OpenRouter"]
+            st.session_state.ai_provider = st.selectbox("Provider", providers)
 
             # Initialize target_keys to empty list if not already set, or if provider changes
             if 'target_keys' not in st.session_state or st.session_state.get('last_provider') != st.session_state.ai_provider:
@@ -202,7 +203,11 @@ else:
                 st.session_state.last_verified_key = ""
                 st.session_state.last_provider = st.session_state.ai_provider
 
-            if st.session_state.ai_provider == "Gemini":
+            if st.session_state.ai_provider == "VertexAI":
+                st.session_state.target_keys = []
+                st.session_state.target_model = "gemini-2.5-flash"
+                st.info("Using Platform AI (Vertex AI)")
+            elif st.session_state.ai_provider == "Gemini":
                 st.text_input("Gemini API Key", type="password", key="gemini_api_key_input", on_change=update_api_key_session, args=("gemini_api_key_input",))
                 if not st.session_state.target_keys and "gemini_api_key_input" in st.session_state and st.session_state.gemini_api_key_input:
                     st.session_state.target_keys = [k.strip() for k in st.session_state.gemini_api_key_input.split(',') if k.strip()]
@@ -222,7 +227,12 @@ else:
             # For BYOK, target_keys will contain a single key. For platform, it might contain multiple.
             # We verify the first key in the list for display purposes.
             curr_keys_for_verification = st.session_state.get('target_keys', [])
-            if curr_keys_for_verification:
+            
+            # Skip manual verification flow if using VertexAI since it relies on secrets
+            if st.session_state.ai_provider == "VertexAI":
+                st.session_state.connection_success = True
+                st.session_state.connection_msg = "✅ Connected to Vertex AI"
+            elif curr_keys_for_verification:
                 first_key_for_verification = curr_keys_for_verification[0]
                 # Check if key changed or hasn't been verified yet
                 if first_key_for_verification != st.session_state.get('last_verified_key'):
@@ -232,6 +242,7 @@ else:
                         st.session_state.connection_success = ("✅ Connected" in str(res))
                         st.session_state.connection_msg = res
                 
+            if st.session_state.ai_provider != "VertexAI" and curr_keys_for_verification:
                 # Render the status
                 if st.session_state.get('connection_success'):
                     st.success(st.session_state.connection_msg)

@@ -40,6 +40,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
@@ -165,12 +166,12 @@
                     </div>
 
                     <!-- Platform Pass Card -->
-                    <div class="pricing-card featured" data-price-monthly="7000" data-price-yearly="5600">
+                    <div class="pricing-card featured" data-price-monthly="3500" data-price-yearly="2800">
                         <div class="badge">Most Popular</div>
                         <div class="card-header">
                             <h3>Platform Pass</h3>
                             <p>For active assessors who want to bring their own key (BYOK).</p>
-                            <div class="price">₦<span class="price-value">7,000</span><span
+                            <div class="price">₦<span class="price-value">3,500</span><span
                                     class="price-period">/month</span></div>
                             <div class="annual-billing-note"></div>
                         </div>
@@ -186,26 +187,27 @@
                             id="pricing-pass-btn">Upgrade to BYOK</a>
                     </div>
 
-                    <!-- Pro Card -->
-                    <div class="pricing-card" data-price-monthly="20000" data-price-yearly="16000">
-                        <div class="badge" style="background: #6b7280; color: white; border: none;">Coming Soon</div>
+                    <!-- Lifetime Card -->
+                    <div class="pricing-card">
+                        <div class="badge" style="background: #10b981; color: white; border: none;">Special Offer</div>
                         <div class="card-header">
-                            <h3>Pro</h3>
-                            <p>For professionals who want all-inclusive high-speed platform AI.</p>
-                            <div class="price">₦<span class="price-value">20,000</span><span
-                                    class="price-period">/month</span></div>
-                            <div class="annual-billing-note"></div>
+                            <h3>Lifetime Tier</h3>
+                            <p>For professionals who want all-inclusive high-speed platform access forever.</p>
+                            <div class="price" style="display: flex; flex-direction: row; align-items: baseline; justify-content: center; gap: 0.5rem; flex-wrap: nowrap;">
+                                <span style="text-decoration: line-through; color: #9ca3af; font-size: 1.2rem;">₦100,000</span>
+                                <span style="white-space: nowrap;">₦<span class="price-value-custom" style="font-size: 2.5rem; font-weight: 700;">10,000</span></span>
+                            </div>
+                            <div class="annual-billing-note">One-time payment</div>
                         </div>
                         <ul class="pricing-features">
                             <li><span>✓</span> <strong>Unlimited</strong> Report Generations</li>
-                            <li><span>✓</span> All-Inclusive Platform AI (Gemini Pro)</li>
-                            <li><span>✓</span> No personal API key setup needed</li>
+                            <li><span>✓</span> Bring Your Own Key (BYOK)</li>
+                            <li><span>✓</span> Connect Gemini, Groq, or OpenRouter</li>
                             <li><span>✓</span> Priority Word (.docx) Export</li>
                             <li><span>✓</span> Multi-trade workspace support</li>
                             <li><span>✓</span> Priority email & chat support</li>
                         </ul>
-                        <a href="#pricing" class="btn btn-outline card-btn" id="pricing-pro-btn"
-                            style="opacity: 0.6; cursor: not-allowed;">Coming Soon</a>
+                        <a href="https://app.nsqassessment.com.ng/?intent=signup" class="btn btn-primary card-btn" id="pricing-lifetime-btn">Get Lifetime Access</a>
                     </div>
 
                     <!-- Enterprise Card -->
@@ -287,7 +289,7 @@
                                 <th>Feature</th>
                                 <th>Free</th>
                                 <th>Platform Pass (BYOK)</th>
-                                <th>Pro</th>
+                                <th>Lifetime Tier</th>
                                 <th>Enterprise</th>
                             </tr>
                         </thead>
@@ -295,8 +297,8 @@
                             <tr>
                                 <td class="feature-name">Monthly Cost</td>
                                 <td>₦0</td>
-                                <td>₦7,000 / mo (₦5,600 annual)</td>
-                                <td>₦20,000 / mo (₦16,000 annual)</td>
+                                <td>₦3,500 / mo (₦2,800 annual)</td>
+                                <td><span style="text-decoration: line-through; color: #9ca3af; margin-right: 0.5rem;">₦100,000</span>₦10,000 (One-time)</td>
                                 <td>Custom</td>
                             </tr>
                             <tr>
@@ -310,7 +312,7 @@
                                 <td class="feature-name">AI Provider Model</td>
                                 <td>Platform AI (Gemini Flash)</td>
                                 <td>BYOK (Your choice of API)</td>
-                                <td>Platform AI (Gemini Pro)</td>
+                                <td>BYOK (Your choice of API)</td>
                                 <td>BYOK or Enterprise Billed</td>
                             </tr>
                             <tr>
@@ -414,6 +416,55 @@
             </div>
         </section>
 
+        <!-- Testimonial Section -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Testimonials</span>
+                    <h2>What Assessors Are Saying</h2>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide active">
+                            <div class="testimonial-content">
+                                <p>"This platform completely changed how I handle NSQ assessments. I went from spending hours formatting Word docs to just pasting my notes and getting a perfect mapping in seconds!"</p>
+                                <h4>Amina L.</h4>
+                                <span>Senior Assessor, Tech Skills</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="testimonial-content">
+                                <p>"The BYOK model is genius. I plugged in my own Gemini key and my reporting costs dropped to almost nothing. The quality of the generated narratives is outstanding."</p>
+                                <h4>Samuel D.</h4>
+                                <span>Vocational Instructor</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="testimonial-content">
+                                <p>"I love how it strictly adheres to NBTE standards. My external verifiers were incredibly impressed with the detail and structure of my latest portfolios."</p>
+                                <h4>Chinedu O.</h4>
+                                <span>Quality Assurance Manager</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="testimonial-content">
+                                <p>"No more struggling with mapping performance criteria. The AI understands the trade language perfectly. The Word export saves me so much time!"</p>
+                                <h4>Fatima Z.</h4>
+                                <span>Freelance Assessor</span>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="testimonial-content">
+                                <p>"The seamless integration and lightning-fast generations have doubled my productivity. This is an absolute game changer for our vocational center."</p>
+                                <h4>Yusuf M.</h4>
+                                <span>Vocational School Director</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- FAQ Section -->
         <section id="faq" class="faq-section">
             <div class="container">
@@ -495,6 +546,17 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('SW registered: ', registration);
+                }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>
