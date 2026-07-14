@@ -188,11 +188,11 @@ else:
             st.session_state.ai_provider = "VertexAI"
             st.session_state.target_model = "gemini-2.5-flash"
             st.session_state.target_keys = []
-        elif tier in ['pro', 'enterprise']:
-            st.sidebar.info("💼 Pro/Enterprise Plan: Coming Soon! (Using Platform AI)")
+        elif tier in ['lifetime', 'enterprise']:
+            st.sidebar.info("💎 Lifetime/Enterprise Plan: (Using Platform AI)")
             # Fall back to Platform AI to ensure app keeps functioning
             st.session_state.ai_provider = "VertexAI"
-            st.session_state.target_model = "gemini-1.5-flash"
+            st.session_state.target_model = "gemini-2.5-flash"
             st.session_state.target_keys = []
 
     if show_byok:

@@ -67,7 +67,13 @@ def main():
                 st.warning("Could not parse subscription start date. Please contact support.")
         else:
             st.warning("Subscription start date not found. Please contact support.")
-            
+
+    elif current_tier == 'lifetime':
+        st.markdown("---")
+        st.subheader("Subscription Status")
+        st.success("🎉 You are on the **Lifetime Tier**! You have permanent, unlimited access to all features.")
+        st.info("Your access never expires. Thank you for your one-time purchase!")
+
     elif current_tier == 'free':
         st.markdown("---")
         st.subheader("Upgrade Your Plan")

@@ -6,10 +6,16 @@ CREATE SCHEMA IF NOT EXISTS extensions;
 CREATE EXTENSION IF NOT EXISTS pg_trgm WITH SCHEMA extensions;
 
 -- 0.1 Organizations Table
+-- subscription_tier is a PostgreSQL ENUM type (not plain text)
+CREATE TYPE IF NOT EXISTS public.subscription_tier AS ENUM ('free', 'platform_pass', 'lifetime', 'enterprise');
+
+-- Migration-safe: add 'lifetime' in case the type already exists without it
+ALTER TYPE public.subscription_tier ADD VALUE IF NOT EXISTS 'lifetime';
+
 CREATE TABLE IF NOT EXISTS public.organizations (
     id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
     name text NOT NULL,
-    subscription_tier text DEFAULT 'free',
+    subscription_tier public.subscription_tier DEFAULT 'free',
     credits_balance int DEFAULT 5,
     master_api_key text,
     subscription_start_date timestamptz DEFAULT now(),
@@ -240,6 +246,7 @@ CREATE TRIGGER on_credit_update
 --     AND credits_balance = 0
 --     AND last_credit_depletion IS NOT NULL
 --     AND last_credit_depletion <= now() - interval '7 days';
+-- Valid tiers: 'free', 'platform_pass', 'lifetime', 'enterprise'
 --   $$
 -- );
 

@@ -65,7 +65,7 @@ def main():
                         with col_plan:
                             new_tier = st.selectbox(
                                 "Select Target Plan", 
-                                ['free', 'platform_pass', 'pro', 'enterprise'],
+                                ['free', 'platform_pass', 'lifetime', 'enterprise'],
                                 format_func=lambda x: x.replace('_', ' ').title()
                             )
                             if st.button(f"Apply {new_tier.title()} Plan"):
@@ -90,6 +90,43 @@ def main():
                                             st.error(f"Failed to update credits: {err}")
                             else:
                                 st.info("Credit adjustments must be done for a single user at a time.")
+                                
+                        # --- DANGER ZONE ---
+                        st.markdown("---")
+                        st.subheader("⚠️ Danger Zone")
+                        st.warning("Deleting users will permanently erase their accounts and all associated reports. This action cannot be undone.")
+                        
+                        if st.button("🗑️ Delete Selected Users & All Data", type="primary"):
+                            with st.spinner("Deleting users and their data..."):
+                                try:
+                                    admin_client = get_admin_supabase()
+                                    for user in selected_users:
+                                        user_id = user['id']
+                                        org_id  = user['org_id']
+
+                                        # 1. Delete associated data (schema uses ON DELETE SET NULL so we must be explicit)
+                                        admin_client.table('assessment_reports').delete().eq('created_by', user_id).execute()
+                                        admin_client.table('student_statements').delete().eq('created_by', user_id).execute()
+                                        admin_client.table('witness_statements').delete().eq('created_by', user_id).execute()
+                                        admin_client.table('product_feedback').delete().eq('user_id', user_id).execute()
+
+                                        # 2. Delete Auth User → cascades to user_profiles automatically
+                                        admin_client.auth.admin.delete_user(user_id)
+
+                                        # 3. Delete the organisation only if no other members remain
+                                        if org_id:
+                                            remaining = admin_client.table('user_profiles')\
+                                                .select('id', count='exact')\
+                                                .eq('org_id', org_id)\
+                                                .execute()
+                                            remaining_count = remaining.count if hasattr(remaining, 'count') and remaining.count is not None else len(remaining.data)
+                                            if remaining_count == 0:
+                                                admin_client.table('organizations').delete().eq('id', org_id).execute()
+
+                                    st.success("Successfully deleted users, their data, and empty organisations!")
+                                    st.rerun()
+                                except Exception as e:
+                                    st.error(f"Error during deletion: {e}")
                 else:
                     st.info("No student or assessor accounts found to manage.")
 
