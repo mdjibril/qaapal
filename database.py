@@ -26,7 +26,7 @@ def fetch_nested_nos(trade_id):
     try:
         response = supabase.table("units") \
             .select("code, title, learning_outcomes(lo_num, description, performance_criteria(pc_code, description))") \
-            .eq("trade_id", trade_id) \
+            .eq("trade_id", int(trade_id)) \
             .execute()
         
         raw_units = response.data
