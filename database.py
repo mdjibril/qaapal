@@ -19,7 +19,7 @@ def fetch_trades():
 
 @st.cache_data(ttl=3600)
 def fetch_nested_nos(trade_id):
-    supabase = get_supabase()
+    supabase = get_admin_supabase()
     
     # ONE query to rule them all: 
     # Fetch units -> their LOs -> their PCs in one nested structure
