@@ -186,13 +186,13 @@ else:
             else:
                 st.sidebar.info("Using Platform AI (Free Tier)")
             st.session_state.ai_provider = "VertexAI"
-            st.session_state.target_model = "gemini-2.5-flash"
+            st.session_state.target_model = "gemini-3.5-flash"
             st.session_state.target_keys = []
         elif tier in ['lifetime', 'enterprise']:
             st.sidebar.info("💎 Lifetime/Enterprise Plan: (Using Platform AI)")
             # Fall back to Platform AI to ensure app keeps functioning
             st.session_state.ai_provider = "VertexAI"
-            st.session_state.target_model = "gemini-2.5-flash"
+            st.session_state.target_model = "gemini-3.5-flash"
             st.session_state.target_keys = []
 
     if show_byok:
@@ -208,23 +208,35 @@ else:
 
             if st.session_state.ai_provider == "VertexAI":
                 st.session_state.target_keys = []
-                st.session_state.target_model = "gemini-2.5-flash"
+                st.session_state.target_model = "gemini-3.5-flash"
                 st.info("Using Platform AI (Vertex AI)")
             elif st.session_state.ai_provider == "Gemini":
                 st.text_input("Gemini API Key", type="password", key="gemini_api_key_input", on_change=update_api_key_session, args=("gemini_api_key_input",))
                 if not st.session_state.target_keys and "gemini_api_key_input" in st.session_state and st.session_state.gemini_api_key_input:
                     st.session_state.target_keys = [k.strip() for k in st.session_state.gemini_api_key_input.split(',') if k.strip()]
-                st.session_state.target_model = st.selectbox("Gemini Preference", ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2-flash", "gemini-2-flash-lite", "gemini-1.5-flash", "gemini-1.5-flash-lite"])
+                gemini_model_choice = st.selectbox("Gemini Preference", ["gemini-3.5-flash", "gemini-3.1-flash", "gemini-3.1-flash-lite", "Other (Custom)"])
+                if gemini_model_choice == "Other (Custom)":
+                    st.session_state.target_model = st.text_input("Custom Gemini Model", placeholder="e.g. gemini-3.1-pro-preview", key="gemini_custom_model")
+                else:
+                    st.session_state.target_model = gemini_model_choice
             elif st.session_state.ai_provider == "Groq":
                 st.text_input("Groq API Key", type="password", key="groq_api_key_input", on_change=update_api_key_session, args=("groq_api_key_input",))
                 if not st.session_state.target_keys and "groq_api_key_input" in st.session_state and st.session_state.groq_api_key_input:
                     st.session_state.target_keys = [st.session_state.groq_api_key_input.strip()]
-                st.session_state.target_model = st.selectbox("Groq Model", ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"])
+                groq_model_choice = st.selectbox("Groq Model", ["llama-3.3-70b-versatile", "llama-3.1-8b-instant", "Other (Custom)"])
+                if groq_model_choice == "Other (Custom)":
+                    st.session_state.target_model = st.text_input("Custom Groq Model", placeholder="e.g. llama-3.3-70b-specdec", key="groq_custom_model")
+                else:
+                    st.session_state.target_model = groq_model_choice
             elif st.session_state.ai_provider == "OpenRouter":
                 st.text_input("OpenRouter API Key", type="password", key="openrouter_api_key_input", on_change=update_api_key_session, args=("openrouter_api_key_input",))
                 if not st.session_state.target_keys and "openrouter_api_key_input" in st.session_state and st.session_state.openrouter_api_key_input:
                     st.session_state.target_keys = [st.session_state.openrouter_api_key_input.strip()]
-                st.session_state.target_model = st.selectbox("OpenRouter Model", ["google/gemini-2.0-flash-001", "nvidia/nemotron-3-super-120b-a12b:free", "poolside/laguna-m.1:free"])
+                or_model_choice = st.selectbox("OpenRouter Model", ["google/gemini-3.5-flash", "nvidia/nemotron-3-super-120b-a12b:free", "poolside/laguna-m.1:free", "Other (Custom)"])
+                if or_model_choice == "Other (Custom)":
+                    st.session_state.target_model = st.text_input("Custom OpenRouter Model", placeholder="e.g. anthropic/claude-3-haiku", key="or_custom_model")
+                else:
+                    st.session_state.target_model = or_model_choice
 
             # --- AUTOMATED VERIFICATION FLOW ---
             # For BYOK, target_keys will contain a single key. For platform, it might contain multiple.
