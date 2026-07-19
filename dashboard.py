@@ -6,82 +6,9 @@ from ai_utils import validate_and_generate
 from auth_utils import get_secret
 from security_utils import sanitize_text_input, sanitize_notes_input
 import database as db
+import components
 
-@st.fragment
-def render_nos_selection(nos_data):
-    """
-    Renders checkboxes in a fragment so clicking 
-    doesn't trigger a full-page reload/faint.
-    Uses a selectbox to prevent rendering thousands of widgets at once,
-    which can block the thread and cause healthcheck timeouts on platforms like Railway.
-    """
-    if 'persistent_selected_pcs' not in st.session_state:
-        st.session_state.persistent_selected_pcs = set()
-
-    def pc_callback(pc_val):
-        # Toggle PC in persistent set
-        if st.session_state[f"chk_{pc_val}"]:
-            st.session_state.persistent_selected_pcs.add(pc_val)
-        else:
-            st.session_state.persistent_selected_pcs.discard(pc_val)
-
-    def sync_unit_pcs(u_key, u_data, unit_code):
-        master_val = st.session_state[f"unit_all_{u_key}"]
-        for lo_key, pcs in u_data.items():
-            lo_id = lo_key.split(':')[0].replace("LO", "").strip()
-            for pc in pcs:
-                pc_val = f"{unit_code} - {lo_id} - {pc}"
-                st.session_state[f"chk_{pc_val}"] = master_val
-                if master_val:
-                    st.session_state.persistent_selected_pcs.add(pc_val)
-                else:
-                    st.session_state.persistent_selected_pcs.discard(pc_val)
-
-    def clear_all_pcs_callback():
-        st.session_state.persistent_selected_pcs.clear()
-        # Clear currently visible checkboxes
-        for key in st.session_state.keys():
-            if key.startswith("chk_") or key.startswith("unit_all_"):
-                st.session_state[key] = False
-
-    unit_titles = list(nos_data.keys())
-    
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        selected_unit_key = st.selectbox("Select a Unit to view criteria", unit_titles)
-    with col2:
-        st.markdown("<br>", unsafe_allow_html=True)
-        st.button("🗑️ Clear All Selections", on_click=clear_all_pcs_callback, key="dashboard_clear_all_pcs")
-
-    if selected_unit_key:
-        unit_code = selected_unit_key.split(':')[0]
-        
-        # Master checkbox for the entire unit
-        st.checkbox(
-            f"✅ Select All Performance Criteria for {unit_code}", 
-            key=f"unit_all_{selected_unit_key}",
-            on_change=sync_unit_pcs,
-            args=(selected_unit_key, nos_data[selected_unit_key], unit_code)
-        )
-
-        for lo_key, pcs in nos_data[selected_unit_key].items():
-            lo_id = lo_key.split(':')[0].replace("LO", "").strip()
-            with st.expander(lo_key, expanded=True):
-                for pc in pcs:
-                    pc_val = f"{unit_code} - {lo_id} - {pc}"
-                    chk_key = f"chk_{pc_val}"
-                    if chk_key not in st.session_state:
-                        st.session_state[chk_key] = pc_val in st.session_state.persistent_selected_pcs
-                        
-                    st.checkbox(
-                        pc, 
-                        key=chk_key,
-                        on_change=pc_callback,
-                        args=(pc_val,)
-                    )
-            
-    # Store the results in session state so the "Generate" button can access them
-    st.session_state.current_selected_pcs = list(st.session_state.persistent_selected_pcs)
+# Criteria selection is now handled by components.render_nos_selection
 
 def main():
 
@@ -145,7 +72,13 @@ def main():
         st.warning(f"No units found for trade ID {trade_id}.")
     else:
         # 2. Call the fragment
-        render_nos_selection(NOS_DATA)
+        components.render_nos_selection(
+            nos_data=NOS_DATA,
+            prefix="",
+            persistent_set_key="persistent_selected_pcs",
+            result_list_key="current_selected_pcs",
+            select_key_prefix="dash"
+        )
 
     st.markdown("#### Step 3: Unique Learning Moment")
     # The Formula Guide (A visual reminder for the user)

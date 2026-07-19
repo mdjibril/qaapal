@@ -127,7 +127,7 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                 gemini_key_raw = get_secret(["INTERNAL_AI_KEY"], "INTERNAL_AI_KEY")
                 if gemini_key_raw:
                     gemini_keys = [k.strip() for k in gemini_key_raw.split(',') if k.strip()]
-                    gemini_model = (get_secret(["INTERNAL_AI_MODEL"], "INTERNAL_AI_MODEL") or "gemini-3.5-flash").strip()
+                    gemini_model = (get_secret(["INTERNAL_AI_MODEL"], "INTERNAL_AI_MODEL") or "gemini-2.5-flash").strip()
                     st.toast(f"🔄 Vertex AI exhausted/failed. Trying Gemini ({gemini_model}) fallback...", icon="⚠️")
                     res = validate_and_generate("Gemini", gemini_model, gemini_keys, prompt, system_prompt)
                     if "API_ERROR" not in str(res):
@@ -145,7 +145,7 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                 # 3. OpenRouter Fallback
                 or_key = get_secret(["OPENROUTER_API_KEY"], "OPENROUTER_API_KEY")
                 if or_key:
-                    or_model = (get_secret(["OPENROUTER_FALLBACK_MODEL"], "OPENROUTER_FALLBACK_MODEL") or "google/gemini-3.5-flash").strip()
+                    or_model = (get_secret(["OPENROUTER_FALLBACK_MODEL"], "OPENROUTER_FALLBACK_MODEL") or "google/gemini-2.5-flash").strip()
                     st.toast(f"🔄 Vertex/Gemini/Groq exhausted/failed. Trying OpenRouter ({or_model}) fallback...", icon="⚠️")
                     res = validate_and_generate("OpenRouter", or_model, [or_key], prompt, system_prompt)
                     if "API_ERROR" not in str(res):

@@ -5,76 +5,9 @@ from ai_utils import validate_and_generate
 from auth_utils import get_secret
 from file_utils import export_witness_to_word
 from security_utils import sanitize_text_input, sanitize_notes_input
+import components
 
-@st.fragment
-def render_nos_selection_for_witness(nos_data):
-    """
-    Renders checkboxes for the witness to select which PCs were observed.
-    Uses a selectbox to prevent rendering thousands of widgets at once.
-    """
-    if 'persistent_witness_selected_pcs' not in st.session_state:
-        st.session_state.persistent_witness_selected_pcs = set()
-
-    def pc_callback(pc_val):
-        if st.session_state[f"wit_chk_{pc_val}"]:
-            st.session_state.persistent_witness_selected_pcs.add(pc_val)
-        else:
-            st.session_state.persistent_witness_selected_pcs.discard(pc_val)
-
-    def sync_unit_pcs(u_key, u_data, unit_code):
-        master_val = st.session_state[f"wit_unit_all_{u_key}"]
-        for lo_key, pcs in u_data.items():
-            lo_id = lo_key.split(':')[0].replace("LO", "").strip()
-            for pc in pcs:
-                pc_val = f"{unit_code} - {lo_id} - {pc}"
-                st.session_state[f"wit_chk_{pc_val}"] = master_val
-                if master_val:
-                    st.session_state.persistent_witness_selected_pcs.add(pc_val)
-                else:
-                    st.session_state.persistent_witness_selected_pcs.discard(pc_val)
-
-    def clear_all_pcs_callback():
-        st.session_state.persistent_witness_selected_pcs.clear()
-        for key in st.session_state.keys():
-            if key.startswith("wit_chk_") or key.startswith("wit_unit_all_"):
-                st.session_state[key] = False
-
-    unit_titles = list(nos_data.keys())
-    
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        selected_unit_key = st.selectbox("Select a Unit to view criteria", unit_titles, key="wit_unit_select")
-    with col2:
-        st.markdown("<br>", unsafe_allow_html=True)
-        st.button("🗑️ Clear All Selections", on_click=clear_all_pcs_callback, key="wit_clear_all_pcs")
-
-    if selected_unit_key:
-        unit_code = selected_unit_key.split(':')[0]
-        
-        st.checkbox(
-            f"✅ Observed all for {unit_code}", 
-            key=f"wit_unit_all_{selected_unit_key}",
-            on_change=sync_unit_pcs,
-            args=(selected_unit_key, nos_data[selected_unit_key], unit_code)
-        )
-        
-        for lo_key, pcs in nos_data[selected_unit_key].items():
-            lo_id = lo_key.split(':')[0].replace("LO", "").strip()
-            with st.expander(lo_key, expanded=True):
-                for pc in pcs:
-                    pc_val = f"{unit_code} - {lo_id} - {pc}"
-                    chk_key = f"wit_chk_{pc_val}"
-                    if chk_key not in st.session_state:
-                        st.session_state[chk_key] = pc_val in st.session_state.persistent_witness_selected_pcs
-                        
-                    st.checkbox(
-                        pc, 
-                        key=chk_key,
-                        on_change=pc_callback,
-                        args=(pc_val,)
-                    )
-    
-    st.session_state.witness_selected_pcs = list(st.session_state.persistent_witness_selected_pcs)
+# Criteria selection is now handled by components.render_nos_selection
 
 def main():
     st.title("📑 Witness Testimony / Statement")
@@ -90,22 +23,29 @@ def main():
     target_model = st.session_state.get('target_model')
 
     st.subheader("Step 1: Witness & Candidate Info")
-    c1, c2 = st.columns(2)
-    with c1:
-        raw_witness_name = st.text_input("Witness Name", placeholder="e.g. Engr. Sarah Ahmed")
-        witness_name = sanitize_text_input(raw_witness_name, 100)
-        raw_witness_role = st.text_input("Job Title / Relationship", placeholder="e.g. Senior Workshop Supervisor")
-        witness_role = sanitize_text_input(raw_witness_role, 100)
-    with c2:
-        raw_candidate_name = st.text_input("Candidate Name", placeholder="e.g. John Doe")
-        candidate_name = sanitize_text_input(raw_candidate_name, 100)
-        observation_date = st.date_input("Date of Observation", datetime.date.today())
+    with st.container(border=True):
+        c1, c2 = st.columns(2)
+        with c1:
+            raw_witness_name = st.text_input("Witness Name", placeholder="e.g. Engr. Sarah Ahmed")
+            witness_name = sanitize_text_input(raw_witness_name, 100)
+            raw_witness_role = st.text_input("Job Title / Relationship", placeholder="e.g. Senior Workshop Supervisor")
+            witness_role = sanitize_text_input(raw_witness_role, 100)
+        with c2:
+            raw_candidate_name = st.text_input("Candidate Name", placeholder="e.g. John Doe")
+            candidate_name = sanitize_text_input(raw_candidate_name, 100)
+            observation_date = st.date_input("Date of Observation", datetime.date.today())
 
     st.markdown("---")
     st.subheader("Step 2: Competency Mapping")
     nos_data = db.fetch_nested_nos(trade_id)
     if nos_data:
-        render_nos_selection_for_witness(nos_data)
+        components.render_nos_selection(
+            nos_data=nos_data,
+            prefix="wit_",
+            persistent_set_key="persistent_witness_selected_pcs",
+            result_list_key="witness_selected_pcs",
+            select_key_prefix="wit"
+        )
     else:
         st.error("No competency data found.")
 
@@ -114,11 +54,12 @@ def main():
 
     st.markdown("---")
     st.subheader("Step 3: Witness Notes")
-    raw_witness_notes = st.text_area(
-        "Describe what you observed the candidate doing:",
-        placeholder="e.g. John correctly identified the fault in the power supply. He used the multimeter safely and followed all workshop protocols...",
-        height=150
-    )
+    with st.container(border=True):
+        raw_witness_notes = st.text_area(
+            "Describe what you observed the candidate doing:",
+            placeholder="e.g. John correctly identified the fault in the power supply. He used the multimeter safely and followed all workshop protocols...",
+            height=150
+        )
     witness_notes = sanitize_notes_input(raw_witness_notes, 2000)
 
     # Paywall Check
@@ -238,9 +179,9 @@ def main():
         st.subheader("Preview & Finalize")
         st.write(st.session_state.current_witness_statement)
         
-        col_save, col_word = st.columns(2)
-        with col_save:
-            if st.button("💾 Save to Database"):
+        # Check lock states
+        if st.session_state.get('saving_witness'):
+            with st.spinner("Saving witness testimony..."):
                 unique_units = sorted(list(set([pc.split(' - ')[0] for pc in selected_pcs])))
                 success, err = db.insert_witness_statement(
                     user_id=st.session_state.user_session.id,
@@ -252,12 +193,20 @@ def main():
                     witness_notes=witness_notes,
                     statement_text=st.session_state.current_witness_statement
                 )
+                st.session_state.saving_witness = False
                 if success:
                     st.toast("Witness statement saved successfully!")
                     del st.session_state.current_witness_statement
                     st.rerun()
                 else:
                     st.error(f"Error saving: {err}")
+
+        col_save, col_word = st.columns(2)
+        with col_save:
+            is_saving = st.session_state.get('saving_witness', False)
+            if st.button("💾 Save to Database", disabled=is_saving):
+                st.session_state.saving_witness = True
+                st.rerun()
         
         with col_word:
             doc_bytes = export_witness_to_word(

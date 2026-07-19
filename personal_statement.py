@@ -5,77 +5,9 @@ from ai_utils import validate_and_generate
 from auth_utils import get_secret
 from file_utils import export_personal_statement_to_word
 from security_utils import sanitize_text_input, sanitize_notes_input
+import components
 
-@st.fragment
-def render_nos_selection_for_student(nos_data):
-    """
-    Renders checkboxes for the student to select which PCs they want to include 
-    in their personal statement.
-    Uses a selectbox to prevent rendering thousands of widgets at once.
-    """
-    if 'persistent_student_selected_pcs' not in st.session_state:
-        st.session_state.persistent_student_selected_pcs = set()
-
-    def pc_callback(pc_val):
-        if st.session_state[f"stmt_chk_{pc_val}"]:
-            st.session_state.persistent_student_selected_pcs.add(pc_val)
-        else:
-            st.session_state.persistent_student_selected_pcs.discard(pc_val)
-
-    def sync_unit_pcs(u_key, u_data, unit_code):
-        master_val = st.session_state[f"stmt_unit_all_{u_key}"]
-        for lo_key, pcs in u_data.items():
-            lo_id = lo_key.split(':')[0].replace("LO", "").strip()
-            for pc in pcs:
-                pc_val = f"{unit_code} - {lo_id} - {pc}"
-                st.session_state[f"stmt_chk_{pc_val}"] = master_val
-                if master_val:
-                    st.session_state.persistent_student_selected_pcs.add(pc_val)
-                else:
-                    st.session_state.persistent_student_selected_pcs.discard(pc_val)
-
-    def clear_all_pcs_callback():
-        st.session_state.persistent_student_selected_pcs.clear()
-        for key in st.session_state.keys():
-            if key.startswith("stmt_chk_") or key.startswith("stmt_unit_all_"):
-                st.session_state[key] = False
-
-    unit_titles = list(nos_data.keys())
-    
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        selected_unit_key = st.selectbox("Select a Unit to view criteria", unit_titles, key="stmt_unit_select")
-    with col2:
-        st.markdown("<br>", unsafe_allow_html=True)
-        st.button("🗑️ Clear All Selections", on_click=clear_all_pcs_callback, key="stmt_clear_all_pcs")
-
-    if selected_unit_key:
-        unit_code = selected_unit_key.split(':')[0]
-        
-        st.checkbox(
-            f"✅ Select All Performance Criteria for {unit_code}", 
-            key=f"stmt_unit_all_{selected_unit_key}",
-            on_change=sync_unit_pcs,
-            args=(selected_unit_key, nos_data[selected_unit_key], unit_code)
-        )
-        
-        for lo_key, pcs in nos_data[selected_unit_key].items():
-            lo_id = lo_key.split(':')[0].replace("LO", "").strip()
-            with st.expander(lo_key, expanded=True):
-                for pc in pcs:
-                    pc_val = f"{unit_code} - {lo_id} - {pc}"
-                    chk_key = f"stmt_chk_{pc_val}"
-                    if chk_key not in st.session_state:
-                        st.session_state[chk_key] = pc_val in st.session_state.persistent_student_selected_pcs
-                        
-                    st.checkbox(
-                        pc, 
-                        key=chk_key,
-                        on_change=pc_callback,
-                        args=(pc_val,)
-                    )
-    
-    st.session_state.student_selected_pcs = list(st.session_state.persistent_student_selected_pcs)
+# Criteria selection is now handled by components.render_nos_selection
 
 def main():
     st.title("✍️ Personal Statement of Competence")
@@ -93,12 +25,13 @@ def main():
     target_model = st.session_state.get('target_model')
 
     # 2. Input Section
-    col1, col2 = st.columns(2)
-    with col1:
-        raw_student_name = st.text_input("Student Full Name", placeholder="e.g. John Doe")
-        student_name = sanitize_text_input(raw_student_name, 100)
-    with col2:
-        statement_date = st.date_input("Statement Date", datetime.date.today())
+    with st.container(border=True):
+        col1, col2 = st.columns(2)
+        with col1:
+            raw_student_name = st.text_input("Student Full Name", placeholder="e.g. John Doe")
+            student_name = sanitize_text_input(raw_student_name, 100)
+        with col2:
+            statement_date = st.date_input("Statement Date", datetime.date.today())
 
     st.markdown("---")
     st.subheader("Step 1: What did you achieve?")
@@ -106,17 +39,24 @@ def main():
     # Fetch NOS data for selection
     nos_data = db.fetch_nested_nos(trade_id)
     if nos_data:
-        render_nos_selection_for_student(nos_data)
+        components.render_nos_selection(
+            nos_data=nos_data,
+            prefix="stmt_",
+            persistent_set_key="persistent_student_selected_pcs",
+            result_list_key="student_selected_pcs",
+            select_key_prefix="stmt"
+        )
     else:
         st.error("No competency data found for the selected trade.")
 
     st.markdown("---")
     st.subheader("Step 2: Your Reflection")
-    raw_reflection = st.text_area(
-        "Describe what you did in your own words:",
-        placeholder="e.g. I worked on a Dell Optiplex. I had to replace the RAM because the computer was beeping. I used a screwdriver and wore my wrist strap...",
-        height=200
-    )
+    with st.container(border=True):
+        raw_reflection = st.text_area(
+            "Describe what you did in your own words:",
+            placeholder="e.g. I worked on a Dell Optiplex. I had to replace the RAM because the computer was beeping. I used a screwdriver and wore my wrist strap...",
+            height=200
+        )
     reflection = sanitize_notes_input(raw_reflection, 2000)
 
     selected_pcs = st.session_state.get('student_selected_pcs', [])
@@ -243,9 +183,9 @@ def main():
         st.subheader("Preview of Your Statement")
         st.write(st.session_state.current_generated_statement)
         
-        col_save, col_download = st.columns(2)
-        with col_save:
-            if st.button("💾 Save to My Portfolio"):
+        # Check lock states
+        if st.session_state.get('saving_statement'):
+            with st.spinner("Saving statement..."):
                 user_id = st.session_state.user_session.id
                 unique_units = sorted(list(set([pc.split(' - ')[0] for pc in selected_pcs])))
                 success, err = db.insert_student_statement(
@@ -256,12 +196,20 @@ def main():
                     reflection_notes=reflection,
                     statement_text=st.session_state.current_generated_statement
                 )
+                st.session_state.saving_statement = False
                 if success:
                     st.toast("Statement saved successfully!")
                     del st.session_state.current_generated_statement
                     st.rerun()
                 else:
                     st.error(f"Failed to save: {err}")
+
+        col_save, col_download = st.columns(2)
+        with col_save:
+            is_saving = st.session_state.get('saving_statement', False)
+            if st.button("💾 Save to My Portfolio", disabled=is_saving):
+                st.session_state.saving_statement = True
+                st.rerun()
         
         with col_download:
             doc_bytes = export_personal_statement_to_word(
