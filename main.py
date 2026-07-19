@@ -1,6 +1,6 @@
 import streamlit as st
 from auth_utils import check_auth, login_form, get_secret, reset_password_form, finalize_session
-import dashboard, history, personal_statement, witness_statement, subscription_page, database as db
+import dashboard, history, personal_statement, witness_statement, subscription_page, admin_panel, database as db
 from ai_utils import validate_and_generate
 
 st.set_page_config(
@@ -131,8 +131,8 @@ else:
                 user_email = st.session_state.user_session.email
                 upgrade_link = f"{selar_base}?email={user_email}"
                 lifetime_upgrade_link = f"{selar_lifetime_base}?email={user_email}"
-                st.link_button("🚀 Upgrade to Platform Pass", upgrade_link, use_container_width=True)
-                st.link_button("💎 Get Lifetime Tier", lifetime_upgrade_link, use_container_width=True)
+                st.link_button("🚀 Upgrade to Platform Pass", upgrade_link, width='stretch')
+                st.link_button("💎 Get Lifetime Tier", lifetime_upgrade_link, width='stretch')
 
     st.session_state.assessor_name = st.session_state.get('assessor_full_name', 'Jibril Dauda Muhammad')
     name = st.session_state.assessor_name
@@ -289,11 +289,7 @@ else:
             "💳 My Subscription": subscription_page.main
         }
         if role == 'admin':
-            st.sidebar.info("Admin pages are temporarily disabled for memory testing.")
-            # pages["🛡️ Super Admin Dashboard"] = admin_dashboard.main
-            # pages["📚 Manage NOS"] = admin_nos.main
-            # pages["👥 User Management"] = admin_users.main
-            # pages["💬 View Feedback"] = admin_feedback.main
+            pages["🛡️ Super Admin Dashboard"] = admin_panel.main
     
     selection = st.sidebar.radio("Navigation", list(pages.keys()))
     

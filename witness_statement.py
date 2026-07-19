@@ -136,9 +136,9 @@ def main():
         st.warning("⚠️ You have 0 credits remaining. Upgrade to continue generating testimonies.")
         col_up1, col_up2 = st.columns(2)
         with col_up1:
-            st.link_button("🚀 Upgrade to Platform Pass", upgrade_link, use_container_width=True)
+            st.link_button("🚀 Upgrade to Platform Pass", upgrade_link, width='stretch')
         with col_up2:
-            st.link_button("💎 Get Lifetime Tier", lifetime_upgrade_link, use_container_width=True)
+            st.link_button("💎 Get Lifetime Tier", lifetime_upgrade_link, width='stretch')
 
     if st.button("Generate Witness Statement", type="primary", disabled=is_out_of_credits):
         if not witness_notes or not selected_pcs or not witness_name or not candidate_name:

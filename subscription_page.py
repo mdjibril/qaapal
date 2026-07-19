@@ -88,9 +88,9 @@ def main():
         
         col_up1, col_up2 = st.columns(2)
         with col_up1:
-            st.link_button("🚀 Upgrade to Platform Pass (₦3,500/mo)", upgrade_link, type="primary", use_container_width=True)
+            st.link_button("🚀 Upgrade to Platform Pass (₦3,500/mo)", upgrade_link, type="primary", width="stretch")
         with col_up2:
-            st.link_button("💎 Get Lifetime Tier (₦10,000 One-time)", lifetime_upgrade_link, type="secondary", use_container_width=True)
+            st.link_button("💎 Get Lifetime Tier (₦10,000 One-time)", lifetime_upgrade_link, type="secondary", width="stretch")
             
     st.markdown("---")
     st.caption("For enterprise solutions or custom plans, please contact sales.")
