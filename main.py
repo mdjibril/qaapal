@@ -37,6 +37,11 @@ def clear_previews_on_trade_change():
     keys_to_del = [k for k in st.session_state.keys() if k.startswith(prefixes)]
     for k in keys_to_del:
         del st.session_state[k]
+        
+    # 3. Clear persistent sets
+    for persistent_set in ('persistent_selected_pcs', 'persistent_student_selected_pcs', 'persistent_witness_selected_pcs'):
+        if persistent_set in st.session_state:
+            st.session_state[persistent_set].clear()
 
 ENV_OPTIONS = {
     "Morning (Cool)": "The morning air was cool and the lab was quiet, providing a focused atmosphere with plenty of natural light.",

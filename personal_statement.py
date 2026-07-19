@@ -11,55 +11,71 @@ def render_nos_selection_for_student(nos_data):
     """
     Renders checkboxes for the student to select which PCs they want to include 
     in their personal statement.
+    Uses a selectbox to prevent rendering thousands of widgets at once.
     """
-    def sync_unit_pcs(u_key, u_data):
-        # Callback to update all PCs in a unit when the master checkbox changes
+    if 'persistent_student_selected_pcs' not in st.session_state:
+        st.session_state.persistent_student_selected_pcs = set()
+
+    def pc_callback(pc_val):
+        if st.session_state[f"stmt_chk_{pc_val}"]:
+            st.session_state.persistent_student_selected_pcs.add(pc_val)
+        else:
+            st.session_state.persistent_student_selected_pcs.discard(pc_val)
+
+    def sync_unit_pcs(u_key, u_data, unit_code):
         master_val = st.session_state[f"stmt_unit_all_{u_key}"]
-        for lo_pcs in u_data.values():
-            for pc in lo_pcs:
-                st.session_state[f"stmt_chk_{u_key}_{pc}"] = master_val
+        for lo_key, pcs in u_data.items():
+            lo_id = lo_key.split(':')[0].replace("LO", "").strip()
+            for pc in pcs:
+                pc_val = f"{unit_code} - {lo_id} - {pc}"
+                st.session_state[f"stmt_chk_{pc_val}"] = master_val
+                if master_val:
+                    st.session_state.persistent_student_selected_pcs.add(pc_val)
+                else:
+                    st.session_state.persistent_student_selected_pcs.discard(pc_val)
 
-    def clear_all_pcs_callback(all_nos_data):
-        # Callback to clear all PCs across all units
-        for u_key, u_data in all_nos_data.items():
-            st.session_state[f"stmt_unit_all_{u_key}"] = False
-            for lo_pcs in u_data.values():
-                for pc in lo_pcs:
-                    st.session_state[f"stmt_chk_{u_key}_{pc}"] = False
+    def clear_all_pcs_callback():
+        st.session_state.persistent_student_selected_pcs.clear()
+        for key in st.session_state.keys():
+            if key.startswith("stmt_chk_") or key.startswith("stmt_unit_all_"):
+                st.session_state[key] = False
 
-    local_selected_pcs = []
-    
     unit_titles = list(nos_data.keys())
-
-    # Add a "Clear All" button at the top of the selection area
-    st.button(
-        "🗑️ Clear All Selections", 
-        on_click=clear_all_pcs_callback, 
-        args=(nos_data,), 
-        key="stmt_clear_all_pcs"
-    )
-
-    tabs = st.tabs(unit_titles)
     
-    for i, unit_key in enumerate(unit_titles):
-        with tabs[i]:
-            unit_code = unit_key.split(':')[0]
-            # Master checkbox for the entire unit
-            st.checkbox(
-                f"✅ Select All Performance Criteria for {unit_code}", 
-                key=f"stmt_unit_all_{unit_key}",
-                on_change=sync_unit_pcs,
-                args=(unit_key, nos_data[unit_key])
-            )
-            
-            for lo_key, pcs in nos_data[unit_key].items():
-                lo_id = lo_key.split(':')[0].replace("LO", "").strip()
-                with st.expander(lo_key):
-                    for pc in pcs:
-                        if st.checkbox(pc, key=f"stmt_chk_{unit_key}_{pc}"):
-                            local_selected_pcs.append(f"{unit_code} - {lo_id} - {pc}")
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        selected_unit_key = st.selectbox("Select a Unit to view criteria", unit_titles, key="stmt_unit_select")
+    with col2:
+        st.markdown("<br>", unsafe_allow_html=True)
+        st.button("🗑️ Clear All Selections", on_click=clear_all_pcs_callback, key="stmt_clear_all_pcs")
+
+    if selected_unit_key:
+        unit_code = selected_unit_key.split(':')[0]
+        
+        st.checkbox(
+            f"✅ Select All Performance Criteria for {unit_code}", 
+            key=f"stmt_unit_all_{selected_unit_key}",
+            on_change=sync_unit_pcs,
+            args=(selected_unit_key, nos_data[selected_unit_key], unit_code)
+        )
+        
+        for lo_key, pcs in nos_data[selected_unit_key].items():
+            lo_id = lo_key.split(':')[0].replace("LO", "").strip()
+            with st.expander(lo_key, expanded=True):
+                for pc in pcs:
+                    pc_val = f"{unit_code} - {lo_id} - {pc}"
+                    chk_key = f"stmt_chk_{pc_val}"
+                    if chk_key not in st.session_state:
+                        st.session_state[chk_key] = pc_val in st.session_state.persistent_student_selected_pcs
+                        
+                    st.checkbox(
+                        pc, 
+                        key=chk_key,
+                        on_change=pc_callback,
+                        args=(pc_val,)
+                    )
     
-    st.session_state.student_selected_pcs = local_selected_pcs
+    st.session_state.student_selected_pcs = list(st.session_state.persistent_student_selected_pcs)
 
 def main():
     st.title("✍️ Personal Statement of Competence")
