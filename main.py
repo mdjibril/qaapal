@@ -1,6 +1,6 @@
 import streamlit as st
 from auth_utils import check_auth, login_form, get_secret, reset_password_form, finalize_session
-import dashboard, history, admin_nos, admin_users, admin_feedback, admin_dashboard, personal_statement, witness_statement, subscription_page, database as db
+import dashboard, history, personal_statement, witness_statement, subscription_page, database as db
 from ai_utils import validate_and_generate
 
 st.set_page_config(
@@ -144,20 +144,19 @@ else:
     # st.sidebar.caption(f"🆔 ID: {st.session_state.assessor_id}")
     
     # Trade Selection Logic
-    trades_df = get_cached_trades()
+    trades = get_cached_trades()
 
-    if not trades_df.empty:
+    if trades:
+        trade_names = [t['name'] for t in trades]
         # We use index to ensure the selector stays on the same item after refresh
         selected_name = st.sidebar.selectbox(
             "Select Trade",
-            trades_df['name'],
+            trade_names,
             key="global_trade_select",
             on_change=clear_previews_on_trade_change
         )
         # Update session state
-        st.session_state.selected_trade_id = trades_df.loc[
-            trades_df['name'] == selected_name, 'id'
-        ].iloc[0]
+        st.session_state.selected_trade_id = next((t['id'] for t in trades if t['name'] == selected_name), None)
     else:
         st.sidebar.error("⚠️ No trades found. Check Supabase connection or table data.")
 
@@ -290,10 +289,11 @@ else:
             "💳 My Subscription": subscription_page.main
         }
         if role == 'admin':
-            pages["🛡️ Super Admin Dashboard"] = admin_dashboard.main
-            pages["📚 Manage NOS"] = admin_nos.main
-            pages["👥 User Management"] = admin_users.main
-            pages["💬 View Feedback"] = admin_feedback.main
+            st.sidebar.info("Admin pages are temporarily disabled for memory testing.")
+            # pages["🛡️ Super Admin Dashboard"] = admin_dashboard.main
+            # pages["📚 Manage NOS"] = admin_nos.main
+            # pages["👥 User Management"] = admin_users.main
+            # pages["💬 View Feedback"] = admin_feedback.main
     
     selection = st.sidebar.radio("Navigation", list(pages.keys()))
     
