@@ -282,7 +282,7 @@ else:
         }
     else:
         pages = {
-            "Dashboard": dashboard.main, 
+            "📝 Dashboard": dashboard.main, 
             "✍️ Student Statement": personal_statement.main,
             "📑 Witness Statement": witness_statement.main,
             "📜 My History": history.main,

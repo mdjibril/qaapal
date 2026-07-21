@@ -275,7 +275,9 @@ def fetch_recent_reports(limit=50):
     """Fetches recent reports for QA by admins."""
     supabase = get_admin_supabase()
     try:
-        response = supabase.table("assessment_reports").select("*").order("created_at", desc=True).limit(limit).execute()
+        response = supabase.table("assessment_reports")
+        response = response.select("*, user_profiles!created_by(full_name), trades(name)")
+        response = response.order("created_at", desc=True).limit(limit).execute()
         return response.data
     except Exception as e:
         print(f"Error fetching recent reports: {e}")

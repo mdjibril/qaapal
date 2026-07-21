@@ -138,8 +138,46 @@ To effectively manage the SaaS platform and monitor system health, a dedicated S
 ### Phase 4: Advanced Integrations
 *   **Real Monnify Integration:** Transition from Selar to Monnify Web SDK/API for more advanced payment flows, once business registration is complete.
 
+### Phase 5: Small and New Features
+These improvements should be implemented as lightweight, query-driven features that do not increase the app memory footprint on Railway or the Streamlit dashboard.
 
-## Verification Plan
+* Add the assessor name to report expander titles for admin views of multiple assessors.
+* Add a `Sort By` dropdown to the History page with `Date`, `Student Name`, and `Assessor`; apply sorting at the query level.
+* Add a `Reports generated today` metric on the User Management page using a date-filtered database query.
+* Add History filters for `Unit Code` and `Trade Name` without loading all records into memory.
+* Add a report status badge in the history list (e.g. Draft, Finalized) using a compact status field.
+* Add `Word Count` and `Paragraph Count` to report metadata in history results, computed from report text or stored as lightweight fields.
+* Add a progress bar for the current unit showing percentage of PCs selected, based on selected count versus total available.
+* Add a subscription progress bar on the `My Subscription` page showing days remaining for `platform_pass` users using expiry date math.
+* Add a `Check Payment Status` button that refreshes webhook/payment state from Supabase rather than holding extra session state.
+* Add a sidebar `Help` button linking to WhatsApp support as a simple external action.
+* Refactor session state initialization into a single helper and shared key manager so app state stays consistent and minimal.
+* Encapsulate top-level `main.py` UI logic in a single entrypoint function to avoid accidental re-execution.
+* Add a stateless retry decorator for DB calls to handle transient connection resets without preserving retry state in memory.
+
+### Phase 5 Database Notes
+* Keep indexes that improve query performance for history filtering and sorting:
+  * `CREATE INDEX IF NOT EXISTS idx_reports_created_by ON public.assessment_reports (created_by);`
+  * `CREATE INDEX IF NOT EXISTS idx_reports_created_at ON public.assessment_reports (created_at DESC);`
+
+### Phase 5 Implementation Guideline
+Prioritize features that use:
+* lightweight, on-demand data queries
+* minimal `st.session_state` usage
+* no large in-process workloads or caches
+* explicit DB sorting/filtering instead of full-table reads
+* one-time image loads for exports, not persistent binary state
+
+### Phase 5 Deferred / Advanced Items
+These should be postponed from Phase 5 because they require heavier state, background workflows, or webhook complexity:
+* Monnify webhook automation and payment callback listener development
+* subscription expiry email notifications
+* full API usage monitor dashboards
+* webhook origin verification logic beyond standard request validation
+
+### Phase 5 Delivery
+Deliver Phase 5 as small UI and database enhancements only, keeping the app memory footprint low and Railway resource usage minimal.
+
 
 ### SEECURITY Verification
 *   [x] **IDOR Review - History Reads:** Verified report history access paths for `assessment_reports`, `student_statements`, and `witness_statements`. Confirmed non-admin list queries are scoped by `created_by = user_id`.
@@ -153,14 +191,3 @@ To effectively manage the SaaS platform and monitor system health, a dedicated S
 *   [x] **Auth Consistency Check:** Tightened `check_auth()` so the app only treats authentication as valid when both `user_session` and `supabase_session` exist and refer to the same Supabase user.
 *   [x] **Verification Command:** Confirmed Python syntax with `python3 -m py_compile auth_utils.py main.py database.py history.py dashboard.py personal_statement.py witness_statement.py subscription_page.py`.
 *   [x] **Production DB Follow-Up:** Apply the updated witness statement RLS policy from `setup_full_db.sql` in the live Supabase SQL Editor if it has not already been applied.
-
-### Manual Verification
-1.  **Sign-up Flow:** Register a new user. Verify organization creation in Supabase with **5 credits** and 'free' tier.
-2.  **Freemium Limits & Deduction:** Generate 5 reports. Verify `credits_balance` decrements each time in both the UI and Supabase. Ensure the 6th attempt triggers the `st.dialog` paywall.
-3.  **API Key Rotation:** Configure multiple Gemini keys in secrets. Simulate a `ResourceExhausted` (429) error and verify the system transparently rotates to the next key.
-4.  **Multi-Provider Fallback:** Deplete or disable all Gemini keys. Verify the system automatically falls back to Groq or OpenRouter using the designated fallback models and keys.
-5.  **BYOK Unlock:** Upgrade to 'platform_pass'. Verify the sidebar reveals provider settings and allows generation without credit deduction.
-6.  **Subscription Lifecycle:** Manually expire a subscription in the DB (>30 days). Verify the UI reflects "Expired" and blocks generation until renewal.
-7.  **Production Gate (Phase 2):** 
-    *   Verify **Vertex AI** authentication using the Service Account JSON structure in secrets.
-    *   Verify **Monnify** payment completion and webhook-driven credit/tier updates.

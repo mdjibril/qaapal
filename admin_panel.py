@@ -36,43 +36,6 @@ def main():
 
         st.divider()
 
-        # QA and Recent Reports
-        st.subheader("Recent Assessment Reports (QA Audit)")
-        with st.spinner("Loading recent reports..."):
-            reports = db.fetch_recent_reports(limit=50)
-
-        if reports:
-            # Display metadata table
-            view_cols = ['created_at', 'student_name', 'trade_id', 'created_by']
-            filtered_reports = []
-            for r in reports:
-                filtered_reports.append({
-                    "Date": r.get('created_at', '')[:10] if r.get('created_at') else 'N/A',
-                    "Candidate Name": r.get('student_name', 'N/A'),
-                    "Trade ID": r.get('trade_id', 'N/A'),
-                    "Assessor ID": r.get('created_by', 'N/A'),
-                    "id": r.get('id')
-                })
-            
-            st.dataframe(filtered_reports, width='stretch', hide_index=True)
-
-            st.markdown("##### Inspect Full Report Details")
-            report_map = {r['id']: f"{r.get('student_name')} ({r.get('created_at', '')[:10]})" for r in reports}
-            selected_report_id = st.selectbox(
-                "Select a report to review its generated output", 
-                options=list(report_map.keys()),
-                format_func=lambda x: report_map[x]
-            )
-            
-            if selected_report_id:
-                report_data = next((r for r in reports if r['id'] == selected_report_id), None)
-                if report_data:
-                    st.text_area("Audit Report Content", value=report_data.get('report_text', ''), height=250, disabled=True)
-        else:
-            st.info("No recent assessment reports found in database.")
-
-        st.divider()
-
         # API & Environment Configuration
         st.subheader("API Gateway Status")
         
@@ -106,6 +69,78 @@ def main():
         ]
         st.dataframe(mock_logs, width='stretch', hide_index=True)
         st.info("System integration webhook processing listener works externally and logs transactions to Supabase databases.")
+
+
+        # QA and Recent Reports
+        st.subheader("Recent Assessment Reports (QA Audit)")
+        with st.spinner("Loading recent reports..."):
+            reports = db.fetch_recent_reports(limit=50)
+
+        if reports:
+            # Display metadata table
+            filtered_reports = []
+            for r in reports:
+                assessor_name = (r.get('user_profiles') or {}).get('full_name', 'Unknown Assessor')
+                trade_name = (r.get('trades') or {}).get('name', 'Unknown Trade')
+                filtered_reports.append({
+                    "Date": r.get('created_at', '')[:10] if r.get('created_at') else 'N/A',
+                    "Candidate Name": r.get('student_name', 'N/A'),
+                    "Trade Name": trade_name,
+                    "Assessor Name": assessor_name
+                })
+            
+            st.dataframe(filtered_reports, width='stretch', hide_index=True)
+
+            st.markdown("##### Inspect Full Report Details")
+            report_map = {r['id']: f"{r.get('student_name')} ({r.get('created_at', '')[:10]})" for r in reports}
+            selected_report_id = st.selectbox(
+                "Select a report to review its generated output", 
+                options=list(report_map.keys()),
+                format_func=lambda x: report_map[x]
+            )
+            
+            if selected_report_id:
+                report_data = next((r for r in reports if r['id'] == selected_report_id), None)
+                if report_data:
+                    st.text_area("Audit Report Content", value=report_data.get('report_text', ''), height=250, disabled=True)
+        else:
+            st.info("No recent assessment reports found in database.")
+
+        st.divider()
+
+        # # API & Environment Configuration
+        # st.subheader("API Gateway Status")
+        
+        # # Determine API Presence without throwing errors on missing secrets
+        # import os
+        # try:
+        #     gemini_present = "INTERNAL_AI_KEY" in st.secrets or "INTERNAL_AI_KEY" in os.environ
+        #     groq_present = "GROQ_API_KEY" in st.secrets or "GROQ_API_KEY" in os.environ
+        #     openrouter_present = "OPENROUTER_API_KEY" in st.secrets or "OPENROUTER_API_KEY" in os.environ
+        #     vertex_present = "vertex_ai" in st.secrets or "VERTEX_AI" in os.environ
+        # except Exception:
+        #     gemini_present = "INTERNAL_AI_KEY" in os.environ
+        #     groq_present = "GROQ_API_KEY" in os.environ
+        #     openrouter_present = "OPENROUTER_API_KEY" in os.environ
+        #     vertex_present = "VERTEX_AI" in os.environ
+
+        # c1, c2, c3, c4 = st.columns(4)
+        # c1.metric("Gemini API", "Configured" if gemini_present else "Missing")
+        # c2.metric("Groq API", "Configured" if groq_present else "Missing")
+        # c3.metric("OpenRouter API", "Configured" if openrouter_present else "Missing")
+        # c4.metric("Vertex AI", "Configured" if vertex_present else "Missing")
+
+        # st.divider()
+
+        # # Webhook logs
+        # st.subheader("Subscription Webhooks (Mock Activity)")
+        # mock_logs = [
+        #     {"Date": "2026-07-18 10:00", "Provider": "Selar", "Status": "SUCCESS", "Amount": "₦7000", "Org Email": "assessor1@center.com"},
+        #     {"Date": "2026-07-15 08:30", "Provider": "Monnify", "Status": "SUCCESS", "Amount": "₦7000", "Org Email": "tech_lead@nsqhub.org"},
+        #     {"Date": "2026-07-14 15:45", "Provider": "Monnify", "Status": "FAILED", "Amount": "₦7000", "Org Email": "incomplete@org.com"}
+        # ]
+        # st.dataframe(mock_logs, width='stretch', hide_index=True)
+        # st.info("System integration webhook processing listener works externally and logs transactions to Supabase databases.")
 
 
     # ==========================================
