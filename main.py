@@ -2,6 +2,7 @@ import streamlit as st
 from auth_utils import check_auth, login_form, get_secret, reset_password_form, finalize_session
 import dashboard, history, personal_statement, witness_statement, subscription_page, admin_panel, database as db
 from ai_utils import validate_and_generate
+from ai_policy import get_ai_access_policy
 
 st.set_page_config(
     page_title="NSQAssessment App | AI-Powered Reports",
@@ -100,12 +101,17 @@ else:
     is_superadmin = (role == 'admin')
     is_platform_pass_expired = db.check_platform_pass_expiry()
 
+    ai_policy = get_ai_access_policy(role, tier, is_platform_pass_expired)
+    show_byok = ai_policy["allow_byok"]
+
     # If platform_pass is expired, treat them as free tier for UI/logic purposes
     if tier == 'platform_pass' and is_platform_pass_expired:
         st.session_state['subscription_tier'] = 'free'
         tier = 'free' # Update local variable for immediate use
         st.session_state['credits_balance'] = 0 # Ensure no credits are shown
         credits = 0 # Update local variable
+        ai_policy = get_ai_access_policy(role, tier, is_platform_pass_expired)
+        show_byok = ai_policy["allow_byok"]
     
     # --- CENTRALIZED SIDEBAR ---
     st.sidebar.title(f"🚀 NSQ Portal v1.0.5")
@@ -176,32 +182,22 @@ else:
     # --- AI KEY INHERITANCE ---
     # If user is on Platform Pass or Enterprise, use the master/secret key.
     # If Free, use the Platform key from Streamlit secrets.
-    if is_superadmin:
-        show_byok = True
-        st.sidebar.info("Superadmin: Manual Key Override")
-    else:
-        show_byok = (tier == 'platform_pass')
-        
-        if tier == 'free':
-            # Check if Vertex AI is configured
-            sa_json_str = get_secret(["vertex_ai", "service_account_json"], "vertex_ai__service_account_json")
-            if not sa_json_str:
-                st.sidebar.error("⚠️ Vertex AI configuration is missing from secrets.toml!")
-            else:
-                st.sidebar.info("Using Platform AI (Free Tier)")
-            st.session_state.ai_provider = "VertexAI"
-            st.session_state.target_model = "gemini-3.5-flash"
-            st.session_state.target_keys = []
-        elif tier in ['lifetime', 'enterprise']:
-            st.sidebar.info("💎 Lifetime/Enterprise Plan: (Using Platform AI)")
-            # Fall back to Platform AI to ensure app keeps functioning
-            st.session_state.ai_provider = "VertexAI"
-            st.session_state.target_model = "gemini-3.5-flash"
-            st.session_state.target_keys = []
+    if ai_policy["status_message"]:
+        if tier == "free" and not get_secret(["vertex_ai", "service_account_json"], "vertex_ai__service_account_json"):
+            st.sidebar.error("⚠️ Vertex AI configuration is missing from secrets.toml!")
+        else:
+            st.sidebar.info(ai_policy["status_message"])
+
+    if not show_byok:
+        st.session_state.ai_provider = ai_policy["default_provider"]
+        st.session_state.target_model = ai_policy["default_model"]
+        st.session_state.target_keys = []
 
     if show_byok:
         with st.sidebar.expander("📡 AI Provider Settings", expanded=False):
-            providers = ["VertexAI", "Gemini", "Groq", "OpenRouter"] if role == 'admin' else ["Gemini", "Groq", "OpenRouter"]
+            providers = ai_policy["provider_options"]
+            if st.session_state.get("ai_provider") not in providers:
+                st.session_state.ai_provider = ai_policy["default_provider"]
             st.session_state.ai_provider = st.selectbox("Provider", providers)
 
             # Initialize target_keys to empty list if not already set, or if provider changes
@@ -212,7 +208,7 @@ else:
 
             if st.session_state.ai_provider == "VertexAI":
                 st.session_state.target_keys = []
-                st.session_state.target_model = "gemini-3.5-flash"
+                st.session_state.target_model = ai_policy["default_model"]
                 st.info("Using Platform AI (Vertex AI)")
             elif st.session_state.ai_provider == "Gemini":
                 st.text_input("Gemini API Key", type="password", key="gemini_api_key_input", on_change=update_api_key_session, args=("gemini_api_key_input",))
