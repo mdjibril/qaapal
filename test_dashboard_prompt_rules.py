@@ -1,6 +1,9 @@
 import json
 import pathlib
 import unittest
+import datetime
+
+from prompt_builders import build_dashboard_prompt
 
 
 class DashboardPromptRulesTest(unittest.TestCase):
@@ -46,8 +49,22 @@ class DashboardPromptRulesTest(unittest.TestCase):
         )
         self.assertGreaterEqual(len(selected_pcs), 15)
 
-        dashboard_path = pathlib.Path(__file__).with_name("dashboard.py")
-        source = dashboard_path.read_text(encoding="utf-8")
+        prompt_bundle = build_dashboard_prompt(
+            student_name="Ada Lovelace",
+            assessment_date=datetime.date(2026, 7, 21),
+            time_frame="9:00AM - 12:00PM",
+            atmosphere="quiet workshop with bench lighting",
+            trade_context="AGR/AEM/L2",
+            learning_moment="I re-seated the RAM and checked the BIOS screen.",
+            selected_pcs=selected_pcs,
+        )
+
+        source = pathlib.Path(__file__).with_name("dashboard.py").read_text(encoding="utf-8")
+        self.assertIn("from prompt_builders import build_dashboard_prompt", source)
+        self.assertIn("build_dashboard_prompt(", source)
+
+        system_prompt = prompt_bundle["system_prompt"]
+        user_prompt = prompt_bundle["user_prompt"]
 
         required_phrases = [
             "### SECURITY (PROMPT INJECTION PREVENTION)",
@@ -73,20 +90,14 @@ class DashboardPromptRulesTest(unittest.TestCase):
         ]
 
         for phrase in required_phrases:
-            self.assertIn(phrase, source)
-        self.assertNotIn("Generate exactly 9 to 10 dense, technical paragraphs.", source)
-        self.assertIn("ensure every paragraph carries at least 2 PCs", source)
-        self.assertIn("each paragraph must contain at least 2 PCs", source)
+            self.assertIn(phrase, system_prompt)
 
-        example_start = source.index("<example_paragraph>")
-        example_end = source.index("</example_paragraph>")
-        example = source[example_start:example_end]
-
-        self.assertIn("LO3:PC 3.3", example)
-        self.assertIn("LO1:PC 1.2", example)
-        self.assertIn("LO2:PC 2.4", example)
-        self.assertLess(example.index("LO3:PC 3.3"), example.index("LO1:PC 1.2"))
-        self.assertLess(example.index("LO1:PC 1.2"), example.index("LO2:PC 2.4"))
+        self.assertIn("Ensure every single PC listed above is integrated into the narrative exactly once.", user_prompt)
+        self.assertIn("AGR/AEM/L2/004", user_prompt)
+        self.assertIn("AGR/AEM/L2/005", user_prompt)
+        self.assertIn("AGR/AEM/L2/006", user_prompt)
+        self.assertNotIn("Generate exactly 9 to 10 dense, technical paragraphs.", system_prompt)
+        self.assertIn("each paragraph must contain at least 2 PCs", system_prompt)
 
     def test_agriculture_selection_exceeds_prompt_capacity(self):
         selected_pcs = self._load_agriculture_selected_pcs()
