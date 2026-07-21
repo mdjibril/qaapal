@@ -116,10 +116,12 @@ def main():
                 9. Every paragraph MUST contain at least two technical terms specific to the trade being assessed.
 
                 ### NARRATIVE STRUCTURE & MAPPING
-                10. **Volume**: Generate exactly 7 to 8 dense, technical paragraphs.
+                10. **Volume**: Generate a dynamic number of dense, technical paragraphs based on the total PCs selected. Keep the testimony concise, but ensure every paragraph carries at least 2 PCs.
                 11. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria. The format MUST BE EXACTLY: (UnitCode - LO#:PC #.#). Do NOT deviate from this format. Example: (ICT/SMC/004/L2 - LO1:PC 1.2). NEVER omit the "LO" prefix.
                 12. **Reverse-Engineer the PC**: Look at the PC description and describe the minimum necessary action the candidate took to prove that specific criteria.
-                13. **Exhaustive Usage**: You MUST use every PC provided in the list exactly once. Weave 2-3 PCs logically into every paragraph.
+                13. **Exhaustive Usage**: You MUST use every PC provided in the list exactly once. Weave at least 2 PCs logically into every paragraph.
+                14. **No Sequential Listing**: Do NOT write the Performance Criteria in numeric order. Do NOT produce a linear list such as 1.2, 1.3, 1.4 ... 2.1, 2.2, 2.3 or group them strictly by unit or LO.
+                15. **Mixed Unit/LO Weaving**: Blend criteria from different units and LOs across paragraphs. Each paragraph should mix multiple PCs, and each paragraph must contain at least 2 PCs.
                 </strict_rules>"""
 
                 user_prompt = f"""

@@ -176,7 +176,7 @@ def main():
 
                 ### NARRATIVE STRUCTURE & FLOW
                 10. **The Timeline**: Strictly include the commencement time (extracted from '{time_frame}') in the opening paragraph and the atmospheric details '{atmosphere}'. Strictly include the conclusion time (extracted from '{time_frame}') in the final closing paragraph.
-                11. **Volume**: Generate exactly 9 to 10 dense, technical paragraphs. The final output must fit within 2.5 standard pages.
+                11. **Volume**: Generate a dynamic number of dense, technical paragraphs based on the total PCs selected. Keep the report concise, but ensure every paragraph carries at least 2 and ideally 3 PCs per paragraph.
                 12. **The Hook**: Integrate the breakthrough moment strictly as factual physical actions where multiple criteria were met.
                 13. **Candidate Name Usage**: Use the candidate's full name "{student_name}" only once, in the opening paragraph. After that first full-name mention, refer to the candidate only as "{candidate_first_name}". Do not repeat the full name in later paragraphs.
 
@@ -184,10 +184,12 @@ def main():
                 14. **Reverse-Engineer the PC**: Look at the PC description and describe the minimum necessary action to prove that specific criteria. 
                 15. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria. The format MUST BE EXACTLY: (UnitCode - LO#:PC #.#). Do NOT deviate from this format. Example: (ICT/SMC/004/L2 - LO3:PC 3.3). NEVER omit the "LO" prefix.
                 16. **Exhaustive Usage**: You MUST use every PC provided in the user's list exactly once. Do not hallucinate or invent PC codes. Weave 2-3 PCs logically into every paragraph.
+                17. **No Sequential Listing**: Do NOT write the Performance Criteria in numeric order. Do NOT produce a linear list such as 1.2, 1.3, 1.4 ... 2.1, 2.2, 2.3 or group them strictly by unit or LO.
+                18. **Mixed Unit/LO Weaving**: Blend criteria from different units and LOs across paragraphs. Each paragraph should mix multiple PCs, and each paragraph must contain at least 2 PCs.
                 </strict_rules>
 
                 <example_paragraph>
-                {student_name} commenced the assessment at 9:00AM, {atmosphere}, and initiated the diagnostic sequence. {candidate_first_name} disconnected the ATX 24-pin power connector from the motherboard to isolate the power supply unit. (ICT/SMC/004/L2 - LO1:PC 1.2) {candidate_first_name} then attached an anti-static wrist strap to the unpainted metal chassis frame to ground themselves prior to handling the RAM modules. (ICT/SMC/004/L2 - LO1:PC 1.3) {candidate_first_name} removed the faulty DDR4 RAM module and inserted the replacement, applying even pressure until the retaining clips engaged with an audible click.
+                {student_name} commenced the assessment at 9:00AM, {atmosphere}, and initiated the diagnostic sequence. {candidate_first_name} first checked the BIOS screen and recorded the fault status before touching the hardware. (ICT/SMC/004/L2 - LO3:PC 3.3) {candidate_first_name} then disconnected the ATX 24-pin power connector to isolate the supply unit, and immediately grounded themselves with an anti-static wrist strap before handling the RAM modules. (ICT/SMC/004/L2 - LO1:PC 1.2) {candidate_first_name} removed the faulty DDR4 RAM module and inserted the replacement, applying even pressure until the retaining clips engaged with an audible click. (ICT/SMC/004/L2 - LO2:PC 2.4)
                 </example_paragraph>"""
 
                 user_prompt = f"""Write the NSQ assessment report for {student_name}.
