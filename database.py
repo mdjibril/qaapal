@@ -216,6 +216,7 @@ def insert_report(name, trade_id, unit_codes, report_content, date, user_id):
         }
         
         supabase.table("assessment_reports").insert(data).execute()
+        st.cache_data.clear()
         return True, None
 
     except Exception as e:
@@ -239,6 +240,7 @@ def insert_student_statement(user_id, student_name, trade_id, unit_codes, reflec
             "created_by": user_id
         }
         supabase.table("student_statements").insert(data).execute()
+        st.cache_data.clear()
         return True, None
     except Exception as e:
         return False, str(e)
@@ -260,6 +262,7 @@ def insert_witness_statement(user_id, witness_name, witness_role, candidate_name
             "created_by": user_id
         }
         supabase.table("witness_statements").insert(data).execute()
+        st.cache_data.clear()
         return True, None
     except Exception as e:
         return False, str(e)
