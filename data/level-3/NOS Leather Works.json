@@ -1,0 +1,1974 @@
+{
+  "trade_name": "NOS Leather Works",
+  "level": 3,
+  "units": [
+    {
+      "code": "FLW/LWK/001/L3",
+      "title": "OCCUPATIONAL HEALTH AND SAFETY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Personal health and hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State the importance of maintaining good personal hygiene"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Wear clean, smart and appropriate personal protective equipment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Work safely at all times by complying with health and safety and other relevant guidelines."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe how to deal with cuts, burns and wounds."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Report illness and infection promptly to the appropriate authority"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Monitor others on the general rules on hygiene that must be followed"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Maintain Hygienic, safe and hazard- free workplace.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State the importance of working in a healthy, safe and hygienic workplace"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State where information about health and safety in your workplace can be obtained"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Promote health, hygiene and safety procedures during work"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Conduct emergency safety drills during work"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Describe the types of hazards in the workplace that may occur and how to deal with them"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Differentiate between hazards that can be dealt with personally and those that should be reported to appropriate authority."
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Report any accidents or near- miss quickly and accurately to the appropriate authority."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Maintain clean and LO (Learning Outcome) Criteria: - healthy environment.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Promote sound and noise control."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Separate wastes into their various designated places"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ensure the disposal of waste and Pollution control with organic and inorganic waste disposal methods"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate safe and secure workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Carry out organisational procedures on how to warn other people about hazards and why this is important"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "State why accidents and near- miss should be reported appropriately"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe the types of emergencies that may happen in the workplace and how to deal with them"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Indicate where to find the first-aid equipment and locate the authorized personnel"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Lift and handle materials in line with work environment procedure."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand how to manage fire in a workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Describe organisational fire emergency procedures."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Discuss possible causes of fire in the workplace"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Describe how to avoid the possibility of fire in the workplace"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "State where to find fire alarms and how to set them off"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "State why a fire should never be approached unless it is safe to"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "State the importance of following the fire safety laws"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Work safely in confined space LO (Learning Outcome) Criteria: -",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Discuss the characteristics of confined space."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Discuss the procedure for permit to work in confined space"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Describe the procedures for working in a confined place."
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Discuss roles of personnel working in confined space: \uf0b7 Attendants/Standby- man \uf0b7 Entrant \uf0b7 Entry Supervisor Whistle Blower"
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Describe confined space hazards"
+            },
+            {
+              "pc_code": "6.6",
+              "description": "Control confined space hazards"
+            },
+            {
+              "pc_code": "6.7",
+              "description": "Eliminate confined space hazards"
+            },
+            {
+              "pc_code": "6.8",
+              "description": "Perform rescue operation in confined space"
+            },
+            {
+              "pc_code": "6.9",
+              "description": "Outline rights of employee in confined space."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/LWK/002/L3",
+      "title": "COMMUNICATION SYSTEM IN THE WORK ENVIRONMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand complex communication system in a workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Importance of effective communication in a workplace"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe simple non- verbal means of communication"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Interpret concept of symbols and signs appropriately"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use audio and electronic means to pass on necessary information"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand sources of information and Management in a workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Discuss sources of information in an organisation and work environment."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Access appropriate information in an organisation or work environment from relevant sources"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use the various information flow system in an organisation or work environment to overcome challenges"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Ensure proper documentation, retrieval of information in accordance to procedure in a work environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand communication channels in a workplace LO (Learning Outcome) Criteria: -",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe the effective use of the various communication channels in a workplace"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate the use of various communication means in a workplace"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ensure effective information flow to the right personnel"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Ensure the effective deployment of the use of symbols, signs and codes"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Ensure that instructions are disseminated and obeyed in line with ethics of the workplace"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand communication equipment deployment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Ensure that communication equipment is in good working condition"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Promptly report the loss, faulty or damaged communication equipment."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Ensure safe handling of communication equipment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/LWK/003/L3",
+      "title": "TEAM WORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand various team roles in workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "List the various teams in leather work environment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Discuss the roles of the various teams"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Discuss how your work affects others in delivering quality output as a team."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Coordinate team activities",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Discuss the method of carrying out activities with team members."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Distribute work load and coordinate activities"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Select materials and tools required for each team activity"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Interpret directives to team members"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Ensure that team members comply with directives"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand communication flow Additional information about the Unit aim(s) Unit expiry date Details of the relationship between the Unit and relevant National Occupational Standards (if Details of the relationship between the unit and other standards or curricula (if appropriate) Assessment requirements specified by a sector or regulatory body (if Endorsement of the unit by a sector or other appropriate body (if required) Location of the unit within the subject/sector classification system Name of the Organisation submitting Guided Learning Hours",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Communicate work related information/requirement clearly to team members"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Inform co-workers and superiors about any kind of deviation from work plan"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Address the problems effectively if need be to superiors appropriately"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Gather instructions from superiors and respond effectively"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Communicate to team members/subordinates of the right work techniques and methods"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Obtain clarification and advice from superiors as per work information where necessary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/LWK/OO4/L3",
+      "title": "Design and Pattern in leather works",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the application of design in leather works",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain design in leather works"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify different design"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "State sources of design"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe how to create design for leather works"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "State the importance of design in leather works"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand sequence of pattern making in leather works",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe how to tape the last using masking tape"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe the types of allowances used for making pattern"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain how to make standard forme using the relevant measurement"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe how to net patterns"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Describe how to produce working patterns with relevant allowance"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Describe how to produce lining patterns with relevant allowance"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Make simple pattern with relevant allowance"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Pattern making in leather works",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe how to create pattern from design"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "List tools / equipment in creating patterns from design"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "State the importance of creating patterns from design in leather works"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Make patter of different leather products on cardboard"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Carry out the positioning of marked leather patterns of leather works"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Mark patterns of different leather products on leather materials for a given job"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/LWK/005/L3",
+      "title": "Leather Products Treatment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Treatment of leather products",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State the importance of treating leather products"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List the methods of leather products treatment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List tools/equipment For different treatment methods"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "List the consumable for Different leather products treatment methods"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe how to carry out treatment of leather products"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate handling of finished leather products",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State the importance of proper handling of finished leather products"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List the tools/equipment used in handling of finished leather products"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the consumables used for handling of finished leather products"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "LO (Learning Outcome) Criteria: -",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State the importance of Colour Treatment of leather materials/products"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "List the tools/equipment used colour treatment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify the consumables used for colour treatment of leather products"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Obtain leather products to be coloured treated Evidence Ref Page Number"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify the portion of the leather product to be coloured"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Clean the surface of the identified portion of the leather product with thinner"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Select appropriate leather dyes"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Apply leather dye to leather products with appropriate tools/equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand leather storage Techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "State the importance of Storing leather products"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "List the tools/equipment used for storing leather products"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify the consumables used for storing leather products"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Select appropriate for storing equipment for finished product"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Apply appropriate storage."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/LWK/006/L3",
+      "title": "Advance Leather Sewing",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand stitches and its application",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify types stitches used in leather works \uf0b7 Straight \uf0b7 Zigzag \uf0b7 Elastic etc"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the various categories of stitches according to Stitches length"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "State areas of application of various stitches in leather works"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand threads used in leather works",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify types of threads used in leather works"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe classification of threads according to size (Ticket Number)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State areas of application of threads in leather works"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe how to set threads in Sewing Machines"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "fix thread in the thread stand"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand operational features of electric sewing machines LO (Learning Outcome) Criteria: -",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "List types of common electric sew machines used in leather works:"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the operational features of each sewing machine"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "State the application of sewing machine in leather works"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify size of needles used in leather works"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Describe how to set needles in appropriate position in the Evidence Ref Page Number sewing machines"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate the use of Sewing Machines",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Set up appropriate sewing machines for use"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Select appropriate needle to be used in relation to the leather material"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Fix the needle in the machine spindle and lock"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Select appropriate thread size"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Fix the thread on the thread stand"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Pass the thread through the eye of the needle"
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Adjust sewing machines to obtain the appropriate stitch length"
+            },
+            {
+              "pc_code": "4.8",
+              "description": "Determine the positioning of the already \u201cfixed leather material\u2019\u2019 for sewing operation"
+            },
+            {
+              "pc_code": "4.9",
+              "description": "Start the sewing machine to commence the sewing operation"
+            },
+            {
+              "pc_code": "4.10",
+              "description": "Sew leather components to create desired stitches"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/LWK/007/L3",
+      "title": "Leather Belt Production",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Measure Materials for Leather Belt Production",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Select the tools for measurement of leather belts components"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe how to take measurement of leather materials for leather belt production."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the significance of tape rule for measurement of leather materials for belt production compared to other types of measuring devices."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Carry out the measurement of leather materials for belt making using tape rule"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand how to make Patterns for Belt Making",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Select appropriate tools/equipment for making of patterns for leather belts."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe how to make patterns for leather belts."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Make patterns for belts on cardboard."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry out the positioning of marked leather patterns on leather belts."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Carry out marking of patterns for leather belts on leather materials."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how to cut Leather Belts of Various Sizes",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Select appropriate tools/equipment for cutting leather materials for making leather belts."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify various sizes of leather belts."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe how to cut various sizes of leather belts."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carry out cutting process of leather materials for making leather belts."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know how to Punch Leather Belts",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Select appropriate tools/equipment for punching in making leather belts."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe how to punch in making leather belts."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe where to punch in making leather belts."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Mark out areas to be punched on leather belts."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Carry out the punching process in making leather belts."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "LO (Learning Outcome) Criteria: - Understand how to apply Adhesives in Leather Belts",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify the types of adhesives/gum used in making leather belts."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Describe how to apply adhesive in making leather belts."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "identify areas to apply adhesives in making leather belts."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Select appropriate adhesives for making leather belts"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Apply the adhesives on leather belts at the required positions to be joined."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Understand how to carry Out folding Process Leather Belts Making",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Describe folding process in making leather belts."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Identify areas of the leather belts that the folding process can be carried out."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Carry out folding process in making leather belts."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Demonstrate the Ability of Sewing Leather Belts",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Identify appropriate machines used in sewing leather belts"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "identify various types of tools used in making leather belts."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Identify areas of the leather belts that can be sewed."
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Describe the process in sewing different types of leather belts i.e. - Use of needles and thread (hand) - Use of sewing machines"
+            },
+            {
+              "pc_code": "7.5",
+              "description": "Carry out basic sewing operation of various types of leather belts using hand or sewing machines"
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Demonstrate the Ability to Stamp Leather Belts",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Describe types of stamping process used for leather belts (manual and machine)."
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Describe the basic process of manual stamping of brands"
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Describe the basic process of machine stamping of brands"
+            },
+            {
+              "pc_code": "8.4",
+              "description": "Carry out stamping on leather belts (manually and/or mechanically)."
+            }
+          ]
+        },
+        {
+          "lo_num": "9",
+          "description": "Understand how to Fix accessories on Leather Belts",
+          "performance_criteria": [
+            {
+              "pc_code": "9.1",
+              "description": "Identify accessories used in leather belt making"
+            },
+            {
+              "pc_code": "9.2",
+              "description": "Describe fixing accessories in leather belts making"
+            },
+            {
+              "pc_code": "9.3",
+              "description": "List types of accessories used in leather belts making"
+            },
+            {
+              "pc_code": "9.4",
+              "description": "Identify the materials used for fixing accessories in leather belts making"
+            },
+            {
+              "pc_code": "9.5",
+              "description": "Describe the purpose of fixing accessories in leather belts making"
+            },
+            {
+              "pc_code": "9.6",
+              "description": "Carry out fixing of accessories in leather belts making"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/LWK/008/L3",
+      "title": "Production of Leather Foot Wear (Male)",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand how to design of Male Foot Wear",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain leather foot wear design"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the different between foot wear and leather goods design"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify last and essential parts"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the function of those design"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain the purpose of design"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Carry out simple design of male foot wear"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the Steps of Pattern Making for Male Foot Wear",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the appropriate basic tools/equipment for making of different patterns of foot wears"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Select the appropriate basic tools/equipment to be used in making patterns"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use masking tape to produce pattern"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry out simple patter making"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Produce various pattern with appropriate allowance"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand clicking/ cutting 0peration in Male Foot Wear production",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Select appropriate tools/equipment use for cutting leather materials"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify the appropriate basic tools/equipment in cutting of leather materials for foot wear production."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify types of clicking machine"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate the ability to cut various component of leather foot wears"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Carry out cutting process of various type of leather component for foot wears using scissors/knives, puncher, etc."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Use the clicking machine to cut component of leather materials"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Closing Operation for Male foot wear production",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the closing operation"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify various types of machines used in closing operation"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe upper assembling /preparation"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Collect cuts component and assemble"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Stitch the assembled component with the lining to have a closed upper"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand Lasting/ Making Operation for Male Foot Wear",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain lasting operation of foot wear"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Describe methods of lasting operation"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Select closed upper for lasting (pre-lasting)"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Prepare the insole and insert stiffeners"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Tack the insole on the selected last size"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Carry out lasting operation"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Understand Sole Attachment in Male Foot Wear production",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Select the proper sole size to be use"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Clean the sole with thinner to remove the unwanted dirt and prime the sole"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Select the appropriate adhesive and apply"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Carry out sole attachment using appropriate machine"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Understand Treeying/Shoe Room operation",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Identify appropriate tools and machine for treeing operation"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Select appropriate tools/equipment to be used"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Carry out Treeying/Shoe Room operation"
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Pair up size and package"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/LWK/009/L3",
+      "title": "Leather Foot Wear (Female)",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand how to design of Female Foot Wear",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain leather foot wear design"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the different between foot wear and leather goods design"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify last and its essential parts"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the function of design"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain the purpose of design"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the Steps of Pattern Making for Male Foot Wear",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the appropriate basic tools/equipment for making of different patterns of foot wears"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Select the appropriate basic tools/equipment to be used in making patterns"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use masking tape to produce pattern"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry out simple patter making"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Produce various pattern with appropriate allowances"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Select appropriate tools/equipment use for cutting leather materials"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify the appropriate basic tools/equipment in cutting of leather materials for foot wear production."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify types of clicking machine to cut various component of leather foot wears"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Carry out cutting process of various type of leather component for foot wears using scissors/knives, puncher, etc."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Use the clicking machine to cut component of leather materials"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Closing Operation for Female foot wear production",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the closing operation"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify various types of machines used in closing operation"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe upper assembling /preparation"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Collect cuts component and assemble"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Stitch the assembled component with the lining to have a closed upper"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand Lasting/ Making Operation for Female Foot Wear",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain lasting operation of foot wear"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Describe methods of lasting operation"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Select closed upper for lasting (pre-lasting)"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Prepare the insole and insert stiffeners"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Tack the insole on the selected last size"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Carry out lasting operation"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Understand Sole Attachment in Female Foot Wear production",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Select the proper sole size to be use"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Clean the sole with thinner to remove the unwanted dirt and prime the sole"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Select the appropriate adhesive and apply"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Carry out sole attachment using appropriate machine"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Understand Treeying/Shoe Room operation",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Identify appropriate tools and machine for treeing operation"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Select appropriate tools/equipment to be used"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Carry out Treeying/Shoe Room operation"
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Pair up size and package"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/LWK/010/L3",
+      "title": "Production of Leather Foot Wear (Children)",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand how to design Children Foot Wear",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain leather foot wear design"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify difference between foot wear and leather goods design"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify last and its essential parts"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the function of design"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain the purpose of design"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the Steps of Pattern Making for Children Foot Wear",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the appropriate basic tools/equipment for making of different patterns of foot wears"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Select the appropriate basic tools/equipment to be used in making patterns"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use masking tape to produce pattern"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry out simple patter making"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Produce various pattern with appropriate allowances"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand clicking/ cutting 0peration in Children ale Foot Wear production",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Select appropriate tools/equipment use for cutting leather materials"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify the appropriate basic tools/equipment in cutting of leather materials for foot wear production."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify types of clicking machine"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate the ability to cut various component of leather foot wears"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Carry out cutting process of various type of leather component for foot wears using scissors/knives, puncher, etc."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Use the clicking machine to cut component of leather materials"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Closing Operation for Children foot wear production",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the closing operation"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify various types of machines used in closing operation"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe upper assembling /preparation"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Collect cuts component and assemble"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Stitch the assembled component with the lining to have a closed upper"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand Lasting/ Making Operation for Children Foot Wear",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain lasting operation of foot wear"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Describe methods of lasting operation"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Select closed upper for lasting (pre-lasting)"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Prepare the insole and insert stiffeners"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Tack the insole on the selected last size"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Carry out lasting operation"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Select the proper sole size to be use"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Clean the sole with thinner to remove the unwanted dirt and prime the sole"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Select the appropriate adhesive and apply"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Understand Treeying/Shoe Room operation",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Identify appropriate tools and machine for treeing operation"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Select appropriate tools/equipment to be used"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Carry out Treeying/Shoe Room operation"
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Pair up size and package"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/LWK/011/L3",
+      "title": "Leather Bag / Wallet Production",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand how to Measure Various Sizes for Leather Bag/Wallet Production",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the tools for measurement of leather bags/wallets components"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Select the tools for measurement of leather bags/wallet components"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain how to take measurement of leather bags/wallet components."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Carry out the measurement of leather bag/wallet components."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know how to Produce Patterns for Leather Bag/Wallet Production LO (Learning Outcome) Criteria: - Materials for Making Leather Bags/Wallet",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the appropriate tools/equipment for making of patterns of leather bags/wallets."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain how to make patterns on leather bags/wallets on cardboard."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Carry out the positioning of marked leather patterns of leather bags/wallets."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry out the marking of patterns of leather bags/wallets on leather materials. Identify the appropriate tools/equipment used for cutting process in leather bag/wallets production. Evidence Ref Page Number"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.2",
+              "description": "Select appropriate leather materials to be used for making leather bags/wallets."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain how to cut various sizes of leather bags/wallets"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Cut patterns of leather bags/wallets."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Cut various leather materials for making some types of leather bags/wallets using scissors/knives, puncher, etc."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand how to apply Adhesives in Leather Bags/Wallets",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify the types of adhesives used on leather bags/wallets."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the procedure of applying adhesives in leather bags/wallets"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Carry out the application of adhesives on various type of leather bags/wallets (adhesion process)."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand how to carry out Folding Process in Leather Bags/Wallets",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain the techniques of folding offshoot areas allowance in leather bags/wallets making"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify areas to be folded offshoot (allowance) in bags/wallets production"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Carry out the folding process of appropriate areas in various types of leather bags."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "LO (Learning Outcome) Criteria: - Demonstrate Sewing of Leather Bags/Wallets leather bags/wallets.",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Explain the operation of leather sewing machine"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Explain the process in sewing different types of Evidence Ref Page Number"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Carry out basic sewing process of leather bags/wallets (optional)."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Demonstrate Stamping of Leather Bags/Wallets",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Explain the operation of Stamping Machine in leather bags/wallets production."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Explain the manual stamping operation in leather bags/wallets."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Explain the stamping process in different types of leather bags/wallets."
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Carry out basic stamping process of leather bags/wallets (i.e. manual stamping)"
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "LO (Learning Outcome) Criteria: -",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Identify the various tools and equipment in reconditioning process of leather bags/wallets."
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Identify the appropriate materials to be used in reconditioning process of leather bags/wallets."
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Explain how to use tools and equipment in reconditioning process of leather bags/wallets."
+            },
+            {
+              "pc_code": "8.4",
+              "description": "Explain where to use specified tools and equipment in reconditioning process of leather bags/wallets. Evidence Ref Page Number reconditioning process in leather bags"
+            }
+          ]
+        },
+        {
+          "lo_num": "9",
+          "description": "Understand how to Dye Leather Bags/Wallet",
+          "performance_criteria": [
+            {
+              "pc_code": "9.1",
+              "description": "Explain the purpose of dyeing leather products"
+            },
+            {
+              "pc_code": "9.2",
+              "description": "Explain the importance of dyeing leather bags/wallets."
+            },
+            {
+              "pc_code": "9.3",
+              "description": "Identify the types of dye used for dyeing leather bags/wallets."
+            },
+            {
+              "pc_code": "9.4",
+              "description": "Identify the tools used in dyeing leather bags/wallets."
+            },
+            {
+              "pc_code": "9.5",
+              "description": "Explain the procedure for dyeing of leather bags/wallets."
+            },
+            {
+              "pc_code": "9.6",
+              "description": "Carry out dyeing of a given leather bags/wallets using appropriate materials and tools."
+            },
+            {
+              "pc_code": "9.7",
+              "description": "Explain how to maintain the dyed leather bags/wallets in serviceable condition."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/LWK/012/L3",
+      "title": "Production of Leather Trunk-Box",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know how to make leather Trunk-Box",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain leather Trunk-Box"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the usage of leather Trunk-Box"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List the different types of Trunk=Box"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify the materials for making Trunk-Box"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "List the tools/equipment used in making Trunk-Box"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand how to Produce Patterns and skeletal framework for",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the appropriate tools/equipment for marking patterns of leather Trunk-Box."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe how to make patterns from a design for Trunk-Box"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the pattern for a particular leather Trunk-Box"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Make pattern for leather Trunk-Box"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "State the importance of skeletal framework in making leather Trunk-Box"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "List the tools/equipment for making skeletal framework for leather Trunk- Box"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand how to Cut Leather Materials to Make Leather Trunk-Box",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Select appropriate leather materials to be used for making leather Trunk-Box"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify the appropriate tools/equipment used for cutting process in leather Trunk-Box production."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Cut leather and other materials into components"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand how to apply Adhesives in Leather Trunk- Box",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify the types of adhesives used on leather Trunk- Box."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe the procedure of applying adhesives in leather Trunk- Box"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Carry out the application of adhesives on various areas (adhesion process)."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand how to carry out Folding Process in Leather Trunk-Box",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Describe the techniques of folding offshoot areas in leather Trunk-Box."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Fold offshoot areas in cut materials"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Identify the different materials used in the inner folding and outer cover of a leather Tunk-Box"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Carry out the folding process of appropriate areas in various types of leather Trunk-Box"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Demonstrate Sewing of Leather components to produce Trunk-Box",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Describe the operation of sewing machine"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Describe the process in sewing different leather components in producing Trunk- Box"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Carry out sewing of leather components to produce Trunk- Box"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Demonstrate fixing of ornament on Leather Trunk- Box ",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Identify how to fix ornament in leather Trunk-Box"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Select the type of ornament to be fixed"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Select tools/equipment to fix ornament in the leather Trunk- Box"
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Fix the ornament to fit the design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/LWK/013/L3",
+      "title": "Heels for Leather Footwears",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand how to select materials for producing heels",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the materials for producing heels for foot wears."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of putting heels on foot wears."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Recognize the areas of fixing heels on different types of foot wears."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Select different materials for producing various types of heels for foot wears."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know tools used for producing heels for shoe making",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe basic working tools used for putting different heels on foot wears"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the functions of the working tools used for producing heels for foot wears."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Uses relevant working tools to produce heels for foot wears."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know different sizes and types of heels",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe the different sizes of heels used for foot wears"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe different types of heels used for foot wears"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain different thickness of heels"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the uses of different types of heels in different foot wears."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "LO (Learning Outcome) Criteria: - produce heels for foot wears",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Select tools for cutting of materials for producing Evidence Ref Page Number heels"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Select sizes of heels required for specified foot wears."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Select the working tools required for producing heels for specified foot wears."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Mark materials to sizes for producing heels for foot wears."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Cut materials to the desired size and shape of heels."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand how to match heels to various designs of foot wear",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Select shapes of heels for various foot wears."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Select sizes of same shape of heels for foot wears"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Differentiate between block heels and pointed heels."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Differentiate between flat heel and high heels."
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Explain the areas of application of block heels and pointed heels."
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Explain the importance of balancing of heels to different designs of foot wears."
+            },
+            {
+              "pc_code": "5.7",
+              "description": "Match shapes of heels to different designs of foot wears."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

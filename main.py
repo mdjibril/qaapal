@@ -44,6 +44,18 @@ def clear_previews_on_trade_change():
         if persistent_set in st.session_state:
             st.session_state[persistent_set].clear()
 
+
+def clear_nos_context():
+    """Clear all NOS-related selections when trade or level changes."""
+    clear_previews_on_trade_change()
+    for key in (
+        "global_trade_level_select",
+        "selected_trade_level_id",
+        "selected_trade_level",
+        "selected_trade_level_name",
+    ):
+        st.session_state.pop(key, None)
+
 ENV_OPTIONS = {
     "Morning (Cool)": "The morning air was cool and the lab was quiet, providing a focused atmosphere with plenty of natural light.",
     "Afternoon (Warm)": "The lab temperature was moderate; the ceiling fans were active to maintain a comfortable working environment during the peak afternoon heat.",
@@ -62,6 +74,13 @@ def update_environment_preset():
 @st.cache_data(ttl=600)
 def get_cached_trades():
     return db.fetch_trades()
+
+
+@st.cache_data(ttl=600)
+def get_cached_trade_levels(trade_id):
+    if not trade_id:
+        return []
+    return db.fetch_trade_levels(trade_id)
 
 # --- DEEP LINKING LOGIC ---
 if "intent" in st.query_params:
@@ -153,16 +172,54 @@ else:
     trades = get_cached_trades()
 
     if trades:
+        st.sidebar.markdown("### NOS Selection")
+        st.sidebar.caption("Choose a trade first, then choose its level.")
         trade_names = [t['name'] for t in trades]
         # We use index to ensure the selector stays on the same item after refresh
         selected_name = st.sidebar.selectbox(
-            "Select Trade",
+            "Select Trade Family",
             trade_names,
             key="global_trade_select",
-            on_change=clear_previews_on_trade_change
+            on_change=clear_nos_context
         )
-        # Update session state
-        st.session_state.selected_trade_id = next((t['id'] for t in trades if t['name'] == selected_name), None)
+        selected_trade = next((t for t in trades if t['name'] == selected_name), None)
+        selected_trade_id = selected_trade['id'] if selected_trade else None
+        st.session_state.selected_trade_id = selected_trade_id
+        st.session_state.selected_trade_name = selected_trade['name'] if selected_trade else selected_name
+
+        trade_levels = get_cached_trade_levels(selected_trade_id)
+        if trade_levels:
+            def format_level_option(level_row):
+                label = f"Level {level_row['level']}"
+                display_name = level_row.get("display_name")
+                if display_name:
+                    label = f"{label} - {display_name}"
+                return label
+
+            current_level_id = st.session_state.get("selected_trade_level_id")
+            default_level_index = next(
+                (idx for idx, lvl in enumerate(trade_levels) if lvl["id"] == current_level_id),
+                0,
+            )
+
+            selected_trade_level = st.sidebar.selectbox(
+                "Select Level",
+                trade_levels,
+                index=default_level_index,
+                key="global_trade_level_select",
+                on_change=clear_previews_on_trade_change,
+                format_func=format_level_option,
+            )
+            if selected_trade_level:
+                st.session_state.selected_trade_level_id = selected_trade_level["id"]
+                st.session_state.selected_trade_level = selected_trade_level["level"]
+                st.session_state.selected_trade_level_name = selected_trade_level.get("display_name") or f"Level {selected_trade_level['level']}"
+                st.sidebar.caption(f"Selected NOS: {st.session_state.selected_trade_name} / {st.session_state.selected_trade_level_name}")
+        else:
+            st.session_state.pop("selected_trade_level_id", None)
+            st.session_state.pop("selected_trade_level", None)
+            st.session_state.pop("selected_trade_level_name", None)
+            st.session_state.pop("global_trade_level_select", None)
     else:
         st.sidebar.error("⚠️ No trades found. Check Supabase connection or table data.")
 

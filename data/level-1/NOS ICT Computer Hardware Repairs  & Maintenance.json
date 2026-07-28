@@ -1,0 +1,939 @@
+{
+  "trade_name": "NOS ICT Computer Hardware Repairs  & Maintenance",
+  "level": 1,
+  "units": [
+    {
+      "code": "ICT/CMR/001/L1",
+      "title": "OCCUPATIONAL HEALTH AND SAFETY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Occupational Health and Safety in Computer Operations and Maintenance",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain occupational health and safety standards"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe discomforts and disorders related to computer use, such as: i. Back pain (lower and upper). ii. Stiff neck. iii. Sore shoulders. iv. Arching wrists. v. Dry eyes. vi. Eyestrains and sore eyes. vii. Glare. viii. Musculoskeletal disorder"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain how to ensure comfort and safety, including: i. Proper screen distance ii. Correct sitting posture iii. Keyboard positioning. iv. Adequate room lighting. v. taking breaks and exercising. vi. Using anti-glare screens"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify health and safety risks in computer work, such as: i. Electrostatic discharge ii. Electric surges iii. Electric shocks. 1. Use occupational health and safety equipment, including: i. Anti-static wristbands ii. Gloves iii. Coveralls iv. Boots v. Fire extinguishers vi. First aid kits"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Explain important safety rules for computer maintenance and repairs."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Environmental Issues in Computer Ref. Page No. OBJECTIVE (LO) Operations and Maintenance",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain environmental hazards related to computer operations."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify tools and equipment used to reduce environmental hazards."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use tools and equipment to reduce environmental hazards."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify risks related to water, air, and land pollution at work."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Describe ways to prevent environmental pollution."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Apply environmental protection methods in selected activities"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate Personal Safety Practices in the Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Follow workplace safety rules."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use personal protective equipment (PPE) correctly."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify different types of protective equipment (PPE)."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Maintain a clean and safe work environment."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Recognize safety tags, signs, and symbols."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate First Aid Practices Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify first aid materials"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Choose the right first aid materials for different situations."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Maintain first aid supplies in the workplace."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Perform first aid procedures when needed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/002/L1",
+      "title": "Effective Use of Communication Skills in Workplace",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Verbal and Non-verbal Communications",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify verbal means of communication"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify non-verbal means of communication"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain how to use simple verbal communication to pass on necessary information."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain how non-verbal communication (e.g., body language) can be used effectively."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Interpret symbols and signs appropriately"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify Sources of Information in a Work Environment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify sources of information in an organizational work environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Communicate appropriately with information sources."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use various information flow systems in the workplace."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Apply information effectively to prevent work-related challenges."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Report findings in accordance to procedure in work environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Use Various Communication Methods in a Work Environment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify different communication equipment in the workplace."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use workplace communication equipment effectively."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Deliver information correctly to the appropriate personnel."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Communicate effectively using symbols, signs, and codes."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand the Basics of Pronunciation",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify vowel sounds"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain diphthongs sounds"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Distinguish between long and short vowel sounds."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify components/groups of sound that make the alphabets"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Demonstrate the Ability to Read Reference OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Define the term \"reading.\""
+            },
+            {
+              "pc_code": "5.2",
+              "description": "State reading techniques such as: i. Browsing; ii. Skimming; iii. Scanning"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Explain the differences and purposes of each reading technique."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Practice the following: i. Reading comprehension with a passage ii. Paragraph reading and recall i. Reading aloud ii. Silent reading"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/003/L1",
+      "title": "Basic Computer Operations and Maintenance",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the basics of personal computer systems",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Discuss the following: i. Basics of computers; ii. Applications of computers"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Discuss the basic components of computers: i. Input Devices; ii. Output Devices; iii. System unit; iv. Memory and its types; Storage Devices v. Identify various I/O devices such as keyboard, mouse, scanner, printer, etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the classes of personal computers: i. Desktop; ii. Laptop iii. Mobile Devices"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the implications of computers on society"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain how to operate a computer system"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Carry out the activities involved in setting up a computer system"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Explain how to connect, configure, and test I/O devices such as keyboard, mouse, scanners, printers, etc."
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Explain the role of CPU, motherboard, RAM, and storage in system performance."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Systems Software",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define the operating system."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Differentiate between system software and application software"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the different operating systems. i. recognize and name examples of different operating systems. ii. Recognize other system software such as utility programs, antivirus, disk management tools, and backup software."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use any File Manager to work with files and folders"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Use Windows Help"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Application Software Reference OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define application software and its examples"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Differentiate between application software and system software"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify Windows-based application software such as Microsoft Office Suite and Google Suite."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the basic features of each type of application software listed above"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify icons, bars, and elements of Browsers"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Differentiate the Booting Process of Computers",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the term booting"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the types of booting: i. Warm booting. ii. Cold booting."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain the steps involved in booting Windows 8/11 and other operating systems"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Outline the procedures of cold and warm booting"
+            },
+            {
+              "pc_code": "4.1",
+              "description": "Describe of computer networking and its uses"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify the uses of computer networks"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "State the classifications of networks: i. Local Area Network (LAN) ii. Metropolitan Area Network (MAN) iii. Wide Area Network (WAN) iv. Internet/World Wide Web"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Explain the different types of networks listed in 4.2"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Identify the following components of a simple computer network: i. Switches; ii. Routers; iii. Categories of Network Cables, e.g., CAT 5 and CAT-6e Ethernet cables, etc. iv. Coaxial Cables v. RJ-45 Connectors and BNC Connectors; vi. Network Interface Cards. Access points/Wireless routers"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Explain the meaning of the following basic terms: i. Topology. ii. Bandwidth; iii. Server. iv. Clients"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand the Basic Principles of Computer Networking Reference OBJECTIVE (LO) Maintenance and their Applications to Computers",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain hardware maintenance"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain software maintenance"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "State types of computer software maintenance"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "State types of computer hardware maintenance"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Outline the benefits of carrying out preventive and corrective maintenance"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Outline when to carry out preventive and corrective maintenance"
+            },
+            {
+              "pc_code": "5.7",
+              "description": "State the characteristics of computer hardware maintenance"
+            },
+            {
+              "pc_code": "5.8",
+              "description": "Perform the basic preventive maintenance on computers"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Understand Classes of Reference",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Identify the following computer hardware maintenance tools: i. Soldering irons; ii. Set of pliers; iii. Cutters; iv. Set of screw drivers; Multi-meters, etc."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Explain the importance of tools in computer hardware maintenance and repairs"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Outline the functions of the following hardware maintenance tools: v. Soldering irons; vi. Set of pliers; vii. Cutters; viii. Set of screwdrivers. v. Multi-meters. vi. Wire strips. vii. Soldering stations. viii. Set of Allen keys. ix. Air blowers"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Use tools listed in 6.3 above"
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Identify the appropriate equipment and facilities needed to set up a computer maintenance and repair workshop"
+            },
+            {
+              "pc_code": "6.6",
+              "description": "Explain the risks involved in using incorrect tools to carry out maintenance and repairs"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Use the Basic Tools Needed for Computer Hardware Maintenance and Repairs",
+          "performance_criteria": []
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/004/L1",
+      "title": "Basic Computer Maintenance Using Software Tools",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Apply the Basic Software Maintenance tools",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use the Control Panel to adjust computer settings"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Scan the computer to check for and repair errors"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Perform defragmentation procedure for hard drive"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Uninstall unwanted programs or apps"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use the Cleanup tool to remove unused files"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Configure computers to run automatic maintenance schedules daily"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Apply Windows Backup tool to store computer data using external hard disk USB memory sticks and cloud backup"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Perform installation of Anti-Virus Software and Internet Security",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify symptoms of computers infected with virus"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Install Anti-Virus software and Internet Security such as AVG, Norton, Avast, McAfee, Kaspersky, etc."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Activate antivirus software and Internet Security"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Scan computers using Anti-Virus software and Internet Security"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Update antivirus software and Internet Security Renew expired antivirus software and Internet Security"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the Use Spyware and Malware Protection",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the importance of Spyware and Malware definitions in computers"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use Spyware and Malware to scan computers"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Update the Spyware and Malware"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Perform actions on the detected harmful or unwanted items in computers"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Explain how malware can affect computers\u2019 performance and security"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate how to format Reference OBJECTIVE (LO) The learner will: Hard drives of Computers",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "State the aims of formatting hard drives of computers"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Format hard drive of computer using formatting disk"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Format a system using external hard- drive, basically for mini laptop"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Demonstrate other disk management techniques such as partitioning and defragmentation for effective performance"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Install Personal Computer (PC) Drivers Reference",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain device drivers"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify missing device drivers"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Install missing device drivers through the following methods: I.Online; ii. Offline"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Test installed drivers and functionality of the components"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Scan hardware changes after installation of drivers"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/005/L1",
+      "title": "Internal and External Components of Computers",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand various Computer Peripherals",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define computer peripherals"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify computer peripherals"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the main functions of computer peripherals"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify computer peripherals that use Universal Serial Bus (USB) ports"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Identify peripherals that use serial and parallel ports"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify the Internal Components of Computer Systems",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the individual internal components of computers, such as: i. Motherboard. ii. Video Graphic Adapter (VGA) card; iii. hard disks; iv. power pack; v. network interface cards; vi. memory cards vii. CPU"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the main functions of the internal components of computer systems as mentioned in 2.1 above"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate the relationship of each component in 2.1 to one another"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify Serial Advanced Technology Attachment (SATA) and other internal cables of computers"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Identify Motherboards",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify different types of motherboards as essential component of computers"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify the components of a motherboard"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the main functions of the motherboard components"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify expansion slots and cards in the motherboards"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand types of computer memories Reference",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Define computer memories"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the uses of computer memories"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify types of computer memories: i. Random Access Memory (RAM) ii. Read-only memory (ROM) iii. Programmable Read Only Memory (PROM)"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Explain the difference between volatile and non-volatile memories"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Differentiate between the types of computer memory listed in 4.3"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Demonstrate how to enter BIOS setup"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/006/L1",
+      "title": "Ethical Principles in Work Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Work Environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the hierarchy within the working environment, customers, and suppliers in work environment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the following obligations of employers and employees in an organization: i. respect the views and decisions of other people; ii. bring about good in all actions; iii. harmless to others ; iv. treat all people fairly and equally. v. accountable for all actions; vi. focus on details"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the importance of the following attributes at work. i. punctuality; ii. regularity; iii. keeping obligations; iv. being reliable; v. meeting deadlines"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain how staff should relate with their employers, superiors, and colleagues"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate the Knowledge of Customer Relationship",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the features of customers"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the challenges in customer relationship"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss good customer care"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Manage customer relationship"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Observe Rules and Regulations in Workplace Reference",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain rules and regulations in the workplace"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the general operational procedure in a computer hardware maintenance and repair workshop"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Discuss dress code in a computer hardware maintenance and repair workshop"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/007/L1",
+      "title": "Fundamentals and Applications of Basic Electronics to Computer Hardware",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Use of Basic Electronic tools in computer operations and maintenance.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify Basic Electronic tools used in computer maintenance, such as; I. Anti-Static Wrist Strap II. Anti-Static Mats III. Multimeter IV. Voltage Tester V. Screwdrivers VI. Pliers VII. Wire Cutters VIII. Wire Strippers IX. Power Supply Tester X. POST Card XI. USB Debugging Tool XII. Thermal Paste XIII. Cable Ties XIV. Torx Driver"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Categorize the Basic Electronics Tools in terms of usage, such as: i. Safety Tools; ii. Measuring Tools; iii. Hand Tools; iv. Power Tools; v. Diagnostic Tools; vi. Miscellaneous Tools"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the usage of Basic Electronics Tools in computer operation and maintenance."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Demonstrate the use of basic electronics tools in computer operation and maintenance."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Physical Quantities Related to Electric Circuits Reference OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Electronics and its importance to computer operation and maintenance"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the meaning of the following in the context of electric current: I. Atoms; II. Protons; III. Neutrons; vi. Electrons"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss the main characteristics of electronics: i. Current; ii. Voltage; iii. Resistance"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "State the SI units of the electrical quantities listed in 2.3 above"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "State the differences between Direct Current (DC) and Alternating Current (AC) voltage"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Explain the four factors affecting the resistance of a conductor, namely: i. Length; ii. Cross-sectional area; iii. Temperature; iv. Resistivity"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Draw simple diagrams to illustrate voltage, current, and resistance in electric circuits"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the Concepts and Applications of Ohm\u2019s Law (V=IR) and Power (P=I2R)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State Ohm\u2019s law"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Discuss the applications of Ohm\u2019s law in home and office equipment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Write the mathematical expression of Ohm\u2019s law"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the following DC circuits with the aid of simple diagrams: i. Series; ii. Parallel"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Perform simple calculations on DC circuits using Ohm\u2019s laws"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Define electrical power in relation with Ohm\u2019s Law (P=IR)"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Explain the SI unit of power"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Explain the importance of power"
+            },
+            {
+              "pc_code": "3.9",
+              "description": "Perform simple power calculations in real-life situations"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand the basic electromagnetic principles due to current flowing through conductors Reference OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Define the applications of electromagnetism"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the concept of electromagnetic induction"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain alternating current (AC) voltage and how it is generated"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Describe the two types of AC voltage using diagrams: i. Single phase; ii. Three-phase"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Explain the following terms associated with AC voltage using a sine wave: i. Peak value; ii. Peak-to-Peak value iii. Instantaneous value iv. Root Mean Square value"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Apply conductors, insulators, and semiconductors in computer hardware maintenance.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain the meaning of the following: I. Conductor; II. Insulators; III. Metals; IV. Non-metals; V. Alloys; VI. Semiconductors"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify the uses of metals and alloys in hardware maintenance and repair."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Identify uses of insulators in the Hardware Maintenance and repair trade"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Identify uses of semiconductors in the Hardware Maintenance and repair trade"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Identify Instruments to Measure Physical Quantities Reference S/No NOS Title /Unit Number 1 ICT/CMR/001/L2 Occupational Health and Safety in Workplace Environment ICT/CMR/002/L2 Communication 3 ICT/CMR/003/L2 Teamwork 4 ICT/CMR/004/L2 Disassemble and Assemble Computers 5 ICT/CMR/005/L2 Faults Trace, Measurement, and troubleshooting in Computers 6 ICT/CMR/006/L2 General Maintenance and Repairs of Faulty Computers 7 ICT/CMR/007/L2 Management Of Computer Hardware Maintenance And Repairs 8 ICT/CMR/008/L2 Fundamentals of Basic Electronics to Computer Hardware Maintenance and Repairs 9 ICT/CMR/009/L2 Fundamental Principles of Using Printers, Photocopy Machines and Scanners",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "State the basic physical quantities measured in computer operations and maintenance, such as: i. Current ii. Voltage iii. Power iv. Resistance v. Energy vi. Frequency/clock speed vii. Inductance viii. Capacitance"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Explain the importance of 6.1 above"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Identify the instruments that are used to measure the quantities listed in 6.1 Credit Guided Remark Value Learning Hours 2 20 Mandatory 4 40 22 220 3 30 60"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -343,13 +343,14 @@ def main():
                     admin_client = get_admin_supabase()
                     st.session_state.admin_nos_cache = {
                         "Trades": admin_client.table("trades").select("*").execute().data,
+                        "Trade Levels": admin_client.table("trade_levels").select("*").execute().data,
                         "Units": admin_client.table("units").select("*").execute().data,
                         "Learning Outcomes": admin_client.table("learning_outcomes").select("*").execute().data,
                         "Performance Criteria": admin_client.table("performance_criteria").select("*").execute().data,
                     }
                 except Exception as e:
                     st.error(f"Failed to sync standard repositories: {e}")
-                    st.session_state.admin_nos_cache = {"Trades": [], "Units": [], "Learning Outcomes": []}
+                    st.session_state.admin_nos_cache = {"Trades": [], "Trade Levels": [], "Units": [], "Learning Outcomes": [], "Performance Criteria": []}
 
         sub_tab_view, sub_tab_edit = st.tabs(["👁️ View Database", "✍️ Edit Content"])
 
@@ -389,7 +390,7 @@ def main():
 
         with sub_tab_edit:
             st.subheader("Edit National Standards Content")
-            edit_type = st.radio("Choose standard scope to modify:", ["Unit", "Learning Outcome"], horizontal=True)
+            edit_type = st.radio("Choose standard scope to modify:", ["Unit", "Learning Outcome", "Delete NOS"], horizontal=True)
 
             if edit_type == "Unit":
                 units = st.session_state.admin_nos_cache.get("Units", [])
@@ -438,6 +439,116 @@ def main():
                                 st.error(f"LO update failed: {e}")
                 else:
                     st.info("No Learning Outcomes available.")
+
+            elif edit_type == "Delete NOS":
+                st.subheader("Danger Zone: Remove NOS Content")
+                st.warning(
+                    "Deleting a trade will remove its trade levels and units through database cascades. "
+                    "Deleting a single level will remove its units, learning outcomes, and performance criteria first, then the level."
+                )
+
+                delete_scope = st.radio(
+                    "What do you want to delete?",
+                    ["Entire Trade Family", "Single Trade Level"],
+                    horizontal=True,
+                    key="delete_nos_scope"
+                )
+
+                trades = st.session_state.admin_nos_cache.get("Trades", [])
+                if not trades:
+                    st.info("No trades available to delete.")
+                else:
+                    trade_map = {f"{trade['name']} (ID {trade['id']})": trade for trade in trades}
+                    selected_trade_label = st.selectbox(
+                        "Select Trade",
+                        list(trade_map.keys()),
+                        key="delete_nos_trade_select"
+                    )
+                    selected_trade = trade_map[selected_trade_label]
+
+                    selected_trade_level = None
+                    trade_levels = []
+                    if delete_scope == "Single Trade Level":
+                        trade_levels = db.fetch_trade_levels(selected_trade["id"])
+                        if trade_levels:
+                            level_map = {
+                                f"Level {lvl['level']}" + (f" - {lvl['display_name']}" if lvl.get("display_name") else ""): lvl
+                                for lvl in trade_levels
+                            }
+                            selected_level_label = st.selectbox(
+                                "Select Trade Level",
+                                list(level_map.keys()),
+                                key="delete_nos_level_select"
+                            )
+                            selected_trade_level = level_map[selected_level_label]
+                        else:
+                            st.info("No trade levels found for the selected trade.")
+
+                    if delete_scope == "Single Trade Level" and not selected_trade_level:
+                        st.info("Pick a level to continue.")
+                    else:
+                        preview, preview_error = db.fetch_nos_delete_preview(
+                            selected_trade["id"],
+                            selected_trade_level["id"] if selected_trade_level else None
+                        )
+
+                        if preview_error:
+                            st.error(f"Unable to load delete preview: {preview_error}")
+                        elif preview:
+                            trade_label = preview.get("trade", {}).get("name", selected_trade["name"])
+                            level_label = preview.get("trade_level", {}).get("display_name")
+                            if selected_trade_level and not level_label:
+                                level_label = f"Level {selected_trade_level.get('level')}"
+
+                            counts = preview.get("counts", {})
+                            st.markdown("##### Delete Preview")
+                            if delete_scope == "Entire Trade Family":
+                                st.write(f"**Target:** {trade_label}")
+                                st.write(f"Trades: {counts.get('trades', 1)}")
+                            else:
+                                st.write(f"**Target:** {trade_label} / {level_label}")
+                                st.write("Trades: 0")
+                            st.write(f"Trade Levels: {counts.get('trade_levels', 0)}")
+                            st.write(f"Units: {counts.get('units', 0)}")
+                            st.write(f"Learning Outcomes: {counts.get('learning_outcomes', 0)}")
+                            st.write(f"Performance Criteria: {counts.get('performance_criteria', 0)}")
+                            if preview.get("units"):
+                                st.caption("Units to be removed: " + ", ".join(u["code"] for u in preview["units"][:10]))
+
+                            with st.form("delete_nos_form"):
+                                confirm_phrase = (
+                                    f"DELETE {trade_label}"
+                                    if delete_scope == "Entire Trade Family"
+                                    else f"DELETE {trade_label} LEVEL {selected_trade_level['level']}"
+                                )
+                                typed_confirm = st.text_input(
+                                    "Type the confirmation phrase exactly",
+                                    placeholder=confirm_phrase
+                                )
+                                acknowledged = st.checkbox("I understand this action cannot be undone.")
+                                delete_clicked = st.form_submit_button("Delete Selected NOS", type="primary")
+
+                                if delete_clicked:
+                                    if typed_confirm != confirm_phrase:
+                                        st.error("Confirmation phrase does not match.")
+                                    elif not acknowledged:
+                                        st.error("You must acknowledge the warning before deleting.")
+                                    else:
+                                        try:
+                                            if delete_scope == "Entire Trade Family":
+                                                success, err = db.delete_nos_trade(selected_trade["id"])
+                                            else:
+                                                success, err = db.delete_nos_trade_level(selected_trade_level["id"])
+
+                                            if success:
+                                                st.success("✅ NOS content deleted successfully.")
+                                                if "admin_nos_cache" in st.session_state:
+                                                    del st.session_state.admin_nos_cache
+                                                st.rerun()
+                                            else:
+                                                st.error(f"Deletion failed: {err}")
+                                        except Exception as e:
+                                            st.error(f"Deletion failed: {e}")
 
 
     # ==========================================

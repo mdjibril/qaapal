@@ -1,0 +1,1592 @@
+{
+  "trade_name": "NOS ICT Digital Content Creation L3",
+  "level": 3,
+  "units": [
+    {
+      "code": "ICT/DCC/001/L3",
+      "title": "OCCUPATIONAL HEALTH AND SAFETY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Observe Health and Safety Precaution in Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe waste disposal in line with organizational procedures."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Maintain personal hygiene in the workplace."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify safety signs and symbols relevant to operation."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Select safety equipment to be used in the workplace."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Hazard in workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Locate potential hazard points at in the workplace"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Discuss causes of hazard in workplace: \u25cf Negligence \u25cf Human Error \u25cf Machine malfunction, etc."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Report identified hazard points to the supervisor"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify possible hazard to the supervisor: \u25cf Severe weather conditions \u25cf Severe vibration \u25cf Pollution, etc."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Accident in the workplace OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State types of accident in the workplace: \u25cf Fire accident \u25cf Electric shock"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State causes of accident in the workplace Ref. Page"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "State measures to prevent accident in the workplace: \u25cf Maintain alertness on the job \u25cf Promote safety awareness \u25cf Observe rest cycle \u25cf Use PPE, etc."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate First Aid at workplace."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DCC/002/L3",
+      "title": "COMMUNICATION SKILLS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand communication in the workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain communication in workplace \u25cf peer to peer \u25cf Operator Helper to Operator \u25cf Operator to supervisor."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of communication in a work environment."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe how to get information from schedule of work"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand methods of communication in the workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the forms of communication: \u25cf Verbal (spoken) \u25cf Non-verbal (written)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Communicate work information to supervisor"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Communicate information in written form"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand elements of communication in workplace OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Receive written/verbal information on the job"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Follow verbal instruction on the job"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Pass verbal information/instruction on the job Ref. Page"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Communicate to immediate supervisor/team members",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify potential obstacles that can hinder work progress in an ICT environment, such a \u25cf Software issues: Bugs, glitches, compatibility problems, or security breaches. \u25cf Hardware problems: Equipment malfunctions, hardware failures, or insufficient system resources. \u25cf Network connectivity issues: Lack of internet access, slow internet speeds, or network outages"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Report concerns which may affect work progress."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Record work instructions."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Record routine daily checks on software and hardware"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DCC/003/L3",
+      "title": "TEAMWORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the benefits of Working in a Team at the Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "List the advantages of working as a team."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the attributes of a team player: \u25cf Mutual respect \u25cf Common goal \u25cf Discipline \u25cf Mutual understanding \u25cf Trust \u25cf Honesty and sincerity, etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List members that constitute a team in the ICT work environment: \u25cf Systems Analysts \u25cf Software Developers \u25cf Database Administrators (DBAs) \u25cf Network Engineers \u25cf Security Analysts \u25cf Help Desk Technicians, etc."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Recognize team members in a work environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand how to relate with team members OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the need for good working relationship with team members at the workplace."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Recognize the roles of other team members."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss your own role in achieving the objectives of the team."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the role of a Network Administrator in an ICT work environment. Ref. Page"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Discuss the relationship between the Network Administrator and other positions within the ICT team."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Observe Positive Work Relationships with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State the qualities of a good Network Administrator: \u25cf Strong technical skills \u25cf Problem-solving abilities \u25cf Communication skills \u25cf Customer service orientation \u25cf Attention to detail \u25cf Adaptability \u25cf Teamwork"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Relate with other members at workplace"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the importance of effective communication and collaboration with other team members to ensure smooth operations"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Communicate information that may affect other workers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DCC/004/L3",
+      "title": "BASICS OF DIGITAL CONTENT CREATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the concepts of digital content creation",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define digital content"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain concepts of digital content creation (eg. audience, content planning, content optimization, etc.)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify types of digital contents"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify proper channels for each content type."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain how digital content creation can increase career opportunities and problem solving skills"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand digital content channels",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify types of digital content channels"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Compare the advantage of each digital content channel"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify suitable contents for each digital channel."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Identify a niche and target audience",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define a niche"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the importance of a niche in content creation"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify a specific niche relevant to their interests or expertise"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Evaluate potential niches, (including trends, and competition)"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Describe target audience (including demographics, psychographics, and behavior)"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Explain how to segment audiences into different groups"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Select appropriate blogging platform Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify blogging platforms (e.g., WordPress, Blogger, Medium, Wix)."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe the features of different platforms, such as customization options, support etc"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe the capabilities of different platforms, such as ease of use, SEO capabilities etc."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Select blogging platform based on specified needs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DCC/005/L3",
+      "title": "CONTENT CREATION AND PLANNING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand digital content",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain types of digital content"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the key characteristics of each content type, including their format, and Usage"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Create sample content for each identified content type"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Outline a strategy for using a mix of different content types to achieve goals"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Apply effective writing techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Organize contents logically"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Create engaging and relevant headlines that attract readers' attention"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Adapt the tone of the content to suit the subject matter, audience, and purpose"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use examples, stories, or language that resonate with the target audience to enhance engagement"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand trending content Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify trending topics and keywords using research tools and platforms (e.g., Google Trends, keyword research tools, social media analytics)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Interpret data from research tools to determine content that are currently in demand."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Select contents that are relevant to the target audience"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Outline each content\u2019s potential impact on traffic and visibility"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Implement strategies to effectively engage audience",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Create content that addresses specific needs of audiences"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Utilize interactive elements such as polls, quizzes, and comment sections to encourage reader participation"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Engage with readers by responding to comments and feedback"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Track engagement metrics (e.g. page views, average time on page, bounce rate, and social shares, etc.)."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Create content that captures the audience\u2019s interest using storytelling techniques"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Assess the effectiveness of the strategies"
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Implement data-driven adjustments to improve interaction."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Use artificial intelligence (AI) tools and technologies to enhance blogging Use AI-powered tools to generate content ideas Utilize AI writing assistants to draft, edit, and improve blog posts",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify the AI tools available for blogging"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain how AI tools can be used to enhance blogging efforts."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Compare multiple AI tools"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Use AI-powered tools to generate content ideas"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Utilize AI writing assistants to draft, edit, and improve blog posts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DCC/006/L3",
+      "title": "SETTING UP A BLOG",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the fundamentals of domain hosting",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define domain name"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the role of domain name in the context of a website"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the structure of a domain name"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the process of registering a domain name"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Define web hosting"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Describe types of web hosting (e.g., shared hosting, VPS hosting, dedicated hosting, cloud hosting, etc.)"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Demonstrate how to link a domain to the hosting server"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Configure all initial settings"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand blog themes customization techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define a theme"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the role of theme in the design and functionality of a blog"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe components of a theme, such as layout, color schemes, typography, and widgets"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Apply a selected theme to a blog or website and adjust it according to specific requirements."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Customize a chosen theme to meet the blog\u2019s or website\u2019s design and functional needs."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand user experience (UX) Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define user experience (UX) and its importance in website design."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe basic UX principles, such as usability, navigation, accessibility, and visual hierarchy."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain how themes and customization choices impact overall user experience and website interaction."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Design a logo Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Define a logo"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the purpose of a logo in branding and visual identity."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain how a logo should align with the brand\u2019s overall visual identity."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Develop multiple logo concepts based brand requirements."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Create a logo using design software (e.g., Adobe Illustrator, CorelDRAW, or other vector-based tools)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DCC/007/L3",
+      "title": "SEARCH ENGINE OPTIMIZATION (SEO) FUNDAMENTALS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand search engine concepts",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain search engine"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the functions of search engines"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the components of a search engine (such as search algorithms, web crawlers, and indexes)."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain how search engine crawlers (bots) navigate the web"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain how search engines index web pages"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know keyword research",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify high-impact keywords relevant to a niche and target audience using keyword research tools"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Evaluate keyword metrics (e.g. search volume, competition, keyword difficulty etc) to select the most effective keywords for a content"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Develop a content strategy that includes targeted keywords."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement On-page and off-page SEO techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe on-page SEO elements (eg. meta tags, headings, keyword usage, and content optimization)."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain off-page SEO factors (eg. backlinks, social signals, and domain authority)."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use elements from On-page techniques to improve the SEO of a digital content"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use factors from Off-page techniques to improve the SEO of a digital content"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Improve website speed and mobile- friendliness Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain how user experience (UX) factors impact search engine rankings."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use digital tools to evaluate websit speed."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Evaluate the performance issues of digital content channels (eg. Use experience (UX), responsiveness etc.)"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Compress and resize images to reduce file sizes without compromising quality."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Configure browser caching to decrease page load times."
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Configure server-side caching to decrease page load times."
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Apply responsive design principles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DCC/008/L3",
+      "title": "CONTENT VISIBILITY STRATEGIES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Implement effective social media marketing strategies",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Select appropriate social media platforms based on their target audience, content type, and marketing goals."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Develop engaging content tailored to a social media platform"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Design strategies to engage with the audience"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Implement social media advertisements (e.g. sponsored posts and paid promotions, etc)"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use analytics tools to track key performance metrics, such as reach, engagement rate, click-through rate, and conversion rate."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Develop strategies to address and manage negative feedback or social media crisis"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Execute effective email marketing campaigns Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Develop strategies to build and manage an email subscriber list"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Design email marketing campaigns that align with the objectives and target audience"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Create compelling email content using personalization techniques"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Design visually appealing and mobile-friendly email templates using images, graphics, and other visual elements to make emails more engaging"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Set up automated email workflows for tasks"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Create a pitch for a guest blog post",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify suitable blogs or websites for guest posting opportunities"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use networking strategies to establish relationships with blog editors or owners."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Create a compelling pitch proposing an idea for a guest blog post"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Incorporate feedback from editors or peers to improve the quality and impact of their guest posts."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Implement offline strategies to promote a blog Ref. Page No. Identify relevant offline events (e.g., conferences, local meetups)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify relevant offline events (e.g., conferences, local meetups)"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Develop offline promotional materials (e.g. business cards, flyers, or brochures that include blog details and call-to-action)"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Implement a strategy for distributing print materials in relevant locations or at events."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DCC/009/L3",
+      "title": "MONETIZATION STRATEGIES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Incorporate affiliate marketing into digital content channels",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define affiliate marketing"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Select appropriate affiliate programs"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Integrate affiliate links into digital posts"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain legal and ethical standards required in affiliate relationships."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Incorporate sponsored content into blogs",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define Sponsored content"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify a brand to promote their products or services for a sponsored post."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Develop compelling proposals for sponsored content"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Create high-quality sponsored content that aligns with the blog"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Demonstrate the ability to negotiate terms and agreements with sponsors"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Create digital products",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify market needs for digital products that aligns with a niche and audience."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Develop a clear concept for a digital product that addresses identified needs"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Utilize appropriate tools and platforms to produce and format the digital product"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Advertise digital products Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Create compelling promotional material"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify sales channels"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Set up sales channels"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Execute marketing campaigns to promote the digital product"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand how to sell digital products",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Establish a pricing strategy that reflects the value of the digital product"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Implement systems for processing transactions and delivering digital products to customers smoothly"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Provide effective customer support to handle inquiries or issues related to the digital product."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Monitor sales data to assess performance of the digital product"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Analyze sales data to identify areas for improvement"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Use customer feedback to refine and enhance the digital product and sales strategy"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Build email lists for targeted marketing purposes",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Create email sign-up forms and landing pages to capture subscriber information effectively"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Strategically place sign-up forms on the blog"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Develop compelling lead magnets (e.g., eBooks, checklists, templates) that provide value to potential subscribers"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Utilize email marketing tools to manage and organize the email list"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Explore advertising options Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Describe different advertising display ads)"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Compare various advertising platforms and networks"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Select the most suitable options for the niche and audience."
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Create an account with advertising networks like Google AdSense."
+            },
+            {
+              "pc_code": "7.5",
+              "description": "Develop ad campaigns (selecting targeting options and ad formats that align with the digital content goals"
+            },
+            {
+              "pc_code": "7.6",
+              "description": "Manage the ad campaigns."
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Implement other strategies to earn passive income through digital channels Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Identify passive income opportunities relevant to some digital channels"
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Configure advertising options to generate passive income from ad placements"
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Implement content scheduling and automation to continuously attract traffic"
+            },
+            {
+              "pc_code": "8.4",
+              "description": "Utilize automation tools to optimize income streams"
+            },
+            {
+              "pc_code": "8.5",
+              "description": "Develop plans for scaling passive income streams"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DCC/010/L3",
+      "title": "BLOG ANALYTICS & PERFORMANCE IMPROVEMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Utilize analytics tools",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Create a Google Analytics account for the blog"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Configure a Google Analytics account for the blog"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Customize Google Analytics dashboards and report"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use Google Analytics to analyze blog traffic patterns"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Track Metrics",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify trends and patterns to gain insights into user behavior and content performance."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Evaluate the performance of individual blog posts and pages,"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify metrics such as page views, average session duration, and bounce rates."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use built-in analytics tools provided by blogging platforms (e.g., WordPress, Medium) to track engagement metrics such as likes, shares, comments, and page views."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Adjust Strategies Based on Performance Data ",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use data insights to make informed decisions on increasing overall blog performance"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Interpret key performance metrics (e.g., traffic, engagement, conversion rates) to understand the effectiveness of blogging strategies"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use insights from data to refine and optimize content strategies (e.g. adjusting topics, improving content quality or modifying publishing schedules)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DCC/011/L3",
+      "title": "BLOG MAINTENANCE ESSENTIALS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Update blog content",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Update content to reflect current trends, developments, or changes in the subject matter."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify all factual information in updated content"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Select relevant keywords and phrases to use on updated content"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Review content to better meet user needs and expectations"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Examine and update internal and external site links to ensure they are functional and lead to relevant content."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Develop detailed records and clear reports of content updates, including what changes were made and the reasons for those updates"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Manage blog comments Ref. Page No. Describe how to respond to comments in a thoughtful and Demonstrate ability to manage conflicts or disagreements in",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate ability to review and moderate comments"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe how to respond to comments in a thoughtful and constructive manner"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate ability to manage conflicts or disagreements in comments"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain comment policy"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Identify and filter out spam, inappropriate, or abusive comments"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Maintain records of comment management activities"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Troubleshoot technical issues related to blog functionality and performance",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify diagnostic tools and platforms (e.g. browser developer tools or website performance analyzers) to troubleshoot blog issues"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify technical issues affecting blog functionality (e.g Incorrect indexing, slow page speed, broken links etc)."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use technical tools to resolve identified issues."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Analyze the root cause of technical problems to address underlying issues"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Test the implemented solutions"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Utilize support resources (e.g. forums, help documentation, or professional assistance)"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Implement a comprehensive backup strategy for the blog",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Develop a detailed backup plan"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Choose appropriate backup tools or services"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Set up automated backup processes"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Perform manual backups when necessary"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Use reliable and secure storage solutions for backup files"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Develop a disaster recovery procedure"
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Document the disaster recovery procedure"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Implement security best practices to protect the blog Analyze the root cause of technical problems to address underlying",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Describe, unique passwords and multi-factor authentication (MFA)"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain user roles and permissions"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Explain the importance of regular updates, patches and backups"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Describe data encryption"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Configure firewall"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Install security Plugins"
+            },
+            {
+              "pc_code": "5.7",
+              "description": "Describe monitoring tools and alerts"
+            },
+            {
+              "pc_code": "5.8",
+              "description": "Install monitoring tools to track and log user activities"
+            },
+            {
+              "pc_code": "5.9",
+              "description": "Configure alerts for suspicious activities, unauthorized access attempts, or potential security incidents"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Understand Domain and Hosting Management",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Configure Domain Name System (DNS) settings (like A records, CNAME, and MX records.)"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Explain the process for renewing a domain to prevent expiration"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Describe how to transfer a domain between registrars"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Use file transfer protocols (FTP), file managers, or command-line tools to upload, organize, and modify files."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DCC/012/L3",
+      "title": "LEGAL AND ETHICAL CONSIDERATIONS IN DIGITAL CONTENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand copyright protection for digital content.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the fundamental concepts of copyright law"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the scope of rights in copyright protection."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe how to obtain proper permissions or licenses for using copyrighted materials"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Apply correct attribution practices when using copyrighted materials"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe the four factors of fair use"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Differentiate between Creative Commons and Public Domain"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Identify common practices that may lead to copyright infringement"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Describe how to respond to copyright infringement complaints or takedown requests"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand privacy principles and requirements Ref. Page No. Implement mechanisms for obtaining explicit consent from users Create transparent privacy notices or policies that inform users about what OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the key principles of the Nigeria Data Protection Act (NDPA)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Define what constitutes personal data under NDPA"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify examples of personal data relevant to digital contents."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Implement mechanisms for obtaining explicit consent from users before collecting personal data"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Create transparent privacy notices or policies that inform users about what data is collected"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Publish transparent privacy notices or policies that inform users about what data is collected"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Implement procedures to handle requests for data erasure or deletion"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Develop procedures for detecting, reporting, and managing data breaches"
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Implement procedures for detecting, reporting, and managing data breaches"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement disclosure and transparency practices",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Communicate the presence of affiliate links in blog post"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Label sponsored content appropriately"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe how to accurately attribute sources of information"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify and disclose any potential conflict of interest"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Prevent plagiarism in digital contents",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Utilize plagiarism detection tools and software"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Perform manual checks for common types of plagiarism"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Paraphrase content effectively while maintaining proper attribution."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Apply online ethics to digital content Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain Respectful Communication on digital content channels."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Describe Honest and Transparent Content"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Discuss how to respect reader\u2019s Privacy and Confidentiality"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Understand blogging regulations and compliance requirements Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Explain key regulations that impact blogging"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Identify specific areas of blogging that are subject to regulation"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Implement practices to disclose any financial or material connections that may influence content"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Develop a comprehensive privacy policy"
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Explain what to do when faced with complex legal issues related to blogging"
+            },
+            {
+              "pc_code": "6.6",
+              "description": "Follow ethical guidelines related to blogging practices"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DCC/013/L3",
+      "title": "DIGITAL CONTENT BUSINESS GROWTH STRATEGIES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Scale digital content effectively",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Develop strategies to increase content readership"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Implement strategies to increase content readership"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Create strategies that supports content scaling"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Implement strategies that supports content scaling"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Optimize content performance to handle increased traffic"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Describe how to upgrade hosting plans"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Implement scalable infrastructure solutions"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Manage outsourced resources",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Evaluate needs to determine tasks or roles to be outsourced"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Develop job descriptions that outline the responsibilities, skills, and qualifications required for outsourced positions"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Develop project briefs that outline tasks."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Utilize various channels to source potential hires or contractors"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Develop an on-boarding process to familiarize new hires or contractors with objectives, workflows, and expectations."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Implement effective project management practices to oversee the work of hired personnel or contractors"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Manage multiple income streams",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify various monetization opportunities relevant to digital content."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Analyze the market and audience to determine which income streams align with the content, audience interests, and niche"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Analyze revenue data to understand the performance of different income streams"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify opportunities to scale successful income streams, such as increasing product offerings"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Build a personal or business brand",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Define and explain the key brand elements"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Develop a distinct and consistent brand voice and tone that aligns with the target audience"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify the unique value proposition of your brand"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Explain the need for visual consistency in branding."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Implement long- term strategies that ensure sustained growth",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Establish a clear vision and set long- term goals."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Develop a comprehensive roadmap outlining key milestones, action steps, and timelines for achieving long-term objectives"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Implement strategies to diversify content formats and topics"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Implement retention tactics to keep the audience coming back"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Adapt to future trends and emerging technologies in digital content creation.",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Conduct research to identify emerging trends and technologies in the industry"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Explore new technologies and tools that enhance capabilities"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Implement new technologies and tools that enhance capabilities"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Adapt content strategies to align with changing audience preferences and consumption patterns"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Explore new monetization opportunities arising from emerging trends"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

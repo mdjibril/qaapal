@@ -1,0 +1,944 @@
+{
+  "trade_name": "NOS Painting and decoration",
+  "level": 3,
+  "units": [
+    {
+      "code": "CON/PD/004/L3",
+      "title": "Painting and Decoration in High Rise structures Construction Sites",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Examine the tools for painting and decorating works of high-rise structures construction sites. E.g. power tools, hand tools, measuring tools, climbing tools, safety gadgets, straight edge, mal stick, paint Kettle and chute. etc."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Select the equipment for High rise structures e.g. scaffolding, cranes, aerial lift, Elevators and generators"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Determine the appropriate materials for painting in high rise structures e.g. putty, paint, primer, paint thinner, turpentine, wallpaper, border, wall decals, stencil, Sandpaper, joint compound, spackling (fillers), caulk (sealers) and masking tapes."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Supervise the erection of the required equipment in accordance with specification."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Ensure proper maintenance of tools and equipment used for painting and decorating in high- rise structure"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Paint and Decorate High Rise structures",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe painting and decoration techniques in high- rise structures"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Monitor the required equipment in accordance with specification."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Inspect paints and coatings in accordance with specification for painting and decorating in high- Rise structure."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Demonstrate decorative painting techniques e.g. graining, marbling, stamping, molding, gilding, graffiti art and ragging."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Check for hazards, defects and safety precautions while working in high- rise constructions.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the hazards and defects such as skimming, settling, flattening, cracking, peeling, flaking, blistering, primer failure, weathering scaffold/ platforms not properly erected."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the causes of defect in painting and decoration while working in high- rise constructions such as Poor surface cleaning, Low quality paint, Incorrect application technique, Weather condition and incompatible materials etc."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the prevention of defects in painting and decoration such as clean the surface, choose high quality materials, apply paint correctly, control temperature, monitor the painting process and use of compatible materials"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Describe safety requirement for painting and decorating in high rise structure."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Apply safety guidelines in high- rise structures."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Review work methods for high rise structure in accordance with specification."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PD/005/L3",
+      "title": "Production of Special Decorative Paint Finishes",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Apply appropriate processes for decorative paint finishes",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify types of decorative finishes, such as wallpapering, marbling, graining, Stenciling, decorative stripes, trowel finish, satin finish and metallic."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the appropriate surface where decorative paints are needed."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Determine types of decorative paint finishes."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Examine the quality of decorative paint finishes."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Knowledge of types of Decorative surface Materials.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe different composition of finishes such as pigments, binders and film former."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Interpret properties of different types of paint."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss the importance of the properties of paint and other decorative materials."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe properties of paint finishes such as adhesion, elasticity, density, drying speed, flowability and durability."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain alignment and smoothness in decorative finishes: e.g. wall paper, wall panel, stenciling, decorative stripes."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Describe the broken color effect using acrylic and oil based scumbles."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Application of paint Finishes",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify special finishing materials and tools for decorative works purposes."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply the appropriate paints and coatings for special decorative paint finishes"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ensure the correct use of appropriate tools and materials for decorative finishes."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Describe various techniques for application of paint finishes, e.g. color broken effect, rag rolling, sponge, stripping etc."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify types of wall coverings e.g. textured, vinyl, Fabric, wall covering wood panel, leather wall covering, wall paper, glass wall covering and cladding."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Identify types of wood finishes e.g. water-based, alcohol- based, lacquer-based and oil-based."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Supervise spraying techniques such as overlap, and even strokes."
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Demonstrate how adhesion of materials to substrate is affected by temperature and humidity."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PD/006/L3",
+      "title": "Specialized Materials and Techniques for Painting & Decoration Works",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Specialized materials in painting and decorating",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify specialized materials in painting and decoration."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Discuss the properties of specialized materials in painting and decoration."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Select appropriate specialized materials for the required surfaces in painting and decoration."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Select and prepare surfaces for specialized painting and decorating",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Ensure proper long-lasting surface adhesion finishes"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Apply appropriate materials effectively such as primers, sealers and base coats"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Execute faux finishes such as marbling, wood graining and sponging,"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Use Tools, Equipment, and Materials Safely and Efficiently",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Follow safety protocols for handling and storing painting materials."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Implement safe work practices, including ventilation and protective gear use."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Choose environmentally friendly paints and coatings."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Reduce waste by optimizing paint usage and disposal"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Specialized techniques in painting and decorating",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Inspect the preparation of Surfaces, repair imperfections, prepare substrates by applying required materials"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe the techniques such as brushing, rolling and spraying in accordance with specifications."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Prepare substrates using mechanical and chemical Treatments."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Supervise Repair defective substrates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PD/007/L3",
+      "title": "Application of Paint System to Surfaces",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Paint Systems",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Interpret reasons for painting, such as protection, beautification and Identification"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Assess paint systems, like priming, Undercoating, insulating coating and finishes etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the functions of ingredients in the composition of Paints."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Recognize the implication of the properties of paint, such as consistency, opacity, spreading capacity, adhesion, elasticity, viscosity, density and toxicity"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe types of spray systems e.g. airless, convectional high volume low-pressure, handheld air spray and electrostatic and specialized spray Equipment."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Application of paint system to surfaces",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the appropriate paint system for different surfaces"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Carry out the application of paint to The required surface using tools and equipment such as brushes, extenders, radiator brushes and compressor."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Monitor the application of coating using air and airless spray method"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "observe the application of coatings to produce textured finishes"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Produce quality replica grained finishes"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Apply the required paint system in sequence"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Compare/Suggest the required techniques in maintenance of tools and Equipment"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Modify the composition of paint and coatings in residential, Institutional, industrial and commercial buildings"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Apply multiple coats evenly, following proper drying and recoating intervals."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use specialized decorative techniques to enhance visual appeal."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Prevent and correct painting defects such as bubbling, streaking, and peeling."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Use Tools, Equipment, and Materials Safely and Efficiently",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Follow safety protocols for handling and storing painting materials."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Implement safe work practices, including ventilation and protective gear use."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Choose environmentally friendly paints and coatings."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Reduce waste by optimizing paint usage."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PD/008/L3",
+      "title": "INSTALATION OF WALLPAPER AND WALL PANELS FOR DECORATION WORK.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Use of tools for wall paper and wall panels.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify tools for wall paper and wall panels. such as; measuring tapes, hand trowel, brushes, trimming knife, markers drilling machine, rivet machine. "
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Select the appropriate tools for use in wall paper and wall panels."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Demonstrate the use of tools for wall paper and wall panel"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Prepare surfaces for wall paper and wall panels",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the appropriate tools/ materials for the preparation of surface area to be covered"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe the appropriate surface areas to be covered."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate surface preparation in wall papers and wall panels."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe areas for various spots that require patching or sanding which can affect the smoothness of surface preparation."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Install types of wall paper and wall panels.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the appropriate wall papers and wall panels."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "determine and select required binders for wall covering"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe areas for various spots that require patching or sanding that can affect the smoothness of surface preparation."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Match patterns of wall paper and wall panels, for installation."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Identify and correct work errors.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify errors in the installation of wall paper and wall panels, as well as their causes."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Carry out the necessary corrections on the alignment and smoothness of the work"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Confirm all corrections for final details operation"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Install wall Cladding.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify the required tools and materials for installation of wall cladding."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Select the appropriate tools and materials to be used for installation of wall cladding."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Carry out the necessary preparation of surface and substrate properly."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Ensuring the installation of cladding in a proper alignment, securely fixed And sealed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PD/009/L3",
+      "title": "Costing and Estimating of Painting and Decorating Works",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Interpret Project Specifications and Quantify Materials & Labor",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Analyze project specifications to determine work scope and requirements."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Accurately calculate material quantities using standard measurement methods."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Estimate labour costs based on project duration, skill levels, and productivity rates."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "- Create a detailed Bill of Quantities (BOQ) listing required materials and labor."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Include contingencies and waste allowances to ensure cost accuracy."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Monitor and Control Costs During Project Execution.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Track and compare actual costs vs. estimated budgets."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify and mitigate factors leading to cost overruns."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Maintain financial records to improve future project cost estimations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PD/010/L3",
+      "title": "Planning and Coordination of painting and decoration works",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Develop a Work Plan and Schedule for Painting and Decoration Projects",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Read and interpret project documents and specifications"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Develop a logical work breakdown structure and phased execution plan"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Create a detailed schedule that includes drying times and work sequences"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Determine material and labor requirements based on project scope"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Develop a procurement plan to prevent material shortages or excess waste"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Allocate workforce and tools efficiently to maintain productivity"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Coordinate and Supervise Painting and Decorating Activities",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Assign tasks based on worker expertise and project needs."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Monitor ongoing work and adjust the plan to meet deadlines."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ensure clear communication between team members and stakeholders"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Monitor Progress and Resolve Challenges in Painting and Decoration Work",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Track project progress and compare it with the initial plan"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify and address issues that may cause delays or cost overruns"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Implement solutions to keep the project within schedule and 4 budget"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PD/011/L3",
+      "title": "Developing Business Plan in painting and decoration",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Types of business and registration requirements",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Distinguish between different types of businesses, e.g., sole proprietorship, partnership, joint ventures, franchise, non-profit, and limited liability."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the requirements for business registrations."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Determine types of business registration requirements."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Discuss sources of raising capital for business."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Recommend sources for capital."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Be involved in carrying out the required business organization."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain entrepreneurship"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify business opportunities"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Evaluate business opportunities, considering Strengths, Weaknesses, Opportunities and Threats (SWOT ANALYSIS)."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Carry out development of a business plan."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Implement a business plan."
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Evaluate business performance."
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Discuss how to expand business. Identify components of business relationships e.g. reputation, brand,"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "customer relationship, intellectual property, employee relationship Describe the benefits of business relationship e.g. trust, enhance referrals, customer retention, expand business opportunities, improve"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "communication, foster collaboration, resolve conflicts, provide support, share knowledge and encourage feedback."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Promote and Integrate Business Values and ethics"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use feedback for business growth"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Evaluate the required business goodwill"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Discuss the importance of keeping records."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the benefits of accountability e.g. personal, professional, organizational and financial benefits"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Advice on good record keeping Principles."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Recommend types of record keeping e.g. financial, operational, administrative, customer, regulatory, human resource and project record keeping."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use required accounting procedures."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Adapt record keeping practices."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PD/012/L3",
+      "title": "General Knowledge",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Information and Communication Technology",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify different ICT platforms to source information"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe ICT facilities e.g. hardware, software, network."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Recommend the required ICT facilities."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use ICT facilities for information and communication Promote professional development relevant to painting and decorating"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": ""
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Discuss the Nigerian Constitution and political structures."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe the structure of the three arms of Government in Nigeria i.e. Executive, Legislature and Judiciary"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Identify the progression line of a structure e.g. NSQ level I, II, III, IV, V, VI, VII, VIII, and IX"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Code of practice and operational guidelines Describe the relationship between the code of practice and operational guidelines.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": ""
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Distinguish between codes of practice and operational guidelines."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Practice in accordance with the codes and operational guidelines."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Integrate industry expectations with the operational guidelines."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Maintain standard practice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PD/013/L3",
+      "title": "Installation of various POP design works",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Properties and Uses of POP",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the role of POP in decorative and finishing work"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify different types of POP products and their applications."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Differentiate between POP and other finishing materials."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Select appropriate tools and materials for installation."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Prepare for POP Installation",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Prepare surfaces by ensuring they are clean, dry, and level."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Adjust environmental conditions to optimize POP setting and drying."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Accurately measure and mix POP to achieve a workable consistency."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Mix and Apply POP for Installation",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Mix appropriate proportion of materials for POP installation"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply POP using correct techniques for different surfaces."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Reinforce POP where necessary for added strength."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Install POP Ceiling, Molding, and Decorative Elements",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Measure and cut POP elements with precision."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Secure moldings and decorative features using suitable installation methods."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Ensure smooth and well-aligned finishes."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Ensure Quality and Safety in POP Installation",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Follow safety protocols, including the use of PPE."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Inspect work for defects and apply necessary corrections."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Maintain high-quality standards in all aspects of the installation."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Integrate POP Installation with Painting and Finishing Works",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Sandpaper and prime surfaces before painting."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Apply appropriate finishing materials for durability."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Ensure seamless integration of POP with surrounding surfaces."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

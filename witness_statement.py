@@ -15,6 +15,7 @@ def main():
     st.info("This page allows a supervisor or expert witness to provide formal evidence of a candidate's competence.")
 
     trade_id = st.session_state.get('selected_trade_id')
+    trade_level_id = st.session_state.get('selected_trade_level_id')
     if not trade_id:
         st.warning("Please select a trade in the sidebar to begin.")
         return
@@ -38,7 +39,7 @@ def main():
 
     st.markdown("---")
     st.subheader("Step 2: Competency Mapping")
-    nos_data = db.fetch_nested_nos(trade_id)
+    nos_data = db.fetch_nested_nos(trade_level_id=trade_level_id, trade_id=trade_id)
     if nos_data:
         components.render_nos_selection(
             nos_data=nos_data,
@@ -91,7 +92,7 @@ def main():
             st.session_state.pop("fb_submitted_witness_statement", None)
             with st.status("Synthesizing formal testimony...", expanded=True) as status:
                 st.write("📄 Converting witness notes into formal industrial language...")
-                trade_context = st.session_state.get('selected_trade_id', 'the specific trade')
+                trade_context = st.session_state.get("selected_trade_level_name") or st.session_state.get("selected_trade_name") or 'the specific trade'
                 prompt_bundle = build_witness_statement_prompt(
                     witness_name=witness_name,
                     witness_role=witness_role,

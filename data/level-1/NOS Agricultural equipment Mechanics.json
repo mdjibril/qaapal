@@ -1,0 +1,1132 @@
+{
+  "trade_name": "NOS Agricultural equipment Mechanics",
+  "level": 1,
+  "units": [
+    {
+      "code": "AGR/AEM/L1/001",
+      "title": "USE OF MANUAL HAND TOOLS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Recognize Hand tools for Agricultural Equipment repair and maintenance Identify the different types of tillage equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify types of hand tools in Agricultural Equipment repair and maintenance"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the proper techniques for using each tool in 1.1"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify type of hand tool required for agricultural equipment repair and maintenance."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Carry out maintenance of hand tools in accordance with safe working practices"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Apply the safety measures required in handling hand tools for Agricultural Equipment."
+            },
+            {
+              "pc_code": "1.1",
+              "description": "Identify tillage equipment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the factors in tilling operation; soil type, moisture content, vegetation"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Distinguish between primary and secondary tillage equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Recognize hand tools for seedbed preparation and planting Recognize types of maintenance for tillage equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify hand tools for seedbed preparation and planting"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Carryout the maintenance process of each of these tools"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply the safety measures required in handling hand tools for seedbed preparation and planting"
+            },
+            {
+              "pc_code": "2.1",
+              "description": "Identify Primary tillage equipment e.g.: \u2022 Plough \u2022 Sub-soiler \u2022 Ridger"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify Secondary tillage equipment e.g.: \u2022 Harrow \u2022 Rotavator"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify parts of the tillage equipment needed to be maintained"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carryout maintenance of tillage equipment: \u2022 Daily (routine) maintenance \u2022 Preventative maintenance \u2022 Planned maintenance \u2022 Breakdown maintenance \u2022 Shutdown maintenance"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Use hand tools for weeding and fertilizer/ manure application Recognise appropriate method for maintaining tillage equipment.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify hand tools for weeding and fertilizer/ manure application."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Weed the plot using appropriate tools/equipment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Apply the safety measures required in handling hand tools for weeding and manure application"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Store and secure workshop tools"
+            },
+            {
+              "pc_code": "3.1",
+              "description": "Identify the importance of selecting appropriate method for maintaining tillage equipment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Select appropriate method for maintaining tillage equipment. e.g.: \u2022 Daily \u2022 Preventive \u2022 Planned Breakdown \u2022 Shutdown \u2022 Running \u2022 Contract."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the characteristics of each type of maintenance system."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify the functions of each of the maintenance system."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Describe the precautions and planning techniques in 3.2 above."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "State the advantages or benefits derived from a successful maintenance system."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Apply safety precautions in maintenance"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Use hand tools for harvesting crops OBJECTIVE (LO) Carryout maintenance of primary tillage equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify hand tools for harvesting crops: \u2022 Sickle \u2022 Cutlass \u2022 Hoe"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Harvest crops, fruits and vegetables using appropriate tools/equipment"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Maintain each of these tools in 1.1"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Apply safety measures in handling hand tools for harvesting crops"
+            },
+            {
+              "pc_code": "4.1",
+              "description": "Identify the effects of tillage on physical properties of the soil"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Check parts of the primary tillage equipment that require maintenance"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Select appropriate maintenance methods for primary tillage equipment"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Apply the precautionary measures when planning for maintenance to avoid total breakdown"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Carry out maintenance of primary tillage equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Carryout maintenance of Secondary tillage equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Check parts of Secondary tillage equipment that require maintenance"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Select appropriate maintenance methods for secondary tillage equipment"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Apply the precautionary measures when planning for maintenance to avoid total breakdown"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Carry out maintenance of secondary tillage equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Carryout repairs of tillage equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Identify parts of tillage equipment that require maintenance"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Select appropriate tools for repair of tillage equipment"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Carry out repairs of tillage equipment"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Test run the tillage equipment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L1/003",
+      "title": "REPAIR OF CHEMICAL FERTILIZER & MANURE APPLICATION EQUIPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify equipment for application of chemical fertilizer and manure.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify types of chemical fertilizer and manure applicators e.g.: \u2022 Knapsack \u2022 Manure spreaders"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify parts of chemical fertilizer and manure applicators."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify appropriate equipment for applying chemical fertilizer and manure"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carry out maintenance of chemical fertilizer broadcaster",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify types of maintenance of chemical fertilizer broadcaster to be carried out"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform maintenance of chemical fertilizer broadcaster. \u2022 Wash and dry after use \u2022 Change worn out parts \u2022 Tighten loose bolt and nuts \u2022 Adjust Tension belt and chains \u2022 Lubricate bearings and ball joints"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Perform the maintenance of related accessories of chemical fertilizer broadcaster. \u2022 Flush the sprayer \u2022 Clean filters \u2022 Replace plungers \u2022 Oil the plungers"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carryout maintenance of manure spreader.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify types of maintenance of manure spreader to be carried out"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Perform maintenance of manure spreader"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Perform the maintenance of related accessories of manure spreader e.g.: \u2022 Bearings \u2022 Bevel gear \u2022 Cutting blade"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Carry out repairs of chemical fertilizer broadcaster LEARNING OBJECTIVE (LO) \u2022 Change worn out parts \u2022 Tighten loose bolts and nuts \u2022 Adjust tension belt and chains \u2022 Lubricate bearings and ball joints",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify types of repairs of chemical fertilizer broadcaster to be carried out"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Select tools for chemical fertilizer broadcaster repairs"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Perform repair of chemical fertilizer broadcaster. \u2022 Wash and dry after use"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Perform the repair of related accessories of chemical fertilizer broadcasters"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Test run the chemical fertilizer broadcaster"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Use suitable PPE throughout repair activities"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Carry out repairs of manure spreader",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify types of repairs of manure spreader to be carried out"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Select tools for repairs of manure spreader"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Perform repair of manure spreader"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Test run the manure spreader"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "State the advantages derived from a successful repairs system"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Use suitable PPE throughout repair activities"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L1/004",
+      "title": "PERIODIC MAINTENANCE OF FARM TRACTORS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Perform periodic maintenance of farm tractors.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Service farm tractors in accordance with operator\u2019s manual."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify regular maintenance schedules"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Carryout regular maintenance of equipment and tools."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Follow guidelines for storage of spare parts and other agricultural machines/ implements."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Keep machines clean and check for leakage of fuel."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Keep service records sheets"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Use maintenance schedules for maintenance of tractors",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Observe daily routine maintenance"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use manufacturer\u2019s routine maintenance checklist accurately"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Observe adjustments on attachment linkages."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use suitable personal protective equipment throughout all tractor maintenance activities"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Recognize types of filters",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the various types of filters and their components."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify pre-filtration and filtration systems."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Fix the appropriate filters for the filtration systems"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Fix the filters according to safety rules and precaution"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Carryout lubrication service",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify the type of lubricants"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Lubricate different parts of farm tractors."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Record the next lubrication schedule"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Service a tractor engine",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Apply suitable personal protective equipment throughout all vehicle maintenance activities"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Locate the position of tractor drain plug."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Unplug the drain plug to drain old engine oil"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Identify location of oil filters."
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Remove the old filter and replace with new ones"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Plug back the drain plug"
+            },
+            {
+              "pc_code": "5.7",
+              "description": "Add new engine oil"
+            },
+            {
+              "pc_code": "5.8",
+              "description": "Remove old fuel filter and replace with new one"
+            },
+            {
+              "pc_code": "5.9",
+              "description": "Remove air cleaner elements"
+            },
+            {
+              "pc_code": "5.10",
+              "description": "Blow dirt off cleaner using air compressor"
+            },
+            {
+              "pc_code": "5.11",
+              "description": "Replace serviced air cleaner elements"
+            },
+            {
+              "pc_code": "5.12",
+              "description": "Change damaged or clogged air cleaner element"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L1/005",
+      "title": "REPAIR OF FARM TRACTORS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Recognize the basic procedures needed before repair of tractors",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify component or system to be repaired"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Select tools for the repairs"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Carry out the repairs"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Observe safety regulations in carrying out the repairs"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Test run the parts repaired"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Differentiate the different types of engines.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Sketch different types of engines."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Differentiate between types of engines. e.g. : \u2022 Steam engine \u2022 Steam turbine \u2022 Gas turbine \u2022 Internal combustion engine"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Differentiate internal and external combustion engines."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Recognize engine Systems",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify different engine systems and parts such as: \u2022 Air intake and exhaust system \u2022 Fuel system, i.e., fuel filter, fuel lines, fuel pump and oil pump. \u2022 Lubrication system. \u2022 Cooling system, i.e., water pump, water hoses, fan, and radiator. \u2022 Electrical system \u2022 Hydraulic system"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify the complete engine"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify hand tools used in tractor repairs with their sizes, e.g.: \u2022 Spanners \u2022 Screw drivers \u2022 Allen keys etc."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carry out bleeding of engine fuel system"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Recognize Tractor power unit \u2022 Transmission \u2022 Final drive",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify the power unit in tractors e.g.: \u2022 Engine"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify faults in power units in 4.1"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify tools to be used to carry out repairs"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Carry out repairs of power units"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Test run the power units"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L1/006",
+      "title": "REPAIR OF LIVESTOCK MECHANIZATION EQUIPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Apply safety precautions in Livestock equipment workshop",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify protective wears in livestock mechanization equipment workshop."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Apply the safety rules in the workshop."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the precautionary measures when planning for maintenance to avoid total breakdown."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Recognize the benefits of successful maintenance practice."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify the methods of maintaining Livestock mechanization equipment.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify types of livestock equipment e.g.: \u2022 Feeding and milking equipment \u2022 Weighing equipment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Recognize the functions of equipment listed in 2.1"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the methods for carrying out maintenance of livestock mechanization equipment."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carryout maintenance of Livestock mechanization equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the Livestock mechanization equipment to be maintained"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Select appropriate maintenance method of Livestock mechanization equipment according to: \u2022 Daily (routine) maintenance \u2022 Preventative maintenance \u2022 Planned maintenance \u2022 Breakdown maintenance \u2022 Shutdown maintenance"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify parts needed to carry out the maintenance"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carryout maintenance types listed in 3.1 of the part identified"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "State the benefits derived from each of a successful maintenance method."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Identify feeding and milking equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify different livestock feeding and milking equipment."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Recognize the functions of each identified in 4.1 above."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify the different livestock milking equipment."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Recognize the functions of each listed in 4.3 above."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Undertake repairs feed conveyance equipment.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify different livestock feed conveyance equipment e.g.: \u2022 Forklift \u2022 Trolleys \u2022 Wheelbarrow \u2022 Auger"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify equipment suitable for the conveyance of each material, e.g.: \u2022 Poultry feed \u2022 Fish feeds \u2022 Hay"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Perform repairs of feed conveyance equipment e.g.: \u2022 Bulk delivery vehicle \u2022 Auger \u2022 Endless chain"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Perform livestock feeding equipment repair",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Carryout repair of manual livestock feeders"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Carryout repair of Automated livestock feeders"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Repair livestock water troughs with sensors"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Perform livestock milking equipment repair",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Identify faults in livestock milking equipment, locked pipe/hoses, faulty pumps"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Recognize faults in different livestock milking machines"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Carry out repair of livestock milking machine"
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Perform repair of livestock weighing equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Identify different types livestock weighing scales"
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Recognize faults in different livestock weighing equipment"
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Carryout repair of different types of livestock weighing equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "9",
+          "description": "Identify livestock health monitoring devices",
+          "performance_criteria": [
+            {
+              "pc_code": "9.1",
+              "description": "Identify different types of livestock health monitoring devices"
+            },
+            {
+              "pc_code": "9.2",
+              "description": "Recognize faults in different livestock health monitoring devices"
+            },
+            {
+              "pc_code": "9.3",
+              "description": "Repair faulty livestock health monitoring devices."
+            },
+            {
+              "pc_code": "9.4",
+              "description": "Use suitable personal protective equipment during repair activities"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L1/007",
+      "title": "MAINTENANCE OF CROP PROCESSING AND STORAGE EQUIPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify crop processing and storage equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify common crop processing and storage equipment e.g.: \u2022 Maize thresher \u2022 Winnowers \u2022 Sheller \u2022 Dehuskers \u2022 Groundnut decorticators \u2022 Silos \u2022 Rhombus, etc."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the functions of crop processing and storage equipment in 1.1"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Distinguish between different equipment for crop processing equipment and storage systems"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify Maintenance of crop processing and storage equipment.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the processes involved in the maintenance of processing and storage equipment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Recognize faults in each crop processing and storage equipment identified"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Carryout basic maintenance of different crop processing equipment and storage systems"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Perform maintenance of grain moisture content measuring equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify different grain moisture content measuring equipment. E.g. moisture content probe, moisture meter,"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify faults in various types of moisture content measuring equipment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carryout basic maintenance of moisture content measuring equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Undertake maintenance of different types of crop dryers",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify different types of crop dryers e.g. tray dryers, solar dryers, etc"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify faults in various types of crop dryers"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Carryout maintenance of different types of crop dryers."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "State the advantages or benefits derived from a successful maintenance system."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Use suitable personal protective equipment throughout all maintenance activities"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L1/008",
+      "title": "COMMUNICATION AND INTERPERSONAL SKILLS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the concept of communication",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define communication."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Know the different types of communication. E.g. verbal, non-verbal, written, visual, listening"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify factors to be considered when using each method in 1.2. e.g. preference, characteristic, expectations"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand signs and symbols used to communicate.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State the reasons for using signs and symbols in workshops, offices and public places."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain why good communication is important."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Draw signs and symbols commonly used in work spaces."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Interpret signs and symbols commonly used in work spaces."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand information from any given document. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Comprehend information from:- \u2022 charts \u2022 log books \u2022 warning instructions \u2022 manuals \u2022 operation procedures, etc."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State reasons for good understanding of information given in the documents in 3.1."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Apply steps necessary when skipping through bulky information manuals."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L1/009",
+      "title": "OCCUPATIONAL HEALTH, SAFETY & ENVIRONMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify the various safe working Practices and Instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify safety work practice and instructions."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify safety signs and symbols."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain safety signs and symbols correctly."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe how to work in accordance with health and safety best practices."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify Safety Hazards and risks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify various work environment hazards."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify ways to avoid common workplace hazards"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify methods to reduce the risk of work hazards."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Identify the safe work habit and clean work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the safe access and exit routes in the work environment."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply safe work habit and clean work environment."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Perform how to dispose all wastes appropriately to designated waste facilities"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L1/010",
+      "title": "REPAIR OF TYRES AND WHEELS FOR AGRICULTURAL",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify tractor and agricultural equipment Wheels/tyre classification",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify various types of tractor and agricultural equipment tyres and wheels classification"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify tractor and agricultural equipment wheel/tyre data according to manufacturer\u2019s specifications."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use tractor and agricultural equipment wheel/tyre data according to manufacturer\u2019s specifications."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Maintain Tools/equipment for tractor and agricultural equipment wheels/tyre",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Select tools and equipment used in tractor and agricultural equipment wheels/tyre repairs. e.g.: \u2022 Tyre pressure gauge \u2022 Wheel spanner \u2022 Jack"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Carry out repair and replacement activities using suitable tools and equipment."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Check tractor and agricultural equipment tyre/wheel tools and equipment are safe prior to use."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Store tools in line with workshop procedures"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Repair of tractor and agricultural equipment tyres and wheels",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use suitable sources of technical information to support your inspection, repair and replacement of tractor and agricultural equipment tyres and wheels"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Operate in a way which minimizes the risk of damage to the tractor and its systems."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out all inspection, repair and replacement activities using \u2022 The correct inspection technique \u2022 The correct type and size of component \u2022 Suitable tools and equipment"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Check inflation pressure of tyres are within limit specified"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Store tyres and wheels in line with workplace procedures."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L1/011",
+      "title": "TEAM WORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Comply with organizational policies",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Recognize organizational code of conduct."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use organizational code of practice."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Work In line with organizational standard and structure."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Show Responsibilities within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within the team."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in teamwork."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand working relationship with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the need for developing positive relationship with colleagues."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel valued and respected."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Report to the appropriate personnel when request/requesting for assistance fall outside area of responsibility."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Communicate information to colleagues about own work that might affect others. Credit Value Guided Learning Hours 3 30 1 10 2 20 7 70 4 40 21 210"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

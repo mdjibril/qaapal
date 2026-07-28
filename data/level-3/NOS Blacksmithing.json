@@ -1,0 +1,626 @@
+{
+  "trade_name": "NOS Blacksmithing",
+  "level": 3,
+  "units": [
+    {
+      "code": "ENGG/BS/001/L3",
+      "title": "Metal Shaping and Forging Techniques",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Principles of Metal Shaping and Forging",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the concepts of metal shaping and forging."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List common metals used in forging."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the importance of precision in forging"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Metal Properties and Their Behaviors under Heat and Pressure",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the effects of heat and pressure on different metals."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain how temperature affects metal properties such as malleability, ductility and strength."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Carry out various heat treatment methods (E.g., annealing, tempering, normalizing, etc.) and their applications."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply various forging techniques such as fullering, swaging, and upsetting",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain forging techniques such as fullering, swaging, twisting, scrolling, upsetting, etc."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate the forging techniques explained in 3.1."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use modern tools and equipment such as power hammers and presses for efficient metal shaping."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Use Specialized Blacksmithing Tools and Equipment for Precision Shaping and Forging",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Select appropriate tools and equipment for forging."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Demonstrate the correct use of anvils, tongs, and chisels with precision."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Calibrate tools and equipment to ensure accuracy and efficiency."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Create metalwork designs through controlled forging processes.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Design a piece for forging."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Produce the designed piece in 5.1."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Evaluate the quality of finished products against set standards"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Maintain safety standards while performing shaping and forging tasks",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Identify potential hazards in shaping and forging process."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Use appropriate personal protective equipment (PPE) during metal shaping."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Follow standard practices for maintaining a safe work environment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/BS/002/L3",
+      "title": "Welding and Metal Joining Techniques",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Principles of Welding and Metal Joining",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the techniques in welding and metal joining."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Discuss different types of welding and joining methods."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the role of heat and pressure in joining and welding processes"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Apply Different Welding and Joining Techniques Used in Blacksmithing",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain common welding techniques (E.g., arc welding, gas welding, MIG, TIG)."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use appropriate welding techniques for different metals in a given task."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply metal joining processes such as riveting and brazing"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Inspect welded joints for defects and structural soundness"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Select Appropriate Materials and Tools for Welding and Joining Metals",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify appropriate materials and tools for welding and joining of metals."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Choose the correct materials such as electrodes, filler rods, shielding gases, etc. for welding metals in a given task."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Calibrate welding equipment for precision work."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Demonstrate Safety Measures in Welding and Metal Joining Operations",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify potential hazards associated with welding and joining operations."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Use appropriate personal protective equipment (PPE) such as welding helmets, gloves, aprons, etc."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Follow workplace safety protocols, including proper ventilation and fire prevention."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Evaluate the Strength and Quality of Welded and Joined Metal Components",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Conduct visual and mechanical tests on welded joints."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Assess weld quality based on penetration, bead uniformity, and defect presence."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Recommend improvements for welding and joining techniques to enhance quality."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/BS/003/L3",
+      "title": "Toolmaking and Component Fabrication",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Properties of Metals Used in Tool making",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain different types of metals and alloys used in tool making."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the composition of metals explained above"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the mechanical, physical, and chemical properties influencing tool performance."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Design and Fabricate Specialized Tools and Components",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Produce technical drawings for tool and component fabrication."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Select appropriate material for the job."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply appropriate cutting, shaping, and assembling techniques."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply Heat Treatment Processes for Durability",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Conduct heat treatment in blacksmithing"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Conduct annealing, hardening, normalising and tempering on metals"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Evaluate the effectiveness of heat treatment on different metals."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Ensure Precision and Functionality in Tool Fabrication",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain precision in tool making"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify precision instrument used in tool making"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Perform quality control checks on fabricated tools."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Adjust tool settings for optimal efficiency."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Maintain Tools and Components for Optimal Performance",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify common tool defects and wear patterns."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify process for tools and equipment repair of defects identified in 5.1 above."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Implement best practices for tools maintenance and storage."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/BS/004/L3",
+      "title": "Quality Control in Blacksmithing",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Importance of Quality Control in Blacksmithing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain quality control in blacksmithing."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Follow quality control process in blacksmithing"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the effect of tool defects on performance and safety."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify Defects in Forged and Fabricated Metal Components",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain common forging and welding defects."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify instrument used for detecting defects."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Perform visual and non- destructive testing."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Use Inspection and Measurement Tools Accurately",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the use of precision tools in blacksmithing."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Operate callipers, micrometres, and hardness testers."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Apply tolerance and precision measurement techniques."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Implement Corrective Measures to Improve Product Quality",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify defect in forged or welded product"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Adjust forging and welding processes based on quality control feedback."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Apply rework techniques to correct defects."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Maintain Documentation and Compliance with Industry Standards",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Record quality control data."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Analyse quality control data."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Ensure adherence to safety and regulatory guidelines."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/BS/005/L3",
+      "title": "Drawing and Specifications Interpretation",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Principles of Technical Drawing Interpretation",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain different types of drawings."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify different types of instruments used in technical drawing"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify key elements such as symbols, views, and dimensions"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Analyze Blueprints and Schematics",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Produce blueprint of a given job"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Interpret complex blueprints and welding diagrams."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Extract relevant data for forging and machining from blueprint."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply Geometric Dimensioning and Tolerancing (GD&T)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use GD&T symbols and notations correctly."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Ensure compliance with tolerances and fit"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Produce working drawing of a given project"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Convert Technical Drawings into Practical Fabrication Steps",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Produce set of detailed drawing of a given component"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Execute manufacturing processes based on drawings."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Communicate effectively with teams using drawing references"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Identify Errors and Inconsistencies in Drawings",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify what to look out for in working drawings e.g., dimensions, border line, title block etc."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Detect missing dimensions or incorrect specifications."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Suggest modifications to improve manufacturability"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/BS/006/L3",
+      "title": "Metal Treatment and Finishing",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Principles and Importance of Metal Treatments and Finishing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the purpose of metal treatment and finishing in blacksmithing."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify different finishing methods and their applications."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Discuss the impact of finishing on metal durability, strength, and aesthetics."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Apply Heat Treatment Techniques for Enhanced Metal Properties",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate heat treatment processes such as annealing, normalising, tempering, and case hardening."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Analyse the effects of different heat treatments on metal strength and hardness."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Select appropriate heat treatment methods based on material type and application."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Perform Surface Treatment Processes to Improve Durability and Corrosion Resistance",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Carry out different surface treatment methods, including galvanizing, anodizing, and powder coating."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply rust prevention and protective coating"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Evaluate the effectiveness of surface treatments through practical application."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Utilize Finishing Techniques for Improved Aesthetics",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Perform polishing, grinding, and buffing to achieve desired surface finishes."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Apply patination and colouring for decorative purposes."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use engraving and etching to enhance design details."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Ensure Quality Control in Metal Treatments and Finishing",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Inspect metal products for surface defects and inconsistencies."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Measure coating thickness and adherence to finishing standards."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Implement corrective actions to improve finishing quality"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Follow Safety Procedures and Environmental Guidelines in Metal Finishing",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Identify potential hazards in metal treatment and finishing operations."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Use personal protective equipment (PPE) and adhere to workplace safety protocols."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Follow environmental guidelines for waste disposal and chemical handling."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,554 @@
+{
+  "trade_name": "NOS ICT Social Media Contents Creation and Management",
+  "level": 1,
+  "units": [
+    {
+      "code": "ICT/SMC/001/L1",
+      "title": "Occupational Health and Safety",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Health and Safety Regulations and Requirements",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain what health and safety regulations are, and why they are important in the workplace."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the basic health and safety rules that must be followed in different work environments."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Follow health and safety guidelines to prevent accidents and ensure a safe working environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify and Mitigate Workplace Hazards",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize common hazards in the workplace, including: \uf0b7 Physical \uf0b7 Chemical \uf0b7 Ergonomic Risks."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the importance of hazard prevention and safety measures."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify how to take appropriate actions to reduce risks and maintain a safe working environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Safe Working Practices and Emergency Procedures Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe the importance of following safety guidelines to prevent accidents and injuries."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the correct steps to take in case of emergencies such as: \uf0b7 Fire \uf0b7 Medical Incidents \uf0b7 Equipment Failures."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Demonstrate how to follow workplace safety rules and respond effectively to emergency situations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/002/L1",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the Principles of Effective Teamwork",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the features of a successful team and the roles each member plays in social media management"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of clear communication, active listening, and mutual respect in a team setting."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe different team dynamics, including collaboration, decision-making and accountability in social media management"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Problem-Solving and Conflict Resolution Skills in Team Settings",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Participate in team discussions to analyze social media management"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Address conflicts that may arise within the team in a professional manner, using mediation and negotiation techniques to reach a resolution."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Evaluate the effectiveness of team problem-solving strategies and suggest improvements to enhance team performance in future projects."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Exhibit Leadership and Support Team Development Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Organize team tasks and delegate responsibilities according to team member\u2019s strengths and skills."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Provide constructive feedback and support to team members, encouraging continuous improvement and skills development."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Foster a positive team environment by promoting inclusivity, recognizing individual contributions and motivating the team to achieve set goals."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/003/L1",
+      "title": "Communication",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the Importance of Effective Communication in Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the impact of clear and concise communication on team performance, project success and client satisfaction."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify barriers to effective communication in a technical workplace, and strategies to overcome them."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe how cultural differences, language and technical jargons can affect communication in a diverse workplace."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Effective Verbal and Non-Verbal Communication Skills",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate verbally with appropriate tone, clarity and technical language when communicating with different stakeholders (e.g., team members, clients, management)."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate active listening by accurately interpreting and responding to verbal and non-verbal cues during discussions and meetings."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply non-verbal communication techniques, such as body language, facial expressions and eye contact, to enhance message delivery and understanding."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Recognize Digital Tools for Professional Communication Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use appropriate digital communication tools (e.g., email, instant messaging, project management platforms) to exchange information effectively within a network support team."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Compose clear and professional emails, reports, and other written correspondences to ensure effective communication with stakeholders."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ensure confidentiality and security of sensitive information when communicating through digital platforms, adhering to organizational policies and regulations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/004/L1",
+      "title": "Social Media Platforms",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know major Social Media Platforms",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify major social media platforms \uf0b7 Facebook \uf0b7 Instagram \uf0b7 Twitter \uf0b7 WhatsApp \uf0b7 TikTok \uf0b7 YouTube"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the key features of each platform"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Differentiate between major social media platforms"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the key functions of each platform"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Create and Access major Social Media Profiles"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Comprehend the Differences Between Personal and Business Accounts",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the key differences between personal and business accounts and their intended use."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the unique tools and functions available in business accounts, such as: \uf0b7 Analytics \uf0b7 Advertising \uf0b7 Monetization."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss when to use a personal account or a business account based on different needs and goals."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Explain Target Audiences for Different Platforms",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Classify the key demographics"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Categorise platform-specific features and how it influence audience engagement"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify the most suitable platform for targeting specific user groups"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/005/L1",
+      "title": "Basic Content Creation Techniques",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate techniques of content creation",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe the steps to create a text"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Display the steps to post an image"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify basic tools used for content creation."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Demonstrate the steps to create a video content."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe how to adjust content for different platforms."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand text-based posts",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe the role of hashtags in text-based posts"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate how formatting affects the readability of a social media post"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe the key elements of an engaging caption."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Perform camera settings, resolutions, and aspect ratios.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the best camera settings for social media videos."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Compare Smartphone with professional camera resolution."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Demonstrate how to set the right aspect ratio for Instagram and YouTube."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know Basic Storytelling Techniques for Content Creation",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain simple storytelling ideas for content."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain why stories make content more interesting"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain the need for a clear message in a content"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Apply basic storytelling techniques"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/006/L1",
+      "title": "Audience Engagements",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the definition and importance of audience engagement.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain what engagement means in social media."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain why audience engagement is important for social media"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe how engagement helps to grow an online audience."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe ways to encourage people to like, comment, and share posts"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Identify ways to make posts more engaging for the audience"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the strategies to encourage interaction in social media",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain interaction strategies in social media"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the role of questioning in social media posts that creates interaction"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use interaction strategies to create engagements"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the basics of replying to comments and messages.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain how to reply to comments and messages."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain why replying to comments is important."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify the best ways to reply to audience comments."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the basics of building a community online"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/007/L1",
+      "title": "Social Media Ethics and Best Practices",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the basics of ethical content creation",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain why it is important to create honest and fair content"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain why giving credit for other people's work is important."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify good habits for creating ethical content."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know what copyright and plagiarism mean in social media.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the meaning of copyright and plagiarism."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain why copying someone\u2019s work without permission is wrong"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify ways to create original content."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand simple rules about privacy and data protection.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain why keeping personal information safe is important."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify information that should not be shared on social media."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain simple ways to protect personal data online."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know how to avoid sharing fake news and wrong information.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain why fake news is a problem on social media."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain how to check if information is true before sharing."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe signs of fake or misleading news."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/008/L1",
+      "title": "Basic Scheduling and Posting on Social Media",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Importance of Scheduling and Posting",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the impact of scheduled posts by comparing engagement with spontaneous ones"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain why scheduling posts helps with consistency."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify two tools used for scheduling posts"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know how to Use Scheduling Tools to Plan and Automate Posts",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate how to schedule a post using a scheduling tool"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate with a scheduling tool how to automate three posts for the upcoming week."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the steps to edit a scheduled post before it goes live."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Optimize Posting Strategies for Engagement Ref. Page No. Unit No Reference Number NOS Title Unit 001 ICT/SMC/001/L2 Occupational Health and Safety Unit 002 ICT/SMC/002/L2 Teamwork Unit 003 ICT/SMC/003/L2 Communication Unit 004 ICT/SMC/004/L2 Content Strategy Development Unit 005 ICT/SMC/005/L2 Brand Identity and Messaging Unit 006 ICT/SMC/006/L2 Analytics and Performance Tracking Unit 007 ICT/SMC/007/L2 Social Media Advertising Basics Unit 008 ICT/SMC/08/L2 Handle online issues and protect brand reputation. TOTAL Credit Value",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain how to optimize posting schedule"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate with tools how to optimize a post on any social media platform"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify the best posting time using insights Credit Value Guided Remark Learning Hours 2 20 Mandatory 3 30 21 210"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

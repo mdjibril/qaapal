@@ -16,6 +16,7 @@ def main():
 
     # 1. Context Selection
     trade_id = st.session_state.get('selected_trade_id')
+    trade_level_id = st.session_state.get('selected_trade_level_id')
     if not trade_id:
         st.warning("Please select a trade in the sidebar to begin.")
         return
@@ -38,7 +39,7 @@ def main():
     st.subheader("Step 1: What did you achieve?")
     
     # Fetch NOS data for selection
-    nos_data = db.fetch_nested_nos(trade_id)
+    nos_data = db.fetch_nested_nos(trade_level_id=trade_level_id, trade_id=trade_id)
     if nos_data:
         components.render_nos_selection(
             nos_data=nos_data,
@@ -99,7 +100,7 @@ def main():
             st.session_state.pop("fb_submitted_personal_statement", None)
             with st.status("Crafting Personal Statement...", expanded=True) as status:
                 st.write("🧵 Weaving reflection notes with competency standards...")
-                trade_context = st.session_state.get('selected_trade_id', 'the specific trade')
+                trade_context = st.session_state.get("selected_trade_level_name") or st.session_state.get("selected_trade_name") or 'the specific trade'
                 prompt_bundle = build_personal_statement_prompt(
                     student_name=student_name,
                     statement_date=statement_date,

@@ -1,0 +1,1300 @@
+{
+  "trade_name": "NOS Agricultural equipment Mechanics",
+  "level": 3,
+  "units": [
+    {
+      "code": "AGR/AEM/L3/001",
+      "title": "APPLICATION OF COMMON HAND TOOLS FOR WORKSHOP",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify hand tools used for specific jobs/repairs in the workshop.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the different types of hand tools commonly used in the workshop e.g.: \u2022 Wrench \u2022 Spanners \u2022 Hammers \u2022 Mallets \u2022 Screwdrivers \u2022 Pliers e.t.c."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the functions of different hand tools listed above."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Apply the safety procedure when using the stated hand tools."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Select appropriate hand tool for a particular job/repair in the workshop.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the right tools for the right job e.g.,: \u2022 Cutting and Scraping \u2022 Finishing \u2022 Loosening"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the physical features of the hand tools"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify how they would be handled"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carryout basic jobs/ repairs with the identified hand tools.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Undertake the following in the workshop for metallic and non- metallic materials: \u2022 Cutting \u2022 Scraping; and \u2022 Finishing."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify safety procedure in using the tools"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify the protective devices needed when using the tools, e.g., PPEs"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Maintain hand tools using appropriate techniques.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Carry out tools maintenance requirements using the following: \u2022 Lubrication \u2022 Cleaning and decontamination \u2022 Tightening and adjustment \u2022 Replacement of consumable components \u2022 Repair/replacement of worn, malfunctioning or damaged components/parts \u2022 Sharpening."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Carry out the maintenance of different hand tools"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Apply safety procedure in using the hand tools"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Store hand tools in accordance with manufacturers/standard operating procedures.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify requirements for storage of tools."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify different storage systems of tools."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Identify the factors considered for short and long term storage of tools."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Mention reasons for rendering tools ineffective while in storage."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Apply safety measures in handling tools.",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Identify the safety measures required in handling hand tools in the workshop, e.g.: \u2022 Selection, use and maintenance of personal protective equipment (PPE) \u2022 Selection of appropriate tools for the task \u2022 Correct use, maintenance and storage of tools, equipment and machinery \u2022 Correct handling, application, transport and storage of hazardous and non-hazardous materials \u2022 Correct manual handling (lifting and transferring) \u2022 follow instructions in workplace and standard operating procedures \u2022 Housekeeping/clean-up procedures with due consideration to the environment."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Identify the use of a range of PPE (Footwear, head protection, gloves, protective clothing, respirator, face mask/shield, hearing protection and eye protection)."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Apply safety procedures"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L3/002",
+      "title": "COMMUNICATION AND INTERPERSONAL SKILLS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Classify the model of communication process.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe forms of communication process."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List examples of communication models."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Classify communication models into types, with relevant examples."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Classify Instructional media.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Classify instructions into categories."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State importance of instructional media at work environments."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the difference between print and non-print media."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "List examples of non-print media."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carry out Non- complex communication system in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify and explain symbols and signs appropriately."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use a simple verbal means to pass on necessary information."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use non-verbal means to pass on necessary information e.g. body language."
+            },
+            {
+              "pc_code": "3.1",
+              "description": "List the importance of mixed-up messages in communication."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "List, with examples, barriers to workshop/ workplace communication."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain how physical instructions can impede communication process."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand factors constituting barriers to effective communication.",
+          "performance_criteria": []
+        },
+        {
+          "lo_num": "5",
+          "description": "Identify signs and symbols.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify signs and symbols in: \u2022 Work place/ workshop. \u2022 In Agricultural implements. \u2022 On the field. \u2022 Operational manuals. \u2022 Caution/ warning signs, etc."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Interpret the signs and symbols identified in 5.1."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Identify the importance of signs and symbols in the operation of farm and field implements."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Use of communication methods in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Communicate effectively with manager for conducting pre-operational check-ups."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Communicate with accompanied field staff and co-drivers about machine settings, attachment kits, etc.,"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Communicate to field owner to capture his requests."
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Communicate clearly and effectively on trouble-shooting."
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Communicate clearly and effectively on solutions to trouble-shooting problems."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Understand operational manuals.",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Interpret machine spare parts specifications."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Interpret machine operational manuals."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Detect technical information in spare parts specifications."
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Detect technical issues in operational manuals."
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Understand how to document routine tasks.",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Undertake documentation of daily pre- operational checks and tasks."
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Perform daily documentation of trouble- shooting problems and their solutions."
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Explain the importance of documentation of tasks and trouble-shooting issues."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L3/003",
+      "title": "OCCUPATIONAL HEALTH, SAFETY & ENVIRONMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Personal health and hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Wear clean, smart and appropriate personal protective equipment (wears)."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Work safely at all times, complying with health, safety and environmental regulations and guidelines."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Get cuts, grazes and wounds treated by the appropriate personnel."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report any form of illness promptly to the appropriate personnel."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Safe working Practices and Instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify safe work practice and instructions."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify safety signs and symbols."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use signs and symbols correctly."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry out safe work practices and instructions."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Work in accordance with health and safety best practices."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Identify Safety Hazards and risks",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify work environment hazards."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify various ways to avoid common workplace hazards"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify methods to reduce the risk of work hazards."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Identify how to take appropriate actions during accident/injury",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify basic first aid equipment."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify the benefits of first aid equipment"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify how to maintain hygienic, safe and secure workplace."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify the uses of safety equipment in a mobile application work environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Demonstrate safe work habit and clean work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Use safe access and exit routes in the work environment."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Demonstrate safe work habit and clean work environment."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Dispose all wastes appropriately to designated waste facilities"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Prevent hazards in the workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Identify any potential hazards/hazards and deal with these correctly."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Identify where information about health, safety and environment in the workplace can be obtained."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Describe the types of hazard in the workplace that may occur and how to deal with them."
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Identify hazards that can be dealt with personally and those that should be reported to the appropriate personnel."
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Demonstrate how to warn other people about potential hazards/hazards and why this is important."
+            },
+            {
+              "pc_code": "6.6",
+              "description": "Recognise the importance of following the fire safety laws and why it should never be approached unless it is safe to do so."
+            },
+            {
+              "pc_code": "6.7",
+              "description": "Describe the organizational security procedures and why these are important."
+            },
+            {
+              "pc_code": "6.8",
+              "description": "Identify the importance of reporting all incidents to the appropriate personnel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L3/004",
+      "title": "TEAM WORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Comply with organizational policies",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Work in line with organizational standard and structure."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use organizational code of practice."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify organizational code of conduct."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carryout responsibilities within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within the team."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in teamwork."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate working relationship with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the need for developing positive relationship with colleagues."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel valued and respected."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Report to the appropriate personnel when request/requesting for assistance fall outside area of responsibility."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Communicate information to colleagues about own work that might affect others."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L3/005",
+      "title": "REPAIR / MAINTENANCE OF LAND CLEARING, DEVELOPMENT AND RECLAMATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify Land Clearing, development and Reclamation Equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify Land Clearing, development and Reclamation Equipment, e.g. : \u2022 Chain saw \u2022 Bulldozers \u2022 Graders"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify functions of the equipment above"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe equipment use for Land Clearing, development and Reclamation"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify safety precaution required in maintenance of land clearing development equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify safety precautions required in maintenance of land clearing, development and reclamation equipment."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the procedures involved in maintenance of land clearing, development and reclamation equipment"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use the appropriate Personal Protective Equipment (PPE) when carrying out maintenance of land clearing, development and reclamation equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carryout Maintenance of land clearing equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "List Land development practices"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify the equipment to be used in land clearing development and reclamation"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carryout maintenance of land clearing, development and reclamation equipment"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify the functions and adaptability of land clearing equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Carryout repair of land clearing equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Diagnose faults in various land clearing equipment."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Repair faults diagnosed in 4.1 above, e.g.: \u2022 Engines \u2022 Blades \u2022 Chainsaw etc."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Test run the repaired equipment for confirmation of achievement of result or otherwise."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L3/006",
+      "title": "REPAIR OF FERTILIZER AND ORGANIC MANURE APPLICATION EQUIPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify Fertilizer and organic manure application equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify Fertilizer and organic manure application equipment, e.g. \u2022 Broadcasters \u2022 Spreaders"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify functions of the equipment above"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe equipment use for Fertilizer and organic manure application Equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Maintain fertilizer and organic manure application equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Classify maintenance of fertilizer and organic manure application equipment according to: \u2022 Daily (routine) maintenance \u2022 Preventative maintenance"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify parts required to carry out the maintenance"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Procure the parts identified in 2.2"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Select appropriate method for repair/maintaining fertilizer application equipment.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify maintenance strategies e.g.: \u2022 Daily \u2022 Preventive \u2022 Planned Breakdown \u2022 Shutdown \u2022 Running and \u2022 Contract."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain each type of maintenance system."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify the functions of each of the maintenance system."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Describe the precautions and planning techniques for shutdown maintenance."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify the advantages or benefits derived from a successful maintenance system."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Identify the importance of maintenance"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Apply safety precautions in maintenance"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Maintain fertilizer application equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Select appropriate method for repair and maintaining Organic manure application equipment.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Describe maintenance strategies e.g.: \u2022 Daily \u2022 Preventive \u2022 Planned Breakdown \u2022 Shutdown \u2022 Running and \u2022 Contract."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify the characteristics of each type of maintenance system."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify the functions of each of the maintenance system."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify the advantages or benefits derived from a successful maintenance system."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Identify the importance of maintenance"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Apply safety precautions in maintenance"
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Maintain organic manure application equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Carryout repair and maintenance of fertilizer application equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify maintenance strategy: \u2022 Daily (routine) \u2022 Preventive \u2022 Planned \u2022 Breakdown and \u2022 Shutdown."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Select appropriate maintenance strategy"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Identify protective wears in the workshop."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Identify the types of protective wears"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Apply the safety rules in the workshop"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Identify the precautionary measures when planning for maintenance to avoid total breakdown"
+            },
+            {
+              "pc_code": "5.7",
+              "description": "Identify advantages and benefits derived from a successful maintenance system."
+            },
+            {
+              "pc_code": "5.8",
+              "description": "Identify the importance of maintenance"
+            },
+            {
+              "pc_code": "5.9",
+              "description": "Maintain fertilizer application equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Carryout repair and maintenance of manure application equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Identify maintenance strategy : \u2022 Daily (routine) \u2022 Preventive \u2022 Planned \u2022 Breakdown and \u2022 Shutdown."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Select appropriate maintenance strategy"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Identify protective wears in the workshop."
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Identify the types of protective wears"
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Apply the safety rules in the workshop"
+            },
+            {
+              "pc_code": "6.6",
+              "description": "Identify the precautionary measures when planning for maintenance to avoid total breakdown"
+            },
+            {
+              "pc_code": "6.7",
+              "description": "Identify advantages and benefits derived from a successful maintenance system."
+            },
+            {
+              "pc_code": "6.8",
+              "description": "Identify the importance of maintenance"
+            },
+            {
+              "pc_code": "6.9",
+              "description": "Maintain manure application equipment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L3/007",
+      "title": "REPAIR OF HARVESTING EQUIPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Maintain common harvesting equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify repairs needed in mower, forage harvester, pick-up bailers and combine harvesters"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify parts needed to be repaired"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Procure the parts identified for repair"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Select appropriate tools needed for repairs"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Carryout the repair of the harvesting equipment"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Test run the harvester"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Select appropriate method for maintaining harvesters",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify types of maintenance to be carried out on the harvesters"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the characteristics of each type of maintenance system."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the functions of each of the maintenance system."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify the benefits derived from a successful maintenance system."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Identify the importance of maintenance"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Follow safety rules and precautions in maintaining harvesting equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Identify common types of faults in harvesting equipment LEARNING OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify faults in common faults in harvesting equipment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Procure the parts identified"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Perform Repair of faults identified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L3/008",
+      "title": "REPAIR/MAINTENANCE OF FARM WASTE HANDLING EQUIPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify farm waste handling equipment.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify farm waste handling equipment: \u2022 Compost Baggers \u2022 Dung Scrapers \u2022 Bale Wrappers, and \u2022 Silage Choppers etc."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the uses of farm waste handling equipment: \u2022 (Compost Baggers \u2022 Dung Scrapers \u2022 Bale Wrappers, and \u2022 Silage Choppers etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the function of parts of various farm wastes handling equipment."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Maintain farm waste handling equipment.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Classify maintenance of farm waste handling equipment according to: \u2022 Daily (routine) maintenance \u2022 Preventative maintenance"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the functions of each of the maintenance equipment."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe the precautions and planning techniques for shutdown maintenance"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carryout maintenance of farm waste handling equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Select appropriate maintenance strategy"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify protective wears needed."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify the types of protective wears."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify the safety rules in maintenance of farm waste handling equipment"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Describe the precautionary measures when planning for maintenance to avoid total breakdown"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Identify the advantages and benefits derived from a successful maintenance system."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Carryout repair of farm waste handling equipment. \u2022 Compost Baggers \u2022 Dung Scrapers \u2022 Bale Wrappers, and \u2022 Silage Choppers etc.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Examine farm waste handling equipment e.g.:"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Carryout repair of parts identified with faults"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Test run repaired parts and equipment to confirm successful repair action"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L3/009",
+      "title": "REPAIR OF POWER TRAIN",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Engine Fundamentals & Operation",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the purpose and function of an engine in agricultural implements."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the major components of an internal combustion engine."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the working principles of different engine types: \u2022 Diesel \u2022 petrol, etc."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Differentiate between two-stroke and four-stroke engines."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify Engine Components & Systems",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the key components of an engine system: \u2022 Cylinder \u2022 Piston \u2022 crankshaft etc."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the function and working of fuel, lubrication, and cooling systems."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify different types of air intake and exhaust systems."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Identify Engine Tools & Maintenance Procedures",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify tools and equipment used for engine repair and maintenance."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Differentiate between general and special service tools for engine repair."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Apply correct procedures for handling tools and equipment."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate safety measures while working with engine components."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Carry out Engine Inspection, Repair, and Performance Testing \u2022 Piston rings \u2022 Valve seats, etc.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Perform engine diagnostics to identify faults and wear."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Demonstrate dismantling and assembling of an engine system"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Apply procedures for repairing and replacing engine components."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Measure and evaluate wear on engine components: \u2022 Cylinder bore"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Conduct operational testing to ensure the engine meets manufacturer specifications"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Transmission & Chassis System Operations and Principles",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Describe the purpose of transmission systems."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify the components of the transmission system."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Identify the components of the chassis system."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Differentiate between transmission and chassis system."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Identify Chassis and Transmission Tools and Equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Identify chassis and transmission system tools and equipment."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Differentiate between Special Service Tools from other tools"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Use the tools and equipment required, correctly and safely."
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Observe manufacturers specification in storing and securing tools and equipment."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Carry out Transmission and Chassis system repair",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Perform Transmission and Chassis system diagnostics to identify faults and wear."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Use suitable personal protective equipment when carrying out repairs."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Carry out all repair activities following: manufacturers' instructions Health, Safety and Environment requirements."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Use the tools and equipment required, correctly and safely throughout all repair activities"
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Adjust components and units correctly to ensure that they operate to meet system requirements."
+            },
+            {
+              "pc_code": "7.5",
+              "description": "Demonstrate procedures for dismantling and assembling a transmission system and its associated components."
+            },
+            {
+              "pc_code": "7.6",
+              "description": "Demonstrate procedures for repairing and/or replacing component parts of a transmission system and its associated components."
+            },
+            {
+              "pc_code": "7.7",
+              "description": "Apply procedures for measuring and evaluating wear on component parts of the transmission system."
+            },
+            {
+              "pc_code": "7.8",
+              "description": "Demonstrate procedures for repairing and replacing automatic transmission system."
+            },
+            {
+              "pc_code": "7.9",
+              "description": "Demonstrate procedures for operational testing of automatic transmission system components."
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Identify the Final Drive System",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Describe the function and significance of the final drive in agricultural machinery."
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Identify the key components of the final drive system."
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Identify the working principles of different types of final drives, e.g.: \u2022 Planetary \u2022 Spur gear, and \u2022 Chain drive."
+            },
+            {
+              "pc_code": "8.4",
+              "description": "Differentiate between final drives used in tractors and other agricultural implements."
+            }
+          ]
+        },
+        {
+          "lo_num": "9",
+          "description": "Identify Tools and Equipment for Final Drive Maintenance",
+          "performance_criteria": [
+            {
+              "pc_code": "9.1",
+              "description": "Identify tools and equipment used for final drive system maintenance and repair."
+            },
+            {
+              "pc_code": "9.2",
+              "description": "Differentiate between standard and special service tools for final drive servicing."
+            },
+            {
+              "pc_code": "9.3",
+              "description": "Demonstrate proper handling and safety measures while using tools for final drive repair."
+            },
+            {
+              "pc_code": "9.4",
+              "description": "Follow manufacturers' specifications for storing and securing final drive tools and equipment."
+            }
+          ]
+        },
+        {
+          "lo_num": "10",
+          "description": "Maintain and Repair of Final Drive",
+          "performance_criteria": [
+            {
+              "pc_code": "10.1",
+              "description": "Use appropriate personal protective equipment (PPE) when working on final drive systems."
+            },
+            {
+              "pc_code": "10.2",
+              "description": "Follow manufacturer guidelines and safety protocols for servicing the final drive."
+            },
+            {
+              "pc_code": "10.3",
+              "description": "Demonstrate correct procedures for dismantling and assembling the final drive system."
+            },
+            {
+              "pc_code": "10.4",
+              "description": "Inspect final drive components for wear, damage, and misalignment."
+            },
+            {
+              "pc_code": "10.5",
+              "description": "Apply techniques for repairing or replacing worn-out or damaged final drive components."
+            },
+            {
+              "pc_code": "10.6",
+              "description": "Measure and evaluate wear on gears, bearings, and shafts in the final drive."
+            },
+            {
+              "pc_code": "10.7",
+              "description": "Adjust final drive components to ensure proper power transmission efficiency."
+            },
+            {
+              "pc_code": "10.8",
+              "description": "Perform operational testing to verify final drive functionality after repairs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AGR/AEM/L3/010",
+      "title": "CUSTOMER RELATIONS IN EQUIPMENT SERVICE & REPAIR WORKSHOP",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Customers contact/ communication",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Gather relevant information from the customer to make an assessment of needs."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Analyze customer\u2019s complaints during conversation."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Document customer's requirement and observation made"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": ": Document Data and customer complaint",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Carryout accurate identification and clarification of customer needs"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Certify that recording system are complete, accurate, in the required format and signed"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Provide customers with accurate, current and relevant information on: \u2022 Suitable tractors and equipment inspection, \u2022 Repair/ replacement of parts \u2022 Potential causes of action \u2022 The consequences of the action \u2022 The estimated cost."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": ": Follow Up Service",
+          "performance_criteria": []
+        },
+        {
+          "lo_num": "4",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Compile further customer approval where the contracted agreement is likely to be exceeded."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe how to get feedback from customers."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Carryout customer satisfaction survey."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Obtain customer feedback on completed jobs."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Analyze customer feedback."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

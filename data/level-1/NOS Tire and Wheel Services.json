@@ -1,0 +1,567 @@
+{
+  "trade_name": "NOS Tire and Wheel Services",
+  "level": 1,
+  "units": [
+    {
+      "code": "AUT/TWS/001/L1",
+      "title": "HEALTH, SAFETY AND THE ENVIRONMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Safe working Practices and Instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safe work practices and instructions"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify safety signs and symbols"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use signs and symbols correctly"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Carry out safe work practices and instructions"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Work in accordance with health and safety best practices"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Hazards and risks involved in the work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify work environment hazards"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State methods to reduce the risk of these hazards"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify Personal Protective Equipment (PPE)."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State methods to resolve an occurring environmental hazard"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Take appropriate actions during accident/injury",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify basic first aid items"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply first aid to accident/injury"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Report accident /injury to immediate superior officer"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate safe working habit and clean work environment Ref. Page No",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use safe access and exit routes in the work environment"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Dispose all wastes appropriately to designated waste facilities"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain methods of resource conservation (e.g Water, Energy etc)"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "State how to maintain hygienic, safe and secure workplace"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/TWS/002/L1",
+      "title": "COMMUNICATION AND INTERPERSONAL SKILLS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate good communication in the work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State reasons why good"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List ways to communicate effectively"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Exhibit good conduct while communicating with colleagues managers and clients"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Speak in a respectful manner"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use respectful body language"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Interpret verbal communication accurately"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Listen attentively"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Document information for record purpose",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Read an instruction manual"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Document information in the workplace (E.g.: Receipt, Invoices, Reports, Records etc.)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Document Errors, solution processes and reports"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply effective communication in a work environment Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the various methods of communication in the work environment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "explain the various methods of communication in a work environment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Communicate effectively to the right personnel."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Observe information effectively . using symbols, signs and codes"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Observe instructions in line with work ethics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/TWS/003/L1",
+      "title": "TEAM WORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate positive working Relationship",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify positive work ethics."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the value of respect in work relation."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain methods of Reporting f assistance falling outside area responsibility."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about own work tha might affect others."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take Responsibilities within the Team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State own role and responsibilities within the team"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in team work."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Comply with Policy of Organization. Ref. Page No. able to:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain organizational Code of Conduct."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Read organizational code of practice."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Work in line with organizational standard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/TWS/004/L1",
+      "title": "MOTOR VEHICLE TYRE AND WHEEL SERVICES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Classification of tyres and wheels",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify various types of tyre \u2022 Tube \u2022 Tubeless 1,2 Explain the features of tyres. \u2022 Tread \u2022 Bead \u2022 Sidewall"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify wheels based on their design and construction"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Read tyre/wheel data according to manufacturer\u2019s specifications."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Apply tools and equipment for tyre & wheels services",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify tools and equipment used in tyre and wheel repairs."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Apply manual tools and equipment in tyre and wheel repairs on light vehicle"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "clean tyre/wheel tools and equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Inspect vehicle tyres LEARNING OUTCOME (LO) able to: Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Carryout inspection of tyres"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Repair faulty tyres"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Replace faulty tyres"
+            },
+            {
+              "pc_code": "3.1",
+              "description": "Carryout inspection on Light Vehicle wheels"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Repair faulty wheels"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Replace faulty wheels"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Inspect vehicle wheels",
+          "performance_criteria": []
+        }
+      ]
+    },
+    {
+      "code": "AUT/TWS/005/L1",
+      "title": "APPLICATION OF TYRE AND WHEEL SERVICE TOOLS AND EQUIPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know tyre and wheel manual and power tools Identify manual and power tools in tyre and wheel repair workshop",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify manual and power tools in tyre and wheel repair workshop"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Perform simple operation using the manual tools: \u2022 Wheel spanner \u2022 Wheel jack \u2022 Hammer \u2022 Metal bar"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Perform simple operation using the following power tools: \u2022 Air compressor \u2022 Pressure gauge"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Clean the tools used in 1.2 and 1.3 above"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Maintain tyre and wheel service tools and equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify worn out hand tools"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify problems associated with equipment"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Report faulty tools and equipment to authorized personnel."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carryout simple routine maintenance of tyre and wheel tools."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Carryout simple routine service of equipment as specified by manufacturer"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Store tools and Equipment LEARNING OUTCOME (LO) able to: Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the techniques used in the storage of tyre and wheel service tools and equipment."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain various store documentation procedures in tyre and wheel workshop."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Store tyre and wheel tools and equipment in line with workplace procedures."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Dispose waste generated from tyre repairs in accordance with workplace procedures."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/TWS/006/L1",
+      "title": "VULCANIZING OPERATIONS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Measure tyre and rim Interpret the functional ratings of various tyres Use Personal Protective Equipment as related to Vulcanizing operations Stick Tyre Gauge Dial Tyre Gauge Digital Tyre Guage Explain the effect of improper inflation pressure Under Inflation Over Inflation",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Measure a given tyre"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Measure vehicle rim"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Interpret the functional ratings of various tyres"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Observe Safety measures in Vulcanizing",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Interpret Safety Signs in the workshop"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use Personal Protective Equipment as related to Vulcanizing operations"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply adequate measures against hazards related to vulcanizing operations"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Inflate and Deflate Tyres LEARNING OUTCOME (LO) able to: Ref. Page No",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the following tyre gauges \u2022 Stick Tyre Gauge \u2022 Dial Tyre Gauge \u2022 Digital Tyre Guage"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Differentiate the gauges listed in 3.1 above"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use the gauges listed in 3.1 above"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the effect of improper inflation pressure \u2022 Under Inflation \u2022 Over Inflation"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Deflate vehicle tyre"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Inflate vehicle tyre to the specified pressure"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Maintain vehicle tyres and wheels LEARNING OUTCOME (LO) able to: Ref. Page No",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Perform tyre and wheel inspection using the following: \u2022 manufacturer\u2019s instructions \u2022 workplace procedure"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify defects in vehicle tyres"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Repair the identified defects in 4.2 above"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify defects in vehicle wheels"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Repair the identified defects in 4.4 above"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/TWS/007/L1",
+      "title": "BASIC COMPUTER SKILLS IN AUTOMOTIVE TYRE AND WHEEL SERVICES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Classify Computers",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe computers according to usage, type and size."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Differentiate between analogue, digital and hybrid computers."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Carryout a simple task using a computer. \u2022 Create a document \u2022 Save a File"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Describe Computer Hardware and Software Elements",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the functions of various hardware and software components of the computer"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Differentiate between operating . system and application software"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Select application software for a particular operation."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the roles of computer in modern tyre and wheel workshop."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "List two tyres and wheels service application software"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Operate the application software listed in 3.2 above"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "State the benefits of computer in a . tyre and wheel service workshop "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

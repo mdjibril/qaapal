@@ -1,0 +1,1311 @@
+{
+  "trade_name": "NOS ICT Web Development L2",
+  "level": 2,
+  "units": [
+    {
+      "code": "ICT/WEB/001/L2",
+      "title": "OCCUPATIONAL HEALTH AND SAFETY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Safe working Practices and Instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safe work practice and instructions in an ICT environment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Carry out safe work practices and instructions in an ICT environment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Work in accordance with health and safety best practices in an ICT environment"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Follow all necessary instructions related to safety in the work place"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Understanding of Safety Hazards and risks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify work environment hazards in an ICT environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State various methods to reduce the risk of identified hazards in an ICT environment"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate use of safety equipment applicable to ICT environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Possess the ability to take appropriate actions during accident/injury",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State how to maintain hygienic, safe and secure workplace."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate the uses of safety equipment in an ICT environment as required."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify basic first aid equipment"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Illustrate basic first aid treatments"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate safe work habit and clean work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use safe access and exit routes in the work environment"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Dispose all wastes appropriately to designated waste facilities"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/002/L2",
+      "title": "COMMUNICATION AND INTERPERSONAL SKILLS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know of the importance of good communication",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State reasons why good communication is important"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List ways to communicate effectively"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Exhibit patience and a mild demeanor while communicating with colleagues, managers and clients"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Demonstrate how to speak in a respectful manner"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use respectful body language even when in a bad mood or while under pressure"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate ability to follow documented instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Read and accurately follow steps in a web framework/plugins installation manual"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Find specific Class definitions and Method descriptions in the programming language reference document."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Find feature descriptions in the plugin framework documentation, while using a plugins/framework,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/003/L2",
+      "title": "TEAMWORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Positive working relationship with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the need for developing positive working relationship with colleagues"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel valued and respected"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the appropriate personnel when request for assistance fall outside area of responsibility."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about individual work that may affect team work."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibility within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within a team"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team\u2019s rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in teamwork."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Compliance with policy of organization",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain organizational code of conduct"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Work in line with organizational standard"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use organizational code of practice"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Adhere strictly to instructions given by the Management"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/004/L2",
+      "title": "INTRODUCTION TO INFORMATION TECHNOLOGY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Secure Software Design",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain Secure Software Design"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the principles of secure software design"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain three modelling secure software design"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Develop software architecture"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Secure coding",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Secure Coding Practices"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain common security vulnerabilities"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate common coding vulnerabilities"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Demonstrate coding practices"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Adhere to best practices in secure coding"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Authentication and Authorization",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe the process of Authentication"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the process of Authorization"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Differentiate between Authentication and Authorization"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Describe different methods of Authentication and Authorization"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know Encryption and Data Protection Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain Encryption techniques and applications"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain Data Protection techniques"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Demonstrate encryption techniques and applications"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Demonstrate methods for securing and handling sensitive data"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Apply decryption in real world applications"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/005/L2",
+      "title": "COMPUTER GRAPHICS EDITING AND DATABASE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Computer Graphic Editing in Web Development",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain Computer Graphic Editing"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe Image Optimization"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Create Image Optimization"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Construct responsive Images"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Scalable Vector Graphics (SVG)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Scalable Vector Graphic"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use SVG to edit"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply Styles to Images and other visual element using CSS"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use modern WebP Format instead of JPEG"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Graphic Editor (Adobe Photoshop)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain Layer Masking"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply Adjustment, blending modes, effect etc"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Select, mask workspace for precision selections"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use advance color grading techniques to create mood and enhance visual story telling of image"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Create 3D effect including extrusions, bevels and shading"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Create and use symbols in libraries"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Image Editing in code",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain Image Editing"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use Libraries and Framework in image editing"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use JavaScript (Node.js) to process Image"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use Pyton to open, manipulate and save different images"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand Data base Concept in Web Development",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain Relational Database"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Describe NoSQL Databases"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Create Object, tables using CRUD Operation"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Construct table using Schema"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Ref. Page No. OBJECTIVE (LO) The learner will: Know Object Relational Mapper",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Explain Object Relational Mapper"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Describe the process of Mapping Tables to Object"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Use Pyton to Map tables to object"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Describe the process of using Django ORM for Mapping"
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Use Django ORM to Map tables to object"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/006/L2",
+      "title": "INFORMATION TECHNOLOGY NETWORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Basic Network Concept",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain information technology network"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify network devices"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Construct types of network topologies using the simulator"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use a 128-bit address format to handle a larger number of devices"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Translate domain names (www.exampl.com) into IP address"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Describe the difference between HTTP and HTTPS"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Explain the difference between Client and Server with examples"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Explain Firewalls technique"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Client-Server Architecture",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Client-Server Architecture"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use an interface (HTML or CSS) to define the look and functionality of the web application"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use Protocol (HTTP, FTP or SMTP) to request packets"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use header and status code to send response"
+            },
+            {
+              "pc_code": "2.4",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Web Protocols Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain Web Protocols"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate the use of HTTPS Protocol through encryption"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use SMTP Protocol to send email"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use SSH File Transfer Protocol grant file access"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Use SFTP Protocol to transfer file"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Use POP3 to retrieve emails"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Explain Dynamic Host Configuration Protocol (DHCP)"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Data Transmission",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain Data Transmission"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify Nodes and Network"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe Data Transfer Methods"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Explain OSI Model and Protocols"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Demonstrate Data encapsulation and de-encapsulation"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Demonstrate data compression"
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Demonstrate Catching"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand Network Security",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify basic security measures necessary for network devices."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain network devices with device hardening features to mitigate security threat"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Configure secure passwords and SSH on network devices"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "List general security mitigation techniques"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Demonstrate the use of firewall to prevent traffic"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Demonstrate Authentication using Password"
+            },
+            {
+              "pc_code": "5.7",
+              "description": "Demonstrate Authentication using Intrusion Detection System"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Understand API Communication",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Explain Types of API Communication"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Demonstrate Peer-to-Peer Models (File sharing network)"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Demonstrate wireless communication"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Explain Synchronous Remote Procedure Call"
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Differentiate Cellular from Satellite Communication"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Understand Network Performance Optimization Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Explain Network Performance Optimization"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Describe Bandwidth Management"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Use shortest path algorithms to Optimized Routing"
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Use Edge Caching procedure to reduce latency"
+            },
+            {
+              "pc_code": "7.5",
+              "description": "Use Subnetting method to minimize broadcast traffic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/007/L2",
+      "title": "INTRODUCTION TO UI/UX DESIGN",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Concept of User Interface (UI) Design",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain User Interface (UI) Design"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the components of User Interface (UI)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain best practices for User Interface (UI) Design"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the concept of User Experience (UX) design",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain User Experience (UX) Design"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the components of User Experience (UX) Design"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain best practices for User Experience (UX) Design"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe the relationship between UI and UX"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand User Interface in Web Development",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe Layout and Structure of UI"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use percentage base width for flexible layout"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use CSS layout system to create complex flexible grid layouts"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use Figma or Adobe to create wireframes"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Create Input form fields with labels, placeholders and validation messages"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Use modals for tasks like confirmations additional information or forms"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Use font size, weight and color to establish a clear visual"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Explain User Research in UI"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand User Experience UX Research Ref. Page No. OBJECTIVE (LO) The learner will: User Experience UX in web development",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain Information Architecture in UX"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Create sitemap outlining the main pages and their relationship to"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use heading and subheading to show a clear information architecture"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Develop a robust search feature with filters and auto-suggestion"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Create low fidelity wireframes to outline the layout and structure of pages"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Develop interactive prototypes to simulate user interactive development"
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Apply micro interactions e.g button hovers, form validation messages, loading indicator etc"
+            },
+            {
+              "pc_code": "4.8",
+              "description": "Conduct text real users to observe their interactions"
+            },
+            {
+              "pc_code": "4.9",
+              "description": "Get user behavior and feedback"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand",
+          "performance_criteria": []
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/008/L2",
+      "title": "WEB PROGRAMMING (PYTHON)",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Web programming concepts and techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain concept of web programming"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe what python is"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Install and configure Python Interpreter, IDE / Code editor"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Distinguish Python from other Web programming Language"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Data types, variables, input- output operations, and basic operators",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Data types, variables, operators etc"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Construct simple Python codes using data types, variables, operators"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe basic Python input and output operations"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Develop programs to perform basic Python input and output operations"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Boolean values, conditional execution, loops, lists and list processing, logical and bitwise operations Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the Boolean data type"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe relational operators"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain conditional statements and/or executions"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Develop Python codes to demonstrate Boolean operations, Relational operators"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Develop Python codes to demonstrate conditional statements using if, if-else, if-else statements"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Construct Python codes to perform logic and bitwise operations"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Construct Python codes to repeat code execution using while and for loops statements"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Construct Python code to control the loops using break and continue instructions"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand python functions, tuples, dictionaries, and data processing",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain code structuring and the concept of function"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain exceptions \u2013 the try statement the except clause, built-in exceptions,"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe code testing, debugging"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Construct functions to solve simple problems and invoke them to return results"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Design programs that use try statement and except clause to test Python built-in exceptions"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand python modules, libraries, packages, and PIP",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Describe some of the most useful Python standard library modules"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain PIP (Python Installation Package)"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Design codes to import Python standard library modules using different import techniques"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Use entities inside the codes"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Use PIP to install and uninstall packages"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Understand strings, string and list methods, and exceptions Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Explain characters, strings and coding standards"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Handling runtime errors in python"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Control the flow of errors using try and except"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Construct programs that use list and string methods"
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Construct program that manipulates list elements and strings"
+            },
+            {
+              "pc_code": "6.6",
+              "description": "Construct Python codes that control the flow of errors by using try and except"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/009/L2",
+      "title": "WEB PROGRAMMING (HTML, CSS)",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand HTML",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain concept of HTML"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe HTML syntax"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use HTML concepts such as: Elements, HTML Editors, Attributes, Headings, Paragraphs, Formatting,"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use HTML concepts such as: Head, Images, Tables, Lists, Block, Layout, Forms, I Frames, Colors,"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use HTML concepts such as: Entities, URL Encode, Form, Media, Object, Audio, Video"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Create a basic web page using HTML basic concept"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand CSS",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the importance of Cascading Style Sheets (CSS) in website design"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe the CSS syntax such as; Id & Class, Styling of Backgrounds, Text, Fonts, Links and Tables, CSS Border, Outline, Margin, Padding, Dimension, Positioning, Floating, Align, Colors, Color HEX"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Create CSS files in a suitable Text Editor or IDE."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use the Cascading Style Sheets (CSS) to style HTML elements"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know HTML, CSS Code Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Create HTML file with a few elements"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply basic style like color, font size and background color"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Create an HTML file with elements styled using margin, border, padding and width"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Create a responsive layout using Flexbox"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Create a layout using CSS Grid"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Link CSS files to HTML pages"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Create code in HTML and CSS to link pages"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/010/L2",
+      "title": "WEB PROGRAMMING (JAVASCRIPT)",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand JavaScript fundamentals (Data Types, Data Structure)",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain JavaScript fundamentals"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain JavaScript code and syntax (data types, data structures)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Create code on Identify Data Type that takes an argument and returns its data type as a string"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Create code on function Convert to Types that convert a given value to different data types: String, Number, and Boolean"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Create code on function Array Operations that takes array and perform Add, Remove, Finds and Returns"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Create code on function Object Manipulation that Add, Update, Delete and Returns the update object"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know JavaScript fundamentals (Variables, Function) Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain variables types"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain types of functions"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Create code on variable scope that demonstrate the difference between var, let and const in terms of scope and reassign ability"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Create code on variable that illustrates the behavior of different variable types. E.g. reassign ability and type conversion"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Create code on function hoisting example that illustrate how variable declarations are hoisted in JavaScript"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Create code on function DE structure that uses DE structuring assignment to extract values from an object and an array"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Document Object Model (DOM)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the key concept of Document Object Model (DOM)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Create nodes that can be accessed and modified"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Create code that show DOM Manipulation"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Create code that transverse the DOM"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Create code that query the DOM"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Demonstrate some DOM Operation using HTML"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know Event Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify the key concepts of Event"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Create code with Event Listeners"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Create code using Event Propagation"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Demonstrate handling a click event using event object"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/011/L2",
+      "title": "CONTENT MANAGEMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Content Management Basics",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain What Content Management is"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the key features of content management"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe five common Content Management Platforms"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain Content Management Best Practices"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Content Management Starting Steps",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Select a CMS base on your technical skills"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Set Up CMS by Installing the CMS"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Configure basic Setting"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Select a theme"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Create Content by adding pages, posts and media"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Install Plugins or extensions to add functionalities."
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Set Up user roles and permissions"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how to use Custom Web Development frameworks",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain what a Web Development framework is."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe Types of Web Development frameworks with examples"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Illustrate the differences between a CMS framework and Custom Web framework"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Install Web Development framework"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Configure Web Development framework"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Demonstrate how to detect installed frameworks and dependencies and their versions"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know how to use Command Line Interfaces (CLI) in setting Web Development environment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Describe common Command Line Demonstrate how to creating a directory, listing the contents of a directory"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use package manager to install frameworks and dependencies"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Update and upgrade installed frameworks"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use package manager to uninstall frameworks and dependencies."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

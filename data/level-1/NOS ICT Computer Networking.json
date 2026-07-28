@@ -1,0 +1,870 @@
+{
+  "trade_name": "NOS ICT Computer Networking",
+  "level": 1,
+  "units": [
+    {
+      "code": "ICT/NCI/001/L1",
+      "title": "OCCUPATIONAL HEALTH AND SAFETY IN COMPUTER NETWORKING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "The importance of occupational health and safety in computer networking",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain relevant occupational health and safety regulations in the network industry."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of following occupational health and safety to prevent accidents, electrical hazards, and ensure personal and team safety."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the consequences of non- compliance with occupational health and safety in network installation projects."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Recognize potential hazards in the network installation environment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify common hazards in network environments, such as electrical risks, tripping hazards, and sharp tools."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Assess risks in a work area before beginning tasks to ensure safety."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Recommend appropriate mitigation strategies to reduce hazards during network installation."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Use appropriate Personal Protective Equipment (PPE) for networking tasks",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the correct PPE required for network tasks (e.g., safety gloves, safety glasses, hard hats)."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate the correct use of PPE to ensure personal safety during installation and maintenance."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Inspect PPE before use to ensure it is in good condition and meets safety requirements."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Follow safe work practices during network installation",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Apply lockout/tagout procedures to electrical systems to prevent electrical shock during cabling tasks."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Safely handle tools, such as cable cutters, strippers, and crimpers, following safety procedures."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Maintain a clean and organized work area to reduce the risk of accidents and ensure safe movement around the installation site."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Dispose of materials and equipment Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify the proper disposal methods for materials used in network cabling (e.g., cables, insulation, packaging)."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Safely store and dispose of hazardous materials, such as batteries or chemicals, following environmental safety regulations."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Demonstrate the ability to clean up after installation tasks while adhering to environmental occupational health and safety."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NCI/002/L1",
+      "title": "TEAMWORK IN NETWORKING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the role of teamwork in network installation projects",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the importance of teamwork in completing network installation tasks efficiently and on time."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify individual roles and responsibilities within a team during a network installation project."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe how effective teamwork contributes to safety and quality in network installation processes."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Collaborate effectively with team members on network tasks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Communicate task objectives and responsibilities clearly with team members to ensure mutual understanding."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Assist other team members in completing tasks to maintain project flow."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Resolve conflicts or disagreements with team members constructively, without disrupting project progress."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Follow supervisory guidance and instructions during network installations",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Interpret instructions from supervisors or team leads accurately to ensure compliance with project requirements."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate the ability to ask for clarification when instructions or tasks are not fully understood."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Execute tasks according to the supervisory plan, adjusting to changes in instruction as needed."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Manage tasks and time effectively within a team environment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Prioritize tasks based on project timelines and team objectives."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Monitor task progress and adjust work pace to ensure deadlines are met without compromising quality."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Coordinate with team members to ensure seamless task handovers and continuity of work."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Demonstrate a positive attitude and work ethics Ref. Page No. OBJECTIVE (LO) in a team setting",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Show respect for diverse team members by valuing their input and contributions."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Maintain a positive attitude, even in challenging situations, to foster a supportive team environment."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Uphold professional standards by being punctual, reliable, and committed to delivering high-quality work."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NCI/003/L1",
+      "title": "COMMUNICATION IN NETWORKING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the importance of communication in network projects",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain why clear and effective communication is essential in coordinating tasks within network projects."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify potential consequences of poor communication in network installation and maintenance activities."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Recognize the role of communication in ensuring safety, efficiency, and adherence to project specifications."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Communicate effectively with supervisors and team members",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate the ability to listen actively and follow verbal and written instructions from supervisors."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use appropriate technical terminology when discussing project tasks with team members and supervisors."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Provide clear and concise updates on task progress, challenges, or delays to supervisors in a timely manner."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Write clear and accurate reports and documentation",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Draft task reports that accurately reflect the status of networking, including completed tasks and any issues encountered."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Ensure documentation is organized, legible, and free from errors, following standard formats for technical reporting."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Submit reports and documentation on time, as required by the project or supervisor."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know professional communication with clients or stakeholders",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Demonstrate polite and professional communication skills when interacting with clients or stakeholders on-site."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain technical information or project status to clients in clear, non-technical language."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Handle client inquiries or concerns with a positive attitude, escalating issues to supervisors when necessary."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Use digital communication Ref. Page No. OBJECTIVE (LO) tools effectively in networking projects",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Use email, messaging apps, and other digital tools to communicate project updates or instructions."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Ensure messages sent through digital tools are clear, concise, and professional."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Follow proper protocols for documenting and storing digital communication related to networking projects."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NCI/004/L1",
+      "title": "INTRODUCTION TO COMPUTER NETWORKS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Define Computer Networking Concepts",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define the term \u201ccomputer network\u201d"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the role of computer networks in business, education, and daily life."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify key benefits of networking."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Differentiate between traditional and modern network-based communication methods."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Differentiate Types of Networks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define Local Area Network and"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe the characteristics of Local Area Networks (LAN)."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Differentiate between Wide Area Networks (WAN) and Metropolitan Area Networks (MAN)."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the purpose of Personal Area Networks (PAN)."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Compare various network types based on speed, coverage, and infrastructure requirements."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Networking Models",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe the seven layers of the OSI model and their functions."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the four layers of the TCP/IP model."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe how data flows between layers in both networking models."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Compare the OSI and TCP/IP models,"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Identify Networking Devices",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Discuss the function of a router, switch, and modem."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the role of network interface cards (NIC) in connecting devices to a network."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify the differences between hubs, switches, and routers."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Recognize Network Communication Principles",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Define data transmission"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain the concept of network packets."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Explain the impact of bandwidth and Throughput on network performance."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Understand Basic Network Topologies Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Define network topology"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Explain the importance of network topology in network design."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Discuss the characteristics of star, bus, ring, and mesh topologies."
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Differentiate network topologies in network design."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Know Role of Internet Protocols Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Define networking protocols"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Explain the purpose of networking protocols in communication."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Describe the function of TCP/IP in ensuring reliable data transmission."
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Explain the role of HTTP, FTP, and DNS in accessing and transferring data over the internet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NCI/005/L1",
+      "title": "Computer Networking Components",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the concept of end devices",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain end devices"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List the different types of end devices"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the functions of end devices"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the concept of Intermediary Devices",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Intermediary devices"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List the different types of intermediary devices"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the functions of intermediary devices"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the concept of network media Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define network media"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "List the types of network media (Electrical Cable, Optical Cable & Wireless)"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Understand the types of electrical media cable (Coaxial cable, UTP & STP Cable)"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify the types of wireless electromagnetic media (Bluetooth, Wi-Fi,)"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify the types of optical media cable (Single Mode and Multimode)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NCI/006/L1",
+      "title": "Concept of Network Infrastructure and IPv4 Addressing",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand network design",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Network Design"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify Importance of network design"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify network design considerations"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain network design consideration"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Identify network design tools"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand The Hierarchical Layers (Core, Distribution and Access)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define the hierarchical model"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify network infrastructure at the core layer"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify network infrastructure at the distribution layer"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify network infrastructure at the access layer"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Basic IPv4 Addressing including the Structure, the Classes (A, B, C, D, E) Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe IP Address. and list the two types of IP address."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe IPv4 Addressing and differentiateidentify the difference between IPv4 and IPv6"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the structure of IPv4 Addressing"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "List the different classes of IPv4 address"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Discuss IPv4 address scheme"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Demonstrate IPv4 configuration on an end device)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NCI/007/L1",
+      "title": "SETUP AND CONFIGURATION OF SOHO (SMALL OFFICE/HOME OFFICE)",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Home/Office Network Basics",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define SOHO"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List the components of SOHO"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the Technologies used in SOHO"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify the steps carried out in implementing a SOHO"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Setting up a home router",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define Home Router"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List the types of routers used for a home network"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "List the steps on configuring a DHCP on a home router"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand connecting end devices in a SOHO Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the steps in connecting wireless devices to a SOHO"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify the steps in connecting Wired devices to a SOHO"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Demonstrate connecting wired devices to a SOHO"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NCI/008/L1",
+      "title": "FUNDAMENTAL OF NETWORK SIMULATION TOOLS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Network Simulator",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain a Network Simulator"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Download CISCO Packet Tracer Simulator"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Install Packet Tracer Simulator"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Customize the Packet Tracer"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explore the CISCO packet tracer environment"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Use the Self Help and Tutorials of CISCO Packet Tracer"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Use Packet Tracer Network",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define Packet Tracer"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify CISCO Packet Tracer File Types"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Carry out CISCO Packet Tracer Assessments"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify different components and features in CISCO packet tracer"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Build a SOHO Network Using Packet Tracer",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "List the different types of network simulators"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify Network Media in Packet Tracer"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify End Devices in CISCO packet tracer"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify Intermediary devices in CISCO packet tracer"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Outline the Basic Configuration of end devices in CISCO packet tracer"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Outline the Basic configuration of intermediary devices in CISCO packet tracer"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Manage Network in CISCO Packet tracer Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify Packet Tracer Simulation mode"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Examine Packets in SOHO network using cisco packet tracer"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Edit and Annotate a Topology using Packet tracer"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Monitor Your Network Using a Network Controller"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NCI/009/L1",
+      "title": "BASIC NETWORK TROUBLESHOOTING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Troubleshooting",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain Troubleshooting"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List the steps in troubleshooting a network"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify reasons for troubleshooting a network"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify tools used in troubleshooting a network"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify Common Network Problems",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify common symptoms of network issues."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Differentiate between hardware-related, software-related network problems."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Recognize issues related to incorrect IP settings, such as misconfigured IP addresses or subnet masks."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify external factors influencing network performance, such as bandwidth congestion or interference in wireless networks."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply Network Troubleshooting Methodology",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Apply the troubleshooting methodology (Identify, Test, Resolve, Verify) to diagnose network issues."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use logical steps to isolate the problem (e.g., check physical connections, verify configurations, test with different devices)."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Document the troubleshooting process and solutions to maintain accurate records of network issues."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Resolve network issues efficiently by implementing practical solutions based on troubleshooting steps."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Use Diagnostic Tools for Network Troubleshooting Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use the \"ping\" command to check connectivity and packet loss between devices on the same network or across the internet."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use \"tracert\" or \"traceroute\" to diagnose network routing problems and identify where packets are being delayed or dropped."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use \"nslookup\" to verify DNS resolution and troubleshoot domain name-related issues."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use \"ipconfig\" or \"ifconfig\" to check IP configuration details."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

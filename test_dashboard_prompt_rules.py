@@ -8,9 +8,10 @@ from prompt_builders import build_dashboard_prompt
 
 class DashboardPromptRulesTest(unittest.TestCase):
     def _load_agriculture_selected_pcs(self):
-        nos_path = pathlib.Path(__file__).with_name("data").joinpath(
-            "nos", "NOS-NSQ Agricultural equipment Mechanics Levels 2.json"
-        )
+        data_root = pathlib.Path(__file__).with_name("data")
+        matches = list(data_root.rglob("NOS*Agricultural equipment Mechanics*.json"))
+        self.assertTrue(matches, "Could not find the agriculture NOS fixture in data/")
+        nos_path = matches[0]
         nos = json.loads(nos_path.read_text(encoding="utf-8"))
         units = {unit["code"]: unit for unit in nos["units"]}
 

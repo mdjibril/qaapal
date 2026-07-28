@@ -1,0 +1,732 @@
+{
+  "trade_name": "NOS Solar Photovoltaic System Installation and Maintenance",
+  "level": 1,
+  "units": [
+    {
+      "code": "PWR/SPV/001/L1",
+      "title": "Occupational Health, Safety and Environmental Guidelines in the",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the health, safety and environmental hazards in Solar Photovoltaic Systems Installation and Maintenance",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain Safety in a workplace"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain Hazard in a workplace"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the importance of working in a healthy, safe and secure environment"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "List common health, safety and environmental hazards in Solar Photovoltaic Systems Installation and Maintenance"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain how to report accident or near accident quickly and accurately to appropriate personnel"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Select appropriate safety gadgets"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Apply safety and environmental standards in accordance with the laid down procedures"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Personal Protective Equipment (PPE) used in Solar PV and Power backup",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the meaning of PPE"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the types of PPE"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the importance of PPE in Solar Photovoltaic Systems Installation and Maintenance"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Outline the importance of complying with the PPE regulations"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain own responsibility under the (Occupational Health and Safety Act. of 2012) as it relates to Solar Photovoltaic Systems Installation and Maintenance"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Select appropriate PPEs in accordance with the work guidelines"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Demonstrate the use of PPEs"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Demonstrate maintenance and storage of PPE in accordance with the specifications"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the safety precautions to be considered in Solar Photovoltaic Systems installation and maintenance. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain basic safety measures to consider while carrying out work in high voltage/high current Solar Photovoltaic Systems Installation and Maintenance"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State the safety measures to consider while working at height (carrying panels on rooftops) in Solar Photovoltaic Systems Installation and Maintenance."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the importance of earthing in Solar PV Installations"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the possible effect of lightening on solar PV installations"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Use safety measures to consider when moving heavy batteries in Solar PV Installations"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Use laid down procedures to safeguard self, others and the environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know First Aid responsibilities in Solar Photovoltaic Systems Installation and Maintenance",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "State the meaning of first aid"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "State the importance of first aid in Solar Photovoltaic Systems Installation and Maintenance"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "List first aid tools and materials"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify own responsibilities in case of an emergency that has to do with electric shock such as: \u2022 Identify and switch off power supply sources"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "State the situations that require artificial resuscitation"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Describe how to carry out resuscitation in case of an accident"
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Explain how to report accident to immediate superior"
+            },
+            {
+              "pc_code": "4.8",
+              "description": "Explain first aid regulations"
+            },
+            {
+              "pc_code": "4.9",
+              "description": "Locate first aid box"
+            },
+            {
+              "pc_code": "4.10",
+              "description": "Treat minor injuries during emergencies"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/002/L1",
+      "title": "Teamwork in Solar Photovoltaic Systems Installation and Maintenance",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know how to develop positive working relationships with Colleagues in the work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State the need for developing positive working relationships with colleagues in the work environment."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of relating with others in a way that makes them feel valued and respected."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when needed."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the importance of seeking permission from superiors when request is made for assistance falling outside one\u2019s area of responsibility."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about own work that might affect performance of others"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Explain the importance of tolerating divergent opinions and perspectives"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know how to take responsibilities within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within the team for a given group assignment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in a given group assignment in line with the team\u2019s rules and regulations"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in a given team work"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Prepare and submit task reports promptly"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Comply with Policies and Regulations of the Organization Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Work in line with organizational rules and operational standards"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Align your operations to the interest of the organization"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Access organizational code of conduct for own and team work"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain organizational code of conduct for own and team work"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Report activities of the team work that may negatively affect organizational code of conduct or vision and mission, to the higher authority"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/003/L1",
+      "title": "Communication in Solar Photovoltaic Systems Installation and",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know non-complex communication system in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use verbal means to pass on necessary information"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use non-verbal means to convey necessary information e.g. body language, signs, etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Distinguish symbols and signs appropriately"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use appropriate terminologies in all technical communications"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the sources of information in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the sources of information in the work environment e.g.: \u2022 Upward \u2022 Downward \u2022 Horizontal"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Communicate effectively with the source of information"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use the different information flow systems in a work environment e.g. \u2022 Fill in work permit"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use information gathered to overcome challenges in a work situation"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Report findings appropriately in accordance with laid down procedures in the work environment e.g. \u2022 Fill reporting template"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the various means of communication in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the various communication equipment in the work environment e.g.: \u2022 Base Radio \u2022 Phones \u2022 Walkie Talkie"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use effectively the various communication equipment in a work environment as identified in 3.1 above"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Pass information effectively to the appropriate personnel"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain how to carryout instructions in line with the ethics of work environment"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Effectively listen to understand messages in communication"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/004/L1",
+      "title": "Introduction to Solar Photovoltaic Systems",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the background of solar energy.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define renewable energy"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List applications of renewable energy \u2022 Power generation \u2022 Heating and cooling \u2022 Transportation"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify types of renewable energy: \u2022 Solar PV \u2022 Solar Thermal \u2022 Wind Turbine \u2022 Geo Thermal \u2022 Biomass/Biogas"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Mention two type of solar energy technology. \u2022 Solar PV \u2022 Solar Thermal"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain the history of Solar PV applications in Nigeria"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Identify the impact of Solar PV systems on economic development"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Explain the impact of Solar PV on the environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand career opportunities in Solar PV Systems",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize the career value chain of solar PV Installation and Maintenance e.g.: \u2022 Solar Installers \u2022 Solar component vendors \u2022 Battery Chargers \u2022 Inverter Maintenance \u2022 Solar Accessories Vendor"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain career opportunities in solar PV Systems"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the prospects of solar system industry"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the economic advantage of Solar PV Systems"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the basic terminologies used in Solar PV Systems OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "List the basic terms used in Solar PV System"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Define basic terms used in Solar PV Systems e.g.: \u2022 kVA / kW/ kWh Ref. Page \u2022 MPPT/ Voc / Isc \u2022 Mono/Polycrystalline/ Thin- film etc."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the common terminologies found in manufacturers\u2019 manuals"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the significance of understanding terminologies in interpreting wiring diagrams"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/005/L1",
+      "title": "Tools and Equipment used in Solar Systems Installation and",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the tools and equipment used in Solar Photovoltaic Systems installation and Maintenance.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the tools and equipment used in Solar Photovoltaic Systems installation and Maintenance"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the uses of tools and equipment in Solar Photovoltaic Systems Installation and Maintenance"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Select standard tools and equipment in accordance with a given task"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Carry out tools and equipment maintenance in accordance with manufacturers\u2019 specifications"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Demonstrate the proper storage of tools and equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know safe work practices in the handling and operation of tools and equipment.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use standard operating Procedures (SOP) when using tools and equipment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Wear appropriate Personal Protective Equipment (PPE) required for safe work in accordance with the regulatory and workplace requirement"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State handling of heavy equipment."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Demonstrate appropriate way of handing tools and equipment according to manufacturer specification"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "List safety requirements for particular work."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Describe safety procedures in transportation of tools and equipment to sites"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the working condition of tools and equipment. (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify functional tools and equipment, label according to classification"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify non-functional tools and equipment and label according to classification"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Check the tools and equipment Ref. Page for defects or wear before and after use."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Observe safe working conditions of tools and equipment in accordance with manufacturer's instructions"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Select materials, tools and equipment according to classification and job requirements"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/006/L1",
+      "title": "Materials used in Solar Photovoltaic Systems Installations and",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the electrical cables used in Solar Photovoltaic Systems Installation and Maintenance",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the types of cables used in Solar PV Systems"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the application of cables according to their sizes"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the techniques of cable termination"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the techniques of cable jointing"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain the IEEE regulations governing cable termination/joint"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Select the correct type of cable for appropriate load specifications"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Select the correct size of cable for appropriate load specifications"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Perform cable termination in accordance with specifications and laid down procedures"
+            },
+            {
+              "pc_code": "1.9",
+              "description": "Perform cable jointing in accordance with specifications and laid down procedures"
+            }
+          ]
+        },
+        {
+          "lo_num": "10",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "10.10",
+              "description": "Apply safety measures in cable termination"
+            },
+            {
+              "pc_code": "10.11",
+              "description": "Apply safety measures in cable jointing and ensure environmental protection guidelines."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the cable insulation materials used in Solar PV Installations and Maintenance. (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the types of insulation material in cables"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State the application of insulation materials according to their types"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the techniques of insulation material pilling."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the IEEE regulations governing insulation material"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Select correct type of insulation for appropriate voltage for a given task"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Select correct size of insulation for appropriate voltage for a given task"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Apply safety measures in insulation material use in accordance with the environmental protection guidelines"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the accessories in Solar PV Systems",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "List the various Solar PV Accessories"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the various Solar PV Accessories: \u2022 PV Mounting rails \u2022 Battery rack \u2022 Trunking Pipes \u2022 Clips and Fishing tapes \u2022 Screws, bolts and nuts \u2022 Flexible pipes \u2022 Combiner box \u2022 Cable lugs \u2022 Connectors \u2022 Crimping tools"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Apply safety and environmental standard in assembling and mounting the appropriate Solar PV accessories"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/007/L1",
+      "title": "Basic Components used in Solar Photovoltaic Systems Installation and Maintenance.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the basic components for solar-PV system.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "List basic components of Solar PV systems"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the basic components of Solar PV systems"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the application of basic components of Solar PV systems"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the function of Charge controllers"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe the function of solar panels"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Describe the function of DC Breakers"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Describe the function of AC Breakers"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "State the function of Inverters"
+            },
+            {
+              "pc_code": "1.9",
+              "description": "State the function of Batteries"
+            },
+            {
+              "pc_code": "1.10",
+              "description": "Describe the function of battery equalizer"
+            },
+            {
+              "pc_code": "1.11",
+              "description": "Select appropriate components in accordance with designers\u2019/ manufacturers\u2019 specification and guidelines"
+            },
+            {
+              "pc_code": "1.12",
+              "description": "Identify necessary safety and environmental standards in selecting appropriate components"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the types of Solar Batteries",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the various batteries used in Solar PV systems."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the advantages and disadvantages of each type of batteries."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe safety and environmental standard in handling batteries."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain maintenance of types of batteries"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the protection of DC side",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "List the DC protective devices used in Solar PV systems"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the function of DC Breakers"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the function of DC fuse"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know AC protective device in Solar PV Systems Unit.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "State the function of AC circuit Ref. Page breaker"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe the function of distribution board"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify the function of AC fuse"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Describe the function of lightning arrestor and earthing system "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1622 @@
+{
+  "trade_name": "NOS ICT Front-End Web Development L3",
+  "level": 3,
+  "units": [
+    {
+      "code": "ICT/FED/001/L3",
+      "title": "Occupational Health and Safety",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Safe working Practices and Instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safe work practice and instructions in an ICT environment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Carry out safe work practices and instructions in an ICT environment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Work in accordance with health and safety best practices in an ICT environment"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Follow all necessary instructions related to safety in the work place"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Understanding of Safety Hazards and risks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify work environment hazards in an ICT environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State various methods to reduce the risk of identified hazards in an ICT environment"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate use of safety equipment applicable to ICT environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Possess the ability to take appropriate actions during accident/injury",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State how to maintain hygienic, safe and secure workplace."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate the uses of safety equipment in an ICT environment as required."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify basic first aid equipment"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Illustrate basic first aid treatments"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate safe work habit and clean work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use safe access and exit routes in the work environment"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Dispose all wastes appropriately to designated waste facilities"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/002/L3",
+      "title": "Communication and Interpersonal Skills",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know of the importance of good communication",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State reasons why good communication is important"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List ways to communicate effectively"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Exhibit patience and a mild demeanor while communicating with colleagues, managers and clients"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Demonstrate how to speak in a respectful manner"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use respectful body language even when in a bad mood or while under pressure"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate ability to follow documented instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Read and accurately follow steps in a web framework/plugins installation manual"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Find specific Class definitions and Method descriptions in the programming language reference document."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Find feature descriptions in the plugin framework documentation, while using a plugins/framework,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/003/L3",
+      "title": "TEAMWORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Positive working relationship with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the need for developing positive working relationship with colleagues"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel valued and respected"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the appropriate personnel when request for assistance fall outside area of responsibility."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about individual work that may affect team work."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibility within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within a team"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team\u2019s rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in teamwork."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Compliance with policy of organization",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain organizational code of conduct"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Work in line with organizational standard"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use organizational code of practice"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Adhere strictly to instructions given by the Management"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/004/L3",
+      "title": "INFORMATION TECHNOLOGY ETHICS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand ethical principles in IT",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the importance of ethics in information technology."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify common ethical issues in IT, such as privacy and security."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Discuss the impact of unethical behaviour on individuals and organizations"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Apply ethical decision- making in IT scenarios",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Analyse case studies to identify ethical dilemmas in IT."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Evaluate different approaches to resolving ethical issues."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Make informed decisions based on ethical principles and best practices"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Promote ethical practices in IT environments Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Develop policies and guidelines to ensure ethical behaviour in IT."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Educate team members on ethical standards and practices."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Enforce compliance with ethical guidelines in IT projects."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/005/L3",
+      "title": "Introduction to Frontend Development",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Roles of Fronted Web Developer",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe a frontend developer."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the primary responsibilities of a frontend developer"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the importance of collaborating with backend developers"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Components of a Web Application.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define what constitutes the client-side (frontend) and server-side (backend) of a web application"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the role of the browser in rendering web pages"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Evaluate Performance Metrics"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Technologies used in Frontend Web Development (LO) Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the main technologies used in frontend development (HTML, CSS, JavaScript)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the following: \u2022 HTML \u2022 CSS \u2022 JavaScript"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Discuss the importance of responsive design."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/006/L3",
+      "title": "HYPERTEXT MARKUP LANGUAGE (HTML)",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Create a simple HTML document with the correct structure.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use the document type declaration correctly"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Include essential tags while creating an HTML document"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Properly nest elements within the document."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Use Elements, Tags and Attributes to create and structure content",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Correctly use tags for headings, paragraphs, and lists"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Apply attributes for links and Alt images appropriately."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Ensure all tags are properly closed and nested."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Design forms using appropriate HTML elements",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use form elements to create forms"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Implement form attributes while creating forms"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ensure forms are accessible and user- friendly."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Design tables using appropriate HTML elements",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use table elements while creating tables."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Apply attributes correctly when creating tables."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Ensure tables are properly structured and readable."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand the use of Semantic HTML elements to improve accessibility and SEO",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Demonstrate the ability to use semantic HTML elements in a webpage to provide meaningful structure."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Ensure the HTML code reflects the purpose and content of each section appropriately."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Use semantic HTML elements to improve the accessibility of web content for screen readers and assistive technologies."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Include appropriate landmarks and roles to help users navigate the webpage efficiently."
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Apply semantic HTML elements to improve search engine optimization (SEO) by providing better context search engines."
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Utilize the right elements to ensure important content is recognized and indexed correctly by search engines."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Ensure HTML content is accessible to all users, including those with disabilities",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Use alt attributes for images to provide alternative text."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Implement ARIA (Accessible Rich Internet Applications) roles and attributes where necessary."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Ensure forms and interactive elements are accessible via keyboard navigation."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Follow best practices for writing clean and maintainable HTML code Ref. Page No. Use alt attributes for images to provide alternative text. Implement ARIA (Accessible Rich Internet Applications) roles and attributes where necessary. Ensure forms and interactive elements are accessible via keyboard navigation. Use comments to explain complex sections of code.",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Write well-indented and readable code."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Use comments to explain complex sections of code."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Avoid deprecated tags and attributes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/007/L3",
+      "title": "CSS (Cascading Styling Sheets)",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Apply styles to HTML elements using CSS selectors",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use basic selectors to style HTML correctly."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Apply styles to elements."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use pseudo-classes and pseudo- elements appropriately."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Utilize CSS layout techniques to create complex layouts",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Implement Flexbox to create flexible and responsive layouts."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use CSS Grid to design grid-based layouts."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply positioning techniques effectively."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement responsive design principles using CSS.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use media queries to adjust styles for different screen sizes."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply a mobile-first design approach."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ensure layouts are fluid and adapt to various devices."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand and apply the CSS box model",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Correctly use properties such as margin, border, padding, and width."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Understand the impact of the box- sizing property."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Create layouts that respect the box model principles"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Manage CSS specificity and inheritance effectively",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Understand how specificity affects the application of styles."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Use inheritance to organize CSS."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Resolve conflicts between competing styles."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Use CSS preprocessors to enhance CSS capabilities",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Compile basic Sass (SCSS) or LESS code to CSS."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Use variables, nesting, and mixins to streamline SCSS or LESS code which compiles to CSS."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Understand the benefits of using preprocessors in large projects."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Ref. Page No. OBJECTIVE (LO) Create animations and transitions using CSS",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Implement basic transitions to animate changes in CSS properties."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Use keyframes to create complex animations."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Ensure animations are smooth and enhance user experience."
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Follow best practices for writing clean and maintainable CSS Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Write well-organized and readable CSS code."
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Use comments to explain complex sections of CSS."
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Avoid redundant and unused CSS rules."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/008/L3",
+      "title": "JAVASCRIPT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Write basic JavaScript code using correct syntax",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Declare variables using the right JavaScript Syntax"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Write functions using function declarations and expressions."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use control structures"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Manipulate the Document Object Model (DOM) to dynamically update content",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Manipulate HTML elements using methods"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Modify element properties and attributes."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Perform various task with elements from the DOM"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement event listeners to handle user interactions.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Attach event listeners using addEventListener."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Handle common events."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Prevent default behaviors and event propagation when necessary."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand different data types and structures",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Work with primitive data types."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use complex data types"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Perform operations on arrays and objects."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Invoke functions, scope and closures",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Call functions with parameters and return values."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Understand the difference between global and local scope."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Use closures to create private variables and functions."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Handle asynchronous operations using callbacks, promises and asyn/await Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Use callback functions."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Handle promises using then and catch."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Write asynchronous code in a synchronous style."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Implement error handling in JavaScript.",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Handle exceptions"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Throw custom errors using the throw statement."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Debug code using console.log and browser developer tools."
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Follow best practices for writing clean and maintainable JavaScript Code. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Write well-structured and readable code."
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Use comments to explain complex logic."
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Avoid common pitfalls such as global variables and deeply nested code."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/009/L3",
+      "title": "Version Control with Git",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Use basic Git commands to track changes in a project.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Initialize a new Git repository using git init."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Clone an existing repository using git clone."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Stage changes using git add."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Commit changes with meaningful messages using git commit."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "View the status of the repository using git status"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Manage branches to work on different features or fixes.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Create new branches using git branch and git checkout -b."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Switch between branches using git checkout."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Merge branches using git merge."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Resolve merge conflicts effectively."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Use GitHub for collaboration and remote repository management.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Push local changes to a remote repository using git push."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Pull changes from a remote repository using git pull."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Clone repositories from GitHub."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Manage pull requests for code reviews."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Navigate the version history of a project.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "View the commit history using git log."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Revert to previous commits using git checkout and git revert."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Understand the difference between git reset and git revert."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Resolve conflicts that arise during merging. Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify conflicts using git status and git diff."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Manually resolve conflicts in code."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Commit resolved changes to the repository."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Follow Best Practices. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Write clear and concise commit messages."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Commit changes frequently but keep commits small and focused."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Use .gitignore to exclude unnecessary files from the repository."
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Regularly update branches to avoid conflicts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/010/L3",
+      "title": "Responsive Design Principles",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Implement media queries to adjust styles for different screen sizes.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use media queries to apply different styles based on device width, height, orientation, and resolution."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Ensure that layouts adapt seamlessly across various devices, including desktops, tablets, and smartphones."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Test media queries to confirm they work as intended on multiple devices."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Create flexible layouts that adapt to different screen sizes",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use relative units instead of fixed units for widths, heights, and margins."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Implement fluid grid systems to ensure content scales proportionally."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Ensure that elements resize and reposition appropriately as the viewport changes."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Ensure images are responsive and adapt to different screen sizes.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use the srcset attribute to provide multiple image resolutions."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Implement CSS techniques like max- width: 100% to ensure images scale within their containers."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Optimize images for different devices to improve loading times and performance."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Apply a mobile- first design approach.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Design the mobile version of the website first, then enhance it for larger screens."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Prioritize essential content and functionality for mobile users."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Ensure that the mobile design is clean, simple, and user-friendly."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Implement responsive typography.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Use relative units for font sizes to ensure scalability."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Adjust font sizes, line heights, and spacing for different screen sizes."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Ensure text remains readable and accessible on all devices."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Design responsive Ref. Page No. OBJECTIVE (LO) navigation menus.",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Implement navigation patterns that work well on both mobile and desktop devices"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Ensure navigation is easily accessible and usable on touchscreens."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Test navigation functionality across various devices and screen sizes."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Optimise performance for responsive websites.",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Minimize the use of large files and unnecessary scripts."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Implement lazy loading for images and other media."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Ensure fast loading times and smooth interactions on all devices."
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Ensure responsive designs are accessible to all users. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Use ARIA (Accessible Rich Internet Applications) roles and attributes to enhance accessibility."
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Ensure that responsive elements are navigable via keyboard and screen readers."
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Test responsive designs for accessibility compliance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/011/L3",
+      "title": "BOOTSTRAP BASICS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the fundamentals of Bootstrap",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the purpose of Bootstrap in web development."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain how it benefits web development projects."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the core components and structure of a Bootstrap project."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the mobile-first approach and responsive design principles in Bootstrap."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Develop responsive web layouts using Bootstrap",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Utilize the Bootstrap grid system to create responsive layouts."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Implement Bootstrap classes to style HTML elements effectively."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Create navigation bars, forms, and other UI components using Bootstrap."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Customize Bootstrap components Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Modify Bootstrap variables to customize the appearance of components."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use custom CSS to override Bootstrap styles."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Integrate third-party plugins with Bootstrap for enhanced functionality."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/012/L3",
+      "title": "CONTENT MANAGEMENT SYSTEM (CMS)",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the basics of Content Management System",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the purpose of a Content Management System."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the features of a Content Management System."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Configure a Content Management System site."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Navigate the Content Management System dashboard and manage site settings."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Create content in Content Management System",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Publish posts and pages."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Organize content using categories and tags."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Manage media files and galleries within Content Management System."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Customize Content Management System themes and plugins Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Activate themes to change the site\u2019s appearance."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Customize theme settings and templates."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Configure plugins to extend site functionality."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/013/L3",
+      "title": "Introduction to UI/UX Design",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Differentiate between user interface (UI) and User Experience (UX) design.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Give a detailed UI and UX design"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe how UI and UX work together to create a cohesive product."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Provide examples of good UI and UX design."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Apply user- centered design principles.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Conduct user research to understand the target audience."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Create user personas based on research findings."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use empathy maps to capture user needs and pain points."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply fundamental design principles in UI/UX projects.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use principles such as balance, contrast, hierarchy, and alignment in designs."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Ensure designs are visually appealing and functional."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Apply color theory and typography effectively."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Create wireframes and prototypes to visualize design concepts.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Develop low-fidelity wireframes to outline basic layout and structure."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Create high-fidelity prototypes to demonstrate detailed design and interactions."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use tools like Sketch, Figma, or Adobe XD for wireframing and prototyping."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Conduct usability testing to gather feedback on designs.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Execute usability tests with real users."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Analyze test results to identify usability issues."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Iterate on designs based on user feedback."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Organise and structure content effectively. Ref. Page No. Develop low-fidelity wireframes to outline basic layout and structure. Create high-fidelity prototypes to demonstrate detailed design and interactions. Use tools like Sketch, Figma, or Adobe XD for wireframing and prototyping. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Create sitemaps to outline the structure of a website or app."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Develop user flows to map out the user journey."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Ensure content is logically organized and easy to navigate."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Design interactive elements that enhance user experience.",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Create interactive components like buttons, forms, and menus."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Ensure interactions are intuitive and provide clear feedback."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Use animations and transitions to improve user engagement."
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Ensure designs are accessible to all users, including those with disabilities. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Follow accessibility guidelines in designs."
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Use ARIA roles and attributes to enhance accessibility."
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Test designs with assistive technologies like screen readers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/014/L3",
+      "title": "Modern Frameworks",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Explain basics of modern frontend framework (e.g., React, Vue.js, Angular).",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe the purpose of using a frontend framework."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the benefits of using a frontend framework."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the core concepts such as components, state management, and lifecycle methods."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Compare different frameworks and their use cases."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Build simple components using the chosen framework.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Create reusable components with props and state."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Implement component composition to build complex UIs."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use JSX (for React) or template syntax (for Vue.js/Angular) effectively."
+            },
+            {
+              "pc_code": "2.1",
+              "description": "Use state hooks or equivalent methods in other frameworks."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Manage state within a component or application.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.2",
+              "description": "Implement state lifting to manage shared state between components."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use context or state management libraries for global state management."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Implement client- side routing in a single-page application (SPA).",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Set up routing using libraries"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Create nested routes and dynamic routing."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Handle route parameters and query strings."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Integrate external APIs to fetch and display data. Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Use fetch or axios to make HTTP requests."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Update the UI based on API responses."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Implement error handling for API calls."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Create and manage forms within the framework.",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Build controlled and uncontrolled forms."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Validate form inputs and handle form submission."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Use form libraries to simplify form management."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Optimize the performance of the application.",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Implement code splitting and lazy loading."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Use memorization techniques to prevent unnecessary re-renders."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Optimize rendering performance using tools like React Profiler or Vue Devtools."
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Write and run tests for components and application logic.",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Use testing libraries like Jest, React Testing Library, or Vue Test Utils."
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Write unit tests for individual components."
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Implement integration tests to ensure components work together correctly."
+            }
+          ]
+        },
+        {
+          "lo_num": "9",
+          "description": "Follow Best Practices. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "9.1",
+              "description": "Write clean, maintainable, and scalable code."
+            },
+            {
+              "pc_code": "9.2",
+              "description": "Use version control effectively to manage code changes."
+            },
+            {
+              "pc_code": "9.3",
+              "description": "Document components and application logic clearly."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/FED/015/L3",
+      "title": "Product Management",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Define Product goals and objectives",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Clearly articulate the product vision and mission."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Set measurable and achievable product goals."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Align product objectives with user needs and business goals."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Create a Product Roadmap.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Develop a timeline with key milestones and deliverables."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify dependencies and potential risks."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Communicate the roadmap effectively to stakeholders."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Prioritize Features and Tasks.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use frameworks like MoSCoW or RICE to prioritize features."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Balance user needs with technical feasibility and business impact."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Regularly adjust priorities based on feedback and changes."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Collect and Analyse User Feedback",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Conduct user surveys and interviews."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Analyse feedback to identify trends and insights."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Implement changes based on user feedback to improve the product."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Manage Product Lifecycle.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Oversee the product from ideation to launch and beyond."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Ensure timely delivery of product milestones."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Maintain high-quality standards throughout the product lifecycle."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Ensure User- Centric Design.",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Advocate for user needs in all design decisions."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Conduct usability testing to validate design choices."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Iterate on designs based on user feedback and testing results. "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

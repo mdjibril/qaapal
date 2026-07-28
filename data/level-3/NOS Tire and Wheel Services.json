@@ -1,0 +1,744 @@
+{
+  "trade_name": "NOS Tire and Wheel Services",
+  "level": 3,
+  "units": [
+    {
+      "code": "AUT/TWS/001/L3",
+      "title": "HEALTH, SAFETY AND THE ENVIRONMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Personal health and hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Wear clean, smart and appropriate personal Protective Equipment."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Work safely at all times, complying with health and safety and other relevant regulations and guidelines."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Treat cuts, grazes and wounds"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report illness and infection promptly to the appropriate persons."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Summarize own responsibility under the health and safety Act as it relates to own occupation."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Guide others on general rules of hygiene that must be followed."
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Supervise the use of Personal protection Equipment such as head Protection, Foot Protection, face and eye Protection, Hand and Body protection and Regulatory Protection."
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Describe the importance of maintaining good personal Hygiene."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Appreciate Hygiene, safe and hazard free Workplace.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe the importance of working in a healthy, safe and hygienic workplace"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Report any accidents or near accidents quickly and accurately to the proper person."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Promote health, hygiene and safety procedures during work"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Practice emergency procedures during work"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Analyse organizational security procedures"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Ensure the disposal of waste and pollution control with organic and Inorganic waste disposal methods."
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Apply sound and noise control protection devices"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Supervise identification of any hazards or potential hazards and deal with these correctly."
+            },
+            {
+              "pc_code": "2.9",
+              "description": "State where information about health and safety in your workplace can be obtained"
+            },
+            {
+              "pc_code": "2.10",
+              "description": "Dispose hazardous items in the workplace"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand hazards and accidents in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Carry out organizational procedures on how to warn other people about hazards and why this is important"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State why accidents and near accidents should be reported and who they should be reported to"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the types of emergencies that may happen in the workplace and how to deal with them"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Indicate where to find the first-aid equipment and locate the authorized personnel"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Lift and handle materials in line with work environment procedures"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "State other ways of working safely that are relevant to own position responsibility and its importance"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Describe organizational emergencies procedures, in particular fire, and how these should be followed"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "State the possible causes of fire in the workplace"
+            },
+            {
+              "pc_code": "3.9",
+              "description": "Describe how to minimize the possibility of fire in the workplace"
+            },
+            {
+              "pc_code": "3.10",
+              "description": "State where to find the alarms and how to set them on"
+            },
+            {
+              "pc_code": "3.11",
+              "description": "State why a fire should never be approached unless it is safe to"
+            },
+            {
+              "pc_code": "3.12",
+              "description": "State the importance of adhering to fire safety laws"
+            },
+            {
+              "pc_code": "3.13",
+              "description": "Describe organizational security procedures and why these are important"
+            },
+            {
+              "pc_code": "3.14",
+              "description": "State the importance of reporting all usual or non-routine incidents to the appropriate personnel"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/TWS/002/L3",
+      "title": "COMMUNICATION AND INTERPERSONAL SKILLS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand communication system in a Work Environment LO 1: Understand",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe how to use audio, electronic, and electro-magnetic means to deliver necessary information"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe simple non-verbal means of communication"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Read symbols and signs appropriately"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Interpret symbols and signs appropriately"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know sources of Information in a Work Environment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Participate in creating and making functional sources of information in an organization and work environment."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Access sources of information in an organization or work environment"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Relate appropriately with the sources of information"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use the various information flow system in an organization or work environment to overcome challenges"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Ensure proper documentation and retrieval of information in accordance to procedures in a work environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "understand Communication processes Lo 3: understand",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Ensure the accessibility of the communication equipment in the work environment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the effective use of the various communication channels in a work environment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Demonstrate the use of various communication means in a work environment"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Ensure effective information flow to the right personnel"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Ensure the effective deployment of the use of symbols, signs and codes in the workplace"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Ensure that instructions are obeyed and disseminated in line with ethics of the work environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know the maintenance of Communication equipment in work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Ensure that communication equipment are in good working condition"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Liaise with the maintenance unit to ensure that communication equipment are maintained regularly"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Liaise with appropriate authority to replace communication equipment in the event of loss or damage"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Ensure that communication equipment are stored appropriately in a work environment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/TWS/003/L3",
+      "title": "TEAM WORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "know how to appreciate team work in a work environment LO 1: know how to",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the various teams in a work environment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the function of each team"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Discuss the function of each team"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Differentiate between the function of each team"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the requirements of the various teams Lo 2: Know the",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Select materials and tools required for each team."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Differentiate types of materials, tools and equipment requirements for each team"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss the method of carrying out activities for each team."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the Benefits of the various teams. Lo 3: Understand the",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Recognize the sequence of various team activities"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Differentiate between various time frame of each team activity"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Produce quality output as a team"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know how to Communicate with co-workers, subordinates and superiors",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Communicate work related information/requirements clearly to team members"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Inform co-workers and superiors about any kind of deviation from work Planned"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Solve problems effectively if need be and report to appropriate person"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Collate instructions from superiors and respond effectively"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Communicate to team members/subordinates of the right Work techniques and methods."
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Obtain clarification and advice from superiors as per work information where necessary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/TWS/004/L3",
+      "title": "WORKSHOP ORGANISATION AND MANAGEMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Manage Workshop Financial Records",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe the following various financial records used in a workshop: \u2022 receipts \u2022 invoices \u2022 work bills."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Differentiate between the following various financial records used in a workshop: \u2022 receipts \u2022 invoices \u2022 work bills"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Manage procedures for preparing various financial records used in a workshop."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Discuss procedures for safe and"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Manage Workshop job Related Records",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe the following various job related records used in the workshop: \u2022 job cards \u2022 workshop reception forms \u2022 requisition forms \u2022 purchase order forms \u2022 stock cards, \u2022 workshop delivery forms, etc."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Manage procedures for preparing various job related records used i the workshop"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss procedures for safe and proper job related records keeping."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Manage Procurement Activities",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Certify out-of-stock tools, materials and equipment."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Evaluate various storage techniques used in the workshop."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Outline procedures for procuring materials, tools and equipment for the following: \u2022 manuals and reference materials \u2022 requests and approvals \u2022 order placements \u2022 reception of goods and items \u2022 payments \u2022 storage \u2022 use"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/TWS/005/L3",
+      "title": "STEERING AND SUSPENSION SYSTEMS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Observe safety in removal and replacement activities",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use the required personal protective equipment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify potential health and safety hazards and risks"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Dispose used fluids and wastes appropriately"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Remove and replace vehicle suspension and steering systems Lo 2: Remove and",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Select the correct tools and equipment and check they are fit for purpose"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use the selected tools and equipment correctly"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the major components of the suspension and steering systems"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "state the basic operation and purpose of the following: \u2022 Damper \u2022 Spring \u2022 steering components"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Examine steering and suspension systems ",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Inspect steering and suspension systems"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate basic removal and fitting techniques"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out steering and suspension checks"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "State how to recognise and report damaged components in a vehicle"
+            },
+            {
+              "pc_code": "3.2",
+              "description": ""
+            },
+            {
+              "pc_code": "3.3",
+              "description": ""
+            },
+            {
+              "pc_code": "3.4",
+              "description": "OUTCOME (LO) able to:"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify specifications and grades of steering and suspension lubricants."
+            },
+            {
+              "pc_code": "3.5",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/TWS/006/L3",
+      "title": "TYRE AND WHEEL MAINTENANCE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Observe Health and safety in workplace during tyres and wheels maintenance Carry out wear and damage detection on the following: Tyres ball joints bearings track arm track rod coil spring, etc",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use the correct personal protective equipment (PPE) in carrying out tyre repairs."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Develop safety routine activities in the tyre shop."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Design accident free workshop plan/layout."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Work in accordance with approved safety acts in tyre and wheel services and repairs."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Use Wheel Balancing Tools and equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use wheel balancing tools and equipment, e.g. \u2022 caliper \u2022 key valve \u2022 weight hammer \u2022 lever \u2022 weight (adhesive and lead), etc"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Monitor the pre-inspection process in wheel balancing"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Certify post balancing checks on wheels."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carryout routine maintenance on wheel balancing tools and equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Use Wheel Alignment Tools and Equipment LEARNING OUTCOME (LO) to: Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Monitor the pre-inspection procedures in alignment operations"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Carry out wear and damage detection on the following: \u2022 Tyres \u2022 ball joints \u2022 bearings \u2022 track arm \u2022 track rod \u2022 coil spring, etc"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out pre alignment checks on heavy duty vehicles"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carryout wheel alignment operations on heavy duty vehicles"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Carryout post alignment checks on heavy duty vehicles"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Maintain Tyres and Wheels LEARNING OUTCOME (LO) to: Ref. Page No. Carry out pre alignment checks on heavy duty vehicles Carryout wheel alignment operations on heavy duty vehicles Carryout post alignment checks",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Inspect wheels and tyres using suitable tools, sources of information and equipment. to include the following: \u2022 visual inspection \u2022 measurement of tread depth \u2022 tyre pressures \u2022 balance."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Carry out tyre repair within appropriate timescales using the following: \u2022 suitable tools and equipment \u2022 correct repair and replacement techniques \u2022 correct type and size of replacement components \u2022 correct materials"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Carry out wheel balancing within the acceptable limits"
+            },
+            {
+              "pc_code": "4.2",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/TWS/007/L3",
+      "title": "VULCANIZING OPERATIONS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Observe safety measures in Vulcanizing Operations",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Observe safety procedures while carrying out removal of heavy duty tyre"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use suitable PPE when carrying ou removal and replacement of tyre and other components"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use powered tools and equipment as specified by the manufacturer"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Remove Heavy Duty Tyre",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Prepare heavy duty vehicle for tyre removal"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Select appropriate tools and equipment for tyre removal"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Follow the sequence of tyre removal preparation"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use powered equipment to remove heavy duty tyre"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carry Out Patch Process Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use the necessary tools to remove tyre from the rim eithe mechanically or electrically"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Separate the tyre, tube and rim"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Locate patch area on tube"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carryout out patch on the punctured tube"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Replace tyre correctly"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/TWS/008/L3",
+      "title": "MOTOR VEHICLE WHEEL ALIGNMENT II",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Carry out pre alignment checks on four wheel",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Calibrate the following wheel alignment tools: \u2022 Dial Indicator \u2022 Level Precision \u2022 Laser"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Carryout pre-checks on four wheel vehicle prior to alignment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use vehicle data relating to working tolerances on four wheel alignment"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Perform four wheel alignment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Assemble tools for alignment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Carry out four wheel alignment using suitable tools and equipment"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Carry out calibration as appropriate"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use vehicle data relating to working tolerances to consider the following: \u2022 Technical information \u2022 Manufacturer\u2019s instructions where relevant."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Adjust motor vehicle Wheel Alignment.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Carry out Toe Adjustment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Carry out Camber Adjustment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out Caster Adjustmen"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

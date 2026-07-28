@@ -1,0 +1,968 @@
+{
+  "trade_name": "NOS Cosmetology and Beauty Therapy",
+  "level": 1,
+  "units": [
+    {
+      "code": "CBT/COS/001/L1",
+      "title": "CUSTOMER RELATIONS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand basic customer relations.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain customer relations."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the activities of customer relations."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Perform customer relations: - \u2022 Meet and welcome customers with proper body language e.g. brilliant smile, eye contact etc.). \u2022 Offer the customers comfort within the treatment area. \u2022 Request for the customers\u2019 needs in the beauty area. \u2022 Identify and confirm the customer needs. \u2022 Carry customers along in carrying out their request. \u2022 Check with customers that they are comfortable with the actions being carried out."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify customer service problems and options for solving them",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain customer service."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify customer service problems."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the options for solving customer service problems."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "OBJECTIVE (LO) Identify actions to avoid the repetition of customer service problems",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Gather customers complain and pacify the customer"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Report customer\u2019s complain to appropriate authority."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carryout action on superior\u2019s directive and monitor the changes made."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CBT/COS/002/L1",
+      "title": "COMMUNICATION SKILLS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "understand communication.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define communication."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the different forms of communication e.g. verbal communication, non-verbal communication, written communication."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify communication tools and their uses e.g. tablets, phones, magazines etc."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "List the different channels of communication e.g. notice board, flyers, stickers, flyers, etc."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand communication style",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define communication style."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain communication styles"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Select the right style for your job role."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Communicate appropriately."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the art of effective communication",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Apply verbal communication appropriately."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply non-verbal communication appropriately."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Apply written communication appropriately."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CBT/COS/003/L1",
+      "title": "HEALTH AND SAFETY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "understand personal health and hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain personal health and hygiene."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List the requirement of personal health and hygiene in line with professional standard."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Demonstrate the requirement of personal health and hygiene in line with professional standard."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand and awareness of health and safety",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe your responsibilities under the health and Safety rules of your organisation"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify safety procedures to follow when attending to clients"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the procedure in handling tools and equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "know control and report of hazards in the Workplace.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the importance of working in a healthy, safe and hygienic way."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify some hazards or potential hazards in your work environment and act appropriately."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe likely causes of hazards that may occur in your work place."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate ways of preventing these hazards in your workplace."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "know emergency procedures.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain emergency procedures."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe organisational security procedures and their importance"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe the type of emergencies that may happen in the Workplace and how to handle them."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Carryout emergency procedures."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "know compliance with Health and Safety Regulations OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify first aid equipment and the registered first-aider in the workplace"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain ways of lifting and handling items safely"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Describe infection control in the work place. E.g., sterilisation, disinfection etc."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Sterilise all equipment for multiple use after each usage. Ref Page number"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "State the importance of reporting all unusual/non-routine incidents to the appropriate persons."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CBT/COS/004/L1",
+      "title": "TEAM WORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "understand positive working relationship",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define team work"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of team work"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when requires"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Communicate to the appropriate personnel when request for assistance fallen outside area of responsibility"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know responsibilities within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe ones role and responsibilities within the team"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual task in line with the team rules and regulations"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in team work."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand compliance with organisational policies",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain professional code of practice."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain professional code of practice."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe industry standard and structure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CBT/COS/005/L1",
+      "title": "HAIR DRESSING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand hairdressing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define hairdressing."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the techniques of hairdressing."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the different hair types."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify the types of hair texture."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Identify health and safety measures in the workspace."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "understanding and skill of tools care",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the tools needed for hairdressing."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use tool appropriately in hairdressing."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate after care service of tools used in hair dressing"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Store hair dressing tools appropriately"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand hair shampooing, conditioning & scalp massage.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe the client parathion for the service."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Carryout shampooing and conditioning of client\u2019s hair."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Perform scalp massage\u2019"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Perform scalp drying"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Style and finish hair of client."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "know hair drying. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the different methods of hair drying."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe hair drying using a blow dryer or diffuser. Ref. Page No."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe hair drying using a hooded dryer."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Carryout hair drying procedure using any."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand two stranding",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Select appropriate tools to use for two strand twist."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Prepare client before service."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Carry out hair service to the required style and agreed technique."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Clean tools, equipment and work area."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Carry out weaving & matting.",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Prepare the client\u2019s hair for weaving or matting"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Identify the various scalp and hair disorders on client\u2019s head."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Carryout scalp massage."
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Perform Weaving or matting for client\u2019s hair to an agreed style and store appropriately."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CBT/COS/006/L1",
+      "title": "BARBING SERVICES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know concept of barbing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define barbing."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the requirements for setting up a barbing salon."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the tools used for barbing."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the barbing procedure."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Prepare clients hair prior to barbing."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carry out hair cutting.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Carryout preparation of clients hair prior to cutting: \u2022 Drape your client. \u2022 Select appropriate tools"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform the head cutting on client: \u2022 Massage the client\u2019s scalp with warm towel. \u2022 Apply appropriate hairspray."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Clean up client"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Clean up tools and work area."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "know sterilizing barbing tools",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define sterilization."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify types of sterilization methods e.g. dry-heat and antiseptic."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify items for sterilization e.g. clipper."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carryout sterilization of tools and store appropriately"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CBT/COS/007/L1",
+      "title": "MAKEUP ARTISTRY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "understand basic principles of makeup",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define makeup."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe types of makeup."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Sketch and label facial structure as it relates to makeup."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain make up application (for different skin types)."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Identify the tools and products for makeup application."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know preparation for makeup service",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the process of preparing client for makeup service."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Determine the client\u2019s needs: Ensure the makeup objectives are clear, realistic and agreed with the client."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Prepare for makeup service: \u2022 Drape the client. \u2022 Ensure lighting conditions are appropriate. \u2022 Ensure reachable display of products and items."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Use foundation and concealer products to suit client\u2019s skin needs. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe types of foundation."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Prepare clients for foundation application."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use foundation shade that is suitable for the client skin tone."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use concealer to disguise any skin blemishes."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Apply powder to get a finished smooth look. Ref. Page No."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "know brow grooming and shaping",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the different method of brow grooming"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the different shapes in brow grooming."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe the tools for brow grooming and shaping (tweezer, wax, blade, scissors)"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Prepare the client for brow grooming and shaping: \u2022 Brush brow through. \u2022 Shape brow to desired look."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Use brows pencil or colour to fill the brows"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Use the highlighter to define the brow bone."
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Applying powder to smoothen the brow bone."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know eyeliner to enhance client\u2019s eye features.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain different eyeliners (gel eyeliner, pencil eyeliner, liquid eyeliner)."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Apply eyeliners to enhance the eyes."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Use mascara to coat eyelashes."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Know lip products in makeup",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Explain the different types of lip products e.g. (lip gloss, lip liners, lip sticks, lip stain, lip pencil)."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Apply the lip liners after moisturizing to define and frame the shape of the lips."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Use lip colours to warm, brighten or pop the lips as desired by the client."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CBT/COS/008/L1",
+      "title": "SPA TREATMENT AND SKINCARE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "understand spa treatment.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain spa treatment."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List different spa treatment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify equipment and products used in spa treatment."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "understanding massaging.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define massage."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain types of massage."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Prepare for massage service (massage room and self)"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain client preparation and positioning to the client."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Apply massage oil using effleurage."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Perform massage manipulation. e.g. petrissage, tapotement etc and clean excess oil from client body."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand body treatment.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define body treatment."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain types of body treatment."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify tools and products for body treatments."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Prepare for body treatment (work area, self, and client)"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Preform desired body treatment: \u2022 Apply rose water to open pores. \u2022 Use steam or Sauna for the client. \u2022 Scrub the body in circular motions both hands. 3: 6 Apply appropriate mask where required."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Use Moisturiser to suit clients need and Rehydrate the client."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "know facials treatment and skin analysis. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Define facial treatment."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify the tools and products for facial treatment."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Prepare for facial treatment (self, client, room). Ref. Page No."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Carry out skin analysis on client."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Perform the act of removing hair from the body.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Prepare for hair removing service (client, self and room)"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Perform hair removing service: \u2022 Clean skin surface. \u2022 Apply pre-wax treatment to surface. \u2022 Apply wax gel in in the direction of the hair growth. \u2022 Apply wax strips to identified area. \u2022 Hold strip down on skin and pull against the direction of hair growth."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Apply post wax treatment e.g. (oil, wax gel)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CBT/COS/009/L1",
+      "title": "NAIL CARE SERVICES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "know nail care",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define nail care."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of nail care."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List tools for nail care."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "understand pedicure services",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Prepare (self, client, and room)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Prepare the client\u2019s for pedicure services. \u2022 Remove any existing nail polish. \u2022 Apply cuticle removing liquid. \u2022 Add disinfectant in warm water and soak feet. \u2022 Take foot out of warm water and dab with towel. \u2022 Remove cuticle using cuticle trimmer. \u2022 Remove excessive hard skin using a foot rasp, without discomfort to the client. \u2022 Cut and file the client\u2019s nails. \u2022 Rinse and dry client\u2019s feet."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use foot and nail treatment where applicable."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate the skills of manicure services",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Prepare for self, client, and room"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Prepare client\u2019s for manicure services (Prep and file nails)"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Perform manicure service on client and use treatment where applicable."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Apply hand cream and massage on clients hand"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "understand Nail Art design OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Prepare work area, self, and client."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Discuss and agree on client\u2019s needs."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Select working tools."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Perform nail art designed to client satisfaction. \u2022 Create nail patterns. \u2022 Apply base coat. \u2022 Perform agreed design to client\u2019s satisfaction Page No."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CBT/COS/010/L1",
+      "title": "BODY ART AND DESIGN",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "know body art and design",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain body art and design."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the types of body art and design e.g. henna, tattoo"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the tools and equipment used for body art and design."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain care and maintenance of body art, design tools and equipment."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand henna",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define henna."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify types of henna e.g. Indian, Arabian, housa etc."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the tools used for henna."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify client\u2019s skin type for henna services."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Select the design that suits client\u2019s needs."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Use henna to make selected patterns on clients desired body part."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand tattoo design. 1 2 3 4 TOTAL 5. 6. 7. 8. 9. 10.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define tattoo."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify different types of tools and equipment used for tattooing."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify client\u2019s skin for design."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carryout design to client satisfaction."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

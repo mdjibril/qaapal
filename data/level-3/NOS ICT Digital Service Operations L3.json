@@ -1,0 +1,974 @@
+{
+  "trade_name": "NOS ICT Digital Service Operations L3",
+  "level": 2,
+  "units": [
+    {
+      "code": "ICT/DSO/L3/001",
+      "title": "Occupational Health and Safety",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Observe Health and Safety Precaution in Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe waste disposal in line with organizational procedures."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Maintain personal hygiene in the workplace."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify safety signs and symbols relevant to operation."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Select safety equipment to be used in the workplace."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Hazard in workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Locate potential hazard points at in the workplace"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Discuss causes of hazard in workplace: \u2022 Negligence \u2022 Human Error \u2022 Machine malfunction, etc."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Report identified hazard points to the supervisor"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify possible hazard to the supervisor: \u2022 Severe weather conditions \u2022 Severe vibration \u2022 Pollution, etc."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Accident in workplace Ref. Page No. LEARNING OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State types of accident in in workplace: \u2022 Fire accident \u2022 Electric shock"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State causes of accidents in workplace PERFORMANCE Evidence Ref. Page No. CRITERIA"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "State measures to prevent accident at in the workplace: \u2022 Maintain alertness on the job \u2022 Promote safety awareness \u2022 Observe rest cycle \u2022 Use PPE, etc."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate First Aid at workplace."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L3/002",
+      "title": "Communication Skills in workplace",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Communication in workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Discuss communication in workplace \u2022 peer to peer \u2022 Operator Helper to Operator \u2022 Operator to supervisor."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Discuss the importance of communication in a work environment."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe how to get information from schedule of work"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand methods of Communication in workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Discuss the forms of communication: \u2022 Verbal (spoken) \u2022 Non-verbal (written)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Communicate work information to supervisor"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Communicate information in written form"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand elements of Communication in workplace LEARNING OBJECTIVE (LO) Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Receive written/verbal information on the job"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Follow verbal instruction on the job"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Pass verbal information/instruction on the job CRITERIA"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Communicate to immediate supervisor/team members LEARNING OBJECTIVE (LO) Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify potential obstacles that can hinder work progress in an ICT environment, such a \u2022 Software issues: Bugs, glitches, compatibility problems, or security breaches. \u2022 Hardware problems: Equipment malfunctions, hardware failures, or insufficient system resources. \u2022 Network connectivity issues: Lack of internet access, slow internet speeds, or network outages"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Report concerns which may affect work progress."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Record work instructions."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Record routine daily checks on software and hardware"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L3/003",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the benefits of Working in a Team at Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "List the advantages of working as a team."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the attributes of a team player: \u2022 Mutual respect \u2022 Common goal \u2022 Discipline \u2022 Mutual understanding \u2022 Trust \u2022 Honesty and sincerity, etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List members that constitute a team in the ICT work environment: \u2022 Systems Analysts \u2022 Software Developers \u2022 Database Administrators (DBAs) \u2022 Network Engineers \u2022 Security Analysts \u2022 Help Desk Technicians, etc."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Recognize team members in a environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand how to relate with team members Ref. Page No. LEARNING OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the need for good working relationship with team members at the workplace. PERFORMANCE Evidence Ref. Page No. CRITERIA"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Recognize the roles of other team members."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss your own role in achieving the objectives of the team."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the role of a Network Administrator in an ICT work environment."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Discuss the relationship between the Network Administrator and positions within the ICT team."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Observe Positive Work Relationships with colleagues Ref. Page No. LEARNING OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State the qualities of a good Network Administrator: \u2022 Strong technical skills \u2022 Problem-solving abilities \u2022 Communication skills \u2022 Customer service orientation \u2022 Attention to detail \u2022 Adaptability \u2022 Teamwork"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Relate with other members at workplace PERFORMANCE Evidence Ref. Page No. CRITERIA"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the importance of effective communication and collaboration with other team members to ensure smooth operations"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Communicate information that may affect other workers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L3/004",
+      "title": "TRANSACTIONS MANAGEMENT II",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Transaction Authorization",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the term transaction authorization"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the transaction authorization process"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the permission levels involved in transaction authorization"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Transaction Processing",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain transaction clearing and settlement procedures"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Discuss the concept split payment transactions"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe billing in transactions"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe electronic data interactions during transaction processing"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Post- Transaction Activities",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe the system of querying or ascertaining transaction status"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe dispute resolutions in e- commerce"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe process of logging transaction records"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate the knowledge of recording successful transactions in a web grid interface."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L3/005",
+      "title": "WEB SERVER-SIDE TECHNOLOGIES (PHP, SQL)",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Server- side scripting technologies",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define server-side scripting and its applications in a website infrastructure."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain various server-side scripting technologies"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the components that make up a complete server side scripting platform"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the process of setting up a server-side scripting infrastructure"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe the relationship between web servers, databases and http requests"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe the process of creating and using server-side scripting in HTML documents"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate how server-side scripting file is included in HTML files"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate how variables and functions are declared and defined in server-side scripting"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use server-side scripting for processing data on a html form"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the development of interactive web Pages",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Introduction to an Object Oriented programming (OOP) language"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Define variables, logical operators and control structures in an OOP language"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain how to use any OOP language with HTML"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate how to post and publish a website"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify the relationship between Client side and Server side scripts"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand database management system",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Define Database management systems (e.g. Oracle, MySQL, etc)"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Develop Database connectivity"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Demonstrate ability to connect to a DBMS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L3/006",
+      "title": "INTRODUCTION TO ETHICAL HACKING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the concept of Ethical Hacking",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Ethical Hacking"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe Ethical Hacking methodology"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain Ethical Hacking terminologies such as threat, exploit, vulnerability, target of evaluation (ToE), denial of service etc."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the processes of ethical hacking",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe the different phases of ethical hacking (i.e. Reconnaissance, foot printing, scanning, gaining access, maintaining access and covering tracks)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe the techniques of Ethical Hacking"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain Port, Service and Data Enumeration as it relates to hacking"
+            },
+            {
+              "pc_code": "2.1",
+              "description": "Detect Ransomware Attack"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Detect Phishing"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Recover hacked facebook account"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Recover Hacked Whatsapp account"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L3/007",
+      "title": "INTRODUCTION TO COMPUTER NETWORKING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Networks and its Essentials",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define a network"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List network hardware component"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify types of network and network topologies"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain types of network configuration (e.g. peer-to-peer networks, client/server networks)"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe the different types of cable categories and connectors"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Network Layers, Model and Architecture",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define IP address terminologies (e.g. Host, Broadcast etc)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List the TCP/IP Reference Model"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State the OSI reference model"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand IP Address Classes and Subnetting",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "List classes of IP address"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the types of IP Address (Public and Private)"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Define subnet mask"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the process subnet mask calculation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L3/008",
+      "title": "Introduction to Relational Database",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": ". Understand Database Models & Structure",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define a Database"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Define Database Management System (DBMS)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the need for a database system"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify the functional components of a DBMS"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe the effects of poor database planning and design"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Database Design and logic",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain any database design model (e.g. entity-relationship model, UML, etc)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List types of relationships between entities"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe logical database design"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain Relational Database Management System (RDBMS)"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Create a database design using any model"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define SQL Management Systems"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify popular SQL Management Systems (e.g., MySQL, PostgreSQL, Microsoft SQL Server, Oracle, etc)."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Create a simple SQL query"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Describe user access and permission management in SQL Management Systems."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L3/009",
+      "title": "CONTENT MANAGEMENT SYSTEMS II",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand how to improve User Experience in Content Management System (CMS)",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe how User Interfaces can be integrated into Content Management systems"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe a User Interface framework that can be integrated into content management systems"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Develop quality User Interface with a content management system"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Content Management System Functionality",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe plugins and their importance in Content Management Systems"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe the effect of plugins integration in Content Management Systems"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify types and categories of plugins"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe methodologies for plugin integration into content management systems"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Demonstrate the installation of different plugins to design a robust website"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know advanced features of popular CMS platforms (e.g., WordPress, Drupal, Joomla) for content management",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Understand taxonomies (categories, tags, custom post types) for organizing content effectively."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify taxonomies (categories, tags, custom post types) for organizing content effectively"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Design content scheduling, version control, and approval workflows for publishing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L3/010",
+      "title": "Digital Marketing II",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Search Engines",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define a search Engine"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify different search engines"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the importance of search engines to websites, users and businesses"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know digital marketing techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define digital marketing techniques"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List digital marketing techniques (e.g. Search Engine Optimization, Affiliate Marketing, Social Media Marketing etc.)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe digital marketing techniques and their importance"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Implement digital marketing with one or more digital marketing techniques"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define digital marketing metrics"
+            },
+            {
+              "pc_code": "3.2",
+              "description": ""
+            },
+            {
+              "pc_code": "3.3",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L3/011",
+      "title": "INTRODUCTION TO IT PROJECT MANAGEMENT IN DIGITAL",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand fundamentals of IT Project Management",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define an IT Project"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the phases of an IT Project"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the constraints of IT Project Management (Time, Scope and Budget)"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the role of a Project Manager"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain the key knowledge areas (Cost Management, Quality Management, Risk Management, Communications Management) IT Project Managers should posses"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define Project Management Tools"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify tools and techniques for IT Project Management (Project Charter, Gantt charts, change requests)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Define IT Project Stakeholders"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify different IT Project Stakeholders"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the Antecedents of Project Success",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the factors which determine the success of a project (e.g. On budget, Meets Customer's requests, On time)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe factors that can lead to the failure of a project (e.g. Poor planning, lack of resources, late delivery)"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe how to close a project"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L3/012",
+      "title": "INTRODUCTION TO KNOWLEDGE MANAGEMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand fundamental concepts of Knowledge",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Knowledge"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify different types of knowledge"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the difference between data, information and knowledge"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the importance of knowledge in managing business"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the concept of knowledge management",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define Knowledge management"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify knowledge management techniques"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Differentiate knowledge management and data management"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify different processes in knowledge management"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Describe the importance of knowledge management in business"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define the key components of knowledge management infrastructure"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain knowledge base system infrastructure"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain ways in which knowledge management infrastructure impacts business Define the key components of"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L3/013",
+      "title": "IT STRATEGY IN DIGITAL SERVICE OPERATIONS I",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the concept of IT Strategy",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain IT Strategy"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Outline the different approaches to IT strategy"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Discuss the benefits of IT strategies to businesses"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the internal and external business environments",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe a business environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Differentiate between the internal (Micro) and External (Macro) Business environments"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Outline the components of internal and external business environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Outline tools for internal (micros) environmental analysis"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Outline tools for external (macro) environmental analysis"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Conduct internal (micro) environmental analysis of a Digital Service business"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Conduct external (macro) environmental analysis of a Digital Service Business"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Define business mission, vision, objectives"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Discuss the importance of strategy for Digital Service Businesses"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Discuss the relationship between strategy, objective and business environment"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Develop a strategy for a Digital Service business "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

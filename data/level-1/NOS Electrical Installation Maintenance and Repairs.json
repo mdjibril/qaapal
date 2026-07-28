@@ -1,0 +1,598 @@
+{
+  "trade_name": "NOS Electrical Installation Maintenance and Repairs",
+  "level": 1,
+  "units": [
+    {
+      "code": "CON/EI/001/L1",
+      "title": "Communication in a Work Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Use simple communication skills in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use simple verbal means to pass on necessary information."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Be able to receive simple verbal instructions accurately."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use non-verbal means to convey necessary information e.g. body language"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Be able to receive simple non- verbal instruction"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Interpret symbols and signs appropriately."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Sources of information in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the sources of workplace information"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Communicate appropriately with sources of information."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use the various information flow systems in a work environment."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Solve workplace challenges using information"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Report findings in accordance with procedures"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Use various communication means in a work environment.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify, the various Communication equipment in the work environment."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Effectively use, various workplace communication equipment."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Communicate effectively using symbols, signs and codes."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Communicate effectively to the appropriate personnel."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Follow workplace communication protocols"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/EI/002/L1",
+      "title": "Occupational Health and Safety in a Work Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Recognize personal health and hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use personal protective equipment (PPE)appropriately"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Maintain personal hygiene in the workplace"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Follow workplace safety regulations"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Comply with personal health and safety requirements."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "State the importance of maintaining good personal hygiene in a workplace"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Report workplace injuries and illnesses to appropriate personnel"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Report illness and infection promptly to the appropriate personnel"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Maintain a hygienic, safe and secure workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Follow health, hygiene and safety procedures at work place"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Respond to Workplace Emergencies Effectively"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Follow organizational security procedures"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Implement Workplace Housekeeping Procedures"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Keep Tools, Equipment and Materials at Work Environment appropriately"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Prevent hazards and maintain a safe and secure workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify Workplace Hazards or potential hazards"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Eliminate Workplace Hazards or potential hazards"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Follow hazard reporting procedures"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use Safety Equipment appropriately (e.g. Fire Extinguishers)"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Report safety concerns to supervisors"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Follow emergency response protocols"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Identify the Consequences of Unsafe Practices"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Never work alone in any situation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/EI/003/L1",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Develop Positive working relationships with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State the importance of developing positive working relationships with colleagues"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Demonstrate respect when interacting with colleagues."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report unresolved issues to supervisors"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about own work that might affect others"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibilities within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize assigned roles and responsibilities within the team"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform assigned tasks in line with the team rules and regulations"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in teamwork e.g. team meetings and group discussions"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Provide updates and progress on any challenge encountered to supervisors"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Support team members when needed."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Compliance with the organizational policy",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Work in line with organizational standards"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use organizational code of conduct."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Communicate information to colleagues in compliance with the policy of the organization"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Maintain accurate workplace records."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/EI/004/L1",
+      "title": "Identification of Components, Symbols, Drawings and Layouts",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify Basic Electrical Components and Symbols",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify basic signs and symbols in electrical installation."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify some basic electrical components and accessories used in domestic installations."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Sketch basic electrical components e.g. Switch, Lamp holders, Socket outlets, etc."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Sketch basic electrical symbols e.g. Switch, Lamp holders, Socket outlets, etc."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Interpret electrical drawing abbreviations used in domestic installation"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify Electrical circuit diagrams",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize legends and symbols in circuit diagrams"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify electrical devices used in domestic installation."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Distinguish between wiring, line and schematic diagrams"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Identify Electrical layout diagrams",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Locate accessories in a layout diagram."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify components positions in layout diagrams"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Sketch a simple layout diagram based on a schematic Drawing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/EI/005/L1",
+      "title": "Identification and Handling of Tools, Measuring Instruments and Materials",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify and use Electrical Installation tools",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify hand tools used for electrical installation and maintenance."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify power tools used for electrical installation and maintenance."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Sketch hand tools used in Electrical installation"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Sketch power tools used in Electrical installation"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Mention the importance of Hand and Power tools in carrying out electrical installation."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Apply hand tools correctly for assigned tasks."
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Apply power tools safely in accordance with guidelines"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate handling and maintenance of electrical tools",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Apply hand tools according to the organizational policies and manufacturer\u2019s manual"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Apply power tools according to the organizational policies and manufacturers\u2019 manual"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Observe tools for defects before use."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "State Safety procedures in handling tools and materials"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Carryout maintenance of basic electrical tools"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Report faulty tools for repairs or replacement"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Store tools securely after use"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Use electrical Measuring Instruments",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify basic electrical measuring instruments."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Measure current, voltage and resistance of electrical simple circuit using appropriate measuring instrument"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Observe safety measures in the use of the electrical measuring instruments"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/EI/006/L1",
+      "title": "Basic Electrical Wiring and Installation",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify materials, fittings, and accessories for domestic installations",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify cables used in domestic installations."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Select conduits and trucking for wiring correctly"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify electrical accessories such as sockets and switches to be used in domestic installation."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify lighting fixtures used in domestic wiring."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Choose circuit breakers used in domestic installations correctly."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Prepare for domestic electrical installation",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Select appropriate tools for domestic wiring"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Measure cables accurately"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Cut cables accurately"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Strip cable insulation properly."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Join conductors securely using appropriate connectors"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Install basic domestic electrical systems",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Route cables neatly within conduits and trunking"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Fix electrical fittings in designated locations"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Connect wiring securely to fittings"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Follow standard wiring procedures for safe installation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/EI/007/L1",
+      "title": "Electrical Protective Devices",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate the use of electrical protective devices in electrical installation",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify basic protective devices and warning signs used in electrical installations."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Locate protective devices in electrical installation."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify sizes and types of protective devices for a particular installation."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify causes of abnormal conditions in electrical installations."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Operate the protective devices correctly in accordance with approved procedures and regulations."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Sketch the symbols of protective devices in electrical installation."
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Outline the uses of protective devices in electrical installations"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Outline proper earthing lightening and surge protection measures."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Apply safety measures in handling protective devices",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Observe protective devices for defects before use"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use protective devices according to safety standards"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Report defective protective devices for repair or replacement"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Work safely when handling protective devices."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Install simple protective devices Unit No. Reference Number NOS Title 001 CON/EI/001/L2 Communication System in a Work Environment 002 CON/EI/002/L2 Occupational Health and Safety requirements in a Work environment 003 CON/EI/003/L2 Teamwork in electrical workplace 004 CON/EI/004/L2 Types of Wiring in Electrical Installation 005 CON/EI/005/L2 Domestic Installations I 006 CON/EI/006/L2 Protective Devices: Installation and Operation 007 CON/EI/007/L2 Cable: Types, Selection, Jointing and Termination 008 CON/EI/008/L2 Testing Electrical Systems, Equipment, and Components TOTAL Credit Value 009 CON/EI/009/L2 Lighting Systems/Illumination 010 CON/EI/010/L2 Installation of Fire Alarm Systems in Building",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Provide safe handling of protective devices before installation"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Install single phase protective device in a domestic installation"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Work safely at all times when handling protective devices complying with health and safety and other relevant regulations and guidelines. Credit Value Guided Learning Hours Remark 3 30 Level 2 20 5 50 4 40 26 260"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

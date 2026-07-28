@@ -1,0 +1,1124 @@
+{
+  "trade_name": "NOS Autobody Works",
+  "level": 3,
+  "units": [
+    {
+      "code": "AUT/ABW/001/L3",
+      "title": "HEALTH, SAFETY AND ENVIRONMENT III",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Personal health and hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Wear clean, smart and appropriat e Personal Protective Equipment."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Work safely at all times, complyin g with health and safety regulations ."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Report illness, injury and infection promptly to the appropriate personnel."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Mention own responsibility under the health and safety Act as it relates to the work environment."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Guide others on general rules of hygiene."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Supervise the use of Personal Protective Equipment such as Head Protection, Foot Protection, Face Protection, Eye Protection, Hand and Body Protection, etc."
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Describe the importance of maintaining good personal Hygiene."
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Describe how to treat injuries and why it is important to do so."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Recognize Hygienic, safe and hazard free Workplace. OUTCOME (LO) able to:",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe the importance of working in a healthy, safe and hygienic workplace."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Report any accidents or near y accidents promptly and accuratel to the proper personnel. Ref. Page"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Promote health, hygiene and safety practices during work."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Practice emergency procedures during work."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Ensure organizational security procedures are followed."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Ensure waste disposal (organic and inorganic methods) and pollution control."
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Encourage sound/noise control and protection."
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Supervise identification of any hazards or potential hazards and deal with these correctly."
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Mention where information about health and safety in your workplace can be obtained."
+            },
+            {
+              "pc_code": "2.10",
+              "description": "Describe the types of hazards in the workplace that may occur and how to deal with them."
+            },
+            {
+              "pc_code": "2.11",
+              "description": "Differentiate between hazards tha t can be dealt with personally and those that should be reported to appropriate personnel."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand hazards and accidents in a work environment OUTCOME (LO) able to:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Carry out organizational procedures on how to warn other s people about hazards and why thi is important. OUTCOME (LO) Ref. Page able to:"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain why accidents and near accidents should be reported and who they should be reported to."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the emergencies that may happen in the workplace and how to deal with them."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Locate the first-aid equipment and registered first aider."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Handle materials, tools and equipment in line with work environment procedure."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Mention ways of working safely that are relevant to own position responsibility and their importance."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Describe organizational emergency procedures and how these should be followed."
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Mention the possible causes of hazards in the workplace."
+            },
+            {
+              "pc_code": "3.9",
+              "description": "Describe how to minimize the possibility of hazards in the workplace."
+            },
+            {
+              "pc_code": "3.10",
+              "description": "Locate the alarms and demonstrate how to set them off."
+            },
+            {
+              "pc_code": "3.11",
+              "description": "Mention why hazards should never be approached unless it is safe to do so."
+            },
+            {
+              "pc_code": "3.12",
+              "description": "State the importance of following safety laws. Ref. Page"
+            },
+            {
+              "pc_code": "3.13",
+              "description": "Describe organizational security procedures and why these are important."
+            },
+            {
+              "pc_code": "3.14",
+              "description": "Mention the importance of reporting accidents or near accidents to the appropriate personnel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/ABW/002/L3",
+      "title": "COMMUNICATION AND INTERPERSONAL SKILLS III",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand communication system in a Work Environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe how to use of audio, electronic, electro-magnetic means to pass information."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe simple non-verbal means of communication."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Read symbols and signs correctly."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Interpret symbols and signs correctly."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know sourcest of Information in a Work Environmen",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Participate in making functional the source of information in work environment."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Access sources of information in work environment."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Relate with the source of information."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use the various information flow system in work environment to overcome challenges."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Ensure proper documentation and retrieval of information in accordance to procedures in work environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Communication processes OUTCOME (LO) able to:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Ensure the accessibility of the communication equipment in the work environment. Ref. Page"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the use of the various communication channels in work environment."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Demonstrate the use of various communication means in work environment."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Ensure effective information flow to the right personnel."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Ensure the effective deployment of the use of symbols, signs and codes."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Ensure that instructions are disseminated and obeyed in line with ethics of the work environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know the k maintenance of Communication equipment in wor environment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Ensure that communication equipment are in good working condition"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Liaise with the maintenance unit to ensure that communication equipment are maintained as at when due."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Liaise with appropriate authority to replace communication equipment in the event of loss or damage."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Ensure that communication equipment are stored appropriately in work environment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/ABW/003/L3",
+      "title": "TEAM WORK III",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know how t o appreciate team work in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the teams in a work environment e.g. upholstery, panel beating, etc."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the functions of each team."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Discuss the functions of each team."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Differentiate between the functions of each team."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the e requirements of t teams",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Select materials and tools required for each team."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Differentiate types of materials, tools and equipment requirements for each team."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss the methods of carrying out activities for each team."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the Benefits of the various teams.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Recognize the sequence of team activities."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Differentiate the time frame of each team activity."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Produce quality output as a team player."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know how t o h Communicate wit co-workers, OUTCOME (LO) able to: subordinates and superiors.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Communicate work related information/requirements clearly to team members. Ref. Page"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Inform co-workers and superiors about any kind of deviation from work Schedule."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Solve problems if need be, and/or report to appropriate personnel."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Collate instructions from superior s and respond accordingly."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Communicate to team t members/subordinates of the righ Work techniques and methods."
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Obtain clarification and advice from superiors when necessary."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/ABW/004/L3",
+      "title": "MAINTENANCE OF TOOLS AND EQUIPMENT IN AUTO BODY WORKS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know how t o select Auto body work tools and equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Select the correct tools for panel beating operations."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Select the correct tools for spray painting operations."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Select the correct tools for Upholstery operations."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Select the correct tools for Locksmithing operations."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know how t o use Auto body work tools",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Carry out marking out operations."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Carry out filing operations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Carry out cutting operations."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry out fastening operations."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Loose bolts and nuts with correct tools."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Identify problems associated with the use of incorrect tools."
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Observe safety rules in carrying out operations 2.1 to 2.6."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how t o maintain auto body work tools and equipment OUTCOME (LO) be able to:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Discuss the types of maintenance."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Carry out preventive maintenance of the following tools/equipment: \u2022 Body jack \u2022 Hydraulic jack \u2022 Air compressor \u2022 Grinding machine Ref. Page No."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out minor repairs of the following tools/equipment: \u2022 Body jack \u2022 Hydraulic jack \u2022 Air compressor \u2022 Grinding machine"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Clean used tools before storage."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Store tools as specified by manufacturer\u2019s or workshop requirements."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/ABW/005/L3",
+      "title": "REMOVAL AND REFITTING OF AUTO BODY COMPONENTS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know how to use tools and equipment.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the appropriate tools l and equipment in carrying out remova and refitting of body panels."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Select the appropriate tools and l equipment in carrying out remova and refitting of body panels."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Ensure that the tools/equipment re a in good condition."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Ensure that the equipment is calibrated according to manufacturer\u2019s specification."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use tools and equipment as specified by the manufacturer."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carry out removal and refitting of vehicle components OUTCOME (LO) be able to:",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Carry out removal of the following components: \u2022 Doors \u2022 Bonnet \u2022 Fenders \u2022 Boot \u2022 Mirrors \u2022 Windscreen \u2022 Head light \u2022 Door mat \u2022 Rear light \u2022 Bumper \u2022 Seats \u2022 Door Chromes"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Carry out refitting of the nts compone mentioned in 2.1. Ref. Page No."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Ensure that the components are realigned according to manufacturer\u2019s specifications."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply safety precautions in carrying out removal and refitting",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Observe safety procedures while carrying out removal of components."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Observe safety procedures while carrying out refitting of components."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use suitable PPE when carrying out removal and refitting of components"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/ABW/006/L3",
+      "title": "BODY DEFECT REPAIRS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know defects and repair procedures",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify Auto body defects for repair."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Prepare estimate for repair job."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Communicate repair job and estimate to the customer."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Select the correct materials for the repair job."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carry out repairs on Auto body panels",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify repair procedures."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Select the appropriate repair procedure in 2.1."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Select the right tools/equipment for the specified job."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry out repairs on affected panels."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Determine replaceable panels."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Replace the panels in 2.4 using appropriate procedures."
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Observe safety procedures during repair and replacement activities."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carryout major repairs on vehicle body components OUTCOME (LO) able to:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the types of repairs on the following components: \u2022 Chassis \u2022 Roof \u2022 Floor \u2022 Exhaust \u2022 Running board"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Carry out repairs on defective chassis and frame. Ref. Page No."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out repairs on a roof with the following defects: \u2022 Leak \u2022 Dent"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carry out repairs on corroded floor."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Carry out repairs on defective running board."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Carry out repairs on defective exhaust."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Repair major scratches on body panels"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Repair major tears on body panels"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know the us e of Damaged Dozer",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify repairs that require the use of Damaged Dozer"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Setup the Damaged Dozer, body press and body jack."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use the equipment in 4.2 to amend the defective body part"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand the composition of m etal OUTCOME (LO) able to:",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain the general characteristics of metals"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain the following: \u2022 Ferrous metals \u2022 Nonferrous metals"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Explain the application of the following: \u2022 Mild steel \u2022 Stainless steel \u2022 Copper \u2022 Aluminium Ref. Page No."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Demonstrate the welding and coating of metal to ensure that they return to their properties."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Set-up Oxy- Acetylene welding unit",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Identify the following Oxy- Acetylene welding equipment: \u2022 Flash back arrestor \u2022 Generator \u2022 Regulator \u2022 Blow pipes \u2022 Nozzles \u2022 Oxy-Acetylene cylinders"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Differentiate between water to carbide and carbide to water generator and other forms."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Demonstrate the formation of acetylene using a carbide to water system."
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Describe the position of water in the generators to show how wate and carbide work together."
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Connect an Oxy-Acetylene welding unit."
+            },
+            {
+              "pc_code": "6.6",
+              "description": "Demonstrate the use of the following welding systems: \u2022 Low pressure system \u2022 High pressure system"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Carryout OxyAcetylene welding OUTCOME (LO) able to:",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Prepare materials for welding."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Select suitable filler rod for the job."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Demonstrate how to produce suitable flame for the operation. Ref. Page No."
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Carry out pre heating before the use of filler rods."
+            },
+            {
+              "pc_code": "7.5",
+              "description": "Weld prepared metal."
+            },
+            {
+              "pc_code": "7.6",
+              "description": "Observe safety procedures during the welding operation."
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Carryout defect detection and rectification",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Identify defects on the welded joints."
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Rectify the identified defects in 8.1."
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Assess rectified welded joint."
+            },
+            {
+              "pc_code": "8.4",
+              "description": "Observe safety precautions in defect detection and rectification."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/ABW/007/L3",
+      "title": "VEHICLE REFINISHING (AUTO SPRAY PAINTING)",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "r Understand colou codes",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify types of paint."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify paints and their colour codes."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Classify auto body paints and thei r properties."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Differentiate between straight pain t and metallic paint."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand tools and equipment in spray painting",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "List the types of spray gun."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List the types of spray painting equipment."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the faults associated with the use of spray guns and other spray painting equipment."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Rectify the faults associated with the use of spray guns."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Carry out routine maintenance on the following: \u2022 Air compressor \u2022 Pipe work \u2022 Air regulator"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Observe safe practices in the use spray painting tools and equipme nt."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Prepare surface for refinishing OUTCOME (LO) be able to:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Select correct tools and equipmen t for preparing surfaces."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate method of preparing surfaces: \u2022 Paint removal Ref. Page No. \u2022 Body filling"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Apply body filler on affected surface."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carry out sanding operation."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Assess sanding operation."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Apply putty filler."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Smooth putty filler."
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Assess smoothening of putty filler."
+            },
+            {
+              "pc_code": "3.9",
+              "description": "Carry out cleaning on prepared surface."
+            },
+            {
+              "pc_code": "3.10",
+              "description": "Carry out masking on prepared surface."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Apply spray paint on surfaces",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Carry out paint mixing using appropriate method."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Select tools and equipment in carrying out refinishing."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Apply primer on prepared surface."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Apply base coat on the primed surface."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Apply clear coat on the painted surface."
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Apply appropriate techniques during spray painting."
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Apply safety precautions in spray painting operation."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Correct paint defects",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain the types of paint defects."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Examine a painted surface for defects."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Correct defects on painted surface."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Polish a painted surface."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/ABW/008/L3",
+      "title": "LOCKSMITHING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrat e use of tools and equipment in locksmithing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use the following tools in locksmithing: \u2022 Basic Hand tools \u2022 Measuring hand tool \u2022 Edge hand tool \u2022 Special locksmithing tools"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Demonstrate the safe operation o f jig saws."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Demonstrate the safe operation o f key machines."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Demonstrate the safe operation o f die grinder."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Demonstrate the safe operation o f power drills"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Use a router template."
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Observe safety during 1.2 to 1.6."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Dismantle a nd assemble locks OUTCOME (LO) be able to:",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Dismantle the following: \u2022 Warded lock \u2022 Lever lock \u2022 Pin tumbler cylinder \u2022 Padlock"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Assemble the following: \u2022 Warded lock \u2022 Lever lock \u2022 Pin tumbler cylinder \u2022 Padlock"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe recombination of the following lock mechanisms: \u2022 Pin tumbler cylinders \u2022 Lever locks Ref. Page No. \u2022 Tubular locks \u2022 Wafer locks"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Measure keys"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Duplicate keys using hand tools"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Duplicate keys using key machine"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Duplicate broken key"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Describe the method of originating a key by: \u2022 Coding \u2022 Disassembling \u2022 Impressioning \u2022 Sighting \u2022 Pick and read \u2022 Decoding picks"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate the installation of locks and key programming",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Describe doors and lock hardware"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Install the following: \u2022 Door locks \u2022 Cabinet locks \u2022 Ignition key assemble"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Service the following: \u2022 Door locks \u2022 Cabinet locks \u2022 Ignition key assemble"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Carry out key programming."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Observe safety procedures in locksmithing operation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/ABW/009/L3",
+      "title": "AUTO UPHOLSTERY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Carryout measurement and pattern making",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Take accurate measurements."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Record measurements correctly."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Calculate the quantity of materials correctly."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Make patterns for padding and upholstery."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Observe safety procedures in 1.1 to 1.4"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carryout upholstery work",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Select appropriate tools for the following: \u2022 Measurement \u2022 Marking \u2022 Cutting \u2022 Sewing \u2022 Removal of components \u2022 Refitting of components"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Select suitable upholstery materials."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use tools correctly."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Cut and trim upholstery materials."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Sew upholstery materials."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Fit upholstery materials."
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Maintain tolerance during sewing and fitting."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carryout repairs on frame structures OUTCOME (LO) be able to:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify defective frame structures"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Remove frame structures safely"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Repair defective frame structures"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Fix frame structures safely Ref. Page No."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Adhere to manufacturer\u2019s standard."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Distinguish between corrective a d preventive maintenance."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Maintain tools and equipment."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Store tools correctly after use"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Observe safety procedures in 4.1 to 4.3. "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

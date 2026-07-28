@@ -1,0 +1,1276 @@
+{
+  "trade_name": "NOS Furniture Making and Upholstery",
+  "level": 3,
+  "units": [
+    {
+      "code": "CON/FWK/001/L3",
+      "title": "Health and Safety in Furniture Making",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Apply health and safety work practices in furniture work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify sources of health safety information"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Communicate instruction on safe work practices to assistant furniture makers and furniture makers"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Provide team support with assistant furniture makers workers and furniture makers"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Recognize safety hazards and risks associated with furniture making"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate safety concerns with supervisor/ Safety officer or personnel"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Respond to emergencies of accident/injuries and take appropriate action"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Recognize first aid and health facility/ personnel"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Treat minor injuries"
+            },
+            {
+              "pc_code": "1.9",
+              "description": "Supervise removal of causes of accident and health hazards in furniture work environment"
+            },
+            {
+              "pc_code": "1.10",
+              "description": "Monitor compliance of removal of causes of accident and health hazards in furniture work environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know safety health requirements",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use appropriate PPE"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Observe personal safety and safety of others in work environment"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Supervise proper use and maintenance of PPE"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Monitor compliance with instructions"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know safety in lifting and stacking of materials/equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain importance of safe lifting and stacking of material or equipment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate safe methods and procedure in lifting and stacking of materials in work environment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Lift and stack materials correctly observing safe methods and procedures in accordance with given instructions"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Monitor compliance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/002/L3",
+      "title": "Communication skills in a work environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know complex communication system in furniture work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Supervise the use of electronics means to pass on necessary information"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Demonstrate simple nonverbal means of communication"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Interpret concepts of symbols and signs appropriately"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know source of information in workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Be involved in creating and making the source of information in an organization or work environment functional"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Make the source of information in an organization or work environment accessible"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use various information flow systems in the organization or work environment to overcome challenges"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Ensure proper documentation prompt retrieval of information in accordance with standard procedure in a work environment"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Ensure prompt retrieval of information in accordance with standard procedure in a work environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand various communication means in work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Ensure the accessibility of the communication equipment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Supervise the effective use of the various communication channels in a work environment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ensure effective information flow to the right personnel"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Ensure effective deployment of the use of symbols signs and codes"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know maintenance of communication equipment in furniture work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Ensure that communication equipment are in good working condition"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Liaise with the maintenance unit to ensure that equipment are maintained regularly"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Ensure that communication equipment are stored appropriately in the work environment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/003/L3",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know positive working relationship with colleagues Know measurements in furniture work",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Recognize the need for developing positive working relationship with colleagues"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel united and respected"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to appropriate personnel when request for assistance fall outside area of responsibility"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about own work that might affect others"
+            },
+            {
+              "pc_code": "1.1",
+              "description": "Carryout measurement and marking out"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Calculate measurements involving multiplication and division"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Make simple measurements of length, width and breath"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Perform more complex marking out operations"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibilities within the team Know how to Calculate and set out angles",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within the team"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks within the team\u2019s rules and regulations"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in team work"
+            },
+            {
+              "pc_code": "2.1",
+              "description": "Make calculations relating to angles"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Make advance measurements of angles in degrees"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Set out and mark pieces at different angles"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Compliance with organizational policies Know how to read simple designs of furniture items",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Work in line with organizational standards"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use organizational codes of practice"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain organizational code of conduct"
+            },
+            {
+              "pc_code": "3.1",
+              "description": "Interpret drawings and sketches of furniture items"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Interpret specifications"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Apply specifications to production"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate safe working practice and instructions"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know Interpretation of symbols and application of specifications",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Recognize signs and symbols on furniture drawings"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain use of signs and symbols in furniture making"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Apply knowledge of signs and symbols to production"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/005/L3",
+      "title": "Furniture Making Machine Operations",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand circular sawing machine operations",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify circular sawing machine parts"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Apply safety precaution in the use of circular sawing machine"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify functional parts of a circular sawing machine"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Demonstrate the function of push stick"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Demonstrate the function of riving knife"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Perform ripping operation"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Perform rebating operations on a circular sawing machine"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Perform chamfering operation"
+            },
+            {
+              "pc_code": "1.9",
+              "description": "Perform cross cutting operation on a circular sawing machine"
+            },
+            {
+              "pc_code": "1.10",
+              "description": "Observe safety precautions in the use of circular sawing machine"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know different operations on surface planer",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Apply safety precaution in the use of surface planer"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify parts of surface planer"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State the function of each part of a surface planer"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the working principle of a surface planer"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Perform surfacing operation"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Perform jointing operation"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Perform rebating operations"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Perform chamfering operations"
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Perform beveling operations"
+            },
+            {
+              "pc_code": "2.10",
+              "description": "Carryout maintenance of surface planer"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the process of operating a band saw",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Apply safety precaution in the use of Band saw"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Recognize parts of a band saw"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "State the function of each part of a band saw"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate the process of cutting curves"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Demonstrate tangential cut on a band saw"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Make curve cuts using relieve holes"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Make curve cuts using enlarged kerf"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Carryout maintenance of band saw"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know the operations of a radial arm saw",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Apply safety precaution in the use of radial arm saw"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Recognize parts of a radial arm saw"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "State the function of each part of a radial arm saw"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Demonstrate the process of cutting duplicate parts"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Perform cross cutting operation"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Perform miter cutting operation"
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Perform bevel cutting operation"
+            },
+            {
+              "pc_code": "4.8",
+              "description": "Perform trenching operation"
+            },
+            {
+              "pc_code": "4.9",
+              "description": "Perform basic maintenance on a band saw"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know the operations of a mortiser",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Apply safety precaution in the use of mortiser"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Recognize parts of a mortiser"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "State the function of each part of a mortiser"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Demonstrate the process of mortising"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Perform grooving operation on a mortiser"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Perform trenching operation"
+            },
+            {
+              "pc_code": "5.7",
+              "description": "Carryout maintenance of mortise machine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/006/L3",
+      "title": "Maintenance of Hand tools",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the Maintenance process of hand saw",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identity different types of maintenance"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Carry out preventive maintenance on hand saw"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Carry out topping on a saw"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Sharpen the teeth of a hand saw"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Carry out setting on a saw teeth"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Side dress a saw"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Observe safety during saw maintenance"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the Maintenance of Plane blade",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Carry out preventive maintenance on plane"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Grind plane blade on a grind wheel"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Sharpen plane blade on oil stone"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry out honing on plane blade"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Apply safety precaution in the maintenance of plane blade"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the maintenance process of chisels",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Perform preventive maintenance on chisels"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Grind the cutting edge of chisel on a grinder"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Sharpen the cutting edge of a chisel on oil stone"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Observe safety precaution in maintenance of chisel"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/007/L3",
+      "title": "Maintenance of Power Tools and Machines",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the process of maintenance of a circular saw",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Carry out preventive maintenance on a circular saw"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Bring damaged teeth of blunt saw into the saw sawing circle"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "File each tooth of the circular saw alternately"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Set the teeth with a circular saw gauge"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Apply lubricating oil"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Observe safety during the maintenance process"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the steps in maintenance of a planer",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Carry out preventive maintenance on a planer"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Remove planer knives"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Grind knives at the required angle"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Follow the right procedure for grinding planer knives"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Follow procedure for whetting planer knives"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Reset planer knives with straight edge"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Apply lubricating oil"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Observe safety in the maintenance of planer blades"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know operations on band saw",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Carry out preventive maintenance on a band saw"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Clean the saw"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Check and replace blade"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Lubricate the guides"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Tighten lose parts"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Check the tire and the wheel"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Check blade tension"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Carryout maintenance of band saw"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know power tools maintenance",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Clean the tool"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Lubricate moving parts"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Check and replace worn out parts"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Tighten loose screws and bolts"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Check the cord and plug for damage"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Observe safety in the maintenance of power tools"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/008/L3",
+      "title": "Stages in furniture design",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the concept and elements of design",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Sketch a project concept"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the concept of \u201cEfficiency\u201d of the project in the sketch"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the concept of \u201cAppearance\u201d in design"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the uses of the sketch project in the concept"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know design process",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Discuss \u201csituation\u201d in design with specific example"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Discuss \u201cbrief\u201d in design with examples"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss the process of carrying out \u201cAnalysis\u201d in furniture design"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the term \u201cspecifications\u201d in design"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Develop Project ideas",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Initiate a project idea"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Develop the project idea with sketches"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Communicate the project idea with sketches"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Develop a chosen solution"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Develop cutting list",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Make a list of parts"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "State the quantity required"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "State the size of each part and the type of material"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Prepare the material to nominal size"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Prepare material to net size"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Make the final design",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Plan for construction"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "organize resources needed for construction"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Make the final product"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Test the product"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Modifying the product"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Evaluate the product"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/009/L3",
+      "title": "Calculations and Bill of Quantities",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know to determine quantity of materials",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Determine area and volume of materials for a given work"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Calculate quantity of core material"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Determine quantity of other auxiliary material"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know estimate cost of producing an item",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Determine cost of materials"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Determine labor cost"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Determine overhead cost"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Determine logistics requirement"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Determine the need for specialized tools/equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know estimate length of time and number of personnel to accomplish a task",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Estimate time required to complete a job"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Determine the number of personnel needed for a job"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Determine the need for specialized personnel"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Estimate the cost for hiring specialized personnel"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/010/L3",
+      "title": "Furniture construction",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know how to Construct furniture item",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Procure needed material (MDF)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Measure head board and tail board"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Cut all head board and tail board members to required sizes"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Measure rails members to required size"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Cut rails to required length and width"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Carry out edge banding at the appropriate places"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Screw bed hooks to headboard, tail board and rails"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Measure material for floor"
+            },
+            {
+              "pc_code": "1.9",
+              "description": "Cut floor members and nail them at the appropriate places"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know how to Construct a wardrobe",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Measure and set out upright pieces (sides) for wardrobe"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Cut the upright pieces (sides)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Measure and set out pieces for shelves"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Cut the pieces for shelves"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Measure and set out top and bottom pieces"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Cut pieces for top and bottom"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Measure pieces for doors"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Cut pieces for doors"
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Assemble sides to top and bottom of wardrobe"
+            },
+            {
+              "pc_code": "2.10",
+              "description": "Fix hinges on doors"
+            },
+            {
+              "pc_code": "2.11",
+              "description": "Fix handles as required"
+            },
+            {
+              "pc_code": "2.12",
+              "description": "Fix lock"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how to apply edge banding material",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Apply contact adhesive on all members at the appropriate places"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Cut edge tape to the appropriate sizes for all members"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Apply edge banding for all members"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Trim edge banding material as required"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/011/L3",
+      "title": "Vocational Education and Training in Furniture Making",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know skills acquisition and its relevance to individual and the economy",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define skills acquisition"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the contribution of skills acquisition to the economy"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the prospect of skill acquisition to the individual"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the Physical and Mental requirements for acquiring skills in furniture making",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "List the Physical requirements for acquiring skills in furniture making"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Discuss the Mental requirements of acquiring skills in furniture making"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply the attributes and qualities of the requirements of acquiring skills in furniture making"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the concept of furniture making",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Discuss furniture making as a profession"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Discuss the importance of furniture making to the Nigerian Economy"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the various uses of furniture items"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/012/L3",
+      "title": "Basic ICT Usage",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know interpretation the menu of a computer",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Recognize the icons on the menu of a computer"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List the icons on the menu of a computer"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Locate the position of the icons on the menu of a computer"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Observe Safety regulations when using Cell phone",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State the safety rules to be observed in the use and handling of a computer"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Adhere to safety in the use and handling of a computer"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Recognize unsafe acts on the use computer"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "State the importance of safeguarding the information in computer"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand furniture making software applications",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State the functions of the furniture making software applications"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Operate the software application"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe how to download pictures using furniture making software application"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain how to sketch a simple item using furniture making software application"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "State the procedure for opening a furniture making software application"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Describe how to connect to the internet"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Using Cell Phone in Bank Transaction",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "State the procedure for opening a bank account with a cell phone"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the procedure for money transfer using a cell phone"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Checking Bank Account"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Perform Internet Banking"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Payment of Utility bills and other services"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know applications of a cell phone.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Show how to record video"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Snap pictures of projects using a cell phone"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Place an advert using a cell phone"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Open and use an E-mail address using a cell phone"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Connect to the internet and download information using a cell phone"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

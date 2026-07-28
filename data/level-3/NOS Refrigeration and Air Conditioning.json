@@ -1,0 +1,913 @@
+{
+  "trade_name": "NOS Refrigeration and Air Conditioning",
+  "level": 3,
+  "units": [
+    {
+      "code": "CON/RAC/001/L3",
+      "title": "Apply occupational health, safety, and environmental protection in R&AC.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate safe working Practices and Instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe safe work practices and instructions."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize safety signs and symbols."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Interpret safety signs and symbols correctly."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Observe safe work practices on given tasks."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Work following health and safety best practices."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Safety, Hazards and risks in the workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State types of hazards in the work environment."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe ways to avoid common hazards in the workplace"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State methods in reducing the risk of hazards in the workplace."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe how to report potential hazards in the workplace"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know appropriate actions to take during accident/injuries (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify basic first aid equipment."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the benefits of first aid equipment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "State types of injuries commonly found in the workplace."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify serious injuries that require emergency response in the workplace."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "State the steps to be taken following an accident"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Identify own responsibilities in case of an emergency such as: \u2022 Identifying and switching off power supply sources \u2022 Carrying out artificial resuscitation methods \u2022 Calling for medical attention \u2022 Transferring the patient to the nearest medical facility"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Identifying muster point"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Identify locations of fire extinguishers in case of fire outbreak"
+            },
+            {
+              "pc_code": "3.9",
+              "description": "Describe methods of firefighting"
+            },
+            {
+              "pc_code": "3.10",
+              "description": "Describe the Pull Aim Squeeze and Sweep (PASS) of fire extinguishers"
+            },
+            {
+              "pc_code": "3.11",
+              "description": "Describe how to treat minor injuries and burns"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate safe work practices and a clean work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify safe access and exit routes in the work environment"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe safe work practices and a clean work environment"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Dispose of all wastes appropriately in designated waste facilities"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "State the advantages of using appropriate PPE while carrying out a task in the work environment"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Select appropriate working tools for a given task to avoid hazard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/RAC/002/L3",
+      "title": "Demonstrate complex communication skills and technical documentation.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate good communication skills",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State reasons why good communication skills are important in Refrigeration and Air- Conditioning systems work environment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List ways to communicate effectively: \u2022 Upward \u2022 Downward \u2022 Horizontal"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the significance of patience and a mild demeanour while communicating with colleagues and clients"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe how to communicate professionally."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "State the need for respectful body language even when in a bad mood or while under pressure."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate ability to follow documented instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Read and accurately follow steps in installation manuals."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain mobile app documentation."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Read the information displayed on various Refrigeration and Air-Conditioning systems."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate the ability to document information after commissioning of Refrigeration and Air-Conditioning systems",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Determine information to be documented"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the scope of information needed to be documented."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the importance of the documented information."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Document appropriate information accordingly"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Report documented information to the appropriate authority"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/RAC/003/L3",
+      "title": "Exhibit leadership skills in team management and supervision.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Develop Positive working relationships with colleagues in the work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the need for developing positive working relationships with colleagues in the work environment."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of relating with others in a way that makes them feel valued and respected."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Support team members when one\u2019s services are requested."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the authorized personnel when the request is made for assistance falling outside one\u2019s area of responsibility."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about own work that might affect the performance of others"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Supervise the team to ensure the roles and responsibilities of the team members are appropriate"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibilities within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain your role and responsibilities within the team for group work."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Carry out individual tasks in a given group assignment in line with the team\u2019s rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate actively in a given teamwork."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Give own report of a task carried out in a team."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Instruct team members and ensure compliance"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Comply with the policies and regulations of the organization Ref. Page No. (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Carry out assigned tasks in a team in line with organizational standards"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use organizational code of practice for assigned jobs done in the team."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Obtain organizational code of conduct for own and team jobs."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the importance of using organizational code of conduct for own and team jobs"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "List rules that guide the activities of the team"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Report activities of the teamwork that may affect the organizational code of conduct to the higher authority."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/RAC/004/L3",
+      "title": "Disassemble and Assemble Air \u2013conditioning systems.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "UNDERSTAND DISMANTLING AN AIR- CONDITIONING UNIT",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify tools and equipment for dismantling operation"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Demonstrate the procedure for the dismantling of the Air-conditioning system"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the safety measures to take while dismantling the Air-conditioner"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Discuss how to recycle refrigerant properly."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Discuss how to service the different parts of the Air-conditioner after dismantling"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "KNOW PARTIAL DISMANTLING OF AN AIR- CONDITIONING SYSTEM",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain partial dismantling"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the reason for the partial dismantling of the Air-conditioning system."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the components to be dismantled for partial dismantling in air \u2013conditioning system."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "KNOW ASSEMBLING OF AN AIR \u2013 CONDITIONING SYSTEM",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain safety precautions associated with assembling of air- conditioning system"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Assemble four major components of Air- conditioning system i.e compressor, condenser, expansion valve, and evaporator"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the Steps to follow for assembling an air conditioning"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Verify the wiring connection of the assembled air conditioning"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Explain the laid down procedures to safeguard self, others and the environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "CARRY OUT POST- ASSEMBLING TESTS IN REFRIGERATION AND AIR- CONDITIONING",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Check for leaks in all pipe connection"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Test \u2013 run the assembled components"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Confirm if there are leakages 44 Inspect the operational condition and record findings"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/RAC/005/L3",
+      "title": "Carry out Compressor Lubrication Oil Charging and Testing.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate knowledge of refrigeration oil charging",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the safety precautions involved in charging lubrication oil in the refrigeration system"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Apply techniques in charging oil lubricant in refrigeration"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the instruments used for charging lubrication oil in refrigeration"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Charge compressor lubrication oil"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the types of refrigeration compressor oil",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the types of lubrication oil in refrigeration system"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the splash method of lubrication oil in refrigeration"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the force feed method of lubrication oil in refrigeration"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify factors to be considered when selecting lubrication oil"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the knowledge of general properties of refrigeration lubrication oil",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the general concept of refrigeration lubrication oil"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify the physical properties of lubrication oil"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the chemical properties of lubrication oil"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/RAC/006/L3",
+      "title": "Manage Refrigerants in line with environmental safety.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "KNOW REFRIGERANTS, TYPES AND PROPERTIES",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain Refrigerants"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the properties of refrigerants"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the types of refrigerants"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the method of charging refrigerants"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Carry out charging of refrigerants"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "IDENTIFY REFRIGERANT EFFECT ON ENVIRONMENT",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the Ozone layer"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the Ozone layer depletion potential"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the Ozone layer depletion"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the global warming potential"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain the effects of refrigerants on Ozone layer depletion"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "UNDERSTAND RECOVERY, RECYCLE AND RECLAIM OF REFRIGERANTS",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the terms: \u2022 Recover \u2022 Recycle \u2022 And reclaim"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Illustrate recovery procedures with a recovery machine"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out recovery work"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carry out recycle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/RAC/007/L3",
+      "title": "Understand Electrical/Electronic Control Devices used in Refrigeration and Air",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "HANDLE ELECTRICAL/ELECTRONICS CONTROL DEVICES, IN RAC WORK",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State the functions of the Electrical/Electronic control device"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Differentiate between electrical devices and electronic control"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Follow the safety precautions and manufacturer guide to repair or replace faulty components"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the steps to be followed in the installation and maintenance of electrical control devices in RAC systems"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "KNOW SERVICING OF REFRIGERATION AND AIR- CONDITIONING SYSTEMS",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Ensure cleanliness of the entire electrical components of the refrigeration equipment."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Check the debris buildup on the entire electrical components."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Check the following electrical components: contactors, thermostat, coils, motor etc."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Ensure that the fan control is operating correctly."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "IDENTIFY ELECTRONIC DEVICES/COMPONENTS USED IN AIR CONDITIONING EQUIPMENT",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain electronics control devices in refrigeration and air conditioning"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify microcontrollers in air conditioning equipment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the following devices: temperature sensors and pressure sensors"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify the function of humidity sensors in refrigeration and air conditioning"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "O4: REPAIR ELECTRICAL COMPONENTS IN REFRIGERATION AND AIR CONDITIONING",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Carry out the installation of the thermostat"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Carry out replacement of voltage transformer"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain the function of the following devices: timer and counters"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Carry out the replacement of the current transformer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/RAC/008/L3",
+      "title": "Interpret circuit diagrams for refrigeration systems.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "IDENTIFY COMMON CIRCUIT DIAGRAMS IN REFRIGERATION AND AIR-CONDITIONING SYSTEM",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the importance of circuit diagrams in refrigeration and air conditioning system"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Understand symbols and conventions used in the circuit diagram"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Outline types of circuit diagrams in refrigeration and air conditioning system"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Interpret the circuit diagram of the refrigeration system"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "KNOW EACH COMPONENT IN THE CIRCUIT DIAGRAM OF REFRIGERATION",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the circuit diagram of a compressor"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the entire electrical circuit of a refrigerator"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe the entire electrical circuit of an air conditioning"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe the exploded circuit diagram of a thermostat"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "State the reason why a circuit diagram is important in refrigeration and air- conditioning"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "APPLY CIRCUIT READING AND OBSERVATION",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Read the complete circuit of an air conditioning"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Read the complete exploded diagram of the refrigerator"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Interpret wiring and piping schematics for the refrigeration unit"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "READ CIRCUIT DIAGRAM",
+          "performance_criteria": [
+            {
+              "pc_code": "4.2",
+              "description": "Identify signs a labeling on the circuit diagrams"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the circuit diagram and description"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe procedures for understanding compressor capacity"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use circuit diagram to diagnose system malfunction"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/RAC/009/L3",
+      "title": "Fabricate sheet metal works for refrigeration unit installations.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Carryout marking out in Sheet Metalwork",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify types of measuring tools."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify types of marking-out tools."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the procedure followed in Measurement and marking out"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Select appropriate measuring tools"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Carry out measurements and mark out of sheet metal"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate basic folding operation of sheet metals.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify tools and equipment for folding Operations of sheet metals"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Apply safety precautions associated with Folding of sheet metals"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe the procedure followed in folding sheet metals"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carryout folding of sheet metal"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carryout basic setting/ holding of sheet metal together with the pipe",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify tools used in the cutting of sheet Metals"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply safety precautions associated with setting/holding sheet metal together with pipe"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the procedure of riveting"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Describe the procedure of cutting and holding"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Cut material"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Carryout holding of sheet metal with pipe"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand the materials used in the fabrication of the body framework",
+          "performance_criteria": []
+        },
+        {
+          "lo_num": "5",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify types of materials used for External body framework of refrigerator"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "List types of materials used as Insulator in refrigerator"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Describe the types of materials used for Internal body framework of a refrigerator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/RAC/010/L3",
+      "title": "Construct and maintain cold room",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "KNOW COLD ROOM AND COLD STORAGE",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the functions and importance of cold rooms in the refrigeration industry"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the key features of a cold room"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the major components of cold room"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "KNOW THE PROCEDURES TO FOLLOW FOR THE CONSTRUCTION OF THE COLD ROOM AND COLD STORAGE",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the difference between a cold room and cold storage"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify various component of the cold room and their function"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain how the construction of the cold room differs from the ordinary refrigeration system"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "State the step-by-step procedure for the construction of the cold room"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "CARRYOUT CONSTRUCTION OF A COLD-ROOM",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Discuss the methods of building a cold room"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Install evaporating unit"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Install condensing unit"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Install compressing unit"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Construct a cold room"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,648 @@
+{
+  "trade_name": "NOS ICT Computer Networking",
+  "level": 2,
+  "units": [
+    {
+      "code": "ICT/CNT/001/L2",
+      "title": "OCCUPATIONAL HEALTH AND SAFETY IN NETWORKING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify Workplace Hazards and Apply Safety Measures",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify common hazards such as electrical risks, tripping hazards, and ergonomic issues in networking environments."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of risk assessment and how to conduct one before performing networking tasks."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Apply appropriate safety measures, including the use of Personal Protective Equipment (PPE), fire safety procedures, and proper handling of cables and tools."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Follow Safe Handling Procedures for Networking Equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate proper techniques for handling and installing networking hardware, including routers, switches, and servers."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Follow manufacturer guidelines and safety protocols when performing maintenance on network devices."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Dispose of electronic waste and damaged networking components following environmental and workplace safety regulations."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Respond to Workplace Emergencies and Incidents Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify different types of emergencies, such as electrical fires, equipment malfunctions, and other site hazards."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Follow established workplace emergency response procedures, including fire evacuation plans and first- aid protocols."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Report and document workplace safety incidents accurately and communicate them to the relevant personnel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/002/L2",
+      "title": "COMMUNICATION FOR NETWORKING PROFESSIONALS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Effective Communication in Networking Environments",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use clear and professional language when explaining technical networking concepts to different audiences."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Apply active listening and questioning techniques to understand networking issues and provide appropriate responses."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Communicate technical support and troubleshooting steps effectively to users and colleagues."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Develop and Interpret Technical Documentation",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Read and interpret network diagrams, system logs, and configuration documents accurately."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Create and maintain clear documentation of network configurations, troubleshooting procedures, and incident reports."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Follow industry standards for documenting networking tasks to ensure consistency and clarity."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Utilize Digital Communication Tools for Networking Support Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use email, chat, and helpdesk ticketing systems to document and track networking issues."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Conduct virtual meetings and remote troubleshooting sessions using appropriate online tools."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Maintain professionalism and clarity when communicating network-related concerns via digital platforms."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/003/L2",
+      "title": "TEAMWORK IN NETWORKING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Role of Teamwork in Networking Environments",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe the benefits of teamwork in networking projects, including efficiency, problem-solving, and knowledge sharing."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify different roles in a networking team (e.g., network administrator, technician, support specialist) and explain their responsibilities."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Demonstrate an understanding of how collaboration improves network maintenance, security, and troubleshooting."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Apply Effective Communication and Collaboration Techniques in Team Settings",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use clear and concise communication when working with team members to complete networking tasks."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Participate in team discussions and contribute constructive ideas for network-related problem-solving."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Provide and receive feedback professionally to improve collaboration and efficiency in network operations."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Resolve Conflicts and Contribute to Team Success Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify common sources of conflict in IT and networking teams and suggest strategies for resolution."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate professionalism and respect when addressing disagreements with team members."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Work towards common goals by supporting teammates, sharing responsibilities, and maintaining a positive work environment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/004/L2",
+      "title": "NETWORK HARDWARE INSTALLATION AND CONFIGURATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Network Hardware for Installation",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify key networking components,"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Verify hardware compatibility with network specifications"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Inspect network hardware for physical damage"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Follow safety precautions before handling network devices."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Install Network Devices and Components",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Mount networking hardware, ensuring proper placement and ventilation."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Establish physical connections using appropriate cables, connectors, and ports."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Label network cables for easy identification."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Test hardware connections"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Configure Network Hardware for Initial Operation",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Navigate the configuration interfaces of routers, switches, and other network devices."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Configure basic settings such as IP addressing, subnet masks, and default gateways."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Set up VLANs, DHCP, and basic security settings where applicable."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Save and back up initial configuration settings for future reference."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Troubleshoot Network Hardware Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Diagnose common hardware failures, including connectivity issues, power failures, and overheating."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Apply basic troubleshooting techniques, such as checking cable integrity, resetting devices, and updating firmware."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Maintain network hardware by cleaning, inspecting, and replacing faulty components as needed."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Document troubleshooting steps and maintenance activities for future reference."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/005/L2",
+      "title": "STRUCTURED CABLING AND CABLE MANAGEMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Select Appropriate Network Cables and Connectors",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify various types of network cables, including twisted-pair (Cat5e, Cat6, Cat6a), fiber optic, and coaxial cables."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the characteristics of each cable type in different networking environments."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Select the appropriate cables and connectors based on network requirements."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify the correct crimping tools, cable testers, and termination accessories."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Terminate Network Cables",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Prepare cables for termination using proper stripping and crimping techniques."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Terminate copper cables using RJ-45 connectors."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Install fiber optic cables using appropriate splicing and termination techniques."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Test terminated cables for continuity, signal strength, and proper connectivity."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement Proper Cable Routing and Labeling Techniques Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Implement structured cable routing to minimize interference."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Secure cables using cable trays, conduits, and ties while following safety and industry guidelines."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Label network cables according to a standardized naming convention."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Maintain documentation of cable layouts, patch panel mappings, and connection points."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/006/L2",
+      "title": "WIRED AND WIRELESS NETWORK CONFIGURATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Configure Wired Network Connections",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Configure network devices such as routers, switches, and hubs for wired networks."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Assign IP addresses (static and dynamic) for wired network devices."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Implement basic VLAN configurations to segment network traffic."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Verify wired network connections using diagnostic tools (e.g., ping, tracer, and cable testers)."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Configure Wireless Networks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Configure wireless routers and access points with appropriate SSID and encryption settings."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Configure wireless security protocols such as WPA2, WPA3, and MAC filtering to enhance security."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Optimize wireless network coverage by adjusting settings."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Monitor wireless network performance using diagnostic tools."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement Network Security Measures for Wired and Wireless Networks",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Configure network firewalls."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Enable encryption protocols (e.g., WPA3, TLS) to secure wireless communications."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Implement authentication mechanisms such as RADIUS and 802.1X for secure network access."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify common network security threats, including unauthorized access and rogue access points."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Maintain Wired and Wireless Network Performance Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Utilize network monitoring tools (e.g., Wireshark, NetFlow) to analyze traffic and detect anomalies."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Diagnose common wired and wireless network connectivity issues."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Apply firmware and software updates to network devices."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Document network configurations, performance metrics, and troubleshooting steps for future reference."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/007/L2",
+      "title": "NETWORK PERFORMANCE MONITORING AND MAINTENANCE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Monitor Network Performance Using Diagnostic Tools",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify key network performance indicators such as bandwidth utilization, latency, and packet loss."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Utilize network monitoring tools (e.g., Wireshark, PRTG, SolarWinds) to capture and analyze traffic data."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Interpret network performance reports"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Set up notifications for critical network performance thresholds."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Troubleshoot Network Performance Issues",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify symptoms of network congestion, bottlenecks, and connectivity issues."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Apply troubleshooting commands (e.g., ping, traceroute, netstat) to diagnose network issues."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Isolate issues related to faulty hardware, misconfigurations, or security breaches."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement Preventive Maintenance Strategies for Network Reliability.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Perform regular hardware inspections."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Perform regular firmware updates."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Implement automated backup and recovery solutions for network configurations."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Conduct scheduled system updates and patches."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Optimize Network Performance Through Configuration Adjustments Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Adjust Quality of Service (QoS) settings to prioritize critical network traffic."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Optimize network bandwidth by managing load balancing and traffic shaping techniques."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Configure network devices to minimize latency and improve data transmission speed."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Monitor and adjust network security settings to balance performance and protection."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/008/L2",
+      "title": "BASIC NETWORK SECURITY IMPLEMENTATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Basic Network Security Concepts",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define key network security concepts"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify common types of network security threats"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the role of encryption, firewalls, and access control."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Recognize common security vulnerabilities in networking protocols (e.g., TCP/IP, HTTP, DNS)."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Implement Network Perimeter Security",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Configure firewalls to filter incoming and outgoing network traffic."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Implement intrusion detection and prevention systems (IDPS)."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Configure Virtual Private Networks (VPNs) for secure remote access."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Apply network address translation (NAT) and to enhance security."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Configure Network Access Control",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Set up user authentication methods such as usernames/passwords, two- factor authentication, and biometrics."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply Role-Based Access Control (RBAC)."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Implement Access Control Lists (ACLs) to restrict network traffic based on IP addresses, subnets, and ports."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Secure Network Communication and Data Transmission",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Implement encryption methods, such as SSL/TLS, to protect sensitive data during transmission."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Configure secure communication protocols such as HTTPS, SSH, and SFTP for secure remote access and file transfer."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Ensure that wireless networks are secured using WPA2/WPA3 encryption standards."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use Virtual LANs (VLANs) and VPNs to segment network traffic and enhance security."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Monitor and Respond to Security Incidents Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Configure security monitoring tools such as Intrusion Detection Systems (IDS) and event log analyzers."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Recognize security alerts and events, such as unauthorized login attempts or malware activity."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Develop incident response protocols to quickly mitigate security breaches."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Document security incidents and responses for future analysis and improvement."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

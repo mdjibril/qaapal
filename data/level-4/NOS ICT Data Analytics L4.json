@@ -1,0 +1,1110 @@
+{
+  "trade_name": "NOS ICT Data Analytics L4",
+  "level": 4,
+  "units": [
+    {
+      "code": "ICT/GEN/001/L4",
+      "title": "Occupational Health and Safety",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Workplace Health and Safety Regulations",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain key OHS legislation and regulations relevant to the IT sector."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the roles and responsibilities of individuals and organizations in maintaining a safe work environment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the process for reporting health and safety risks and incidents."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify Workplace Hazards and Implement Control Measures",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify common hazards in IT work environments, including electrical, ergonomic, and data-related risks"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Assess the severity and likelihood of potential hazards in specific IT tasks."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Implement appropriate control measures, such as safe cabling practices, ergonomic workstation setup, and electrical safety protocols."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply Emergency Procedures and First Aid in the Workplace Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Demonstrate the correct procedure for responding to workplace emergencies, such as electrical fires or equipment malfunctions."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Perform basic first aid techniques, including treating minor injuries and using first aid equipment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Communicate and coordinate effectively with emergency services and other relevant personnel during a workplace incident."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/GEN/002/L4",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Roles and Responsibilities within a Team",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the different roles and functions within an IT team (e.g., network engineers, system administrators, software developers)."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the key responsibilities and contributions of each team member."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Recognize the importance of each role in achieving the team's objectives."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Foster Positive Working Relationships within a Team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate techniques for effective interpersonal communication and conflict resolution in a team environment."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Show the ability to provide constructive feedback and actively listen to others' contributions"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Promote inclusivity and collaboration among team members to ensure participation and engagement from all."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Contribute to Team Problem- Solving and Decision.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Participate in group discussions to identify and analyse IT-related problems."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Suggest innovative solutions and support team decision-making processes."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Evaluate the effectiveness of team decisions and propose improvements where necessary."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/GEN/003/L4",
+      "title": "Communication",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Communicate Technical Information Clearly and Accurately",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain IT concepts, procedures, and solutions in a manner appropriate to the audience, whether technical or non- technical."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use industry-standard terminology correctly when describing technical processes"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Adapt communication methods to suit the context, such as written reports, emails, or verbal presentations."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Utilize Digital Communication Tools Effectively",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate proficiency in using digital tools for communication, such as email, messaging platforms, and collaboration software (e.g., Slack, Teams)."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Adhere to best practices for professional digital communication, including email etiquette and secure file sharing."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use collaborative tools to share and receive feedback on documents, code, or project updates."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Listen and Respond Appropriately in a Professional Context ",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Demonstrate active listening skills during team discussions or client meetings."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Respond to questions, concerns, and feedback clearly and effectively."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Clarify misunderstandings and summarize discussions to ensure mutual understanding."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DAP/004/L4",
+      "title": "Fundamentals of Data Analytics",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the role of a data analyst",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe how data is gathered in businesses and organizations."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the skills needed by an analyst."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify tools used by data analysts"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Interact with basic analysis tools"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Data analysis process and stages",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Discuss the tasks performed by Data analyst"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain components of Excel, as it is used in analysis of data"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain role of Jupyter lab in data analysis"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain components of Power BI as it is used in the different stages of data analysis"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Discuss the stages in a data analysis process"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand data insights in reports",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain how to interpret data"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify questions that can be answered using insight from data analysis"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Discuss the concepts of data production in businesses and organizations"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Stakeholders experience Ref. Page No. Identify questions that can be answered using insight from data analysis Discuss the concepts of data production in businesses and organizations",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify the stakeholders"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the skills required to effectively communicate with stakeholders"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Demonstrate how to visualize your communication with stakeholders"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DAP/005/L4",
+      "title": "Python for Data Science",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand python programming language",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain python syntax and comments"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify python data types, expressions, and variables"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Develop statements using python Expressions and variables"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Develop String operations in python"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain data structures."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Differentiate between Lists, tuples, Dictionaries and sets"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand sequences and iterations in python program",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Write a program using conditional statements"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Write a program using Loop statements."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Write a program using functions"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify parameters and arguments in functions"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Use recursion and nested functions"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Ref. Page No. OBJECTIVE (LO) The learner will: Understand Modules, packages, libraries and other tools",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use Pandas for data analysis, data manipulation, and data cleaning."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use Numpy for scientific computation"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use visualizations tools to visualize data"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Differentiate between series and DataFrames"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Discuss Tabular Data and pandas DataFrames"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Develop DataFrames from lists and dictionaries"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Explain JSON (JavaScript Object Notation) as a syntax for storing and exchanging data using API, etc in python programming"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Programming paradigms Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain procedural programming and the associated logical concepts"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain classes and functions"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain object-oriented programming."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DAP/006/L4",
+      "title": "Data Analysis with Python",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Introduction to python notebooks",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Discuss Jupyter notebooks, Google Colab or any other Python notebooks"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Set up a non cloud-based python notebook"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain code cells"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Discuss how to convert text and visuals in a Python notebook to Markdown"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain data structures and libraries"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Identify various data science projects and case studies where Python plays a crucial role"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the Data wrangling Process Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate skills used to transform data into a structured and suitable format for analysis"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Discuss the techniques for handling missing values"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify and deal with outliers"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain how to Encode categorical variables"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain how to Scale and normalize numerical features"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Explain how to handle textual or unstructured data"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Demonstrate techniques in detecting and addressing data inconsistencies so that the data is made suitable for further analysis"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Exploratory Data Analysis",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Discus various statistical concepts."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain data exploration techniques"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Discuss Data visualization methods"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain Data visualization techniques"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify patterns, outliers, and relationships in data"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Interpret raw data into meaningful information."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Communicate the findings through data storytelling"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Feature Engineering Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the relevant variables used in machine learning"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Demonstrate one-hot encoding, binning, and polynomial expansion."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use methods like feature extraction and text vectorization"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Demonstrate the concept of feature scaling and normalization"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Discuss machine learning pipelines."
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Enhance features to optimize performance of machine learning models"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand how to carry out basic excel projects Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Analyse a CSV file"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify the steps taken in the assignment above, from the download to the final analysis"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Discuss the outcome"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DAP/007/L4",
+      "title": "Creating and Interpreting Visualizations in Data Science",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand data visualization tools",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Discuss the history of Matplotlib"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the architecture of Matplotlib"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Generate line plots using Matplotlib."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Develop charts like Bar chart, Line chart, Pie chart, etc"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Develop plots like Scatter plots, Area plots, Bubble plots, etc"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Develop Heatmaps"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Develop word cloud"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand visualization libraries in python Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain visualization library in Python like Seaborn, Folium, etc"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe how to use Plotly graph objects to create charts"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Develop regression plots using seaborn"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Develop maps using Folium"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand dashboards creation using plotly and dash Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the benefits of dashboards"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify the different web-based dashboarding tools in Python"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Develop insight into Dash, an open- source user interface Python library"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Discuss the callback function."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Determine how to connect core and HTML components using callback"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Demonstrate ability to create charts and dashboards with a simple project."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DAP/008/L4",
+      "title": "Data Analytics using SQL",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Introduction to data analysis using Structured Querry Language (SQL)",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify applications of SQL"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Discuss information and data models"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain limitations of spreadsheets"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify different types of databases"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand SQL commands",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain CRUD (Create, read, update, delete) operations in SQL"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate Data Definition Language (DDL) like Create table, Alter, Truncate, Rename, Drop statements, etc"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate Data Manipulation Language (DML) like Insert, Update, Delete, Merge statements, etc"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Data analysis with SQL on a single table Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Demonstrate how to retrieve, manipulate, and aggregate data on a single table"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain use of keywords such as WHERE, LIMIT, AVG, MAX, MIN etc. in manipulating database"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Analyse data within a single table using SQL queries"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand advanced functions on tables in SQL",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain advanced functions like String Patterns, Ranges, Sets, etc"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Carry out Sort and Group in Result Sets"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use date/time functions like DATEADD and DATEDIFF"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Define case operators, branching logic, etc"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand how to Querry and access data from multiple tables using Join Ref. Page No. Explain advanced functions like String Patterns, Ranges, Sets, etc",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Define SQl Join statement"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Discuss different types of joins, inner join, outer join, etc"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Demonstrate ability to use join by extracting data from multiple tables"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DAP/009/L4",
+      "title": "Data Analysis using spreadsheets",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Excel fundamentals",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain essential Excel elements and techniques"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Demonstrate data management techniques including entering, formatting, managing and adding data to worksheets."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain steps for sorting and filtering data in Excel"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Formulas and Functions",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the concept of a formula"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the importance of formulas and functions in data analysis."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe the syntax for different types of calculations"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Recognize the correct syntax for formulas and function calculations"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Use formulas and functions in a worksheet"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Prepare data for analysis using functions Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Demonstrate text and numeric data preparation for effective analysis."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the importance of date and time functions in Excel"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Discuss the importance of logical functions like IF and IFS."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use functions to clean or standardize text, numbers, dates, etc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DAP/010/L4",
+      "title": "Data visualization and reporting using Power BI",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand tasks performed by a Power BI Data Analyst",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the capabilities of Microsoft Power BI"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the limitations of Power BI licence types"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Demonstrate how to set up the Power BI environment"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Discuss Power BI workspace roles"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Discuss Power BI desktop, services, and apps"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand sources of Data in Power BI",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the different data sources and storage types in Power BI."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe how to set up a data source in Power BI."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the different storage modes in Power BI."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Differentiate between structured and unstructured data."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain connectors, triggers and actions."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand data in business Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the tasks performed by a Power BI Data Analyst"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Recognize the skills needed by a Power BI analyst."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify the tools needed by a Power BI analyst."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify the key elements of the Power BI user interface"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify the different stages in the data analysis process"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Recognize the components of Power BI"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand the process of transforming data in Power BI",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Carry out data cleaning using Power Query."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain how to simplify and transform data using Power Query."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe how to use the Applied Steps list to undo and re-order steps."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Explain how to merge multiple data sources in Power BI."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand ETL (extract, transform and load) in data analysis process.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Define the \"load\" portion of ETL."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain how Power BI is used to load data at a high level."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Identify data anomalies using profiling tools."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Understand the concepts of data modelling in Power BI Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Identify different data schema types."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Create relationships in a data model."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Maintain relationships in a data model."
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Develop a model using a Star schema."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Understand Data Analysis Expression (DAX) in Power Bi",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Write calculations in DAX to create elements and perform analysis in Power BI."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Create calculated columns in a model."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Create calculated measures in a model."
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Perform useful time intelligence calculations in DAX."
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Understand performance optimization in Power BI model",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Identify the need for performance optimization."
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Carry out performance Optimization in a Power BI model."
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Carry out performance Optimization in DAX queries."
+            }
+          ]
+        },
+        {
+          "lo_num": "9",
+          "description": "Understand report creation in Power BI",
+          "performance_criteria": [
+            {
+              "pc_code": "9.1",
+              "description": "Identify the different types of visualizations in Power BI"
+            },
+            {
+              "pc_code": "9.2",
+              "description": "Develop visualizations in reports"
+            },
+            {
+              "pc_code": "9.3",
+              "description": "Develop visualizations in dashboards"
+            }
+          ]
+        },
+        {
+          "lo_num": "10",
+          "description": "Understand the process of navigation and accessibility",
+          "performance_criteria": [
+            {
+              "pc_code": "10.1",
+              "description": "Carry out formatting choices to visuals"
+            },
+            {
+              "pc_code": "10.2",
+              "description": "Develop useful navigation and filtering techniques to the Power BI report"
+            },
+            {
+              "pc_code": "10.3",
+              "description": "Develop accessible and interactive reports"
+            },
+            {
+              "pc_code": "10.4",
+              "description": "Develop accessible dashboards"
+            },
+            {
+              "pc_code": "10.5",
+              "description": "Demonstrate how to share and export report data"
+            }
+          ]
+        },
+        {
+          "lo_num": "11",
+          "description": "Ref. Page No. OBJECTIVE (LO) The learner will: Understand patterns, trends and visualization",
+          "performance_criteria": [
+            {
+              "pc_code": "11.1",
+              "description": "Use visualizations to perform data analysis"
+            },
+            {
+              "pc_code": "11.2",
+              "description": "Use AI features to perform data analysis"
+            },
+            {
+              "pc_code": "11.3",
+              "description": "Describe the importance of security in data visualization"
+            },
+            {
+              "pc_code": "11.4",
+              "description": "Create a cohesive report design"
+            },
+            {
+              "pc_code": "11.5",
+              "description": "Identify key information in reports based on target audience"
+            }
+          ]
+        },
+        {
+          "lo_num": "12",
+          "description": "Understand the process of Designing reports pages",
+          "performance_criteria": [
+            {
+              "pc_code": "12.1",
+              "description": "Use visual clarity and multi- dimensional visualizations in reports"
+            },
+            {
+              "pc_code": "12.2",
+              "description": "Demonstrate map visualizations to reports"
+            },
+            {
+              "pc_code": "12.3",
+              "description": "Use Python-based visualizations in reports"
+            }
+          ]
+        },
+        {
+          "lo_num": "13",
+          "description": "Understand Dashboard designing and storytelling",
+          "performance_criteria": [
+            {
+              "pc_code": "13.1",
+              "description": "Identify the differences between report and dashboard design"
+            },
+            {
+              "pc_code": "13.2",
+              "description": "Use advanced dashboard features such as embedding media and QR codes"
+            },
+            {
+              "pc_code": "13.3",
+              "description": "Explain the process of data storytelling"
+            },
+            {
+              "pc_code": "13.4",
+              "description": "Discus the impact of data storytelling "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

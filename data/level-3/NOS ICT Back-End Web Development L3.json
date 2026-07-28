@@ -1,0 +1,1022 @@
+{
+  "trade_name": "NOS ICT Back-End Web Development L3",
+  "level": 3,
+  "units": [
+    {
+      "code": "ICT/BED/001/L3",
+      "title": "Occupational Health and Safety",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Safe working Practices and Instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safe work practice and instructions in an ICT environment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Carry out safe work practices and instructions in an ICT environment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Work in accordance with health and safety best practices in an ICT environment"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Follow all necessary instructions related to safety in the work place"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Understanding of Safety Hazards and risks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify work environment hazards in an ICT environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State various methods to reduce the risk of identified hazards in an ICT environment"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate use of safety equipment applicable to ICT environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Possess the ability to take appropriate actions during accident/injury",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State how to maintain hygienic, safe and secure workplace."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate the uses of safety equipment in an ICT environment as required."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify basic first aid equipment"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Illustrate basic first aid treatments"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate safe work habit and clean work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use safe access and exit routes in the work environment"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Dispose all wastes appropriately to designated waste facilities"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/BED/002/L3",
+      "title": "Communication and Interpersonal Skills",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know of the importance of good communication",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State reasons why good communication is important"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List ways to communicate effectively"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Exhibit patience and a mild demeanor while communicating with colleagues, managers and clients"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Demonstrate how to speak in a respectful manner"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use respectful body language even when in a bad mood or while under pressure"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate ability to follow documented instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Read and accurately follow steps in a web framework/plugins installation manual"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Find specific Class definitions and Method descriptions in the programming language reference document."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Find feature descriptions in the plugin framework documentation, while using a plugins/framework,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/BED/003/L3",
+      "title": "TEAMWORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Positive working relationship with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the need for developing positive working relationship with colleagues"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel valued and respected"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the appropriate personnel when request for assistance fall outside area of responsibility."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about individual work that may affect team work."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibility within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within a team"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team\u2019s rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in teamwork."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Compliance with policy of organization",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain organizational code of conduct"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Work in line with organizational standard"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use organizational code of practice"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Adhere strictly to instructions given by the Management"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/BED/004/L3",
+      "title": "INFORMATION TECHNOLOGY ETHICS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Privacy and Security",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain Privacy"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain Security"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain Digital divide"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain Cybercrime and Hacking"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Ethic",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe how information technology can be protected"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe how infrastructure can be secure internally and externally"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain 5 ways information can be secure"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain how systems cab prevented from malware and adware"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Access Right Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain Access Right"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain 3 ways to grant Access"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Demonstrate the use of Intrusion Detection System"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Apply the use of Password in System"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/BED/005/L3",
+      "title": "PROGRAMMING FUNDAMENTALS WITH PHP OR C#",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the fundamentals of PHP",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain PHP basics"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain PHP basic Syntax"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe PHP tags"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe Variables Data types"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe Operators (Arithmetic, Comparisons, Logical)"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Describe Control Structure (Conditionals, Loops)"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Explain Functions"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Explain Forms and Input handling"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the fundamentals of C#",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain fundamental of C#"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain C# basic syntax"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe primitive data type in C#"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain Classes and Object"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Describe Exception Handling"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Setup PHP Environment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Select IDE"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Install Server"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Install PHP Parser"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Configure Database and connect using PHP"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Develop PHP Code"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Analyze and test code"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Setup C# Environment Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Install IDE e.g VsCode"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Create a new project"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain Design Patterns"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Develop C# code"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Analyze code by testing"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Observe error"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/BED/006/L3",
+      "title": "VARIABLES AND DATA TYPES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Variable and Data Types in PHP",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain Variables and their roles in storing and manipulating data"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe primitive Data Types."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe Operators and Operator precedence"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Develop a simple program with Variables and Data types."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Declare Variable"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Implement Program Logic"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Develop user input"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Evaluate the Program"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Document the Program"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Variable and Data Types in C#",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Variables and Data Types."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Differentiate between PHP and C# Variable and Data Type using Coding"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Develop a simple program with Variables and Data types."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Create an Arithmetic Program using Variable"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Variable Scope Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain Variable Scope"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe Local Variable with code"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe Global Variable with code"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Describe Static Variable with code"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/BED/007/L3",
+      "title": "CONTROL STRUCTURE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Control Structure",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain Control Structure in PHP and C#"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use control structure in PHP, C# to solve basic problem"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Develop a program with Loop Conditional Statement to control the flow of program execution"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Develop a program with IF-ELSE Statement, to control the flow of program execution"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Develop a program with DO-WHILE Statement to control the flow of program execution"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe Control flow keyword"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the Syntax of Control Structure",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Syntax of Control Structure"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain three types of Control Structure"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply selection, iteration, and sequential operations with basic examples"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Develop a program that break line"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Develop a program that involves syntax for opening and closing of Script"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Develop a program that involve syntax of switch case control structure"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Develop a program that involve syntax of swap"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Jump Statement, Loop Statement in C# Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain how Jump Statement Interact"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Create code using Jump Statement"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Create code using Loop Statement"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Describe the difference between Looping Statement and Jump Statement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/BED/008/L3",
+      "title": "USER-DEFINED AND BUILT IN FUNCTIONS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Functions, String Manipulation and Arrays.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain Functions and Function Syntax"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain Basic String Manipulation Functions in PHP, C#"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain Arrays"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Develop custom functions, and utilize built-in functions(substr(), Implode(), explode(), strlen() ) to manipulate strings"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Develop array variables, manipulate, and iterate through items of the array. Add, remove, and replace values in an array."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know how to retrieve and clean Request DATA in GET, POST, and other Global variables.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Handling Requests and Responses"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain $_GET and $_POST."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Develop a PHP script that will collect data from a user, do some basic manipulation and operations on the data, and return a response to the user."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Develop a program to Retrieve data from the GET and POST variables. Guide students to:"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Develop a code sample showing the cleaning of Data from untrusted sources passed as parameters to an endpoint."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Method in C#",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the basic type of user defined Method"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Create code to call a Method"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe Static Method"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Create code that show Method Overloading"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/BED/009/L3",
+      "title": "HANDLING FORM DATA",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand handling form data Creation in PHP",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain handling form data"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe step by step the process involves in handling form data"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Develop HTML Form that users can fill out and submit"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "develop PHP Script to handle the form submitted"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand basic error handling in PHP",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain errors in PHP, including Exceptions, syntax errors, runtime errors, and logical errors"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain Error Handling in PHP using try and catch to handle exceptions"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Develop a program showing various errors and identify their causes"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Develop code for error handling by using try, catch in PHP."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Also, throw and handle custom exceptions that will show relevant errors to the user"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Retrieving Form Data in PHP",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain Reprieving Form data"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Develop code using $_POST"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Develop code using $_GET"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Differentiate $_POST from $_GET"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Validating Form Data in PHP",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain Form Data Validation Process"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain how to check for email format"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Develop code using built in functions like filter var () to validate form data"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Develop code to check for error during validation"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand Data Security Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain Data Security"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain five forms of data security"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Use prepared statement with parameterized queries to prevent SQL Injection"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Develop code to Secure data in transit by using HTTPS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/BED/010/L3",
+      "title": "HOW TO USE DATABASE IN PHP",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand how to use Database in PHP",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain Relational Database"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe MySQL Command"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Install and configure MongoDB and MySQL Correctly"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Develop PHP Code to connect PHP to MySQL (Database)"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Develop PHP Code to execute SQL queries to insert, update, or select data"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Document Database",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Document Database 2.3"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain Collections in Document Databases."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Create a database in MongoDB and store any information in a collection"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Create a table in a MySQL Database Populate the table with at least 2 rows of information"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Create a new collection and save different data with different schemas in the same collection"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Aggregate Functions in Queries",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain Aggregate Functions"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the \u2017group by\u2018, and \u2017having\u2018 keywords in aggregate queries"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use aggregate functions to get grouped data in a query"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use the having keyword to control selection"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain Object Relational Mapper"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the benefits of using ORM."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Configure an ORM correctly"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use ORM o make queries to a database"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/BED/011/L3",
+      "title": "OBJECT-ORIENTED PROGRAMMING CONCEPT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Object Oriented Programming and its principles in PHP",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Discuss the concepts of OOP"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain stack: the procedural-oriented approach vs. OOP"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Develop a program that implements the principles of OOP."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Design programs to demonstrate: 1) classes and static components, 2) objects inside objects, 3) compare objects and pointers"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the Principles of Object-Oriented Programming",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the core principles of OOP"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Develop PHP Code using Polymorphism Develop PHP Code using Inheritance"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Develop PHP Code using Abstraction"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain the difference between Inheritance and Polymorphism"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Classes and Object",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify classes and Object"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Develop a program with classes and objects"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Observe the relationship between classes"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Apply encapsulation to program"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Apply UML Diagrams"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "L4: Know Constructor and Destructor in PHP",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain Constructor and Destructor"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Differentiate constructor and Destructor using code"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Develop code showing the characteristics of constructor"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Develop code showing the characteristics of destructor"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand Access in PHP",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Describe Access"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain types of Access"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Develop code showing Public Access"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Develop code showing Private Access Develop code showing Protected Access"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Develop code showing Protected Access"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

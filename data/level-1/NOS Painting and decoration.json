@@ -1,0 +1,426 @@
+{
+  "trade_name": "NOS Painting and decoration",
+  "level": 1,
+  "units": [
+    {
+      "code": "CON/PD/004/L1",
+      "title": "Basic Tools, Equipment and Materials for Painting and Decoration Work",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify and use basic tools, equipment and materials",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "List required basic tools for painting and decoration and their uses, e.g. Measuring tape, extension poles, painting knives, paint brushes, paint tray, scrapper, hammers, pincer, paint roller, painting edger, sand paper, drop cloths or tarps, paint pads, palette or paint containers, paint stirrers, masking tape, primer, nails and screws, ladder or step stool, wallpaper smoother, wallpaper brush, pasting tables, cutting tools, (utility knife, scissors, craft knife), level and plumb, marking tools etc."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Select basic tools for painting and decoration e.g. Measuring tape, Rollers and extension poles, knives, paint brushes (various sizes), paint tray, paint roller, paint edger (optional) hammers, pincer, level, nails and screws, ladder or step stool etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify painting and decorating materials, e.g. paint, sealers and fillers, primer, paint thinner, turpentine, rollers and extension poles, paint tray, wallpaper, wall decals/stickers, stencil, fabric, Sandpaper, joint compound, spackling (fillers), caulk (sealers), masking tapes, Drop clothes, ladder and step stools, painting tools and decorative items."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Select common power tools and equipment for painting and decoration e.g. drilling Machines, compressors, paint sprayers, power paint rollers, sanders, grinder, jigsaw and circular saw"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use basic tools for painting and decoration works"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Maintain basic tools and equipment.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Distinguish between the methods of maintaining tools and equipment after use."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify proper tools handling techniques."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Carry out cleaning of tools and equipment in painting and decoration after use"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Handle and Store materials.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Carryout Preloading inspection, and prepare the loading"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate methods and sequence of loading/off-loading of materials e.g. single person loading and team loading, single person offloading, team offloading"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out safe lifting and shifting of materials by moving, pushing or pulling in accordance with workplace EHS (Environmental Health Standards) requirements."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carry out proper storing of materials, e.g. binders, paints, planks, thinner, primer, turpentine, rollers and extension poles, paint tray, wallpaper, border, wall decals, stencil, fabric, Sandpaper, joint compound, spackling (fillers), caulk (sealers), masking tapes, Drop clothes, ladder and step stools, painting tools and decorative items, joint compound, textured additives and fluid material paints, stains, varnish, solvents, adhesive, coatings, primers and hazard materials"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Perform individual work and assist team members for lifting, loading, pushing and off-loading of materials."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Maintain safe and clean work environment while handling or storing paints and decorative materials."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Identify different types of paints and decorative materials.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify different types of paint e.g. emulsion paint, gloss paint, stucco paint, latex paint, acrylic paint, epoxy paint and decorative materials e.g. wall panel, wallpaper, wall decals, molding etc."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Distinguish different color combinations in painting and decoration"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Measure the ratio and mix proportion of painting and decorative materials"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PD/005/L1",
+      "title": "Erection and dismantling of Work Platforms and Scaffolding",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Erect platforms and scaffolding for painting and decorating work",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State organizational procedures to select and use scaffolding and platforms resources"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Select the required materials e.g. timber, bamboo, steel pipes, nails, bolts and nut, clamps, planks, steel scaffold boards"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Select the required tools e.g. hammer, screw drivers, spanners, plier, pick axe for erection of simple scaffolding and platforms"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify the associated hazards in erecting scaffolds and platforms e.g. falls from height, falling object, scaffold collapse, instability, and weather-related hazard and usage"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use the required safety gadgets and follow trade safety procedures during erection and usage e.g. helmet, boots, gloves, goggles, overall, harness belt, mask and net."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Erect simple scaffolding and platform not more than 5.0m height using personal protective gadgets."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Dismantle platforms a nd scaffolding.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Select the required tools for dismantling of scaffolding and platforms not exceeding 5.0m height."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the associated hazards in dismantling of scaffolds and platforms."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Dismantle scaffolding and platforms not exceeding 5.0m height, using appropriate tools."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Maintain dismantled scaffolding and platforms",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Separate damaged materials/components from dismantled scaffolds"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Arrange dismantled scaffolds/platforms safely in a secured location"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carryout maintenance of scaffolds/platforms materials/components e.g. Oiling or greasing metal components, clean wooden component etc."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PD/006/L1",
+      "title": "Preparation of Surfaces for Painting and Decorating works.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Use tools for basic surface preparation.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Select the required tools for the preparation of surfaces for painting and decorative works."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe surface preparation in painting and decorative work."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use the required tools for the preparation of surfaces for painting and decorative works"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Differentiate types of surfaces.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify types of surfaces, e.g. plastered wall, rendered wall, metal, wood, glass, ceiling, plastic"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Differentiate between tools and materials for different surfaces"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe surface preparation e.g. filling, leveling/ , flatting, priming, sealing, washing, stripping, scrapping, abrading, keying and brushing/ brooming"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Use materials for surface preparation",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Select the required materials for the preparation of surfaces for painting and decorative works."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Measure the mix proportion of materials to be use."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use materials for the preparation of surfaces for painting and decorative works"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carry out required surface preparation"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Describe prime coat with brush or spray."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Apply prime coat"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Prepare surface for interior decoration",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use Cover in the work environment before carrying out surface preparation in interior decoration."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify required methods of surface preparation in interior decoration."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Perform required basic surface preparation in interior decoration in accordance to set guidelines in HSE."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PD/007/L1",
+      "title": "BASIC TOOLS AND MATERIALS FOR INTERIOR DECORATION WORK.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Use tools for interior decoration work",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Select tools and equipment for use in interior decoration work, e.g. measuring tape, rollers, hand trowel, hammer, drilling machine, rivet machine. brushes (various sizes), Paint rollers and extension poles, Paint trays and liners, Paint containers and lids, Drop cloths or tarps, Levels (laser or bubble), marker, smoother, border trimmer, fabric scissor (assorted) etc."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use tools and equipment for interior decoration work"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Carry out cleaning of tools and equipment in interior decoration work"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Materials for interior decoration work",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the materials required for interior decoration e.g. Plaster board, POP, wallpaper, vanish,3D panels etc."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Select materials required for interior decoration"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use materials for interior decoration"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Handle and Store tools and materials.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe methods and sequence for handling of tools and materials for interior decoration work"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Carry out required safe storage of tools used in interior decoration."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out required safe storage of materials in interior decoration."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand basic measurements in interior decoration work",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify various surfaces to be measured e.g. square, rectangle, triangle, circular and irregular surfaces and methods of measurements e.g. linear, area, volume etc."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "State the basic measurement units e.g. feet, inches, yard, millimeter, centimeter, meter"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Measure an area using a measuring instrument."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PD/008/L1",
+      "title": "BASIC TOOLS AND MATERIALS FOR POP WORKS.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Use tools for POP works",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Select basic tools for use in POP works such as; scrappers, measuring tape, spirit levels, plumb bob, line string, casting mold, hand saw, etc."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use the appropriate tools in POP works."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Carry out cleaning of tools for POP works after use"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Handle an d Store materials for POP works",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the common materials such as; POP cement, POP board, yarn, water, soap, oil, binders, binding wire, nails etc."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Select materials such as, POP cement, POP board, yarn, water, soup, oil, binders, binding wire, nails etc."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Carry out appropriate safe storage of materials used in POP works."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand basic measurement of POP work.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify required surface areas to be measured and methods of measurements."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State the required basic measurement units such as; meter, feet, centimeter , inches etc."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Read different measurement using measuring tools."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Measure required area using measuring tools."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Prepare for POP works to commence",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Select appropriate cover in the work environment before commencing POP works."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use appropriate cover in the work environment before commencing POP works."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Select materials and tools in preparation for POP works"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,858 @@
+{
+  "trade_name": "NOS ICT Cybersecurity Engineering L5",
+  "level": 5,
+  "units": [
+    {
+      "code": "IS/CCE/001/L5",
+      "title": "Health, Safety and Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand safety precautions in workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Dress properly to the work environment."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Always Work safely, complying with health and safety and other relevant regulations and guidelines."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Get any cuts, grazes and wounds treated by the appropriate and qualified person."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report illness and infection promptly to the appropriate persons."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know how to maintain personal health and hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Summarise own responsibility under the Health and Safety Act as it relates to own occupation"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State general rules on hygiene that must be followed."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the importance of maintaining good personal hygiene."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe how to deal with cuts, grazes and wounds and why it is important to do so"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Be able to help maintain a hygienic, safe and secure workplace.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State the importance of working in a healthy, safe and hygienic workplace."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Promote health, hygiene and safety procedures during work."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Practice emergency procedures during work."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Ensure that organizational security procedures are followed."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Ensure the disposal of waste and pollution control with organic and inorganic waste disposal methods."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Prevent hazards and maintain safe and secure workplace Objective (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Supervise identification of any hazards or potential hazards and deal with these correctly."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "State where information about health and safety in your workplace can be obtained."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe the type of hazards in the workplace that may occur and how to deal with them."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify hazards that can be dealt with personally and those that should be reported to appropriate personnel."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Follow organization procedures on how to warn other people about hazards and why this is important"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "State why accidents and near accidents should be reported to the appropriate personnel."
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Describe the type of emergencies that may happen in the workplace and how to deal with them."
+            },
+            {
+              "pc_code": "4.8",
+              "description": "State where to find the first-aid equipment and locate the authorized personnel."
+            },
+            {
+              "pc_code": "4.9",
+              "description": "Lift and handle materials in line with work environment procedure."
+            },
+            {
+              "pc_code": "4.10",
+              "description": "State other ways of working safely that are relevant to own position responsibility and its importance."
+            },
+            {
+              "pc_code": "4.11",
+              "description": "Describe organizational emergencies procedures, in particular fire, and how these should be followed."
+            },
+            {
+              "pc_code": "4.12",
+              "description": "State the possible causes for fire in the workplace."
+            },
+            {
+              "pc_code": "4.13",
+              "description": "Describe how to minimize the possibility of fire in the workplace."
+            },
+            {
+              "pc_code": "4.14",
+              "description": "State where to find the alarms and how to set them up."
+            },
+            {
+              "pc_code": "4.15",
+              "description": "State why a fire should never be approached unless it is safe to."
+            },
+            {
+              "pc_code": "4.17",
+              "description": "Describe organizational security procedures and why these are important"
+            },
+            {
+              "pc_code": "4.18",
+              "description": "State the importance of reporting all usual or non-routine incidents to the appropriate personnel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCE/002/L5",
+      "title": "Communication and Interpersonal Skill",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Communicate with Client",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Notify client about new systems features to keep them up to date."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Notify client about new systems features to keep them up to date."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Communicate with the client about any changes on the website/application"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Confirm that no request from client is pending."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate to the team about the market trends to ensure that they are kept up to date."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Communicate with Peer/Team Members",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Check that all team members/peers are in line with the requirements"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Give clear directions to team members/peers to follow"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Check that a proper mechanism is in place to motivate all team members"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Provide a suitable and comfortable work environment for peers and team members"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Give report of team members activities"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Communicate with Managers",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Provide a standard operating procedure for communication with the seniors."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Follow all instructions given by seniors in each job role."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Execute all instructions coming from the seniors using proper mechanism"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Communicate all the emergencies and bugs/updates to the relevant Managers"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCE/003/L5",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Positive working relationship with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the need for developing positive working relationship with colleagues"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel valued and respected"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the personnel when request for assistance fall outside area of responsibility"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about own work that might affect others"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibility within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within team"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in teamwork"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Compliance with policy of organisation",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Work in line with organizational standard"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use organizational code of practice"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain organizational code of conduct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCE/004/L5",
+      "title": "Cybersecurity Governance",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate understanding of security compliance frameworks",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Demonstrate understanding of cybersecurity frameworks like NIST 2.0, PCI DSS v4.0, CIS, CMMC, etc."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Analyse the role of cybersecurity governance within an organization."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assess risk management policies and procedures."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the impact of cybersecurity laws and regulations on business operations."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Advise stakeholders on implementing governance structures for security compliance."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Develop policies and strategies for security governance",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Create security policies that align with organizational objectives."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Evaluate the effectiveness of current security frameworks."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Implement security training programs to promote policy compliance and awareness"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Support the creation of incident response plans in compliance with security governance."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Inspect policy effectiveness through internal audits."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Evaluate cybersecurity risk management frameworks",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify and Analyse potential risks related to cybersecurity threats."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Assess the likelihood and impact of security risks."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Develop risk mitigation strategies for identified threats."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain risk management tools and models."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Apply appropriate risk management model."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Evaluate the organization's risk tolerance and security posture."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Plan and develop compliance monitoring mechanisms Objective (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Select appropriate tools to monitor cybersecurity compliance."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Create processes to audit and assess cybersecurity measures."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Demonstrat your understanding ongoing monitoring and adjustments to risk management procedures."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Compare different approaches to compliance monitoring."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Analyse monitoring results and propose improvements."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCE/005/L5",
+      "title": "Network Security Management",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Implement secure network architectures",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Access the integrity of network security protocols and firewalls."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Analyse network vulnerabilities and threat vectors."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Create a secure network architecture based on organizational requirements."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Inspect network traffic for suspicious activities and potential breaches."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Reviwe network configuration to enhance security measures."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Evaluate the effectiveness of network security controls",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Access network security breaches and suggest corrective actions."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Compare intrusion detection and prevention systems (IDPS)."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Assess firewall and router configurations for gaps in security."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Analyse network segmentation to minimize threat impact."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Observe and interpret the performance of network security controls."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement secure access management",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Develop secure authentication and authorization mechanisms."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain how to adherence to least privilege access principles."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Investigate access control issues and take appropriate actions."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Implement multi-factor authentication (MFA) across network systems."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Support user awareness programs on secure access management."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Operate and maintain network security infrastructure Objective (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Implement routine maintenance of network security tools."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Implement automated mechanisms for continuous monitoring of network health."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Manage the operation of VPNs, IDS, IPS, and firewalls."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Supervise network administrators to ensure compliance with security protocols."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Plan for the upgrade and renewal of network security systems."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCE/006/L5",
+      "title": "Information Security Management",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Assess information security risks",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Analyse organizational data to identify potential risks."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Evaluate the impact of data breaches on operations, financial impacts reputation, etc"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the process of data classification and prioritization."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Support the organization in complying with applicable data protection laws."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Develop risk mitigation strategies for data protection."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Implement data protection measures",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": ",Investigate data protection systems for weaknesses"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Ensure the encryption of critical data assets."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Semulute policies to protect sensitive information."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Implement robust access control for sensitive data."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Plan incident response processes for data breaches."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Operate data protection systems",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Participate in data protection measures such as the maintenance, encryption of systems and backups."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Analyse the performance of data protection measures."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Compare different encryption algorithms and their effectiveness."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Implement measures to prevent data loss.( Policies and DLP etc)"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Interpret reports from data protection monitoring systems."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Ensure compliance with data protection regulations Objective (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Ensure alignment with GDPR, HIPAA, NDPA or any other local data laws."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Develop internal data protection audits and inspections approches"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Evaluate the organization's compliance posture."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Implement necessary measures to address compliance gaps."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Advise stakeholders on the implications of data protection regulations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCE/007/L5",
+      "title": "Threat Intelligence and Monitoring",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Analyse emerging cybersecurity threats",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Investigate new attack vectors and threat actors."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Compare emerging cybersecurity technologies."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Evaluate the potential impact of new threats on the organization."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Create threat models to understand potential vulnerabilities."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Support continuous threat monitoring efforts."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Implement threat detection systems",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Plan the integration of threat intelligence platforms (TIPs)."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Implement automated threat detection mechanisms."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Compare and select intrusion detection systems."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Operate threat intelligence feeds for real-time monitoring."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Evaluate the effectiveness of implemented detection systems."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Response to cyber incidents",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Ensure proper incident response procedures are followed."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Analyse cyber incident reports for root causes."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Investigate compromised systems and contain threats."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Develop forensic investigation reports."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Support recovery efforts after incidents."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Supervise proactive threat hunting",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Plan proactive threat-hunting activities."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Investigate malicious activity (systems for hidden )."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Create strategies for continuous threat-hunting improvements."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Supervise junior security analysts during threat-hunting missions."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Evaluate and interpret the results of threat-hunting exercises."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCE/008/L5",
+      "title": "Incident Management and Forensic Investigation",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Develop incident response procedures",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Create incident response protocols and escalation paths."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Ensure incident response plans comply with regulatory requirements."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Develop communication plans for stakeholders during incidents."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Select appropriate tools for incident management."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Initiate drills to test incident response readiness."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Investigate security incidents and breaches",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Examine logs and digital evidence for signs of compromise."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Develop root cause analysis reports."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Support collaboration with external cybersecurity teams during incidents."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Obtained fornensic evidence that complies with legal requirements."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Investigate the scope of data loss during breaches"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Supervise post- incident recovery efforts",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Evaluate the organization\u2019s readiness for post-incident recovery."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Create plans for restoring affected systems and services."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ensure continuity and disaster recovery procedures are in place."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Supervise the implementation of lessons learned from incidents."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Support the update of incident response plans post-recovery."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Evaluate incident management processes ",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Interpret post-incident reports to identify process improvements."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Compare different incident management frameworks."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Ensure alignment between incident management and organizational strategy."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Assess the effectiveness of current incident management procedures."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Provied recommendations for improving incident response capabilities"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

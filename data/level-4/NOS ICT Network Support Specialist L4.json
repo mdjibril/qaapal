@@ -1,0 +1,1153 @@
+{
+  "trade_name": "NOS ICT Network Support Specialist L4",
+  "level": 4,
+  "units": [
+    {
+      "code": "ICT/NSS/001/L4",
+      "title": "Health and Safety in Network Support",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Health and Safety Regulations and Requirements",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify key legislation, regulations, and standards relevant to health and safety in the workplace."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the roles and responsibilities of both employers and employees"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the legal consequences of non- compliance with health and safety regulations in network-related work."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Be Able to Identify and Mitigate Workplace Hazards",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Conduct a risk assessment to identify potential hazards within a network installation site or work area."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Recommend appropriate control measures to mitigate identified risks, including the use of signage, barriers, and equipment."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Monitor work practices to ensure the consistent application of safety protocols during network installation and maintenance activities."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement Safe Working Practices and Emergency Procedures Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Demonstrate the correct use of personal protective equipment (PPE) and tools while working in a network environment."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Follow proper procedures for responding to emergencies"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Develop and communicate a safety plan that includes reporting incidents and unsafe conditions to the appropriate authorities."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NSS/002/L4",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Principles of Effective Teamwork",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the characteristics of a successful team and the roles each member plays within a network support team."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of clear communication, active listening, and mutual respect in a team setting."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe different team dynamics, including collaboration, decision- making, and accountability in network- related tasks."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Problem- Solving and Conflict Resolution Skills in Team Settings",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Participate in team discussions to analyze network-related problems and propose solutions collaboratively."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Address conflicts that arise within the team in a professional manner, using mediation and negotiation techniques to reach a resolution."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Evaluate the effectiveness of team problem-solving strategies and suggest improvements to enhance team performance in future projects."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Exhibit Leadership and Support Team Development Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Take initiative in organizing team tasks, delegating responsibilities according to team members' strengths and skills."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Provide constructive feedback and support to team members, encouraging continuous improvement and skill development."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Foster a positive team environment by promoting inclusivity, recognizing individual contributions, and motivating the team to achieve set goals."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NSS/003/L4",
+      "title": "Communication",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Importance of Effective Communicatio n in the Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the impact of clear and concise communication on team performance, project success, and client satisfaction."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify barriers to effective communication in a technical workplace and strategies to overcome them."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe how cultural differences, language, and technical jargon can influence communication in a diverse workplace."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Effective Verbal and Non-Verbal Communicatio n Skills",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use appropriate tone, clarity, and technical language when communicating with different stakeholders (e.g., team members, clients, management)."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate active listening by accurately interpreting and responding to verbal and non-verbal cues during discussions and meetings."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply non-verbal communication techniques, such as body language and eye contact, to enhance message delivery and understanding."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Be Able to Use Digital Tools for Professional Communicatio n Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Select and use appropriate digital communication tools (e.g., email, instant messaging, project management platforms) to exchange information effectively within a network support team."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Compose clear and professional emails, reports, and other written correspondence to ensure effective communication with stakeholders."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ensure confidentiality and security of sensitive information when communicating through digital platforms, adhering to organizational policies and regulations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NSS/004/L4",
+      "title": "Network Media: Wireless and Wired media",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Cabling Techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify cable types"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Strip and clean various cable types."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Recognize cable color codes, connectors and organization"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Terminate cables"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Select the appropriate testing tools for specific cable type and issue"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Test the cable using the selected tool"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Configure wireless networks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Configure the wireless network name (SSID) and broadcast settings"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Configure wireless security"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Configure wireless network segmentation"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Install Access Point (AP) for coverage and performance"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Configure Quality of Service (QoS) settings to prioritize traffic and ensure network performance."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Troubleshoot wired and wireless network issues.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify wired network troubleshooting tools"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identity wireless network troubleshooting tools"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Analyse network connection problems"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Isolate the issue to a specific device, cable, or network segment."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Resolve network issues using the appropriate tools and techniques"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Provide guidance on preventive measures."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Use network analysis tools Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Select appropriate network analysis tools"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Analyse network signal strength and quality"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify connected devices to detect rogue devices."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Generate network analysis reports"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NSS/005/L4",
+      "title": "Network devices: Configuration and interconnection",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Use Networking devices",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Analyse network devices"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Interconnect networking devices"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Analyse network device ports"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use appropriate cable types to login to devices (router, switch, access points etc)"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Interconnect devices using cables"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Troubleshoot device connection issues"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Use Network device tools",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Install network configuration tools"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Understand the network configuration GUI"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Configure network devices using command lines"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Configure backup and recovery"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Troubleshoot configuration errors"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Network addressing",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain network addressing: IPv4 and IPv6"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Manage network addressing table"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Configure IP addresses on network devices"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Perform network subnetting"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Use network addresses tools"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Setup Local Area Network Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Design a Local Area Network (LAN)"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Configure devices within a LAN"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Interconnect LANs"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Integrate services within a LAN"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Troubleshoot connection related issue within LANs"
+            },
+            {
+              "pc_code": "4.1",
+              "description": "Identify WAN interfaces"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify WAN links"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Integrate WAN related devices"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Configure routers and switches"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Interconnect routers and switches"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Design Wide Area Networks",
+          "performance_criteria": []
+        }
+      ]
+    },
+    {
+      "code": "ICT/NSS/006/L4",
+      "title": "Network Switching and Routing",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Routing Protocols",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify various routing protocols"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Match routing protocol to specific network design"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Understand routing metrics"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Test various routing protocols"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Perform route summarization"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Perform route aggregation"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Be able to Configure Switch",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Login to network switches"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify switch layers and functions"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Perform Virtual Local Area Network (VLAN) Configurations."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Perform inter-VLAN routing"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Perform trunk configuration"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Be able to Configure a Router Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Match routing protocols with specific devices and topology"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Initial configuration of routers"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Configure basic routing protocols"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Configure router security features"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Troubleshoot router and switch configuration issues"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NSS/007/L4",
+      "title": "Network Security: Firewall and Access Control Lists",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Network Security Fundamentals",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain network security principles"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify network vulnerabilities"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe network security devices"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Configure passwords for network devices"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Perform network penetration testing"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Be able to Configure Firewalls",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Know network firewalls"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Configure network firewall for routers and switches"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Configure network firewalls on routers and switches"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Setup network firewalls on personal computers"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Test network firewall behaviour"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Be able to Configure Access Control Lists (ACL)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Understand ACL mechanism"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identity inbound and outbound implementation of ACL"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Setup ACLs mechanism for routers"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Implement ACLs on routers"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Test ACLs on routers"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Be able to Setup VPNs",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain VPN client server configuration"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Configure a VPN server"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Establish a VPN connection"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Troubleshoot VPN connection issues"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Integrate VPN with Other Technologies"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Encryption techniques Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Use network encryption tools"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Implement IPSec"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Use OpenSSL"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Configure SSL/TLS"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Configure Full-Disk Encryption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NSS/008/L4",
+      "title": "Network Management and Troubleshooting",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Network Management Protocols",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain Simple Network Management Protocol (SNMP) architecture and component"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe SNMP versions (v1, v2c, v3) and their differences"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use SNMP management software (Nagios, SolarWinds) etc to monitor networks"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Understand SNMP security features (authentication, encryption)"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Configure SNMP on network devices"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Be able to Use Network Management Tools",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe popular configuration management tools (Cisco Works, Ansible, Puppet)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate secure management interfaces (HTTPS, SSH)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Integrate network management protocols with other network management tools"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Automate configuration backups and changes"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Use protocol analysis tools (Wireshark, NMap)"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement network monitoring and alerting",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe Remote Monitoring (RMON) types (RMON1, RMON2)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use RMON to monitor network traffic and performance"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Configure NetFlow on network devices"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use NetFlow analysis tools (Cisco NetFlow, Splunk) to monitor network traffic"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Monitor protocol-related security logs and alerts"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know Network performance metrics Ref. Page No. OBJECTIVE (LO) The learner will:",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Describe common network performance metrics (throughput, latency, jitter etc)"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain metric units and calculations (e.g., bits per second, milliseconds)"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify tools for measuring network performance metrics (e.g., Wireshark, NetFlow, ping)"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use tools like Ping or Traceroute to measure latency between devices"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Use tools like Wireshark or NetFlow to measure jitter between devices"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Optimize network performance Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Use performance monitoring tools to identify optimization opportunities"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Configure caching servers"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Configure content delivery networks (CDNs)"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Configure load balancing and link aggregation on network devices"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Implement network acceleration and optimization policies for remote sites"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Use traffic shaping and rate limiting to prevent network congestion"
+            },
+            {
+              "pc_code": "5.7",
+              "description": "Configure QoS policies on network devices"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NSS/009/L4",
+      "title": "Cloud Networking",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Cloud Networking",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Set up a cloud account (AWS, Azure, Google Cloud)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Create a virtual network"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Configure cloud network settings (IP addresses, subnets, routing)"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Launch a virtual machine (VM) and connect to the cloud network"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Setup cloud networks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Implement a cloud network architecture using diagrams and templates"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Configure cloud network topology"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Set up cloud network segmentation"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Configure cloud network services (DNS, DHCP, load balancing)"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Manage cloud networks",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Monitor cloud network services using cloud provider tools such as Proton mail, Azura etc."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Implement cloud network automation and orchestration using templates and script"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use cloud networking protocols (HTTP/2, QUIC) for performance optimization"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Analyse cloud networking logs and metrics"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify and troubleshoot cloud networking issues"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Configure cloud network security Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Implement cloud security measures (firewalls, access control, encryption)"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Configure cloud compliance and regulatory requirements (HIPAA, PCI- DSS)"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Conduct cloud security risk assessments"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Implement cloud networking best practices"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NSS/010/L4",
+      "title": "Network Optimization",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know network optimization",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify bottlenecks and optimization opportunities in network traffic"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Understand network optimization approaches"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use network optimization tools"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Document network optimisation data"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Design network optimization procedure",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define network optimization goals and objectives"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify key performance indicators (KPIs) for network optimization"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Conduct network assessments (traffic analysis, performance monitoring)"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Implement optimization solutions"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Validate optimization results (KPIs, metrics)"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Network security optimization Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Conduct network security assessments: vulnerability scanning and penetration testing"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify security optimization opportunities and threats"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Implement security optimization techniques"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Configure access control lists (ACLs) and group policy objects (GPOs)"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Configure intrusion detection and prevention systems (IDS/IPS)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NSS/011/L4",
+      "title": "Network Identity and Access Management",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Network Access Management",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Know identity management concepts"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Implement identity management systems (Active Directory, LDAP)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Configure identity management protocols (Kerberos, RADIUS)"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Configure access management protocols (TACACS+, Diameter)"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Define access policy goals and objectives"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Be able to Design an Access Management Policy",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify access policy requirements (security, compliance, business needs)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Understand access control models (MAC, DAC, RBAC, ABAC)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Select appropriate access control model for network access policy"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Implement compliance and regulatory requirements in network access policy"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Determine policy review and update procedures"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement network access management approach Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Implement authentication protocols (Multi-Factor Authentication, Single Sign-On)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Configure IAM system components (authentication servers, authorization servers)"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Create and manage ACLs and firewall rules"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Design and implement network segmentation (VLANs, VPNs, subnets)"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Implement AAA protocols (RADIUS, TACACS+, Kerberos)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/NSS/012/L4",
+      "title": "IoT Networking",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Explain IoT Device communication",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the basics of IoT networking"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Determine IoT networking requirements"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Understand IoT network protocols (CoAP, MQTT, HTTP)"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Determine IoT network topology and architecture requirements"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Identify IoT integration options (APIs, SDKs, gateways),etc"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Configure IoT devices",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify device configuration tools (web interfaces, command-line interfaces, mobile apps), etc"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Configure device network settings (IP address, subnet mask, gateway)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Set up device wireless connectivity (Wi- Fi, Bluetooth, cellular)"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Configure device network security (firewall, encryption, access control)"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Register devices with IoT platforms (cloud, on-premise)"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Integrate IoT devices within networks",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Design network architecture for IoT device integration (LAN, WAN, wireless)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Configure network protocols for IoT device communication (TCP/IP, HTTP, CoAP)"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Register devices with network management systems (NMS)"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Configure data transmission and reception between devices and network"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Implement security measures for IoT device integration"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

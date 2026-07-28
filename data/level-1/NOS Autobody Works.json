@@ -1,0 +1,416 @@
+{
+  "trade_name": "NOS AutoBody Works",
+  "level": 1,
+  "units": [
+    {
+      "code": "AUT/ABW/001/L1",
+      "title": "HEALTH, SAFETY AND ENVIRONMENT I",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Safe working Practices",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safe work practice"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify safety signs and symbols"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use signs and symbols correctly"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Carry out safe work practices"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Work in accordance with health and safety best practices"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Understanding of Safety, Hazards and Risks.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify work environment hazards"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State methods to reduce the risk of these hazards."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify Personal Protective Equipment (PPE)."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "State methods to resolve an occurring environmental hazard."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Possess the ability to take appropriate actions during accident/injury.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify basic first aid equipment."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate how to maintain hygienic, safe and secure workplace."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Mention the uses of safety equipment in a workplace."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate how to treat injury in a work place."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate safe work habit and clean work environment.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the importance of clean work place environment."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use safe access and exit routes in the work environment."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Dispose all wastes appropriately to designated waste facilities."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Explain methods of resource conservation (E.g. Water, Energy etc.)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/ABW/002/L1",
+      "title": "COMMUNICATION AND INTERPERSONAL SKILLS I",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate knowledge of the importance of effective communication",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the importance of effective communication."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List ways to communicate effectively."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Exhibit good attitude while communicating with colleagues, managers and clients."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Communicate in a respectful manner."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use respectful body language."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Interpret verbal communication accurately."
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Listen attentively."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate ability to document and follow documented instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Read and follow steps in an instruction manual pertaining to any of the units in this course."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Document information in the workplace (e.g. Receipt, Invoices, Reports, and Records etc.)."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Document errors, solution processes and reports."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/ABW/003/L1",
+      "title": "TEAM WORK I",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "ve Understand positi working relationship with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the need for developing positive working relationship with Colleagues."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of relating with other people in a way that makes them feel valued and respected."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the supervisor when request for assistance falls outside area of responsibility."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about own work that might affect others."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "ies Take responsibilit within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Mention own roles and responsibilities within the team."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform tasks in line with the team rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in team work."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Comply with organization Policies.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Work in line with organizational standard."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use organization code of practice."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain organizational Code of Conduct."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/ABW/004/L1",
+      "title": "INTRODUCTION TO VEHICLE LAYOUT AND WORKSHOP ORGANISATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the use of workshop equipment and tools",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify hand tools."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the use of hand tools."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use hand tools."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify power tools."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain the use power tools."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Use power tools."
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Explain the use of equipment in Auto workshop."
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Identify the equipment used in the Auto workshop."
+            },
+            {
+              "pc_code": "1.9",
+              "description": "Use the equipment in the Auto workshop."
+            },
+            {
+              "pc_code": "1.10",
+              "description": "Apply safety procedure in using the tools and equipment in the Auto workshop."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Vehicle components and composition",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "List various vehicle components"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify various vehicle components"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "List materials which Vehicle components are made of"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Name the types of Chassis"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Automotive workshop organization OUTCOME (LO) be able to:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "List the sections of an Automotive workshop a) Mechanical b) Electrical c) Body Work"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the activities of each of the sections in 3.1 above"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the uses of the spare par s store and records room"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/ABW/005/L1",
+      "title": "INTRODUCTION TO AUTO BODY WORKSHOP",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the different units in Auto body workshop",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the activities in panel beating unit."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the activities in spray painting unit."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the activities in upholstery unit."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the activities in locksmithin g unit."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the materials used in Auto body workshop",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "List the materials used in panel beating work."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List the materials used in spray painting work."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "List the materials used in Upholste y work."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "List the materials used in locksmithing work."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the tools used in Auto body works.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "List the tools used in panel beating work."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "List the materials used in spray painting work."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "List the materials used in upholster y work."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "List the materials used in locksmithing work."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know the equipment used in Auto body workshop.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "List the equipment used in panel beating work."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "List the equipment used in spray painting work."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "List the equipment used in upholstery work."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "List the equipment used in locksmithing work."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

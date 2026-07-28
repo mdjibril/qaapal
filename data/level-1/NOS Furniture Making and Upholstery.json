@@ -1,0 +1,1114 @@
+{
+  "trade_name": "NOS Furniture Making and Upholstery",
+  "level": 1,
+  "units": [
+    {
+      "code": "CON/FWK/001/L1",
+      "title": "Health and Safety in Furniture Industry",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand safe working instructions and practices in furniture industry",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safe working instructions and practices in furniture industry"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify safe working instructions and practices in furniture industry"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify signs and symbols in furniture industry"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the use of signs and symbols furniture industry"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Identify safe access and exit routes to and from work environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know safety hazards and risks in furniture industry",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify work environment hazard and risks in furniture industry"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Take appropriate actions against identified hazards"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Recognize types of hazards and risks in surface area"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Recognize types of hazards and risks in height and depth"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know proper use of PPE in furniture industry",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify types of PPE"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe work related PPE"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Select types of PPE use in furniture making"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Wear PPE in accordance with instructions"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Carryout maintenance of PPE after use"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Carryout storage of PPE after cleaning"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know first aid in furniture industry",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify first aid box /kit"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify the materials in the first aid box/kit"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use basic dressing material"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Respond to supervisors given instructions on health-related matters"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Report accident/injury to the appropriate supervisor"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know the process of housekeeping in furniture working environment",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain housing keeping in furniture working environment"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify tools, equipment and materials use in furniture working environment"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Carry out general housekeeping of work environment"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Carryout storage of tools, equipment and unused material"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Know correct lifting, loading/offloading and stacking of materials appropriately",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "List the correct lifting and stacking techniques"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Demonstrate appropriate lifting techniques in loading and off-loading of materials without assistance"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Demonstrate correct lifting and loading techniques with mechanical assistance or persons"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Carryout stacking of materials correctly in accordance with instructions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/002/L1",
+      "title": "Communication Skills in a Work Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand workplace communication",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define communication in the workplace environment."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of communication in a furniture workshop."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List factors affecting effective communication"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know verbal and non-verbal communication skills",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain verbal and non-verbal communication"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate appropriate use of tone and gestures when communicating."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the use of non-verbal communication in the workplace environment: \u2022 Charts \u2022 Symbols"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how to interpret and follow workplace instructions accurately",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify communication barriers and how to overcome them."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Read and interpret simple workshop notices and instructions."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ask relevant questions to clarify instructions."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know how to maintain professional etiquette when communicating",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Demonstrate respect and courtesy in workplace environment"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Communicate effectively with colleagues and supervisors"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Follow instruction for a given task"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know how to utilize workplace communication tools effectively",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify common communication tools used in a workshop e.g.: \u2022 Walkie-talkies \u2022 Notice boards \u2022 L ogs"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Use written communication in the workplace environment e.g.: \u2022 Record keeping \u2022 Message writing"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Use non-written communication in the workplace environment e.g.: \u2022 Phone call message \u2022 Text message etc."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/003/L1",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Positive working relationship",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the need for developing positive working relationship with colleagues in workplace environment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the importance of relating with other people in workplace environment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required in workplace environment"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to appropriate personnel when request for assistance fall outside area of responsibility"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about own work that might affect others"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know your responsibilities within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Carry out own role and responsibilities within the team"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks assigned by team leader"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in team work"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Compliance with organizational policies",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Work in line with organizational standards"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Observe organizational codes of practices"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain organizational code of conduct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/004/L1",
+      "title": "Introduction to Furniture Industry",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand professions in the Furniture industry",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "List types of occupations in Furniture making industry such as: \u2022 Upholsterer \u2022 Woodworker \u2022 Joiner \u2022 Designer \u2022 Finisher \u2022 Furniture installer \u2022 Wood carver \u2022 Wood machinist"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the roles of different professionals in the Furniture Industry"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List classification of furniture: \u2022 Classroom \u2022 Bedroom \u2022 Office \u2022 Hospital \u2022 Home \u2022 Kitchen cabinet"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand different machine operation professionals",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify types of machine operation professionals in the furniture industry \u2022 Wood Turner \u2022 Table saw operator \u2022 Moulder operator \u2022 Planer / jointer operator \u2022 Shaper \u2022 Band saw operator \u2022 Spray booth operator \u2022 CNC operator"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the roles of various professions in wood processing"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "List types of products produced by each profession"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know types of services rendered by furniture makers",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe types of services rendered by furniture makers under repair and restoration such as \u2022 Repair of damaged broken furniture \u2022 Restoration of antiques furniture to its original condition"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe services related to refurbishing of upholstery with new fabrics, leather or other materials"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Differentiate between finishing and polishing services"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Recognize types of custom-made furniture e.g.: \u2022 Residential custom furniture \u2022 Commercial custom furniture \u2022 Specialty custom furniture \u2022 Custom furniture style"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/006/L1",
+      "title": "Introduction to hand tools in furniture making",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know basic hand tools use in furniture making industry",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain hand tools"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify different types of measuring tools"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify different types of marking tools"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify different types sawing tools"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Recognize different types of boring tools"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Identify different types of driving tools"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Identify different types of shaving tools"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the selection of hand tools for a given task",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Select hand tools for a given task in furniture making"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Select the correct tools for measuring angles"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Select the correct tools for marking inclined lines"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Select the right saw for cutting across, along and cutting curves the grain"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Select the correct tools for boring dowel holes"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Select the correct tools for driving nails"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Select the right tools for shaving curved surfaces"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Recognize the basic safety applicable to each hand tool"
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Carry out operations with hand tools following the correct handling technique"
+            },
+            {
+              "pc_code": "2.10",
+              "description": "Carryout maintenance of hand tools"
+            },
+            {
+              "pc_code": "2.11",
+              "description": "Carryout safe storage of hand tools after use"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the use of hand tools in furniture making",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Measure a piece of wood to a given size"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Mark a piece of wood to required size"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out sawing operation on a piece of wood by cutting it to the required size with a hand saw"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use a plane to make a piece of wood flat"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Use a plane to prepare a wood square piece"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Plane a piece of wood to a given dimension"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Chisel out a mortise on a piece of wood"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Bore a dowel hole"
+            },
+            {
+              "pc_code": "3.9",
+              "description": "Carryout maintenance of boring tools"
+            },
+            {
+              "pc_code": "3.10",
+              "description": "Carryout the storage of boring tools after use"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/005/L1",
+      "title": "Introduction to Furniture Making Materials",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand different types of material use in furniture making",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Distinguish between types of timber: \u2022 Softwood \u2022 Hardwood"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the characteristics of different types of Nigerian timber specimens: \u2022 Abura \u2022 Mahogany \u2022 Iroko \u2022 Mansonia \u2022 Teak etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List different marketable sizes of Nigerian timber"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the steps in processing wood",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize felling of a tree"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain conversion methods of logs"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify different conversion methods of logs"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain seasoning techniques"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Discuss types of seasoning techniques"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Identify natural from artificial seasoning techniques"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "State different types of defects in woods"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "State how to carryout seasoning of timber"
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Identify natural defects in timber"
+            },
+            {
+              "pc_code": "2.10",
+              "description": "Identify artificial defects in timber"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know various types of manufactured boards",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain manufactured boards"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify different types of manufactured boards"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "State the properties of each type of manufactured board"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "State the uses of each type of manufactured board"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify commercial sizes of manufactured board"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know types of timber bonding materials",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify different types of timber bonding materials"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Distinguish between types of bonding materials"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use bonding materials on solid wood"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use bonding materials for edge banding of manufactured boards"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/007/L1",
+      "title": "Introduction to Furniture Making Processes",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand process of timber preparation in furniture making",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Mark pieces of wood to required dimensions"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Saw pieces of wood to given dimensions"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Plane pieces of timber to given sizes"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Put the appropriate marks on face side and face edge"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand joining techniques in furniture making",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify basic joints used in furniture making"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Construct a sample of simple halving joint"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Construct a simple mortise and tenon joint"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Prepare material for stool construction"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Construct the required joints in stools construction"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Clean joint to fit"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Assemble stool with bonding material"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Dress material for the top of the stool"
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Carry out appropriate edge banding"
+            },
+            {
+              "pc_code": "2.10",
+              "description": "Return unused materials for proper storage"
+            },
+            {
+              "pc_code": "2.11",
+              "description": "Return tools to store"
+            },
+            {
+              "pc_code": "2.12",
+              "description": "Clean the work environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the construction of a simple furniture item",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Prepare cutting list for a simple stool"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain how to prepare cost estimate for making simple objects"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Make a cost estimate for making a simple stool"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify suitable material for constructing a stool"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/008/L1",
+      "title": "Introduction to furniture making operations",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the types of joints used in table construction",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify different types of joints used in table construction"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Select suitable materials for table construction"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Make a cutting list for table construction"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Prepare material for constructing a table"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know preparation of material for table construction",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Cut wood to a given size"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Plane a surface flat and mark face side"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Plane one edge square to the face side and mark face edge"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Gauge to the required width and thickness of the piece of wood"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Plane the wood required width and thickness"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how to construct a table 3- 1 Mark mortise and tenon joint",
+          "performance_criteria": [
+            {
+              "pc_code": "3.2",
+              "description": "Cut the tenon"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Chisel out the mortise"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Dry assemble joints"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Clean joints to fit"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Assemble joints with the right adhesives and cramps"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Clean excess glue with wet rag"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Dress material for the top of the table"
+            },
+            {
+              "pc_code": "3.9",
+              "description": "Carry out appropriate edge banding"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Conduct appropriate housekeeping",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Return unused materials to store"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Return tools to store"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Free work environment of all scraps and obstructions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/009/L1",
+      "title": "Finishing and Finishing Materials",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand safety in application of finishing material",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Discuss finishing and finishing materials"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the reasons for finishing"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Recognize different types of finishing materials"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "State the use of each type of material"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "State basic safety precaution in the application of finishes"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "State safety precaution in the storage of finishes"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Preparation of surface for application of finishing materials",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Carry out initial sanding operation"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Carry out filling operation"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Carry out scraping operation"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry out final sanding operation"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Carry out sealing operation with brush"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Carry out staining operation with brush"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Apply appropriate finish with brush"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Proper handling and care of finishing materials and equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Recognize the various safety, hazards and risks associated with wood finishes."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Mix finish material for application"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out finishing correctly observing safe methods."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Return unused materials for proper storage."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Carry out proper housekeeping procedures after application of finishes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/010/L1",
+      "title": "Reading and interpretation of simple sketches and specifications",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand simple sketches",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain how to sketch a simple object"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Demonstrate simple sketches of simple furniture items"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Draw simple oblique sketches of furniture items"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Draw Isometric sketches of simple furniture items"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand furniture materials specifications",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain furniture materials specifications"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Interpret furniture materials specifications"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate ability to apply furniture materials specifications"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Demonstrate ability of marking inclined lines at given angles"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know different signs and symbols of furniture materials",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Recognize different signs and symbols of furniture materials"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the uses of symbols in furniture construction"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the uses of signs in furniture construction"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/FWK/011/L1",
+      "title": "Basic ICT Skills for furniture making",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the ability to interpret drawings using basic ICT skills",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the use of ICT in furniture making"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the ICT tools use in furniture making"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the benefits of ICT in furniture making"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the importance of AutoCAD in furniture drawing"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use AutoCAD to draw a furniture item"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Safety regulations when using ICT skills in furniture making",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State safety rules to be observed when using ICT in producing furniture drawing"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State unsafe acts when using ICT in producing furniture drawing"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Observe software safety in furniture making drawing: \u2022 Data backup \u2022 User authentication"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand software application in furniture making drawing",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Connect to the internet using Wi-Fi"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Draw furniture item using a software application (AutoCAD)"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Open an e-mail address to download reference furniture items"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate the use of downloaded reference materials in furniture making"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand the use of cell phone in bank transaction",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Open a bank account with a cell phone"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Transfer money using a cell phone"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Check account balance with a cell phone"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Perform Internet Banking."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

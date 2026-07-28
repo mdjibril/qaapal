@@ -1,0 +1,584 @@
+{
+  "trade_name": "NOS ICT Social Media Contents Creation and Management",
+  "level": 2,
+  "units": [
+    {
+      "code": "ICT/SMC/001/L2",
+      "title": "Occupational Health and Safety",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Health and Safety Regulations and Requirements",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain what health and safety regulations are and why they are important in the workplace."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the basic health and safety rules that must be followed in different work environments."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Follow health and safety guidelines to prevent accidents, and ensure a safe working environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify and Mitigate Workplace Hazards",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize common hazards in the workplace, including physical, chemical, and ergonomic risks."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the importance of hazard prevention and safety measures."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify how to take appropriate actions to reduce risks and maintain a safe working environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how to Implement Safe Working Practices and Emergency Procedures Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe the importance of following safety guidelines to prevent accidents and injuries."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the correct steps to take in case of emergencies such as fire, medical incidents, or equipment failures."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Demonstrate how to follow workplace safety rules and respond effectively to emergency situations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/002/L2",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the Principles of Effective Teamwork",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the characteristics of a successful team and the roles each member plays in social media management"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of clear communication, active listening, and mutual respect in a team setting."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe different team dynamics, including collaboration, decision-making and accountability in social media management"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Problem-Solving and Conflict Resolution Skills in Team Settings",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Participate in team discussions on how to analyze social media management"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Address conflicts that may arise within the team in a professional manner, using mediation and negotiation techniques to reach a resolution."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Evaluate the effectiveness of team problem-solving strategies and suggest improvements to enhance team performance in future projects."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Exhibit Leadership and Support Team Development Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Organize team tasks and delegate responsibilities according to team members' strengths and skills."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Provide constructive feedback and support to team members, encouraging continuous improvement and skill development."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Foster a positive team environment by promoting inclusivity, recognizing individual contributions and motivating the team to achieve set goals."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/003/L2",
+      "title": "Communication",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the Importance of Effective Communication in Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the impact of clear and concise communication on team performance, project success and client satisfaction."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify barriers to effective communication in a technical workplace and strategies to overcome them."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe how cultural differences, language and technical jargon can influence communication in a diverse workplace."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Effective Verbal and Non- Verbal Communication Skills",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate verbally with appropriate tone, clarity and technical language when communicating with different stakeholders (e.g., team members, clients, management)."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate active listening by accurately interpreting and responding to verbal and non-verbal cues during discussions and meetings."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply non-verbal communication techniques, such as body language and eye contact, to enhance message delivery and understanding."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Recognize Digital Tools for Professional Communication Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use appropriate digital communication tools (e.g., email, instant messaging, project management platforms) to exchange information effectively within a network support team."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Compose clear and professional emails, reports and other written correspondences to ensure effective communication with stakeholders."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ensure confidentiality and security of sensitive information when communicating through digital platforms, adhering to organizational policies and regulations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/004/L2",
+      "title": "Content Strategy Development",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the importance of a content calendar.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain a content calendar"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify simple steps to create a content calendar."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assemble a weekly content calendar using any content type."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know different types of content .",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain types of content"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify types of content \uf0b7 Education, \uf0b7 Entertainment \uf0b7 Promotion, \uf0b7 Broadcast"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the importance of using different types of content."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how to create trending and viral content",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain what a viral /trending content is"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate ways to create trending topics online"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify online tools to create trending topics in any niche"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know how to plan long-term content strategies. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain long-term content strategies in social media"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Demonstrate how to plan long-term content strategies"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Discuss the tools used in planning long- term content strategies"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/005/L2",
+      "title": "Brand Identity and Messaging",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know how to create a brand voice and personality.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain a brand\u2019s personality"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Develop three short social media captions that reflect a unique brand voice."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Select words for a brand\u2019s voice."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the types of visual identity elements",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain visual identity elements"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify how to use visual identity elements tools; \uf0b7 Styles \uf0b7 Fonts \uf0b7 Logos"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate with any visual identity element how to create a post"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how to write an engaging post and caption for different platforms.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the elements that makes a post engaging"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Differentiate between a formal and a casual post"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Develop a short post for different social media platforms"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know how to adapt your writing style to match each platform\u2019s audience. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify different writing styles for different platforms"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Demonstrate ways to modify a post from a platform to fit another platform"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify ways to keep a brand\u2019s style consistent across platforms."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/006/L2",
+      "title": "Analytics and Performance Tracking",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know social media analytics.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain social media analytic tools"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify key features in any of the major social media that help improve post performance."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Demonstrate with a social media analytic tool to check post performance."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understanding key metrics in social media platforms",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain what these key metrics mean in social media platform \uf0b7 Reach \uf0b7 Impressions \uf0b7 Engagement rate \uf0b7 Click through rate"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Measure the reach of a social media post"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Compare two posts based on their Click-Through Rates"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how to analyze post performance and adjust strategies.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Demonstrate ways to check low performing post"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify changes needed to improve a low-performing post"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify performance adjustment strategies"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand A/B testing for social media content. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain A/B testing in social media content."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Measure the performance of two different post formats using A/B testing."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Compare the results of two different post versions to determine which works better"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/007/L2",
+      "title": "Social Media Advertising Basics",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know different type of social media adverts",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the different types of social media adverts."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Compare image ads and video ads in terms of engagement."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify which type of social media adverts is best for increasing online traffic."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the basics of audience targeting",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate the process a business uses to select the right audience for adverts."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Compare different audience targeting methods in social media"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Differentiate between broad and specific audience targeting strategies."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how to set simple adverts budgets and schedules.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Determine the best way to set a budget for social media advertising."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the effect of scheduling adverts at the right time for performance."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Measure the impact of different budget sizes on advertising success."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know how to measure adverts performance and make changes. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Evaluate the success of a campaign using advertising metrics."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Differentiate between high-performing and low-performing adverts."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Implement changes to improve adverts performance based on analytics."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/SMC/008/L2",
+      "title": "Managing brand reputation.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand ways to handle negative comments.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify negative comments."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify effective ways to respond to negative comments."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain why staying professional is important when handling negative comments."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Determine the best approaches to manage repeated negative feedback"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the strategies used to manage misinformation.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe the impact of misinformation on a brand's reputation."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify effective ways to stop misinformation from spreading"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Develop a response plan for correcting false information about a brand."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand steps to recover from a brand crisis.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain brand crisis."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify key actions a brand should take during a crisis."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the role of communication in crisis management."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Determine ways to rebuild trust with an audience."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know different methods on how to create a crisis response plan.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the need for a crisis response plan."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe key elements in a crisis response plan."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify who should be involved in managing a crisis."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

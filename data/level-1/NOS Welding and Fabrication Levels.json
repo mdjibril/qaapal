@@ -1,0 +1,1086 @@
+{
+  "trade_name": "NOS Welding and Fabrication Levels",
+  "level": 1,
+  "units": [
+    {
+      "code": "ENGG/WF/001/L1",
+      "title": "HEALTH, SAFETY AND ENVIRONMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain work environment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain workshop layout: \u2022 Gangway \u2022 Work Area \u2022 Store \u2022 Changing room \u2022 Entrance and Exit points \u2022 Muster Point \u2022 Emergency Exit"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify safety signs and symbols in a workshop"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify the positions of the following in the workshop: \u2022 First aid box \u2022 Fire extinguisher \u2022 Sand bucket \u2022 Mains switches"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Safety rules and regulations in a work place",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the importance of working safely in a work environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List Personal Protective Equipment (PPE) in welding operations"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify Personal Protective Equipment (PPE)"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain causes of accident in the workshop \u2022 Horseplay \u2022 Spills \u2022 Poor housekeeping \u2022 Loose electrical fittings \u2022 Inappropriate use of tools and equipment"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain how to prevent hazards in work environment"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Demonstrate how to prevent hazards in work environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know first aid procedure ",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define first aid"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "List the items in the first aid box"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain how to administer simple first aid."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Report accident or near-miss to appropriate authority Nigerian Institute of Welding (NIW)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/WF/002/L1",
+      "title": "COMMUNICATION SYSTEM IN WORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Communicate effectively in the work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define communication in work environment."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List methods of communication in work environment."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain verbal communication in work environment"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain non-verbal communication in work environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Develop the ability to identify the source of information in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "List the sources of information in the work environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the different information flow systems in a work environment"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Report findings correctly as expected in the work environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the various communication means in a work environment ",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "List communication equipment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use effectively the various communication equipment in a work environment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Apply appropriate workplace terminologies and jargons"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Pass information correctly"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/WF/003/L1",
+      "title": "TEAMWORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Develop good working relationship with co- workers",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define teamwork"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List the importance of teamwork"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List the qualities of a team player"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibility within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "List own roles and responsibilities within a team."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform tasks in line with the team rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "work well in a group."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Comply with rule of organisation ",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain code of conduct in work environment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use organisational code of practice"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Work in line with organisational standard. Nigerian Institute of Welding (NIW)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/WF/004/L1",
+      "title": "BASIC WELDING SCIENCE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Basic Electricity",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Electricity"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain Electrons and Ions"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Define Energy"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "State different types of energy and how they are converted"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Define: \u2022 Electric current and types \u2022 Voltage and types \u2022 Resistance \u2022 Electric power"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Differentiate between AC and DC"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Define polarity"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Explain change in polarity"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Heat and its effect",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define temperature"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State units of temperature"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain instruments used in measuring temperature"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "State the melting points of metals such as mild steels, stainless steels, aluminum, copper etc."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Define heat energy"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Explain the following: \u2022 Expansion \u2022 Contraction \u2022 Heating \u2022 Quenching"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Define conductor and insulator"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Identify conductors and Insulators"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Change of state",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define matter"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "List states of matter"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain how matter changes from one state to another"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain how metal change from Solid state to Liquid and from Liquid to Solid"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Basic Chemical reaction during welding",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Define bonding"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "State types of bonding"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain how metals bond together during welding"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Explain effect of hydrogen, oxygen and nitrogen gas in metal during welding"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know types of metals",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Define metals and non-metals"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain classes of metals"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "List the different shapes of metals"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "List properties of metal Nigerian Institute of Welding (NIW)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/WF/005/L1",
+      "title": "BASIC TOOLS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Use basic tools",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain basic tools"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List 5 basic tools for the following fitting operations: measuring, marking out, cutting, grinding and handling."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Apply appropriate tools for measuring and marking - out operations"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Apply appropriate tools for cutting operation"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Apply appropriate tools for grinding operations activities"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Apply appropriate tools for handling activities"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Apply safe use of tools in 1.3 - 1.6 above"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know maintenance and care of tools",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Check tools for defects before use."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe pressure requirement on application of tools."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain proper care of tools."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify appropriate lubricant for tools protection"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Lubricate tools against corrosion"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Store properly in: toolbox, metal cabinet, holder(chisels)"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know tools requisition record",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain how to fill tool requisition form"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State the procedure for tool requisition"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Request tools for cutting operation"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Return tools after use Nigerian Institute of Welding (NIW)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/WF/006/L1",
+      "title": "MEASUREMENT AND MARKING OUT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Carry out measurement operation",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define measurement"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain units of measurements."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Convert imperial to SI units for the following: length, mass, area, volume and. temperature"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Measure length using SI units."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "List basic measurement tools such as steel rule, measuring tape, vernier caliper and micrometer screw-gauge."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Use the tools in 1.5 above to carry out measurement of length, diameter and thickness"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Explain the importance of accuracy in measurement"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Explain tolerance in measurement"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carry out marking out operation",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define marking-out"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List basic marking out tools such as chalk, pencil, divider, scriber, center punch, tri-square, steel rules and compass."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "List various methods of marking out such as datum, straight line, circles and arcs."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Apply tools in 2.2 above to perform marking out operation"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain the use of template in marking-out operation"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate care for marking and measuring tools",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain how to care for measuring tools"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Carry out care of the measuring tools"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain how to care for marking- out tools"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carry out care for marking out tools Nigerian Institute of Welding (NIW)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/WF/007/L1",
+      "title": "CUTTING AND GRINDING OPERATIONS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate cutting operations",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain cutting operation"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List various methods of cutting"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List cutting tools such as straight snips, side cutting pliers, hacksaw, power hacksaw, chisel and guillotine."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the right cutting technique and posture"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Carry out cutting operation using tools in 1.3 above"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Apply safe use of cutting tools"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate grinding operations",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define grinding operation"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the importance of grinding operations"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "List types of grinding operations (electrical and manual)"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "List grinding tools such as files, emery cloths, angle grinder, pedestal, table- mounted"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Perform manual grinding operation"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Perform electrical grinding operation."
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Apply safe use of grinding tools"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate the proper handling of cutting and grinding tools",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the procedure for changing worn out cutting and grinding disc"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Carry out replacement of worn out cutting and grinding disc"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the care for various cutting tools listed in 1.3 above"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the care for various grinding tools listed in 2.4 above Nigerian Institute of Welding (NIW)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/WF/008/L1",
+      "title": "BASIC DRAWING AND INTERPRETATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know basic elements of drawing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define drawing"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain types of lines in drawing"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain simple isometric shapes"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the use of angles and symbols in drawing"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Sketch a simple drawing"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know simple dimensions in drawing.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain dimensions"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List types of dimensions"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Produce a simple drawing with dimensions"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carry out interpretation of simple drawing",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain how to interpret simple drawing."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Obtain information on pattern from a given drawing"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Obtain information on dimension from a given drawing"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Obtain information on materials from a given drawing Nigerian Institute of Welding (NIW)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/WF/009/L1",
+      "title": "ARC WELDING (MMA)",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know safety precautions in arc welding",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safety precautions in arc welding"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List the Personal Protective Equipment\u2019s (PPE) used in arc welding processes"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the features of arc welding equipment: \u2022 AC/DC Welding Machine \u2022 Hammer \u2022 Chipping Hammer \u2022 Welding Goggle \u2022 Face Shield \u2022 Face Mask \u2022 Welding Tong \u2022 Electrode Holder \u2022 Welding Return Lead \u2022 Workbench \u2022 Wire Brush \u2022 Jigs and Fixtures \u2022 Grinders"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the safety precautions in handling arc welding equipment: \u2022 Avoid oil/grease on work piece \u2022 Ensure proper connection of power cables \u2022 Ensure avoidance of moisture/wet surface on machines and work environment \u2022 Ensure safe handling of machines and equipment"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Take appropriate action to minimize exposure to welding fumes, rays, etc."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the fundamental s of arc welding Processes",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define welding"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List types of arc welding processes such as Manual Metal Arc (MMA), Tungsten Inert Gas (TIG), Flux Cored Arc Welding (FCAW), Metal-Inert Gas/Metal-Active Gas (MIG/MAG)."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the advantages and disadvantages of arc welding processes in 2.2 above"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know MMA welding machines",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain types of MMA welding machines"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the operational features of types of MMA (AC and DC) welding machines"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the operational sequence of MMA welding machines"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify various welding machine"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Set appropriate current in 3.1 above"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know welding consumables",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain welding consumables"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "List consumables for welding such as; electrodes, cutting, grinding and polishing discs"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Select appropriate welding consumables for a given task"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know the range of materials",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "List types of materials for arc welding such as sheet metal, angle iron, flat bar, rods and pipes"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify types of materials for arc welding"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Select appropriate sizes of materials"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Demonstrate the use of MMA welding Machine",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Set up MMA welding machine"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Set up the appropriate variables in the welding machine"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Prepare material for welding"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Select the appropriate electrodes for welding"
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Carry out tack welding operation"
+            },
+            {
+              "pc_code": "6.6",
+              "description": "Carry out complete welding operation"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Know basic costing and quotation",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Explain costing and quotation"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Explain how to compute welding estimate for a given job"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Carry out costing for a given job Nigerian Institute of Welding (NIW)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/WF/010/L1",
+      "title": "GAS WELDING I",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know safety precautions in gas welding",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safety precautions in gas welding"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List the Personal Protective Equipment (PPE) used in gas welding process"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the features of gas welding equipment: \u2022 Cylinder colour code, \u2022 Cylinder threading \u2022 Hose colour code \u2022 Regulator colour code \u2022 Regulator threading \u2022 Blow pipe threading \u2022 Flash back arrestor"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the safety precautions in handling gas cylinders: \u2022 Avoid oil/grease on cylinders \u2022 Positioning \u2022 Cylinder movement/transportation"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain methods of checking for gas leakages: \u2022 Smell \u2022 Hissing sound \u2022 Soap solution \u2022 Gas detector"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carry out gas cutting/heating operations",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define gas cutting"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Define gas heating"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe the procedures for gas cutting/heating operations: \u2022 assembling, \u2022 testing, \u2022 lighting, \u2022 shutting down, \u2022 Disassembling."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "List types of gas for cutting/heating: \u2022 Propane \u2022 Methane \u2022 oxygen \u2022 butane \u2022 Acetylene"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain the manifold system"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Describe gas cutting flames"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Describe gas heating flames"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Perform heating operation."
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Perform cutting operation"
+            },
+            {
+              "pc_code": "2.10",
+              "description": "Describe common faults during cutting operation."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carry out gas welding operations",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe gas welding as a joining process"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify gas welding equipment and accessories: \u2022 Cylinders, \u2022 Pressure Regulator \u2022 Gas Hose \u2022 Flashback Arrestors \u2022 Torches \u2022 Tips \u2022 Mixer \u2022 Spark Lighter"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Select consumables for gas welding operations"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Select appropriate accessories for gas welding operations"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Carry out gas welding operations on sheet metal (3mm carbon steel)"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know basic costing and quotation",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain costing and quotation"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain how to compute welding estimate for a given job"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Carry out costing for a given job Nigerian Institute of Welding (NIW)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/WF/011/L1",
+      "title": "PLASTIC WELDING I",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know safety precautions in plastic welding",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safety precautions in plastic welding"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List the Personal Protective Equipment (PPE) used in plastic welding process"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the features of plastic welding equipment: \u2022 Compressor \u2022 Heating filament \u2022 Nozzles"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the safety precautions in handling air compressor and fumes."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carry out plastic joint preparation",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe categories of plastic that can be welded."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe the procedures for plastic joint preparation."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "List tools for joint preparation: \u2022 Hacksaw (Hand/Powered) \u2022 Grinder \u2022 Degreaser"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carry out plastic welding operations",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define Plastic Welding"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe hot air/gas and heated tube plastic welding processes"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify hot air/gas plastic welding equipment and accessories: \u2022 Cylinders \u2022 Gas Hose \u2022 Torches \u2022 Tips \u2022 Pressure Regulator"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Select consumables for plastic welding operation"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Select appropriate accessories for plastic welding operations"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Carry out plastic welding operations on plastic material"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know basic costing and quotation",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain costing and quotation"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain how to compute plastic welding estimate for a given job"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Carry out costing for a given job."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,864 @@
+{
+  "trade_name": "NOS ICT Cybersecurity Analyst L3",
+  "level": 3,
+  "units": [
+    {
+      "code": "IS/CCA/001/L3",
+      "title": "Health, Safety and Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand safety precautions in workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Dress properly to the work environment."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Always Work safely, complying with health and safety and other relevant regulations and guidelines."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Get any cuts, grazes and wounds treated by the appropriate and qualified person."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report illness and infection promptly to the appropriate persons."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know how to maintain personal health and hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Summarise own responsibility under the Health and Safety Act as it relates to own occupation"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State general rules on hygiene that must be followed."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the importance of maintaining good personal hygiene."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe how to deal with cuts, grazes and wounds and why it is important to do so"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Be able to help maintain a hygienic, safe and secure workplace.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State the importance of working in a healthy, safe and hygienic workplace."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Promote health, hygiene and safety procedures during work."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Practice emergency procedures during work."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Ensure that organizational security procedures are followed."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Ensure the disposal of waste and pollution control with organic and inorganic waste disposal methods."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Prevent hazards and maintain safe and secure workplace Objective (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Supervise identification of any hazards or potential hazards and deal with these correctly."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "State where information about health and safety in your workplace can be obtained."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe the type of hazards in the workplace that may occur and how to deal with them."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify hazards that can be dealt with personally and those that should be reported to appropriate personnel."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Follow organization procedures on how to warn other people about hazards and why this is important"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "State why accidents and near accidents should be reported to the appropriate personnel."
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Describe the type of emergencies that may happen in the workplace and how to deal with them."
+            },
+            {
+              "pc_code": "4.8",
+              "description": "State where to find the first-aid equipment and locate the authorized personnel."
+            },
+            {
+              "pc_code": "4.9",
+              "description": "Lift and handle materials in line with work environment procedure."
+            },
+            {
+              "pc_code": "4.10",
+              "description": "State other ways of working safely that are relevant to own position responsibility and its importance."
+            },
+            {
+              "pc_code": "4.11",
+              "description": "Describe organizational emergencies procedures, in particular fire, and how these should be followed."
+            },
+            {
+              "pc_code": "4.12",
+              "description": "State the possible causes for fire in the workplace."
+            },
+            {
+              "pc_code": "4.13",
+              "description": "Describe how to minimize the possibility of fire in the workplace."
+            },
+            {
+              "pc_code": "4.14",
+              "description": "State where to find the alarms and how to set them up."
+            },
+            {
+              "pc_code": "4.15",
+              "description": "State why a fire should never be approached unless it is safe to."
+            },
+            {
+              "pc_code": "4.17",
+              "description": "Describe organizational security procedures and why these are important"
+            },
+            {
+              "pc_code": "4.18",
+              "description": "State the importance of reporting all usual or non-routine incidents to the appropriate personnel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCA/002/L3",
+      "title": "Communication and Interpersonal Skill",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Communicate with Client",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Notify client about new systems features to keep them up to date."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Notify client about new systems features to keep them up to date."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Communicate with the client about any changes on the website/application"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Confirm that no request from client is pending."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate to the team about the market trends to ensure that they are kept up to date."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Communicate with Peer/Team Members",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Check that all team members/peers are in line with the requirements"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Give clear directions to team members/peers to follow"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Check that a proper mechanism is in place to motivate all team members"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Provide a suitable and comfortable work environment for peers and team members"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Give report of team members activities"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Communicate with Managers",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Provide a standard operating procedure for communication with the seniors."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Follow all instructions given by seniors in each job role."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Execute all instructions coming from the seniors using proper mechanism"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Communicate all the emergencies and bugs/updates to the relevant Managers"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCA/003/L3",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Positive working relationship with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the need for developing positive working relationship with colleagues"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel valued and respected"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the personnel when request for assistance fall outside area of responsibility"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about own work that might affect others"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibility within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within team"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in teamwork"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Compliance with policy of organisation (PC)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Work in line with organizational standard"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use organizational code of practice"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain organizational code of conduct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCA/004/L3",
+      "title": "Cybersecurity Principles",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know cybersecurity",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe the concepts of cybersecurity"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of cybersecurity "
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the consequences and implications of inadequate cybersecurity"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Define core terminologies used in cybersecurity"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the Behaviours of Threat Actors",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the terms: good actors and bad actors"
+            },
+            {
+              "pc_code": "2.2",
+              "description": " Describe the behaviours of good actors and bad actors (Ethical hackers, Gray Hat hackers, Black Hat hackers ) "
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the motivations of good actors and bad actors "
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify key sectors that are most vulnerable to cyber-attacks"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know security by design",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": " Describe the term security by design "
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the principles of security by design"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the consequences of not considering security during design phase"
+            },
+            {
+              "pc_code": "3.1",
+              "description": "Describe the advantages and disadvantages of security by design"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCA/005/L3",
+      "title": "Threat Intelligence in Cybersecurity",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know cyber threat intelligence",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify key concepts of cyber threat intelligence"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the following terms in relation to cybersecurity: \u2212 Threats \u2212 Exploits \u2212 Vulnerabilities \u2212 Risk"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe threat intelligence lifecycle"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain emerging attack techniques and how to recognise them"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain the importance of using reliable and valid Open- Source Intelligence information"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Identify organization\u2019s current threat status"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Recommend countermeasures based on 1.7"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know threat models",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe range of threat models"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the steps within a threat model"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Evaluate a threat model"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know malicious software",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify types of malicious software"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the effects of different types of malicious software on an infected system"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the motives for using specific malicious software"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain how specific malicious software attacks are made more effective due to human factors"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know social engineering (PC)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the term \u2018social engineering\u2019"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Show examples of how Open- Source Intelligence can be used for social engineering"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Demonstrate ways a social engineering attack could take place"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCA/006/L3",
+      "title": "Cybersecurity Testing, Vulnerabilities and Controls",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the common types of testing in cybersecurity",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain different types of cybersecurity testing"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify why cybersecurity testing is important"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Demonstrate types of cybersecurity testing"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Show mitigations following cybersecurity testing"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Demonstrate why it is important to retest following any changes made"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Display how the outcomes of cybersecurity testing can be reported"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Be able to mitigate potential cybersecurity vulnerabilities",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify cybersecurity vulnerabilities"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate the steps to be taken when a vulnerability has been identified"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply the correct response to the vulnerability"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Develop an appropriate communication plan to mitigate future vulnerabilities"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know controls in cybersecurity",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify cybersecurity controls"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Develop a basic cybersecurity framework"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Evaluate a cybersecurity framework"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify how specific malicious software attacks are made more effective due to human factors"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Be able to apply a cybersecurity control",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Demonstrate how to apply controls"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Implement a basic cybersecurity control"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Justify the implementation of a chosen cybersecurity control"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Explain why a control might not be applied"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCA/007/L3",
+      "title": "Cybersecurity Incident Response",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know what is meant by a cybersecurity incident response plan",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe what a cybersecurity incident response plan is used for"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain when a cybersecurity incident response plan is used"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the stages of a cybersecurity incident response lifecycle"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Be able to develop a cybersecurity incident response plan",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain why it is important to maintain an up-to-date cybersecurity incident log"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the steps to be included within a cybersecurity incident response plan"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain why it is important to have a cybersecurity incident response plan"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Develop a cybersecurity incident response plan for an organisation"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Be able to develop an incident postmortem report",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain what is meant by incident postmortem"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the structure of an incident postmortem"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the importance of the following when carrying out an incident postmortem: \u2212 Integrity \u2212 Rigour \u2212 Discipline"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Create a postmortem report of an incident"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Analyse report and make recommendations based on the findings"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCA/008/L3",
+      "title": "Understand Regulations, Standards, Policies and",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know regulations and polices relating to cybersecurity",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the importance of regulations and, policies in cybersecurity"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain of various regulations in cybersecurity"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the application of different regulations"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain different policies in an organization"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know information security standards and frameworks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify ISO standards related to cybersecurity"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate the understanding of cybersecurity frameworks"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate how ISO standards are used to support cybersecurity"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe the usefulness of the ISO/IEC 27001 family in cybersecurity"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the usefulness of configuration guides",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain what benchmarks and configuration guides are used for"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate the understanding of various types of configurations guides"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Give two examples each of software and hardware configuration guides content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCA/009/L3",
+      "title": "Attack Vectors",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Common Attack Vectors",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define attack vectors"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify different attack vectors"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the methods used in each attack vector"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the potential impacts of each attack vector"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Analyse the Impact of Attack Vectors on the CIA Triad",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the impact of attack vectors on data integrity"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Evaluate the impact of attack vectors on data confidentiality"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Assess the effect of attack vectors on data availability"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Countermeasures for Common Attack Vectors",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify common defence mechanisms for attack vectors"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain best practices to prevent social engineering attacks"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Monitor system logs for indicators of attack vectors"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Detect cyber security attacks"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Respond to 3.4 by following incident response procedures"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCA/010/L3",
+      "title": "Ethical Behaviour in Cybersecurity",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know ethical theories and frameworks in the context of cybersecurity",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain ethical theories in cyber securities"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Analyse cybersecurity cases in the context of ethical frameworks,"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the ethical issues involved in 1.2"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain ethical approaches in resolving conflicts in cybersecurity."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Apply ethical (Procedures) to make informed decisions in hypothetical cybersecurity scenarios."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Justify the approach based on ethical theories."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Evaluate the legal and social responsibilities of cybersecurity professionals",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify laws and regulations that govern ethical behaviour in cybersecurity"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the ethical implications of data breaches, cyberattacks, and surveillance on society and individual privacy"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the role of professional codes of ethics, such as those from (ISC)\u00b2, ISACA, or IEEE, in guiding cybersecurity practices"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Evaluate the social responsibilities of cybersecurity professionals, including balancing security needs with the rights of individuals"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Promote ethical culture and awareness within cybersecurity teams and organizations.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify and address potential ethical vulnerabilities within organizational cybersecurity policies and practices"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Evaluate potential consequences of cybersecurity actions on stakeholders"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Create a personal code of ethics that reflects both professional standards and personal values"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,940 @@
+{
+  "trade_name": "NOS Tilling and Decorative Stonework",
+  "level": 3,
+  "units": [
+    {
+      "code": "CON/TL/001/L3",
+      "title": "Health, Safety and Environment in Tiling and Decorative",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Execute health, safety, and Environment on construction sites applicable to tiling/stone decorative works",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify health, safety and welfare measures in construction sites relating to tiling and stone decorative works"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Apply health and safety regulations relating to tiling/stone decorative works."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Carry out activities in a safe and responsible manner in accordance with standard guidance and manufacturer\u2019s instruction."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Demonstrate how to report accidents and emergencies to appropriate personnel such as; \u2022 First Aiders \u2022 Supervisors/Managers \u2022 Health and Safety workers"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate the use of personal protective gears",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use clean and smart PPE in accordance with instructions."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Report accidents and emergencies to personnel such as; \u2022 First Aiders \u2022 Supervisors/Managers \u2022 Health and Safety workers"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Clean and store PPE appropriately after use"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Ensure personal health and hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Summarize own responsibility under the health and safety Act as it relates to own occupation"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State general rules on hygiene that must be followed."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify the use of Personal Protection Equipment such as Head, Foot, Face & Eye, Hand, and Body protection gears among team members."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the importance of maintaining good personal hygiene."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Describe how to deal with cuts, bruises, and wounds and why it is important to do so."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Ensure a hygienic, safe and secure workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "State the importance of working in a healthy, safe and hygienic workplace ."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Report any accident or near accident quickly and accurately to the authorized person."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Follow health, hygiene and safety procedures during work."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Describe emergency procedures during work"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Follow organizational security procedures."
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Use disposal of waste and pollution control with organic and inorganic waste disposal methods."
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Recognize sound/ noise control and protection methods and guidelines."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Prevent hazards and maintain safe & secure workplace.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify any hazards or potential hazards and deal with it."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Describe the types of hazards in the workplace that may occur and how to deal with them."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Monitor safe lifting and handling techniques that should be followed"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "State ways of working safely that are relevant to own position and why they are important"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Analyze organizational emergency procedures and how it should be adhered strictly to"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "State the possible causes of fire in the workplace."
+            },
+            {
+              "pc_code": "5.7",
+              "description": "Describe how to minimize the possibility of fire in the workplace."
+            },
+            {
+              "pc_code": "5.8",
+              "description": "Describe organizational security procedures and why these are important."
+            },
+            {
+              "pc_code": "5.9",
+              "description": "Describe the importance of reporting all usual and non- routine incidents to the appropriate personnel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/TL/002/L3",
+      "title": "Communication Systems in a Work Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Use complex communication systems in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use verbal means to pass on necessary information."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use written means to pass necessary information such as quotation, specifications, request for approvals etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Interpret symbols and signs appropriately."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Supervise the use of various information sources in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Locate the source of information in the work environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Monitor the use of various information flow systems in a work environment."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use instructions in line with ethics of the work environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate the use of various means of communication in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Observe the various communication equipment in the work environment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use the various communication equipment in a work environment in accordance with instructions."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Pass information to the right personnel in accordance with instructions."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Pass information using symbols, signs and codes."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Recognize instructions in line with ethics of the work environment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/TL/003/L3",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Develop Positive working relationship with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the importance of positive working relationships with colleagues."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Monitor team members in accordance with instructions."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Report to the personnel request for assistance in accordance with instructions."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Communicate with colleagues about own work that might affect others."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibilities within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain own role and responsibilities within the team."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Supervise team members in accordance with instructions."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Comply with policy of organization.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify rules from code of conduct relevant to own trade area"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Investigate in line with organizational policy"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Observe organizational code of conduct."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/TL/04/L3",
+      "title": "Mathematics Skills in Tiling/Decorative Stonework",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Analyze drawings with mathematical methods.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Carry out basic mathematical operations such as addition, multiplication etc"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use fractional methods to solve practical problems"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Add, subtract, multiply and divide with fractions and decimal fractions"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Determine angles when cutting tiles according to the size of the angle",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Measure angle on tiles/stone required for cutting."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Measure and cut as many different angles as possible."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use large wooden or plastic protractor to measure angles."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Calculate surface area of floors and walls",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Determine area of wall surface in square meter (m2)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Assess area of floor surface in square meter (m2)"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Measure perimeter of given rectangle in meter as 2(L+B)"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Compare different shapes using relevant formulas"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Calculate volume and surface areas of three- dimensional objects.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Measure volume of various shapes"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe volume of a bedroom, sitting room, convenience e.t.c"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Calculate areas of floors, walls in a room"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/TL/005/L3",
+      "title": "Estimating",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Estimate quantity of tiles/stone from the working drawing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use any working drawing of building, i.e. residential or educational."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Interpret the drawing for to locate the area to be tiled or stonework"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Calculate the area to be tiled or decorated with stone"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Estimate the quantity of sand and cement required."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Estimate the quantity of adhesive/mortar required."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Request for all materials as required."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Allow for waste when estimating",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "From drawing, evaluate actual quantity required."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Allow at least five percent (5%) for waste from cutting fraction."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "List ways of minimizing waste"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Evaluate cost of project from working drawing",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Calculate the area from drawings"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Prepare quotation of materials e.g. Fine aggregate, cement, adhesive, white cement etc."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Order for materials as required."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/TL/006/L3",
+      "title": "Lay Wall and Floor Tiles",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Organize mixing for adhesives for Tile work",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Organize materials for mixing adhesives"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Prepare position for mixing adhesives according to mechanical or manual methods"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Monitor the measurements of materials to specification"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Observe the mixing of adhesive according to requirements"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Supervise the laying of tiles to level and alignment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Interpret the working drawing to locate area to lay the tiles/stones"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Supervise setting out the area to receive tiles/stones"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Supervise the selection of the tiles required according to size and color."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Cut any fraction to size using an appropriate mechanical cutter."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Supervise the soaking of tiles to absorb initial water to prevent tiles from absorbing water from the mortar."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Lay tiles to standard using adhesives."
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Ensure tiles are laid, leveled and aligned including all fractions."
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Lay the tiles to the final level."
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Supervise the grouting of the joints using adhesives."
+            },
+            {
+              "pc_code": "2.10",
+              "description": "Supervise the cleaning of tile surface and work area."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Ensure tile joints and surfaces are aligned and flat",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Inspect tile joints as work proceed to ensure bond and joint alignment are even"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use line, straight edge and level as work proceed in accordance with instructions."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Evaluate each joint line before proceeding to the next level in accordance with instructions."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Monitor tiling for wall and floor as required to the final point."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Fix and lay mosaic tiles",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Measure area to receive mosaic tiles."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Select the color and pattern of mosaic required."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Calculate the surface area to receive mosaic."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Select mosaic tiles and required fixing adhesives"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Fix mosaic in position."
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Ensure joints are filled."
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Ensure the selected pattern is the designed pattern."
+            },
+            {
+              "pc_code": "4.8",
+              "description": "Ensure it is set, aligned and truly flat on the wall or floor"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Confirm that grouted joints are straight and uniform in width",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Confirm joint alignment is straight."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Confirm joint width are uniform"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Organize to fill joints width with grout, i.e slurry or thick cement liquid"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Organize to clean excess grout on mosaic tiles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/TL/007/L3",
+      "title": "Lay and Install Tile to Internal and External Corners",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Supervise the preparation for laying of tiles to internal and external corners",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Monitor the corners to receive the tiles"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Organize tools required to cut tiles into fractional sizes for corners"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Analyze materials required for tile laying of corners"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Cut tiles into various fractional sizes.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Measure the tiles required for the corners."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Carryout cutting of tiles to various fractional sizes."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Monitor the fractional tiles fit into their position"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Supervise the fixing of the corner tiles",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Observe mix the required mortar in accordance with specifications."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Observe Soaking of tiles in water."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use mortar to on the tile surface"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Monitor that tiles are in accordance specifications."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Carry out the grout of the joints in accordance with specifications."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Guide the cleaning of the working area and tile surface"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/TL/008/L3",
+      "title": "Lay Tiles on Curved Surfaces",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Organize tile work on curved surfaces",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Determine the work position from the working drawings"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Ensure tiles are prepared for the position."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Estimate quantity of tiles required"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Set out the tile work as required.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Set out the curved surfaces by checking the layout of the tiles"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Mark the position of tiles on the curve."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Organize materials and tools as required."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Fix tile to curved surfaces",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Measure and cut tiles for curved surface."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Erect tiles using approved mortar."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Monitor the curve is uniform in accordance with specifications."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/TL/009/L3",
+      "title": "Decorative Stone Works",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Supervise preparation for laying of decorative stones",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the positions in stonework decoration."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Justify the decorative stonework to be laid."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Prepare adhesives (mortar) in accordance with specifications."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Organize work for decorative stone construction",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Monitor the work position from the working drawings"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Calculate the quantity of stones required"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Supervise the selection of the required decorative stones."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Monitor the Setting-out of the foundation in accordance with specifications."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Cast Monitor the foundation in concrete casting in accordance with specifications."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Use the required tools to dress the stonework"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Use mortar the dressed stones in accordance with specifications."
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Assess the grout joints and clean work environment in accordance with Instructions."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Ensure stone joints and surfaces are aligned and flat",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Monitor stonework for even bond and joint and alignment."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Evaluate joints line before proceeding to the next layer in accordance with instructions."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Compare stonework as required to the final finish point in accordance with specifications."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/TL/010/L3",
+      "title": "Repair of Tile/Stone Works",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Supervise the repair and maintenance of tile/stone laid surfaces",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Rectify damaged tiles or stonework area by chiseling."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Calculate the total area of tiles or decorative stonework to be replaced."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Carry out cleaning of the area for tiles/decorative stonework removed"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Supervise the selection of tiles/stones for replacement.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Determine the quantity of tiles/stonework and adhesives required for the replacement"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Selection of tiles/stonework to be replaced according to color."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Organize to Monitor mixing of adhesive/cement grout to be used for re-fixing the tiles."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Fix tiles/stones to damaged area.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Erect the tiles/stonework in accordance with specifications."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Observe cleaning of the work area"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use tools and equipment are washed and stored properly at the end of each workday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/TL/011/L3",
+      "title": "Project Planning",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Explain project planning and coordination",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the basics of project planning processes and procedures."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Evaluate the factors that affect projects from start to finish"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Analyze on type, cost, texture etc implication on tile/stonework"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Plan basic activities required for tiling/decorative stonework",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the project drawings."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Determine the area to be tiled/laid with stonework"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Estimate and prepare quotation to include prices of material and labor"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Organize and arrange tools/equipment and materials"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Monitor the tiling/decorative stonework."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply inspection procedures for tiling/stonework",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Monitor the job site, check alignment and cleanliness in accordance with specifications."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Observe cracks or lifting of tiles/stonework from surfaces"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Evaluate the quality of materials."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Assess compliance with standard operating procedures"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

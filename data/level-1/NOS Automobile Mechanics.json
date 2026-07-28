@@ -1,0 +1,708 @@
+{
+  "trade_name": "NOS Automobile Mechanics",
+  "level": 1,
+  "units": [
+    {
+      "code": "AUT/AM/001/L1",
+      "title": "Health, Safety and Environment in Automotive industry",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Carryout Personal health and hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Wear clean, smart and appropriate personal protective equipment (wears)."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Work safely at all times, complying with health, safety and environmental regulations and guidelines."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Get cuts, grazes and wounds treated by the appropriate personnel."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report any form of illness promptly to the appropriate personnel."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Maintain personal health and hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify own responsibility in the health and safety Act as it relates to own occupation."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify general rules on hygiene that must be followed."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify correct personal protection equipment (such as Head Protection, Foot Protection, Hand and body protection) and regulatory protection."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify the importance of maintaining good personal hygiene."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Demonstrate how to deal with cuts, grazes and wounds and why it is important to do so."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the importance of working in a healthy, safe and hygienic workplace."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Report any accidents or near misses quickly and accurately to the proper personnel."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify health, hygiene and safety procedure at work."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carryout emergency procedures during work."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify organizational security procedures and measures."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Carryout disposal of waste and pollution control with organic and inorganic waste disposal methods."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Follow noise control and protection methods."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify any potential hazards and deal with these correctly."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify where information about health, safety and environment in the workplace can be obtained."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify the types of hazards in the workplace that may occur and how to deal with them."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify hazards that can be dealt with personally and those that should be reported to the appropriate personnel."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Identify how to warn other people about potential hazards/hazards and why this is important."
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Identify why accidents and near- accidents should be reported and to whom."
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Identify the types of emergencies that may happen in the workplace and how to deal with it."
+            },
+            {
+              "pc_code": "4.8",
+              "description": "Identify where to find the first- aid equipment and who the registered first responder is in the work place"
+            },
+            {
+              "pc_code": "4.9",
+              "description": "Carryout safe lifting and handling techniques that should be followed."
+            },
+            {
+              "pc_code": "4.10",
+              "description": "Identify other ways of working safely that are relevant to own position and why they are important."
+            },
+            {
+              "pc_code": "4.11",
+              "description": "Carryout organizational emergency procedures, in particular fire, and how these should be followed."
+            },
+            {
+              "pc_code": "4.12",
+              "description": "Identify the possible causes of fire and how to minimize the possibility of fire in the workplace."
+            },
+            {
+              "pc_code": "4.13",
+              "description": "Identify where to find the alarms and how to set them off."
+            },
+            {
+              "pc_code": "4.14",
+              "description": "Identify the importance of following the fire safety laws and why it should never be approached unless it is safe to do so."
+            },
+            {
+              "pc_code": "4.15",
+              "description": "Describe the organizational security procedures and why these are important."
+            },
+            {
+              "pc_code": "4.16",
+              "description": "Identify the importance of reporting all incidents to the appropriate personnel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/AM/002/L1",
+      "title": "COMMUNICATION PROCESS IN AN AUTOMOTIVE ENVIRONMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Carryout non- complex communication system in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Carryout a simple verbal means to pass necessary information."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Carryout non-verbal means to pass on necessary information e.g. body language."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify and explain symbols and signs appropriately"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carryout Information source identification in a work environment.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the source of information in an organization and work environment."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Relate appropriately with the source of information."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use the various information flow systems in a work environment"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use information sources to address challenges in a work environment."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Communicate findings in accordance to procedure in a work environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Identify communication methods in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the various methods of communication in the work environment."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use effectively, the various methods of communication in a work environment and communicate effectively to the right personnel."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify symbols, signs and codes for effective information"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carryout instructions in line with ethics of the work environment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/AM/003/L1",
+      "title": "TEAM WORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Carryout positive working relationship with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the need for developing positive relationship with colleagues."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel valued and respected."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the appropriate personnel when request/requesting for assistance fall outside area of responsibility."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about own work that might affect others."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take Responsibilities within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within the team."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Recognize other team member role and responsibilities within the team."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Comply with organisational policies",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Carryout work In line with organizational standard and structure."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify organizational code of conduct."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use organizational code of practice."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/AM/004/L1",
+      "title": "INTRODUCTION TO AUTOMOBILE MECHANIC WORKSHOP ORGANIZATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify different sections in an Automobile workshop Mechanical Electrical Body works",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the different sections of an automobile workshop \u2022 Mechanical \u2022 Electrical \u2022 Body works"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the function of the sections in an automobile workshop"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Carryout the services rendered in the various sections of an automobile workshop"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify roles of Workshop Personnel Workshop manager Line supervisor Forman",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify key personnel in an automobile workshop"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the roles of key personnel in the workshop"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State functions of the following personnel \u2022 Workshop manager \u2022 Line supervisor \u2022 Forman"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Organizational rules, regulation a nd standards.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Work in line with organizational standard."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use organization code of practice."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain organizational Code of Conduct."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/AM/005/L1",
+      "title": "INTRODUCTION TO VEHICLE LAYOUT AND SYSTEMS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the history of the Motor vehicle",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define the Automobile"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the history of Motor vehicles"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the basic constructional sections that form the motor vehicle"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify automobile Systems O 3: Identify Chassis design and structures",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the basic systems that form the automobile"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the engines and thei classification"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the engine supporting systems in automobil Fuel system Ignition Engine Lubrication Engine Cooling Electrical and Electronics Etc."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify wheel drives FWD RWD AWD 4WD"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Identify the power transmission systems Manual transmission Clutch Automatic Transmission and transaxle"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify various chassis design structures"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Recognise the differences between the chassis design structures"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe advantages and disadvantage of each chassis design and structures."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/AM/006/L1",
+      "title": "AUTOMOTIVE SERVICE TOOLS AND EQUIPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify common Automotive service hand and power tools",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify types of hand and power tools and its use in the automotive workshop"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Carry out operation using hand and power tools in accordance with safe working practices to achieve the work outcome."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Carryout maintenance on; \u2022 Hand tools \u2022 Ancillary equipment \u2022 Safety aids."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Select relevant hand and power tools to achieve an identified task."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Perform work skills to measure, mark out, file, fit, tap, thread, cut, drill, finish, position and secure work piece and tools."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify common Automotive service workshop equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Carry out pre-start preparation inspections on power tools and equipment in accordance with approved procedures"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Store and secure workshop tools and equipment in line with workplace procedures"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Carryout check and recalibrate tools in accordance with workshop tools manuals"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carryout maintenance and servicing of workplace tools",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify damaged and worn out tools and equipment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Carryout service, adjust and or maintain tools and equipment as specified by manufacturers."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify problems associated with power tools and equipment which need to be referred to authorized personnel."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carry out checks in accordance with manufacturer\u2019s/operators guidance, legislation and official guidance and organizational requirements."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Identify Workshop Tools And Equipment Storage",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Carryout store documentation procedures in an automotive workshop."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Carryout storage procedures of tools and equipment in automotive workshop"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Carry out routine maintenance of automotive service tools and equipment"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Store and secure workshop tools and equipment in line with workplace procedures."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Dispose waste generated as a result of tool/equipment usage in accordance with workplace procedures."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/AM/007/L1",
+      "title": "BASIC COMPUTER SKILLS IN AUTOMOTIVE INDUSTRY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify Computer Classification and operation",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify computers according to usage, type and size."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Distinguish between analogue, digital and hybrid computers."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the various types of micro-computers."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Carry out a given assignment using the computer."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify the use of computers in modern automobile w orkshops.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the roles of computer in modern motor vehicle"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Carryout the various application of computer in automobile workshop."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the characteristics and benefits of computer i automotive workshop"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Identify Computer Hardware and Software Elements",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the functions of various hardware and softwar components of the computer"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Distinguish between operating e. system and application softwar"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Select application software for particular operation."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Carryout basic computer Operations",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Operate the keyboard using function keys, alphanumeric keys, numeric keys and control keys."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Carry out typing exercise on the computer."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Perform printing procedures in computer operations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AUT/AM/008/L1",
+      "title": "INTRODUCTION TO PERIODIC MAINTENANCE SERVICES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify vehicle maintenance Services",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "List the importance of vehicle maintenance services"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify types of maintenance services carried out on a vehicle"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify vehicle maintenance checklist."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Carryout vehicle maintenance checklist to assess the various vehicle systems and equipment."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carryout procedures for conducting a lubrication service",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Select the right PPE to carryout lubrication services."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the correct servicing parts required for lubrication services."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the procedures for conducting a lubrication service"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry out a vehicle lubrication service following manufacturer recommended procedure."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carryout procedure fo servicing a vehicle engine",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify suitable personal protective equipment and motor vehicle coverings throughout all maintenance activities"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify suitable sources of technical information to support all motor vehicle maintenance activities."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify appropriate diagnostic tools and equipment for routine engine service."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify the motor vehicle engine systems and components following: \u2022 The manufacturer\u2019s approved examination methods \u2022 Workplace procedures \u2022 Health, Safety Environment requirements"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify accurately any vehicle engine system and components that falls outside the specified maintenance schedule."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Identify technical issues of the engine using appropriate diagnostic tools"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Carryout the engine servicing following workshop procedures."
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Carryout parameter measurement to evaluate performance of engine components/systems."
+            },
+            {
+              "pc_code": "3.9",
+              "description": "Carryout maintenance records accurately in accordance to workshop standards and procedures."
+            },
+            {
+              "pc_code": "3.10",
+              "description": "Carryout motor vehicle maintenance activities within the agreed timescale."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,818 @@
+{
+  "trade_name": "NOS Blacksmithing",
+  "level": 1,
+  "units": [
+    {
+      "code": "ENGG/BS/001/L1",
+      "title": "Health and Safety in blacksmithing.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain work environment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain workshop layout: \uf0b7 Gangway \uf0b7 Work Area \uf0b7 Store \uf0b7 Changing room \uf0b7 Entrance and Exit points \uf0b7 Muster Point \uf0b7 Emergency Exit"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify safety signs and symbols in a workshop"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify the following in the workshop: \uf0b7 First aid box \uf0b7 Fire extinguisher \uf0b7 Sand bucket \uf0b7 Mains switches"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Safety rules and regulations in a workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the importance of safety in a blacksmithing work environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List Personal Protective Equipment (PPE) in blacksmithing operations"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the PPE required for various tasks in blacksmithing"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the following causes of accident in the workshop: - Horseplay - Spills - Poor housekeeping - Loose electrical fittings - Inappropriate use of tools and equipment"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain how to prevent hazards in blacksmithing environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand first aid procedure",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain first aid"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "List the items that can be found in the first aid box"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain how to administer first aid."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/BS/002/L1",
+      "title": "Communication in Blacksmithing Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the importance of effective communication in the workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain communication in the work environment."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of communication in a blacksmithing workshop."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List factors affecting effective communication"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand verbal and non-verbal communication",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain verbal and non-verbal communications"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate appropriate use of tone and gestures when communicating"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify communication barriers and how to overcome them"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Follow workplace guides and instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Respond to instructions in the workplace"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Interpret workshop rules"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ask relevant questions to clarify instructions"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Maintain professional etiquette when communicating",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Demonstrate respect and courtesy in workplace conversations"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Address colleagues and supervisors appropriately"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Follow instruction for a given job"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Utilize workplace communication tools effectively",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify common communication tools used in a workshop (e.g., walkie-talkies, notice boards, logs)"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Use written communication (e.g., record keeping, message writing) effectively"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Use non-written communication (e.g., phone call message, etc) effectively"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/BS/003/L1",
+      "title": "Teamwork in Blacksmithing",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the importance of teamwork",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain teamwork"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance teamwork in blacksmithing"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the challenges of working in a team."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate interpersonal skills in a team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Communicate with team members."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Show cooperation and respect in team discussions."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Recognize different roles within a team."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Contribute to team tasks and goals",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify personal responsibilities in a team."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Assist team members in achieving common goals."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Work within given timeframes."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Follow team leadership and instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the characteristics of a good team leader"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Follow given instructions"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Contribute to decision- making when required."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand conflict resolution in the workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain common causes of conflict in teamwork."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain conflict resolution strategies."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Maintain professionalism and cooperation in challenging situations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/BS/004/L1",
+      "title": "Blacksmithing Tools",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify tools used in blacksmithing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify blacksmithing tools such as hammers, anvils, chisels, tongs, scribers, and files."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the function of each tool in 1.1."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Differentiate between cutting, shaping, and holding tools."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand safety, storage, and maintenance of blacksmithing tools",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the importance of maintaining tools."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain safety rules for handling blacksmithing tools"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Recognize common hazards related to improper tool use"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe the process of maintaining forging tools"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Store forging tools properly after use."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Select appropriate tools for specific blacksmithing tasks",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the tools used in the following: -Ruling -Marking -Cutting -Heating -Holding -Shaping -Cooling"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Select the appropriate tools for a given task"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use appropriate blacksmithing tools in a given task"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate practical use of blacksmithing tools",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use hammers and anvils to shape metal."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Perform cutting operations using chisels and hacksaws."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Demonstrate the use of files for metal finishing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/BS/005/L1",
+      "title": "Blacksmithing Operations",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify different methods of heating metals",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the following metal heating methods: - Coal forge - Gas forge - Electric induction."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the advantages and limitations of each heating method in 1.1."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify appropriate heating methods for different types of metal."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the properties of metals when heated",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the colour changes of metal as it heats."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe the effects of over-heating and under- heating of metal."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the impact of rapid and slow cooling on strength of metal."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Operate forging and heating equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify hazards when using a forge."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate the proper use of protective equipment (PPE)."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Maintain correct forging temperature for different metals."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Apply appropriate techniques to shape heated metal",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Demonstrate basic hammering techniques on heated metal."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use anvils, hammers, and tongs for shaping operations."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use pullers and flatters for shaping operations."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Perform basic bending, twisting, and flattening techniques."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Demonstrate quality control in heating and shaping processes",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Assess the accuracy and uniformity of shaped metal pieces using appropriate measuring instruments and techniques."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify common shaping defects and how to correct them."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Ensure that shaped metal meets given specifications."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/BS/006/L1",
+      "title": "Blacksmithing Techniques",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the principles of forging and metal deformation",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain how metal deforms under hammering and compression."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the importance of heat in forging processes."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify different forging temperatures and their effects on metal."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate fundamental forging techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Perform drawing down to lengthen metal."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Bend metal using anvil and hammer."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply twisting techniques to achieve decorative and functional designs."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Demonstrate fullering and flattening techniques"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Demonstrate upsetting techniques to increase the thickness of a metal."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Demonstrate punching and drifting techniques"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply safety measures when working with metal",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use appropriate personal protective equipment (PPE)."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Maintain proper posture and hammer grip to prevent injury."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Follow workshop safety protocols when handling hot metal and tools."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Produce simple forged components with accuracy and consistency",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Forge simple items (e.g., hooks, nails, simple scrolls)."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Assess the accuracy, uniformity, and quality of forged products."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify common forging defects."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Correct common forging defects."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/BS/007/L1",
+      "title": "Basic Welding Techniques in Blacksmithing",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the principles of welding and its application in blacksmithing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the role of welding in blacksmithing."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify common welding methods used in blacksmithing (e.g., arc welding, forge welding, gas welding)."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the properties of weldable metals."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Use basic welding tools and equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify common arc welding equipment, accessories, and their applications (e.g., welding machine, electrodes, clamps etc.)."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify common Gas welding equipment, accessories, and their applications (e.g., Oxyacetylene cylinders, filler rod, gas torches, and clamps etc.)."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Sketch items listed in 2.1 and 2.2"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate fundamental welding techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Perform basic arc welding to create simple joints."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply forge welding to join heated metal pieces."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use gas welding for small-scale blacksmithing repairs and metal cuttings."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate proper electrode selection and welding technique for different metals."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Apply safety precautions when handling welding tools and materials",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify appropriate personal protective equipment (PPE) for welding."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Follow correct procedures for handling hot metal and welding fumes."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "List common welding hazards (e.g., electric shock, burns, fire risks)."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Describe prevention of above"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Produce simple welded joints and repairs used in blacksmithing",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Create basic weld joints (e.g., butt, lap, fillet joints)."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Repair broken or cracked metal components using welding techniques."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Assess the strength and quality of welded components."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/BS/008/L1",
+      "title": "Drawing for Blacksmithing Works",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the importance of technical drawings in blacksmithing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the term technical drawing"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List the instruments used in technical drawing"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain why technical drawing is important in blacksmithing."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe how technical drawings are applied in blacksmithing operations."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify common drawing types, views, and symbols used in blacksmithing works",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the following types of technical drawing views: - Orthographic - Isometric - Sectional"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify common drawing symbols (e.g., weld symbols, weld type, dimensions, material indications)."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain common drawing symbols (e.g., weld symbols, weld type, dimensions, material indications)."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Interpret dimensions, scales, and tolerances in technical drawing",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the importance of measurement accuracy in blacksmithing operations."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Interpret dimensions and scale ratios on a given drawing."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Recognize tolerance levels and their impact on fabrication."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Create sketches for simple blacksmithing projects",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Draw a simple metalwork design with dimensions."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Label key components in a hand-drawn or software-generated sketch."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Modify an existing drawing to suit specific blacksmithing requirements"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ENGG/BS/009/L1",
+      "title": "Tools Maintenance in Blacksmithing",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the importance of tool maintenance in blacksmithing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the importance of tools maintenance for blacksmithing"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain common tool defects in blacksmithing"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the factors responsible for tool defects in blacksmithing"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify remedial actions for defects highlighted in 1.3."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Perform routine cleaning and sharpening of blacksmithing tools",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate appropriate procedures for cleaning tools after use."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Sharpen cutting tools (e.g. chisels, punches) using appropriate techniques."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply protective coatings (e.g. oiling, anti-rust treatment) on tools to prevent corrosion."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Conduct minor repairs on damaged tools",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain common tool damages (e.g., chipped edges, loose handles, deformations)."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain common repair techniques (e.g., regrinding edges, replacing handles, straightening deformed tools etc)."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Demonstrate common repair techniques (e.g., regrinding edges, replacing handles, straightening deformed tools)."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Implement safe storage practices for blacksmithing tools and materials",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Arrange tools in designated storage spaces."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Apply safety measures such as proper handling to prevent damage"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Maintain proper storage and documentation of tools and equipment."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

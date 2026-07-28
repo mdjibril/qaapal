@@ -17,16 +17,39 @@ def fetch_trades():
         return []
 
 @st.cache_data(ttl=3600)
-def fetch_nested_nos(trade_id):
+def fetch_trade_levels(trade_id):
+    supabase = get_admin_supabase()
+    try:
+        response = (
+            supabase.table("trade_levels")
+            .select("id, trade_id, level, display_name")
+            .eq("trade_id", int(trade_id))
+            .order("level")
+            .execute()
+        )
+        return response.data if response.data else []
+    except Exception as e:
+        st.error(f"Error fetching trade levels: {e}")
+        return []
+
+@st.cache_data(ttl=3600)
+def fetch_nested_nos(trade_id=None, trade_level_id=None):
     supabase = get_admin_supabase()
     
     # ONE query to rule them all: 
     # Fetch units -> their LOs -> their PCs in one nested structure
     try:
-        response = supabase.table("units") \
-            .select("code, title, learning_outcomes(lo_num, description, performance_criteria(pc_code, description))") \
-            .eq("trade_id", int(trade_id)) \
-            .execute()
+        query = supabase.table("units").select(
+            "code, title, learning_outcomes(lo_num, description, performance_criteria(pc_code, description))"
+        )
+        if trade_level_id is not None:
+            query = query.eq("trade_level_id", int(trade_level_id))
+        elif trade_id is not None:
+            query = query.eq("trade_id", int(trade_id))
+        else:
+            return {}
+
+        response = query.execute()
         
         raw_units = response.data
         
@@ -49,6 +72,128 @@ def fetch_nested_nos(trade_id):
     except Exception as e:
         st.error(f"Error fetching NOS: {e}")
         return {}
+
+
+def fetch_nos_delete_preview(trade_id, trade_level_id=None):
+    """Return a lightweight preview of what would be removed by a NOS delete action."""
+    supabase = get_admin_supabase()
+    try:
+        preview = {
+            "mode": "trade" if trade_level_id is None else "trade_level",
+            "trade": {},
+            "trade_level": {},
+            "units": [],
+            "unit_ids": [],
+            "learning_outcomes": [],
+            "performance_criteria": [],
+            "counts": {
+                "trades": 1,
+                "trade_levels": 0,
+                "units": 0,
+                "learning_outcomes": 0,
+                "performance_criteria": 0,
+            },
+        }
+
+        trade_rows = supabase.table("trades").select("id, name").eq("id", int(trade_id)).execute().data or []
+        if trade_rows:
+            preview["trade"] = trade_rows[0]
+
+        if trade_level_id is not None:
+            level_rows = (
+                supabase.table("trade_levels")
+                .select("id, trade_id, level, display_name")
+                .eq("id", int(trade_level_id))
+                .execute()
+                .data
+                or []
+            )
+            if level_rows:
+                preview["trade_level"] = level_rows[0]
+                preview["counts"]["trade_levels"] = 1
+
+            units = (
+                supabase.table("units")
+                .select("id, code, title")
+                .eq("trade_level_id", int(trade_level_id))
+                .execute()
+                .data
+                or []
+            )
+        else:
+            preview["counts"]["trade_levels"] = len(
+                supabase.table("trade_levels")
+                .select("id")
+                .eq("trade_id", int(trade_id))
+                .execute()
+                .data
+                or []
+            )
+            units = (
+                supabase.table("units")
+                .select("id, code, title, trade_level_id")
+                .eq("trade_id", int(trade_id))
+                .execute()
+                .data
+                or []
+            )
+
+        preview["units"] = units
+        preview["counts"]["units"] = len(units)
+        unit_ids = [u["id"] for u in units]
+        preview["unit_ids"] = unit_ids
+
+        los = []
+        if unit_ids:
+            los = (
+                supabase.table("learning_outcomes")
+                .select("id, unit_id, lo_num, description")
+                .in_("unit_id", unit_ids)
+                .execute()
+                .data
+                or []
+            )
+        preview["learning_outcomes"] = los
+        preview["counts"]["learning_outcomes"] = len(los)
+
+        lo_ids = [lo["id"] for lo in los]
+        pcs = []
+        if lo_ids:
+            pcs = (
+                supabase.table("performance_criteria")
+                .select("id, lo_id, pc_code, description")
+                .in_("lo_id", lo_ids)
+                .execute()
+                .data
+                or []
+            )
+        preview["performance_criteria"] = pcs
+        preview["counts"]["performance_criteria"] = len(pcs)
+
+        return preview, None
+    except Exception as e:
+        return None, str(e)
+
+
+def delete_nos_trade(trade_id):
+    """Delete a trade family. Child levels and units cascade through FK rules."""
+    supabase = get_admin_supabase()
+    try:
+        supabase.table("trades").delete().eq("id", int(trade_id)).execute()
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
+
+def delete_nos_trade_level(trade_level_id):
+    """Delete a single trade level and its dependent units, LOs, and PCs."""
+    supabase = get_admin_supabase()
+    try:
+        supabase.table("units").delete().eq("trade_level_id", int(trade_level_id)).execute()
+        supabase.table("trade_levels").delete().eq("id", int(trade_level_id)).execute()
+        return True, None
+    except Exception as e:
+        return False, str(e)
 
 
 def insert_report(name, trade_id, unit_codes, report_content, date, user_id):

@@ -1,0 +1,1064 @@
+{
+  "trade_name": "NOS ICT Web Development L3",
+  "level": 3,
+  "units": [
+    {
+      "code": "ICT/WEB/001/L3",
+      "title": "Occupational Health and Safety ",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Safe working Practices and Instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safe work practice and instructions in an ICT environment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Carry out safe work practices and instructions in an ICT environment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Work in accordance with health and safety best practices in an ICT environment"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Follow all necessary instructions related to safety in the work place"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Understanding of Safety Hazards and risks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify work environment hazards in an ICT environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State various methods to reduce the risk of identified hazards in an ICT environment"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate use of safety equipment applicable to ICT environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Possess the ability to take appropriate actions during accident/injury",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State how to maintain hygienic, safe and secure workplace."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate the uses of safety equipment in an ICT environment as required."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify basic first aid equipment"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Illustrate basic first aid treatments"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate safe work habit and clean work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use safe access and exit routes in the work environment"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Dispose all wastes appropriately to designated waste facilities"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/002/L3",
+      "title": "Communication and Interpersonal Skills",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know of the importance of good communication",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State reasons why good communication is important"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List ways to communicate effectively"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Exhibit patience and a mild demeanor while communicating with colleagues, managers and clients"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Demonstrate how to speak in a respectful manner"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use respectful body language even when in a bad mood or while under pressure"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate ability to follow documented instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Read and accurately follow steps in a web framework/plugins installation manual"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Find specific Class definitions and Method descriptions in the programming language reference document."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Find feature descriptions in the plugin framework documentation, while using a plugins/framework,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/003/L3",
+      "title": "TEAM WORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Positive working relationship with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the need for developing positive working relationship with colleagues"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel valued and respected"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the appropriate personnel when request for assistance fall outside area of responsibility."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about individual work that may effect team work."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibility within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within a team"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team\u2019s rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in teamwork."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Compliance with policy of organization Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain organizational code of conduct"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Work in line with organizational standard"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use organizational code of practice"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Adhere strictly to instructions given by the Management"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/004/L3",
+      "title": "INTRODUCTION TO WEB APPLICATION DEVELOPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the basic architecture of web applications.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the client-server model."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify key components of a web application (frontend, backend, and database)."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe how data flows between the client, server, and database."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Compare static and dynamic web applications."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the Software Development Life Cycle (SDLC).",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "List the phases of the SDLC."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe the role of each SDLC phase in web development."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the importance of iterative development in web applications."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Discuss common web development methodologies like Agile and Waterfall."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Identify key tools and technologies used in web development.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe the roles of HTML, CSS, and JavaScript in web development."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "List popular web development frameworks and libraries."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the purpose of version control systems in development."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify tools for debugging and optimizing web applications."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Recognize the importance of responsive design in web applications. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain what responsive design is and why it\u2019s important."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify techniques for building responsive web applications."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Discuss mobile-first design approaches."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Demonstrate how to test a web application for responsiveness."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/005/L3",
+      "title": "VERSION CONTROL WITH GIT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the fundamentals of Git and version control.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the purpose of version control systems in software development."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Define common Git terminology (repository, commit, branch, merge)."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify differences between centralized and distributed version control systems."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Set up a Git repository for a web development project."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Learn how to track and manage changes using Git.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate how to stage and commit changes to a repository."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the importance of commit messages."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use Git commands to view the history of commits."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Create and switch between branches in a project."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Collaborate effectively using Git.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the concept of remote repositories."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Push and pull changes from remote repositories."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Resolve merge conflicts during collaboration."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Utilize GitHub or similar platforms for collaborative development."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Implement version control best practices. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Create a branching strategy for a project."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Apply proper naming conventions for branches and commits."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use pull requests for code reviews."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Apply continuous integration (CI) workflows using Git."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/006/L3",
+      "title": "WEB PROGRAMMING FUNDAMENTALS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the role of HTML in web development.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the structure and purpose of HTML documents."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use common HTML tags to build a basic web page."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Create forms and capture user inputs with HTML."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Ensure proper HTML validation and syntax."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Develop web interfaces using CSS.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Apply CSS styles to HTML elements."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use selectors, classes, and IDs effectively in CSS."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Implement layout techniques using Flexbox and CSS Grid."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Test and ensure cross-browser compatibility of CSS styles."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Add interactivity using JavaScript.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the purpose of JavaScript in web development."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Write JavaScript to manipulate the Document Object Model (DOM)."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use basic JavaScript functions and events."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Debug and test JavaScript code in a web browser."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand the client-server interaction in web programming. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain how web browsers interact with web servers."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use JavaScript to make basic HTTP requests (AJAX)."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Handle user input and form submissions with JavaScript."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Test and debug client-server interactions in web applications."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/007/L3",
+      "title": "DATABASES AND WEB SERVERS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the role of databases in web applications.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the difference between SQL and NoSQL databases."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe how data is stored and retrieved from a database."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Write basic SQL queries to interact with a database."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify common database management systems (MySQL, MongoDB, etc.)."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Set up and configure a web server.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Install and configure a web server (Apache, Nginx)."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Host and serve a web application on a local server."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Configure server settings for performance and security."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Test the connection between the web server and database."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Integrate databases with web applications.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Establish a connection between a web application and a database."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Write server-side code to interact with a database."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Handle database queries within a web application."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Test database functionality in a web application environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Ensure web server and database security. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify potential security threats to databases and web servers."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Implement basic security measures (e.g., firewalls, SSL/TLS)."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Set up database access controls and permissions."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Regularly update server software to address vulnerabilities."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/008/L3",
+      "title": "CONTENT MANAGEMENT SYSTEM BASIC",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Content Management Basics",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the purpose of a CMS in web development."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the key features of content management"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Compare popular CMS platforms (WordPress, Joomla, Drupal, etc)"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain Content Management Best Practices"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Install Content Management System",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Set up a CMS on a local or remote server."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Configure basic CMS settings (site title, users, roles, etc.)."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Install and activate themes and plugins."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Test and troubleshoot common installation issues."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Set Up user roles and permissions"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Create content with a Content Management System (CMS)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Create, edit, and publish pages and posts using a CMS."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Manage media (images, videos) in the CMS media library."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use categories and tags to organize content."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Optimize content for SEO within the CMS."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Customize the appearance and functionality of a CMS Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Apply and customize themes to match design requirements."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Install and configure plugins for additional functionality."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Create custom menus and navigation."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Troubleshoot and resolve theme or plugin conflicts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/009/L3",
+      "title": "INTRODUCTION TO OPEN-SOURCE SOFTWARE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the concept and principles of open-source software.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define open-source software and its core principles."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the differences between open- source and proprietary software."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Discuss the advantages and challenges of using open-source tools."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify popular open-source licenses (GPL, MIT, Apache)."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify popular open- source tools for web development.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "List common open-source development tools (e.g., VS Code, Git, Linux)."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Compare open-source frameworks and libraries (e.g., Laravel, React)."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use open-source tools to manage and develop web projects."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the role of communities in maintaining open-source projects."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Contribute to open-source projects.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Fork and clone an open-source project from GitHub or similar platforms."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Make contributions by fixing bugs or adding features."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Submit pull requests for review and acceptance."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Engage with the open-source community through forums and documentation."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Implement open-source best practices in web development projects. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Follow licensing and attribution guidelines when using open-source software."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use version control to manage contributions and changes."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Ensure open-source software is secure and updated regularly."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Document and share improvements made to open-source projects."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/010/L3",
+      "title": "CLIENT-SIDE WEB DEVELOPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the structure and purpose of HTML",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Create well-structured HTML documents."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use semantic HTML elements to improve accessibility."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Build forms and capture user input with HTML."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Ensure HTML is valid and cross- browser compatible."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Use CSS to style and layout web pages.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Apply styles to HTML elements using CSS selectors."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Implement responsive design using media queries."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Utilize Flexbox and CSS Grid for complex layouts."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Optimize CSS for performance and cross-browser compatibility."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Apply styles to HTML elements using CSS selectors."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Enhance interactivity with JavaScript.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Manipulate the DOM using JavaScript."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Add event listeners to handle user interactions."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Implement client-side form validation."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Debug and optimize JavaScript code for performance."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand client-side storage options. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use cookies to store data on the client- side."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Implement localStorage and sessionStorage for persistent data storage."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use JSON for data interchange between client and server."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Secure client-side data to prevent unauthorized access."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/011/L3",
+      "title": "SERVER-SIDE WEB DEVELOPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand server-side programming languages and frameworks.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the role of server- side scripting in web development."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Develop basic server-side scripts using PHP, Node.js, or similar languages."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Understand the MVC (Model-View- Controller) pattern."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Utilize frameworks like Laravel or Express.js for building server-side applications."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Handle form data and user requests on the server.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Process user input from web forms on the server."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use POST and GET methods to handle HTTP requests."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Validate and sanitize user inputs on the server-side."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Return appropriate server responses (e.g., HTML, JSON)."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Integrate databases with server-side applications.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Connect a web application to a SQL or NoSQL database."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Perform CRUD operations (Create, Read, Update, Delete) using server-side code."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Implement server-side data validation and error handling."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Optimize database queries to improve performance."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Ensure security in server- side development. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Implement basic authentication and authorization mechanisms."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Prevent SQL injection and cross-site scripting (XSS) attacks."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use HTTPS to secure server-client communication."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Regularly update server software to mitigate security vulnerabilities."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/012/L3",
+      "title": "Web Application Maintenance and Optimization",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Perform routine maintenance on web applications.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Update web application components (CMS, plugins, dependencies)."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Back up web application data and configurations."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Test web applications after updates to ensure functionality."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Monitor web server performance and address issues."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Optimize web application performance.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use tools like Google PageSpeed Insights to evaluate performance."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Implement caching mechanisms (browser, server, and database caching)."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Minimize the size of HTML, CSS, and JavaScript files (minification)."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Optimize images and other media for faster loading times."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Enhance the security of web applications.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Apply security patches and updates regularly."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use firewalls and security plugins to prevent unauthorized access."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Perform regular vulnerability scans on the web application."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Implement secure login protocols and password management."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Ensure cross-browser and device compatibility.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Test the web application on multiple browsers and devices."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Fix any layout or functionality issues identified during testing."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use responsive design techniques to ensure compatibility across different screen sizes."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Implement fallback solutions for older browsers."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,788 @@
+{
+  "trade_name": "NOS Animal Husbandry (Livestock Farming)",
+  "level": 1,
+  "units": [
+    {
+      "code": "AHP/LSF/001/L1",
+      "title": "Work safely on livestock Farm Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Observe safety precaution on a livestock farm.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safe work practices as obtained along the livestock production value chain."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify safety signs and symbols on livestock farms"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Carryout safe work practice and instructions in livestock farms"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Operate in accordance with health and safety practices in a livestock farm"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Comply with safety standards on livestock Farm.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify work environment hazards"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State the types of hazards associated with livestock farming"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss risks associated with livestock farming"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State safety standards on livestock farms and processing facilities"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use safety tools, materials and equipment in livestock processing facilities"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply personal protective equipment (PPE) in livestock farming and processing facilities",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the types of PPEs required for livestock processing plants"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Select appropriate PPEs for livestock processing farming"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use appropriate PPEs for livestock product processing"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use appropriate PPEs for livestock farming"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Maintain PPEs before or after use"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Respond to accidents/injury in livestock processing plants Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify first aid facility"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Report incidences of accident/injury/ to the appropriate supervisor"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Respond to supervisor`s given instructions"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use basic dressing materials"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Apply safe work habit and clean work environment in livestock processing plants",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Use safe access and exit routes in the work environment"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify appropriate working tools, materials and equipment"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Use tools and equipment safely in accordance with the supervisors instructions"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Return all tools, equipment and unused materials for appropriate storage"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Carry out general housekeeping of work environment"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Dispose all wastes appropriately to designated waste facilities"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Demonstrate the skills of lifting, loading/offloading and stacking of materials in livestock processing facilities Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Identify lifting and stacking techniques"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Demonstrate lifting techniques in loading and offloading of materials without assistance"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Demonstrate correct lifting and loading techniques with mechanical assistance"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Carryout stacking of materials correctly"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AHP/LSF/002/L1",
+      "title": "Effective Communication in livestock Farm Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Apply the use of a non- complex communication system in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use a verbal means to pass on necessary information"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use non-verbal means to convey necessary information e.g. \uf0d8 body language \uf0d8 signs"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Interpret symbols and signs appropriately in livestock farming and processing facilities"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Source for information on a livestock work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the source of information in the work environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use the different information flow systems in a work environment"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use information gathered to handle challenges appropriately in a work place"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Report findings in accordance with laid down procedures in the work environment using materials like \uf0d8 Cards, \uf0d8 Flip Charts \uf0d8 Stick notes"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Use simple communication gadget like; \uf0d8 mobile phones \uf0d8 table phones \uf0d8 walkie -talkie \uf0d8 speakers"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply various means of communication in a livestock work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Locate the various communication equipment in the work environment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use effectively the various communication equipment in a work environment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Pass information effectively to the right personnel"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carryout instructions in line with ethics of the work environment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AHP/LSF/003/L1",
+      "title": "TEAMWORK IN LIVESTOCK FARM PRACTICE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate the skills of Positive working relationship with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain need for developing positive working relationship with colleagues"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel valued and respected"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the appropriate personnel when request for assistance fall outside area of responsibility."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about individual work that may affect team work."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibility within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within a team"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team\u2019s rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in teamwork."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Comply with policy of organisation",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain organizational code of conduct"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Work in line with organizational standard"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use organizational code of practice"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Adhere strictly to instructions given by the Management"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AHP/LSF/004/L1",
+      "title": "Cattle, sheep and goat production",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Evaluate the history and development of cattle, sheep and goat production",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State the history and development of cattle, sheep and goat production in Nigeria"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain factors that affect animal husbandry e.g \uf0d8 Feed \uf0d8 Labour \uf0d8 Environment \uf0d8 Diseases"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the various terminologies used in animal husbandry. e.g \uf0d8 Bovine \uf0d8 Caprine \uf0d8 Ovine"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use a map of Nigeria to identify major cattle, sheep and goats producing areas."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use the same map, locate cattle, sheep and goat breeds found in those areas. e.g \uf0d8 sokoto gudali \uf0d8 west african dwarf goats \uf0d8 sahelian"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate the differences between species, breeds and their characteristics of cattle, sheep and goats. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the different breeds of cattle, sheep and goats"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify breeds of cattle with their physical characteristics"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify breeds of sheep with their physical characteristics"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify breeds of goats with their physical characteristics"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Establish the employment characteristics in cattle, sheep and goat production",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Outline the various career opportunities in cattle, sheep and goat production"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the value chain of cattle, sheep and goat production"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "List the key role players in cattle, sheep and goat production e.g \uf0d8 cattle, sheep and goats producers \uf0d8 drug and feed manufacturers \uf0d8 management service providers"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Describe the main forms of marketing used in cattle, sheep and goat production e.g \uf0d8 Live auction \uf0d8 Direct to consumer sales \uf0d8 Online market places"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AHP/LSF/005/L1",
+      "title": "Housing and equipment in cattle, sheep and goats production.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Evaluate the principles of housing and equipment in cattle, sheep and goats",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State the types of housing required for cattle, sheep and goats e.g \uf0d8 Loose housing / framed pen (goats and sheep) \uf0d8 Loose housing/ stall barns (cattle)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the materials needed for the construction of each house e.g \uf0d8 Building materials \uf0d8 Fences \uf0d8 Beddings"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the rearing equipment needed within each house e.g \uf0d8 Feeding troughs \uf0d8 Buckets \uf0d8 Water troughs"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the use of the rearing equipment needed within each house"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Carryout good management practices in cattle, sheep and goats housing"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate the methods of feeding cattle, sheep and goats Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the sources of energy raw materials used in producing feed for cattle, sheep and goats e.g \uf0d8 Maize \uf0d8 Wheat \uf0d8 Rice \uf0d8 Soghum"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify sources of protein raw materials used in producing feed for cattle, sheep and goats e.g \uf0d8 Soya bean \uf0d8 Fish or bone meal \uf0d8 Plant protein"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the sources of vitamins and minerals used in producing feed for cattle, sheep and goats"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Locate the sources of roughages used in feeding cattle, sheep and goats"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Demonstrate the process of feeding young cattle, sheep and goats"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Carry out the feeding of cattle, sheep and goats"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the principles of health management of cattle, sheep and goats Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the basic health challenges of cattle, sheep and goats e.g \uf0d8 Diseases \uf0d8 Antimicrobial resistance (AMR) \uf0d8 Air pollution"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate the steps to take to make cattle, sheep and goats healthy e.g \uf0d8 Biosecurity in farms and animal facilities like fencing, monitoring vaccination"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify sick animals in the herd of cattle, sheep and goats by their; \uf0d8 Behavior \uf0d8 Appearance \uf0d8 Other functions e.g tumors, difficulty in urination"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain vaccination schedule in cattle, sheep and goats for diseases such as foot and mouth disease in cattle, PPR in goats and sheep"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Carryout bio security measures in cattle, sheep and goats"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AHP/LSF/006/L1",
+      "title": "Feed production and utilization",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand feed production for ruminants",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify different forms of feeds required by cattle, sheep and goats \uf0b7 Pasture \uf0b7 Hay and silage \uf0b7 Roughages \uf0b7 Concentrates \uf0b7 Minerals (Salt lick)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the methods of hay and silage making"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the concept of Total Mixed Ration (TMR): A combination of Concentrates, Roughage and Minerals"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the method of feed processing, storage and preservation Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe the methods of feed processing: \uf0b7 Grinding and mixing \uf0b7 Toasting \uf0b7 Mash/ Pellet"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe how cattle, sheep and goats\u2019 feed is preserved - Shade drying - Sun drying"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the storage of cattle, sheep and goats\u2019 feed - Hay barn - Feed store - Tanks"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the feeding behaviour and water utilization by cattle, sheep and goats.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe the feeding behaviour in cattle, sheep and goats"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify sources of drinking water for cattle, sheep and goats."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "State the importance of feeds and water in cattle, sheep and goat production"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AHP/LSF/007/L1",
+      "title": "Selection criteria for breeding in cattle, sheep and goats",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the different selection criteria and types in cattle, sheep and goat breeding",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the objectives for selection in cattle, sheep and goats"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the different types of selection in cattle, sheep and goats (natural or artificial)."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the different methods of selection (artificial) in cattle, sheep and goats"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the selection criteria in cattle, sheep and goats production",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the selection criteria in cattle, sheep and goats for male \uf0d8 Large body size \uf0d8 Sexual aggression in male \uf0d8 Soundness of hind limbs \uf0d8 Fully descended testicles"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the selection criteria in cattle, sheep and goats for female \uf0d8 Good body size \uf0d8 Teat placement \uf0d8 Fecundity \uf0d8 Udder texture \uf0d8 moist and enlarged vagina"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain behavioral attitude of a good dam"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Breeding methods in Cattle, Sheep and goatS",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the principle of breeding in cattle, sheep and goat Production \uf0d8 Cross breeding \uf0d8 Inbreeding"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the benefits and problems associated with inbreeding"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain benefit of cross breeding and inbreeding"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AHP/LSF/008/L1",
+      "title": "Principles of reproduction in cattle, sheep and goats",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand heat detection in cattle, sheep and goats",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe heat detection in adult female cattle, sheep and goats"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State reasons for heat detection in adult female cattle, sheep and goats"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify heat period in cattle, sheep and goats"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Show signs of heat in cattle, sheep and goats",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe the signs of heat in cattle, sheep and goats"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the AM/PM (morning/evening) rule in heat detection"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the gadgets use for heat detection"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the processes of reproduction in cattle, sheep and goats Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe gestation periods in cattle, sheep and goats"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify parturition in cattle, sheep and goats"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the importance of colostrum to calves, lambs and kids"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify the weaning ages for cattle sheep and goats"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carryout the weaning practices in cattle, sheep and goats."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AHP/LSF/009/L1",
+      "title": "Meat and milk handling techniques",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand meat and milk handling techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Demonstrate meat and milk handling techniques in cattle, sheep and goat production"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the equipment used in processing and storage of meat and milk"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Carryout cleaning of tools and equipment after use"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand hygiene in meat and milk handling",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State reasons for hygiene in the meat and milk industry"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the hygiene processes while handling meat and milk"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify hygiene materials needed for handling meat and milk"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the preservation and transportation of meat and milk Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain method of milk preservation \uf0d8 Refrigeration \uf0d8 Canning \uf0d8 Turning it to powder"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain method of preservation of meat \uf0d8 Refrigeration \uf0d8 Salting \uf0d8 Canning \uf0d8 Roasting/Smoking"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the transportation of processed milk"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Describe the transportation of processed meat using mobile cold rooms"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AHP/LSF/0010/L1",
+      "title": "Processing and marketing of livestock products",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand livestock products processing methods",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify various cattle, sheep and goat marketable edible products such as: \uf0d8 Meat (Suya, balangu, ragadada, tsire, Kilishi, dambu) \uf0d8 Cheese \uf0d8 Yoghurt"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify various cattle, sheep and goat marketable non-edible products such as: \uf0d8 Hide and skin \uf0d8 Horns and hooves \uf0d8 Manure \uf0d8 Wool \uf0d8 Bones"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the utilisation of horns, hooves and bones"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the utilisation of manure"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe the use of wool and bones"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the marketing of livestock products ",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the marketing strategies of different forms of milk"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the marketing strategies for cheese and yoghurt"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the marketing strategies of different forms of meat"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the marketing of livestock by-products",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the marketing strategies for Hides and skin"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the marketing strategies for horns and hooves"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the marketing strategies for manure "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

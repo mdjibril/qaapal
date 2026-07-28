@@ -20,6 +20,7 @@ def main():
     st.title("📝 NSQ Report Generator")
     
     trade_id = st.session_state.get('selected_trade_id')
+    trade_level_id = st.session_state.get('selected_trade_level_id')
     provider = st.session_state.get('ai_provider')
     keys = st.session_state.get('target_keys', []) # Now expects a list of keys
     target_model = st.session_state.get('target_model')
@@ -46,7 +47,7 @@ def main():
 
 
     # 3. Fetch Data
-    NOS_DATA = db.fetch_nested_nos(trade_id)
+    NOS_DATA = db.fetch_nested_nos(trade_level_id=trade_level_id, trade_id=trade_id)
     
     # 4. UI Section
     st.markdown("#### Step 1: Student & Session Info")
@@ -66,8 +67,9 @@ def main():
     st.markdown("#### Step 2: Select Achieved PCs")
 
     trade_id = st.session_state.get('selected_trade_id')
+    trade_level_id = st.session_state.get('selected_trade_level_id')
     # Ensure db.fetch_nested_nos has @st.cache_data in your database.py file!
-    NOS_DATA = db.fetch_nested_nos(trade_id) 
+    NOS_DATA = db.fetch_nested_nos(trade_level_id=trade_level_id, trade_id=trade_id) 
 
     if not NOS_DATA:
         st.warning(f"No units found for trade ID {trade_id}.")
@@ -151,7 +153,7 @@ def main():
                 formatted_date = assessment_date.strftime("%B %d, %Y")
                 candidate_first_name = student_name.strip().split()[0]
 
-                trade_context = trade_id if trade_id else "the specific trade"
+                trade_context = st.session_state.get("selected_trade_level_name") or st.session_state.get("selected_trade_name") or "the specific trade"
                 prompt_bundle = build_dashboard_prompt(
                     student_name=student_name,
                     assessment_date=assessment_date,

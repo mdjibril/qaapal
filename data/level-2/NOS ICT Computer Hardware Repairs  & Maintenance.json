@@ -1,0 +1,1144 @@
+{
+  "trade_name": "NOS ICT Computer Hardware Repairs  & Maintenance",
+  "level": 2,
+  "units": [
+    {
+      "code": "ICT/CMR/001/L2",
+      "title": "OCCUPATIONAL HEALTH AND SAFETY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Occupational Health and Safety Issues in Computer Operations and Maintenance",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the importance of wearing clean and appropriate Personal Protective Equipment (PPE) in the workplace."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Know workplace safety complies with health and safety regulations and other relevant guidelines, including the Nigerian Factory Health and Safety Act of 2015."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Demonstrate treatment of cuts, grazes, and wounds."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain process of reporting accidents, illnesses and infections to appropriate Persons"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain importance of maintaining good personal hygiene"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Explain the Nigerian Factory Health and Safety Act of 2015 in relation to computer operations and maintenance."
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Explain how to follow general rules on hygiene that must be observed"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Identify appropriate Personal Protective Equipment (PPE), including head, foot, face, eye, hand, body, and regulatory protection."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Observe Safety and Security in the Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the importance of healthy, safe and secure workplaces"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain how to report accidents or near misses to appropriate personnel"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Carry out pollution control and waste disposal of organic and inorganic wastes"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Hazards Identification and Mitigation Methods in a Workplace Environment Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify hazards or potential hazards"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State where to find information about health and workplace hazards."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the types of hazards in workplace that may occur and how to deal with them"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify hazards that can be addressed personally in the workplace"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Identify hazards that should be reported to the appropriate personnel."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Identify hazards that should be reported to the appropriate personnel."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Identify risk elements in your own workplace Environment"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Describe organizational security procedures and why these are important"
+            },
+            {
+              "pc_code": "3.9",
+              "description": "Follow procedures of raising awareness of Hazards"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate Emergency Procedures in a workplace Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Describe types of emergencies in Workplace"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain how to locate first-aid equipment and the registered first- aider in a Workplace"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe organizational emergencies procedures, in particular fire, and how these should be followed"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "State possible causes for fire in workplace"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Describe how to minimize the possibility of fire in workplace"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Explain where to find alarms and how to set them off"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/002/L2",
+      "title": "COMMUNICATIONS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate how to communicate clearly and concisely.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe the principles of Effective Communications in a Technical Manner"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain how to effectively communicate with clients to understand their needs and provide technical support."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain how to clearly and concisely communicate technical information to colleagues, clients, and stakeholders."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the concept of Effective Listening",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe the key elements of effective listening : I. Attention II. Concentration III. Comprehension IV. Retention V. Response"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the Barriers to Effective Listening; I. Distractions II. Biases III. Language Barriers IV. Emotional Barriers"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe Benefits of Effective Listening; I. Improved Communications II. Enhanced Collaboration III. Increased Customer IV. Satisfaction V. Reduced Errors"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Effective Technical Documentation Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify how to document technical papers such as work orders, reports, and maintenance records accurately and clearly."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Inform on the creation of user manuals that are clear, concise, and easy to understand"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe how to maintain accurate and up-to-date records of system configurations, maintenance activities, and troubleshooting procedures."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain how to create visual aids, such as diagrams and flowcharts, to support technical documentation"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Describe how to revise and update Technical documentation regularly to reflect changes to the system or process"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Describe how to ensure technical documentation complies with relevant industry standards and regulations."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Describe how to ensure technical documentation is accessible to the intended audience, including individuals with disabilities."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Emergency Procedures in workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Describe how to communicate Effectively with colleagues and customers in face-to-face situations"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Demonstrate effective communication with colleagues and customers over the phone and via video conferencing."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain how to communicate effectively with colleagues and customers via email and messaging platforms."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Explain how to effectively communicate technical information through presentations and reports."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Describe how to communicate feedback and escalate issues effectively to colleagues and customers for resolution."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand the Assessment Criteria for Effective Communication",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain how to communicate the Accuracy and Clarity of technical information"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Describe how to Adapt a communication style to suit different audiences and contexts"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Explain the importance of timeliness in responding to messages"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Knowledge and Understanding Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Describe the Principles of Effective Communication"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Explain the following Technical Terminology and Concepts; I. CPU II. MOTHERBOARD III. RAM IV. HDD V. GPU VI. POST VII. BOOT PROCESS VIII. ERROR MESSAGES IX. TROUBLESHOOTING"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Describe the following Communication Protocols and etiquette: I. Clear and concise language II. Active listening III. Respectful tone IV. Timely responses V. No-verbal communication VI. Cultural sensitivity VII. Avoid distractions VIII. Use a clear subject line IX. Use a formal greeting X. Use proper formatting XI. Proofread XII. Answer promptly XIII. Take messages"
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Explain the Importance of Effective Communication in Technical Environments"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/003/L2",
+      "title": "TEAMWORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand how to work collaboratively with others",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Demonstrate a positive and professional attitude by being respectful, punctual, and reliable"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain how to use active listening skills, including maintaining eye contact and asking clarifying questions"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain how to provide and receive feedback, including constructive criticism and positive reinforcement"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain how to work effectively in a team to achieve common goals."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe how to manage conflicts by resolving issues constructively and respectfully."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand how to Communicate Effectively with Team members",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain key communication skills, including information sharing and providing feedback within a team."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate professionalism through a positive attitude, respect, punctuality, and reliability."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how to Support Team members",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe problem-solving skills, including key inputs and ideas essential for team members."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain how to adapt to changing circumstances, such as shifting priorities, deadlines, and team dynamics."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Demonstrate Effective teamwork skills, including communication, collaboration, and conflict resolution"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know how to respond to workplace emergence Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Describe types of emergencies in Workplace"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain how to find first-aid equipment and identify the registered first-aider in the workplace."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe organizational emergency procedures, especially for fire incidents, and how to follow them correctly."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "State possible causes for fire in workplace"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Describe how to minimize possibility of fire in workplace"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Explain where to find alarms and how to set them off"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know how to Respect and Value Diversity, Equity, and Inclusivity in a Team",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Demonstrate an understanding of diverse cultures, customs, and values, and their applications in the workplace."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Describe how to build and maintain relationships with diverse stakeholders, including colleagues, clients, and community partners."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Explain how to navigate conflicts and difficult conversations in a respectful, empathetic, and inclusive manner."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Describe how to foster a culture of feedback and continuous learning where everyone feels valued, heard, and supported."
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Explain how to advocate for diversity, equity, and inclusion in the workplace and the broader community."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Demonstrate how to coordinate team members effectively",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Explain team structures and the roles of each member."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Describe the effective use of communication methods, including verbal, written, and electronic communication."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Explain how conflict resolution and negotiation techniques are applied in a team setting."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Describe the Knowledge and Understanding of Teamwork",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Explain the principles of effective teamwork in a project or organization."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Describe the importance of communication, collaboration, and adaptability in team environments."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Explain strategies for managing conflict and building trust within teams."
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Describe the benefits of diversity and inclusivity in team settings."
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Describe the Evidence Ref. Page No. OBJECTIVE (LO) Requirements for Teamwork Engagements",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Describe teamwork in a simulated or real-work environment."
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Explain how to obtain written or verbal feedback from team members or supervisors."
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Describe how to document team meetings, decisions, and actions."
+            },
+            {
+              "pc_code": "8.4",
+              "description": "Explain how to reflect on personal teamwork skills and identify areas for improvement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/004/L2",
+      "title": "DISASSEMBLING AND ASSEMBLING OF COMPUTERS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Disassemble and Assemble Personal Computers",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Demonstrate how to boot the computer systems (cold booting)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Demonstrate how to disconnect the external cables: \u25cf Data cables; \u25cf Power cables"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Demonstrate how to discharge static electricity using anti-static straps or alternative methods."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Show how to remove the computer cover"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Remove the following: i. Front panel connection ii. Hard disk drive iii. SSD iv. Power pack v. Motherboard vi. Cable connectors vii. Microprocessor (CPU) viii. Cooling fan and heat sink ix. RAM"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Connect the following computer components: I. Motherboard II. Microprocessor (CPU) III. SSD IV. Hard disk drive V. Power pack VI. Data cables VII. RAM VIII. Power cable Computer cover"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Replace Motherboards and Processors",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Remove the old motherboard"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the matching characteristics of the new and old motherboards"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Replace the old with the new Motherboard"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Assess the performance of the old Processor"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Replace the old with the new processor"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Ref. Page No. OBJECTIVE (LO) Replacement of Mass Storage Devices and Random Access Memory",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the factors to consider when replacing old mass storage devices and Random Access Memory (RAM)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Remove mass storage devices from the Case"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Replace the integrated drive electronic (IDE) cable"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Install Internal Storage Device (HDD/SSD)"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Replace the integrated drive electronic (IDE) cable"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Install Internal Storage Device (HDD/SSD)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/005/L2",
+      "title": "Faults Trace, Measurement, and troubleshooting",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate knowledge of Measuring Instruments in Computer Hardware Maintenance and Repairs",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the following terms: i. Voltage; ii. Current; iii. Resistance; iv. Capacitance; v. Inductance; vi. Resistors; vii. Capacitors; viii. Diodes; ix. Transistors; x. Integrated Circuits (ICs)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the measuring instruments meant for computer hardware maintenance and repairs, such as: i. Analog Multimeters; ii. Digital Multimeters; iii. Logic probe Testers; iv. IC Testers; v. Oscilloscopes"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Apply the measuring instruments listed in 1.2 above to trace faults"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Apply Basic Troubleshooting Techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Measure the Alternating Current (AC), Direct Current (DC), and Power units of computer hardware"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Test the functionality of all internal and external components and cables in computers"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify Basic Error messages and their Meanings"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify Faulty Computer sounds and their Meanings"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Search the World Wide Web for a problem Solving Tips and Tutorials"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Perform Testing on Measuring Instruments In Computer Hardware Maintenance and Repairs Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Perform Continuity Tests on Fuses and Cables"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Measure Voltage across the 20-pin ATX Power Connector, 4-pin internal drive, and Power Connector"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Follow the Procedures for Testing Components and Modules as specified in the Installation Manuals"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/006/L2",
+      "title": "GENERAL MAINTENANCE AND REPAIRS OF FAULTY COMPUTERS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Trace Faults During Computer Hardware Maintenance and Repairs",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Perform the Basic Troubleshooting Procedures"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use Measuring Instruments to Trace Faults"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Locate Faulty Components by Visual Inspection, Open, or Short Circuit Test"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use Multimeters to check the Current flow and Voltage on the Motherboard"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Replace Module or Components with other Spares to eliminate Faults"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Clean Computer Systems During Hardware Maintenance and Repairs",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the following methods involved in cleaning computers: i. Blowing; ii. Dusting/Brushing; iii. Applying solutions"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Disassemble the Computer Systems for Cleaning or washing"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the Basic Tools Required for System Cleaning: i. Non-lint Cloth; ii. Rubbing/Isopropyl alcohol; iii. Portable Vacuum; iv. Foam/Cotton swabs"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use Isopropyl Alcohol and Brushes to wash Motherboards"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Heat the Motherboard with the workplace stations after washing"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Use an air blower to remove Dust and Dirt inside the computers"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how to Unplug and Plug Computer Components During Troubleshooting Reference",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Apply \u201chalt on\u201d setting in the CMOS setup Utility"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Perform plugging and unplugging of the following internal components for error detection and correction: i. L2 cache; ii. Video card; iii. RAM; iv. SSD; v. Hard disk drive (HDD) power"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out a \u201cpower-on-self\u201d (POST)\u201d check to locate common faults in Computers"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/007/L2",
+      "title": "MANAGEMENT OF COMPUTER HARDWARE MAINTENANCE AND REPAIRS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Procedure to Set up a Computer Hardware Maintenance and Repairs Workshop",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe the appropriate equipment and facilities for setting up computer hardware maintenance and repairs Workshop"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify appropriate locations for the Workshop"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the appropriate size and layout for the Workshop"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Maintain Clean, Safe and Secure Workplace Environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Apply Managerial and Customer Service Principles to Computer Hardware Maintenance and Repair Workshop",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe how to Attend to customers with Faulty Computers"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the normal documentation the process when Collecting and Returning Computers to Customers"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate Good Communication and Interpersonal Skills to Achieve Customer Satisfaction"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Keep Good Records of Incomes, Expenses, Assets, and Liabilities of the Workshop"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Estimate the Cost of Repairs of Faulty Computers"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Raise Funds or Capital for Computer Hardware Maintenance and Repairs Workshop Reference",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Propose a Start-up Capital required for computer hardware maintenance and Repairs Workshop"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify various Sources of Capital to set up the Workshop"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the Returns on Investment (RoI) for the Workshop"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Maintain good stock Control and Inventory of Spare Parts and Modules"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/008/L2",
+      "title": "FUNDAMENTALS OF BASIC ELECTRONICS TO COMPUTER HARDWARE MAINTENANCE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Applications of Resistors in Computers and Electronic Circuits",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the Color Codes of Small Resistors"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the resistance of Resistors using color codes: Four-band system; Five-band system"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Connect resistors in: Parallel; Series"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Draw Resistors in Serial and Parallel Configurations"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use an Ohmmeter to determine the total Resistance of Resistor Configurations"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Compare the Ohmmeter Readings with the Calculated Values"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Apply Capacitors in Computers and Electronic Circuits",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the meaning of a Capacitor"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Discuss the Applications of different types of Capacitors in Computers and other Electronics"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Draw the Symbols of Capacitors"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Define the Capacitance of a Capacitor and It's SI Unit"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Connect capacitors in: i. Series; ii. Parallel"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Draw Capacitors in Serial and Parallel Configurations"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Use multimeter to measure the current and the voltage across the capacitor configurations"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the Operational Principles and Purpose of Inductors in Computers and Electronic Circuits Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe an inductor and how it works"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Define the inductance of an inductor and It's SI Unit"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Discuss the applications of inductors in computers and other electronics"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Connect inductors in: i. Series; ii. Parallel"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Draw inductors in serial and parallel configurations"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Use Multimeter to measure the Current And Voltage across the Inductor configurations"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand the Concept and Applications of Filters in Computers and Electronic Circuits",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the meaning of a Filter and its Application in Computers"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use a simple RC circuit to explain how low-pass Pass Filter work"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Draw a simple RC Circuit to illustrate how high-pass Pass Filter work"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Draw a Band Pass Filter Circuit and show how it works"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Discuss the Band Stop Filter Circuit and its Applications"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Use resistors and capacitors to construct the following filters: i. Low Pass; ii. High Pass; iii. Band Pass; iv. Band Stop"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand the Concept and Applications of Semiconductors in Computers and Electronic Circuits",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Discuss Semiconductor materials and Effect of Doping on these materials"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain PN Junction Diode and its Composition"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "State the difference between forward biased and reverse biased diodes"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Apply Diode in: i. Half Wave Rectification; ii. Full Wave Rectification; Bride Rectification"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Identify the uses of Zenger Diode"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Identify the Uses of Bipolar Junction Transistors and Field Effect Transistors in Computers",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Use Simple diagrams to explain the Physical Configuration and Types of Bipolar Junction Transistors"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "State the basic functions of transistors, namely: i. Switching. Amplification"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Test the functionality of Transistors"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "State the applications of the following in computers: i. Junction field effect transistors (JFET); ii. Metal Oxide Semiconductor Field Effect Transistors (MOSFET)"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Understand the types and Applications of Optoelectronics Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Discuss Optoelectronics and its two main categories: i. Light Emitting; ii. Light Detecting"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Identify the following Light Emitting Diodes and their uses: i. Visible-Light LED; ii. Blinking. iii. Tricolor. iv. 7-Segment LED Display"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Identify the following Light Detecting Devices and their Applications: i. Photoresistors. ii. Photodiode. iii. Solar cell; iv. Phototransistor"
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Identify Types and uses of Integrated Circuits (ICs) in Computers Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Identify Integrated Circuits in the Circuit Boards or Motherboards"
+            },
+            {
+              "pc_code": "8.2",
+              "description": "State the Advantages and Disadvantages of Integrated Circuits"
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Identify the Basic Types of IC Packages in Computers: i. TO-5 Package; ii. Flat Package; iii. Dual In line (DIL)"
+            },
+            {
+              "pc_code": "8.4",
+              "description": "Draw the IC Symbols"
+            },
+            {
+              "pc_code": "8.5",
+              "description": "State the Uses of the following ICs: i. Voltage Regulator. ii. 555 Timer. iii. Operational Amplifiers"
+            },
+            {
+              "pc_code": "8.6",
+              "description": "Construct simple electronic circuits or projects using common electronic components and ICs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CMR/009/L2",
+      "title": "FUNDAMENTAL PRINCIPLES OF USING PRINTERS, PHOTOCOPY MACHINES AND",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Basic Operation and Maintenance of Printers",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain various types of printers with their examples each: Impact; Non-impact"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify printer components and consumables"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the control panel functions of a Printer"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify the following printer interfaces with computers: \u25cf Parallel port \u25cf USB port \u25cf Serial port \u25cf Wireless (Bluetooth, Wi-Fi, Infrared); \u25cf Small Computer System Interface \u25cf (SCSI)"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Perform Installation and Configuration of Printers"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Perform the following operations: Print documents. Cancel print documents"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Change Printer Settings to Optimize Performance"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Perform Replacement and Refilling of Printer Cartridge/Ink Toner"
+            },
+            {
+              "pc_code": "1.9",
+              "description": "Connect Printers to a Wired or Wireless Network"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Apply Basic Maintenance Procedures to Local or Network Printers Reference OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Error Codes and messages of Printers"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use relevant Diagnostic Tools to Eliminate Faults"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Review Service and Installation Manuals"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Isolate the Problems of the Printers"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Replace Parts and Consumables as needed"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Test run the Repaired Printer to Ascertain its Functionality"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Install missing Printer Drivers"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Fix Printer IP-Address problem (for Printers connected on a network)"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the Basic Operation and Maintenance of Photocopy Machines",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify parts of a Photocopy Machine"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Operate Photocopy Machine"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Replace Toner and Other Consumables"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Clear Paper Jam and Other Error Messages"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand the Basic Operation and Maintenance of Scanners.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify parts of a Scanner"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Outline the operation of a Scanner"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain the Types of Scanners and their advantages: i. Handheld ii. Flatbed iii. Specialized"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Connect a Scanner to a Computer"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Perform Installation of Scanner and un- install it"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Use Scanner correctly"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

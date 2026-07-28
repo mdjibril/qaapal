@@ -1,0 +1,680 @@
+{
+  "trade_name": "NOS Plumbing",
+  "level": 3,
+  "units": [
+    {
+      "code": "CON/PL/001/L3",
+      "title": "HEALTH, SAFETY AND SECURITY IN PLUMBING.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Personal health and hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State the importance of maintaining good personal hygiene."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Wear clean, smart and appropriate personal Protective Equipment."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Work safely at all times, complying with health and safety and other relevant regulations and guidelines."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe how to deal with cuts, grazes and wounds and why it is important to do so"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Get any cut, grazes and wounds treated by the appropriate person"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Report illness and infection promptly to the appropriate person."
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Supervise the use of Personal Protection Equipment such as Head Protection, Foot Protection, Face and eye Protection, Hand and Body protection and regulatory protection."
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Summarize own responsibility under the health and safety Act as it relates to own occupation."
+            },
+            {
+              "pc_code": "1.9",
+              "description": "Guide others general rules on hygiene that must be followed."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State the importance of working in a healthy, safe and hygienic workplace."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Report any accidents or near accidents quickly and accurately to the proper person."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Promote health, hygiene and safety procedures during work."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Practice emergency procedures during work."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Ensure organizational security procedures are followed."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Ensure the disposal of waste and Pollution control with organic and inorganic waste disposal methods."
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Promote sound and noise control and protection methods."
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Supervise identification of any hazards or potential hazards and deal with these correctly."
+            },
+            {
+              "pc_code": "2.9",
+              "description": "State where information about health and safety in your workplace can be obtained."
+            },
+            {
+              "pc_code": "2.10",
+              "description": "Describe the types of hazards in the workplace that may occur and how to deal with them."
+            },
+            {
+              "pc_code": "2.11",
+              "description": "Differentiate between hazards that can be dealt with personally and those that should be reported to appropriate personnel."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Carry out organizational procedures on how to warn other people about hazards and why this is important."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State why accidents and near- accidents should be reported and who they should be reported appropriately."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the types of emergencies that may happen in the workplace and how to deal with them."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Indicate where to find the first-aid equipment and locate the authorized personnel."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Lift and handle materials in line with work environment procedure."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "State other ways of working safely that are relevant to own position responsibility and its importance."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Describe organizational emergencies procedures, in particular fire, and how these should be followed."
+            },
+            {
+              "pc_code": "3.8",
+              "description": "State the possible causes for fire in the workplace."
+            },
+            {
+              "pc_code": "3.9",
+              "description": "Describe how to minimize the possibility of fire in the workplace."
+            },
+            {
+              "pc_code": "3.10",
+              "description": "State where to find the alarms and how to set them off."
+            },
+            {
+              "pc_code": "3.11",
+              "description": "State why a fire should never be approached unless it is safe to"
+            },
+            {
+              "pc_code": "3.12",
+              "description": "State the importance of following the fire safety laws"
+            },
+            {
+              "pc_code": "3.13",
+              "description": "Describe organizational security procedures and why these are important"
+            },
+            {
+              "pc_code": "3.14",
+              "description": "Ensure security of equipment\u2019s in work environment within your responsibility"
+            },
+            {
+              "pc_code": "3.15",
+              "description": "Ensure security procedure for the movement of personnel and visitors are followed in your work environment"
+            },
+            {
+              "pc_code": "3.16",
+              "description": "State the importance of reporting all usual or non- routine incidents to the appropriate personnel"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PL/002/L3",
+      "title": "COMMUNICATION SYSTEMS IN PLUMBING.",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Complex Communication System in a Work Environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe simple non-verbal means of communication."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Interpret concept of symbols and signs"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Appropriate Supervise the use of audio and electronic means to pass on necessary information."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Source of Information and Management in a Work Environment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Participate in creating and making functional the source of information in an organization and work environment."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Make accessible the source of information in an organization or work"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Environment relate appropriately with the source of information."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use the various information flow system in an organization or work environment to overcome challenges."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Ensure proper documentation retrieval of information in accordance to procedure in a work environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Ensure the accessibility of the communication equipment in the work environment."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the effective use of the various communication channels in a work."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Environment demonstrate the use of various communication means in a work environment."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Ensure effective information flow to the right personnel"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Ensure the effective deployment of the use of symbols, signs and codes."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Ensure that instructions are obeyed and disseminated in line with ethics of the work environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Ensure that communication equipment are in good working condition."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Liaise with the maintenance unit to ensure that communication equipment are maintained regularly."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Liaise with appropriate authority to replace communication equipment in the event of loss or damage."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Ensure that communication equipment are well secured in a work environment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PL/003/L3",
+      "title": "TEAM WORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Various Team Roles on the Construction Site",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Distinguish among various teams e.g. Masonry, Carpentry, Iron bending, Plumbing etc."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the role of each team."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Discuss the importance of each team"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Deliver quality output as a team player."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Supervise Team Activity",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Discuss the method of carrying out activities with team members."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Distribute work load and supervise activities."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Select materials and tools required for each team activity."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Interpret and ensure understanding of directives to team members."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Communication Flow",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Communicate work related information/ requirement clearly to team members."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Inform co-workers and superiors about any kind of deviation from work plan."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Address the problems effectively if need be to superiors appropriately."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Gather instructions from superiors and respond effectively."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Communicate to team members/subordinates of the right work techniques and methods."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Obtain clarification and advice from superiors as per work information were necessary."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PL/OO4/L3",
+      "title": "EXTERNAL PLUMBING PIPING LAYOUT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Water Supply Pipe Layout.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Make a sketch drawing or line diagram of pipe work."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify appropriate pipe, size, and fittings."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Select appropriate pipe, sizes, and fittings in line with sketch."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Select tools and equipment to be used."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Used selected tools and material to install pipe according to specification."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Quality checks the installed pipe."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Water Storage Tank Installation.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the tools and equipment to install a water storage tank."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Interpret the drawing and identify requirement in reference to 1.1 above"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Install a water storage tank to the required specification."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Mention two different storage tank faults."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain the procedure of clearing and disinfection in storage tank fault."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate Pumping Machine Installation.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify tools and equipment to install pumping machine."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Select appropriate pumping machine in line with the specification reference to 1.1 above."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Quality checks the installed pumping machine."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Mention 3 different type of pumping machine used for water supply."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify appropriate tools and equipment material to be used."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Select appropriate tools and equipment material to be used."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify the position of septic tank and soak away."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Excavate to get the appropriate slope level (ratio 1:100) at 1cm drop of 1m"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Laying of pipes to the direction of specific and soak away."
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Back full the laid pipe appropriately."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PL/OO5/L3",
+      "title": "CHECKING AND TESTING EXTERNAL PLUMBING INSTALLATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Check Installed Pipe Work and Component.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Carry out checks on the installed external pipe network to ascertain any loose joint (not water tight) on the network."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify any inferior pipes and fittings used for the installation"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Address the fault by taking different approach within an area of work specified"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the disadvantages of using the low quality pipes and components."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Check installation and correct positioning of component in line with designed specification."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Test Plumbing Installation.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Carry out hydrostatic test of the installed pipe network to ascertain whether there are leakages."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform testing on the appliances installed to full working capacity and in accordance with the working standards and specifications."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Reporting test result to the immediate supervisor on the test carried out on the installation."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Demonstrate the ability to isolate or prevent unauthorized use of unsafe systems or components."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Locate faults through interpretation of information on system or component Performance, visual inspection, checks, or diagnose of test."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Initiate action to take when the system or components does not work to full performance specification."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carry out Maintenance of fault in accordance with safety and work place procedure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PL/006/L3",
+      "title": "CUTTTING AND THREADING OF PIPES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Apply Pipe Cutting Tools of Copper, Galvanize, Stainless steel and Plastic",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the different cutting tools for pipe cutting."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Select the appropriate cutting tools used for cutting copper, galvanize and plastic pipes."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the importance of using appropriate pipe cutting tool."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use cutting tools appropriately to cut the following pipes, copper, galvanize and plastic."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Thread of Plastic, Galvanize and Stainless steel Pipes Understand Safety Requirement in Work Place",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify pipes that can be threaded"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Select the right size of dies for threading the following pipes; a) G.I 25mm b) Plastic 20mm"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Perform basic threading on the selection of 2.2 PC above."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the importance of using the right size of dies for threading."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Assemble the threaded pipes to form a simple network."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PL/007/L3",
+      "title": "ARRANGE WORK PLACE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand work flow and space arrangement",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the equipment and tools required for work."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify material required in the work place."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Determine space requirement for labor operations."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Recognize the sequence of work"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Arrange material equipment and labor in accordance to sequence of work."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Safety Requirement in Work Place",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the importance of good housekeeping."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify safety gadget required in the work place."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify exit route in case of emergency."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Initiate safe access to work place."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Adopt emergency procedure in work place."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Return every safety gadget after work."
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Maintain appropriate safety measures."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Security Needs in Work.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify security personnel in work place"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Maintain procedure to keep work environment secure"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Report any security threat in work place."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

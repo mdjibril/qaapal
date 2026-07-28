@@ -1,0 +1,888 @@
+{
+  "trade_name": "NOS ICT Digital Service Operations L2",
+  "level": 2,
+  "units": [
+    {
+      "code": "ICT/DSO/L2/001",
+      "title": "OCCUPATIONAL HEALTH AND SAFETY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Safe working Practices and Instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safe work practice and instructions"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify safety signs and symbol"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use signs and symbols correctly"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Carry out safe work practices and instructions"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Operate in accordance with health and safety best practices"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Safety Hazards and risks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain work environment hazards"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify work environment hazards"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify methods to reduce the risk of these hazards"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify Personal Protection Equipment (PPE) Eg: Goggles, Gloves etc."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "State methods to resolve an occurring environmental hazard"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate the appropriate actions to take PERFORMANCE CRITERIA Ref. Page No. OBJECTIVE (LO) The learner will: during accident/injury",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify basic first aid equipment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify the uses of safety equipment in a workplace as required."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the steps to maintain hygienic, safe and secure workplace."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate safe work habit and clean work environment PERFORMANCE CRITERIA Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use safe access and exit routes in the work environment"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Dispose all wastes appropriately to designated waste facilities"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain methods of resource conservation (e.g. Water, Energy etc)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L2/002",
+      "title": "COMMUNICATION IN DIGITAL SERVICE OPERATIONS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know fundamentals of good communication",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the reasons why good communication is important"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain ways to communicate effectively"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify and accurately follow steps in an instruction manual pertaining to any of the units in this course"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the importance of good communication",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Exhibit patience and a mild demeanour while communicating with colleagues, managers and clients"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Communicate in a respectful manner"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use respectful body language"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Interpret verbal communication accurately"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know how to document and follow PERFORMANCE CRITERIA OBJECTIVE (LO) The learner will: documented instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Perform documentation of information in the workplace (Eg: Receipt, Invoices, Reports)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify and document Errors, solutions, processes and reports"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Develop reports for documentation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L2/003",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the benefits of Working in a Team at Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "List the advantages of working as a team."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the attributes of a team player: \u2022 Mutual respect \u2022 Common goal \u2022 Discipline \u2022 Mutual understanding \u2022 Trust \u2022 Honesty and sincerity, etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List members that constitute a team in the ICT work environment: \u2022 Systems Analysts \u2022 Software Developers \u2022 Database Administrators (DBAs) \u2022 Network Engineers \u2022 Security Analysts \u2022 Help Desk Technicians, etc."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Recognize team members in a work environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand how to relate with team members Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the need for good working relationship with team members at the workplace."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Recognize the roles of other team members."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss your own role in achieving the objectives of the team."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the role of a Network Administrator in an ICT work environment."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Discuss the relationship between the Network Administrator and positions within the ICT team."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Observe Positive Work Relationships with colleagues Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State the qualities of a good Network Administrator: \u2022 Strong technical skills \u2022 Problem-solving abilities \u2022 Communication skills \u2022 Customer service orientation \u2022 Attention to detail \u2022 Adaptability \u2022 Teamwork"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Relate with other members at workplace"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the importance of effective communication and collaboration with other team members to ensure smooth operations"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Communicate information that may affect other workers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L2/004",
+      "title": "CONTENT MANAGEMENT SYSTEMS I",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Content Management Systems (CMS)",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Content Management System"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the different CMS, eg wordpress, sharepoint, Joomla, etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the uses of CMS"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Outline the benefits of Content Management"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Identify the features of Content Management System"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Content Types",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify different Content types e.g News, e-commerce, blogs, video/audio, images etc."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Compare the application and benefits of various content types"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Create content for different uses. E.g News, streaming, product listing"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Create content for different CMS platforms eg, mobile desktop, etc"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Use Content Management System",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use a template to add content with attachment."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Publish the developed content"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Search/Preview developed content"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Edit published content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L2/005",
+      "title": "TRANSACTIONS MANAGEMENT I",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Transaction Processing System (TPS)",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain transaction processing system"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the objectives of transaction processing system"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List key terminologies or technologies employed in transaction processing system"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the transaction processing cycle"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Perform a transaction processing task. Eg. Payroll, Inventory Control, accounts payable"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand TPS Dynamics",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe transaction settlement procedures"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform end-to-end transaction processing"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the information flow within a TPS"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Enterprise Resource Planning (ERP) System",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define Enterprise Resource Planning"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Discuss situations where ERP Systems can be used."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the role of ERP system in transaction processing with appropriate examples"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Differentiate between Transaction Processing and Enterprise Resource Planning Systems"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L2/006",
+      "title": "INTRODUCTION TO CYBER SECURITY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand cyber security principles",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define the principles of confidentiality, integrity, and availability (CIA triad)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain various authentication methods (e.g., passwords, biometrics)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe legal/regulatory issues relating to cyber security"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify the application of these principles in real-world scenarios."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify Common Cyber Threats and Vulnerabilities",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify types of cyber threats (eg. malware, phishing, ransomware etc.)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain how vulnerabilities in software, networks, and human behaviour can be exploited"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain web application/infrastructure vulnerabilities"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Discuss real life scenario of cyber-attack."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Basic Security Measures",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify basic security tools (Eg. antivirus software, firewalls, passwords)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the importance of software updates in preventing attacks"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the concept of encryption"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain best practices for cyber security."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate Incident Response Skills",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify signs of a security incident."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Initiate appropriate response procedures"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify strategies to contain impact of the security breach."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Create a recovery plan to restore normal operations after an incident."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L2/007",
+      "title": "FUNDAMENTALS OF E-PAYMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand principles and concepts of electronic payments",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define e-payments"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain e-payment concepts"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain regulations covering e- payment systems"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Mention advantages of e- payment over traditional form of payments"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand e- payment systems",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe the logic behind e- payment system"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the different components of e-payment system"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the tools used within an e-payment systems"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain basic principles of electronic funds transfer"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Identify various e-payment channels"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Discuss challenges in e-payment transaction"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify security threats within an e-payment system."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe types of e-fraud within an e-payment system."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain necessary measures to mitigate these security threat."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L2/008",
+      "title": "LOGISTICS MANAGEMENT FUNDAMENTALS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the concept of Logistics Management",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Logistics management"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain key logistics terminologies"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe significance of logistics in supply chain"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the logistics cycle"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe logistics management systems"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Identify the different types of logistics record"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Inventory Control System in Logistics Management",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe an Inventory Control System"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the objectives of inventory control systems"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the fundamental terms in inventory control systems"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify the types of maximum- minimum inventory control system"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain inventory control systems in terms of logistics arrangement"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define customer service"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the phases in customer service"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify customer service attributes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L2/009",
+      "title": "INTRODUCTION TO WEB CLIENT-SIDE TECHNOLOGIES (HTML,",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Basic Skills in HTML",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe the Hypertext Markup Language (HTML) and its role in creating web documents"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the Document Object Model (DOM)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify modern conventions used in HTML Documents"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe HTML tags/ attributes"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain the structure of a basic html document"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Create a static website with mixed content"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Basic knowledge of Cascading Style- sheets (CSS)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe Cascading Style- Sheets and its role in a html document."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the concept of DOM selectors"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Show different ways of applying CSS rules to a HTML document (e.g. inline CSS, linking of style-sheet document etc.)"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify sources of CSS templates"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Design the structure of a web page with CSS"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe the term client-side scripting"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the significance of client-side scripting in HTML web pages"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe schemes of integrating JavaScript into HTML documents"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain what is meant by DOM manipulation of JavaScript"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Explain the terms: variables, functions and objects in Javascript."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate Knowledge of Basic JavaScript Programming",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Implement JavaScript integration within a HTML document"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Demonstrate manipulation of DOM elements with JavaScript"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use a JavaScript function to automate an action or activity within the HTML document"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L2/010",
+      "title": "E-COMMERCE ANALYTICS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the meaning of Web Analytics",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define web analytics"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the different web analytic tools"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the terms big data and data analytics"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe areas of application of web analytic"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe best practices for web analytics"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Explain the Concept of Traffic in e-Commerce Analytics",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define web traffic"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe the application of web traffic analytics"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Distinguish the different kinds of web traffic"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify factors that determine quality traffic"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the role and function of web analytics dashboard"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the usage of web analytics dashboard"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the different components of web analytic dashboard (eg funnel and funnel visualization report.)"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Describe the role and applications of social plug-ins in web analytics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/DSO/L2/011",
+      "title": "FUNDAMENTALS OF DIGITAL MARKETING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": ". Understand Basics of Digital Marketing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Digital Marketing"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the fundamentals of digital marketing, (eg survey, market segmentation, etc.)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain Data analytics in digital marketing"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain digital marketing plan"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": ". Understand Digital Marketing Tools",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "List different digital marketing tools"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain digital marketing tools"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe marketing automation tools"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carry out Online Survey S/N 1 2 3 4 5 6 7 8 9 10 11 12",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Create dynamic forms online"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Distribute online survey"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain buyer persona, email campaign, pop up and opt in forms"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Describe market research terms (eg. Focus group, Interviews, Demographics etc.)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

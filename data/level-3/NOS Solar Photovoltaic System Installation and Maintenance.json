@@ -1,0 +1,1068 @@
+{
+  "trade_name": "NOS Solar Photovoltaic System Installation and Maintenance",
+  "level": 3,
+  "units": [
+    {
+      "code": "PWR/SPV/001/L3",
+      "title": "Occupational Health and Safety",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know safe working Practices and Instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe safe work practice and instructions."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize safety signs and symbols."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Interpret safety signs and symbols correctly."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Observe safe work practices on given tasks."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Work in accordance with health and safety best practices."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Safety, Hazards and Risks in Work Place",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State types of hazards in the work environment."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe ways to avoid common hazards in the work place"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State methods to reduce the risk of hazards in a work place"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe how to report potential hazards in a work place"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know appropriate actions to take during accident/injuries Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify basic first aid equipment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the benefits of first aid equipment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "State types of injuries commonly found in a workplace"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify serious injuries that require emergency response in a work place"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "State the steps to be taken when an accident occurs"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Identify own responsibilities in case of an emergency such as: \u2022 Identifying and switching off power supply sources \u2022 Carrying out artificial resuscitation methods \u2022 Calling for medical attention \u2022 Transferring patient to the nearest medical facility"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Identifying muster point"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Identify locations of fire extinguishers in case of fire outbreak"
+            },
+            {
+              "pc_code": "3.9",
+              "description": "Describe methods of fire fighting"
+            },
+            {
+              "pc_code": "3.10",
+              "description": "Describe the Pull Aim Squeeze and Sweep (PASS) of fire extinguishers"
+            },
+            {
+              "pc_code": "3.11",
+              "description": "Describe how to treat minor injuries and burns"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know safe work practices and clean work environment Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify safe access and exit routes in the work environment"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe safe work practices and clean work environment"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Dispose all wastes appropriately in designated waste facilities"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "State the advantages and disadvantages of using appropriate PPE while carrying out a task in work environment"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Select appropriate working tools for a given task to avoid hazard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/002/L3",
+      "title": "Communication Skills",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know good Communication Skills",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State reasons why good communication skills is important in Solar PV System Systems"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List ways to communicate effectively: \u2022 Upward \u2022 Downward \u2022 Horizontal"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the significance of patience and mild demeanor while communicating with colleagues and clients"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe how to communicate in a Professional manner"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "State the need for respectful body language even when in a bad mood or while under pressure"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know how to follow Documented Instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Read and accurately follow steps in Installation manuals"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain mobile app documentation."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Read the information displayed on various Solar devices."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Document information after commissioning of Solar System",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Determine parameters to be documented"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe the scope of information needed to be documented"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the importance of documented information"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Document appropriate information accordingly"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Report documented information to appropriate authority"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/003/L3",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Positive/Negative working relationships with colleagues in a Work Environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the need for developing positive working relationship with colleagues in a work environment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of relating with others in a way that makes them feel valued and respected"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Support team members when one\u2019s services are requested"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the authorized personnel when request is made for assistance falling outside one\u2019s area of responsibility"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about own work that might affect performance of others"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Supervise team to ensure roles and responsibilities of the team members are appropriate"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know responsibilities within a team work",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain own role and responsibilities within the team for a group work."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Carry out individual tasks in a given group assignment in line with the team\u2019s rules and regulations"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate actively in a given team work"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Give own report of task carried out in a team"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Give instructions to team members and ensure compliance"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Comply with Policies and Regulations of Organization OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Carry out assigned tasks in a team in line with organizational standards"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use organizational code of practice for assigned job done in the team"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Obtain organizational code of conduct for own and team jobs"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the importance of using organizational code of conduct for own and team jobs"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "List rules that guide the activities of the team"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Report activities of the team work that may affect organizational code of conduct to the higher authority"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/004/L3",
+      "title": "Solar PV System Components",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Solar- PV modules",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Interpret the technical specifications and output characteristics of photovoltaic modules"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Define the terms: Isc, Voc, Imp, Vmp, Pmax"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "State the factors which influence the output characteristics of Photovoltaic modules (irradiance, temperature, age)"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Compare the advantages and disadvantages of Monocrystalline, Polycrystalline, and amorphous Photovoltaic modules for various applications, considering different installation needs and manufacturers' data."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain the effect on array output (current, voltage and power) of connecting modules in series and parallel configurations."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Explain the effects of using dissimilar modules in an array."
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Analyze the impact of shading on a PV array."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Solar-PV Charge Controller",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the operating principles of Pulse Width Modulated (PWM) Solar Charge Controllers."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the operating principles of Maximum Power Point Tracker (MPPT) Solar Charge Controllers"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the role of each of the solar charge controller\u2019s features (low voltage cut-out, temperature compensation and load disconnect)"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the specifications, installation requirements and controls for a range of commercially available PWM and MPPT Solar Charge Controllers."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Solar- PV Battery Bank OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Compare different battery technologies, such as lead-acid and lithium-ion; considering internal design, characteristics, reliability, Ref. Page safety, convenience, lifespan, and cost to make informed decisions on their suitability for various system requirements"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Analyze the factors and manufacturers' data that impact the Lead-Acid battery performance"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Analyze the factors and manufacturers' data that impact the Lithium-ion battery performance"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate the different techniques used to measure batteries bank capacity"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Observe the battery bank installation requirements for safety and performance"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Configure Solar- PV Inverters",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the operating principles of Solar PV Inverters"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify types of Inverters"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Carry out Inverter-charger configuration"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Describe the specifications, installation requirements and controls for a range of commercially available inverters."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/005/L3",
+      "title": "Solar PV System Design and Installation",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know how to conduct a site Survey and Energy Audit",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Conduct a visual inspection of the site to identify potential installation issues."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Verify that the site requirements for a Solar PV installation, including shading, wind loading and roof structural integrity"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Conduct a site survey to determine the optimal location and orientation of the Solar PV System"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify potential safety hazards and develop a plan to mitigate them"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Conduct energy demand assessment and or energy audit"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know how to develop a Solar System Design",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Review the Solar PV System design to ensure compliance with relevant regulations and standards"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Evaluate customer's energy requirements for optimization of energy production"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Investigate that all components design meet energy requirements"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Conduct verification of executed System Installation",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Check that the mounting structures are installed correctly and meet the manufacturer's specifications"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Inspect the Solar PV systems connections to ensure they are installed correctly and meet the manufacturer's specifications"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Verify that the Inverters are installed correctly and meet the manufacturer's specifications"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Verify that the charge controllers are installed correctly and meet the manufacturer's specifications"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Verify that the battery is installed correctly and meet the manufacturer's specifications"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Identify potential component failures and develop a plan to correct them"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know how to review Solar PV OBJECTIVE (LO) Installation System Performance",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Conduct performance testing to ensure the solar PV system is Ref. Page operating at the expected efficiency"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Verify that the system is producing the expected amount of energy"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Check that the system is operating efficiently and fulfill safety measures"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify gaps and/or potential component failures and develop a plan to correct them"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know how to prepare report and document all recommendations.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Generate a comprehensive installation report detailing the findings and identified gaps."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Provide recommendations for corrective action to address any issues identified"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Identify opportunities for system optimization and upgrading"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Provide a plan for implementing the recommended corrective actions and system optimizations"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/006/L3",
+      "title": "Cost Estimate for Installing Solar Photovoltaic",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Carry out site visit, data collection and Load Analysis",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Conduct a site visit to assess the location, terrain, and existing infrastructure."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Collect data on the site\u2019s Solar irradiance, temperature and Wind Patterns."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the required loads to be powered in the building"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Estimate the total loads: \u2022 Resistive \u2022 Inductive"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Estimate the energy requirement in kWh"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Determine the appropriate inverter size"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Determine appropriate Panels, Batteries and Charge controller sizes and quantities"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Determine cables and accessories"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carry out Cost Estimation of components, accessories and materials",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Carry out market survey on components, accessories and materials"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Estimate the cost of materials, including Solar Panels, Inverters, mounting structures, and wiring etc."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Estimate the cost of labour, including the cost of workers, hours, and benefits"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Estimate the cost of equipment and tools required for the installation"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Estimate the cost of transportation and Logistics"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Consider Value Added Tax (VAT)"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Determine total cost estimate for the Solar PV System"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Prepare budget proposal"
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Present budget proposal"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Prepare project plan for PV Installation",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define the Project plan"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain logistics in Project planning scheduling"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain manpower management in project planning"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain work scheduling in project planning"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Explain time management in projects"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/007/L3",
+      "title": "Operation and Maintenance of Installed Solar Photovoltaic",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Execute operations of different Solar PV Systems",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Apply safety in accordance with laid down procedures"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Demonstrate procedure to switch \u2018ON\u2019 and switch \u2018OFF\u2019 a system"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Outline the common cleaning procedures for: \u2022 Solar panels \u2022 Batteries \u2022 Inverter \u2022 Charge controller"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe response procedures for the following faults: \u2022 Power failure with continuous inverter beeping \u2022 Continuous sound alarm/ visual display \u2022 Inverter tripping on normal load etc."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Describe the normal operation of the system according to specification and standard guidelines"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Report fault findings to the appropriate authority"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Select appropriate instrument to detect, isolate and repair faults"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the maintenance on Solar PV Systems OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Apply safety in accordance with laid down procedures"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Analyze maintenance of Solar PV Systems"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss types of maintenance: \u2022 Predictive maintenance \u2022 Preventive maintenance \u2022 Corrective maintenance"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "State the difference between operation and maintenance"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Identify ratings and specific locations of all connected loads"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Explain components/systems warranties"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Perform simple checks on fuse, Distribution Board (DB), MCB according to specifications and guidelines"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Apply corrective actions to amend faults found through the checks"
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Record findings and corrective actions on appropriate templates"
+            },
+            {
+              "pc_code": "2.10",
+              "description": "Store records according to workshop policy"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the tools used in maintenance of Solar PV system.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe tools/instruments used in battery maintenance: \u2022 Hydrometer \u2022 Battery Analyzer \u2022 Voltmeter \u2022 DC Clamp meter \u2022 Dummy load \u2022 Thermometer \u2022 Spanners \u2022 Screwdrivers \u2022 Grease \u2022 Distilled/Deionized water \u2022 Installation tape \u2022 Crimping kit etc."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify tools/ instruments used in modules, inverter, and charge controller maintenance: \u2022 AC/DC Voltmeter \u2022 AC/DC Clamp meter \u2022 Spanner \u2022 Screwdrivers \u2022 Air Blowers \u2022 Pliers/cutters \u2022 Installation tape \u2022 Crimping kit \u2022 Wire brush etc."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe proper procedures for handling different maintenance tools"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use appropriate tools in carrying out maintenance of Solar PV System"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Perform relevant isolation procedure for maintenance",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Carry out PV modules isolation"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Carry out AC input/output isolation"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Carry out battery bank isolation"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Carry out inverter isolation"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Carry out charge controller isolation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/008/L3",
+      "title": "Testing and Commissioning of Solar PV System Installation",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Carryout testing of solar PV system",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Apply safety measures in testing all parameters in accordance with laid down procedures"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the Importance of ground (Earth) connection"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the polarity test, continuity test, earth resistance test and insulation test"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Select appropriate test instruments in accordance with specifications"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Locate the position and condition of ground (Earth) connection"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Locate the position and condition of lightening arrestor"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Perform the following tests according to specifications and guidelines: \u2022 Polarity test \u2022 Continuity test \u2022 Earth resistance test \u2022 Insulation test"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Record test results in accordance with laid down procedures",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Apply safety and environmental measures in recording according to laid down procedures"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the importance of documentation in Solar PV installation"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Outline the procedure for keeping records"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Record and store test results as appropriate (in writing, pictorials, videos, analogue or digital)"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know the laid down procedures in project commissioning Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Apply safety and environmental measures in commissioning a project according to laid down procedures"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Outline the various types of project commissioning: \u2022 Check Specifications \u2022 Check Components compliance \u2022 Check performance compliance \u2022 Check installation \u2022 Check documentation \u2022 Maintain user Education"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the process of commissioning a Solar PV"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Carry out safe and orderly handover of the project to the client"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/009/L3",
+      "title": "Troubleshooting Techniques in Solar Photovoltaic Systems",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand different types of troubleshooting techniques used in Solar PV",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Differentiate between \u2018fault\u2019 and \u2018troubleshooting\u2019"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the common faults/issues associated with Solar PV systems: \u2022 Battery Failure \u2022 Shading \u2022 Charge controller failure \u2022 Partial Contacts etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Discuss the effects of various faults on system performance as mentioned in 1.2 above"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the short circuit fault, open circuit fault and overload"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carry out relevant tests to detect faults in PV systems",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Apply safety while locating faults in accordance with laid down procedures"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the importance of Interacting with clients to determine the nature of faults"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Perform open circuit fault test, short circuit fault test, and overload test according to specifications and guidelines"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Select appropriate instruments used for tracing faults in PV systems"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Carry out tests to determine battery status"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Carry out test on AC output voltage of the Inverter"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Interpret System information",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Discuss system information"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Interpret symbols & their usefulness"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Interpret manuals"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Interpret system diagrams"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Apply safe work habit and clean work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify safe access routes in the work environment"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Ensure clean work environment at all time"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain how to observe own safety and others in the work environment"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Dispose all wastes appropriately to designated waste facilities"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PWR/SPV/010/L3",
+      "title": "Entrepreneurship in Solar PV Installation",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know the Fundamentals of Solar Market Opportunities",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Entrepreneurship"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Analyze market trends, demand, and opportunities for Solar energy solutions in different sectors."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify key competitors with their different business models in the Solar industry."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Analyze policy frameworks, regulations and incentives affecting solar business"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Develop a Sustainable Business Model for a Solar Energy Venture",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain a unique value proposition and target customer segments for a Solar business."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify key stakeholders, including suppliers, investors, Government agencies and develop partnerships"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Develop a pricing strategy, financial plan, and revenue model for a Solar startup."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Create a business plan outlining operational, marketing, and sales strategies."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Develop an advertisement strategy that includes digital, print media and other available means"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement Solar Project Financing and Investment Strategies",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Evaluate different financing options, including grants, loans, crowd funding and investor funding"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Assess market evaluation for best supplier"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out risk assessment and mitigation strategies for Solar projects"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Communicate solar business proposal to potential investors"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Manage Operations and Scaling up of Solar Energy Business",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Develop a customer acquisition and retention strategy through digital marketing and community engagement"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Execute consistent supply chain and logistics management for solar components"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Maintain quality control, and after-sales support for customer retainer ship"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify opportunities for scaling the business through referrers, new markets gateways, partnerships and technological advancements"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

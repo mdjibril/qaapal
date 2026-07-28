@@ -1,0 +1,702 @@
+{
+  "trade_name": "NOS Fashion and Garment Making",
+  "level": 3,
+  "units": [
+    {
+      "code": "FLW/GMK/001/L3",
+      "title": "HISTORY OF COSTUME",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand History Of Clothing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the historical development of clothing"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the development of various costumes"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the mode of dressing of Africans"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Differentiate the cultural background of clothing"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Display an album of various costumes (ancient and Modern)"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know the Significance of clothing",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State the significance of clothing"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the meaning of contemporary costume"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the influence of clothing and costume to the contemporary fashion"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the influence of past fashion trends on present and future styles",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Evaluate the current trend in traditional costume"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Evaluate the current trend in contemporary costumes"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "List the factors that influence clothing designs"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "State the impact of the factors in modern clothing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/GMK/002/L3",
+      "title": "FASHION ILLUSTRATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Fashion illustration skills",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Produce different strokes of lines"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Produce female/male fashion templates"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Apply body proportions"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Garment designs illustration",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "illustrate garment designs for the different human poses, e.g.: children/women/men wears"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Develop variety of illustrations using coloured pencils, water colours, ink etc."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use various illustration techniques to produce different types of textures in garments"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use different body proportions to illustrate male/female and children of different ages"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Label each section"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Use the developed body proportions to create garment designs"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate Fashion portfolio",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe fashion design portfolio"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe how to plan a fashion design portfolio"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Plan a fashion design portfolio"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Produce fashion design portfolios"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Display fashion design portfolio"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/GMK/003/L3",
+      "title": "SEWING TOOLS AND EQUIPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand equipment manual",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain garment making equipment manual"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Pinpoint safety indicators and their meanings"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the equipment safety symbols"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Assist in installation of the equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand equipment usage",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Mention parts of the equipment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State the functions of each part of the equipment mentioned 3.1 above"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Adjust equipment speed in accordance with operation"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use the equipment to perform required operation"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Perform equipment maintenance Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Clean equipment\u2019s"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Drain oil from equipment\u2019s"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Lubricate equipment\u2019s"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Replace minor damaged parts of equipment\u2019s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/GMK/004/L3",
+      "title": "PATTERN DRAFTING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate knowledge of pattern drafting",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define pattern drafting"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the pattern drafting signs and notations"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe pattern drafting methods"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Draft a simple pattern and indicate signs and notations"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Label patterns"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate pattern making principles",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the basic blocks used in pattern drafting"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe the processes involved in pattern drafting using basic blocks."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Draft pattern master plan using various basic bodice blocks."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Trace out pattern pieces of various component parts."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Add seam allowances to pattern pieces and cut"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate Basic Block manipulation principles",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "List pattern the making principles"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the pattern making principles"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify each pattern making principle"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use the pattern making principle to create various styles"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Draft styles created in above 3.4 above"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Cut out garment parts using pattern pieces"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Assemble garment parts"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate use of Basic blocks to produce collar and (LO) sleeves.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify the types of collar"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe the different collar types"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify the types of sleeves"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Describe the different sleeve types Ref. Page"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Use the basic blocks to produce collars."
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Use basic blocks to produce sleeves"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/GMK/005/L3",
+      "title": "FASHION MATERIALS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Basic Fabric Classification",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "List the process of conversion of fibre to fabric"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the various techniques of fabric production"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Classify the various types of fabric"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the care of fabrics used in garment making",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the care instruction, symbols etc on fabric care labels"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Interpret the care symbols on labels"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Treat the fabric according to the care instructions during stages of processing"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate the knowledge of support material used in Garment making",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the support materials for fashion e.g. interfacing, elastics, linings, underlining\u2019s, etc."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Select support fashion materials to suite an appropriate purpose"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use the support materials listed in 3.1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/GMK/006/L3",
+      "title": "GARMENT CONSTRUCTION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Recognise garment construction equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify equipment for garment construction"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Adjust equipment settings to perform garment making processes"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use the equipment to construct garments effectively"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate sewing processes in constructing various garments",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Write operation breakdown"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the garment details eg collar, pockets, sleeves, etc shown in various garment illustrations"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify positions for garment components"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use the order of sewing various garment (operation breakdown) in 2.1"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Construct various garments using the operation engineering"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/GMK/007/L3",
+      "title": "GARMENT QUALITY CONTROL",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate understand of garment specification chart",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Recognise garments specification charts"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Select the appropriate raw materials for garment making"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Check garment specification with standards provided"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use specification charts to check finished garments"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Recognise defects in garment produced",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Detect defects on garments produced"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Differentiate defects on garments produced"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Perform alternation on garment with mild or minor defects"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Reject garment with major defects"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Recognise faults on garments",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Distinguish garments faults"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Detect garment faults"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Repair garment faults"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Reject garment major faults"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Implement total garment quality control"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/GMK/008/L3",
+      "title": "FASHION MERCHANDIZING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand fashion merchandizing concept and terminologies",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define fashion merchandizing"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the scope of fashion industry"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain fashion merchandizing concept"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "List terminologies (fashion trend, fashion design forecasting, fashion followers, etc.)"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain types of merchandizing in fashion industry e.g.: retail, expert, visual, etc."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Estimate demand for certain kind of merchandise using this concept"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Display fashion merchandizing product"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Get feedback on display product"
+            },
+            {
+              "pc_code": "1.9",
+              "description": "Review feedback"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know advert concept in fashion industry",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain advertisement concept in the fashion industry"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State how to implement traditional advertising in the fashion industry"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Enumerate how to implement the advertising in fashion industry"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Distinguish between modern and traditional advertising concept"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain how the modern and traditional could be put to use effectively"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the overview of OBJECTIVE (LO) fashion sales promotion",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define sales promotion"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Give an overview of fashion sales promotion"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Enumerate the advantages of sales promotion"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "List the strategies in promoting sales"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "FLW/GMK/009/L3",
+      "title": "STRUCTURAL EMBELISHMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know structural embellishment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define structural embellishment"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List types of structural embellishment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Classified structural embellishment"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Collect example of classified structural embellishment"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Display examples collected in 1.4 using any medium"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know tools and equipment for structural embellishment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify tools and equipment used for different types of embellishment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State the use of each tools used in structural embellishment"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the care of the tools used for structural embellishment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate decorative Embellishments",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Illustrate structural embellishment for various kinds of garments types"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Select appropriate designs for specific garments"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Produce structural embellishment for selected design"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

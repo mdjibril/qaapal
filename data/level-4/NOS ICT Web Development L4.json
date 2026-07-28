@@ -1,0 +1,922 @@
+{
+  "trade_name": "NOS ICT Web Development L4",
+  "level": 4,
+  "units": [
+    {
+      "code": "ICT/WEB/001/L4",
+      "title": "HEATH, SAFETY AND ENVIRONMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand key health and safety regulations",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify relevant health and safety regulations"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of these regulations"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Apply regulations in a web development context"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Monitor compliance with health and safety standards"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Assess environmental impacts of web development",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify potential environmental impacts"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Conduct environmental impact assessments"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Propose mitigation strategies"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Implement environmentally friendly practices"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Develop and implement health, safety and environmental strategies Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Develop safety protocols"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Train team members on safety measures"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Conduct regular safety audits"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Respond to safety incidents effectively"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/002/L4",
+      "title": "COMMUNICATION SYSTEM IN A WORK ENVIRONMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Develop effective verbal and written communication skills",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Demonstrate clear and concise communication"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use appropriate communication channels"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Tailor communication to the audience"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Provide constructive feedback"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Enhance team collaboration",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Facilitate effective team meetings"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Encourage participation from all team members"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use collaborative tools effectively"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Resolve team conflicts"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Resolve workplace conflicts professionally Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify sources of conflict"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply conflict resolution techniques"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Mediate between conflicting parties"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Document and follow up on conflict resolution"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/003/L4",
+      "title": "CLIENT-SIDE WEB DEVELOPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Master advanced JavaScript frameworks",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Develop applications using frameworks like React, Angular, or Vue.js"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Implement state management"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use component-based architecture"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Optimize application performance"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Implement responsive web design",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Apply responsive design principles"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use CSS frameworks like Bootstrap"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Test designs on multiple devices"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Ensure cross-browser compatibility"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Optimize client-side performance Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Minimize load times"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use lazy loading techniques"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Optimize images and assets"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Implement caching strategies"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/004/L4",
+      "title": "ADVANCED SERVER-SIDE WEB DEVELOPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand advanced server- side programming concepts",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the differences between server-side and client-side programming"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the architecture of server- side applications"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify and use appropriate server- side programming languages and frameworks"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Implement server-side logic to handle HTTP requests and responses"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Implement secure and scalable web applications",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Develop secure authentication mechanisms"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Develop secure authorization mechanisms"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use encryption techniques to protect sensitive data"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Implement input validation and error handling"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Optimize server-side code for scalability and performance"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Integrate server- side technologies and databases",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Connect server-side applications to relational and NoSQL databases"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Perform CRUD operations using server-side code"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Implement ORM (Object-Relational Mapping) for database interactions"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use server-side caching mechanisms to improve performance"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Deploy and maintain server- side applications Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Deploy applications to cloud platforms (e.g., AWS, Azure)"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Set up and configure web servers (e.g., Apache, Nginx)"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Implement CI/CD pipelines for automated deployment"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Monitor and troubleshoot server-side applications"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/005/L4",
+      "title": "VERSION CONTROL WITH GIT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Utilize advanced Git commands",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use commands like rebase, cherry-pick, and bisect"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Manage branches and tags"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Perform interactive rebases"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Resolve complex merge conflicts"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Resolve merge conflicts",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify causes of merge conflicts"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use Git tools to resolve conflicts"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Communicate with team members to resolve conflicts"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Document conflict resolution processes"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement branching strategies Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Develop branching strategies for projects"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use feature branches and pull requests"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Merge branches effectively"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Maintain a clean Git history"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/006/L4",
+      "title": "WEB APPLICATION DEPLOYMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Deploy applications to cloud platforms",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Deploy to AWS, Azure, or similar platforms"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Configure deployment environments"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use deployment automation tools"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Monitor deployment processes"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Set up CI/CD pipelines",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Configure CI/CD tools like Jenkins or GitHub Actions"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Automate build and deployment processes"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Implement testing in CI/CD pipelines"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Monitor and troubleshoot CI/CD pipelines"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Monitor and troubleshoot deployments Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use monitoring tools like New Relic or Datadog"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Set up alerts for deployment issues"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Troubleshoot deployment failures"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Document deployment issues"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Resolve deployment issues"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/007/L4",
+      "title": "ACCESSIBILITY AND INCLUSIVE DESIGN IN WEB",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Apply WCAG guidelines",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Implement WCAG guidelines in designs"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Conduct accessibility audits"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Make necessary adjustments for compliance"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Document accessibility improvements"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Use ARIA roles effectively",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify appropriate ARIA roles"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Implement ARIA roles in web applications"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Test ARIA roles for functionality"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Ensure ARIA roles enhance accessibility"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Design for inclusivity",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Apply inclusive design principles"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Conduct user research with diverse groups"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Implement feedback from diverse users"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Continuously improve inclusivity in designs"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Foster emotional intelligence and interpersonal skills Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Demonstrate empathy and active listening"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Build and maintain professional relationships"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Manage stress and emotional responses"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Navigate workplace dynamics effectively"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/008/L4",
+      "title": "LEVERAGING OPEN-SOURCE TECHNOLOGIES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Integrate open- source libraries",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify suitable open-source libraries."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Integrate libraries into projects"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Test and validate library functionality"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Maintain and update libraries"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Contribute to open-source projects",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify open-source projects to contribute to"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Follow contribution guidelines"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Submit pull requests"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Engage with the open-source community"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand open- source licensing Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify different types of open- source licenses"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply appropriate licenses to projects"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Ensure compliance with license terms"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Educate team members on licensing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/009/L4",
+      "title": "WEB SERVER CONFIGURATION AND PERFORMANCE TUNING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Configure web servers.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Set up and configure servers."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Install and configure necessary software."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Secure server configurations."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Document server setups"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Implement load balancing",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Set up load balancers."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Configure load balancing algorithms."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Monitor load balancer performance"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Troubleshoot load balancing issues"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Optimize server performance Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify performance bottlenecks."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Implement caching strategies."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Optimize server configurations."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Monitor and improve server performance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/010/L4",
+      "title": "PAYMENT GATEWAY INTEGRATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Integrate payment gateways.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify suitable payment gateways."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Implement payment gateway APIs."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Test payment gateway integrations"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Ensure secure transaction handling"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Ensure secure transactions",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Implement security protocols"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Monitor transaction security"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Respond to security incidents"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Document security measures"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Handle payment errors Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify common payment errors"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Implement error handling mechanisms"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Test error handling processes"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Document and resolve payment errors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/011/L4",
+      "title": "INTRODUCTION TO DEVOPS FOR WEB DEVELOPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand DevOps principles",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain key DevOps principles"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Apply DevOps practices in projects"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Collaborate with DevOps teams"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Continuously improve DevOps processes"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Use automation tools",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify suitable automation tools"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Implement automation in CI/CD pipelines"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Monitor automation processes"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Troubleshoot automation issues"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement monitoring and logging. Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Set up monitoring tools."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Implement logging solutions."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Monitor application performance."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Respond to monitoring alerts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/WEB/012/L4",
+      "title": "AGILE PROJECT MANAGEMENT FOR WEB",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Apply Agile methodologies",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain Agile principles"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Implement Agile practices in projects"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Conduct Agile ceremonies"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Continuously improve Agile processes"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Use the Scrum framework",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Scrum roles and responsibilities"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Conduct Scrum ceremonies"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use Scrum tools effectively"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Monitor and improve Scrum processes"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Plan and execute sprints",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Conduct sprint planning."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Execute sprint tasks."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Monitor sprint progress."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Conduct sprint reviews and retrospectives"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

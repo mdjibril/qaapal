@@ -1,0 +1,1358 @@
+{
+  "trade_name": "NOS ICT Computer Networking",
+  "level": 3,
+  "units": [
+    {
+      "code": "ICT/CNT/001/L3",
+      "title": "HEALTH AND SAFETY IN NETWORK ADMINISTRATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Implement Health and Safety Standards in Network Administration",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify common health and safety risks associated with network administration work environments (e.g., electrical hazards, equipment malfunctions)."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Follow safety procedures for handling network devices and components such as routers, switches, and cables."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Ensure compliance with relevant workplace safety standards and regulations in network environments, including OSHA and local laws."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Implement Ergonomics and Safe Work Practices in Network Administration",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Apply ergonomic guidelines to workstation setup (e.g., chair, desk, monitor height) to prevent repetitive strain injuries."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use proper lifting techniques when handling heavy network equipment or hardware."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Implement regular breaks and posture correction techniques to reduce the risk of physical strain and fatigue during network administration tasks."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Address Cybersecurity Health and Safety Risks Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify common cybersecurity threats, including malware, ransomware, and phishing, and implement safeguards to protect network systems."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Follow secure practices for handling sensitive network data and credentials (e.g., using strong passwords, secure encryption methods)."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "update network devices and software to minimize vulnerabilities that could compromise network security."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/002/L3",
+      "title": "COMMUNICATION IN NETWORK ADMINISTRATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Effective Verbal Communication Skills",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Present technical information related to network configurations, issues, and solutions clearly and concisely to non- technical stakeholders."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use appropriate technical terminology when communicating with colleagues, clients, and other IT professionals."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Respond to queries from team members or users effectively and provide actionable information."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Develop Written Communication Skills for Network Administration",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Prepare detailed network documentation, including diagrams, configurations, and reports, in a clear and organized format."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Write clear and concise emails or reports to communicate network updates, maintenance schedules, and troubleshooting results."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Maintain and update network logs, incident reports, and change management documentation in compliance with organizational standards."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Utilize Digital Communication Tools for Effective Collaboration Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use project management and communication tools (e.g., Slack, Microsoft Teams, Trello) to collaborate with team members on network projects and tasks."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use remote communication tools (e.g., video conferencing, screen sharing) to troubleshoot network issues with colleagues or users."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Share network status updates and incident reports through digital platforms to ensure stakeholders are kept informed of ongoing network issues or changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/003/L3",
+      "title": "TEAMWORK IN NETWORK ADMINISTRATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Collaborate Effectively with Team Members on Network Projects",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "participate in team meetings, contributing ideas, solutions, and feedback on network-related tasks or projects."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Share relevant information, network configurations, and troubleshooting steps with team members to ensure tasks are completed effectively."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Collaborate with team members to identify and resolve network issues quickly and efficiently, utilizing team resources and expertise."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Manage Responsibilities in Network Administration",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Assign network administration tasks according to team members\u2019 skills and strengths, ensuring optimal team efficiency."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Take responsibility for assigned network administration tasks, ensuring they are completed on time and to the required standard."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Provide guidance and support to team members as needed, ensuring tasks are well-executed and deadlines are met."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Resolve Conflicts and Maintain a Positive Team Dynamic Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify potential conflicts within the team and address them in a professional and constructive manner."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Mediate between team members when disagreements arise, ensuring that differing opinions are respected and solutions are found collaboratively."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Foster a positive team environment by encouraging open communication, trust, and mutual respect among team members."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/004/L3",
+      "title": "ADVANCED NETWORK CONFIGURATION AND MANAGEMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Configure Routers and Switches",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Manage routers, ensuring the correct setup of IP addressing, routing protocols, and access control lists (ACLs)."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Set up network switches, including VLANs, trunking, and port security, to ensure proper network segmentation and security."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Perform troubleshooting and diagnostics on routers and switches to resolve connectivity and configuration issues."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Monitor the performance of routers and switches, adjusting configurations as necessary to maintain optimal network performance."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Manage Routing Protocols",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Configure static and dynamic routing protocols (such as RIP, OSPF, and EIGRP) to enable efficient routing between network segments."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Implement route summarization, redistribution, and policy-based routing to optimize routing table size and efficiency."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Troubleshoot routing issues, ensuring that network traffic flows efficiently between multiple network segments."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Optimize routing performance using network analysis tools to ensure network reliability and minimize downtime."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Configure VLANs (Virtual Local Area Networks) Ref. Page No. OBJECTIVE (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Manage VLANs to segment network traffic and improve security and performance."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Set up inter-VLAN routing, ensuring proper communication between different VLANs as required."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Configure trunking protocols, including IEEE 802.1Q, to allow VLAN traffic to pass between switches."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Troubleshoot and resolve issues related to VLANs, such as VLAN misconfigurations or communication breakdowns."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Manage Network Firewalls and Security Settings",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Configure network firewalls to filter traffic based on IP addresses, ports, and protocols."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Implement security policies such as Access Control Lists (ACLs), Intrusion Detection Systems (IDS), and VPN configurations to safeguard network infrastructure."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Analyze firewall logs to identify potential security threats or breaches."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Update firewall configurations to adapt to emerging threats and vulnerabilities, ensuring ongoing network security."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Troubleshoot Advanced Network Configurations",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Utilize network analysis tools to identify bottlenecks, performance issues, or misconfigurations within the network."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Perform root cause analysis to identify issues related to routing, switching, VLANs, or firewalls and resolve them efficiently."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Optimize network performance by adjusting configurations based on troubleshooting findings, ensuring that the network is running at its best."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Implement network monitoring systems to proactively detect issues and optimize network configurations to avoid future disruptions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/005/L3",
+      "title": "NETWORK SECURITY MANAGEMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Implement Network Firewalls for Security",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Configure network firewalls to control inbound and outbound traffic based on security policies."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Implement Access Control Lists ACLs on firewalls to filter traffic based on IP addresses, ports, and protocols."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Monitor firewall logs for potential security breaches or unauthorized access attempts."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Update firewall rules and policies in response to emerging security threats or organizational changes."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Deploy Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Configure Intrusion Detection SystemsIDS to monitor network traffic for signs of suspicious activity or security breaches."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Set up Intrusion Prevention Systems (IPS) to automatically block malicious traffic and protect network assets."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Review IDS/IPS logs to identify potential vulnerabilities and security threats in the network."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Adjust IDS/IPS configurations to improve detection accuracy and minimize false positives or false negatives."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Manage Virtual Private Networks (VPNs)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Configure site-to-site and remote access VPNs to enable secure communication between network segments or remote users."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Implement VPN encryption protocols such as IPSec and SSL to ensure secure transmission of data across the network."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Troubleshoot VPN connections to ensure continuous, secure access for remote users."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Update VPN configurations to meet security requirements and ensure compatibility with changing network environments."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Apply Security Policies and Access Control Mechanisms Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Develop access control policies based on user roles, ensuring proper authorization for network resources."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Configure role-based access control (RBAC) or mandatory access control (MAC) to restrict access to sensitive network resources."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Enforce network security policies through network access control systems (e.g., NAC) to manage devices connecting to the network."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Update security policies to adapt to new security challenges, user needs, and organizational changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/006/L3",
+      "title": "NETWORK PERFORMANCE MONITORING AND TROUBLESHOOTING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Utilize Network Monitoring Tools for Performance Assessment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use network monitoring software (e.g., SolarWinds, PRTG, Nagios) to collect data on network traffic, bandwidth utilization, and device health."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Analyze monitoring data to identify performance bottlenecks or deviations from normal network performance."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Configure network monitoring tools to send alerts for performance degradation or potential issues in real-time."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Review network performance reports and provide recommendations for improving efficiency and throughput."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Diagnose Network Issues Using Troubleshooting Tools",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use diagnostic tools such as Ping, Traceroute, and NetFlow to troubleshoot connectivity issues across the network."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Utilize Wireshark or similar packet analysis tools to capture and analyze network traffic for troubleshooting performance or security issues."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Interpret network logs and error messages to pinpoint the root cause of network disruptions or performance issues."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Perform diagnostic tests on network hardware (e.g., routers, switches, firewalls) to identify faulty devices or misconfigurations."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Resolve Network Performance Issues",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Implement techniques to optimize network traffic, including Quality of Service (QoS), load balancing, and bandwidth management."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Address network congestion issues by adjusting configurations, such as rerouting traffic, optimizing routing protocols, or upgrading network components."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Resolve issues with network latency by identifying the source of delays (e.g., hardware failure, routing inefficiencies, or traffic overload)."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Implement solutions to address packet loss, jitter, and other network performance anomalies that affect end-user experience."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Perform Root Cause Analysis (RCA) for Network Problems",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Apply systematic troubleshooting methodologies (e.g., OSI model, divide and conquer) to identify the underlying cause of complex network issues."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Utilize logs, diagnostic tools, and performance metrics to analyze patterns and recurring issues within the network infrastructure."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Implement corrective actions based on the root cause analysis to prevent future occurrences of the same problem."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Implement Proactive Network Maintenance and Monitoring Practices Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Set up regular network performance checks, including bandwidth monitoring, device health checks, and traffic analysis."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Implement automated monitoring systems to detect and address network issues before they impact users or services."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Establish a network maintenance schedule that includes routine software updates, hardware checks, and security patches."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/007/L3",
+      "title": "ADVANCED NETWORK SERVICES AND MANAGEMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Configure Domain Name System (DNS) Services",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Configure primary and secondary DNS servers to support name resolution for the network."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Implement DNS zone types (e.g., forward lookup, reverse lookup) and configure records (A, MX, CNAME, etc.) to meet organizational needs."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Monitor DNS server performance and troubleshoot name resolution issues."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Secure DNS servers by configuring Domain Name System Security Extensions (DNSSEC) to prevent cache poisoning and ensure data integrity."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Configure Dynamic Host Configuration Protocol (DHCP) Services",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Configure DHCP servers to assign IP addresses, default gateways, DNS servers, and other network settings to devices within a specified range."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Configure DHCP scopes, subnets, and reservations to ensure efficient IP address allocation."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Monitor DHCP server activity and address issues such as address conflicts or lease expiration."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Implement DHCP failover and high availability configurations to prevent service interruptions in case of DHCP server failures."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Manage Virtual Private Network (VPN) Services",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Configure site-to-site and remote access VPNs using protocols such as IPSec, SSL, and L2TP to enable secure communication."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Set up authentication methods for VPNs, including certificate-based, pre-shared keys, and multi-factor authentication."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Monitor VPN connections to ensure security and performance, and resolve connection issues as they arise."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Implement VPN encryption and tunnelling protocols to protect data transmission and prevent unauthorized access."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Manage Quality of Service (QoS) for Network Traffic Optimization",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Configure QoS policies on network devices (routers, switches) to prioritize traffic based on application requirements, such as VoIP, video, and business-critical apps."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Implement traffic shaping, bandwidth management, and congestion control mechanisms to optimize network performance."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Monitor QoS metrics and adjust policies to maintain high performance during periods of network congestion."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Troubleshoot QoS issues, such as latency, jitter, and packet loss, and optimize network performance to meet Service Level Agreements (SLAs)."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Manage Service- Level Agreements (SLAs) for Network Services.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Document SLAs for network services, including uptime, response time, and performance expectations for DNS, DHCP, VPN, and other critical services."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Implement monitoring systems to track SLA compliance and network service performance."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Report on SLA performance, identifying areas of improvement and making necessary adjustments to meet service goals."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Address SLA violations by investigating root causes, implementing corrective measures, and communicating resolutions to stakeholders."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/008/L3",
+      "title": "Advanced IP Addressing and subnetting",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Review IP Addressing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the Structure of IPv4 Addresses"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the IPv4 Address Classes (A, B, C, D, E)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Define Private IP Addresses"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Define Public IP Addresses"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Identify the similarities between Private vs. Public IP Addresses"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Identify the difference between Private vs. Public IP Addresses"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Define Reserved IP Ranges"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Define Special Use Cases"
+            },
+            {
+              "pc_code": "1.9",
+              "description": "Identify types of Reserved IP Ranges"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Fundamentals of Subnetting",
+          "performance_criteria": [
+            {
+              "pc_code": "2.0",
+              "description": "Identify types of Reserved IP Ranges Special Use Cases"
+            },
+            {
+              "pc_code": "2.1",
+              "description": "Define Subnetting Identify the Importance of Subnetting"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain Subnet Masks"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Calculate Network and Host Portion"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify Network Address, Broadcast Address, and IP Ranges"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Advanced Subnetting Concepts",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "ExplainFixed-Length Subnetting (FLSM)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe Subnetting with Class A, B, and C Networks"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify Usable Subnets and Hosts per Subnet"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carryout efficient IP Address Allocation"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Variable Length Subnet Masking (VLSM)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the concept of VLSM"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify the Benefits of Using VLSM in Network Design"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Implement VLSM Step-by-Step"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Demonstrate Real-World VLSM Design Scenarios"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand Classless Inter- Domain Routing (CIDR)",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify the Benefits of CIDR"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain CIDR Notation (/8, /16, /24, etc.)"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Explain CIDR Address Aggregation"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Configure Route Summarization Using CIDR"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Practice CIDR Usage in Network Design"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Ref. Page No. Understand IPv6 Addressing and Subnetting",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Explain the concept of IPv6 and Its Advantages"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Outline the Structure of IPv6 Addresses"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Identify IPv6 Address Types (Global Unicast, Link-Local, Multicast, etc.)"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Identify IPv6 Subnetting and Prefix Lengths"
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Desribe IPv6 Address Allocation and Hierarchical Design"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Understand Network Address Translation (NAT)",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Explain NAT"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Discuss the importance of NAT"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Explain Static NAT, Dynamic NAT, and Port Address Translation (PAT)"
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Configure NAT and Use Cases"
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Optimize Networks with Subnetting",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Explain best practices for Subnetting in Enterprise Networks"
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Carryout Network Segmentation and Security Through Subnetting"
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Subnet Design for Scalability and Performance"
+            },
+            {
+              "pc_code": "8.4",
+              "description": "Demonstrate Subnetting a Complex Enterprise Network"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/009/L3",
+      "title": "ICT Security",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand IoT and Security",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the concept of IoT"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify IoT Components and Ecosystem"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List the Importance of IoT Security"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify IoT Security Challenges and Trends"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand IoT Threats and Vulnerabilities",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify Common IoT Vulnerabilities"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "IoT Attack Vectors (Physical, Network, Application)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify Privacy Concerns in IoT"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand IoT Security Frameworks and Standards",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the Overview of IoT Security Standards (NIST, IoTSF)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify IoT Security Guidelines from ENISA"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify Regulatory and Compliance Requirements"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain Industry Best Practices for IoT Security"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Secure IoT Devices",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Describe Secure Boot and Firmware Updates"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain Hardware Root of Trust"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain Device Tamper Detection"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Explain Secure IoT Edge Devices"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Describe Anti-Tampering and Secure Storage"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know Authentication and Access Control in IoT Mitigation Strategies",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Configure Authentication Mechanisms for IoT Devices"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Carry out Multi-Factor Authentication (MFA)"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Explain Role-Based Access Control (RBAC)"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Explain Identity and Access Management (IAM)"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Identify Secure IoT APIs and Gateways"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Data Protection and Encryption Ref. Page No.",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Explain Data Security in Transit and at Rest"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Outline the difference of Symmetric vs. Asymmetric Encryption"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Explain TLS/SSL and Secure Communication Protocols"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Identify Public Key Infrastructure (PKI) for IoT"
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Carryout Data Integrity and Secure Key Management"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Know IoT Network Security",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Carryout IoT Network Segmentation"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Describe Firewalls and Intrusion Prevention Systems (IPS)"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Explain Virtual Private Networks (VPNs) for IoT"
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Explain IoT Gateway Security"
+            },
+            {
+              "pc_code": "7.5",
+              "description": "Explain Network Monitoring and Anomaly Detection"
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Know IoT Threat Detection and Incident Response",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Decribe IoT Threat Monitoring and Detection"
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Carryout Anomaly Detection and Behavioural Analytics"
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Carryout IoT Forensics and Incident Investigation"
+            },
+            {
+              "pc_code": "8.4",
+              "description": "Carryout Secure Logging and Auditing"
+            },
+            {
+              "pc_code": "8.5",
+              "description": "Develop an Incident Response Plan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/010/L3",
+      "title": "LEADERSHIP IN NETWORK ADMINISTRATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Effective Leadership Skills in Network Administration",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Set clear objectives and performance expectations for the network administration team, aligning with organizational goals."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Motivate and guide team members to meet deadlines, troubleshoot complex network issues, and ensure the reliability of network services."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Provide constructive feedback to team members and foster a culture of continuous improvement and professional development."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Lead by example in maintaining professionalism, technical expertise, and a positive work environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Manage Network Projects",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Develop project plans for network upgrades, installations, or troubleshooting, clearly outlining timelines, resources, and deliverables."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Allocate resources effectively, including team members, tools, and budget, to meet project objectives."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Ensure project milestones are met on time by monitoring progress and addressing any roadblocks or delays."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Manage Network Security and Risk Mitigation Strategies",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Lead the development and implementation of network security policies and protocols to protect the network from external and internal threats."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Coordinate security audits and risk assessments to identify vulnerabilities and plan mitigation strategies."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Foster a proactive security culture within the network administration team, ensuring that security is embedded in all aspects of network design and maintenance."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Make Strategic Decisions to Improve Network Ref. Page No. OBJECTIVE (LO) Performance and Efficiency",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Analyze network performance data and identify areas for improvement in speed, bandwidth, and overall efficiency."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Implement network optimizations (e.g., hardware upgrades, routing adjustments, load balancing) to enhance performance and user experience."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Evaluate emerging technologies and trends in network administration, advising the organization on their potential benefits or risks."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Develop cost-effective strategies for network expansion, upgrades, and maintenance while considering the organization\u2019s growth and resource allocation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CNT/011/L3",
+      "title": "Cloud Security",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Cloud Security",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Cloud Computing"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain Cloud Deployment Models (Public, Private, Hybrid, Community)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain Cloud Service Models (IaaS, PaaS, SaaS)"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify Cloud Security Challenges and Threat Landscape"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Identify Benefits of Securing Cloud Environments"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Cloud Security Architecture and Design",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Cloud Security Reference Architecture"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe Shared Responsibility Model"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify Cloud-native Security Features"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify Security Considerations for Multi-cloud and Hybrid Cloud"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Design Secure Cloud Applications"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Identity and Access Management (IAM) in Cloud",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify IAM Basics and Importance"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain Role-Based Access Control (RBAC) and Attribute-Based Access Control (ABAC)"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carryout Multi-Factor Authentication (MFA)"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Manage Cloud Identity Providers"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Describe Least Privilege Access and Zero Trust Architecture"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know Data Protection and Encryption in Cloud",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain Data Security in Transit and at Rest"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain Encryption Techniques (Symmetric and Asymmetric)"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain Cloud Key Management Services (KMS)"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Describe Data Loss Prevention (DLP) Solutions"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Implement Backup and Disaster Recovery Strategies"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know Cloud Network Security",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain Cloud Network Segmentation and Micro-Segmentation"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain Virtual Private Cloud (VPC) Security"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Explain Cloud Firewalls and Intrusion Detection Systems (IDS)"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Secure APIs and Cloud Gateways"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Explain VPN and Secure Access Service Edge (SASE)"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Know Application Security in Cloud",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Secure Software Development Lifecycle (SDLC) in Cloud"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Explain Protecting Web Applications (WAF, DDoS Mitigation)"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Carryout Secure Container and Kubernetes Deployments"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Explain Serverless Security Considerations"
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Explain Cloud-native Application Protection Platforms (CNAPPs)"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Know Compliance and Governance in Cloud",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Explain Cloud Compliance Frameworks (ISO 27001, NIST, PCI-DSS)"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Explain Data Sovereignty and Privacy Regulations (GDPR, CCPA)"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Carry out Auditing and Monitoring Cloud Environments"
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Implement Cloud Governance Policies and Enforcement"
+            },
+            {
+              "pc_code": "7.5",
+              "description": "Carryout Continuous Compliance and Reporting"
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Know Threat Detection and Incident Response in Cloud",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Identify Cloud-native Threat Detection Tools"
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Identify Security Information and Event Management (SIEM) for Cloud"
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Outline Incident Response Planning for Cloud"
+            },
+            {
+              "pc_code": "8.4",
+              "description": "Outline Forensics and Investigation in Cloud Environments"
+            },
+            {
+              "pc_code": "8.5",
+              "description": "Develop a Cloud Incident Response Plan"
+            }
+          ]
+        },
+        {
+          "lo_num": "9",
+          "description": "Know Advanced Cloud Security Concepts",
+          "performance_criteria": [
+            {
+              "pc_code": "9.1",
+              "description": "Explain Zero Trust Architecture for Cloud"
+            },
+            {
+              "pc_code": "9.2",
+              "description": "Secure Access for Remote Workforces"
+            },
+            {
+              "pc_code": "9.3",
+              "description": "Explain the role of AI and Machine Learning in Cloud Security"
+            },
+            {
+              "pc_code": "9.4",
+              "description": "Explain Quantum-safe Cloud Security"
+            },
+            {
+              "pc_code": "9.5",
+              "description": "Explain Future Trends in Cloud Security."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
