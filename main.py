@@ -134,116 +134,89 @@ else:
     
     # --- CENTRALIZED SIDEBAR ---
     st.sidebar.title(f"🚀 NSQ Portal v1.0.5")
-    
-    # Sidebar Billing Widget
-    with st.sidebar.container(border=True):
-        if is_platform_pass_expired:
-            st.error("Platform Pass Expired! Please renew.")
-            if st.button("Renew Platform Pass", width="stretch"):
-                db.mock_payment_dialog(st.session_state.org_id)
-        else:
-            col_plan, col_cred = st.columns(2)
-            plan_display = "SUPERADMIN" if is_superadmin else tier.upper()
-            col_plan.caption(f"**Plan:** {plan_display}")
-            
-            credit_display = "∞" if (is_superadmin or tier != 'free') else credits
-            col_cred.caption(f"**Credits:** {credit_display}")
-            
-            if not is_superadmin and tier == 'free' and credits == 0:
-                st.error("Out of credits!")
-                selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
-                selar_lifetime_base = get_secret(["payments", "selar_lifetime_link"], "payments__selar_lifetime_link") or "https://selar.com/nsqassessment-lifetime"
-                user_email = st.session_state.user_session.email
-                upgrade_link = f"{selar_base}?email={user_email}"
-                lifetime_upgrade_link = f"{selar_lifetime_base}?email={user_email}"
-                st.link_button("🚀 Upgrade to Platform Pass", upgrade_link, width='stretch')
-                st.link_button("💎 Get Lifetime Tier", lifetime_upgrade_link, width='stretch')
 
     st.session_state.assessor_name = st.session_state.get('assessor_full_name', 'Jibril Dauda Muhammad')
     name = st.session_state.assessor_name
     a_id = st.session_state.get('assessor_id', 'QAA/XXXX/ICT')
 
-    st.sidebar.caption(f"Logged in as 👤: {role.capitalize()} <<>> Name: {name.capitalize()}")
-    
-    # st.sidebar.caption(f"👤 Assessor: {st.session_state.assessor_name}")
-    # st.sidebar.caption(f"🆔 ID: {st.session_state.assessor_id}")
-    
-    # Trade Selection Logic
+    st.sidebar.caption(f"{name} | {role.capitalize()} | {tier.replace('_', ' ').title()}")
+
+    # NOS Selection
     trades = get_cached_trades()
-
     if trades:
-        st.sidebar.markdown("### NOS Selection")
-        st.sidebar.caption("Choose a trade first, then choose its level.")
-        trade_names = [t['name'] for t in trades]
-        # We use index to ensure the selector stays on the same item after refresh
-        selected_name = st.sidebar.selectbox(
-            "Select Trade Family",
-            trade_names,
-            key="global_trade_select",
-            on_change=clear_nos_context
-        )
-        selected_trade = next((t for t in trades if t['name'] == selected_name), None)
-        selected_trade_id = selected_trade['id'] if selected_trade else None
-        st.session_state.selected_trade_id = selected_trade_id
-        st.session_state.selected_trade_name = selected_trade['name'] if selected_trade else selected_name
-
-        trade_levels = get_cached_trade_levels(selected_trade_id)
-        if trade_levels:
-            def format_level_option(level_row):
-                label = f"Level {level_row['level']}"
-                display_name = level_row.get("display_name")
-                if display_name:
-                    label = f"{label} - {display_name}"
-                return label
-
-            current_level_id = st.session_state.get("selected_trade_level_id")
-            default_level_index = next(
-                (idx for idx, lvl in enumerate(trade_levels) if lvl["id"] == current_level_id),
-                0,
+        with st.sidebar.container(border=True):
+            st.markdown("**NOS Selection**")
+            trade_names = [t['name'] for t in trades]
+            selected_name = st.selectbox(
+                "Select Trade Family",
+                trade_names,
+                key="global_trade_select",
+                on_change=clear_nos_context
             )
+            selected_trade = next((t for t in trades if t['name'] == selected_name), None)
+            selected_trade_id = selected_trade['id'] if selected_trade else None
+            st.session_state.selected_trade_id = selected_trade_id
+            st.session_state.selected_trade_name = selected_trade['name'] if selected_trade else selected_name
 
-            selected_trade_level = st.sidebar.selectbox(
-                "Select Level",
-                trade_levels,
-                index=default_level_index,
-                key="global_trade_level_select",
-                on_change=clear_previews_on_trade_change,
-                format_func=format_level_option,
-            )
-            if selected_trade_level:
-                st.session_state.selected_trade_level_id = selected_trade_level["id"]
-                st.session_state.selected_trade_level = selected_trade_level["level"]
-                st.session_state.selected_trade_level_name = selected_trade_level.get("display_name") or f"Level {selected_trade_level['level']}"
-                st.sidebar.caption(f"Selected NOS: {st.session_state.selected_trade_name} / {st.session_state.selected_trade_level_name}")
-        else:
-            st.session_state.pop("selected_trade_level_id", None)
-            st.session_state.pop("selected_trade_level", None)
-            st.session_state.pop("selected_trade_level_name", None)
-            st.session_state.pop("global_trade_level_select", None)
+            trade_levels = get_cached_trade_levels(selected_trade_id)
+            if trade_levels:
+                def format_level_option(level_row):
+                    label = f"Level {level_row['level']}"
+                    display_name = level_row.get("display_name")
+                    if display_name:
+                        label = f"{label} - {display_name}"
+                    return label
+
+                current_level_id = st.session_state.get("selected_trade_level_id")
+                default_level_index = next(
+                    (idx for idx, lvl in enumerate(trade_levels) if lvl["id"] == current_level_id),
+                    0,
+                )
+
+                selected_trade_level = st.selectbox(
+                    "Select Level",
+                    trade_levels,
+                    index=default_level_index,
+                    key="global_trade_level_select",
+                    on_change=clear_previews_on_trade_change,
+                    format_func=format_level_option,
+                )
+                if selected_trade_level:
+                    st.session_state.selected_trade_level_id = selected_trade_level["id"]
+                    st.session_state.selected_trade_level = selected_trade_level["level"]
+                    st.session_state.selected_trade_level_name = selected_trade_level.get("display_name") or f"Level {selected_trade_level['level']}"
+                    st.caption(f"Current: {st.session_state.selected_trade_name} / {st.session_state.selected_trade_level_name}")
+            else:
+                st.session_state.pop("selected_trade_level_id", None)
+                st.session_state.pop("selected_trade_level", None)
+                st.session_state.pop("selected_trade_level_name", None)
+                st.session_state.pop("global_trade_level_select", None)
+                st.info("No levels found for this trade.")
     else:
         st.sidebar.error("⚠️ No trades found. Check Supabase connection or table data.")
 
+    # Report Context
     if "env_preset" not in st.session_state:
         st.session_state.env_preset = "Morning (Cool)"
         update_environment_preset()
+    with st.sidebar.container(border=True):
+        st.markdown("**Report Context**")
+        selected_env_preset = st.selectbox(
+            "Atmosphere",
+            list(ENV_OPTIONS.keys()),
+            key="env_preset",
+            on_change=update_environment_preset
+        )
+        st.session_state.default_env_text = ENV_OPTIONS[selected_env_preset]
 
-    selected_env_preset = st.sidebar.selectbox(
-        "Choose a Preset",
-        list(ENV_OPTIONS.keys()),
-        key="env_preset",
-        on_change=update_environment_preset
-    )
-    st.session_state.default_env_text = ENV_OPTIONS[selected_env_preset]
-
-
-    # --- AI KEY INHERITANCE ---
-    # If user is on Platform Pass or Enterprise, use the master/secret key.
-    # If Free, use the Platform key from Streamlit secrets.
+    # AI Settings
     if ai_policy["status_message"]:
-        if tier == "free" and not get_secret(["vertex_ai", "service_account_json"], "vertex_ai__service_account_json"):
-            st.sidebar.error("⚠️ Vertex AI configuration is missing from secrets.toml!")
-        else:
-            st.sidebar.info(ai_policy["status_message"])
+        with st.sidebar.container(border=True):
+            st.markdown("**AI Status**")
+            if tier == "free" and not get_secret(["vertex_ai", "service_account_json"], "vertex_ai__service_account_json"):
+                st.error("Vertex AI config missing.")
+            else:
+                st.info(ai_policy["status_message"])
 
     if not show_byok:
         st.session_state.ai_provider = ai_policy["default_provider"]
@@ -257,7 +230,6 @@ else:
                 st.session_state.ai_provider = ai_policy["default_provider"]
             st.session_state.ai_provider = st.selectbox("Provider", providers)
 
-            # Initialize target_keys to empty list if not already set, or if provider changes
             if 'target_keys' not in st.session_state or st.session_state.get('last_provider') != st.session_state.ai_provider:
                 st.session_state.target_keys = []
                 st.session_state.last_verified_key = ""
@@ -295,61 +267,59 @@ else:
                 else:
                     st.session_state.target_model = or_model_choice
 
-            # --- AUTOMATED VERIFICATION FLOW ---
-            # For BYOK, target_keys will contain a single key. For platform, it might contain multiple.
-            # We verify the first key in the list for display purposes.
             curr_keys_for_verification = st.session_state.get('target_keys', [])
-            
-            # Skip manual verification flow if using VertexAI since it relies on secrets
             if st.session_state.ai_provider == "VertexAI":
                 st.session_state.connection_success = True
                 st.session_state.connection_msg = "✅ Connected to Vertex AI"
             elif curr_keys_for_verification:
                 first_key_for_verification = curr_keys_for_verification[0]
-                # Check if key changed or hasn't been verified yet
                 if first_key_for_verification != st.session_state.get('last_verified_key'):
                     with st.spinner("Verifying connection..."):
                         res = validate_and_generate(st.session_state.ai_provider, st.session_state.target_model, curr_keys_for_verification)
                         st.session_state.last_verified_key = first_key_for_verification
                         st.session_state.connection_success = ("✅ Connected" in str(res))
                         st.session_state.connection_msg = res
-                
+
             if st.session_state.ai_provider != "VertexAI" and curr_keys_for_verification:
-                # Render the status
                 if st.session_state.get('connection_success'):
                     st.success(st.session_state.connection_msg)
                 else:
                     st.error(f"❌ {st.session_state.get('connection_msg')}")
 
     if role == 'admin':
-        st.sidebar.checkbox("🛠️ Dev Mode (Skip AI)", key="dev_mode")
-    
-    
+        with st.sidebar.expander("🛠️ Admin Tools", expanded=False):
+            st.checkbox("Dev Mode (Skip AI)", key="dev_mode")
+
+    # Support
+    with st.sidebar.expander("🆘 Support", expanded=False):
+        st.caption("Contact support directly")
+        st.link_button("WhatsApp Support", "https://wa.me/2348184018469", width="stretch")
+        st.link_button("Email Support", "mailto:muhammadjibrildauda@gmail.com", width="stretch")
+
     # 4. Navigation
-    st.sidebar.markdown("---")
-    
-    if role == 'student':
-        pages = {
-            "✍️ Student Statement": personal_statement.main,
-            "📜 My History": history.main
-        }
-    else:
-        pages = {
-            "📝 Dashboard": dashboard.main, 
-            "✍️ Student Statement": personal_statement.main,
-            "📑 Witness Statement": witness_statement.main,
-            "📜 My History": history.main,
-            "💳 My Subscription": subscription_page.main
-        }
-        if role == 'admin':
-            pages["🛡️ Super Admin Dashboard"] = admin_panel.main
-    
-    selection = st.sidebar.radio("Navigation", list(pages.keys()))
-    
-    if st.sidebar.button("Logout"):
-        # Explicitly sign out of Supabase to clear persistence
-        db.get_supabase().auth.sign_out()
-        st.session_state.clear()
-        st.rerun()
+    with st.sidebar.container(border=True):
+        st.markdown("**Navigation**")
+        if role == 'student':
+            pages = {
+                "✍️ Student Statement": personal_statement.main,
+                "📜 My History": history.main
+            }
+        else:
+            pages = {
+                "📝 Dashboard": dashboard.main,
+                "✍️ Student Statement": personal_statement.main,
+                "📑 Witness Statement": witness_statement.main,
+                "📜 My History": history.main,
+                "💳 My Subscription": subscription_page.main
+            }
+            if role == 'admin':
+                pages["🛡️ Super Admin Dashboard"] = admin_panel.main
+
+        selection = st.radio("Go to", list(pages.keys()), label_visibility="collapsed")
+
+        if st.button("Logout"):
+            db.get_supabase().auth.sign_out()
+            st.session_state.clear()
+            st.rerun()
 
     pages[selection]()

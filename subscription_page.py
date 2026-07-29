@@ -8,6 +8,7 @@ def main():
     st.title("💳 My Subscription")
 
     user_role = st.session_state.get('user_role', 'assessor')
+    assessor_name = st.session_state.get('assessor_full_name', 'Jibril Dauda Muhammad')
     org_id = st.session_state.get('org_id')
     current_tier = st.session_state.get('subscription_tier', 'free')
     credits_balance = st.session_state.get('credits_balance', 0)
@@ -19,6 +20,22 @@ def main():
     upgrade_link = f"{selar_base}?email={user_email}"
     lifetime_upgrade_link = f"{selar_lifetime_base}?email={user_email}"
     
+    st.markdown("---")
+    st.subheader("Account Summary")
+    st.caption(f"{assessor_name} | {user_role.capitalize()}")
+
+    col_a, col_b = st.columns(2)
+    with col_a:
+        st.metric("Current Plan", "Superadmin" if user_role == "admin" else current_tier.replace('_', ' ').title())
+    with col_b:
+        st.metric("Credits", "Unlimited" if user_role == "admin" or current_tier != "free" else credits_balance)
+
+    if user_role != "admin":
+        st.markdown("---")
+        st.subheader("Quick Support")
+        st.link_button("WhatsApp Support", "https://wa.me/2348184018469", width="stretch")
+        st.link_button("Email Support", "mailto:muhammadjibrildauda@gmail.com", width="stretch")
+
     st.markdown("---")
     st.subheader("Current Plan Details")
 

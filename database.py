@@ -32,6 +32,139 @@ def fetch_trade_levels(trade_id):
         st.error(f"Error fetching trade levels: {e}")
         return []
 
+
+@st.cache_data(ttl=3600)
+def fetch_all_trade_levels():
+    supabase = get_admin_supabase()
+    try:
+        response = (
+            supabase.table("trade_levels")
+            .select("id, trade_id, level, display_name")
+            .order("trade_id")
+            .order("level")
+            .execute()
+        )
+        return response.data if response.data else []
+    except Exception as e:
+        st.error(f"Error fetching trade levels: {e}")
+        return []
+
+
+@st.cache_data(ttl=3600)
+def fetch_units_by_trade_level(trade_level_id):
+    supabase = get_admin_supabase()
+    try:
+        response = (
+            supabase.table("units")
+            .select("id, trade_id, trade_level_id, code, title")
+            .eq("trade_level_id", int(trade_level_id))
+            .order("code")
+            .execute()
+        )
+        return response.data if response.data else []
+    except Exception as e:
+        st.error(f"Error fetching units: {e}")
+        return []
+
+
+@st.cache_data(ttl=3600)
+def fetch_all_units():
+    supabase = get_admin_supabase()
+    try:
+        response = (
+            supabase.table("units")
+            .select("id, trade_id, trade_level_id, code, title")
+            .order("id")
+            .execute()
+        )
+        return response.data if response.data else []
+    except Exception as e:
+        st.error(f"Error fetching units: {e}")
+        return []
+
+
+@st.cache_data(ttl=3600)
+def fetch_learning_outcomes_by_unit(unit_id):
+    supabase = get_admin_supabase()
+    try:
+        response = (
+            supabase.table("learning_outcomes")
+            .select("id, unit_id, lo_num, description")
+            .eq("unit_id", int(unit_id))
+            .order("lo_num")
+            .execute()
+        )
+        return response.data if response.data else []
+    except Exception as e:
+        st.error(f"Error fetching learning outcomes: {e}")
+        return []
+
+
+@st.cache_data(ttl=3600)
+def fetch_all_learning_outcomes():
+    supabase = get_admin_supabase()
+    try:
+        response = (
+            supabase.table("learning_outcomes")
+            .select("id, unit_id, lo_num, description")
+            .order("id")
+            .execute()
+        )
+        return response.data if response.data else []
+    except Exception as e:
+        st.error(f"Error fetching learning outcomes: {e}")
+        return []
+
+
+@st.cache_data(ttl=3600)
+def fetch_performance_criteria_by_lo(lo_id):
+    supabase = get_admin_supabase()
+    try:
+        response = (
+            supabase.table("performance_criteria")
+            .select("id, lo_id, pc_code, description")
+            .eq("lo_id", int(lo_id))
+            .order("pc_code")
+            .execute()
+        )
+        return response.data if response.data else []
+    except Exception as e:
+        st.error(f"Error fetching performance criteria: {e}")
+        return []
+
+
+@st.cache_data(ttl=3600)
+def fetch_all_performance_criteria():
+    supabase = get_admin_supabase()
+    try:
+        response = (
+            supabase.table("performance_criteria")
+            .select("id, lo_id, pc_code, description")
+            .order("id")
+            .execute()
+        )
+        return response.data if response.data else []
+    except Exception as e:
+        st.error(f"Error fetching performance criteria: {e}")
+        return []
+
+
+@st.cache_data(ttl=3600)
+def fetch_trade_by_id(trade_id):
+    supabase = get_admin_supabase()
+    try:
+        response = (
+            supabase.table("trades")
+            .select("id, name")
+            .eq("id", int(trade_id))
+            .single()
+            .execute()
+        )
+        return response.data if response.data else None
+    except Exception as e:
+        st.error(f"Error fetching trade: {e}")
+        return None
+
 @st.cache_data(ttl=3600)
 def fetch_nested_nos(trade_id=None, trade_level_id=None):
     supabase = get_admin_supabase()
@@ -180,6 +313,7 @@ def delete_nos_trade(trade_id):
     supabase = get_admin_supabase()
     try:
         supabase.table("trades").delete().eq("id", int(trade_id)).execute()
+        st.cache_data.clear()
         return True, None
     except Exception as e:
         return False, str(e)
@@ -191,6 +325,69 @@ def delete_nos_trade_level(trade_level_id):
     try:
         supabase.table("units").delete().eq("trade_level_id", int(trade_level_id)).execute()
         supabase.table("trade_levels").delete().eq("id", int(trade_level_id)).execute()
+        st.cache_data.clear()
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
+
+def update_trade_name(trade_id, name):
+    supabase = get_admin_supabase()
+    try:
+        supabase.table("trades").update({"name": name}).eq("id", int(trade_id)).execute()
+        st.cache_data.clear()
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
+
+def update_trade_level(trade_level_id, level, display_name):
+    supabase = get_admin_supabase()
+    try:
+        supabase.table("trade_levels").update({
+            "level": int(level),
+            "display_name": display_name,
+        }).eq("id", int(trade_level_id)).execute()
+        st.cache_data.clear()
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
+
+def update_unit(unit_id, code, title):
+    supabase = get_admin_supabase()
+    try:
+        supabase.table("units").update({
+            "code": code,
+            "title": title,
+        }).eq("id", int(unit_id)).execute()
+        st.cache_data.clear()
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
+
+def update_learning_outcome(lo_id, lo_num, description):
+    supabase = get_admin_supabase()
+    try:
+        supabase.table("learning_outcomes").update({
+            "lo_num": lo_num,
+            "description": description,
+        }).eq("id", int(lo_id)).execute()
+        st.cache_data.clear()
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
+
+def update_performance_criterion(pc_id, pc_code, description):
+    supabase = get_admin_supabase()
+    try:
+        supabase.table("performance_criteria").update({
+            "pc_code": pc_code,
+            "description": description,
+        }).eq("id", int(pc_id)).execute()
+        st.cache_data.clear()
         return True, None
     except Exception as e:
         return False, str(e)
