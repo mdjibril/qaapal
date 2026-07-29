@@ -100,18 +100,37 @@ def _delete_report(report_id, role, current_user_id, table_name):
         return False
 
 
+def _clear_history_selection_state():
+    """Reset bulk selection state when filters change."""
+    st.session_state.selected_report_ids = set()
+    st.session_state.pop("select_all_toggle", None)
+    st.session_state.pop("bulk_zip_bytes", None)
+    st.session_state.pop("last_zip_selection", None)
+    st.session_state.pop("confirm_bulk_delete_active", None)
+
+    keys_to_remove = [key for key in st.session_state.keys() if key.startswith("selected_")]
+    for key in keys_to_remove:
+        del st.session_state[key]
+
+
+def _get_selected_report_ids():
+    return st.session_state.get("selected_report_ids", set())
+
+
 # Callback for checkbox state change - NO RERUN
 def _on_checkbox_change(report_id):
+    selected_report_ids = st.session_state.get("selected_report_ids", set())
     if f"selected_{report_id}" in st.session_state:
         if st.session_state[f"selected_{report_id}"]:
-            st.session_state.selected_report_ids.add(report_id)
+            selected_report_ids.add(report_id)
         else:
-            st.session_state.selected_report_ids.discard(report_id)
+            selected_report_ids.discard(report_id)
+    st.session_state.selected_report_ids = selected_report_ids
 
 # Helper function to display a single report item
 def display_report_item(r, current_user_id, current_user_role, table_type):
     report_id = r['id']
-    is_selected = report_id in st.session_state.selected_report_ids
+    is_selected = report_id in st.session_state.get("selected_report_ids", set())
     selection_key = f"selected_{report_id}"
     st.session_state[selection_key] = is_selected
 
@@ -254,7 +273,9 @@ def main():
         if selected_type != st.session_state.history_type:
             st.session_state.history_type = selected_type
             st.session_state.history_page = 1
-            st.session_state.selected_report_ids = set()
+            _clear_history_selection_state()
+            st.cache_data.clear()
+            st.rerun()
 
     table_name_map = {"Assessment Reports": "assessment_reports", "Personal Statements": "student_statements", "Witness Statements": "witness_statements"}
     target_table = table_name_map[st.session_state.history_type]
@@ -277,6 +298,7 @@ def main():
         if selected_assessor != st.session_state.admin_assessor_filter:
             st.session_state.admin_assessor_filter = selected_assessor
             st.session_state.history_page = 1
+            _clear_history_selection_state()
             st.cache_data.clear()
 
     # Search and Filter implementation at the top
@@ -301,6 +323,7 @@ def main():
         st.session_state.search_query = search_input
         st.session_state.date_filter_state = date_input
         st.session_state.history_page = 1
+        _clear_history_selection_state()
         st.cache_data.clear()
         st.rerun()
     
@@ -348,44 +371,52 @@ def main():
     else:
         # --- Bulk Actions Toolbar ---
         col_select, col_download, col_delete = st.columns([0.2, 0.4, 0.4])
-        
+
         with col_select:
-            # Select All logic
-            all_filtered_ids = [r['id'] for r in filtered_reports]
-            is_all_selected = all(rid in st.session_state.selected_report_ids for rid in all_filtered_ids)
+            all_filtered_ids = [r["id"] for r in filtered_reports]
+            selected_report_ids = _get_selected_report_ids()
+            is_all_selected = bool(all_filtered_ids) and all(
+                rid in selected_report_ids for rid in all_filtered_ids
+            )
             select_all_checked = st.checkbox("Select All", value=is_all_selected, key="select_all_toggle")
             if select_all_checked != is_all_selected:
                 if select_all_checked:
                     for rid in all_filtered_ids:
-                        st.session_state.selected_report_ids.add(rid)
+                        selected_report_ids.add(rid)
                         st.session_state[f"selected_{rid}"] = True
                 else:
                     for rid in all_filtered_ids:
-                        st.session_state.selected_report_ids.discard(rid)
+                        selected_report_ids.discard(rid)
                         st.session_state[f"selected_{rid}"] = False
+                st.session_state.selected_report_ids = selected_report_ids
+
+            if st.button("Clear Selection"):
+                _clear_history_selection_state()
+                st.rerun()
 
         with col_download:
-            if st.session_state.selected_report_ids:
-                if st.session_state.get('last_zip_selection') != st.session_state.selected_report_ids:
+            selected_report_ids = _get_selected_report_ids()
+            if selected_report_ids:
+                if st.session_state.get("last_zip_selection") != selected_report_ids:
                     st.session_state.bulk_zip_bytes = None
-                
-                if st.session_state.get('bulk_zip_bytes') is None:
-                    if st.button(f"📦 Prepare {len(st.session_state.selected_report_ids)} Selected for Download", type="primary"):
+
+                if st.session_state.get("bulk_zip_bytes") is None:
+                    if st.button(f"📦 Prepare {len(selected_report_ids)} Selected for Download", type="primary"):
                         with st.spinner("Fetching data and generating ZIP..."):
                             from file_utils import create_zip_from_reports
                             admin_client = get_admin_supabase()
-                            ids_to_dl = list(st.session_state.selected_report_ids)
+                            ids_to_dl = list(selected_report_ids)
                             col_to_fetch = "report_text" if target_table == "assessment_reports" else "statement_text"
-                            query = admin_client.table(target_table).select(f"*, user_profiles!created_by(full_name)").in_("id", ids_to_dl)
-                            if role != 'admin':
+                            query = admin_client.table(target_table).select("*, user_profiles!created_by(full_name)").in_("id", ids_to_dl)
+                            if role != "admin":
                                 query = query.eq("created_by", user_id)
                             res = query.execute()
                             full_reports = res.data
                             if full_reports:
                                 for r in full_reports:
-                                    r['text_content'] = r.get(col_to_fetch, '')
+                                    r["text_content"] = r.get(col_to_fetch, "")
                                 st.session_state.bulk_zip_bytes = create_zip_from_reports(full_reports, st.session_state.history_type)
-                                st.session_state.last_zip_selection = set(st.session_state.selected_report_ids)
+                                st.session_state.last_zip_selection = set(selected_report_ids)
                                 st.rerun()
                 else:
                     st.download_button(
@@ -393,67 +424,61 @@ def main():
                         data=st.session_state.bulk_zip_bytes,
                         file_name=f"Bulk_Export_{st.session_state.history_type.replace(' ', '_')}.zip",
                         mime="application/zip",
-                        type="primary"
+                        type="primary",
                     )
 
         with col_delete:
-            if st.session_state.selected_report_ids:
-                # Use a session state flag to handle the confirmation workflow
-                if not st.session_state.get('confirm_bulk_delete_active'):
-                    if st.button(f"🗑️ Delete {len(st.session_state.selected_report_ids)} Selected", type="secondary"):
+            selected_report_ids = _get_selected_report_ids()
+            if selected_report_ids:
+                if not st.session_state.get("confirm_bulk_delete_active"):
+                    if st.button(f"🗑️ Delete {len(selected_report_ids)} Selected", type="secondary"):
                         st.session_state.confirm_bulk_delete_active = True
                 else:
-                    st.warning(f"⚠️ Confirm deletion of {len(st.session_state.selected_report_ids)} reports?")
+                    st.warning(f"⚠️ Confirm deletion of {len(selected_report_ids)} reports?")
                     c1, c2 = st.columns([0.2, 0.2])
                     if c1.button("Yes, Delete", type="primary", key="confirm_bulk_yes"):
                         with st.spinner("Deleting reports..."):
                             try:
-                                # Use the admin client for bulk delete, filtering by user_id if not admin
                                 admin_client = get_admin_supabase()
-                                ids_to_del = list(st.session_state.selected_report_ids)
+                                ids_to_del = list(selected_report_ids)
                                 query = admin_client.table(target_table).delete().in_("id", ids_to_del)
-                                if role != 'admin':
+                                if role != "admin":
                                     query = query.eq("created_by", user_id)
-                                
+
                                 res = query.execute()
-                                
+
                                 if not res.data:
                                     st.error("Bulk delete failed: No reports were removed. Check permissions.")
                                     st.session_state.confirm_bulk_delete_active = False
                                     st.stop()
 
-                                # Clear cache and reset states
                                 st.cache_data.clear()
                                 st.session_state.selected_report_ids = set()
-                                # Clear from text cache
+                                st.session_state.pop("select_all_toggle", None)
                                 for rid in ids_to_del:
                                     st.session_state.report_content_cache.pop(f"{target_table}_{rid}", None)
-                                    
+
                                 st.session_state.confirm_bulk_delete_active = False
                                 st.success("Selected reports deleted successfully.")
                                 st.rerun()
                             except Exception as e:
                                 st.error(f"Bulk delete failed: {e}")
-                        
+
                     if c2.button("Cancel", key="confirm_bulk_no"):
                         st.session_state.confirm_bulk_delete_active = False
-        
-        # Grouping logic for admin: 
-        # Only group if a specific assessor is selected; otherwise, show a flat chronological list.
-        if role == 'admin' and st.session_state.admin_assessor_filter != "All":
+
+        if role == "admin" and st.session_state.admin_assessor_filter != "All":
             reports_by_assessor = {}
             for r in filtered_reports:
-                assessor_full_name = (r.get('user_profiles') or {}).get('full_name', 'Unknown Assessor')
+                assessor_full_name = (r.get("user_profiles") or {}).get("full_name", "Unknown Assessor")
                 reports_by_assessor.setdefault(assessor_full_name, []).append(r)
-            
-            sorted_assessor_names = sorted(reports_by_assessor.keys())
-            for assessor_name in sorted_assessor_names:
+
+            for assessor_name in sorted(reports_by_assessor.keys()):
                 assessor_reports = reports_by_assessor[assessor_name]
                 with st.expander(f"Assessor: {assessor_name} ({len(assessor_reports)} reports)"):
                     for r in assessor_reports:
                         display_report_item(r, user_id, role, st.session_state.history_type)
         else:
-            # Original display logic for non-admin users
             for r in filtered_reports:
                 display_report_item(r, user_id, role, st.session_state.history_type)
 
