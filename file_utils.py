@@ -60,15 +60,16 @@ def add_page_number(run):
     run._r.append(fldChar2)
 
 def get_unit_number(unit_code):
-    """Extracts the numeric part of a unit code (e.g., ICT/SMC/008/L2 -> 8)."""
+    """Extract the 3-digit unit number from supported unit code formats."""
     try:
-        parts = unit_code.split('/')
-        if len(parts) >= 3:
-            # Convert to int then back to string to remove leading zeros (e.g., '008' -> '8')
-            return str(int(parts[2]))
-        return unit_code.strip()
-    except (ValueError, IndexError):
-        return unit_code.strip()
+        parts = [part.strip() for part in str(unit_code).split("/") if part.strip()]
+        for part in parts:
+            if re.fullmatch(r"\d{3}", part):
+                # Convert to int then back to string to remove leading zeros (e.g., '008' -> '8')
+                return str(int(part))
+        return str(unit_code).strip()
+    except (ValueError, IndexError, AttributeError):
+        return str(unit_code).strip()
 
 def _parse_single_mapping(inner_content):
     # Split the inner content by semicolon, but only if a new Unit Code follows.
