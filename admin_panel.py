@@ -3,6 +3,42 @@ import os
 import database as db
 from auth_utils import get_supabase, get_admin_supabase
 
+
+def _clear_session_keys(*keys):
+    for key in keys:
+        st.session_state.pop(key, None)
+
+
+def _clear_session_keys_with_prefix(*prefixes):
+    keys_to_remove = [key for key in st.session_state.keys() if key.startswith(prefixes)]
+    for key in keys_to_remove:
+        del st.session_state[key]
+
+
+def _clear_nos_branch(prefix, include_table=False):
+    keys = [
+        f"{prefix}_trade_id",
+        f"{prefix}_trade_name",
+        f"{prefix}_trade_level_id",
+        f"{prefix}_trade_level_label",
+        f"{prefix}_unit_id",
+        f"{prefix}_unit_label",
+        f"{prefix}_lo_id",
+        f"{prefix}_lo_label",
+        f"{prefix}_pc_id",
+        f"{prefix}_pc_label",
+        f"{prefix}_search",
+        f"{prefix}_trade_search",
+        f"{prefix}_level_search",
+        f"{prefix}_unit_search",
+        f"{prefix}_lo_search",
+        f"{prefix}_pc_search",
+        f"{prefix}_table",
+    ]
+    if not include_table:
+        keys.remove(f"{prefix}_table")
+    _clear_session_keys(*keys)
+
 def main():
     st.title("🛡️ Super Admin Control Center")
     st.markdown("Centralized configuration, user management, metrics, and application audit panel.")
@@ -351,14 +387,30 @@ def main():
                     filtered.append(row)
             return filtered
 
-        def _render_selectbox(label, rows, display_fn, key, none_message, search_key, search_fields=None):
+        def _render_selectbox(
+            label,
+            rows,
+            display_fn,
+            key,
+            none_message,
+            search_key,
+            search_fields=None,
+            on_change=None,
+            on_change_args=None,
+        ):
             search_query = st.text_input(f"🔎 {label} Search", placeholder="Type to filter...", key=search_key)
             filtered_rows = _filter_rows(rows, search_query, search_fields)
             if not filtered_rows:
                 st.info(none_message)
                 return None, filtered_rows
             options = [display_fn(row) for row in filtered_rows]
-            selected_label = st.selectbox(label, options, key=key)
+            selected_label = st.selectbox(
+                label,
+                options,
+                key=key,
+                on_change=on_change,
+                args=on_change_args or (),
+            )
             selected_row = next((row for row in filtered_rows if display_fn(row) == selected_label), None)
             return selected_row, filtered_rows
 
@@ -368,109 +420,460 @@ def main():
                 ["Trades", "Trade Levels", "Units", "Learning Outcomes", "Performance Criteria"],
                 key="nos_view_table",
             )
+            if st.session_state.get("nos_view_last_table") != view_table:
+                _clear_session_keys(
+                    "nos_view_trade_select",
+                    "nos_view_level_select",
+                    "nos_view_unit_select",
+                    "nos_view_lo_select",
+                    "nos_view_pc_select",
+                    "nos_view_trade_id",
+                    "nos_view_trade_name",
+                    "nos_view_trade_level_id",
+                    "nos_view_trade_level_label",
+                    "nos_view_unit_id",
+                    "nos_view_unit_label",
+                    "nos_view_lo_id",
+                    "nos_view_lo_label",
+                    "nos_view_pc_id",
+                    "nos_view_pc_label",
+                    "nos_view_trade_search",
+                    "nos_view_level_search",
+                    "nos_view_unit_search",
+                    "nos_view_lo_search",
+                    "nos_view_pc_search",
+                )
+                st.session_state.nos_view_last_table = view_table
 
-            if view_table == "Trades":
-                rows = db.fetch_trades()
-                fields = ["name", "id"]
+            trades = db.fetch_trades()
+            if not trades:
+                st.info("No trades available.")
+            elif view_table == "Trades":
+                search_query = st.text_input(
+                    "🔍 Search Trades",
+                    placeholder="Type keywords, codes, descriptions...",
+                    key="nos_view_trade_search",
+                )
+                filtered_rows = _filter_rows(trades, search_query, ["name", "id"])
+                st.caption(f"Showing {len(filtered_rows)} record(s).")
+                st.dataframe(filtered_rows, width="stretch", hide_index=True)
             elif view_table == "Trade Levels":
-                rows = db.fetch_all_trade_levels()
-                fields = ["level", "display_name", "trade_id", "id"]
+                selected_trade, _ = _render_selectbox(
+                    "Select Trade",
+                    trades,
+                    lambda trade: f"{trade['name']} (ID {trade['id']})",
+                    key="nos_view_trade_select",
+                    none_message="No trades available.",
+                    search_key="nos_view_trade_search",
+                    search_fields=["name", "id"],
+                )
+                if selected_trade:
+                    if st.session_state.get("nos_view_trade_id") != selected_trade["id"]:
+                        _clear_session_keys(
+                            "nos_view_level_select",
+                            "nos_view_unit_select",
+                            "nos_view_lo_select",
+                            "nos_view_pc_select",
+                            "nos_view_trade_level_id",
+                            "nos_view_unit_id",
+                            "nos_view_lo_id",
+                            "nos_view_pc_id",
+                            "nos_view_level_search",
+                            "nos_view_unit_search",
+                            "nos_view_lo_search",
+                            "nos_view_pc_search",
+                        )
+                    st.session_state.nos_view_trade_id = selected_trade["id"]
+                    st.session_state.nos_view_trade_name = selected_trade["name"]
+                    rows = db.fetch_trade_levels(selected_trade["id"])
+                    search_query = st.text_input(
+                        "🔍 Search Trade Levels",
+                        placeholder="Type keywords, codes, descriptions...",
+                        key="nos_view_level_search",
+                    )
+                    filtered_rows = _filter_rows(rows, search_query, ["level", "display_name", "trade_id", "id"])
+                    st.caption(f"Showing {len(filtered_rows)} record(s) for {selected_trade['name']}.")
+                    st.dataframe(filtered_rows, width="stretch", hide_index=True)
             elif view_table == "Units":
-                rows = db.fetch_all_units()
-                fields = ["code", "title", "trade_id", "trade_level_id", "id"]
+                selected_trade, _ = _render_selectbox(
+                    "Select Trade",
+                    trades,
+                    lambda trade: f"{trade['name']} (ID {trade['id']})",
+                    key="nos_view_trade_select",
+                    none_message="No trades available.",
+                    search_key="nos_view_trade_search",
+                    search_fields=["name", "id"],
+                )
+                if selected_trade:
+                    if st.session_state.get("nos_view_trade_id") != selected_trade["id"]:
+                        _clear_session_keys(
+                            "nos_view_trade_level_id",
+                            "nos_view_unit_id",
+                            "nos_view_lo_id",
+                            "nos_view_pc_id",
+                            "nos_view_level_search",
+                            "nos_view_unit_search",
+                            "nos_view_lo_search",
+                            "nos_view_pc_search",
+                        )
+                    st.session_state.nos_view_trade_id = selected_trade["id"]
+                    st.session_state.nos_view_trade_name = selected_trade["name"]
+                    trade_levels = db.fetch_trade_levels(selected_trade["id"])
+                    selected_level, _ = _render_selectbox(
+                        "Select Trade Level",
+                        trade_levels,
+                        lambda lvl: f"Level {lvl['level']}" + (f" - {lvl['display_name']}" if lvl.get("display_name") else ""),
+                        key="nos_view_level_select",
+                        none_message="No trade levels found for this trade.",
+                        search_key="nos_view_level_search",
+                        search_fields=["level", "display_name", "trade_id", "id"],
+                    )
+                    if selected_level:
+                        if st.session_state.get("nos_view_trade_level_id") != selected_level["id"]:
+                            _clear_session_keys(
+                                "nos_view_unit_select",
+                                "nos_view_lo_select",
+                                "nos_view_pc_select",
+                                "nos_view_unit_id",
+                                "nos_view_lo_id",
+                                "nos_view_pc_id",
+                                "nos_view_unit_search",
+                                "nos_view_lo_search",
+                                "nos_view_pc_search",
+                            )
+                        st.session_state.nos_view_trade_level_id = selected_level["id"]
+                        st.session_state.nos_view_trade_level_label = selected_level.get("display_name") or f"Level {selected_level['level']}"
+                        rows = db.fetch_units_by_trade_level(selected_level["id"])
+                        search_query = st.text_input(
+                            "🔍 Search Units",
+                            placeholder="Type keywords, codes, descriptions...",
+                            key="nos_view_unit_search",
+                        )
+                        filtered_rows = _filter_rows(rows, search_query, ["code", "title", "trade_id", "trade_level_id", "id"])
+                        st.caption(
+                            f"Showing {len(filtered_rows)} record(s) for {selected_trade['name']} / {st.session_state.nos_view_trade_level_label}."
+                        )
+                        st.dataframe(filtered_rows, width="stretch", hide_index=True)
             elif view_table == "Learning Outcomes":
-                rows = db.fetch_all_learning_outcomes()
-                fields = ["lo_num", "description", "unit_id", "id"]
+                selected_trade, _ = _render_selectbox(
+                    "Select Trade",
+                    trades,
+                    lambda trade: f"{trade['name']} (ID {trade['id']})",
+                    key="nos_view_trade_select",
+                    none_message="No trades available.",
+                    search_key="nos_view_trade_search",
+                    search_fields=["name", "id"],
+                )
+                if selected_trade:
+                    if st.session_state.get("nos_view_trade_id") != selected_trade["id"]:
+                        _clear_session_keys(
+                            "nos_view_trade_level_id",
+                            "nos_view_unit_id",
+                            "nos_view_lo_id",
+                            "nos_view_pc_id",
+                            "nos_view_level_search",
+                            "nos_view_unit_search",
+                            "nos_view_lo_search",
+                            "nos_view_pc_search",
+                        )
+                    st.session_state.nos_view_trade_id = selected_trade["id"]
+                    st.session_state.nos_view_trade_name = selected_trade["name"]
+                    trade_levels = db.fetch_trade_levels(selected_trade["id"])
+                    selected_level, _ = _render_selectbox(
+                        "Select Trade Level",
+                        trade_levels,
+                        lambda lvl: f"Level {lvl['level']}" + (f" - {lvl['display_name']}" if lvl.get("display_name") else ""),
+                        key="nos_view_level_select",
+                        none_message="No trade levels found for this trade.",
+                        search_key="nos_view_level_search",
+                        search_fields=["level", "display_name", "trade_id", "id"],
+                    )
+                    if selected_level:
+                        if st.session_state.get("nos_view_trade_level_id") != selected_level["id"]:
+                            _clear_session_keys(
+                                "nos_view_unit_id",
+                                "nos_view_lo_id",
+                                "nos_view_pc_id",
+                                "nos_view_unit_search",
+                                "nos_view_lo_search",
+                                "nos_view_pc_search",
+                            )
+                        st.session_state.nos_view_trade_level_id = selected_level["id"]
+                        st.session_state.nos_view_trade_level_label = selected_level.get("display_name") or f"Level {selected_level['level']}"
+                        units = db.fetch_units_by_trade_level(selected_level["id"])
+                        selected_unit, _ = _render_selectbox(
+                            "Select Unit",
+                            units,
+                            lambda unit: f"{unit['code']}: {unit['title']}",
+                            key="nos_view_unit_select",
+                            none_message="No units found for this level.",
+                            search_key="nos_view_unit_search",
+                            search_fields=["code", "title", "trade_id", "trade_level_id", "id"],
+                        )
+                        if selected_unit:
+                            if st.session_state.get("nos_view_unit_id") != selected_unit["id"]:
+                                _clear_session_keys(
+                                    "nos_view_lo_select",
+                                    "nos_view_pc_select",
+                                    "nos_view_lo_id",
+                                    "nos_view_pc_id",
+                                    "nos_view_lo_search",
+                                    "nos_view_pc_search",
+                                )
+                            st.session_state.nos_view_unit_id = selected_unit["id"]
+                            st.session_state.nos_view_unit_label = selected_unit["title"]
+                            rows = db.fetch_learning_outcomes_by_unit(selected_unit["id"])
+                            search_query = st.text_input(
+                                "🔍 Search Learning Outcomes",
+                                placeholder="Type keywords, codes, descriptions...",
+                                key="nos_view_lo_search",
+                            )
+                            filtered_rows = _filter_rows(rows, search_query, ["lo_num", "description", "unit_id", "id"])
+                            st.caption(
+                                f"Showing {len(filtered_rows)} record(s) for {selected_trade['name']} / {st.session_state.nos_view_trade_level_label} / {selected_unit['code']}."
+                            )
+                            st.dataframe(filtered_rows, width="stretch", hide_index=True)
             else:
-                rows = db.fetch_all_performance_criteria()
-                fields = ["pc_code", "description", "lo_id", "id"]
-
-            search_query = st.text_input(
-                f"🔍 Search {view_table}",
-                placeholder="Type keywords, codes, descriptions...",
-                key="nos_view_search",
-            )
-            filtered_rows = _filter_rows(rows, search_query, fields)
-            st.caption(f"Showing {len(filtered_rows)} record(s).")
-            st.dataframe(filtered_rows, width="stretch", hide_index=True)
+                selected_trade, _ = _render_selectbox(
+                    "Select Trade",
+                    trades,
+                    lambda trade: f"{trade['name']} (ID {trade['id']})",
+                    key="nos_view_trade_select",
+                    none_message="No trades available.",
+                    search_key="nos_view_trade_search",
+                    search_fields=["name", "id"],
+                )
+                if selected_trade:
+                    if st.session_state.get("nos_view_trade_id") != selected_trade["id"]:
+                        _clear_session_keys(
+                            "nos_view_level_select",
+                            "nos_view_unit_select",
+                            "nos_view_lo_select",
+                            "nos_view_pc_select",
+                            "nos_view_trade_level_id",
+                            "nos_view_unit_id",
+                            "nos_view_lo_id",
+                            "nos_view_pc_id",
+                            "nos_view_level_search",
+                            "nos_view_unit_search",
+                            "nos_view_lo_search",
+                            "nos_view_pc_search",
+                        )
+                    st.session_state.nos_view_trade_id = selected_trade["id"]
+                    st.session_state.nos_view_trade_name = selected_trade["name"]
+                    trade_levels = db.fetch_trade_levels(selected_trade["id"])
+                    selected_level, _ = _render_selectbox(
+                        "Select Trade Level",
+                        trade_levels,
+                        lambda lvl: f"Level {lvl['level']}" + (f" - {lvl['display_name']}" if lvl.get("display_name") else ""),
+                        key="nos_view_level_select",
+                        none_message="No trade levels found for this trade.",
+                        search_key="nos_view_level_search",
+                        search_fields=["level", "display_name", "trade_id", "id"],
+                    )
+                    if selected_level:
+                        if st.session_state.get("nos_view_trade_level_id") != selected_level["id"]:
+                            _clear_session_keys(
+                                "nos_view_unit_select",
+                                "nos_view_lo_select",
+                                "nos_view_pc_select",
+                                "nos_view_unit_id",
+                                "nos_view_lo_id",
+                                "nos_view_pc_id",
+                                "nos_view_unit_search",
+                                "nos_view_lo_search",
+                                "nos_view_pc_search",
+                            )
+                        st.session_state.nos_view_trade_level_id = selected_level["id"]
+                        st.session_state.nos_view_trade_level_label = selected_level.get("display_name") or f"Level {selected_level['level']}"
+                        units = db.fetch_units_by_trade_level(selected_level["id"])
+                        selected_unit, _ = _render_selectbox(
+                            "Select Unit",
+                            units,
+                            lambda unit: f"{unit['code']}: {unit['title']}",
+                            key="nos_view_unit_select",
+                            none_message="No units found for this level.",
+                            search_key="nos_view_unit_search",
+                            search_fields=["code", "title", "trade_id", "trade_level_id", "id"],
+                        )
+                        if selected_unit:
+                            if st.session_state.get("nos_view_unit_id") != selected_unit["id"]:
+                                _clear_session_keys(
+                                    "nos_view_lo_id",
+                                    "nos_view_pc_id",
+                                    "nos_view_lo_search",
+                                    "nos_view_pc_search",
+                                )
+                            st.session_state.nos_view_unit_id = selected_unit["id"]
+                            st.session_state.nos_view_unit_label = selected_unit["title"]
+                            los = db.fetch_learning_outcomes_by_unit(selected_unit["id"])
+                            selected_lo, _ = _render_selectbox(
+                                "Select Learning Outcome",
+                                los,
+                                lambda lo: f"LO {lo['lo_num']}: {lo['description']}",
+                                key="nos_view_lo_select",
+                                none_message="No learning outcomes found for this unit.",
+                                search_key="nos_view_lo_search",
+                                search_fields=["lo_num", "description", "unit_id", "id"],
+                            )
+                            if selected_lo:
+                                if st.session_state.get("nos_view_lo_id") != selected_lo["id"]:
+                                    _clear_session_keys("nos_view_pc_id", "nos_view_pc_search")
+                                st.session_state.nos_view_lo_id = selected_lo["id"]
+                                st.session_state.nos_view_lo_label = selected_lo["description"]
+                                pcs = db.fetch_performance_criteria_by_lo(selected_lo["id"])
+                                search_query = st.text_input(
+                                    "🔍 Search Performance Criteria",
+                                    placeholder="Type keywords, codes, descriptions...",
+                                    key="nos_view_pc_search",
+                                )
+                                filtered_rows = _filter_rows(pcs, search_query, ["pc_code", "description", "lo_id", "id"])
+                                st.caption(
+                                    f"Showing {len(filtered_rows)} record(s) for {selected_trade['name']} / {st.session_state.nos_view_trade_level_label} / {selected_unit['code']} / LO {selected_lo['lo_num']}."
+                                )
+                                st.dataframe(filtered_rows, width="stretch", hide_index=True)
 
         with sub_tab_edit:
             st.subheader("Update National Standards Content")
 
-            trades = db.fetch_trades()
-            selected_trade, _ = _render_selectbox(
-                "Select Trade",
-                trades,
-                lambda trade: f"{trade['name']} (ID {trade['id']})",
-                key="update_trade_select",
-                none_message="No trades available.",
-                search_key="update_trade_search",
-                search_fields=["name", "id"],
+            update_modes = ["Trade", "Level", "Unit", "Learning Outcome", "Performance Criteria"]
+            selected_mode = st.radio(
+                "Edit target",
+                update_modes,
+                horizontal=True,
+                key="nos_update_mode",
             )
+            if st.session_state.get("nos_update_last_mode") != selected_mode:
+                _clear_session_keys(
+                    "update_trade_select",
+                    "update_level_select",
+                    "update_unit_select",
+                    "update_lo_select",
+                    "update_pc_select",
+                    "update_trade_search",
+                    "update_level_search",
+                    "update_unit_search",
+                    "update_lo_search",
+                    "update_pc_search",
+                    "nos_update_trade_id",
+                    "nos_update_trade_name",
+                    "nos_update_trade_level_id",
+                    "nos_update_trade_level_label",
+                    "nos_update_unit_id",
+                    "nos_update_unit_label",
+                    "nos_update_lo_id",
+                    "nos_update_lo_label",
+                    "nos_update_pc_id",
+                    "nos_update_pc_label",
+                )
+                st.session_state.nos_update_last_mode = selected_mode
 
-            if selected_trade:
-                with st.container(border=True):
-                    st.caption("Trade")
-                    with st.form("update_trade_form"):
-                        new_trade_name = st.text_input("Trade Name", value=selected_trade["name"])
-                        if st.form_submit_button("Update Trade"):
-                            success, err = db.update_trade_name(selected_trade["id"], new_trade_name)
-                            if success:
-                                st.success("✅ Trade updated.")
-                                st.rerun()
-                            else:
-                                st.error(f"Trade update failed: {err}")
-
-                trade_levels = db.fetch_trade_levels(selected_trade["id"])
-                selected_level, _ = _render_selectbox(
-                    "Select Trade Level",
-                    trade_levels,
-                    lambda lvl: f"Level {lvl['level']}" + (f" - {lvl['display_name']}" if lvl.get("display_name") else ""),
-                    key="update_level_select",
-                    none_message="No trade levels found for this trade.",
-                    search_key="update_level_search",
-                    search_fields=["level", "display_name", "trade_id", "id"],
+            trades = db.fetch_trades()
+            if not trades:
+                st.info("No trades available.")
+            else:
+                selected_trade, _ = _render_selectbox(
+                    "Select Trade",
+                    trades,
+                    lambda trade: f"{trade['name']} (ID {trade['id']})",
+                    key="update_trade_select",
+                    none_message="No trades available.",
+                    search_key="update_trade_search",
+                    search_fields=["name", "id"],
                 )
 
-                if selected_level:
+                if selected_trade:
+                    if st.session_state.get("nos_update_trade_id") != selected_trade["id"]:
+                        _clear_session_keys(
+                            "update_level_select",
+                            "update_unit_select",
+                            "update_lo_select",
+                            "update_pc_select",
+                            "nos_update_trade_level_id",
+                            "nos_update_trade_level_label",
+                            "nos_update_unit_id",
+                            "nos_update_unit_label",
+                            "nos_update_lo_id",
+                            "nos_update_lo_label",
+                            "nos_update_pc_id",
+                            "nos_update_pc_label",
+                            "update_level_search",
+                            "update_unit_search",
+                            "update_lo_search",
+                            "update_pc_search",
+                        )
+                    st.session_state.nos_update_trade_id = selected_trade["id"]
+                    st.session_state.nos_update_trade_name = selected_trade["name"]
+
+                    selected_level = None
+                    selected_unit = None
+                    selected_lo = None
+                    selected_pc = None
+                    breadcrumb_parts = [selected_trade["name"]]
+
                     with st.container(border=True):
-                        st.caption("Level")
-                        with st.form("update_level_form"):
-                            new_level = st.number_input("Level", min_value=1, step=1, value=int(selected_level["level"]))
-                            new_display_name = st.text_input("Display Name", value=selected_level.get("display_name") or "")
-                            if st.form_submit_button("Update Trade Level"):
-                                success, err = db.update_trade_level(selected_level["id"], new_level, new_display_name)
-                                if success:
-                                    st.success("✅ Trade level updated.")
-                                    st.rerun()
-                                else:
-                                    st.error(f"Trade level update failed: {err}")
+                        st.markdown("**Breadcrumb**")
+                        st.caption(selected_trade["name"])
 
-                    units = db.fetch_units_by_trade_level(selected_level["id"])
-                    selected_unit, _ = _render_selectbox(
-                        "Select Unit",
-                        units,
-                        lambda unit: f"{unit['code']}: {unit['title']}",
-                        key="update_unit_select",
-                        none_message="No units found for this level.",
-                        search_key="update_unit_search",
-                        search_fields=["code", "title", "trade_id", "trade_level_id", "id"],
-                    )
+                    if selected_mode in ("Level", "Unit", "Learning Outcome", "Performance Criteria"):
+                        trade_levels = db.fetch_trade_levels(selected_trade["id"])
+                        selected_level, _ = _render_selectbox(
+                            "Select Level",
+                            trade_levels,
+                            lambda lvl: f"Level {lvl['level']}" + (f" - {lvl['display_name']}" if lvl.get("display_name") else ""),
+                            key="update_level_select",
+                            none_message="No trade levels found for this trade.",
+                            search_key="update_level_search",
+                            search_fields=["level", "display_name", "trade_id", "id"],
+                        )
+                        if selected_level:
+                            if st.session_state.get("nos_update_trade_level_id") != selected_level["id"]:
+                                _clear_session_keys(
+                                    "update_unit_select",
+                                    "update_lo_select",
+                                    "update_pc_select",
+                                    "nos_update_unit_id",
+                                    "nos_update_unit_label",
+                                    "nos_update_lo_id",
+                                    "nos_update_lo_label",
+                                    "nos_update_pc_id",
+                                    "nos_update_pc_label",
+                                    "update_unit_search",
+                                    "update_lo_search",
+                                    "update_pc_search",
+                                )
+                            st.session_state.nos_update_trade_level_id = selected_level["id"]
+                            st.session_state.nos_update_trade_level_label = selected_level.get("display_name") or f"Level {selected_level['level']}"
+                            breadcrumb_parts.append(st.session_state.nos_update_trade_level_label)
 
-                    if selected_unit:
-                        with st.container(border=True):
-                            st.caption("Unit")
-                            with st.form("update_unit_form"):
-                                new_unit_code = st.text_input("Unit Code", value=selected_unit["code"])
-                                new_unit_title = st.text_input("Unit Title", value=selected_unit["title"])
-                                if st.form_submit_button("Update Unit"):
-                                    success, err = db.update_unit(selected_unit["id"], new_unit_code, new_unit_title)
-                                    if success:
-                                        st.success("✅ Unit updated.")
-                                        st.rerun()
-                                    else:
-                                        st.error(f"Unit update failed: {err}")
+                    if selected_mode in ("Unit", "Learning Outcome", "Performance Criteria") and selected_level:
+                        units = db.fetch_units_by_trade_level(selected_level["id"])
+                        selected_unit, _ = _render_selectbox(
+                            "Select Unit",
+                            units,
+                            lambda unit: f"{unit['code']}: {unit['title']}",
+                            key="update_unit_select",
+                            none_message="No units found for this level.",
+                            search_key="update_unit_search",
+                            search_fields=["code", "title", "trade_id", "trade_level_id", "id"],
+                        )
+                        if selected_unit:
+                            if st.session_state.get("nos_update_unit_id") != selected_unit["id"]:
+                                _clear_session_keys(
+                                    "update_lo_select",
+                                    "update_pc_select",
+                                    "nos_update_lo_id",
+                                    "nos_update_lo_label",
+                                    "nos_update_pc_id",
+                                    "nos_update_pc_label",
+                                    "update_lo_search",
+                                    "update_pc_search",
+                                )
+                            st.session_state.nos_update_unit_id = selected_unit["id"]
+                            st.session_state.nos_update_unit_label = selected_unit["title"]
+                            breadcrumb_parts.append(selected_unit["code"])
 
+                    if selected_mode in ("Learning Outcome", "Performance Criteria") and selected_unit:
                         los = db.fetch_learning_outcomes_by_unit(selected_unit["id"])
                         selected_lo, _ = _render_selectbox(
                             "Select Learning Outcome",
@@ -481,10 +884,84 @@ def main():
                             search_key="update_lo_search",
                             search_fields=["lo_num", "description", "unit_id", "id"],
                         )
-
                         if selected_lo:
-                            with st.container(border=True):
-                                st.caption("Learning Outcome")
+                            if st.session_state.get("nos_update_lo_id") != selected_lo["id"]:
+                                _clear_session_keys(
+                                    "update_pc_select",
+                                    "nos_update_pc_id",
+                                    "nos_update_pc_label",
+                                    "update_pc_search",
+                                )
+                            st.session_state.nos_update_lo_id = selected_lo["id"]
+                            st.session_state.nos_update_lo_label = selected_lo["description"]
+                            breadcrumb_parts.append(f"LO {selected_lo['lo_num']}")
+
+                    if selected_mode == "Performance Criteria" and selected_lo:
+                        pcs = db.fetch_performance_criteria_by_lo(selected_lo["id"])
+                        selected_pc, _ = _render_selectbox(
+                            "Select Performance Criteria",
+                            pcs,
+                            lambda pc: f"{pc['pc_code']}: {pc['description']}",
+                            key="update_pc_select",
+                            none_message="No performance criteria found for this learning outcome.",
+                            search_key="update_pc_search",
+                            search_fields=["pc_code", "description", "lo_id", "id"],
+                        )
+                        if selected_pc:
+                            st.session_state.nos_update_pc_id = selected_pc["id"]
+                            st.session_state.nos_update_pc_label = selected_pc["description"]
+                            breadcrumb_parts.append(selected_pc["pc_code"])
+
+                    if breadcrumb_parts:
+                        with st.container(border=True):
+                            st.markdown("**Current Path**")
+                            st.caption(" > ".join(breadcrumb_parts))
+
+                    with st.container(border=True):
+                        if selected_mode == "Trade":
+                            st.caption("Editing Trade")
+                            with st.form("update_trade_form"):
+                                new_trade_name = st.text_input("Trade Name", value=selected_trade["name"])
+                                if st.form_submit_button("Update Trade"):
+                                    success, err = db.update_trade_name(selected_trade["id"], new_trade_name)
+                                    if success:
+                                        st.success("✅ Trade updated.")
+                                        st.rerun()
+                                    else:
+                                        st.error(f"Trade update failed: {err}")
+                        elif selected_mode == "Level":
+                            if selected_level:
+                                st.caption("Editing Level")
+                                with st.form("update_level_form"):
+                                    new_level = st.number_input("Level", min_value=1, step=1, value=int(selected_level["level"]))
+                                    new_display_name = st.text_input("Display Name", value=selected_level.get("display_name") or "")
+                                    if st.form_submit_button("Update Trade Level"):
+                                        success, err = db.update_trade_level(selected_level["id"], new_level, new_display_name)
+                                        if success:
+                                            st.success("✅ Trade level updated.")
+                                            st.rerun()
+                                        else:
+                                            st.error(f"Trade level update failed: {err}")
+                            else:
+                                st.info("Select a level to edit.")
+                        elif selected_mode == "Unit":
+                            if selected_unit:
+                                st.caption("Editing Unit")
+                                with st.form("update_unit_form"):
+                                    new_unit_code = st.text_input("Unit Code", value=selected_unit["code"])
+                                    new_unit_title = st.text_input("Unit Title", value=selected_unit["title"])
+                                    if st.form_submit_button("Update Unit"):
+                                        success, err = db.update_unit(selected_unit["id"], new_unit_code, new_unit_title)
+                                        if success:
+                                            st.success("✅ Unit updated.")
+                                            st.rerun()
+                                        else:
+                                            st.error(f"Unit update failed: {err}")
+                            else:
+                                st.info("Select a unit to edit.")
+                        elif selected_mode == "Learning Outcome":
+                            if selected_lo:
+                                st.caption("Editing Learning Outcome")
                                 with st.form("update_lo_form"):
                                     new_lo_num = st.text_input("LO Number", value=selected_lo["lo_num"])
                                     new_lo_desc = st.text_area("LO Description", value=selected_lo["description"])
@@ -495,31 +972,23 @@ def main():
                                             st.rerun()
                                         else:
                                             st.error(f"Learning outcome update failed: {err}")
-
-                            pcs = db.fetch_performance_criteria_by_lo(selected_lo["id"])
-                            selected_pc, _ = _render_selectbox(
-                                "Select Performance Criteria",
-                                pcs,
-                                lambda pc: f"{pc['pc_code']}: {pc['description']}",
-                                key="update_pc_select",
-                                none_message="No performance criteria found for this learning outcome.",
-                                search_key="update_pc_search",
-                                search_fields=["pc_code", "description", "lo_id", "id"],
-                            )
-
+                            else:
+                                st.info("Select a learning outcome to edit.")
+                        else:
                             if selected_pc:
-                                with st.container(border=True):
-                                    st.caption("Performance Criteria")
-                                    with st.form("update_pc_form"):
-                                        new_pc_code = st.text_input("PC Code", value=selected_pc["pc_code"])
-                                        new_pc_desc = st.text_area("PC Description", value=selected_pc["description"])
-                                        if st.form_submit_button("Update Performance Criteria"):
-                                            success, err = db.update_performance_criterion(selected_pc["id"], new_pc_code, new_pc_desc)
-                                            if success:
-                                                st.success("✅ Performance criteria updated.")
-                                                st.rerun()
-                                            else:
-                                                st.error(f"Performance criteria update failed: {err}")
+                                st.caption("Editing Performance Criteria")
+                                with st.form("update_pc_form"):
+                                    new_pc_code = st.text_input("PC Code", value=selected_pc["pc_code"])
+                                    new_pc_desc = st.text_area("PC Description", value=selected_pc["description"])
+                                    if st.form_submit_button("Update Performance Criteria"):
+                                        success, err = db.update_performance_criterion(selected_pc["id"], new_pc_code, new_pc_desc)
+                                        if success:
+                                            st.success("✅ Performance criteria updated.")
+                                            st.rerun()
+                                        else:
+                                            st.error(f"Performance criteria update failed: {err}")
+                            else:
+                                st.info("Select a performance criterion to edit.")
 
         with sub_tab_delete:
             st.subheader("Danger Zone: Remove NOS Content")
@@ -555,6 +1024,15 @@ def main():
                         key="delete_nos_trade_select",
                     )
                     selected_trade = trade_map[selected_trade_label]
+                    if st.session_state.get("nos_delete_trade_label") != selected_trade_label:
+                        _clear_session_keys(
+                            "delete_nos_trade_select",
+                            "delete_nos_level_select",
+                            "nos_delete_trade_level_id",
+                            "delete_level_search",
+                        )
+                    st.session_state.nos_delete_trade_id = selected_trade["id"]
+                    st.session_state.nos_delete_trade_label = selected_trade_label
 
                     selected_trade_level = None
                     trade_levels = []
@@ -577,6 +1055,10 @@ def main():
                                 key="delete_nos_level_select",
                             )
                             selected_trade_level = level_map[selected_level_label]
+                            if st.session_state.get("nos_delete_trade_level_label") != selected_level_label:
+                                _clear_session_keys("delete_nos_level_select", "nos_delete_trade_level_id")
+                            st.session_state.nos_delete_trade_level_id = selected_trade_level["id"]
+                            st.session_state.nos_delete_trade_level_label = selected_level_label
                         else:
                             st.info("No trade levels found for the selected trade.")
 
