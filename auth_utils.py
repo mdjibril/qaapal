@@ -284,11 +284,17 @@ def finalize_session(user, session):
             meta = getattr(user, 'user_metadata', {}) or {}
             full_name = meta.get('full_name', 'New User')
             
+            # Keep the same profile fields the signup trigger writes so we do not
+            # lose attribution data if the trigger did not run for any reason.
             admin_client.table("user_profiles").upsert({
                 "id": user.id,
                 "email": user.email,
                 "full_name": full_name,
-                "role": "assessor"
+                "role": "assessor",
+                "marketing_source": meta.get("marketing_source"),
+                "primary_trade": meta.get("primary_trade"),
+                "monthly_report_volume": meta.get("monthly_volume"),
+                "assessor_role": meta.get("assessor_role")
             }).execute()
             
             # Re-fetch to include data potentially added by the trigger in the background
