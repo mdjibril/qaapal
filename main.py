@@ -146,14 +146,15 @@ else:
     if trades:
         with st.sidebar.container(border=True):
             st.markdown("**NOS Selection**")
-            trade_names = [t['name'] for t in trades]
+            sorted_trades = sorted(trades, key=lambda trade: (trade.get("name") or "").casefold())
+            trade_names = [t['name'] for t in sorted_trades]
             selected_name = st.selectbox(
                 "Select Trade Family",
                 trade_names,
                 key="global_trade_select",
                 on_change=clear_nos_context
             )
-            selected_trade = next((t for t in trades if t['name'] == selected_name), None)
+            selected_trade = next((t for t in sorted_trades if t['name'] == selected_name), None)
             selected_trade_id = selected_trade['id'] if selected_trade else None
             st.session_state.selected_trade_id = selected_trade_id
             st.session_state.selected_trade_name = selected_trade['name'] if selected_trade else selected_name

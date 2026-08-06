@@ -9,8 +9,9 @@ def fetch_trades():
     supabase = get_admin_supabase()
     try:
         # Fetch trades via Supabase API instead of direct SQL to avoid connection issues
-        response = supabase.table("trades").select("id, name").execute()
-        return response.data if response.data else []
+        response = supabase.table("trades").select("id, name").order("name").execute()
+        trades = response.data if response.data else []
+        return sorted(trades, key=lambda trade: (trade.get("name") or "").casefold())
     except Exception as e:
         st.error(f"Database Error while fetching trades: {e}")
         # Return empty list to prevent downstream crashes
