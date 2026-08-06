@@ -10,6 +10,8 @@ from io import BytesIO
 import re
 import zipfile
 
+MAPPING_UNIT_CODE_PATTERN = r"[A-Za-z0-9/._-]+"
+
 def set_cell_border(cell, **kwargs):
     """
     Utility to set specific cell borders using XML.
@@ -73,7 +75,7 @@ def get_unit_number(unit_code):
 
 def _parse_single_mapping(inner_content):
     # Split the inner content by semicolon, but only if a new Unit Code follows.
-    segments = re.split(r';\s*(?=[A-Z0-9/]+\s*-)', inner_content)
+    segments = re.split(rf';\s*(?={MAPPING_UNIT_CODE_PATTERN}\s*-)', inner_content)
     
     unit_nums = []
     mapping_parts = []
@@ -97,7 +99,7 @@ def parse_report_chunks(text):
     raw_lines = [line.strip() for line in text.splitlines() if line.strip()]
     merged_lines = []
     for line in raw_lines:
-        if re.match(r'^\([A-Z0-9/]+\s*-\s*(?:LO)?\s*\d+', line) and merged_lines:
+        if re.match(rf'^\({MAPPING_UNIT_CODE_PATTERN}\s*-\s*(?:LO)?\s*\d+', line, flags=re.IGNORECASE) and merged_lines:
             merged_lines[-1] = f"{merged_lines[-1]} {line}"
         else:
             merged_lines.append(line)
@@ -105,7 +107,7 @@ def parse_report_chunks(text):
     chunks = []
     
     for line in merged_lines:
-        parts = re.split(r'(\([A-Z0-9/]+\s*-\s*(?:LO)?\s*\d+[^)]*\))', line)
+        parts = re.split(rf'(\({MAPPING_UNIT_CODE_PATTERN}\s*-\s*(?:LO)?\s*\d+[^)]*\))', line, flags=re.IGNORECASE)
         
         line_chunks = []
         narrative_acc = ""
@@ -115,7 +117,7 @@ def parse_report_chunks(text):
             if not part:
                 continue
                 
-            if re.match(r'^\([A-Z0-9/]+\s*-\s*(?:LO)?\s*\d+[^)]*\)$', part):
+            if re.match(rf'^\({MAPPING_UNIT_CODE_PATTERN}\s*-\s*(?:LO)?\s*\d+[^)]*\)$', part, flags=re.IGNORECASE):
                 mapping_str = part[1:-1]
                 u_num, mapping = _parse_single_mapping(mapping_str)
                 # Clean up any trailing punctuation on the narrative
