@@ -1,4 +1,5 @@
 import streamlit as st
+import re
 from auth_utils import get_supabase, get_admin_supabase
 from file_utils import (
     export_to_word, 
@@ -127,6 +128,29 @@ def _on_checkbox_change(report_id):
             selected_report_ids.discard(report_id)
     st.session_state.selected_report_ids = selected_report_ids
 
+
+def _extract_report_level_label(unit_codes):
+    """Derive a human-readable level label from stored unit codes."""
+    if not unit_codes or unit_codes == "N/A":
+        return ""
+
+    level_matches = []
+    for code in [part.strip() for part in str(unit_codes).split(",") if part.strip()]:
+        match = None
+        for pattern in (r"/L(\d+)\b", r"[-_ ]L(\d+)\b", r"\bL(\d+)\b"):
+            match = re.search(pattern, code, flags=re.IGNORECASE)
+            if match:
+                break
+        if match:
+            level_matches.append(match.group(1))
+
+    unique_levels = sorted(set(level_matches), key=lambda value: int(value))
+    if not unique_levels:
+        return ""
+    if len(unique_levels) == 1:
+        return f"Level {unique_levels[0]}"
+    return f"Levels {', '.join(unique_levels)}"
+
 # Helper function to display a single report item
 def display_report_item(r, current_user_id, current_user_role, table_type):
     report_id = r['id']
@@ -143,6 +167,7 @@ def display_report_item(r, current_user_id, current_user_role, table_type):
     display_date = raw_date.split('T')[0] if 'T' in str(raw_date) else raw_date
     unit_codes = r.get('unit_codes', 'N/A')
     trade_name = (r.get('trades') or {}).get('name', 'Unknown Trade')
+    report_level = _extract_report_level_label(unit_codes)
 
     # Clean up unit_codes for the expander header to show only minimal unit numbers (e.g., 1, 4)
     display_units = 'N/A'
@@ -174,7 +199,8 @@ def display_report_item(r, current_user_id, current_user_role, table_type):
         
         with col_info:
             candidate_name = r.get('student_name') or r.get('candidate_name')
-            st.markdown(f"**{candidate_name}** — {trade_name}")
+            level_suffix = f" | {report_level}" if report_level else ""
+            st.markdown(f"**{candidate_name}** — {trade_name}{level_suffix}")
             st.caption(f"📅 **{display_date}** | 📚 **Units:** {display_units}")
 
             with st.expander("View Content & Actions"):
