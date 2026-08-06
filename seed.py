@@ -2,6 +2,7 @@ import os
 import json
 import glob
 import re
+import argparse
 from auth_utils import get_admin_supabase
 
 def _find_json_files():
@@ -51,6 +52,25 @@ def seed_nos_data():
     """
     Reads JSON files from the data directory and populates the Supabase database.
     """
+    parser = argparse.ArgumentParser(description="Seed NOS data into Supabase.")
+    parser.add_argument(
+        "--file",
+        dest="file_path",
+        help="Seed only one NOS JSON file instead of scanning the data directory.",
+    )
+    parser.add_argument(
+        "--trade",
+        dest="trade_name",
+        help="Seed only files whose trade_name matches this value.",
+    )
+    parser.add_argument(
+        "--level",
+        dest="level",
+        type=int,
+        help="Seed only files for this NOS level.",
+    )
+    args, _ = parser.parse_known_args()
+
     client = get_admin_supabase()
 
     if not _check_supabase_connection(client):
@@ -60,7 +80,10 @@ def seed_nos_data():
         os.makedirs("data")
         print("📂 Created 'data' directory. Please place your JSON files there.")
 
-    json_files = _find_json_files()
+    if args.file_path:
+        json_files = [args.file_path]
+    else:
+        json_files = _find_json_files()
     
     if not json_files:
         print("⚠️ No JSON files found in data/. Please add your extracted NOS files there.")
@@ -73,6 +96,8 @@ def seed_nos_data():
         "learning_outcomes": 0,
         "performance_criteria": 0,
     }
+    matched_files = 0
+    trade_filter = args.trade_name.strip().lower() if args.trade_name else None
 
     for file_path in json_files:
         print(f"🔍 Processing {file_path}...")
@@ -87,13 +112,21 @@ def seed_nos_data():
         trade_name = data.get("trade_name")
         level = _infer_level(file_path, data)
         units = data.get("units", [])
-        
+
         if not trade_name:
             print(f"Skipping {file_path}: Missing trade_name")
+            continue
+        if trade_filter and trade_name.strip().lower() != trade_filter:
+            print(f"Skipping {file_path}: trade_name '{trade_name}' does not match '{args.trade_name}'.")
             continue
         if level is None:
             print(f"Skipping {file_path}: Missing level and unable to infer it from the file name/path.")
             continue
+        if args.level is not None and level != args.level:
+            print(f"Skipping {file_path}: level {level} does not match requested level {args.level}.")
+            continue
+
+        matched_files += 1
 
         try:
             # 1. Handle Trade
@@ -189,6 +222,9 @@ def seed_nos_data():
             continue
         
         print(f"🏁 Finished processing {trade_name}\n")
+
+    if (args.file_path or args.trade_name or args.level is not None) and matched_files == 0:
+        print("⚠️ No NOS files matched the requested filter(s).")
 
     print(
         "✅ Seed summary: "

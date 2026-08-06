@@ -1,0 +1,1192 @@
+{
+  "trade_name": "NOS Fish Farming Activity (Aquaculture)",
+  "level": 3,
+  "units": [
+    {
+      "code": "AqCS/FFA/001/L3",
+      "title": "Follow Health, Safety and Environmental practices in fish farming",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Practice health and safety rules in fish farming",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the common hazards in fish farming in Nigeria."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the various ways to minimize hazards in fish farming"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify key personnel to whom accidents or problems must be reported to"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the use of Personal Protective Equipment (PPE) in fish farming"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Demonstrate the safe working practices of tools and equipment used in fish farming"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Identify appropriate PPE in freshwater fish farming"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Wear appropriate PPE in freshwater fish farming"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Clean tools, equipment and PPE in accordance with laid down procedures"
+            },
+            {
+              "pc_code": "1.9",
+              "description": "Store tools, equipment and PPE in accordance with laid down procedures"
+            },
+            {
+              "pc_code": "1.10",
+              "description": "Demonstrate ability to swim and safe drowning person"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carry out environmental protection and water improvement in fish farming",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the signs of pollution in freshwater fish farming."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify sources of pollution in freshwater fish farming."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Carry out general environmental protection and water improvement in fish farm"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Dispose of waste in fish farm"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Promote environmental sustainability",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Carry out erosion and land degradation measures"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Assist in the protection of water shed areas"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe the preventive measures of flooding in fish farm"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Support habitat maintenance in accordance with site management plans."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/002/L3",
+      "title": "Communicate Effectively in Fish Farming Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Apply the use of a communication system in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use a verbal means to pass on necessary information"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use non-verbal means to convey necessary information e.g. body language, signs"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Interpret symbols and signs appropriately"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Source for information in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the source of information in the work environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Relate effectively with the source of information"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply the different information flow systems in a work environment"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use information gathered to avoid challenges in a work situation"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Report findings appropriately in accordance with laid down procedures in the work environment i.e. Cards, Flip Chart"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Use simple communication gadget like mobile phones and table phones"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply various means of communication in a work",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Locate the various communication equipment in the work environment Use effectively the various communication equipment in a work environment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Pass information effectively to the right personnel"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Obey instructions in line with ethics of the work environment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/003/L3",
+      "title": "Comply with Organizational Plans and Policies in Fish Farming Enterprises",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Exhibit positive working relationships with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the need for developing positive working relationship with colleagues"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel valued and respected"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the personnel when request for assistance fall outside area of responsibility"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about own work that might affect others"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibility within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within team."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in teamwork."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Comply with organisational policies",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Work in line with organizational standards"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain organizational code of practice."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Comply with organizational code of practice."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain organizational code of conduct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/004/L3",
+      "title": "Aquaculture Industry in Nigeria",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the history and development of fish farming in Nigeria",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State the origin of fish farming in Nigeria."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the history and development of fish farming in Nigeria, and current trends."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the socio-economic importance of fish farming in Nigeria."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "State relevant laws and regulations applicable to fish farming in Nigeria."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the benefits of Aquaculture",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe the contribution of aquaculture towards food security in Nigeria"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain how aquaculture create job for the population"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain how aquaculture reduce pressure on wild fish"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain health benefit of eating fish"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand challenges facing aquaculture industry",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain environmental impacts such as (water pollution and habitat destruction)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain effects of diseases and parasites on aquaculture"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe challenges of feed procurement, quality and cost effects"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain government policy and regulatory constraints"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Distinguish between different cultured fishes in Nigeria",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Name common freshwater fish species of aquaculture importance in Nigeria"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify common freshwater fish species of aquaculture importance in Nigeria using their external features"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Differentiate between closely related catfish species (e.g. Clarias gariepinus and Clarias angullaris)"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Differentiate between closely related Tilapia species (e.g. Oreochromis and Sarotherodon)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/005/L3",
+      "title": "Aquaculture Systems and Equipment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify the different types of aquaculture systems based on environment and purpose",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the characteristic of freshwater aquaculture system"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the characteristic of brackish water aquaculture system"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the characteristic of saltwater aquaculture system"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Mention aquaculture types based on purpose (food fish, ornamental, bait and recreational)"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Recognise various methods of Fish Farming systems",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify extensive and intensive fish farming systems."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Differentiate between extensive and intensive fish farming systems."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the advantages and disadvantages of extensive and intensive fish farming systems"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Construct simple aquaculture systems",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Perform the construction of fish pond"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify parts of Recirculating aquaculture systems (RAS) e.g (Production tank, Sedimentation tank, Bio filter, Chemical filter etc)."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Install the components of plastic tank for fish culture"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify the cage culture systems"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Identify different aquaculture equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Install pumps and piping systems."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Operate pumps and piping systems."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Perform aeration using aerators, air blowers, diffusers, etc."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Clean fish farm equipment. (Gears collapsible, etc)."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Carry out storage of fish farm equipment. (Gears. Collapsible etc)."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Demonstrate Fish production using common methods",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain the fish production in earthen ponds"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Demonstrate fish production in concrete and plastic tanks"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Describe fish production in a flow-through system"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Describe fish production in water recirculation system"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/006/L3",
+      "title": "Aquaculture Production and Pond Management",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate understanding of the principles in aquaculture construction",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "List the steps involved in the construction of earthen pond using locally available resources."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List the steps involved in the construction of concrete pond"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "outline the steps involved in the setting up of plastic tank for fish farming"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the steps involved in the construction of water recirculating system"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Operate the various aquaculture systems (earthen, concrete ponds, WRS etc)"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Describe aquaculture systems in terms of input (Extensive, semi-intensive and intensive systems)"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carry out fish stocking into pond and other culture systems LEARNING OUTCOME (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Acclimatize the fish to the pond water temperature. (By gradually introducing them to the pond water over 15 to30 minutes)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Stock the fish into the pond while not overcrowding the pond"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Monitor the fish and water quality parameters to ensure their well-being"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Perform correct species-specific stocking rate PERFORMANCE CRITERIA Ref. Page"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Perform water quality management",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Analyse water quality parameters. (using equipment like Ph meter, Thermometer, DO meter, Conductivity meter etc)."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Carry-out water treatment measures. (To maintain optimal quality through aeration, filtration, refilling, chemical treatment etc)."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "change water to maintain optimal water quality"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Improve pond water quality through fertilization."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Carry out disease detection, treatment and control of freshwater fish",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify disease condition common in fresh water fish (e.g. fin rot, white spot disease, boils, bloating etc.)"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Classify fish diseases into viral, bacteria, protozoan, fungi, etc."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain nutritional disorder in fish"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify stress related disorder in fish"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Demonstrate efficient feeding of fish at various stages of production LEARNING OUTCOME (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Carry out appropriate feeding strategy for different stages of common cultured fishes in Nigeria (Feeding rate, feeding frequency, feeding method)"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Keep accurate record of fish growth and feed utilization PERFORMANCE CRITERIA Ref. Page"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Monitor feeding rate using the record in 5.2"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Calculate feed conversion ratio(FCR) using the record in 5.2"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Calculate feed cost for producing one kg of adult fish using the record in 5.2"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Calculate total feeding cost using the record in 5.2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/007/L3",
+      "title": "Fish Nutrition and Feeding",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "LO I Identify sources of fish feed ingredients.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify different types of fish feed ingredients"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Classify fish feed ingredients into different nutrient sources (i.e. carbohydrates, protein, fat and oil, vitamins, etc)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify non-conventional feed ingredients used in fish feed"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify the nutritional requirement of different fish species",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the nutritional requirement of common cultured species (Catfish, Tilapia, Heterotis, Carp etc)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the nutritional requirement of different stages of common cultured species (Catfish, Tilapia, Heterotis, Carp etc)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify the nutritional requirement of uncommon cultured species (Gymnarchus, Grasscarp, ornamental fishes etc)"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Recognise the different types of fish feeds",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe commercial pellets (Extruded floating and pelleted sinking feed)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify live foods (Zooplankton, artemia, worms, insect larvae etc)"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify plant-based feeds (Duckweed, Azolla, spirulina etc)"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Process fish feed using different methods",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify different methods of processing fish feed ingredients"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Carry-out different methods used in processing fish feed ingredients (Toasting, grinding, crushing etc)"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain the effects of each method of processing fish feed ingredients on the feed quality."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Process groundnut, soybeans, fish, palm kernel seeds as fish feed ingredients"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Carry-out mixing of fish feed ingredients",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Select ingredients based on protein source, energy source and vitamins and minerals"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Weigh various feed ingredients based on the formulated proportion"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Mix the weighed ingredients in 5.2 above"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Prepare fish feed using appropriate methods",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Outline the procedures involved in the preparation of fish feed."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Apply health and safety rules in the preparation of fish feed"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Identify the tools and equipment used in preparation of fish feed (e.g. shovel, bowls, scale, grinder-hammer mill, mixer., pelleting machine)"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Identify various forms of feed produced"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Carry-out feed storage using best practices",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Implement a first-in, first-out (FIFO) inventory"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Carry-out accurate records of feed including feed type, date of storage and quantity stored"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Inspect feed storage facilities for sign of (spoilage, contamination, or pest infestation)."
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Rotate feed stock regularly to prevent old feed from becoming stale or spoilt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/008/L3",
+      "title": "Fish Hatchery Management",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify types and components of a standard fish hatchery",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the types of hatchery (Indoor and outdoor)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Itemize the components of a standard hatchery (Broodstock holding tanks, breeding/spawning tanks, nursery/rearing tanks, aerator/blower, overhead tank, thermostat heater etc)."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List the materials used in hatchery operations (Broodstock, hormone, saline water, syringe, towel, bowls, feathers, spoons etc)"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carry-out the procedures of induced breeding in catfish",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Select mature and gravid male and female broodstock (Ratio 1male to 2 females)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Condition the broodstocks in broodstock tanks"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Sex the broodstock (1:1 or 1:2)"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Calculate the appropriate hormone dosage based on body weight"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Perform hormone injection (inject intramuscularly/ intravenously)"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Perform milt collection from male and stripping of eggs from the female"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Carry-out fertilization by mixing the milt and eggs"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Spread fertilized eggs on kakaban for incubation"
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Aerate and maintain water flow on the hatching eggs"
+            },
+            {
+              "pc_code": "2.10",
+              "description": "Separate the larvae from the shell and unfertilized eggs by siphoning"
+            },
+            {
+              "pc_code": "2.11",
+              "description": "Carry-out larvae feeding and rearing with (artemia or zooplankton and water quality management)"
+            },
+            {
+              "pc_code": "2.12",
+              "description": "Perform transfer of the fingerling to the rearing tank and monitor larvae for growth, health and water quality"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carry-out the procedures of breeding in Tilapia",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Select healthy mature tilapia (6-12 months old)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Condition the brood-stock in separate tanks"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Perform pairing of the male and female in breeding tank or hapas (Ratio 1male to 3or 4 females)"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Collect the fertilized eggs from the mouth of the female every five days"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Carry out incubation of eggs incubation jar with continuous aeration"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Perform rearing of larvae to juvenile in hatchery tanks using zooplankton or formulated feed"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Carry-out reconditioning of female brood stock",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Describe the process of reconditioning of spent brood-stock"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify the materials used for reconditioning spent brood-stock"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Carry out the process of reconditioning of spent brood-stock"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/009/L3",
+      "title": "Fish Post Harvest Handling, Processing and Preservation",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Carry out post-harvest handling and processing of fish",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Cool harvested fish (To prevent spoilage)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify tools used in post-harvest handling of fish"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Carry-out descaling of fish and removal of the fins"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Carry-out gutting of fish after harvesting"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Carry-out filleting of fresh fish"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Preserve harvested fish using salting method",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify materials required for fish salting"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Carry-out salting process"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Perform curing of salted fish for longer shelf life"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry-out proper cleaning of salting materials and equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Preserve harvested fish using smoke drying method",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify materials required for smoke drying of fish"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Carry-out smoke drying process"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Perform post smoke drying treatment of fish for longer shelf life"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Carry-out proper cleaning of smoking kilns and other equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Preserve harvested fish using cooling method",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify materials required for freezing of fish"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Perform freezing process using flash and block methods"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Carry-out glazing, wrapping and vacuuming of iced fish for longer shelf life"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Carry-out proper cleaning of freezing materials and equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Preserve harvested fish using sun drying method OUTCOME (LO)",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify materials required for sun drying of fish"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Carry-out sun drying process"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Perform curing of sun dried fish (for longer shelf life)"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Carry-out proper cleaning of sun drying materials and equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Carry out packaging, labelling and storage of fish",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Identify different packaging materials for packaging processed fish"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "State storage duration for different processed fish"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Carry-out fish packaging process for storage and transportation."
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Carry out accurate record of fish packaged for storage or transportation"
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Label packaged fish appropriately for storage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/010/L3",
+      "title": "Fish Health and Welfare",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Carry out Fish Health Inspections",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Conduct daily inspections of fish (To check for signs of disease, injury, or stress)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Monitor fish behaviour in relation to environmental stress"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify common fish diseases,"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Differentiate fish diseases (Viral, bacteria, fungi, protozoan, helminthic etc)"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Undertake disease prevention and control in fish farm",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Carry out biosecurity measures, (such as disinfecting equipment and restricting access to the facility)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Monitor water quality parameters (e.g. pH, temperature, dissolved oxygen)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Provide balanced ration"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Manage stocking densities of fish at various stages growth."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Monitor fish regularly for signs of disease, and take prompt action if disease is suspected"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carry out treatment of diseased fish",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Observe fish for signs of disease, (such as lethargy, loss of appetite, visible lesion, fish rot etc)."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Collect sample to confirm disease diagnosis"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Consult veterinarian or specialist to provide guidance on treatment"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Quarantine or isolate disease affected fish, tank or pond"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Administer medication as prescribed by fish health expert."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Keep record of diseases and treatments"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Carry out common treatments procedures for fish diseases (such as antibiotics, antiparasitics and antifungal, vaccination)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/011/L3",
+      "title": "Aquaculture business and Marketing",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Carry out market research and analysis.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Analyse consumer demand, market trends for informed business decisions"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify major factors that leads to price fluctuation of fish products"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify competitor activity for informed business decisions"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify fresh water fish marketing strategies in Nigeria",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify specific consumer segments and tailoring marketing efforts to meet their needs and preferences."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify different marketing channels based on the people involved in fish marketing"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Recognise the food safety requirements in marketing of fish."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Carry-out business planning and management",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Develop and implement business plans."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Manage finances and oversee operations"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry-out book keeping in aquaculture"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify type of records kept in fish farm (Input, Production, Sales, Fixed asset, cash flow)"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Manage fish supply chain",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Manage the production process to ensure efficient and cost-effective operations."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Carry out the sourcing of inputs, and coordinating logistics to ensure efficient and cost-effective operations."
+            },
+            {
+              "pc_code": "4.3",
+              "description": ". Comply with laws and regulations, and manage risks associated with aquaculture operations, (such as disease outbreaks and environmental impacts)"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Marketing and Sales",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain how to promote and sell fish products to consumers, wholesalers, and retailers through various channels, (including online platforms, trade shows, and direct sales)."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify wholesalers, retailers and consumers of fish products"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Compare benefits of direct sales and value addition"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

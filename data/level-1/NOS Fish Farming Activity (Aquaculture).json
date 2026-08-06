@@ -1,0 +1,620 @@
+{
+  "trade_name": "NOS Fish Farming Activity (Aquaculture)",
+  "level": 1,
+  "units": [
+    {
+      "code": "AqCS/FFA/001/L1",
+      "title": "Work Safely in Fish Farming Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Work safely in Fish Farming Environment.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safe work practices along the fish production value chain"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify safety signs and symbols in fish facilities"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe safety signs and symbols correctly"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Demonstrate safe work practices and instructions in fish facilities"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Demonstrate swimming ability"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Comply with safety standards in fish farming facilities",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify work environment hazards"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State types of hazards and risks while using fish farming facilities"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State safety standards in fish farming facilities"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use safety tools, materials and equipment in fish farming facilities"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply personal protective equipment (PPE) in fish farming facilities",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the types of PPEs"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Select appropriate PPE"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Demonstrate the use of PPE"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Maintain PPE before and/ or after use"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Respond to accidents/injury in fish farming",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Locate first aid facility"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use basic dressing materials"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Respond to supervisor given instructions"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Report accident/injury to the appropriate supervisor"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Apply safe work habit and clean work environment in fish farming",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Use safe access and exit routes in the work environment"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify appropriate working tools, materials and equipment"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Use tools and equipment safely in accordance with the supervisors instructions"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Return all tools, equipment and unused materials for appropriate storage"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Carry out general housekeeping of work environment"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Dispose all wastes appropriately to designated waste facilities"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Comply with standards of handling, lifting, loading/offloading and stacking of materials in fish farming facilities",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Identify lifting and stacking techniques"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Demonstrate lifting techniques in loading and offloading of materials without assistance"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Demonstrate correct lifting and loading techniques with mechanical assistance"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Stack materials correctly"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/002/L1",
+      "title": "Communicate Effectively in Fish Farming Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Apply the use of a non-complex communication system in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use a verbal means to pass on necessary information"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use non-verbal means to convey necessary information e.g. body language, signs"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Interpret symbols and signs appropriately"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Source for information in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the source of information in the work environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Relate effectively with the source of information"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use the different information flow systems in a work environment"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use information gathered to avoid challenges in a work situation"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Report findings appropriately in accordance with laid down procedures in the work environment i.e. Cards, Flip Chart"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Use simple communication gadget like mobile phones and table phones"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply various means of communication in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Locate the various communication equipment in the work environment Use effectively the various communication equipment in a work environment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Pass information effectively to the right personnel"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Obey instructions in line with ethics of the work environment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/003/L1",
+      "title": "Team work",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate Positive working relationship with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the need for developing positive working relationship with colleagues"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel valued and respected"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the appropriate personnel when request for assistance fall outside area of responsibility."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about individual work that may affect team work."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibility within the team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within a team"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team\u2019s rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in teamwork."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Compliance with policy of organisation",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain organizational code of conduct"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Work in line with organizational standard"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use organizational code of practice"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Adhere strictly to instructions given by the Management"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/004/L1",
+      "title": "Introduction to Fish Farming in Nigeria",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the basics of aquaculture and the importance of biosecurity",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define aquaculture."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the various culture system in aquaculture."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the different types of aquaculture systems."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "List common sources of water in aquaculture"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Discuss the importance of biosecurity"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Recognise the different types of fish and shell fish commonly farmed in aquaculture",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify various culturable fish species"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe the external features of fish"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify major fish types in Nigeria e.g. table fish, ornamental fish, shellfish."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Draw different culturable and non-culturable fish species (fin fish and shell fish)."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the role of aquaculture in food production and the importance of sustainable practices",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the importance of aquaculture in food production and security."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Discuss the economic benefit of aquaculture"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "State the social and environmental sustainability of aquaculture."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/005/L1",
+      "title": "Basic Aquaculture",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate knowledge of the meaning and scope of aquaculture",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe Fish farming"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify major culturable fish types in Nigeria e.g. table fish, ornamental fish, shellfish."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify key species of fish cultured in Nigeria."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Recognise the major features of different fish types in Nigeria e.g. table fish, ornamental fish, shellfish."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Describe various types of Fish Farming systems",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Describe the facilities used for fish culture"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the facilities for the culture of fish"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Differentiate the various fish culture facilities"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate knowledge of enemies of fish under culture",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify fish predators e.g. frogs/toads crocodiles, alligators, water tortoise, turtles, dragon fly larvae, birds etc."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe methods of controlling fish predators."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Control fish predators."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Control water pollution in fish farming",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Recognise water pollution."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify water pollution in fish farm"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe various methods of controlling water pollution."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Control of weeds in fish farm",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify different types of weeds"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "State the benefits of aquatic weeds in fish farming e.g. Duck weed, Mosquito ferns (Azolla) weed - serve as complementary feed - serve as water purifier - serve as bio shades used to stabilize temperature of water"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Distinguish between useful and non-useful aquatic weeds"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Describe methods of controlling aquatic weeds eg by physical methods such as removing of weeds."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/006/L1",
+      "title": "Introduction to Fish Pond Practices",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand fish Pond Preparation",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Perform De-mudding of fish pond"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Carry out Pond clearing"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Perform filling of pond with water"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Carry out liming and fertilization of pond"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Carry out different methods of feeding",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify different size of fish feed pellets appropriate for feeding fish of different sizes"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State the time of feeding"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe various feeding methods"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Measure the quantity of feed"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Record the quantity of feed fed"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate the maintenance practices of a pond",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify the inlet and outlet of a pond"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Operate the inlet and outlet of a pond"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carry out pond repair"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Remove dead fish from the pond"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Carry out netting against predators in a pond"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "AqCS/FFA/007/L1",
+      "title": "Introduction to Harvesting Gear and Craft Technology",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate understanding of fish harvesting gears and craft technology used in aquaculture",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "List different harvesting gear (e.g. Scoop net, Hand net, Cast net, Seine, Drag net, etc)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the various harvesting gears used in aquaculture (e.g. Scoop net, Hand net, Cast net, Seine, Drag net, etc)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe harvesting craft used in aquaculture"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Demonstrate how to use various harvesting craft."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate the use of fish harvesting gears and craft in Aquaculture",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the meaning of setting in harvesting gear"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Cast the drag net for harvesting in ponds"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use the scoop net, for fish harvesting in pond."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Construct Simple Harvesting Gears in Aquaculture.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify materials used in the construction of simple harvesting gears in aquaculture"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Design simple harvesting gears in aquaculture"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Make a simple fish harvesting gear e.g. scoop net, hand net, cast net, seine, drag net, etc"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

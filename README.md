@@ -87,10 +87,23 @@ A professional AI-powered assessment report generator for the National Skills Qu
    ```bash
    python seed.py
    ```
+   Useful targeted seeding commands:
+   ```bash
+   python3 seed.py --file "data/level-3/NOS ICT Web Development L3.json"  # Seed one exact NOS file
+   python3 seed.py --trade "ICT Web Development"  # Seed every NOS file for one trade
+   python3 seed.py --trade "ICT Web Development" --level 3  # Seed only Level 3 for that trade
+   ```
 6. **Run the app:**
    ```bash
    streamlit run main.py
    ```
+
+## 🛠️ Database Maintenance
+
+- If signup marketing fields are not showing up in `user_profiles`, verify the `on_auth_user_created` trigger in the Supabase SQL Editor.
+- The trigger function should store `marketing_source`, `primary_trade`, `monthly_report_volume`, and `assessor_role` from `auth.users.raw_user_meta_data`.
+- If the trigger looks outdated, re-run the patched function and trigger definition from the SQL Editor instead of re-running the full database setup script.
+- When seeding a specific NOS file, use `--file`; when you want a whole trade, use `--trade`; when you want one level, add `--level`.
 
 ## 🚂 Deployment on Railway.io
 
