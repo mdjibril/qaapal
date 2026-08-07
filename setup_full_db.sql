@@ -28,6 +28,7 @@ CREATE TABLE public.user_profiles (
   email text,
   role text DEFAULT 'assessor',
   full_name text,
+  phone text,
   org_id uuid REFERENCES public.organizations(id),
   org_role text DEFAULT 'admin',
   marketing_source text,
@@ -149,6 +150,10 @@ CREATE POLICY "Allow authenticated read for PCs" ON public.performance_criteria 
 -- Assessment Reports
 CREATE POLICY "Creators can view their own reports" ON public.assessment_reports FOR SELECT USING (auth.uid() = created_by);
 CREATE POLICY "Creators can insert their own reports" ON public.assessment_reports FOR INSERT WITH CHECK (auth.uid() = created_by);
+
+-- User Profiles
+CREATE POLICY "Users can view their own profile" ON public.user_profiles FOR SELECT USING (auth.uid() = id);
+CREATE POLICY "Users can update their own profile" ON public.user_profiles FOR UPDATE USING (auth.uid() = id) WITH CHECK (auth.uid() = id);
 
 -- Student Statements
 CREATE POLICY "Individuals can create their own student statements" ON public.student_statements FOR INSERT WITH CHECK (auth.uid() = created_by);

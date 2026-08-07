@@ -49,6 +49,7 @@ A professional AI-powered assessment report generator for the National Skills Qu
 - `main.py`: Central orchestration and navigation.
 - `dashboard.py`: Assessor observation workspace.
 - `personal_statement.py` / `witness_statement.py`: Specialized statement generation modules.
+- `account_settings.py`: User profile settings for name, phone number, and password updates.
 - `subscription_page.py`: Billing and plan management UI.
 - `history.py`: Database retrieval and document re-exporting.
 - `auth_utils.py`: Authentication, session finalization, and secret management.
@@ -108,6 +109,7 @@ A professional AI-powered assessment report generator for the National Skills Qu
 - If signup marketing fields are not showing up in `user_profiles`, verify the `on_auth_user_created` trigger in the Supabase SQL Editor.
 - The trigger function should store `marketing_source`, `primary_trade`, `monthly_report_volume`, and `assessor_role` from `auth.users.raw_user_meta_data`.
 - If the trigger looks outdated, re-run the patched function and trigger definition from the SQL Editor instead of re-running the full database setup script.
+- User profile updates now live in **Account Settings**. Use that page to change your display name, phone number, or login password.
 - When seeding a specific NOS file, use `--file`; when you want a whole trade, use `--trade`; when you want one level, add `--level`.
 
 ## 🚂 Deployment on Railway.io

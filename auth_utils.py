@@ -274,7 +274,7 @@ def finalize_session(user, session):
     admin_client = get_admin_supabase()
     # Fetch profile and organization data
     profile_res = admin_client.table("user_profiles")\
-        .select("role, org_role, full_name, assessor_role, organizations(id, subscription_tier, credits_balance, master_api_key, subscription_start_date)")\
+        .select("role, org_role, full_name, phone, assessor_role, organizations(id, subscription_tier, credits_balance, master_api_key, subscription_start_date)")\
         .eq("id", user.id).execute()
     
     # If profile is missing (e.g., trigger failed or delayed), attempt to initialize it (Self-Healing)
@@ -290,6 +290,7 @@ def finalize_session(user, session):
                 "id": user.id,
                 "email": user.email,
                 "full_name": full_name,
+                "phone": meta.get("phone"),
                 "role": "assessor",
                 "marketing_source": meta.get("marketing_source"),
                 "primary_trade": meta.get("primary_trade"),
@@ -299,7 +300,7 @@ def finalize_session(user, session):
             
             # Re-fetch to include data potentially added by the trigger in the background
             profile_res = admin_client.table("user_profiles")\
-                .select("role, org_role, full_name, organizations(id, subscription_tier, credits_balance, master_api_key)")\
+                .select("role, org_role, full_name, phone, organizations(id, subscription_tier, credits_balance, master_api_key)")\
                 .eq("id", user.id).execute()
         except Exception as e:
             st.error(f"Login error: Could not initialize user profile. {e}")
@@ -316,6 +317,7 @@ def finalize_session(user, session):
     st.session_state['user_role'] = prof.get('role', 'assessor') # App Superadmin check
     st.session_state['org_role'] = prof.get('org_role', 'member') # Org level role
     st.session_state['assessor_full_name'] = prof.get('full_name')
+    st.session_state['assessor_phone'] = prof.get('phone', '')
     st.session_state['assessor_role'] = prof.get('assessor_role')  # QAA, IQA, or EQA
     st.session_state['org_id'] = org.get('id', None)
     st.session_state['subscription_tier'] = org.get('subscription_tier', 'free')

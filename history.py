@@ -135,7 +135,12 @@ def _delete_report(report_id, role, current_user_id, table_name):
 def _clear_history_selection_state():
     """Reset bulk selection state when filters change."""
     st.session_state.selected_report_ids = set()
-    st.session_state.pop("select_all_toggle", None)
+    keys_to_clear = [
+        key for key in st.session_state.keys()
+        if key.startswith("select_all_toggle_") or key.startswith("report_checkbox_")
+    ]
+    for key in keys_to_clear:
+        st.session_state.pop(key, None)
     st.session_state.pop("bulk_zip_bytes", None)
     st.session_state.pop("last_zip_selection", None)
     st.session_state.pop("confirm_bulk_delete_active", None)
@@ -150,13 +155,26 @@ def _get_selected_report_ids():
 
 
 # Callback for checkbox state change - NO RERUN
-def _on_checkbox_change(report_id):
+def _on_checkbox_change(report_id, checkbox_key=None):
     selected_report_ids = st.session_state.get("selected_report_ids", set())
-    if f"selected_{report_id}" in st.session_state:
-        if st.session_state[f"selected_{report_id}"]:
+    if checkbox_key and checkbox_key in st.session_state:
+        if st.session_state[checkbox_key]:
             selected_report_ids.add(report_id)
         else:
             selected_report_ids.discard(report_id)
+    st.session_state.selected_report_ids = selected_report_ids
+
+
+def _on_select_all_change(current_page_ids):
+    selected_report_ids = st.session_state.get("selected_report_ids", set())
+    select_all_checked = bool(st.session_state.get("select_all_toggle"))
+
+    for rid in current_page_ids:
+        if select_all_checked:
+            selected_report_ids.add(rid)
+        else:
+            selected_report_ids.discard(rid)
+
     st.session_state.selected_report_ids = selected_report_ids
 
 
@@ -183,11 +201,10 @@ def _extract_report_level_label(unit_codes):
     return f"Levels {', '.join(unique_levels)}"
 
 # Helper function to display a single report item
-def display_report_item(r, current_user_id, current_user_role, table_type):
+def display_report_item(r, current_user_id, current_user_role, table_type, current_page_ids=None, select_all_key=None):
     report_id = r['id']
     is_selected = report_id in st.session_state.get("selected_report_ids", set())
-    selection_key = f"selected_{report_id}"
-    st.session_state[selection_key] = is_selected
+    checkbox_key = f"report_checkbox_{report_id}"
 
     # Determine the assessor's name and ID for this specific report
     report_assessor_name = (r.get('user_profiles') or {}).get('full_name', 'Unknown Assessor')
@@ -222,9 +239,10 @@ def display_report_item(r, current_user_id, current_user_role, table_type):
             st.markdown("<br>", unsafe_allow_html=True) # visual alignment spacer
             st.checkbox(
                 "Select report",
-                key=selection_key,
+                key=checkbox_key,
+                value=is_selected,
                 on_change=_on_checkbox_change,
-                args=(report_id,),
+                args=(report_id, checkbox_key),
                 label_visibility="collapsed"
             )
         
@@ -371,7 +389,7 @@ def main():
     with col_search:
         search_input = st.text_input("Search reports by student name or content", value=st.session_state.search_query)
     with col_sort:
-        sort_options = ["Date", "Student Name", "Assessor"]
+        sort_options = ["Date", "Student Name"] if role != "admin" else ["Date", "Student Name", "Assessor"]
         sort_index = sort_options.index(st.session_state.history_sort_by) if st.session_state.history_sort_by in sort_options else 0
         sort_input = st.selectbox("Sort By", sort_options, index=sort_index)
     with col_size:
@@ -465,17 +483,13 @@ def main():
             is_all_selected = bool(all_filtered_ids) and all(
                 rid in selected_report_ids for rid in all_filtered_ids
             )
-            select_all_checked = st.checkbox("Select All", value=is_all_selected, key="select_all_toggle")
-            if select_all_checked != is_all_selected:
-                if select_all_checked:
-                    for rid in all_filtered_ids:
-                        selected_report_ids.add(rid)
-                        st.session_state[f"selected_{rid}"] = True
-                else:
-                    for rid in all_filtered_ids:
-                        selected_report_ids.discard(rid)
-                        st.session_state[f"selected_{rid}"] = False
-                st.session_state.selected_report_ids = selected_report_ids
+            st.checkbox(
+                "Select All",
+                key="select_all_toggle",
+                value=is_all_selected,
+                on_change=_on_select_all_change,
+                args=(all_filtered_ids,),
+            )
 
             if st.button("Clear Selection"):
                 _clear_history_selection_state()
@@ -541,7 +555,12 @@ def main():
 
                                 st.cache_data.clear()
                                 st.session_state.selected_report_ids = set()
-                                st.session_state.pop("select_all_toggle", None)
+                                keys_to_clear = [
+                                    key for key in st.session_state.keys()
+                                    if key.startswith("select_all_toggle") or key.startswith("report_checkbox_")
+                                ]
+                                for key in keys_to_clear:
+                                    st.session_state.pop(key, None)
                                 for rid in ids_to_del:
                                     st.session_state.report_content_cache.pop(f"{target_table}_{rid}", None)
 
@@ -565,9 +584,9 @@ def main():
                 with st.expander(f"Assessor: {assessor_name} ({len(assessor_reports)} reports)"):
                     for r in assessor_reports:
                         display_report_item(r, user_id, role, st.session_state.history_type)
-        else:
-            for r in filtered_reports:
-                display_report_item(r, user_id, role, st.session_state.history_type)
+            else:
+                for r in filtered_reports:
+                    display_report_item(r, user_id, role, st.session_state.history_type)
 
 if __name__ == "__main__":
     main()

@@ -43,22 +43,10 @@ def main():
         st.link_button("WhatsApp Support", "https://wa.me/2348184018469", width="stretch")
         st.link_button("Email Support", "mailto:muhammadjibrildauda@gmail.com", width="stretch")
 
-    st.markdown("---")
-    st.subheader("Current Plan Details")
-
     if user_role == 'admin':
         st.success("You are a **Superadmin**! You have unlimited access to all features.")
         st.info("Your plan is not subject to standard subscription tiers or credit limits.")
         return # Superadmins don't need further subscription details.
-
-    col1, col2 = st.columns(2)
-    with col1:
-        st.metric("Your Current Plan", current_tier.replace('_', ' ').title())
-    with col2:
-        if current_tier == 'free':
-            st.metric("Remaining Credits", credits_balance)
-        else:
-            st.metric("Remaining Credits", "Unlimited")
 
     if current_tier == 'platform_pass':
         st.markdown("---")
