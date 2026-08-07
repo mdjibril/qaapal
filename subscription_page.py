@@ -3,8 +3,15 @@ import datetime
 from datetime import timedelta
 import database as db
 from auth_utils import get_secret
+from app_state import ensure_session_defaults
 
 def main():
+    ensure_session_defaults(
+        {
+            "subscription_progress_hint": "",
+        }
+    )
+
     st.title("💳 My Subscription")
 
     user_role = st.session_state.get('user_role', 'assessor')
@@ -62,9 +69,14 @@ def main():
                 # Use the same parsing logic as in main.py's check_platform_pass_expiry
                 start_date = datetime.datetime.fromisoformat(subscription_start_date_str.replace('Z', '+00:00'))
                 expiry_date = start_date + timedelta(days=30) # Assuming 30 days for a month
-                
+                now_in_tz = datetime.datetime.now(start_date.tzinfo)
+                total_seconds = (expiry_date - start_date).total_seconds() or 1
+                elapsed_seconds = max(0, min(total_seconds, (now_in_tz - start_date).total_seconds()))
+                progress = max(0.0, min(1.0, elapsed_seconds / total_seconds))
+
                 st.write(f"**Subscription Start Date:** {start_date.strftime('%B %d, %Y')}")
                 st.write(f"**Estimated Renewal Date:** {expiry_date.strftime('%B %d, %Y')}")
+                st.progress(progress, text=f"{max(0, (expiry_date - now_in_tz).days)} days remaining")
 
                 is_expired = db.check_platform_pass_expiry()
                 if is_expired:
@@ -73,7 +85,6 @@ def main():
                 else:
                     st.success("Your Platform Pass is active!")
                     # Calculate days left relative to the timezone of the start_date
-                    now_in_tz = datetime.datetime.now(start_date.tzinfo)
                     days_left = (expiry_date - now_in_tz).days
                     if days_left > 0:
                         st.info(f"You have approximately {days_left} days left on your current subscription.")

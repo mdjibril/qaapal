@@ -8,13 +8,17 @@ from security_utils import sanitize_text_input, sanitize_notes_input
 import database as db
 import components
 from prompt_builders import build_dashboard_prompt
+from app_state import ensure_session_defaults
 
 # Criteria selection is now handled by components.render_nos_selection
 
 def main():
-
-    if 'last_request_time' not in st.session_state:
-        st.session_state.last_request_time = 0
+    ensure_session_defaults(
+        {
+            "last_request_time": 0,
+            "dash_atmosphere": lambda: st.session_state.get("default_env_text", ""),
+        }
+    )
 
     # --- UI DESIGN ---
     st.title("📝 NSQ Report Generator")
@@ -24,8 +28,6 @@ def main():
     provider = st.session_state.get('ai_provider')
     keys = st.session_state.get('target_keys', []) # Now expects a list of keys
     target_model = st.session_state.get('target_model')
-    if "dash_atmosphere" not in st.session_state:
-        st.session_state.dash_atmosphere = st.session_state.get('default_env_text', '')
     assessor_name = st.session_state.get('assessor_name', 'Jibril Dauda Muhammad')
     # assessor_id = st.session_state.get('assessor_id', 'QAA/XXXX/ICT')
     dev_mode = st.session_state.get('dev_mode', False)

@@ -141,19 +141,19 @@ To effectively manage the SaaS platform and monitor system health, a dedicated S
 ### Phase 5: Small and New Features
 These improvements should be implemented as lightweight, query-driven features that do not increase the app memory footprint on Railway or the Streamlit dashboard.
 
-* Add the assessor name to report expander titles for admin views of multiple assessors.
-* Add a `Sort By` dropdown to the History page with `Date`, `Student Name`, and `Assessor`; apply sorting at the query level.
-* Add a `Reports generated today` metric on the User Management page using a date-filtered database query.
-* Add History filters for `Unit Code` and `Trade Name` without loading all records into memory.
-* Add a report status badge in the history list (e.g. Draft, Finalized) using a compact status field.
-* Add `Word Count` and `Paragraph Count` to report metadata in history results, computed from report text or stored as lightweight fields.
-* Add a progress bar for the current unit showing percentage of PCs selected, based on selected count versus total available.
-* Add a subscription progress bar on the `My Subscription` page showing days remaining for `platform_pass` users using expiry date math.
-* Add a `Check Payment Status` button that refreshes webhook/payment state from Supabase rather than holding extra session state.
-* Add a sidebar `Help` button linking to WhatsApp support as a simple external action.
-* Refactor session state initialization into a single helper and shared key manager so app state stays consistent and minimal.
-* Encapsulate top-level `main.py` UI logic in a single entrypoint function to avoid accidental re-execution.
-* Add a stateless retry decorator for DB calls to handle transient connection resets without preserving retry state in memory.
+* [x] Add the assessor name to report expander titles for admin views of multiple assessors.
+* [x] Add a `Sort By` dropdown to the History page with `Date`, `Student Name`, and `Assessor`; apply sorting at the query level.
+* [defer] Add a `Reports generated today` metric on the User Management page using a date-filtered database query.
+* [x] Add History filters for `Unit Code` and `Trade Name` without loading all records into memory.
+* [defer] Add a report status badge in the history list (e.g. Draft, Finalized) using a compact status field.
+* [defer] Add `Word Count` and `Paragraph Count` to report metadata in history results, computed from report text or stored as lightweight fields.
+* [x] Add a progress bar for the current unit showing percentage of PCs selected, based on selected count versus total available.
+* [x] Add a subscription progress bar on the `My Subscription` page showing days remaining for `platform_pass` users using expiry date math.
+* [defer] Add a `Check Payment Status` button that refreshes webhook/payment state from Supabase rather than holding extra session state.
+* [defer] Add a sidebar `Help` button linking to WhatsApp support as a simple external action. Existing Support links already cover this.
+* [x] Refactor session state initialization into a single helper and shared key manager so app state stays consistent and minimal.
+* [x] Encapsulate top-level `main.py` UI logic in a single entrypoint function to avoid accidental re-execution.
+* [x] Add a stateless retry decorator for DB calls to handle transient connection resets without preserving retry state in memory.
 
 ### Phase 5 Database Notes
 * Keep indexes that improve query performance for history filtering and sorting:
@@ -179,7 +179,7 @@ These should be postponed from Phase 5 because they require heavier state, backg
 Deliver Phase 5 as small UI and database enhancements only, keeping the app memory footprint low and Railway resource usage minimal.
 
 
-### SEECURITY Verification
+### Security Verification
 *   [x] **IDOR Review - History Reads:** Verified report history access paths for `assessment_reports`, `student_statements`, and `witness_statements`. Confirmed non-admin list queries are scoped by `created_by = user_id`.
 *   [x] **IDOR Fix - Lazy Content Fetch:** Added ownership enforcement to the lazy report content fetch in `history.py`, so non-admin users can only load full text for records where `created_by` matches their user ID.
 *   [x] **IDOR Fix - Bulk ZIP Export:** Added ownership enforcement to the bulk download query in `history.py`, so selected IDs cannot be used to export another user's reports.

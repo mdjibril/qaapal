@@ -3,6 +3,7 @@ from auth_utils import check_auth, login_form, get_secret, reset_password_form, 
 import dashboard, history, personal_statement, witness_statement, subscription_page, admin_panel, database as db
 from ai_utils import validate_and_generate
 from ai_policy import get_ai_access_policy
+from app_state import ensure_session_defaults
 
 APP_VERSION = "v1.1.0"
 
@@ -84,38 +85,44 @@ def get_cached_trade_levels(trade_id):
         return []
     return db.fetch_trade_levels(trade_id)
 
-# --- DEEP LINKING LOGIC ---
-if "intent" in st.query_params:
-    intent = st.query_params.get("intent")
-    if intent == "signup":
-        st.session_state["auth_mode"] = "Sign Up"
-    elif intent == "earlybird":
-        st.session_state["auth_mode"] = "Sign Up"
-        st.session_state["promo_code"] = "EARLYBIRD_100"
-    elif intent == "recovery":
-        # This is a fallback if the fragment detection isn't enough
-        st.session_state["reset_mode"] = True
-    # Clear params to prevent the UI from being locked to one mode on refresh
-    st.query_params.clear()
+def main():
+    # --- DEEP LINKING LOGIC ---
+    ensure_session_defaults(
+        {
+            "auth_mode": "Login",
+            "env_preset": "Morning (Cool)",
+        }
+    )
 
-# --- PASSWORD RECOVERY DETECTION ---
-# When clicking a reset link, Supabase redirects with a fragment (#) or token.
-# We rely on the 'intent=recovery' query parameter for explicit triggering.
-# The Supabase client handles the internal token exchange automatically.
-if not st.session_state.get('user_session') and not st.session_state.get('reset_mode'):
-    try:
-        client = db.get_supabase()
-        session_res = client.auth.get_session()
-        if session_res:
-            finalize_session(session_res.user, session_res)
-    except Exception:
-        pass
+    if "intent" in st.query_params:
+        intent = st.query_params.get("intent")
+        if intent == "signup":
+            st.session_state["auth_mode"] = "Sign Up"
+        elif intent == "earlybird":
+            st.session_state["auth_mode"] = "Sign Up"
+            st.session_state["promo_code"] = "EARLYBIRD_100"
+        elif intent == "recovery":
+            st.session_state["reset_mode"] = True
+        st.query_params.clear()
 
-if st.session_state.get("reset_mode"):
-    reset_password_form()
-elif not check_auth():
-    login_form()
-else:
+    update_environment_preset()
+
+    if not st.session_state.get('user_session') and not st.session_state.get('reset_mode'):
+        try:
+            client = db.get_supabase()
+            session_res = client.auth.get_session()
+            if session_res:
+                finalize_session(session_res.user, session_res)
+        except Exception:
+            pass
+
+    if st.session_state.get("reset_mode"):
+        reset_password_form()
+        return
+    elif not check_auth():
+        login_form()
+        return
+
     role = st.session_state.get('user_role', 'assessor')
     tier = st.session_state.get('subscription_tier', 'free')
     credits = st.session_state.get('credits_balance', 0)
@@ -125,25 +132,21 @@ else:
     ai_policy = get_ai_access_policy(role, tier, is_platform_pass_expired)
     show_byok = ai_policy["allow_byok"]
 
-    # If platform_pass is expired, treat them as free tier for UI/logic purposes
     if tier == 'platform_pass' and is_platform_pass_expired:
         st.session_state['subscription_tier'] = 'free'
-        tier = 'free' # Update local variable for immediate use
-        st.session_state['credits_balance'] = 0 # Ensure no credits are shown
-        credits = 0 # Update local variable
+        tier = 'free'
+        st.session_state['credits_balance'] = 0
+        credits = 0
         ai_policy = get_ai_access_policy(role, tier, is_platform_pass_expired)
         show_byok = ai_policy["allow_byok"]
-    
-    # --- CENTRALIZED SIDEBAR ---
+
     st.sidebar.title(f"🚀 NSQ Portal {APP_VERSION}")
 
     st.session_state.assessor_name = st.session_state.get('assessor_full_name', 'Jibril Dauda Muhammad')
     name = st.session_state.assessor_name
-    a_id = st.session_state.get('assessor_id', 'QAA/XXXX/ICT')
 
     st.sidebar.caption(f"{name} | {role.capitalize()} | {tier.replace('_', ' ').title()}")
 
-    # NOS Selection
     trades = get_cached_trades()
     if trades:
         with st.sidebar.container(border=True):
@@ -198,10 +201,6 @@ else:
     else:
         st.sidebar.error("⚠️ No trades found. Check Supabase connection or table data.")
 
-    # Report Context
-    if "env_preset" not in st.session_state:
-        st.session_state.env_preset = "Morning (Cool)"
-        update_environment_preset()
     with st.sidebar.container(border=True):
         st.markdown("**Report Context**")
         selected_env_preset = st.selectbox(
@@ -212,7 +211,6 @@ else:
         )
         st.session_state.default_env_text = ENV_OPTIONS[selected_env_preset]
 
-    # AI Settings
     if ai_policy["status_message"]:
         with st.sidebar.container(border=True):
             st.markdown("**AI Status**")
@@ -293,13 +291,11 @@ else:
         with st.sidebar.expander("🛠️ Admin Tools", expanded=False):
             st.checkbox("Dev Mode (Skip AI)", key="dev_mode")
 
-    # Support
     with st.sidebar.expander("🆘 Support", expanded=False):
         st.caption("Contact support directly")
         st.link_button("WhatsApp Support", "https://wa.me/2348184018469", width="stretch")
         st.link_button("Email Support", "mailto:muhammadjibrildauda@gmail.com", width="stretch")
 
-    # 4. Navigation
     with st.sidebar.container(border=True):
         st.markdown("**Navigation**")
         if role == 'student':
@@ -326,3 +322,7 @@ else:
             st.rerun()
 
     pages[selection]()
+
+
+if __name__ == "__main__":
+    main()

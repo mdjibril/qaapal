@@ -7,10 +7,23 @@ from file_utils import (
     export_personal_statement_to_word,
     get_unit_number
 )
+from app_state import ensure_session_defaults
 
 # Cached helper function to fetch reports
 @st.cache_data(ttl=300)
-def _fetch_reports(user_id, role, table_name, search_query=None, page=1, page_size=20, assessor_filter=None, date_filter=None):
+def _fetch_reports(
+    user_id,
+    role,
+    table_name,
+    search_query=None,
+    page=1,
+    page_size=20,
+    assessor_filter=None,
+    date_filter=None,
+    sort_by="Date",
+    trade_filter=None,
+    unit_filter=None,
+):
     # We use the admin client for all roles here to ensure the join with the 'trades' table 
     # succeeds (as trades often has restricted RLS). Privacy is maintained by the 
     # .eq("created_by", user_id) filter below for non-admins.
@@ -54,9 +67,27 @@ def _fetch_reports(user_id, role, table_name, search_query=None, page=1, page_si
             if start_date and end_date:
                 query = query.gte("created_at", f"{start_date}T00:00:00+00:00").lte("created_at", f"{end_date}T23:59:59+00:00")
 
+        if trade_filter:
+            trade_res = client.table("trades").select("id").ilike("name", f"%{trade_filter}%").execute()
+            trade_ids = [row["id"] for row in (trade_res.data or [])]
+            if not trade_ids:
+                return [], 0
+            query = query.in_("trade_id", trade_ids)
+
+        if unit_filter:
+            query = query.ilike("unit_codes", f"%{unit_filter}%")
+
+        sort_key = (sort_by or "Date").strip().lower()
+        if sort_key == "student name":
+            query = query.order("student_name")
+        elif sort_key == "assessor":
+            query = query.order("full_name", foreign_table="user_profiles")
+        else:
+            query = query.order("created_at", desc=True)
+
         start = (page - 1) * page_size
         end = start + page_size - 1
-        response = query.order("created_at", desc=True).range(start, end).execute()
+        response = query.range(start, end).execute()
         return response.data, response.count
     except Exception as e:
         st.error(f"Error fetching history: {e}")
@@ -282,13 +313,21 @@ def main():
     role = st.session_state.user_role
 
     # Initialize pagination and search state
-    if 'history_page' not in st.session_state: st.session_state.history_page = 1
-    if 'selected_report_ids' not in st.session_state: st.session_state.selected_report_ids = set()
-    if 'search_query' not in st.session_state: st.session_state.search_query = ""
-    if 'admin_assessor_filter' not in st.session_state: st.session_state.admin_assessor_filter = "All"
-    if 'history_type' not in st.session_state: st.session_state.history_type = "Assessment Reports"
-    if 'report_content_cache' not in st.session_state: st.session_state.report_content_cache = {}
-    if 'date_filter_state' not in st.session_state: st.session_state.date_filter_state = []
+    ensure_session_defaults(
+        {
+            "history_page": 1,
+            "selected_report_ids": set,
+            "search_query": "",
+            "admin_assessor_filter": "All",
+            "history_type": "Assessment Reports",
+            "report_content_cache": dict,
+            "date_filter_state": list,
+            "history_page_size": 20,
+            "history_sort_by": "Date",
+            "history_trade_filter": "",
+            "history_unit_filter": "",
+        }
+    )
 
     # History Type Selector
     if role == 'student':
@@ -328,26 +367,45 @@ def main():
             st.cache_data.clear()
 
     # Search and Filter implementation at the top
-    col_search, col_date, col_size = st.columns([0.5, 0.3, 0.2])
+    col_search, col_sort, col_size = st.columns([0.48, 0.24, 0.18])
     with col_search:
         search_input = st.text_input("Search reports by student name or content", value=st.session_state.search_query)
-    with col_date:
-        date_input = st.date_input("Filter by Date Range", value=st.session_state.date_filter_state, key="date_picker")
+    with col_sort:
+        sort_options = ["Date", "Student Name", "Assessor"]
+        sort_index = sort_options.index(st.session_state.history_sort_by) if st.session_state.history_sort_by in sort_options else 0
+        sort_input = st.selectbox("Sort By", sort_options, index=sort_index)
     with col_size:
         page_size_options = [20, 50, 100, 500]
         current_page_size = st.session_state.get('history_page_size', 20)
         idx = page_size_options.index(current_page_size) if current_page_size in page_size_options else 0
         page_size = st.selectbox("Items per page", page_size_options, index=idx, key="page_size_selector")
+
+    col_date, col_trade, col_unit = st.columns([0.34, 0.33, 0.33])
+    with col_date:
+        date_input = st.date_input("Filter by Date Range", value=st.session_state.date_filter_state, key="date_picker")
+    with col_trade:
+        trade_input = st.text_input("Filter by Trade Name", value=st.session_state.history_trade_filter, placeholder="e.g. ICT Web Development")
+    with col_unit:
+        unit_input = st.text_input("Filter by Unit Code", value=st.session_state.history_unit_filter, placeholder="e.g. AqCS/FFA/007/L3")
         
     if page_size != current_page_size:
         st.session_state.history_page_size = page_size
         st.session_state.history_page = 1
         st.rerun()
     
-    # Reset page if search query or date changes
-    if search_input != st.session_state.search_query or date_input != st.session_state.date_filter_state:
+    # Reset page if search query, filters, or sort change
+    if (
+        search_input != st.session_state.search_query
+        or date_input != st.session_state.date_filter_state
+        or sort_input != st.session_state.history_sort_by
+        or trade_input != st.session_state.history_trade_filter
+        or unit_input != st.session_state.history_unit_filter
+    ):
         st.session_state.search_query = search_input
         st.session_state.date_filter_state = date_input
+        st.session_state.history_sort_by = sort_input
+        st.session_state.history_trade_filter = trade_input
+        st.session_state.history_unit_filter = unit_input
         st.session_state.history_page = 1
         _clear_history_selection_state()
         st.cache_data.clear()
@@ -363,7 +421,10 @@ def main():
                 page=st.session_state.history_page, 
                 page_size=page_size,
                 assessor_filter=st.session_state.admin_assessor_filter if st.session_state.admin_assessor_filter != "All" else None,
-                date_filter=st.session_state.date_filter_state
+                date_filter=st.session_state.date_filter_state,
+                sort_by=st.session_state.history_sort_by,
+                trade_filter=st.session_state.history_trade_filter,
+                unit_filter=st.session_state.history_unit_filter,
             )
         except Exception:
             reports, total_count = [], 0

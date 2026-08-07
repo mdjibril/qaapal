@@ -55,6 +55,17 @@ def render_nos_selection(nos_data, prefix, persistent_set_key, result_list_key, 
 
     if selected_unit_key:
         unit_code = selected_unit_key.split(':')[0]
+        total_pcs = sum(len(pcs) for pcs in nos_data[selected_unit_key].values())
+        selected_for_unit = [
+            pc for pc in st.session_state[persistent_set_key]
+            if pc.startswith(f"{unit_code} - ")
+        ]
+        selected_count = len(selected_for_unit)
+        progress_ratio = (selected_count / total_pcs) if total_pcs else 0.0
+        st.progress(
+            progress_ratio,
+            text=f"{selected_count}/{total_pcs} PCs selected for {unit_code}"
+        )
         
         st.checkbox(
             f"✅ Select All Performance Criteria for {unit_code}", 

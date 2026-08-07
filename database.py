@@ -1,7 +1,50 @@
 import streamlit as st
 from auth_utils import get_supabase, get_admin_supabase
 import time
+import functools
 from datetime import datetime, timedelta
+
+
+def _is_retryable_db_error(error):
+    message = str(error).lower()
+    retry_markers = (
+        "timeout",
+        "timed out",
+        "connection",
+        "network",
+        "temporarily",
+        "server closed the connection",
+        "could not connect",
+        "503",
+        "504",
+    )
+    return any(marker in message for marker in retry_markers)
+
+
+def retry_db_call(max_attempts=3, base_delay=0.25):
+    """Retry transient Supabase calls without storing retry state anywhere."""
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            last_error = None
+            for attempt in range(max_attempts):
+                try:
+                    return func(*args, **kwargs)
+                except Exception as error:
+                    last_error = error
+                    if attempt == max_attempts - 1 or not _is_retryable_db_error(error):
+                        raise
+                    time.sleep(base_delay * (2 ** attempt))
+            raise last_error
+
+        return wrapper
+
+    return decorator
+
+
+@retry_db_call()
+def _execute_query(query):
+    return query.execute()
 
 def fetch_trades():
     # Use the admin client to fetch the trade list to ensure it's always available 
@@ -9,7 +52,7 @@ def fetch_trades():
     supabase = get_admin_supabase()
     try:
         # Fetch trades via Supabase API instead of direct SQL to avoid connection issues
-        response = supabase.table("trades").select("id, name").order("name").execute()
+        response = _execute_query(supabase.table("trades").select("id, name").order("name"))
         trades = response.data if response.data else []
         return sorted(trades, key=lambda trade: (trade.get("name") or "").casefold())
     except Exception as e:
@@ -21,12 +64,11 @@ def fetch_trades():
 def fetch_trade_levels(trade_id):
     supabase = get_admin_supabase()
     try:
-        response = (
+        response = _execute_query(
             supabase.table("trade_levels")
             .select("id, trade_id, level, display_name")
             .eq("trade_id", int(trade_id))
             .order("level")
-            .execute()
         )
         return response.data if response.data else []
     except Exception as e:
@@ -38,12 +80,11 @@ def fetch_trade_levels(trade_id):
 def fetch_all_trade_levels():
     supabase = get_admin_supabase()
     try:
-        response = (
+        response = _execute_query(
             supabase.table("trade_levels")
             .select("id, trade_id, level, display_name")
             .order("trade_id")
             .order("level")
-            .execute()
         )
         return response.data if response.data else []
     except Exception as e:
@@ -55,12 +96,11 @@ def fetch_all_trade_levels():
 def fetch_units_by_trade_level(trade_level_id):
     supabase = get_admin_supabase()
     try:
-        response = (
+        response = _execute_query(
             supabase.table("units")
             .select("id, trade_id, trade_level_id, code, title")
             .eq("trade_level_id", int(trade_level_id))
             .order("code")
-            .execute()
         )
         return response.data if response.data else []
     except Exception as e:
@@ -72,11 +112,10 @@ def fetch_units_by_trade_level(trade_level_id):
 def fetch_all_units():
     supabase = get_admin_supabase()
     try:
-        response = (
+        response = _execute_query(
             supabase.table("units")
             .select("id, trade_id, trade_level_id, code, title")
             .order("id")
-            .execute()
         )
         return response.data if response.data else []
     except Exception as e:
@@ -88,12 +127,11 @@ def fetch_all_units():
 def fetch_learning_outcomes_by_unit(unit_id):
     supabase = get_admin_supabase()
     try:
-        response = (
+        response = _execute_query(
             supabase.table("learning_outcomes")
             .select("id, unit_id, lo_num, description")
             .eq("unit_id", int(unit_id))
             .order("lo_num")
-            .execute()
         )
         return response.data if response.data else []
     except Exception as e:
@@ -105,11 +143,10 @@ def fetch_learning_outcomes_by_unit(unit_id):
 def fetch_all_learning_outcomes():
     supabase = get_admin_supabase()
     try:
-        response = (
+        response = _execute_query(
             supabase.table("learning_outcomes")
             .select("id, unit_id, lo_num, description")
             .order("id")
-            .execute()
         )
         return response.data if response.data else []
     except Exception as e:
@@ -121,12 +158,11 @@ def fetch_all_learning_outcomes():
 def fetch_performance_criteria_by_lo(lo_id):
     supabase = get_admin_supabase()
     try:
-        response = (
+        response = _execute_query(
             supabase.table("performance_criteria")
             .select("id, lo_id, pc_code, description")
             .eq("lo_id", int(lo_id))
             .order("pc_code")
-            .execute()
         )
         return response.data if response.data else []
     except Exception as e:
@@ -138,11 +174,10 @@ def fetch_performance_criteria_by_lo(lo_id):
 def fetch_all_performance_criteria():
     supabase = get_admin_supabase()
     try:
-        response = (
+        response = _execute_query(
             supabase.table("performance_criteria")
             .select("id, lo_id, pc_code, description")
             .order("id")
-            .execute()
         )
         return response.data if response.data else []
     except Exception as e:
@@ -154,12 +189,11 @@ def fetch_all_performance_criteria():
 def fetch_trade_by_id(trade_id):
     supabase = get_admin_supabase()
     try:
-        response = (
+        response = _execute_query(
             supabase.table("trades")
             .select("id, name")
             .eq("id", int(trade_id))
             .single()
-            .execute()
         )
         return response.data if response.data else None
     except Exception as e:
@@ -183,7 +217,7 @@ def fetch_nested_nos(trade_id=None, trade_level_id=None):
         else:
             return {}
 
-        response = query.execute()
+        response = _execute_query(query)
         
         raw_units = response.data
         
@@ -229,48 +263,38 @@ def fetch_nos_delete_preview(trade_id, trade_level_id=None):
             },
         }
 
-        trade_rows = supabase.table("trades").select("id, name").eq("id", int(trade_id)).execute().data or []
+        trade_rows = _execute_query(supabase.table("trades").select("id, name").eq("id", int(trade_id))).data or []
         if trade_rows:
             preview["trade"] = trade_rows[0]
 
         if trade_level_id is not None:
-            level_rows = (
+            level_rows = _execute_query(
                 supabase.table("trade_levels")
                 .select("id, trade_id, level, display_name")
                 .eq("id", int(trade_level_id))
-                .execute()
-                .data
-                or []
-            )
+            ).data or []
             if level_rows:
                 preview["trade_level"] = level_rows[0]
                 preview["counts"]["trade_levels"] = 1
 
-            units = (
+            units = _execute_query(
                 supabase.table("units")
                 .select("id, code, title")
                 .eq("trade_level_id", int(trade_level_id))
-                .execute()
-                .data
-                or []
-            )
+            ).data or []
         else:
             preview["counts"]["trade_levels"] = len(
-                supabase.table("trade_levels")
-                .select("id")
-                .eq("trade_id", int(trade_id))
-                .execute()
-                .data
-                or []
+                _execute_query(
+                    supabase.table("trade_levels")
+                    .select("id")
+                    .eq("trade_id", int(trade_id))
+                ).data or []
             )
-            units = (
+            units = _execute_query(
                 supabase.table("units")
                 .select("id, code, title, trade_level_id")
                 .eq("trade_id", int(trade_id))
-                .execute()
-                .data
-                or []
-            )
+            ).data or []
 
         preview["units"] = units
         preview["counts"]["units"] = len(units)
@@ -279,28 +303,22 @@ def fetch_nos_delete_preview(trade_id, trade_level_id=None):
 
         los = []
         if unit_ids:
-            los = (
+            los = _execute_query(
                 supabase.table("learning_outcomes")
                 .select("id, unit_id, lo_num, description")
                 .in_("unit_id", unit_ids)
-                .execute()
-                .data
-                or []
-            )
+            ).data or []
         preview["learning_outcomes"] = los
         preview["counts"]["learning_outcomes"] = len(los)
 
         lo_ids = [lo["id"] for lo in los]
         pcs = []
         if lo_ids:
-            pcs = (
+            pcs = _execute_query(
                 supabase.table("performance_criteria")
                 .select("id, lo_id, pc_code, description")
                 .in_("lo_id", lo_ids)
-                .execute()
-                .data
-                or []
-            )
+            ).data or []
         preview["performance_criteria"] = pcs
         preview["counts"]["performance_criteria"] = len(pcs)
 
@@ -313,7 +331,7 @@ def delete_nos_trade(trade_id):
     """Delete a trade family. Child levels and units cascade through FK rules."""
     supabase = get_admin_supabase()
     try:
-        supabase.table("trades").delete().eq("id", int(trade_id)).execute()
+        _execute_query(supabase.table("trades").delete().eq("id", int(trade_id)))
         st.cache_data.clear()
         return True, None
     except Exception as e:
@@ -324,8 +342,8 @@ def delete_nos_trade_level(trade_level_id):
     """Delete a single trade level and its dependent units, LOs, and PCs."""
     supabase = get_admin_supabase()
     try:
-        supabase.table("units").delete().eq("trade_level_id", int(trade_level_id)).execute()
-        supabase.table("trade_levels").delete().eq("id", int(trade_level_id)).execute()
+        _execute_query(supabase.table("units").delete().eq("trade_level_id", int(trade_level_id)))
+        _execute_query(supabase.table("trade_levels").delete().eq("id", int(trade_level_id)))
         st.cache_data.clear()
         return True, None
     except Exception as e:
@@ -335,7 +353,7 @@ def delete_nos_trade_level(trade_level_id):
 def update_trade_name(trade_id, name):
     supabase = get_admin_supabase()
     try:
-        supabase.table("trades").update({"name": name}).eq("id", int(trade_id)).execute()
+        _execute_query(supabase.table("trades").update({"name": name}).eq("id", int(trade_id)))
         st.cache_data.clear()
         return True, None
     except Exception as e:
@@ -345,10 +363,10 @@ def update_trade_name(trade_id, name):
 def update_trade_level(trade_level_id, level, display_name):
     supabase = get_admin_supabase()
     try:
-        supabase.table("trade_levels").update({
+        _execute_query(supabase.table("trade_levels").update({
             "level": int(level),
             "display_name": display_name,
-        }).eq("id", int(trade_level_id)).execute()
+        }).eq("id", int(trade_level_id)))
         st.cache_data.clear()
         return True, None
     except Exception as e:
@@ -358,10 +376,10 @@ def update_trade_level(trade_level_id, level, display_name):
 def update_unit(unit_id, code, title):
     supabase = get_admin_supabase()
     try:
-        supabase.table("units").update({
+        _execute_query(supabase.table("units").update({
             "code": code,
             "title": title,
-        }).eq("id", int(unit_id)).execute()
+        }).eq("id", int(unit_id)))
         st.cache_data.clear()
         return True, None
     except Exception as e:
@@ -371,10 +389,10 @@ def update_unit(unit_id, code, title):
 def update_learning_outcome(lo_id, lo_num, description):
     supabase = get_admin_supabase()
     try:
-        supabase.table("learning_outcomes").update({
+        _execute_query(supabase.table("learning_outcomes").update({
             "lo_num": lo_num,
             "description": description,
-        }).eq("id", int(lo_id)).execute()
+        }).eq("id", int(lo_id)))
         st.cache_data.clear()
         return True, None
     except Exception as e:
@@ -384,10 +402,10 @@ def update_learning_outcome(lo_id, lo_num, description):
 def update_performance_criterion(pc_id, pc_code, description):
     supabase = get_admin_supabase()
     try:
-        supabase.table("performance_criteria").update({
+        _execute_query(supabase.table("performance_criteria").update({
             "pc_code": pc_code,
             "description": description,
-        }).eq("id", int(pc_id)).execute()
+        }).eq("id", int(pc_id)))
         st.cache_data.clear()
         return True, None
     except Exception as e:
@@ -413,7 +431,7 @@ def insert_report(name, trade_id, unit_codes, report_content, date, user_id):
             "created_by": user_id  # Supabase client handles UUID objects or strings correctly
         }
         
-        supabase.table("assessment_reports").insert(data).execute()
+        _execute_query(supabase.table("assessment_reports").insert(data))
         st.cache_data.clear()
         return True, None
 
@@ -437,7 +455,7 @@ def insert_student_statement(user_id, student_name, trade_id, unit_codes, reflec
             "statement_text": str(statement_text),
             "created_by": user_id
         }
-        supabase.table("student_statements").insert(data).execute()
+        _execute_query(supabase.table("student_statements").insert(data))
         st.cache_data.clear()
         return True, None
     except Exception as e:
@@ -459,7 +477,7 @@ def insert_witness_statement(user_id, witness_name, witness_role, candidate_name
             "statement_text": str(statement_text),
             "created_by": user_id
         }
-        supabase.table("witness_statements").insert(data).execute()
+        _execute_query(supabase.table("witness_statements").insert(data))
         st.cache_data.clear()
         return True, None
     except Exception as e:
@@ -470,7 +488,7 @@ def upgrade_org_tier(org_id, new_tier='platform_pass'):
     supabase = get_admin_supabase()
     try:
         # Set subscription_start_date to now() when upgrading
-        supabase.table("organizations").update({"subscription_tier": new_tier, "subscription_start_date": "now()"}).eq("id", org_id).execute()
+        _execute_query(supabase.table("organizations").update({"subscription_tier": new_tier, "subscription_start_date": "now()"}).eq("id", org_id))
         return True, None
     except Exception as e:
         return False, str(e)
@@ -479,11 +497,11 @@ def decrement_credits(org_id):
     supabase = get_admin_supabase()
     try:
         # Get current balance
-        res = supabase.table("organizations").select("credits_balance").eq("id", org_id).single().execute()
+        res = _execute_query(supabase.table("organizations").select("credits_balance").eq("id", org_id).single())
         current_balance = res.data.get("credits_balance", 0)
         
         if current_balance > 0:
-            supabase.table("organizations").update({"credits_balance": current_balance - 1}).eq("id", org_id).execute()
+            _execute_query(supabase.table("organizations").update({"credits_balance": current_balance - 1}).eq("id", org_id))
             return True
         return False
     except Exception as e:
@@ -556,7 +574,7 @@ def insert_feedback(user_id, rating, source_page, comment=None):
             "comment": comment[:500] if comment else None,
             "source_page": source_page,
         }
-        supabase.table("product_feedback").insert(data).execute()
+        _execute_query(supabase.table("product_feedback").insert(data))
         return True, None
     except Exception as e:
         return False, str(e)
@@ -605,13 +623,13 @@ def fetch_system_metrics():
     supabase = get_admin_supabase()
     metrics = {"total_users": 0, "total_orgs": 0, "total_reports": 0}
     try:
-        res_users = supabase.table("user_profiles").select("id", count="exact").execute()
+        res_users = _execute_query(supabase.table("user_profiles").select("id", count="exact"))
         metrics["total_users"] = res_users.count if hasattr(res_users, 'count') and res_users.count else len(res_users.data)
         
-        res_orgs = supabase.table("organizations").select("id", count="exact").execute()
+        res_orgs = _execute_query(supabase.table("organizations").select("id", count="exact"))
         metrics["total_orgs"] = res_orgs.count if hasattr(res_orgs, 'count') and res_orgs.count else len(res_orgs.data)
         
-        res_reports = supabase.table("assessment_reports").select("id", count="exact").execute()
+        res_reports = _execute_query(supabase.table("assessment_reports").select("id", count="exact"))
         metrics["total_reports"] = res_reports.count if hasattr(res_reports, 'count') and res_reports.count else len(res_reports.data)
     except Exception as e:
         print(f"Metrics fetch error: {e}")
@@ -623,7 +641,7 @@ def fetch_recent_reports(limit=50):
     try:
         response = supabase.table("assessment_reports")
         response = response.select("*, user_profiles!created_by(full_name), trades(name)")
-        response = response.order("created_at", desc=True).limit(limit).execute()
+        response = _execute_query(response.order("created_at", desc=True).limit(limit))
         return response.data
     except Exception as e:
         print(f"Error fetching recent reports: {e}")
@@ -633,7 +651,7 @@ def update_org_credits(org_id, new_balance):
     """Manually adjust credits for an organization."""
     supabase = get_admin_supabase()
     try:
-        supabase.table("organizations").update({"credits_balance": new_balance}).eq("id", org_id).execute()
+        _execute_query(supabase.table("organizations").update({"credits_balance": new_balance}).eq("id", org_id))
         return True, None
     except Exception as e:
         return False, str(e)
