@@ -1,4 +1,4 @@
-# NSQ Portal v1.0.5
+# NSQ Portal v1.1.0
 
 A professional AI-powered assessment report generator for the National Skills Qualification (NSQ) framework. This application allows assessors to select Performance Criteria (PC) from a structured database and use Generative AI (Gemini, Groq, or OpenRouter) to synthesize professional technical narratives..
 
@@ -31,6 +31,11 @@ A professional AI-powered assessment report generator for the National Skills Qu
 - **RBAC (Role-Based Access Control):** Granular permissions for Admins, Assessors, and Students.
 - **Self-Healing Profiles:** Automatic initialization of user profiles and organization workspaces during first-time login.
 - **Session Persistence:** Intelligent session restoration that recovers user roles and organization data even after server restarts.
+
+## 🏷️ Release Notes
+
+- **Current version:** `v1.1.0`
+- **Highlights:** Fish farming NOS export parsing now supports mixed-case codes like `AqCS/FFA/007/L3`, the seed script supports `--file`, `--trade`, and `--level`, and history rows now display the report level next to the trade name.
 
 ## 🛠️ Tech Stack
 

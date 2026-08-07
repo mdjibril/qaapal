@@ -4,6 +4,8 @@ import dashboard, history, personal_statement, witness_statement, subscription_p
 from ai_utils import validate_and_generate
 from ai_policy import get_ai_access_policy
 
+APP_VERSION = "v1.1.0"
+
 st.set_page_config(
     page_title="NSQAssessment App | AI-Powered Reports",
     page_icon="⚡", # You can use an emoji or a path to an image file
@@ -133,7 +135,7 @@ else:
         show_byok = ai_policy["allow_byok"]
     
     # --- CENTRALIZED SIDEBAR ---
-    st.sidebar.title(f"🚀 NSQ Portal v1.0.5")
+    st.sidebar.title(f"🚀 NSQ Portal {APP_VERSION}")
 
     st.session_state.assessor_name = st.session_state.get('assessor_full_name', 'Jibril Dauda Muhammad')
     name = st.session_state.assessor_name
