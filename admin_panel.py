@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 import database as db
-from auth_utils import get_supabase, get_admin_supabase
+from auth_utils import get_supabase, get_admin_supabase, get_secret
 
 
 def _clear_session_keys(*keys):
@@ -76,17 +76,10 @@ def main():
         st.subheader("API Gateway Status")
         
         # Determine API Presence without throwing errors on missing secrets
-        import os
-        try:
-            gemini_present = "INTERNAL_AI_KEY" in st.secrets or "INTERNAL_AI_KEY" in os.environ
-            groq_present = "GROQ_API_KEY" in st.secrets or "GROQ_API_KEY" in os.environ
-            openrouter_present = "OPENROUTER_API_KEY" in st.secrets or "OPENROUTER_API_KEY" in os.environ
-            vertex_present = "vertex_ai" in st.secrets or "VERTEX_AI" in os.environ
-        except Exception:
-            gemini_present = "INTERNAL_AI_KEY" in os.environ
-            groq_present = "GROQ_API_KEY" in os.environ
-            openrouter_present = "OPENROUTER_API_KEY" in os.environ
-            vertex_present = "VERTEX_AI" in os.environ
+        gemini_present = bool(get_secret(["INTERNAL_AI_KEY"], "INTERNAL_AI_KEY"))
+        groq_present = bool(get_secret(["GROQ_API_KEY"], "GROQ_API_KEY"))
+        openrouter_present = bool(get_secret(["OPENROUTER_API_KEY"], "OPENROUTER_API_KEY"))
+        vertex_present = bool(get_secret(["vertex_ai", "service_account_json"], "VERTEX_AI"))
 
         c1, c2, c3, c4 = st.columns(4)
         c1.metric("Gemini API", "Configured" if gemini_present else "Missing")
@@ -96,15 +89,28 @@ def main():
 
         st.divider()
 
-        # Webhook logs
-        st.subheader("Subscription Webhooks (Mock Activity)")
-        mock_logs = [
-            {"Date": "2026-07-18 10:00", "Provider": "Selar", "Status": "SUCCESS", "Amount": "₦7000", "Org Email": "assessor1@center.com"},
-            {"Date": "2026-07-15 08:30", "Provider": "Monnify", "Status": "SUCCESS", "Amount": "₦7000", "Org Email": "tech_lead@nsqhub.org"},
-            {"Date": "2026-07-14 15:45", "Provider": "Monnify", "Status": "FAILED", "Amount": "₦7000", "Org Email": "incomplete@org.com"}
-        ]
-        st.dataframe(mock_logs, width='stretch', hide_index=True)
-        st.info("System integration webhook processing listener works externally and logs transactions to Supabase databases.")
+        # Webhook / Subscription Activity
+        st.subheader("Subscription Activity")
+        try:
+            admin_client = get_admin_supabase()
+            res = admin_client.table("organizations").select("id, subscription_tier, credits_balance, subscription_start_date, user_profiles!org_id(email)").neq("subscription_tier", "free").execute()
+            if res.data:
+                activity_data = []
+                for o in res.data:
+                    up = o.get("user_profiles") or {}
+                    email = up.get("email", "N/A") if isinstance(up, dict) else "N/A"
+                    start = o.get("subscription_start_date", "")[:10] if o.get("subscription_start_date") else "N/A"
+                    activity_data.append({
+                        "Date": start,
+                        "Tier": o.get("subscription_tier", "N/A").replace("_", " ").title(),
+                        "Credits": o.get("credits_balance", 0),
+                        "Email": email,
+                    })
+                st.dataframe(activity_data, width='stretch', hide_index=True)
+            else:
+                st.info("No paid subscriptions yet.")
+        except Exception:
+            st.info("Unable to load subscription data.")
 
 
         # QA and Recent Reports
@@ -143,40 +149,6 @@ def main():
             st.info("No recent assessment reports found in database.")
 
         st.divider()
-
-        # # API & Environment Configuration
-        # st.subheader("API Gateway Status")
-        
-        # # Determine API Presence without throwing errors on missing secrets
-        # import os
-        # try:
-        #     gemini_present = "INTERNAL_AI_KEY" in st.secrets or "INTERNAL_AI_KEY" in os.environ
-        #     groq_present = "GROQ_API_KEY" in st.secrets or "GROQ_API_KEY" in os.environ
-        #     openrouter_present = "OPENROUTER_API_KEY" in st.secrets or "OPENROUTER_API_KEY" in os.environ
-        #     vertex_present = "vertex_ai" in st.secrets or "VERTEX_AI" in os.environ
-        # except Exception:
-        #     gemini_present = "INTERNAL_AI_KEY" in os.environ
-        #     groq_present = "GROQ_API_KEY" in os.environ
-        #     openrouter_present = "OPENROUTER_API_KEY" in os.environ
-        #     vertex_present = "VERTEX_AI" in os.environ
-
-        # c1, c2, c3, c4 = st.columns(4)
-        # c1.metric("Gemini API", "Configured" if gemini_present else "Missing")
-        # c2.metric("Groq API", "Configured" if groq_present else "Missing")
-        # c3.metric("OpenRouter API", "Configured" if openrouter_present else "Missing")
-        # c4.metric("Vertex AI", "Configured" if vertex_present else "Missing")
-
-        # st.divider()
-
-        # # Webhook logs
-        # st.subheader("Subscription Webhooks (Mock Activity)")
-        # mock_logs = [
-        #     {"Date": "2026-07-18 10:00", "Provider": "Selar", "Status": "SUCCESS", "Amount": "₦7000", "Org Email": "assessor1@center.com"},
-        #     {"Date": "2026-07-15 08:30", "Provider": "Monnify", "Status": "SUCCESS", "Amount": "₦7000", "Org Email": "tech_lead@nsqhub.org"},
-        #     {"Date": "2026-07-14 15:45", "Provider": "Monnify", "Status": "FAILED", "Amount": "₦7000", "Org Email": "incomplete@org.com"}
-        # ]
-        # st.dataframe(mock_logs, width='stretch', hide_index=True)
-        # st.info("System integration webhook processing listener works externally and logs transactions to Supabase databases.")
 
 
     # ==========================================

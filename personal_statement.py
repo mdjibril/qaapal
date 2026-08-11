@@ -161,23 +161,25 @@ def main():
         # Check lock states
         if st.session_state.get('saving_statement'):
             with st.spinner("Saving statement..."):
-                user_id = st.session_state.user_session.id
-                unique_units = sorted(list(set([pc.split(' - ')[0] for pc in selected_pcs])))
-                success, err = db.insert_student_statement(
-                    user_id=user_id,
-                    student_name=student_name,
-                    trade_id=trade_id,
-                    unit_codes=", ".join(unique_units),
-                    reflection_notes=reflection,
-                    statement_text=st.session_state.current_generated_statement
-                )
-                st.session_state.saving_statement = False
-                if success:
-                    st.toast("Statement saved successfully!")
-                    del st.session_state.current_generated_statement
-                    st.rerun()
-                else:
-                    st.error(f"Failed to save: {err}")
+                try:
+                    user_id = st.session_state.user_session.id
+                    unique_units = sorted(list(set([pc.split(' - ')[0] for pc in selected_pcs])))
+                    success, err = db.insert_student_statement(
+                        user_id=user_id,
+                        student_name=student_name,
+                        trade_id=trade_id,
+                        unit_codes=", ".join(unique_units),
+                        reflection_notes=reflection,
+                        statement_text=st.session_state.current_generated_statement
+                    )
+                    if success:
+                        st.toast("Statement saved successfully!")
+                        del st.session_state.current_generated_statement
+                        st.rerun()
+                    else:
+                        st.error(f"Failed to save: {err}")
+                finally:
+                    st.session_state.saving_statement = False
 
         col_save, col_download = st.columns(2)
         with col_save:

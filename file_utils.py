@@ -1,5 +1,3 @@
-from curses import meta
-
 from docx import Document
 from docx.shared import Pt, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -145,7 +143,7 @@ def parse_report_chunks(text):
             
     return chunks
 
-def _create_official_nsq_template(doc, candidate_name, date, report_text, units_summary, criteria_summary, evidence_type="observation", witness_name=None, witness_role=None):
+def _create_official_nsq_template(doc, candidate_name, date, report_text, units_summary, criteria_summary, evidence_type="observation"):
     """
     Internal helper to generate the official CPN-ARF-02 Performance Evidence Record Form.
     """
@@ -330,7 +328,7 @@ def _create_official_nsq_template(doc, candidate_name, date, report_text, units_
             cell.vertical_alignment = WD_ALIGN_VERTICAL.TOP
 
     # --- DECLARATION ---
-    doc.add_paragraph("\nI confirm that the evidence listed above is true record of the perfumed activities observed during this assessment.")
+    doc.add_paragraph("\nI confirm that the evidence listed above is true record of the performed activities observed during this assessment.")
 
     # --- SIGNATURES GRID (Table 4) ---
     sig_table = doc.add_table(rows=4, cols=2)
@@ -422,9 +420,7 @@ def export_witness_to_word(witness_name, witness_role, candidate_name, date, sta
         report_text=statement_text,
         units_summary=units_summary,
         criteria_summary=criteria_summary,
-        evidence_type="witness",
-        witness_name=witness_name,
-        witness_role=witness_role
+        evidence_type="witness"
     )
 
     bio = BytesIO()

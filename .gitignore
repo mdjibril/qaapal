@@ -17,3 +17,5 @@ archived/
 supabase/.temp/
 .env
 *.log
+
+.commandcode

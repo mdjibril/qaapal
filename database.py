@@ -508,40 +508,6 @@ def decrement_credits(org_id):
         print(f"Credit deduction error: {e}")
         return False
 
-@st.dialog("💳 Monnify Payment Portal")
-def mock_payment_dialog(org_id):
-    st.write("### Upgrade to Platform Pass")
-    st.write("Process your payment securely using Monnify.")
-    
-    u_session = st.session_state.get('user_session')
-    email = u_session.email if u_session else "user@example.com"
-    # Naira amount for Platform Pass
-    amount_naira = 7000
-    
-    with st.container(border=True):
-        st.caption("Order Summary")
-        st.write(f"**Plan:** Platform Pass (Monthly)")
-        st.write(f"**Amount:** ₦{amount_naira:,}.00")
-        st.write(f"**Customer:** {email}")
-
-    st.info("💡 In test mode, clicking 'Pay' simulates a successful response from the Monnify SDK.")
-    
-    if st.button("Pay with Monnify", type="primary", width="stretch"):
-        with st.spinner("Initializing Monnify Checkout..."):
-            time.sleep(1.5) # Simulate SDK initialization
-            
-            # Simulate the callback/webhook logic from Monnify
-            success, err = upgrade_org_tier(org_id)
-            if success:
-                st.success("✅ Payment Successful!")
-                st.toast("Monnify Reference: MNFY-TEST-998877")
-                st.session_state['subscription_tier'] = 'platform_pass'
-                st.session_state['subscription_start_date'] = datetime.now().isoformat()
-                time.sleep(1)
-                st.rerun()
-            else:
-                st.error(f"Monnify Error: {err}")
-
 def check_platform_pass_expiry():
     """Checks if the platform_pass subscription has expired."""
     tier = st.session_state.get('subscription_tier', 'free')
@@ -624,13 +590,13 @@ def fetch_system_metrics():
     metrics = {"total_users": 0, "total_orgs": 0, "total_reports": 0}
     try:
         res_users = _execute_query(supabase.table("user_profiles").select("id", count="exact"))
-        metrics["total_users"] = res_users.count if hasattr(res_users, 'count') and res_users.count else len(res_users.data)
+        metrics["total_users"] = res_users.count if hasattr(res_users, 'count') and res_users.count is not None else len(res_users.data)
         
         res_orgs = _execute_query(supabase.table("organizations").select("id", count="exact"))
-        metrics["total_orgs"] = res_orgs.count if hasattr(res_orgs, 'count') and res_orgs.count else len(res_orgs.data)
+        metrics["total_orgs"] = res_orgs.count if hasattr(res_orgs, 'count') and res_orgs.count is not None else len(res_orgs.data)
         
         res_reports = _execute_query(supabase.table("assessment_reports").select("id", count="exact"))
-        metrics["total_reports"] = res_reports.count if hasattr(res_reports, 'count') and res_reports.count else len(res_reports.data)
+        metrics["total_reports"] = res_reports.count if hasattr(res_reports, 'count') and res_reports.count is not None else len(res_reports.data)
     except Exception as e:
         print(f"Metrics fetch error: {e}")
     return metrics

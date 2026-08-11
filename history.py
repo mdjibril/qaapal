@@ -201,7 +201,7 @@ def _extract_report_level_label(unit_codes):
     return f"Levels {', '.join(unique_levels)}"
 
 # Helper function to display a single report item
-def display_report_item(r, current_user_id, current_user_role, table_type, current_page_ids=None, select_all_key=None):
+def display_report_item(r, current_user_id, current_user_role, table_type):
     report_id = r['id']
     is_selected = report_id in st.session_state.get("selected_report_ids", set())
     checkbox_key = f"report_checkbox_{report_id}"
@@ -584,9 +584,9 @@ def main():
                 with st.expander(f"Assessor: {assessor_name} ({len(assessor_reports)} reports)"):
                     for r in assessor_reports:
                         display_report_item(r, user_id, role, st.session_state.history_type)
-            else:
-                for r in filtered_reports:
-                    display_report_item(r, user_id, role, st.session_state.history_type)
+        else:
+            for r in filtered_reports:
+                display_report_item(r, user_id, role, st.session_state.history_type)
 
 if __name__ == "__main__":
     main()

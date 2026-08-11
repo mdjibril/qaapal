@@ -137,6 +137,9 @@ def main():
         tier = 'free'
         st.session_state['credits_balance'] = 0
         credits = 0
+        org_id = st.session_state.get('org_id')
+        if org_id:
+            db.upgrade_org_tier(org_id, 'free')
         ai_policy = get_ai_access_policy(role, tier, is_platform_pass_expired)
         show_byok = ai_policy["allow_byok"]
 

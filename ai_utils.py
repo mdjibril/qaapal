@@ -6,6 +6,7 @@ import requests
 from auth_utils import get_secret
 import streamlit as st
 
+_gemini_key_index = 0
 
 # --- MODULAR AI ROUTER WITH AUTO-DISCOVERY ---
 def validate_and_generate(provider, model_name, api_keys, prompt=None, system_prompt=None):
@@ -14,26 +15,21 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
     to avoid 404 and naming convention errors.
     Implements simple API key rotation for Gemini if multiple keys are provided.
     """
-    # Ensure api_keys is always a list for consistent iteration
+    global _gemini_key_index
+
     if isinstance(api_keys, str):
         api_keys = [api_keys.strip()]
-    api_keys = [k.strip() for k in api_keys if k.strip()] # Clean and remove empty strings
+    api_keys = [k.strip() for k in api_keys if k.strip()]
 
-    # For VertexAI we don't need API keys; skip empty check for that provider
     if provider != "VertexAI" and not api_keys:
         return "API_ERROR: No API keys provided for the selected provider."
 
-    # Initialize or get the current key index for Gemini rotation
-    if provider == "Gemini" and 'current_gemini_key_index' not in st.session_state:
-        st.session_state.current_gemini_key_index = 0
-
     try:
-        if provider == "Gemini": # Gemini-specific logic with key rotation
+        if provider == "Gemini":
             num_keys = len(api_keys)
-            # Safety check: ensure index is within bounds if the key list changed
-            st.session_state.current_gemini_key_index %= num_keys
-            for _ in range(num_keys): # Try each key once
-                current_key_index = st.session_state.current_gemini_key_index
+            _gemini_key_index %= num_keys
+            for _ in range(num_keys):
+                current_key_index = _gemini_key_index
                 current_api_key = api_keys[current_key_index]
                 
                 try:
@@ -47,19 +43,16 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                         )
                         return response.text
                     else:
-                        # For connection test, just try a simple generation to verify connectivity
                         client.models.generate_content(
                             model=model_name,
                             contents="Ping",
-                            config={"max_output_tokens": 10}
+                            config={"max_output_tokens": 1}
                         )
                         return f"✅ Connected: {model_name}"
                 except Exception as e:
-                    # Check for rate limiting (429) specifically if possible, or rotate on any error
-                    st.session_state.current_gemini_key_index = (current_key_index + 1) % num_keys
+                    _gemini_key_index = (current_key_index + 1) % num_keys
                     if num_keys > 1:
-                        st.warning(f"Gemini key {current_key_index+1}/{num_keys} failed/exhausted, trying next key. ({e})")
-                        continue # Try the next key in the loop
+                        continue
                     else:
                         if "429" in str(e):
                             return "API_ERROR: The free AI service is currently at capacity. Please try again in a minute."
@@ -181,8 +174,7 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                 # Connection test
                 try:
                     client = genai.Client(vertexai=True, project=project_id, location=location, credentials=creds)
-                    # Basic call to check connection
-                    client.models.generate_content(model=model_name, contents="Ping", config={'max_output_tokens': 10})
+                    client.models.generate_content(model=model_name, contents="Ping", config={'max_output_tokens': 1})
                     return f"✅ Connected: Vertex AI ({model_name})"
                 except Exception as e:
                     return f"API_ERROR: Vertex AI connection test failed – {e}"

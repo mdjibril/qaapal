@@ -47,11 +47,7 @@ def main():
         st.warning("Please select a trade in the sidebar.")
         return
 
-
-    # 3. Fetch Data
-    NOS_DATA = db.fetch_nested_nos(trade_level_id=trade_level_id, trade_id=trade_id)
-    
-    # 4. UI Section
+    # 3. UI Section
     st.markdown("#### Step 1: Student & Session Info")
     with st.expander("Step 1: Details", expanded=True):
         col1, col2 = st.columns(2)

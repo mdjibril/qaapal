@@ -75,8 +75,12 @@ def get_admin_supabase():
     key = get_secret(["connections", "supabase", "SERVICE_ROLE_KEY"], "connections__supabase__SERVICE_ROLE_KEY")
     
     if not url or not key:
-        st.error("SERVICE_ROLE_KEY is missing from secrets! This is required for admin tasks.")
-        st.stop()
+        error_msg = "SERVICE_ROLE_KEY is missing from secrets! This is required for admin tasks."
+        try:
+            st.error(error_msg)
+            st.stop()
+        except Exception:
+            raise RuntimeError(error_msg)
         
     return create_client(url, key, options=ClientOptions(postgrest_client_timeout=60))
 

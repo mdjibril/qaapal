@@ -2,7 +2,7 @@ import time
 
 import streamlit as st
 
-from auth_utils import get_supabase
+from auth_utils import get_supabase, get_admin_supabase
 from app_state import ensure_session_defaults
 
 
@@ -46,7 +46,7 @@ def main():
             st.error("Phone number is too long.")
         else:
             try:
-                supabase = get_supabase()
+                supabase = get_admin_supabase()
                 supabase.table("user_profiles").update(
                     {
                         "full_name": full_name,
