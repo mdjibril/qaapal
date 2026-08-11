@@ -1,5 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------
+    // 0. Auth Synchronicity — Toggle Login vs Dashboard
+    // ----------------------------------------------------
+    (async function syncAuthState() {
+        try {
+            const supabase = window.supabase?.createClient(
+                'https://omsvxmtssqqrznvesdfe.supabase.co',
+                'sb_publishable_Yf3med4tdrvF00APs6rFmQ_7jbwP_0I'
+            );
+            if (!supabase) return;
+
+            const { data: { session } } = await supabase.auth.getSession();
+            if (session) {
+                document.querySelectorAll('[data-auth="signup"]').forEach(el => {
+                    el.textContent = 'Go to Dashboard';
+                    el.href = 'https://app.nsqassessment.com.ng/';
+                });
+            }
+        } catch (e) {
+            // Network error or Supabase unreachable — leave signup buttons as default
+            console.log('Auth sync skipped:', e.message);
+        }
+    })();
+
+    // ----------------------------------------------------
     // 1. Pricing Toggle Logic
     // ----------------------------------------------------
     const billingToggle = document.getElementById('billing-toggle');

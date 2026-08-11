@@ -10,6 +10,19 @@
     <meta name="keywords"
         content="NSQ, National Skills Qualification, NBTE, Assessment Reports, Assessor Portal, AI Report Generator, BYOK">
 
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self';
+                   script-src 'self' https://cdn.jsdelivr.net;
+                   connect-src 'self' https://*.supabase.co;
+                   style-src 'self' https://fonts.googleapis.com;
+                   font-src https://fonts.gstatic.com;
+                   img-src 'self' data:;
+                   frame-ancestors 'none';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     <!-- OpenGraph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nsqassessment.com.ng/">
@@ -37,6 +50,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
@@ -59,7 +73,7 @@
                     <a href="#faq">FAQ</a>
                 </div>
                 <a href="https://app.nsqassessment.com.ng/?intent=signup" class="btn btn-primary nav-cta"
-                    id="nav-login-btn">Login / Sign Up</a>
+                    id="nav-login-btn" data-auth="signup">Login / Sign Up</a>
             </div>
             <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu"
                 aria-expanded="false">
@@ -82,7 +96,7 @@
                     NBTE standards.</p>
                 <div class="hero-btns animate-slide-up-delayed">
                     <a href="https://app.nsqassessment.com.ng/?intent=signup" class="btn btn-primary"
-                        id="hero-cta-btn">Get Started for Free</a>
+                        id="hero-cta-btn" data-auth="signup">Get Started for Free</a>
                     <a href="#features" class="btn btn-secondary">Explore Features</a>
                 </div>
             </div>
@@ -162,7 +176,7 @@
                             <li class="disabled"><span>✗</span> Priority Support</li>
                         </ul>
                         <a href="https://app.nsqassessment.com.ng/?intent=signup" class="btn btn-outline card-btn"
-                            id="pricing-free-btn">Get Started</a>
+                            id="pricing-free-btn" data-auth="signup">Get Started</a>
                     </div>
 
                     <!-- Platform Pass Card -->
@@ -184,7 +198,7 @@
                             <li class="disabled"><span>✗</span> Shared organization billing</li>
                         </ul>
                         <a href="https://app.nsqassessment.com.ng/?intent=signup" class="btn btn-primary card-btn"
-                            id="pricing-pass-btn">Upgrade to BYOK</a>
+                            id="pricing-pass-btn" data-auth="signup">Upgrade to BYOK</a>
                     </div>
 
                     <!-- Lifetime Card -->
@@ -207,7 +221,7 @@
                             <li><span>✓</span> Multi-trade workspace support</li>
                             <li><span>✓</span> Priority email & chat support</li>
                         </ul>
-                        <a href="https://app.nsqassessment.com.ng/?intent=signup" class="btn btn-primary card-btn" id="pricing-lifetime-btn">Get Lifetime Access</a>
+                        <a href="https://app.nsqassessment.com.ng/?intent=signup" class="btn btn-primary card-btn" id="pricing-lifetime-btn" data-auth="signup">Get Lifetime Access</a>
                     </div>
 
                     <!-- Enterprise Card -->

@@ -107,8 +107,8 @@ We have updated the sidebar to reflect the new billing states and implemented th
     *   [x] **DNS Configuration:** Point DomainKing nameservers to Netlify; CNAME verified, TXT record verified by Railway.
     *   [x] **CTA Implementation:** Link landing page "Get Started" buttons to the Streamlit URL using `?intent=signup` parameters.
     *   [x] **Deep Linking Logic:** Update `main.py` to check `st.query_params` for `intent=signup` and `type=recovery` to auto-toggle the registration/reset tab.
-    *   [ ] **Auth Synchronicity:** (Optional) Use Supabase JS on the landing page to toggle "Login" vs "Dashboard" buttons based on session.
-    *   [ ] **SEO & Metadata:** Align OpenGraph tags and canonical URLs across both the landing page and the app.
+*   [x] **Auth Synchronicity:** (Optional) Use Supabase JS on the landing page to toggle "Login" vs "Dashboard" buttons based on session.
+    *   [x] **SEO & Metadata:** Align OpenGraph tags and canonical URLs across both the landing page and the app.
 
 ### Phase 3: Output Refinement & Quality Assurance (User Feedback Implementation) - **COMPLETED**
 *   [x] **Prompt Engineering Overhaul (System Prompt Update):** Shift the AI persona from a "storytelling mindset" to a "process-documentation mindset" to ensure reports are truly audit-ready and compliant with the NSQ framework. Implement the following step-by-step rules:
@@ -135,6 +135,7 @@ To effectively manage the SaaS platform and monitor system health, a dedicated S
 *   [x] **NSQ Role Tracking:** Added a role selection dropdown (QAA, IQA, EQA) to the sign-up form and linked it to the `user_profiles` schema for better user segmentation.
 *   [x] **Product Feedback Widget:** Implemented a robust in-app feedback system (👍/👎 with optional comment box) that displays after report generation and clears appropriately for new generations.
 *   [x] **Strict Pre-Generation Validation:** Enforced that all critical observation inputs (Candidate Name, Timeline, Atmospheric Details, Observation Notes) are non-empty before allowing AI generation to proceed.
+
 ### Phase 4: Advanced Integrations
 *   **Real Monnify Integration:** Transition from Selar to Monnify Web SDK/API for more advanced payment flows, once business registration is complete.
 
@@ -155,28 +156,10 @@ These improvements should be implemented as lightweight, query-driven features t
 * [x] Encapsulate top-level `main.py` UI logic in a single entrypoint function to avoid accidental re-execution.
 * [x] Add a stateless retry decorator for DB calls to handle transient connection resets without preserving retry state in memory.
 
-### Phase 5 Database Notes
-* Keep indexes that improve query performance for history filtering and sorting:
-  * `CREATE INDEX IF NOT EXISTS idx_reports_created_by ON public.assessment_reports (created_by);`
-  * `CREATE INDEX IF NOT EXISTS idx_reports_created_at ON public.assessment_reports (created_at DESC);`
-
-### Phase 5 Implementation Guideline
-Prioritize features that use:
-* lightweight, on-demand data queries
-* minimal `st.session_state` usage
-* no large in-process workloads or caches
-* explicit DB sorting/filtering instead of full-table reads
-* one-time image loads for exports, not persistent binary state
-
-### Phase 5 Deferred / Advanced Items
-These should be postponed from Phase 5 because they require heavier state, background workflows, or webhook complexity:
-* Monnify webhook automation and payment callback listener development
-* subscription expiry email notifications
-* full API usage monitor dashboards
-* webhook origin verification logic beyond standard request validation
-
-### Phase 5 Delivery
-Deliver Phase 5 as small UI and database enhancements only, keeping the app memory footprint low and Railway resource usage minimal.
+> **Phase 5 Design Notes:**
+> - Keep DB indexes: `idx_reports_created_by` on `assessment_reports(created_by)`, `idx_reports_created_at` on `assessment_reports(created_at DESC)`
+> - Prioritize lightweight queries, minimal `st.session_state`, explicit DB sorting/filtering, no large in-process caches, no persistent binary state
+> - **Deferred (heavy state / background workflows):** Monnify webhook automation, subscription expiry emails, API usage dashboards, webhook origin verification
 
 
 ### Security Verification
@@ -191,3 +174,87 @@ Deliver Phase 5 as small UI and database enhancements only, keeping the app memo
 *   [x] **Auth Consistency Check:** Tightened `check_auth()` so the app only treats authentication as valid when both `user_session` and `supabase_session` exist and refer to the same Supabase user.
 *   [x] **Verification Command:** Confirmed Python syntax with `python3 -m py_compile auth_utils.py main.py database.py history.py dashboard.py personal_statement.py witness_statement.py subscription_page.py`.
 *   [x] **Production DB Follow-Up:** Apply the updated witness statement RLS policy from `setup_full_db.sql` in the live Supabase SQL Editor if it has not already been applied.
+
+---
+
+### Phase 6: QA Assessor Growth & Retention
+These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the tool indispensable and attract more users in the NSQ ecosystem.
+
+#### Tier 1 — High Impact / Doable with Current Stack
+
+*   [ ] **Photo & Video Evidence Attachments**
+    *   Allow assessors to upload photos/videos per Performance Criterion as supporting proof.
+    *   Store files in **Supabase Storage**, display inline in report previews.
+    *   **Why:** Massive boost to audit credibility. Assessors can show exactly what the candidate did instead of just describing it.
+
+*   [ ] **Student Portfolio / Progress Tracker**
+    *   Track a student across multiple assessments over time.
+    *   Dashboard per student: which PCs passed, which need retesting, growth timeline.
+    *   Database: New `student_portfolios` table linking students to their report history and PC completion status.
+    *   **Why:** Makes the tool sticky — assessors return to manage ongoing cohorts rather than treating each report as a one-off.
+
+*   [ ] **Voice Dictation for Observation Notes**
+    *   Use `st.audio_input` (Streamlit native) for in-browser voice recording.
+    *   Pipe audio to Gemini/Whisper for transcription into the observation notes text area.
+    *   **Why:** Assessors in workshops and field sites hate typing on phones. This alone could be the biggest differentiator.
+
+*   [ ] **Evidence Matrix Auto-Mapper**
+    *   AI scans observation notes and automatically suggests which PCs they map to.
+    *   Saves assessor time manually matching every observation to specific criteria.
+    *   **Why:** Cuts ~50% of the report generation work. Huge time-saver in high-volume assessment centers.
+
+*   [ ] **Assessment Templates / Quick Start**
+    *   Pre-built PC bundles for common trades (e.g., "ICT L3 — Standard Web Dev Assessment").
+    *   Assessor picks a template → jumps straight to generating, no manual PC clicking needed.
+    *   Store templates in a new `assessment_templates` table in Supabase.
+    *   **Why:** Removes the biggest friction point for repeat assessors who assess the same trade regularly.
+
+#### Tier 2 — Medium Impact
+
+*   [ ] **PWA / Mobile-Optimized Layout**
+    *   Responsive mobile layout or Progressive Web App setup.
+    *   Service worker for basic offline caching, installable on home screen.
+    *   **Why:** Most assessors work in workshops, not at desks. Mobile access dramatically expands the user base.
+
+*   [ ] **Bulk CSV Import for Cohorts**
+    *   Import a class roster via CSV (names, orgs, candidate IDs).
+    *   Batch-create assessment sessions — one click generates 30 student report templates.
+    *   **Why:** Training centers with dozens of students per cohort can onboard in minutes instead of hours.
+
+*   [ ] **IQA / EQA Review Workflow**
+    *   Internal/External Quality Assurers can review submitted reports.
+    *   Leave comments, approve/reject with feedback, track review status per report.
+    *   Database: New `report_reviews` table with reviewer ID, status, timestamp, comments.
+    *   **Why:** Adds a second user persona (IQA/EQA) and makes the tool essential across the entire quality assurance chain.
+
+*   [ ] **Export to PDF (in addition to Word)**
+    *   Many organizations and accreditation bodies require PDF format.
+    *   Implement with `reportlab` or headless browser rendering.
+    *   **Why:** Removes a blocker for orgs that mandate PDF submissions.
+
+#### Tier 3 — Big Swing / Long-Term
+
+*   [ ] **Offline-First Mode**
+    *   IndexedDB + service worker for offline form filling.
+    *   Assessors work in remote sites with no connectivity → sync when back online.
+    *   **Why:** Opens up rural and remote assessment centers that currently have no digital tooling.
+
+*   [ ] **QR Code Student ID Integration**
+    *   Print a QR code on a physical student badge.
+    *   Assessor scans with phone camera → pulls up student portfolio → starts new assessment.
+    *   **Why:** Eliminates manual student lookup. Especially powerful in high-volume testing centers.
+
+---
+
+### Completed Phases Summary
+
+| Phase | Status | Description |
+|-------|--------|-------------|
+| Phase 1 | ✅ Complete | Infrastructure, database schema, auth, freemium model |
+| Phase 2 | ✅ Complete | Production readiness, Selar integration, Vertex AI, credit guard |
+| Phase 3 | ✅ Complete | Prompt engineering overhaul, Field Auditor persona |
+| Phase 3.1 | ✅ Complete | Super Admin dashboard, org/user management, API controls |
+| Phase 3.2 | ✅ Complete | Auto-renewing credits, bulk ZIP, AI disclaimers, feedback widget |
+| Phase 5 | ✅ Complete | Small features: sorting, filters, progress bars, session refactor |
+| Security | ✅ Complete | IDOR fixes, RLS policies, session isolation, auth consistency |
+| Code Quality | ✅ Complete | 20 issues fixed across critical/high/medium/low (see issues.md) |

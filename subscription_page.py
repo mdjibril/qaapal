@@ -69,15 +69,35 @@ def main():
                 is_expired = db.check_platform_pass_expiry()
                 if is_expired:
                     st.error("Your Platform Pass has expired! Please renew to continue enjoying unlimited generations.")
-                    st.link_button("Renew Platform Pass Now", upgrade_link, type="primary", width="stretch")
+                    col_r1, col_r2 = st.columns(2)
+                    with col_r1:
+                        st.link_button("Renew Platform Pass Now", upgrade_link, type="primary", width="stretch")
+                    with col_r2:
+                        st.link_button("💎 Upgrade to Lifetime", lifetime_upgrade_link, type="secondary", width="stretch")
                 else:
                     st.success("Your Platform Pass is active!")
-                    # Calculate days left relative to the timezone of the start_date
                     days_left = (expiry_date - now_in_tz).days
                     if days_left > 0:
                         st.info(f"You have approximately {days_left} days left on your current subscription.")
                     else:
                         st.info("Your subscription is due to expire very soon!")
+
+                # --- Upgrade / Downgrade options always visible for platform_pass users ---
+                st.markdown("---")
+                st.subheader("Change Plan")
+                col_a1, col_a2 = st.columns(2)
+                with col_a1:
+                    st.link_button("💎 Upgrade to Lifetime (₦10,000 One-time)", lifetime_upgrade_link, type="primary", width="stretch")
+                with col_a2:
+                    if st.button("⬇️ Downgrade to Free", type="secondary", width="stretch"):
+                        success, err = db.upgrade_org_tier(org_id, 'free')
+                        if success:
+                            st.session_state['subscription_tier'] = 'free'
+                            st.session_state['credits_balance'] = 5
+                            st.toast("Downgraded to Free plan. You now have 5 credits.")
+                            st.rerun()
+                        else:
+                            st.error(f"Failed to downgrade: {err}")
 
             except ValueError:
                 st.warning("Could not parse subscription start date. Please contact support.")

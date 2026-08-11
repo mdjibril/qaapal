@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nsqassessment.com.ng/sitemap.xml
