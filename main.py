@@ -1,6 +1,6 @@
 import streamlit as st
 from auth_utils import check_auth, login_form, get_secret, reset_password_form, finalize_session
-import dashboard, history, personal_statement, witness_statement, subscription_page, account_settings, admin_panel, database as db
+import dashboard, history, personal_statement, witness_statement, subscription_page, account_settings, admin_panel, student_portfolio, bulk_csv_import, database as db
 from ai_utils import validate_and_generate
 from ai_policy import get_ai_access_policy
 from app_state import ensure_session_defaults
@@ -13,6 +13,48 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# --- Mobile-optimized responsive CSS ---
+st.markdown("""
+<style>
+/* Improve mobile responsiveness */
+@media screen and (max-width: 768px) {
+    /* Make buttons full-width on mobile */
+    .stButton > button,
+    .stDownloadButton > button,
+    .stFormSubmitButton > button {
+        width: 100%;
+    }
+
+    /* Reduce padding on mobile */
+    .block-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1rem;
+    }
+
+    /* Make text inputs larger touch targets */
+    .stTextInput input,
+    .stTextArea textarea {
+        font-size: 16px !important;
+    }
+
+    /* Stack columns on mobile */
+    [data-testid="column"] {
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+}
+
+/* General mobile improvements */
+@media screen and (max-width: 480px) {
+    .block-container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+</style>
+""", unsafe_allow_html=True)
 
 # Callback function for API key inputs
 def update_api_key_session(key_name):
@@ -318,6 +360,8 @@ def main():
             }
             if role == 'admin':
                 pages["🛡️ Super Admin Dashboard"] = admin_panel.main
+                pages["🎓 Student Portfolios"] = student_portfolio.main
+                pages["📋 Bulk CSV Import"] = bulk_csv_import.main
 
         selection = st.radio("Go to", list(pages.keys()), label_visibility="collapsed")
 

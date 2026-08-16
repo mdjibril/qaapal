@@ -1,6 +1,7 @@
 import json
 from google.oauth2 import service_account
 from google import genai
+from google.genai import types
 from groq import Groq
 import requests
 from auth_utils import get_secret
@@ -202,3 +203,47 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
 
     except Exception as e:
         return f"API_ERROR: {str(e)}"
+
+
+def transcribe_audio_with_vertex(audio_bytes):
+    """
+    Transcribe audio using Vertex AI (Gemini 3.5 Flash with audio input).
+    Returns (transcript_text, None) on success or (None, error_string) on failure.
+    """
+    sa_json_str = get_secret(["vertex_ai", "service_account_json"], "vertex_ai__service_account_json")
+    if not sa_json_str:
+        return None, "Vertex AI service account not configured in secrets."
+
+    try:
+        sa_info = json.loads(sa_json_str)
+        creds = service_account.Credentials.from_service_account_info(
+            sa_info,
+            scopes=["https://www.googleapis.com/auth/cloud-platform"]
+        )
+        project_id = sa_info.get("project_id") or sa_info.get("projectId")
+        location = get_secret(["vertex_ai", "location"], "vertex_ai__location") or "us-central1"
+
+        client = genai.Client(
+            vertexai=True,
+            project=project_id,
+            location=location,
+            credentials=creds
+        )
+
+        # Create audio part from bytes (wav format from st.audio_input)
+        audio_part = types.Part.from_bytes(data=audio_bytes, mime_type="audio/wav")
+
+        response = client.models.generate_content(
+            model="gemini-3.5-flash",
+            contents=[audio_part, "Transcribe the audio to text. Return only the transcript."],
+            config=types.GenerateContentConfig(
+                system_instruction="You are a transcription engine. Return only the transcribed text, no commentary."
+            )
+        )
+
+        if response.text:
+            return response.text.strip(), None
+        else:
+            return None, "Vertex AI returned an empty transcription response."
+    except Exception as e:
+        return None, str(e)

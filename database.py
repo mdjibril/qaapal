@@ -414,7 +414,7 @@ def update_performance_criterion(pc_id, pc_code, description):
 
 def insert_report(name, trade_id, unit_codes, report_content, date, user_id):
     """
-    Inserts report and returns (success_bool, error_message)
+    Inserts report and returns (success_bool, report_id_or_error_message)
     """
     supabase = get_supabase()
     
@@ -431,8 +431,12 @@ def insert_report(name, trade_id, unit_codes, report_content, date, user_id):
             "created_by": user_id  # Supabase client handles UUID objects or strings correctly
         }
         
-        _execute_query(supabase.table("assessment_reports").insert(data))
+        res = _execute_query(supabase.table("assessment_reports").insert(data))
         st.cache_data.clear()
+        
+        if res.data and len(res.data) > 0:
+            return True, res.data[0]
+        
         return True, None
 
     except Exception as e:
@@ -618,6 +622,272 @@ def update_org_credits(org_id, new_balance):
     supabase = get_admin_supabase()
     try:
         _execute_query(supabase.table("organizations").update({"credits_balance": new_balance}).eq("id", org_id))
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
+
+# ==============================================================
+# Phase 6 — QA Assessor Growth & Retention (ADMIN-ONLY)
+# ==============================================================
+
+def fetch_student_portfolios(user_id=None, trade_id=None):
+    """Fetch all student portfolios (admin-only via RLS)."""
+    supabase = get_admin_supabase()
+    try:
+        query = supabase.table("student_portfolios").select("*, trades(name)")
+        if user_id:
+            query = query.eq("created_by", user_id)
+        if trade_id:
+            query = query.eq("trade_id", int(trade_id))
+        res = _execute_query(query.order("created_at", desc=True))
+        return res.data or []
+    except Exception as e:
+        print(f"Error fetching portfolios: {e}")
+        return []
+
+
+def fetch_student_portfolio(portfolio_id):
+    """Fetch a single portfolio with its trade metadata."""
+    supabase = get_admin_supabase()
+    try:
+        res = _execute_query(
+            supabase.table("student_portfolios")
+            .select("*, trades(name)")
+            .eq("id", portfolio_id)
+            .single()
+        )
+        return res.data
+    except Exception as e:
+        print(f"Error fetching portfolio: {e}")
+        return None
+
+
+def create_student_portfolio(student_name, trade_id, trade_level_id, student_email=None, candidate_ref=None, user_id=None):
+    """Create a new student portfolio (admin-only)."""
+    supabase = get_admin_supabase()
+    try:
+        data = {
+            "student_name": student_name,
+            "trade_id": int(trade_id) if trade_id else None,
+            "trade_level_id": int(trade_level_id) if trade_level_id else None,
+            "student_email": student_email,
+            "candidate_ref": candidate_ref,
+            "created_by": user_id
+        }
+        res = _execute_query(supabase.table("student_portfolios").insert(data))
+        if res.data:
+            return res.data[0], None
+        return None, "No data returned from insert."
+    except Exception as e:
+        return None, str(e)
+
+
+def delete_student_portfolio(portfolio_id):
+    """Delete a portfolio and cascade its PC progress (admin-only)."""
+    supabase = get_admin_supabase()
+    try:
+        _execute_query(supabase.table("student_portfolios").delete().eq("id", portfolio_id))
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
+
+def fetch_pc_progress(portfolio_id):
+    """Fetch PC progress for a student portfolio, joined with NOS metadata."""
+    supabase = get_admin_supabase()
+    try:
+        res = _execute_query(
+            supabase.table("student_pc_progress")
+            .select("*, performance_criteria(pc_code, description), units(code, title)")
+            .eq("portfolio_id", portfolio_id)
+        )
+        return res.data or []
+    except Exception as e:
+        print(f"Error fetching PC progress: {e}")
+        return []
+
+
+def upsert_pc_progress(portfolio_id, pc_id, unit_id, status, evidence_report_id=None, assessed_by=None):
+    """Insert or update PC progress for a student (admin-only)."""
+    supabase = get_admin_supabase()
+    try:
+        data = {
+            "portfolio_id": portfolio_id,
+            "pc_id": int(pc_id),
+            "unit_id": int(unit_id) if unit_id else None,
+            "status": status,
+            "evidence_report_id": evidence_report_id,
+            "assessed_by": assessed_by,
+            "assessed_at": "now()"
+        }
+        res = _execute_query(
+            supabase.table("student_pc_progress")
+            .upsert(data, on_conflict="portfolio_id,pc_id")
+        )
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
+
+def delete_pc_progress(progress_id):
+    """Delete a single PC progress row (admin-only)."""
+    supabase = get_admin_supabase()
+    try:
+        _execute_query(supabase.table("student_pc_progress").delete().eq("id", progress_id))
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
+
+def fetch_pc_options_for_portfolio(trade_id=None, trade_level_id=None):
+    """
+    Fetch a flat list of PCs with their IDs and unit IDs for dropdowns.
+    Returns a list of dicts: {'label': 'UNIT - LO - PC_CODE', 'pc_id': int, 'unit_id': int}
+    """
+    supabase = get_admin_supabase()
+    try:
+        query = supabase.table("units").select(
+            "id, code, learning_outcomes(id, lo_num, performance_criteria(id, pc_code, description))"
+        )
+        if trade_level_id is not None:
+            query = query.eq("trade_level_id", int(trade_level_id))
+        elif trade_id is not None:
+            query = query.eq("trade_id", int(trade_id))
+        else:
+            return []
+
+        response = _execute_query(query)
+        raw_units = response.data or []
+
+        pc_options = []
+        for unit in raw_units:
+            unit_code = unit.get('code', '')
+            unit_id = unit.get('id')
+            for lo in unit.get('learning_outcomes', []):
+                lo_num = lo.get('lo_num', '')
+                for pc in lo.get('performance_criteria', []):
+                    pc_code = pc.get('pc_code', '')
+                    pc_id = pc.get('id')
+                    pc_options.append({
+                        'label': f"{unit_code} - {lo_num} - {pc_code}",
+                        'pc_id': pc_id,
+                        'unit_id': unit_id,
+                    })
+        return pc_options
+    except Exception as e:
+        print(f"Error fetching PC options: {e}")
+        return []
+
+
+def fetch_portfolio_by_student_and_trade(student_name, trade_id):
+    """Look up a student portfolio by name and trade (admin-only)."""
+    supabase = get_admin_supabase()
+    try:
+        res = _execute_query(
+            supabase.table("student_portfolios")
+            .select("*")
+            .eq("student_name", student_name)
+            .eq("trade_id", int(trade_id))
+            .order("created_at", desc=True)
+            .limit(1)
+        )
+        if res.data:
+            return res.data[0]
+        return None
+    except Exception as e:
+        print(f"Error looking up portfolio: {e}")
+        return None
+
+
+def auto_track_portfolio_progress(student_name, trade_id, trade_level_id, selected_pcs, evidence_report_id, assessed_by):
+    """
+    After report generation, auto-track PC progress for the student portfolio.
+    Maps each selected PC string to its PC/unit IDs and upserts status 'passed'.
+    Returns (portfolio_found_bool, count_tracked, error_msg)
+    """
+    portfolio = fetch_portfolio_by_student_and_trade(student_name, trade_id)
+    if not portfolio:
+        return False, 0, "No matching portfolio found for this student/trade."
+
+    portfolio_id = portfolio['id']
+    pc_options = fetch_pc_options_for_portfolio(trade_id=trade_id, trade_level_id=trade_level_id)
+
+    # Build a lookup keyed by "UNIT - LO - PC_CODE" from selected_pcs
+    tracked_count = 0
+    error_msg = None
+    for selected in selected_pcs:
+        # selected format: "UNIT_CODE - LO_NUM - PC_CODE: Description"
+        parts = selected.split(' - ')
+        if len(parts) < 3:
+            continue
+        unit_code = parts[0].strip()
+        lo_num = parts[1].strip()
+        pc_code = parts[2].split(':')[0].strip()
+
+        # Find matching PC option
+        match = next(
+            (opt for opt in pc_options
+             if opt['label'] == f"{unit_code} - {lo_num} - {pc_code}"),
+            None
+        )
+        if match:
+            success, err = upsert_pc_progress(
+                portfolio_id=portfolio_id,
+                pc_id=match['pc_id'],
+                unit_id=match['unit_id'],
+                status='passed',
+                evidence_report_id=evidence_report_id,
+                assessed_by=assessed_by
+            )
+            if success:
+                tracked_count += 1
+            else:
+                error_msg = err
+
+    return True, tracked_count, error_msg
+
+
+def fetch_assessment_templates(trade_id=None, trade_level_id=None):
+    """Fetch assessment templates, optionally filtered by trade/level."""
+    supabase = get_admin_supabase()
+    try:
+        query = supabase.table("assessment_templates").select("*")
+        if trade_id:
+            query = query.eq("trade_id", int(trade_id))
+        if trade_level_id:
+            query = query.eq("trade_level_id", int(trade_level_id))
+        res = _execute_query(query.order("name"))
+        return res.data or []
+    except Exception as e:
+        print(f"Error fetching templates: {e}")
+        return []
+
+
+def save_assessment_template(name, trade_id, trade_level_id, pc_ids, user_id=None):
+    """Create a new assessment template (admin-only)."""
+    supabase = get_admin_supabase()
+    try:
+        data = {
+            "name": name,
+            "trade_id": int(trade_id) if trade_id else None,
+            "trade_level_id": int(trade_level_id) if trade_level_id else None,
+            "pc_ids": pc_ids,
+            "created_by": user_id
+        }
+        res = _execute_query(supabase.table("assessment_templates").insert(data))
+        if res.data:
+            return res.data[0], None
+        return None, "No data returned from insert."
+    except Exception as e:
+        return None, str(e)
+
+
+def delete_assessment_template(template_id):
+    """Delete an assessment template (admin-only)."""
+    supabase = get_admin_supabase()
+    try:
+        _execute_query(supabase.table("assessment_templates").delete().eq("id", template_id))
         return True, None
     except Exception as e:
         return False, str(e)

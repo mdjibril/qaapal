@@ -1,8 +1,8 @@
 import streamlit as st
 import datetime
 import time
-from file_utils import export_to_word
-from ai_utils import validate_and_generate
+from file_utils import export_to_word, export_to_pdf
+from ai_utils import validate_and_generate, transcribe_audio_with_vertex
 from auth_utils import get_secret
 from security_utils import sanitize_text_input, sanitize_notes_input
 import database as db
@@ -66,13 +66,34 @@ def main():
 
     trade_id = st.session_state.get('selected_trade_id')
     trade_level_id = st.session_state.get('selected_trade_level_id')
-    # Ensure db.fetch_nested_nos has @st.cache_data in your database.py file!
     NOS_DATA = db.fetch_nested_nos(trade_level_id=trade_level_id, trade_id=trade_id) 
 
     if not NOS_DATA:
         st.warning(f"No units found for trade ID {trade_id}.")
     else:
-        # 2. Call the fragment
+        # --- ADMIN-ONLY: Assessment Templates ---
+        if role == 'admin':
+            st.markdown("##### 📋 Assessment Templates (Admin Only)")
+            templates = db.fetch_assessment_templates(trade_id=trade_id, trade_level_id=trade_level_id)
+            if templates:
+                template_names = {t['id']: t['name'] for t in templates}
+                selected_template_id = st.selectbox(
+                    "Load a template to pre-fill PC selections",
+                    options=list(template_names.keys()),
+                    format_func=lambda x: template_names[x],
+                    key="admin_template_select"
+                )
+                if st.button("Load Template", key="load_template_btn"):
+                    template = next((t for t in templates if t['id'] == selected_template_id), None)
+                    if template:
+                        pc_ids = template.get('pc_ids', [])
+                        # Pre-check these PCs in the persistent set
+                        st.session_state.persistent_selected_pcs = set(pc_ids)
+                        st.rerun()
+            else:
+                st.caption("No templates saved yet for this trade/level.")
+
+        # Call the fragment
         components.render_nos_selection(
             nos_data=NOS_DATA,
             prefix="",
@@ -81,13 +102,95 @@ def main():
             select_key_prefix="dash"
         )
 
+        # --- ADMIN-ONLY: Save Current Selection as Template ---
+        if role == 'admin':
+            current_selected = st.session_state.get('current_selected_pcs', [])
+            if current_selected:
+                with st.expander("💾 Save Current Selection as Template"):
+                    template_name = st.text_input("Template Name", key="save_template_name")
+                    if st.button("Save Template", key="save_template_btn"):
+                        if template_name.strip():
+                            result, err = db.save_assessment_template(
+                                name=template_name.strip(),
+                                trade_id=trade_id,
+                                trade_level_id=trade_level_id,
+                                pc_ids=current_selected,
+                                user_id=user_id
+                            )
+                            if result:
+                                st.toast("Template saved.")
+                                st.rerun()
+                            else:
+                                st.error(f"Failed to save template: {err}")
+                        else:
+                            st.error("Template name is required.")
+
     st.markdown("#### Step 3: Unique Learning Moment")
-    # The Formula Guide (A visual reminder for the user)
     st.info("""
     **💡 Pro-Tip for Unique Reports:** Use the 'Observation Formula' for better AI results:
     **[Action]** + **[Specific Tool/Component]** + **[Specific Result or Quote]**
     *Example: 'Struggled with the RJ45 crimping tool at first but corrected the pin alignment manually after a second attempt.'*
     """)
+
+    # --- ADMIN-ONLY: Voice Dictation ---
+    if role == 'admin':
+        with st.expander("🎤 Voice Dictation (Admin Only)", expanded=False):
+            audio_bytes = st.audio_input("Record observation notes by voice")
+            if audio_bytes:
+                st.audio(audio_bytes, format="audio/wav")
+                if st.button("Transcribe Audio", key="transcribe_btn"):
+                    with st.spinner("Transcribing..."):
+                        transcript, err = transcribe_audio_with_vertex(audio_bytes)
+                        if transcript:
+                            st.session_state.observation_notes_input = transcript
+                            st.toast("Transcription complete.")
+                            st.rerun()
+                        else:
+                            st.error(f"Transcription failed: {err}")
+
+    # --- ADMIN-ONLY: Evidence Matrix Auto-Mapper ---
+    if role == 'admin':
+        if st.button("✨ Suggest PCs from Notes", key="suggest_pcs_btn"):
+            current_notes = st.session_state.get('observation_notes_input', '')
+            if not current_notes.strip():
+                st.warning("Please enter observation notes first (Step 3).")
+            else:
+                with st.spinner("Analyzing notes and suggesting PCs..."):
+                    pc_list = []
+                    for unit_key, los in NOS_DATA.items():
+                        unit_code = unit_key.split(':')[0]
+                        for lo_key, pcs in los.items():
+                            lo_id = lo_key.split(':')[0].replace("LO", "").strip()
+                            for pc in pcs:
+                                pc_list.append(f"{unit_code} - {lo_id} - {pc}")
+
+                    suggestion_prompt = f"""
+Given the following observation notes:
+{current_notes}
+
+And the following available Performance Criteria:
+{chr(10).join(pc_list)}
+
+Return a JSON array of the PC strings that are demonstrably evidenced in the notes. Only include PCs where the notes clearly describe the action or outcome. Return ONLY the JSON array, nothing else.
+"""
+                    suggestion = validate_and_generate(
+                        provider=provider,
+                        model_name=target_model,
+                        api_keys=keys,
+                        prompt=suggestion_prompt,
+                        system_prompt="You are a PC matching engine. Return only valid JSON arrays."
+                    )
+                    if isinstance(suggestion, str) and "API_ERROR" not in suggestion:
+                        import json
+                        try:
+                            suggested_pcs = json.loads(suggestion)
+                            st.session_state.persistent_selected_pcs = set(suggested_pcs)
+                            st.toast(f"Suggested {len(suggested_pcs)} PCs.")
+                            st.rerun()
+                        except Exception:
+                            st.error(f"Failed to parse AI suggestion: {suggestion}")
+                    else:
+                        st.error(f"PC suggestion failed: {suggestion}")
 
     raw_learning_moment = st.text_area(
         "Observation Notes", 
@@ -205,7 +308,7 @@ def main():
 
                     # Attempt Database Save
                     st.write("💾 Finalizing report and saving to Database...")
-                    success, error_msg = db.insert_report(
+                    success, result = db.insert_report(
                         student_name, 
                         trade_id, 
                         ", ".join(u_dict.keys()),  
@@ -216,8 +319,28 @@ def main():
                     
                     if success:
                         st.success("✅ SUCCESS: Report saved to Database!")
+                        
+                        # --- AUTO-TRACK PORTFOLIO PROGRESS (admin-only) ---
+                        if role == 'admin':
+                            report_id = result.get('id') if isinstance(result, dict) else None
+                            if report_id and selected_pcs:
+                                st.write("🔄 Auto-tracking PC progress for student portfolio...")
+                                found, tracked_count, track_err = db.auto_track_portfolio_progress(
+                                    student_name=student_name,
+                                    trade_id=trade_id,
+                                    trade_level_id=trade_level_id,
+                                    selected_pcs=selected_pcs,
+                                    evidence_report_id=report_id,
+                                    assessed_by=user_id
+                                )
+                                if found:
+                                    st.toast(f"Tracked {tracked_count} PCs for {student_name}.")
+                                else:
+                                    st.warning(f"No matching portfolio found for {student_name} in this trade. Progress was NOT tracked.")
+                                    if track_err:
+                                        st.error(track_err)
                     else:
-                        st.error(f"❌ DATABASE ERROR: {error_msg}")
+                        st.error(f"❌ DATABASE ERROR: {result}")
                         st.warning("Verify that the 'assessment_reports' table contains a 'created_by' column.")
 
                     st.markdown("### Preview")
@@ -235,6 +358,17 @@ def main():
                     c1, c2 = st.columns(2)
                     with c1: st.download_button("📥 Word (.docx)", data=doc_bytes, file_name=f"NSQ_{student_name}.docx")
                     with c2: st.download_button("Download Text (.txt)", full_report_text, file_name=f"{student_name}.txt")
+
+                    pdf_bytes = export_to_pdf(
+                        student_name,
+                        assessment_date,
+                        full_report_text,
+                        assessor_name,
+                        timeline=time_frame,
+                        atmosphere=atmosphere,
+                        selected_pcs=selected_pcs
+                    )
+                    st.download_button("📄 PDF (.pdf)", data=pdf_bytes, file_name=f"NSQ_{student_name}.pdf")
 
     st.caption("⚠️ **Disclaimer:** AI can make mistakes. Please verify that the generated report accurately reflects your field observation notes.")
     if st.session_state.get('current_assessment_report'):

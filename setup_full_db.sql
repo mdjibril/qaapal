@@ -288,3 +288,80 @@ CREATE POLICY "Users can insert their own feedback" ON public.product_feedback F
 CREATE POLICY "Only admins can view all feedback" ON public.product_feedback FOR SELECT USING (
     EXISTS (SELECT 1 FROM public.user_profiles WHERE id = auth.uid() AND role = 'admin')
 );
+
+-- ==============================================================
+-- 10. Phase 6 — QA Assessor Growth & Retention (ADMIN-ONLY)
+-- These tables are gated behind the system admin role.
+-- ==============================================================
+
+-- 10.1 Student Portfolios
+CREATE TABLE IF NOT EXISTS public.student_portfolios (
+    id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+    student_name text NOT NULL CHECK (char_length(student_name) <= 150),
+    student_email text CHECK (char_length(student_email) <= 150),
+    trade_id bigint REFERENCES public.trades(id) ON DELETE SET NULL,
+    trade_level_id bigint REFERENCES public.trade_levels(id) ON DELETE SET NULL,
+    candidate_ref text CHECK (char_length(candidate_ref) <= 150),
+    created_by uuid REFERENCES public.user_profiles(id) ON DELETE SET NULL,
+    created_at timestamptz DEFAULT now(),
+    updated_at timestamptz DEFAULT now()
+);
+
+ALTER TABLE public.student_portfolios ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Only admins can access student portfolios" ON public.student_portfolios
+    FOR ALL USING (
+        EXISTS (SELECT 1 FROM public.user_profiles WHERE id = auth.uid() AND role = 'admin')
+    )
+    WITH CHECK (
+        EXISTS (SELECT 1 FROM public.user_profiles WHERE id = auth.uid() AND role = 'admin')
+    );
+
+-- 10.2 Student PC Progress (achievement tracking)
+CREATE TABLE IF NOT EXISTS public.student_pc_progress (
+    id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+    portfolio_id uuid NOT NULL REFERENCES public.student_portfolios(id) ON DELETE CASCADE,
+    pc_id bigint NOT NULL REFERENCES public.performance_criteria(id) ON DELETE CASCADE,
+    unit_id bigint REFERENCES public.units(id) ON DELETE CASCADE,
+    status text NOT NULL CHECK (status IN ('passed', 'in_progress', 'needs_retest')),
+    evidence_report_id bigint REFERENCES public.assessment_reports(id) ON DELETE SET NULL,
+    assessed_at timestamptz DEFAULT now(),
+    assessed_by uuid REFERENCES public.user_profiles(id) ON DELETE SET NULL,
+    UNIQUE (portfolio_id, pc_id)
+);
+
+ALTER TABLE public.student_pc_progress ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Only admins can access student PC progress" ON public.student_pc_progress
+    FOR ALL USING (
+        EXISTS (SELECT 1 FROM public.user_profiles WHERE id = auth.uid() AND role = 'admin')
+    )
+    WITH CHECK (
+        EXISTS (SELECT 1 FROM public.user_profiles WHERE id = auth.uid() AND role = 'admin')
+    );
+
+-- 10.3 Assessment Templates (PC bundles)
+CREATE TABLE IF NOT EXISTS public.assessment_templates (
+    id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+    name text NOT NULL CHECK (char_length(name) <= 150),
+    trade_id bigint REFERENCES public.trades(id) ON DELETE CASCADE,
+    trade_level_id bigint REFERENCES public.trade_levels(id) ON DELETE CASCADE,
+    pc_ids JSONB NOT NULL DEFAULT '[]'::jsonb,
+    created_by uuid REFERENCES public.user_profiles(id) ON DELETE SET NULL,
+    is_public boolean DEFAULT false,
+    created_at timestamptz DEFAULT now(),
+    updated_at timestamptz DEFAULT now()
+);
+
+ALTER TABLE public.assessment_templates ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Only admins can access assessment templates" ON public.assessment_templates
+    FOR ALL USING (
+        EXISTS (SELECT 1 FROM public.user_profiles WHERE id = auth.uid() AND role = 'admin')
+    )
+    WITH CHECK (
+        EXISTS (SELECT 1 FROM public.user_profiles WHERE id = auth.uid() AND role = 'admin')
+    );
+
+-- Indexes for Phase 6 tables
+CREATE INDEX IF NOT EXISTS idx_student_portfolios_created_by ON public.student_portfolios (created_by);
+CREATE INDEX IF NOT EXISTS idx_student_portfolios_trade_id ON public.student_portfolios (trade_id);
+CREATE INDEX IF NOT EXISTS idx_student_pc_progress_portfolio ON public.student_pc_progress (portfolio_id);
+CREATE INDEX IF NOT EXISTS idx_assessment_templates_trade ON public.assessment_templates (trade_id, trade_level_id);

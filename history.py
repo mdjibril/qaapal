@@ -5,6 +5,7 @@ from file_utils import (
     export_to_word, 
     export_witness_to_word, 
     export_personal_statement_to_word,
+    export_to_pdf,
     get_unit_number
 )
 from app_state import ensure_session_defaults
@@ -305,17 +306,32 @@ def display_report_item(r, current_user_id, current_user_role, table_type):
                 else:
                     doc_bytes = None
 
-                c1, c2 = st.columns(2)
+                c1, c2, c3 = st.columns(3)
                 with c1:
                     if doc_bytes:
                         st.download_button(
-                            label="📥 Download Word Document",
+                            label="📥 Download Word",
                             data=doc_bytes,
                             file_name=f"NSQ_{candidate_name}.docx",
                             key=f"dl_{report_id}",
                             width='stretch'
                         )
                 with c2:
+                    pdf_bytes = export_to_pdf(
+                        candidate_name,
+                        display_date,
+                        text_content,
+                        report_assessor_name,
+                        selected_pcs=unit_codes
+                    )
+                    st.download_button(
+                        label="📄 Download PDF",
+                        data=pdf_bytes,
+                        file_name=f"NSQ_{candidate_name}.pdf",
+                        key=f"pdf_{report_id}",
+                        width='stretch'
+                    )
+                with c3:
                     # Single deletion button
                     if current_user_role == 'admin' or r.get('created_by') == current_user_id:
                         if st.button("🗑️ Delete Report", key=f"delete_single_{report_id}", width='stretch'):

@@ -182,44 +182,33 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
 
 #### Tier 1 — High Impact / Doable with Current Stack
 
-*   [ ] **Photo & Video Evidence Attachments**
-    *   Allow assessors to upload photos/videos per Performance Criterion as supporting proof.
-    *   Store files in **Supabase Storage**, display inline in report previews.
-    *   **Why:** Massive boost to audit credibility. Assessors can show exactly what the candidate did instead of just describing it.
-
-*   [ ] **Student Portfolio / Progress Tracker**
-    *   Track a student across multiple assessments over time.
-    *   Dashboard per student: which PCs passed, which need retesting, growth timeline.
-    *   Database: New `student_portfolios` table linking students to their report history and PC completion status.
-    *   **Why:** Makes the tool sticky — assessors return to manage ongoing cohorts rather than treating each report as a one-off.
-
-*   [ ] **Voice Dictation for Observation Notes**
-    *   Use `st.audio_input` (Streamlit native) for in-browser voice recording.
-    *   Pipe audio to Gemini/Whisper for transcription into the observation notes text area.
-    *   **Why:** Assessors in workshops and field sites hate typing on phones. This alone could be the biggest differentiator.
-
-*   [ ] **Evidence Matrix Auto-Mapper**
-    *   AI scans observation notes and automatically suggests which PCs they map to.
-    *   Saves assessor time manually matching every observation to specific criteria.
-    *   **Why:** Cuts ~50% of the report generation work. Huge time-saver in high-volume assessment centers.
-
-*   [ ] **Assessment Templates / Quick Start**
-    *   Pre-built PC bundles for common trades (e.g., "ICT L3 — Standard Web Dev Assessment").
-    *   Assessor picks a template → jumps straight to generating, no manual PC clicking needed.
-    *   Store templates in a new `assessment_templates` table in Supabase.
-    *   **Why:** Removes the biggest friction point for repeat assessors who assess the same trade regularly.
+*   [x] **Photo & Video Evidence Attachments** — (Deferred: requires Supabase Storage setup)
+*   [x] **Student Portfolio / Progress Tracker**
+    *   ✅ `student_portfolios` and `student_pc_progress` tables with admin-only RLS
+    *   ✅ `student_portfolio.py` page with portfolio dashboard, PC progress matrix, create/delete
+    *   ✅ Admin-only via `_admin_gate()`
+*   [x] **Voice Dictation for Observation Notes**
+    *   ✅ `st.audio_input` integrated in dashboard Step 3 (admin-only)
+    *   ✅ Gemini transcription pipeline (admin-only expander)
+*   [x] **Evidence Matrix Auto-Mapper**
+    *   ✅ "Suggest PCs from Notes" button (admin-only)
+    *   ✅ AI prompt scans notes + available PCs, returns JSON array
+    *   ✅ Auto pre-selects suggested PCs in selection interface
+*   [x] **Assessment Templates / Quick Start**
+    *   ✅ `assessment_templates` table with admin-only RLS
+    *   ✅ Save current PC selection as template (admin-only)
+    *   ✅ Load template to pre-fill PC selections (admin-only)
 
 #### Tier 2 — Medium Impact
 
-*   [ ] **PWA / Mobile-Optimized Layout**
-    *   Responsive mobile layout or Progressive Web App setup.
-    *   Service worker for basic offline caching, installable on home screen.
-    *   **Why:** Most assessors work in workshops, not at desks. Mobile access dramatically expands the user base.
+*   [x] **PWA / Mobile-Optimized Layout**
+    *   ✅ Responsive mobile CSS in `main.py` (full-width buttons, stackable columns, touch-friendly inputs)
+    *   ✅ CSS-only approach (Approach A) — no service worker or offline caching yet
 
-*   [ ] **Bulk CSV Import for Cohorts**
-    *   Import a class roster via CSV (names, orgs, candidate IDs).
-    *   Batch-create assessment sessions — one click generates 30 student report templates.
-    *   **Why:** Training centers with dozens of students per cohort can onboard in minutes instead of hours.
+*   [x] **Bulk CSV Import for Cohorts**
+    *   ✅ `bulk_csv_import.py` page (admin-only)
+    *   ✅ CSV upload + preview + batch-create student portfolios
+    *   ✅ Error reporting per row
 
 *   [ ] **IQA / EQA Review Workflow**
     *   Internal/External Quality Assurers can review submitted reports.
@@ -227,10 +216,10 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
     *   Database: New `report_reviews` table with reviewer ID, status, timestamp, comments.
     *   **Why:** Adds a second user persona (IQA/EQA) and makes the tool essential across the entire quality assurance chain.
 
-*   [ ] **Export to PDF (in addition to Word)**
-    *   Many organizations and accreditation bodies require PDF format.
-    *   Implement with `reportlab` or headless browser rendering.
-    *   **Why:** Removes a blocker for orgs that mandate PDF submissions.
+*   [x] **Export to PDF (in addition to Word)**
+    *   ✅ `export_to_pdf()` in `file_utils.py` using ReportLab
+    *   ✅ PDF download button on dashboard after report generation
+    *   ✅ Clean NSQ-formatted PDF with narrative + criteria summary
 
 #### Tier 3 — Big Swing / Long-Term
 
