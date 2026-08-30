@@ -259,15 +259,17 @@ def main():
     if ai_policy["status_message"]:
         with st.sidebar.container(border=True):
             st.markdown("**AI Status**")
-            if tier == "free" and not get_secret(["vertex_ai", "service_account_json"], "vertex_ai__service_account_json"):
-                st.error("Vertex AI config missing.")
-            else:
-                st.info(ai_policy["status_message"])
+            st.info(ai_policy["status_message"])
 
     if not show_byok:
         st.session_state.ai_provider = ai_policy["default_provider"]
         st.session_state.target_model = ai_policy["default_model"]
+        # Non-BYOK users use the platform Gemini key (free tier) or fall back to platform keys.
         st.session_state.target_keys = []
+        if st.session_state.ai_provider == "Gemini":
+            internal_key = get_secret(["INTERNAL_AI_KEY"], "INTERNAL_AI_KEY")
+            if internal_key:
+                st.session_state.target_keys = [k.strip() for k in str(internal_key).split(',') if k.strip()]
 
     if show_byok:
         with st.sidebar.expander("📡 AI Provider Settings", expanded=False):

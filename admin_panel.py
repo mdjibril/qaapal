@@ -236,6 +236,21 @@ def main():
                                                 st.rerun()
                                             else:
                                                 st.error(f"Failed to update credit allocation: {err}")
+
+                                    st.markdown("**⚡ Credit Pack Top-Up**")
+                                    credit_pack = st.selectbox(
+                                        "Select pack to apply",
+                                        [20, 150, 400],
+                                        format_func=lambda x: f"{x} Reports"
+                                    )
+                                    if st.button("Apply Credit Pack"):
+                                        if selected_users[0]['org_id']:
+                                            success, err = db.top_up_org_credits(selected_users[0]['org_id'], credit_pack)
+                                            if success:
+                                                st.success(f"Added {credit_pack} credits!")
+                                                st.rerun()
+                                            else:
+                                                st.error(f"Failed to apply credit pack: {err}")
                                 else:
                                     st.info("Bulk operations for numeric credits are disabled. Please modify credits individually.")
 

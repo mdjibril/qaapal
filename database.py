@@ -627,6 +627,26 @@ def update_org_credits(org_id, new_balance):
         return False, str(e)
 
 
+def top_up_org_credits(org_id, amount):
+    """Add AI credits to an organization's purchased balance (credit packs)."""
+    supabase = get_admin_supabase()
+    try:
+        res = _execute_query(supabase.table("organizations").select("ai_credits_purchased, credits_balance").eq("id", org_id).single())
+        purchased = (res.data or {}).get("ai_credits_purchased", 0) or 0
+        balance = (res.data or {}).get("credits_balance", 0) or 0
+        _execute_query(
+            supabase.table("organizations")
+            .update({
+                "ai_credits_purchased": purchased + amount,
+                "credits_balance": balance + amount
+            })
+            .eq("id", org_id)
+        )
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
+
 # ==============================================================
 # Phase 6 — QA Assessor Growth & Retention (ADMIN-ONLY)
 # ==============================================================

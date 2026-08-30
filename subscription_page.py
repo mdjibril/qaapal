@@ -23,9 +23,15 @@ def main():
     
     selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
     selar_lifetime_base = get_secret(["payments", "selar_lifetime_link"], "payments__selar_lifetime_link") or "https://selar.com/nsqassessment-lifetime"
+    credit_20 = get_secret(["payments", "selar_credit_20"], "payments__selar_credit_20")
+    credit_150 = get_secret(["payments", "selar_credit_150"], "payments__selar_credit_150")
+    credit_400 = get_secret(["payments", "selar_credit_400"], "payments__selar_credit_400")
     user_email = st.session_state.user_session.email
     upgrade_link = f"{selar_base}?email={user_email}"
     lifetime_upgrade_link = f"{selar_lifetime_base}?email={user_email}"
+    credit_20_link = f"{credit_20}?email={user_email}" if credit_20 else None
+    credit_150_link = f"{credit_150}?email={user_email}" if credit_150 else None
+    credit_400_link = f"{credit_400}?email={user_email}" if credit_400 else None
     
     st.markdown("---")
     st.subheader("Account Summary")
@@ -36,6 +42,21 @@ def main():
         st.metric("Current Plan", "Superadmin" if user_role == "admin" else current_tier.replace('_', ' ').title())
     with col_b:
         st.metric("Credits", "Unlimited" if user_role == "admin" or current_tier != "free" else credits_balance)
+
+    if user_role != "admin":
+        st.markdown("---")
+        st.subheader("⚡ Buy AI Credit Packs")
+        st.caption("Prepaid reports. Purchase once and your credits are applied to your account.")
+        col_c1, col_c2, col_c3 = st.columns(3)
+        with col_c1:
+            if credit_20_link:
+                st.link_button("₦1,000 — 20 Reports", credit_20_link, width='stretch')
+        with col_c2:
+            if credit_150_link:
+                st.link_button("₦5,000 — 150 Reports", credit_150_link, width='stretch')
+        with col_c3:
+            if credit_400_link:
+                st.link_button("₦10,000 — 400 Reports", credit_400_link, width='stretch')
 
     if user_role != "admin":
         st.markdown("---")

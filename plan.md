@@ -216,10 +216,10 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
     *   Database: New `report_reviews` table with reviewer ID, status, timestamp, comments.
     *   **Why:** Adds a second user persona (IQA/EQA) and makes the tool essential across the entire quality assurance chain.
 
-*   [x] **Export to PDF (in addition to Word)**
-    *   ✅ `export_to_pdf()` in `file_utils.py` using ReportLab
-    *   ✅ PDF download button on dashboard after report generation
-    *   ✅ Clean NSQ-formatted PDF with narrative + criteria summary
+*   [ ] **Export to PDF (in addition to Word)**
+    *   Many organizations and accreditation bodies require PDF format.
+    *   Implement with `reportlab` or headless browser rendering.
+    *   **Why:** Removes a blocker for orgs that mandate PDF submissions.
 
 #### Tier 3 — Big Swing / Long-Term
 
@@ -235,6 +235,74 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
 
 ---
 
+### Phase 7: Sustainable AI Monetization & Cost Recovery
+
+> [!WARNING]
+> **Critical driver:** The Google Cloud $300 trial credit is exhausted, which kills the Vertex AI platform key for free users. We must stop subsidizing unlimited free AI and build a self-funding model before the provider cutover.
+
+#### Tier 1 — Emergency Fix (Revenue Gate + Provider Cutover)
+
+*   [x] **Decouple Free Tier from Vertex AI**
+    *   [x] Removed Vertex AI as the free-tier default in `ai_policy.py`.
+    *   [x] Free tier routes through platform Gemini (`INTERNAL_AI_KEY`) with Groq/OpenRouter fallback.
+    *   [x] Free tier keeps strict 5-credit cap, then hard paywall.
+    *   [x] Paid tiers (`platform_pass`, `lifetime`, `enterprise`) now BYOK-only — zero platform AI cost.
+
+*   [x] **AI Credit Packs (fastest path to revenue)**
+    *   [x] Selar products configured (20/150/400 reports).
+    *   [x] "Buy AI Credits" buttons wired in dashboard paywall and subscription page.
+    *   [x] `ai_credits_purchased` / `monthly_ai_quota` columns added to `organizations`.
+    *   [x] Manual credit-pack top-up via admin panel (`top_up_org_credits`).
+    *   [ ] Selar webhook auto-credit (deferred — Gmail bridge already relays sales).
+
+*   [x] **Paywall Enforcement**
+    *   [x] Free credits hit 0 → paywall with "Buy Credits" + "Upgrade" paths.
+    *   [x] Existing `st.dialog` UX retained so users don't lose typed notes.
+
+#### Tier 2 — Paid Tier AI Quotas (bundle AI into subscriptions)
+
+*   [ ] **Attach AI quotas to paid tiers**
+    *   [ ] `platform_pass`: bundled AI quota (e.g. 100 generations/month) + BYOK.
+    *   [ ] `lifetime`: high one-time quota or unlimited with BYOK fallback.
+    *   [ ] `enterprise`: org-level quota + master API key.
+    *   [ ] Decrement quota alongside existing `credits_balance`.
+
+*   [ ] **BYOK as the scalable "free" path for heavy users**
+    *   [ ] Paid users (and optionally free users who don't want to pay) can paste their own Gemini/Groq/OpenRouter key.
+    *   [ ] Zero platform AI cost when BYOK is used.
+    *   [ ] Adjust `ai_policy.py` to prefer BYOK keys when present, falling back to platform quota.
+
+#### Tier 3 — Landing Page & Pricing Alignment
+
+*   [ ] **Update landing page (`landing/index.html`)**
+    *   [ ] Replace "Platform AI (Gemini Flash) - Free Forever" framing with a capped free tier.
+    *   [ ] Surface the AI Credit Pack products next to Platform Pass and Lifetime.
+    *   [ ] Update the savings calculator to reflect credit-pack pricing and provider costs.
+    *   [ ] Update FAQ to explain the new credit/quota model (free ≠ unlimited).
+    *   [ ] Update meta description/keywords to de-emphasize unlimited platform AI.
+
+*   [ ] **Update in-app subscription page (`subscription_page.py`)**
+    *   [ ] Show AI credit balance/quota separately from platform access.
+    *   [ ] Add "Buy AI Credits" links alongside upgrade/downgrade controls.
+
+*   [ ] **Provider cost documentation**
+    *   [ ] Document Gemini Flash per-token cost so margin is transparent.
+    *   [ ] Define target margin: charge ~₦50–₦100/report while API cost stays under ₦10/report.
+
+#### Tier 4 — Automation (post-revenue)
+
+*   [ ] **Selar webhook integration**
+    *   [ ] Auto-credit organizations when a credit-pack or subscription payment clears.
+    *   [ ] Store transaction reference for reconciliation.
+    *   [ ] Handle refunds/chargebacks gracefully.
+
+*   [ ] **Usage analytics & alerts**
+    *   [ ] Track per-org AI spend.
+    *   [ ] Alert before a paid quota is exhausted.
+    *   [ ] Notify before provider free-tier rate limits are hit.
+
+---
+
 ### Completed Phases Summary
 
 | Phase | Status | Description |
@@ -247,3 +315,5 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
 | Phase 5 | ✅ Complete | Small features: sorting, filters, progress bars, session refactor |
 | Security | ✅ Complete | IDOR fixes, RLS policies, session isolation, auth consistency |
 | Code Quality | ✅ Complete | 20 issues fixed across critical/high/medium/low (see issues.md) |
+| Phase 6 | 🚧 In Progress | QA Assessor Growth & Retention features (Tier 1–2 implemented) |
+| Phase 7 | 🚧 In Progress | Sustainable AI monetization (Tier 1 implemented) |

@@ -22,6 +22,12 @@ CREATE TABLE IF NOT EXISTS public.organizations (
     last_credit_depletion timestamptz
 );
 
+-- Phase 7: AI credit/quota columns (migration-safe)
+ALTER TABLE IF EXISTS public.organizations
+ADD COLUMN IF NOT EXISTS ai_credits_purchased int DEFAULT 0;
+ALTER TABLE IF EXISTS public.organizations
+ADD COLUMN IF NOT EXISTS monthly_ai_quota int DEFAULT 0;
+
 -- 1. User Profiles
 CREATE TABLE public.user_profiles (
   id uuid REFERENCES auth.users ON DELETE CASCADE NOT NULL PRIMARY KEY,

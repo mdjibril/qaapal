@@ -1,7 +1,7 @@
 import streamlit as st
 import datetime
 import time
-from file_utils import export_to_word, export_to_pdf
+from file_utils import export_to_word
 from ai_utils import validate_and_generate, transcribe_audio_with_vertex
 from auth_utils import get_secret
 from security_utils import sanitize_text_input, sanitize_notes_input
@@ -209,10 +209,31 @@ Return a JSON array of the PC strings that are demonstrably evidenced in the not
     if is_out_of_credits:
         selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
         selar_lifetime_base = get_secret(["payments", "selar_lifetime_link"], "payments__selar_lifetime_link") or "https://selar.com/nsqassessment-lifetime"
+        credit_20 = get_secret(["payments", "selar_credit_20"], "payments__selar_credit_20")
+        credit_150 = get_secret(["payments", "selar_credit_150"], "payments__selar_credit_150")
+        credit_400 = get_secret(["payments", "selar_credit_400"], "payments__selar_credit_400")
         user_email = st.session_state.user_session.email
         upgrade_link = f"{selar_base}?email={user_email}"
         lifetime_upgrade_link = f"{selar_lifetime_base}?email={user_email}"
-        st.warning("⚠️ You have 0 credits remaining. Upgrade to continue generating reports.")
+        credit_20_link = f"{credit_20}?email={user_email}" if credit_20 else None
+        credit_150_link = f"{credit_150}?email={user_email}" if credit_150 else None
+        credit_400_link = f"{credit_400}?email={user_email}" if credit_400 else None
+
+        st.warning("⚠️ You have 0 AI credits remaining. Buy a credit pack or upgrade to continue.")
+
+        st.markdown("**⚡ Quick AI Credit Packs**")
+        col_c1, col_c2, col_c3 = st.columns(3)
+        with col_c1:
+            if credit_20_link:
+                st.link_button("₦1,000 — 20 Reports", credit_20_link, width='stretch')
+        with col_c2:
+            if credit_150_link:
+                st.link_button("₦5,000 — 150 Reports", credit_150_link, width='stretch')
+        with col_c3:
+            if credit_400_link:
+                st.link_button("₦10,000 — 400 Reports", credit_400_link, width='stretch')
+
+        st.markdown("**Or Upgrade Your Plan**")
         col_up1, col_up2 = st.columns(2)
         with col_up1:
             st.link_button("🚀 Upgrade to Platform Pass", upgrade_link, width='stretch')
@@ -358,17 +379,6 @@ Return a JSON array of the PC strings that are demonstrably evidenced in the not
                     c1, c2 = st.columns(2)
                     with c1: st.download_button("📥 Word (.docx)", data=doc_bytes, file_name=f"NSQ_{student_name}.docx")
                     with c2: st.download_button("Download Text (.txt)", full_report_text, file_name=f"{student_name}.txt")
-
-                    pdf_bytes = export_to_pdf(
-                        student_name,
-                        assessment_date,
-                        full_report_text,
-                        assessor_name,
-                        timeline=time_frame,
-                        atmosphere=atmosphere,
-                        selected_pcs=selected_pcs
-                    )
-                    st.download_button("📄 PDF (.pdf)", data=pdf_bytes, file_name=f"NSQ_{student_name}.pdf")
 
     st.caption("⚠️ **Disclaimer:** AI can make mistakes. Please verify that the generated report accurately reflects your field observation notes.")
     if st.session_state.get('current_assessment_report'):

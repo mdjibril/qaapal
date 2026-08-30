@@ -11,10 +11,10 @@ def get_ai_access_policy(role, tier, platform_pass_expired=False):
         return {
             "tier": effective_tier,
             "label": "Superadmin",
-            "allow_vertex": True,
+            "allow_vertex": False,
             "allow_byok": True,
-            "provider_options": ["VertexAI", "Gemini", "Groq", "OpenRouter"],
-            "default_provider": "VertexAI",
+            "provider_options": ["Gemini", "Groq", "OpenRouter"],
+            "default_provider": "Gemini",
             "default_model": "gemini-3.5-flash",
             "status_message": "Superadmin: Manual Key Override",
         }
@@ -23,12 +23,12 @@ def get_ai_access_policy(role, tier, platform_pass_expired=False):
         return {
             "tier": effective_tier,
             "label": "Free Tier",
-            "allow_vertex": True,
+            "allow_vertex": False,
             "allow_byok": False,
-            "provider_options": ["VertexAI"],
-            "default_provider": "VertexAI",
+            "provider_options": ["Gemini"],
+            "default_provider": "Gemini",
             "default_model": "gemini-3.5-flash",
-            "status_message": "Using Platform AI (Free Tier)",
+            "status_message": "Using Platform AI (Gemini Flash)",
         }
 
     if effective_tier == "platform_pass":
@@ -40,40 +40,40 @@ def get_ai_access_policy(role, tier, platform_pass_expired=False):
             "provider_options": ["Gemini", "Groq", "OpenRouter"],
             "default_provider": "Gemini",
             "default_model": "gemini-3.5-flash",
-            "status_message": "Platform Pass: BYOK is available.",
+            "status_message": "Platform Pass: BYOK required for AI generation.",
         }
 
     if effective_tier == "lifetime":
         return {
             "tier": effective_tier,
             "label": "Lifetime",
-            "allow_vertex": True,
+            "allow_vertex": False,
             "allow_byok": True,
-            "provider_options": ["VertexAI", "Gemini", "Groq", "OpenRouter"],
-            "default_provider": "VertexAI",
+            "provider_options": ["Gemini", "Groq", "OpenRouter"],
+            "default_provider": "Gemini",
             "default_model": "gemini-3.5-flash",
-            "status_message": "Lifetime Plan: BYOK and Vertex AI are available.",
+            "status_message": "Lifetime Plan: BYOK required for AI generation.",
         }
 
     if effective_tier == "enterprise":
         return {
             "tier": effective_tier,
             "label": "Enterprise",
-            "allow_vertex": True,
+            "allow_vertex": False,
             "allow_byok": True,
-            "provider_options": ["VertexAI", "Gemini", "Groq", "OpenRouter"],
-            "default_provider": "VertexAI",
+            "provider_options": ["Gemini", "Groq", "OpenRouter"],
+            "default_provider": "Gemini",
             "default_model": "gemini-3.5-flash",
-            "status_message": "Enterprise Plan: BYOK and Vertex AI are available.",
+            "status_message": "Enterprise Plan: BYOK or Org-billed AI.",
         }
 
     return {
         "tier": effective_tier,
         "label": effective_tier.title(),
-        "allow_vertex": True,
+        "allow_vertex": False,
         "allow_byok": False,
-        "provider_options": ["VertexAI"],
-        "default_provider": "VertexAI",
+        "provider_options": ["Gemini"],
+        "default_provider": "Gemini",
         "default_model": "gemini-3.5-flash",
-        "status_message": "Using Platform AI (Free Tier)",
+        "status_message": "Using Platform AI (Gemini Flash)",
     }
