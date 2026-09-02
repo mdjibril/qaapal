@@ -1,8 +1,9 @@
 import streamlit as st
 from auth_utils import get_supabase, get_admin_supabase
+from ai_policy import get_ai_access_policy
 import time
 import functools
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 
 def _is_retryable_db_error(error):
@@ -496,6 +497,7 @@ def upgrade_org_tier(org_id, new_tier='platform_pass'):
         return True, None
     except Exception as e:
         return False, str(e)
+
 def decrement_credits(org_id):
     """Subtracts one credit from the organization's balance."""
     supabase = get_admin_supabase()
@@ -511,6 +513,111 @@ def decrement_credits(org_id):
     except Exception as e:
         print(f"Credit deduction error: {e}")
         return False
+
+def maybe_reset_ai_quota(org_id):
+    """Resets a paid tier's monthly platform quota if 30 days have passed."""
+    supabase = get_admin_supabase()
+    try:
+        res = _execute_query(
+            supabase.table("organizations")
+            .select("ai_quota_used, ai_quota_reset_at")
+            .eq("id", org_id)
+            .single()
+        )
+        row = res.data or {}
+        reset_at_str = row.get("ai_quota_reset_at")
+        if not reset_at_str:
+            return False
+
+        reset_at = datetime.fromisoformat(reset_at_str.replace("Z", "+00:00"))
+        if datetime.now(reset_at.tzinfo) >= reset_at + timedelta(days=30):
+            _execute_query(
+                supabase.table("organizations")
+                .update({"ai_quota_used": 0, "ai_quota_reset_at": datetime.now(reset_at.tzinfo).isoformat()})
+                .eq("id", org_id)
+            )
+            return True
+        return False
+    except Exception as e:
+        print(f"AI quota reset error: {e}")
+        return False
+
+def consume_ai_credit(org_id, tier, using_byok):
+    """
+    Consumes one AI generation unit.
+
+    Returns (allowed, reason):
+      - allowed=True: generation may proceed.
+      - allowed=False: generation should be blocked (reason explains why).
+
+    BYOK generations never consume platform credits.
+    Free tier consumes the weekly credits_balance.
+    Paid tiers consume monthly ai_quota_used (with platform_quota as the cap).
+    """
+    supabase = get_admin_supabase()
+    try:
+        if using_byok:
+            return True, "byok"
+
+        if tier == "free":
+            res = _execute_query(
+                supabase.table("organizations")
+                .select("credits_balance")
+                .eq("id", org_id)
+                .single()
+            )
+            balance = (res.data or {}).get("credits_balance", 0)
+            if balance <= 0:
+                return False, "no_free_credits"
+            _execute_query(
+                supabase.table("organizations")
+                .update({"credits_balance": balance - 1})
+                .eq("id", org_id)
+            )
+            return True, "free_credit"
+
+        # Paid tier: use monthly platform quota.
+        # None = unlimited platform fallback; 0 = BYOK-only (no platform fallback).
+        policy = get_ai_access_policy(
+            st.session_state.get("user_role", "assessor"),
+            tier,
+            st.session_state.get("platform_pass_expired", False),
+        )
+        quota = policy.get("platform_quota")
+        if quota == 0:
+            return False, "byok_required"
+        if quota is None:
+            return True, "unlimited_platform"
+
+        res = _execute_query(
+            supabase.table("organizations")
+            .select("ai_quota_used, ai_quota_reset_at")
+            .eq("id", org_id)
+            .single()
+        )
+        row = res.data or {}
+        used = row.get("ai_quota_used", 0) or 0
+
+        # If the reset window has elapsed, start fresh before checking.
+        reset_at_str = row.get("ai_quota_reset_at")
+        if reset_at_str:
+            reset_at = datetime.fromisoformat(reset_at_str.replace("Z", "+00:00"))
+            if datetime.now(reset_at.tzinfo) >= reset_at + timedelta(days=30):
+                used = 0
+
+        if used >= quota:
+            return False, "quota_exhausted"
+
+        new_used = used + 1
+        _execute_query(
+            supabase.table("organizations")
+            .update({"ai_quota_used": new_used, "ai_quota_reset_at": datetime.now(timezone.utc).isoformat()})
+            .eq("id", org_id)
+        )
+        return True, "platform_quota"
+    except Exception as e:
+        print(f"AI credit consumption error: {e}")
+        return False, "error"
 
 def check_platform_pass_expiry():
     """Checks if the platform_pass subscription has expired."""

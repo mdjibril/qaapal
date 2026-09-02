@@ -279,7 +279,7 @@ def finalize_session(user, session):
     admin_client = get_admin_supabase()
     # Fetch profile and organization data
     profile_res = admin_client.table("user_profiles")\
-        .select("role, org_role, full_name, phone, assessor_role, organizations(id, subscription_tier, credits_balance, master_api_key, subscription_start_date, last_credit_depletion)")\
+        .select("role, org_role, full_name, phone, assessor_role, organizations(id, subscription_tier, credits_balance, master_api_key, subscription_start_date, last_credit_depletion, ai_quota_used, ai_quota_reset_at, monthly_ai_quota)")\
         .eq("id", user.id).execute()
     
     # If profile is missing (e.g., trigger failed or delayed), attempt to initialize it (Self-Healing)
@@ -305,7 +305,7 @@ def finalize_session(user, session):
             
             # Re-fetch to include data potentially added by the trigger in the background
             profile_res = admin_client.table("user_profiles")\
-                .select("role, org_role, full_name, phone, organizations(id, subscription_tier, credits_balance, master_api_key, last_credit_depletion)")\
+                .select("role, org_role, full_name, phone, organizations(id, subscription_tier, credits_balance, master_api_key, last_credit_depletion, ai_quota_used, ai_quota_reset_at, monthly_ai_quota)")\
                 .eq("id", user.id).execute()
         except Exception as e:
             st.error(f"Login error: Could not initialize user profile. {e}")
@@ -329,6 +329,9 @@ def finalize_session(user, session):
     st.session_state['credits_balance'] = org.get('credits_balance', 0)
     st.session_state['master_api_key'] = org.get('master_api_key')
     st.session_state['subscription_start_date'] = org.get('subscription_start_date')
+    st.session_state['ai_quota_used'] = org.get('ai_quota_used', 0) or 0
+    st.session_state['ai_quota_reset_at'] = org.get('ai_quota_reset_at')
+    st.session_state['monthly_ai_quota'] = org.get('monthly_ai_quota', 0) or 0
 
     # Phase 7: refill free-tier credits if 7 days have passed since depletion.
     org_id = org.get('id')
@@ -342,6 +345,20 @@ def finalize_session(user, session):
                         {"credits_balance": 5, "last_credit_depletion": None}
                     ).eq("id", org_id).execute()
                     st.session_state['credits_balance'] = 5
+            except (ValueError, TypeError):
+                pass
+
+    # Phase 7 Tier 2: reset platform_pass monthly quota if 30 days have passed.
+    if org_id and org.get('subscription_tier', 'free') == 'platform_pass':
+        reset_at_str = org.get('ai_quota_reset_at')
+        if reset_at_str:
+            try:
+                reset_at = datetime.fromisoformat(reset_at_str.replace('Z', '+00:00'))
+                if datetime.now(reset_at.tzinfo) >= reset_at + timedelta(days=30):
+                    admin_client.table("organizations").update(
+                        {"ai_quota_used": 0, "ai_quota_reset_at": datetime.now(reset_at.tzinfo).isoformat()}
+                    ).eq("id", org_id).execute()
+                    st.session_state['ai_quota_used'] = 0
             except (ValueError, TypeError):
                 pass
     

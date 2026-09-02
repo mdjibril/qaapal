@@ -172,6 +172,7 @@ def main():
     is_platform_pass_expired = db.check_platform_pass_expiry()
 
     ai_policy = get_ai_access_policy(role, tier, is_platform_pass_expired)
+    st.session_state['_ai_policy'] = ai_policy
     show_byok = ai_policy["allow_byok"]
 
     if tier == 'platform_pass' and is_platform_pass_expired:
@@ -183,6 +184,7 @@ def main():
         if org_id:
             db.upgrade_org_tier(org_id, 'free')
         ai_policy = get_ai_access_policy(role, tier, is_platform_pass_expired)
+        st.session_state['_ai_policy'] = ai_policy
         show_byok = ai_policy["allow_byok"]
 
     st.sidebar.title(f"🚀 NSQ Portal {APP_VERSION}")
@@ -260,6 +262,20 @@ def main():
         with st.sidebar.container(border=True):
             st.markdown("**AI Status**")
             st.info(ai_policy["status_message"])
+            if not is_superadmin:
+                if using_byok:
+                    st.success("🔑 BYOK active — no platform quota used.")
+                elif tier == "free":
+                    st.caption(f"Weekly allowance: {credits} of 5 reports remaining.")
+                else:
+                    quota = ai_policy.get("platform_quota")
+                    if quota == 0:
+                        st.caption("Bring your own AI key to generate reports.")
+                    elif quota is None:
+                        st.caption("Platform quota: unlimited.")
+                    else:
+                        used = st.session_state.get("ai_quota_used", 0) or 0
+                        st.caption(f"Platform quota: {used} of {quota} monthly reports used.")
 
     if not show_byok:
         st.session_state.ai_provider = ai_policy["default_provider"]
@@ -333,6 +349,19 @@ def main():
                     st.success(st.session_state.connection_msg)
                 else:
                     st.error(f"❌ {st.session_state.get('connection_msg')}")
+
+    # Phase 7 Tier 2: determine whether this generation uses BYOK or platform quota.
+    # platform_quota == 0 means BYOK-only (no platform fallback).
+    platform_quota = ai_policy.get("platform_quota")
+    using_byok = bool(st.session_state.get('target_keys'))
+    if show_byok and not using_byok and platform_quota != 0:
+        # Paid tier without a pasted key, with platform fallback available.
+        st.session_state.ai_provider = ai_policy["default_provider"]
+        st.session_state.target_model = ai_policy["default_model"]
+        internal_key = get_secret(["INTERNAL_AI_KEY"], "INTERNAL_AI_KEY")
+        st.session_state.target_keys = [k.strip() for k in str(internal_key).split(',') if k.strip()] if internal_key else []
+        using_byok = bool(st.session_state.get('target_keys'))
+    st.session_state.using_byok = using_byok
 
     if role == 'admin':
         with st.sidebar.expander("🛠️ Admin Tools", expanded=False):

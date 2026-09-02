@@ -27,6 +27,10 @@ ALTER TABLE IF EXISTS public.organizations
 ADD COLUMN IF NOT EXISTS ai_credits_purchased int DEFAULT 0;
 ALTER TABLE IF EXISTS public.organizations
 ADD COLUMN IF NOT EXISTS monthly_ai_quota int DEFAULT 0;
+ALTER TABLE IF EXISTS public.organizations
+ADD COLUMN IF NOT EXISTS ai_quota_used int DEFAULT 0;
+ALTER TABLE IF EXISTS public.organizations
+ADD COLUMN IF NOT EXISTS ai_quota_reset_at timestamptz DEFAULT now();
 
 -- 1. User Profiles
 CREATE TABLE public.user_profiles (

@@ -68,20 +68,41 @@ def main():
     role = st.session_state.get('user_role')
     tier = st.session_state.get('subscription_tier', 'free')
     credits = st.session_state.get('credits_balance', 0)
-    is_out_of_credits = (role != 'admin' and tier == 'free' and credits <= 0)
+    using_byok = st.session_state.get('using_byok', False)
+
+    if role == 'admin':
+        is_out_of_credits = False
+    elif tier == 'free':
+        is_out_of_credits = credits <= 0
+    else:
+        policy = st.session_state.get('_ai_policy', {})
+        quota = policy.get('platform_quota')
+        if using_byok:
+            is_out_of_credits = False
+        elif quota == 0:
+            is_out_of_credits = True
+        elif quota is None:
+            is_out_of_credits = False
+        else:
+            used = st.session_state.get('ai_quota_used', 0) or 0
+            is_out_of_credits = used >= quota
 
     if is_out_of_credits:
-        selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
-        selar_lifetime_base = get_secret(["payments", "selar_lifetime_link"], "payments__selar_lifetime_link") or "https://selar.com/nsqassessment-lifetime"
-        user_email = st.session_state.user_session.email
-        upgrade_link = f"{selar_base}?email={user_email}"
-        lifetime_upgrade_link = f"{selar_lifetime_base}?email={user_email}"
-        st.warning("⚠️ You have 0 credits remaining. Upgrade to continue generating testimonies.")
-        col_up1, col_up2 = st.columns(2)
-        with col_up1:
-            st.link_button("🚀 Upgrade to Platform Pass", upgrade_link, width='stretch')
-        with col_up2:
-            st.link_button("💎 Get Lifetime Tier", lifetime_upgrade_link, width='stretch')
+        platform_quota = st.session_state.get('_ai_policy', {}).get('platform_quota')
+        if tier != 'free' and platform_quota == 0:
+            st.warning("🔑 Your plan requires your own AI key. Add a key in the sidebar to generate testimonies.")
+        else:
+            selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
+            selar_lifetime_base = get_secret(["payments", "selar_lifetime_link"], "payments__selar_lifetime_link") or "https://selar.com/nsqassessment-lifetime"
+            user_email = st.session_state.user_session.email
+            upgrade_link = f"{selar_base}?email={user_email}"
+            lifetime_upgrade_link = f"{selar_lifetime_base}?email={user_email}"
+            st.warning("⚠️ You have 0 credits remaining. Upgrade to continue generating testimonies.")
+            col_up1, col_up2 = st.columns(2)
+            with col_up1:
+                st.link_button("🚀 Upgrade to Platform Pass", upgrade_link, width='stretch')
+            with col_up2:
+                st.link_button("💎 Get Lifetime Tier", lifetime_upgrade_link, width='stretch')
 
     if st.button("Generate Witness Statement", type="primary", disabled=is_out_of_credits):
         if not witness_notes or not selected_pcs or not witness_name or not candidate_name:
@@ -134,10 +155,16 @@ def main():
                         lo_parts = [f"LO {lo}:{', '.join(pcs)}" for lo, pcs in lo_map.items()]
                         summary_block += f"Unit {u} - {'; '.join(lo_parts)}\n"
                     
-                    # Deduct credit
-                    if role != 'admin' and tier == 'free':
-                        db.decrement_credits(st.session_state.org_id)
-                        st.session_state.credits_balance -= 1
+                    # Consume platform credit/quota (BYOK is zero-cost).
+                    if role != 'admin':
+                        allowed, reason = db.consume_ai_credit(
+                            st.session_state.org_id, tier, using_byok
+                        )
+                        if allowed:
+                            if reason == "free_credit":
+                                st.session_state.credits_balance -= 1
+                            elif reason == "platform_quota":
+                                st.session_state.ai_quota_used = st.session_state.get("ai_quota_used", 0) + 1
                     
                     st.session_state.current_witness_statement = ai_output + summary_block
                     status.update(label="✅ Witness Statement Ready!", state="complete", expanded=False)

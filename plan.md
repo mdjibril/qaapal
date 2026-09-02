@@ -203,7 +203,9 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
 
 *   [x] **PWA / Mobile-Optimized Layout**
     *   ✅ Responsive mobile CSS in `main.py` (full-width buttons, stackable columns, touch-friendly inputs)
-    *   ✅ CSS-only approach (Approach A) — no service worker or offline caching yet
+    *   ✅ Landing page is now an installable PWA (`landing/manifest.json` + `landing/sw.js` + 192/512 icons)
+    *   ✅ Service worker uses network-first for navigations + stale-while-revalidate for assets
+    *   ⚠️ PWA scope is `nsqassessment.com.ng` only — `app.nsqassessment.com.ng` is a separate origin and remains a normal web app (Option 3 decision; not extending PWA to subdomain for now)
 
 *   [x] **Bulk CSV Import for Cohorts**
     *   ✅ `bulk_csv_import.py` page (admin-only)
@@ -261,16 +263,29 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
 
 #### Tier 2 — Paid Tier AI Quotas (bundle AI into subscriptions)
 
-*   [ ] **Attach AI quotas to paid tiers**
-    *   [ ] `platform_pass`: bundled AI quota (e.g. 100 generations/month) + BYOK.
-    *   [ ] `lifetime`: high one-time quota or unlimited with BYOK fallback.
-    *   [ ] `enterprise`: org-level quota + master API key.
-    *   [ ] Decrement quota alongside existing `credits_balance`.
+*   [x] **Attach AI quotas to paid tiers**
+    *   [x] `platform_pass`: BYOK-only — **no bundled platform quota** (reverted from 100/month).
+    *   [x] `lifetime`: unlimited platform fallback (`platform_quota = None`) + BYOK.
+    *   [x] `enterprise`: unlimited platform fallback + BYOK (org-level quota deferred).
+    *   [x] `free`: weekly `credits_balance` (5/week), not the monthly quota path.
+    *   [x] Unified consumption via `consume_ai_credit(org_id, tier, using_byok)`.
 
-*   [ ] **BYOK as the scalable "free" path for heavy users**
-    *   [ ] Paid users (and optionally free users who don't want to pay) can paste their own Gemini/Groq/OpenRouter key.
-    *   [ ] Zero platform AI cost when BYOK is used.
-    *   [ ] Adjust `ai_policy.py` to prefer BYOK keys when present, falling back to platform quota.
+*   [x] **BYOK as the scalable "free" path for heavy users**
+    *   [x] Paid users can paste their own Gemini/Groq/OpenRouter key.
+    *   [x] Zero platform AI cost when BYOK is used.
+    *   [x] `ai_policy.py` prefers BYOK keys when present; platform fallback is tier-dependent.
+
+*   [x] **Quota tracking columns**
+    *   [x] `ai_quota_used` + `ai_quota_reset_at` on `organizations` (migration-safe).
+
+*   [x] **Platform Pass current entitlements (2026-09-02)**
+    *   [x] BYOK only — must supply their own Gemini/Groq/OpenRouter key to generate.
+    *   [x] No platform AI fallback and no bundled monthly reports.
+    *   [x] Credit packs are **hidden** for Platform Pass users (prepaid platform reports are meaningless under BYOK-only).
+    *   [ ] **Future option:** reintroduce a bundled platform quota or re-enable credit-pack redemption for Platform Pass if we later want to offer platform AI as an add-on.
+
+*   [x] **Credit pack visibility**
+    *   [x] Credit packs show for Free and Lifetime users; hidden for Platform Pass (BYOK-only).
 
 #### Tier 3 — Landing Page & Pricing Alignment
 

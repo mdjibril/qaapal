@@ -40,10 +40,26 @@ def main():
     col_a, col_b = st.columns(2)
     with col_a:
         st.metric("Current Plan", "Superadmin" if user_role == "admin" else current_tier.replace('_', ' ').title())
-    with col_b:
-        st.metric("Credits", "Unlimited" if user_role == "admin" or current_tier != "free" else credits_balance)
 
-    if user_role != "admin":
+    if user_role == "admin":
+        credits_display = "Unlimited"
+    elif current_tier == "free":
+        credits_display = f"{credits_balance} of 5 weekly"
+    else:
+        policy = st.session_state.get('_ai_policy', {})
+        quota = policy.get('platform_quota')
+        if quota == 0:
+            credits_display = "BYOK only"
+        elif quota is None:
+            credits_display = "Unlimited platform fallback"
+        else:
+            used = st.session_state.get('ai_quota_used', 0) or 0
+            credits_display = f"{used} of {quota} monthly"
+
+    with col_b:
+        st.metric("AI Platform Quota", credits_display)
+
+    if user_role != "admin" and current_tier != "platform_pass":
         st.markdown("---")
         st.subheader("⚡ Buy AI Credit Packs")
         st.caption("Prepaid reports. Purchase once and your credits are applied to your account.")
@@ -97,6 +113,7 @@ def main():
                         st.link_button("💎 Upgrade to Lifetime", lifetime_upgrade_link, type="secondary", width="stretch")
                 else:
                     st.success("Your Platform Pass is active!")
+                    st.info("Platform Pass gives you app access with your own AI key. Add your key in the sidebar to generate reports.")
                     days_left = (expiry_date - now_in_tz).days
                     if days_left > 0:
                         st.info(f"You have approximately {days_left} days left on your current subscription.")
@@ -128,8 +145,8 @@ def main():
     elif current_tier == 'lifetime':
         st.markdown("---")
         st.subheader("Subscription Status")
-        st.success("🎉 You are on the **Lifetime Tier**! You have permanent, unlimited access to all features.")
-        st.info("Your access never expires. Thank you for your one-time purchase!")
+        st.success("🎉 You are on the **Lifetime Tier**! You have permanent access to all features.")
+        st.info("Your access never expires. Use your own AI key for unlimited generations, or rely on unlimited platform AI fallback. Thank you for your one-time purchase!")
 
     elif current_tier == 'free':
         st.markdown("---")
@@ -141,7 +158,7 @@ def main():
         else:
             st.info(f"You are currently on the Free plan with {credits_balance} of 5 weekly reports remaining.")
             
-        st.write("Upgrade to **Platform Pass** or our **Lifetime Tier** for unlimited report generations, or buy an **AI credit pack** for low-cost pay-as-you-go generation!")
+        st.write("Upgrade to **Platform Pass** (BYOK access) or our **Lifetime Tier** (unlimited platform fallback + BYOK), or buy an **AI credit pack** for low-cost pay-as-you-go generation!")
         
         col_up1, col_up2 = st.columns(2)
         with col_up1:

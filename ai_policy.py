@@ -16,6 +16,7 @@ def get_ai_access_policy(role, tier, platform_pass_expired=False):
             "provider_options": ["Gemini", "Groq", "OpenRouter"],
             "default_provider": "Gemini",
             "default_model": "gemini-3.5-flash",
+            "platform_quota": None,
             "status_message": "Superadmin: Manual Key Override",
         }
 
@@ -28,6 +29,7 @@ def get_ai_access_policy(role, tier, platform_pass_expired=False):
             "provider_options": ["Gemini"],
             "default_provider": "Gemini",
             "default_model": "gemini-3.5-flash",
+            "platform_quota": 5,
             "status_message": "Using Platform AI (Gemini Flash)",
         }
 
@@ -40,6 +42,7 @@ def get_ai_access_policy(role, tier, platform_pass_expired=False):
             "provider_options": ["Gemini", "Groq", "OpenRouter"],
             "default_provider": "Gemini",
             "default_model": "gemini-3.5-flash",
+            "platform_quota": 0,
             "status_message": "Platform Pass: BYOK required for AI generation.",
         }
 
@@ -52,7 +55,8 @@ def get_ai_access_policy(role, tier, platform_pass_expired=False):
             "provider_options": ["Gemini", "Groq", "OpenRouter"],
             "default_provider": "Gemini",
             "default_model": "gemini-3.5-flash",
-            "status_message": "Lifetime Plan: BYOK required for AI generation.",
+            "platform_quota": None,
+            "status_message": "Lifetime Plan: BYOK preferred, unlimited platform fallback.",
         }
 
     if effective_tier == "enterprise":
@@ -64,6 +68,7 @@ def get_ai_access_policy(role, tier, platform_pass_expired=False):
             "provider_options": ["Gemini", "Groq", "OpenRouter"],
             "default_provider": "Gemini",
             "default_model": "gemini-3.5-flash",
+            "platform_quota": None,
             "status_message": "Enterprise Plan: BYOK or Org-billed AI.",
         }
 
@@ -75,5 +80,6 @@ def get_ai_access_policy(role, tier, platform_pass_expired=False):
         "provider_options": ["Gemini"],
         "default_provider": "Gemini",
         "default_model": "gemini-3.5-flash",
+        "platform_quota": 5,
         "status_message": "Using Platform AI (Gemini Flash)",
     }

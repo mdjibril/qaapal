@@ -36,7 +36,26 @@ def main():
     role = st.session_state.user_role
     tier = st.session_state.get('subscription_tier', 'free')
     credits = st.session_state.get('credits_balance', 0)
-    is_out_of_credits = (role != 'admin' and tier == 'free' and credits <= 0)
+    using_byok = st.session_state.get('using_byok', False)
+
+    # Free tier blocks at zero weekly credits. Paid tiers only block when
+    # the monthly platform quota is exhausted AND no BYOK key is present.
+    if role == 'admin':
+        is_out_of_credits = False
+    elif tier == 'free':
+        is_out_of_credits = credits <= 0
+    else:
+        policy = st.session_state.get('_ai_policy', {})
+        quota = policy.get('platform_quota')
+        if using_byok:
+            is_out_of_credits = False
+        elif quota == 0:
+            is_out_of_credits = True
+        elif quota is None:
+            is_out_of_credits = False
+        else:
+            used = st.session_state.get('ai_quota_used', 0) or 0
+            is_out_of_credits = used >= quota
     
     # st.write(f"Logged in as: {st.session_state.user_session.email}")
     # st.write(f"User ID: {user_id}")
@@ -219,26 +238,30 @@ Return a JSON array of the PC strings that are demonstrably evidenced in the not
         credit_150_link = f"{credit_150}?email={user_email}" if credit_150 else None
         credit_400_link = f"{credit_400}?email={user_email}" if credit_400 else None
 
-        st.warning("⚠️ You have 0 AI credits remaining. Buy a credit pack or upgrade to continue.")
+        platform_quota = st.session_state.get('_ai_policy', {}).get('platform_quota')
+        if tier != 'free' and platform_quota == 0:
+            st.warning("🔑 Your plan requires your own AI key. Add a key in the sidebar to generate reports.")
+        else:
+            st.warning("⚠️ You have 0 AI credits remaining. Buy a credit pack or upgrade to continue.")
 
-        st.markdown("**⚡ Quick AI Credit Packs**")
-        col_c1, col_c2, col_c3 = st.columns(3)
-        with col_c1:
-            if credit_20_link:
-                st.link_button("₦1,000 — 20 Reports", credit_20_link, width='stretch')
-        with col_c2:
-            if credit_150_link:
-                st.link_button("₦5,000 — 150 Reports", credit_150_link, width='stretch')
-        with col_c3:
-            if credit_400_link:
-                st.link_button("₦10,000 — 400 Reports", credit_400_link, width='stretch')
+            st.markdown("**⚡ Quick AI Credit Packs**")
+            col_c1, col_c2, col_c3 = st.columns(3)
+            with col_c1:
+                if credit_20_link:
+                    st.link_button("₦1,000 — 20 Reports", credit_20_link, width='stretch')
+            with col_c2:
+                if credit_150_link:
+                    st.link_button("₦5,000 — 150 Reports", credit_150_link, width='stretch')
+            with col_c3:
+                if credit_400_link:
+                    st.link_button("₦10,000 — 400 Reports", credit_400_link, width='stretch')
 
-        st.markdown("**Or Upgrade Your Plan**")
-        col_up1, col_up2 = st.columns(2)
-        with col_up1:
-            st.link_button("🚀 Upgrade to Platform Pass", upgrade_link, width='stretch')
-        with col_up2:
-            st.link_button("💎 Get Lifetime Tier", lifetime_upgrade_link, width='stretch')
+            st.markdown("**Or Upgrade Your Plan**")
+            col_up1, col_up2 = st.columns(2)
+            with col_up1:
+                st.link_button("🚀 Upgrade to Platform Pass", upgrade_link, width='stretch')
+            with col_up2:
+                st.link_button("💎 Get Lifetime Tier", lifetime_upgrade_link, width='stretch')
 
     if st.button("Generate & Finalize Report", disabled=is_out_of_credits):
         current_time = time.time()
@@ -319,10 +342,16 @@ Return a JSON array of the PC strings that are demonstrably evidenced in the not
                         lo_parts = [f"LO {lo}:{', '.join(pcs)}" for lo, pcs in lo_map.items()]
                         summary_block += f"Unit {u} - {'; '.join(lo_parts)}\n"
                     
-                    # Deduct credit for free tier users upon successful generation
-                    if role != 'admin' and tier == 'free':
-                        db.decrement_credits(st.session_state.org_id)
-                        st.session_state.credits_balance -= 1
+                    # Consume platform credit/quota (BYOK is zero-cost).
+                    if role != 'admin':
+                        allowed, reason = db.consume_ai_credit(
+                            st.session_state.org_id, tier, using_byok
+                        )
+                        if allowed:
+                            if reason == "free_credit":
+                                st.session_state.credits_balance -= 1
+                            elif reason == "platform_quota":
+                                st.session_state.ai_quota_used = st.session_state.get("ai_quota_used", 0) + 1
                     
                     full_report_text = ai_narrative + summary_block
                     st.session_state['current_assessment_report'] = full_report_text
