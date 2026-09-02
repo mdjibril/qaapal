@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------
-    // 2. BYOK Savings Calculator
+    // 2. Credit Pack Savings Calculator
     // ----------------------------------------------------
     const reportsSlider = document.getElementById('reports-slider');
     const reportsValue = document.getElementById('reports-value');
@@ -83,17 +83,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const reportsCount = parseInt(reportsSlider.value, 10);
         reportsValue.textContent = reportsCount;
 
-        // Traditional SaaS model cost: let's estimate ₦1,000 per report generation
+        // Traditional SaaS model cost: ₦1,000 per report generation
         const traditionalCost = reportsCount * 1000;
 
-        // BYOK Model cost: ₦7,000 flat fee (Platform Pass) + average API usage cost (approx ₦30 per report)
-        const byokCost = 7000 + (reportsCount * 30);
+        // Credit pack pricing tiers (never expire, stack with weekly free reports).
+        const PACKS = [
+            { reports: 400, price: 10000 },
+            { reports: 150, price: 5000 },
+            { reports: 20, price: 1000 }
+        ];
 
-        // Savings
-        const savings = Math.max(0, traditionalCost - byokCost);
+        // Find the minimum cost using whole packs to cover the report count
+        // (a simple exhaustive search is cheap enough for these three tiers).
+        let creditPackCost = Infinity;
+        for (let a = 0; a <= Math.ceil(reportsCount / 400) + 1; a++) {
+            for (let b = 0; b <= Math.ceil(reportsCount / 150) + 1; b++) {
+                const covered = a * 400 + b * 150;
+                const remainder = Math.max(0, reportsCount - covered);
+                const c = Math.ceil(remainder / 20);
+                const cost = a * 10000 + b * 5000 + c * 1000;
+                if (cost < creditPackCost) creditPackCost = cost;
+            }
+        }
+
+        const savings = Math.max(0, traditionalCost - creditPackCost);
 
         traditionalCostEl.textContent = `₦${traditionalCost.toLocaleString()}`;
-        byokCostEl.textContent = `₦${byokCost.toLocaleString()}`;
+        byokCostEl.textContent = `₦${creditPackCost.toLocaleString()}`;
         savingsEl.textContent = `₦${savings.toLocaleString()}`;
     };
 

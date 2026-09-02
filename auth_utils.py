@@ -1,6 +1,7 @@
 import os
 import streamlit as st
 import time
+from datetime import datetime, timedelta
 from supabase import create_client, ClientOptions
 
 def get_secret(key_path, env_key):
@@ -278,7 +279,7 @@ def finalize_session(user, session):
     admin_client = get_admin_supabase()
     # Fetch profile and organization data
     profile_res = admin_client.table("user_profiles")\
-        .select("role, org_role, full_name, phone, assessor_role, organizations(id, subscription_tier, credits_balance, master_api_key, subscription_start_date)")\
+        .select("role, org_role, full_name, phone, assessor_role, organizations(id, subscription_tier, credits_balance, master_api_key, subscription_start_date, last_credit_depletion)")\
         .eq("id", user.id).execute()
     
     # If profile is missing (e.g., trigger failed or delayed), attempt to initialize it (Self-Healing)
@@ -304,7 +305,7 @@ def finalize_session(user, session):
             
             # Re-fetch to include data potentially added by the trigger in the background
             profile_res = admin_client.table("user_profiles")\
-                .select("role, org_role, full_name, phone, organizations(id, subscription_tier, credits_balance, master_api_key)")\
+                .select("role, org_role, full_name, phone, organizations(id, subscription_tier, credits_balance, master_api_key, last_credit_depletion)")\
                 .eq("id", user.id).execute()
         except Exception as e:
             st.error(f"Login error: Could not initialize user profile. {e}")
@@ -328,5 +329,20 @@ def finalize_session(user, session):
     st.session_state['credits_balance'] = org.get('credits_balance', 0)
     st.session_state['master_api_key'] = org.get('master_api_key')
     st.session_state['subscription_start_date'] = org.get('subscription_start_date')
+
+    # Phase 7: refill free-tier credits if 7 days have passed since depletion.
+    org_id = org.get('id')
+    if org_id and org.get('subscription_tier', 'free') == 'free' and st.session_state['credits_balance'] <= 0:
+        depletion_str = org.get('last_credit_depletion')
+        if depletion_str:
+            try:
+                depletion = datetime.fromisoformat(depletion_str.replace('Z', '+00:00'))
+                if datetime.now(depletion.tzinfo) >= depletion + timedelta(days=7):
+                    admin_client.table("organizations").update(
+                        {"credits_balance": 5, "last_credit_depletion": None}
+                    ).eq("id", org_id).execute()
+                    st.session_state['credits_balance'] = 5
+            except (ValueError, TypeError):
+                pass
     
     st.rerun()

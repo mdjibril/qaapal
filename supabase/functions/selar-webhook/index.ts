@@ -51,12 +51,29 @@ Deno.serve(async (req: Request) => {
 
     const orgId = profile.org_id
 
-    // 4. Update the Organization's Subscription
-    // We'll give them the 'platform_pass', reset/add credits, and set start date
+    // 4. Map the purchased product to a subscription tier
+    const product = (payload.product || "").toLowerCase()
+
+    // Credit-pack sales (20/150/400 Report) must not change the subscription tier.
+    if (product.includes("report")) {
+      return new Response('Ignored: credit pack sale (tier unchanged)', { status: 200 })
+    }
+
+    let tier = "platform_pass"
+    if (product.includes("lifetime")) {
+      tier = "lifetime"
+    } else if (product.includes("platform") || product.includes("pass")) {
+      tier = "platform_pass"
+    } else {
+      console.warn(`Unknown product, ignoring: ${payload.product}`)
+      return new Response('Ignored: unknown product', { status: 200 })
+    }
+
+    // 5. Update the Organization's Subscription
     const { error: updateError } = await supabaseAdmin
       .from('organizations')
       .update({
-        subscription_tier: 'platform_pass',
+        subscription_tier: tier,
         subscription_start_date: new Date().toISOString()
       })
       .eq('id', orgId)

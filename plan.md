@@ -274,16 +274,20 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
 
 #### Tier 3 — Landing Page & Pricing Alignment
 
-*   [ ] **Update landing page (`landing/index.html`)**
-    *   [ ] Replace "Platform AI (Gemini Flash) - Free Forever" framing with a capped free tier.
-    *   [ ] Surface the AI Credit Pack products next to Platform Pass and Lifetime.
-    *   [ ] Update the savings calculator to reflect credit-pack pricing and provider costs.
-    *   [ ] Update FAQ to explain the new credit/quota model (free ≠ unlimited).
-    *   [ ] Update meta description/keywords to de-emphasize unlimited platform AI.
+*   [x] **Update landing page (`landing/index.html`)**
+    *   [x] Replace "Platform AI (Gemini Flash) - Free Forever" framing with a capped free tier.
+    *   [x] Surface the AI Credit Pack products next to Platform Pass and Lifetime.
+    *   [x] Update the savings calculator to reflect credit-pack pricing and provider costs.
+    *   [x] Update FAQ to explain the new credit/quota model (free ≠ unlimited).
+    *   [x] Update meta description/keywords to de-emphasize unlimited platform AI.
 
-*   [ ] **Update in-app subscription page (`subscription_page.py`)**
-    *   [ ] Show AI credit balance/quota separately from platform access.
-    *   [ ] Add "Buy AI Credits" links alongside upgrade/downgrade controls.
+*   [x] **Update in-app subscription page (`subscription_page.py`)**
+    *   [x] Show AI credit balance/quota separately from platform access.
+    *   [x] Add "Buy AI Credits" links alongside upgrade/downgrade controls.
+
+*   [x] **Weekly free-credit renewal (Python-side)**
+    *   [x] Refill free tier to 5 credits on login after 7 days from `last_credit_depletion`.
+    *   [x] Wired in `finalize_session()`; no pg_cron extension required.
 
 *   [ ] **Provider cost documentation**
     *   [ ] Document Gemini Flash per-token cost so margin is transparent.
@@ -303,6 +307,44 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
 
 ---
 
+### Phase 8 — NOS Assessment Workbook & Instructor Guide Generator
+
+Generate, from any NOS trade JSON, a **Student Workbook** (questions only) and an **Instructor Guide** (questions + ideal answers + marking schemes), downloadable as Word documents for assessors to share with students.
+
+*   [ ] **Input**
+    *   [ ] Accept a NOS trade JSON object (`trade_name`, `level`, `units → learning_outcomes → performance_criteria`).
+    *   [ ] Let assessors upload/paste JSON or select an existing course/trade from the app.
+
+*   [ ] **Generation**
+    *   [ ] One assessment item per `performance_criteria` (`pc_code`).
+    *   [ ] Vary question types: Direct, Scenario-Based, Step-by-Step Procedure, Labeled Diagram, Narrative Explanation.
+    *   [ ] Align language/complexity to `level` (Level 2 = foundational; Level 3 = analytical).
+    *   [ ] Produce the identical question set in both documents.
+
+*   [ ] **Output documents**
+    *   [ ] Student Workbook: questions only, with `Question Type` and `Weight` per PC.
+    *   [ ] Instructor Guide: identical questions + comprehensive ideal answers + bulleted grading rubrics.
+    *   [ ] Export both as `.docx` (Word) for download/sharing.
+
+*   [ ] **Constraints**
+    *   [ ] Never skip a PC.
+    *   [ ] Answers must be specific (real standards, pin-outs, safety acts) — no generic "accept any valid answer."
+    *   [ ] Student and Instructor question text must match exactly.
+
+#### Sample Generation Prompt
+
+> You are an expert curriculum developer and instructional designer specializing in vocational and technical education. Your task is to ingest a National Occupational Standards (NOS) JSON object and generate two distinct documents: a **Student Workbook (Questions Only)** and an **Instructor Guide (Questions, Answers, and Marking Schemes)**.
+>
+> **Input schema:** `trade_name`, `level`, and `units` containing `code`, `title`, and `learning_outcomes` (each with `lo_num`, `description`, and `performance_criteria` containing `pc_code` and `description`).
+>
+> For every `pc_code`, generate exactly one level-appropriate assessment item, varying type by competency nature (Direct, Scenario-Based, Step-by-Step, Diagrammatic, or Narrative). Align complexity to `level` (Level 2 foundational; Level 3 analytical).
+>
+> **Document 1 — Student Workbook:** questions only, with `Question Type` and `Weight` per PC.
+> **Document 2 — Instructor Guide:** identical questions plus comprehensive ideal answers and bulleted grading rubrics.
+>
+> Never skip a PC; reference real-world technologies, standards, and safety laws; and ensure the question text matches exactly across both documents.
+
+---
 ### Completed Phases Summary
 
 | Phase | Status | Description |
@@ -316,4 +358,7 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
 | Security | ✅ Complete | IDOR fixes, RLS policies, session isolation, auth consistency |
 | Code Quality | ✅ Complete | 20 issues fixed across critical/high/medium/low (see issues.md) |
 | Phase 6 | 🚧 In Progress | QA Assessor Growth & Retention features (Tier 1–2 implemented) |
-| Phase 7 | 🚧 In Progress | Sustainable AI monetization (Tier 1 implemented) |
+| Phase 7 | 🚧 In Progress | Sustainable AI monetization (Tiers 1 & 3 implemented) |
+| Phase 8 | ⏳ Planned | NOS Assessment Workbook & Instructor Guide Generator |
+
+---

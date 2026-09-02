@@ -137,11 +137,11 @@ def main():
         
         if credits_balance <= 0:
             st.error("You have run out of free credits.")
-            st.info("💡 You can wait for 7 days for your free credits to automatically renew, or upgrade now for unlimited access!")
+            st.info("💡 Your 5 free reports refresh every 7 days. You can wait for the weekly renewal, buy a credit pack, or upgrade now for unlimited access!")
         else:
-            st.info(f"You are currently on the Free plan with {credits_balance} reports remaining.")
+            st.info(f"You are currently on the Free plan with {credits_balance} of 5 weekly reports remaining.")
             
-        st.write("Upgrade to **Platform Pass** or our **Lifetime Tier** for unlimited report generations and advanced features!")
+        st.write("Upgrade to **Platform Pass** or our **Lifetime Tier** for unlimited report generations, or buy an **AI credit pack** for low-cost pay-as-you-go generation!")
         
         col_up1, col_up2 = st.columns(2)
         with col_up1:

@@ -1014,6 +1014,124 @@ input:checked + .slider:before {
 }
 
 /* ----------------------------------------------------
+   Credit Pack & API Guide Grids
+   ---------------------------------------------------- */
+.credit-packs-section {
+    padding: 5rem 0;
+    background-color: #f8fafc;
+}
+
+.credit-packs-section .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.credit-pack-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.credit-pack-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.credit-pack-card.featured {
+    border: 2px solid #2563eb;
+}
+
+.credit-pack-card .badge {
+    margin-bottom: 1rem;
+}
+
+.credit-pack-title {
+    margin-bottom: 0.5rem;
+    color: #111827;
+}
+
+.credit-pack-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+}
+
+.credit-pack-rate {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.credit-pack-card .card-btn {
+    width: 100%;
+}
+
+.api-guide-section {
+    background-color: #f8fafc;
+    padding: 5rem 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.api-guide-section .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.api-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.api-guide-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.api-guide-title {
+    margin-bottom: 1rem;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.api-guide-desc {
+    color: #4b5563;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.api-guide-list {
+    color: #4b5563;
+    font-size: 0.95rem;
+    margin: 0;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+    text-align: left;
+    display: inline-block;
+}
+
+.api-guide-list a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ----------------------------------------------------
    FAQ Section
    ---------------------------------------------------- */
 .faq-section {
@@ -1182,6 +1300,18 @@ input:checked + .slider:before {
         flex-direction: column;
         width: 100%;
         max-width: 320px;
+    }
+    
+    .api-guide-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .api-guide-card {
+        padding: 1.5rem !important;
+    }
+    
+    .credit-pack-grid {
+        grid-template-columns: 1fr !important;
     }
     
     .pricing-grid {
