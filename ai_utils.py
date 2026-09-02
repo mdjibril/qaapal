@@ -56,14 +56,6 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                         continue
                     # Single key failed; keep the error but still run fallbacks below.
 
-            # Gemini is the fallback when the primary OpenRouter route is unavailable.
-            if prompt and allow_fallback:
-                or_fallback_key = get_secret(["OPENROUTER_API_KEY"], "OPENROUTER_API_KEY")
-                if or_fallback_key:
-                    or_model = get_secret(["OPENROUTER_FALLBACK_MODEL"], "OPENROUTER_FALLBACK_MODEL") or "google/gemini-3.5-flash-lite"
-                    st.toast(f"🔄 Gemini failed. Attempting OpenRouter ({or_model}) fallback...", icon="⚠️")
-                    return validate_and_generate("OpenRouter", or_model, [or_fallback_key], prompt, system_prompt)
-
             if last_error:
                 if "429" in last_error:
                     return "API_ERROR: The free AI service is currently at capacity. Please try again in a minute."
