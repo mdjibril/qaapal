@@ -174,6 +174,8 @@ def main():
     ai_policy = get_ai_access_policy(role, tier, is_platform_pass_expired)
     st.session_state['_ai_policy'] = ai_policy
     show_byok = ai_policy["allow_byok"]
+    platform_quota = ai_policy.get("platform_quota")
+    using_byok = bool(st.session_state.get('target_keys'))
 
     if tier == 'platform_pass' and is_platform_pass_expired:
         st.session_state['subscription_tier'] = 'free'
@@ -352,8 +354,6 @@ def main():
 
     # Phase 7 Tier 2: determine whether this generation uses BYOK or platform quota.
     # platform_quota == 0 means BYOK-only (no platform fallback).
-    platform_quota = ai_policy.get("platform_quota")
-    using_byok = bool(st.session_state.get('target_keys'))
     if show_byok and not using_byok and platform_quota != 0:
         # Paid tier without a pasted key, with platform fallback available.
         st.session_state.ai_provider = ai_policy["default_provider"]
