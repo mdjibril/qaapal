@@ -112,7 +112,7 @@ def main():
             st.error("Please provide some reflection notes first.")
         elif not selected_pcs:
             st.error("Please select at least one PC that you achieved.")
-        elif provider != "VertexAI" and not keys: # Check if keys list is empty
+        elif not keys: # Check if keys list is empty
             if tier == 'free':
                 st.error("⛔ Internal AI key missing. Contact administrator.")
             else:

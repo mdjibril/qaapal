@@ -1,10 +1,7 @@
 import os
-import json
 import tomllib
 import requests
-from google.oauth2 import service_account
 from google import genai
-from groq import Groq
 
 def load_secrets():
     """Loads Streamlit secrets from the .streamlit/secrets.toml file."""
@@ -18,7 +15,7 @@ def load_secrets():
 def test_gemini_studio(secrets):
     print("\n--- Testing Google AI Studio (Gemini) ---")
     raw_keys = secrets.get("INTERNAL_AI_KEY", "")
-    model_name = secrets.get("INTERNAL_AI_MODEL", "gemini-1.5-flash")
+    model_name = secrets.get("INTERNAL_AI_MODEL", "gemini-3.5-flash")
     
     keys = [k.strip() for k in raw_keys.split(",") if k.strip()]
     if not keys:
@@ -38,73 +35,10 @@ def test_gemini_studio(secrets):
         except Exception as e:
             print(f"❌ Key {i+1}: Failed - {e}")
 
-def test_vertex_ai(secrets):
-    print("\n--- Testing Google Cloud Vertex AI ---")
-    vertex_cfg = secrets.get("vertex_ai", {})
-    sa_json_str = vertex_cfg.get("service_account_json")
-    location = vertex_cfg.get("location", "us-central1")
-    model_name = secrets.get("INTERNAL_AI_MODEL", "gemini-1.5-flash") # Or specific vertex model
-
-    if not sa_json_str:
-        print("⚠️ Vertex AI Service Account JSON not found in secrets.")
-        return
-
-    try:
-        sa_info = json.loads(sa_json_str)
-        
-        # --- THE FIX IS HERE ---
-        # You must explicitly request the cloud-platform scope.
-        creds = service_account.Credentials.from_service_account_info(
-            sa_info,
-            scopes=["https://www.googleapis.com/auth/cloud-platform"]
-        )
-        # ----------------------
-        
-        project_id = sa_info.get("project_id")
-        
-        client = genai.Client(
-            vertexai=True,
-            project=project_id,
-            location=location,
-            credentials=creds
-        )
-
-        # Increased tokens further to avoid MAX_TOKENS cutoff during test
-        response = client.models.generate_content(model=model_name, contents="Ping", config={"max_output_tokens": 100})
-        
-        print(f"✅ Vertex AI: Success! (Project: {project_id}, Region: {location})")
-        if response.text:
-            print(f"📝 Response: {response.text.strip()}")
-        else:
-            reason = response.candidates[0].finish_reason if response.candidates else "Unknown"
-            print(f"⚠️ Response received but contained no text parts. Finish reason: {reason}")
-    except Exception as e:
-        print(f"❌ Vertex AI: Failed - {e}")
-
-def test_groq(secrets):
-    print("\n--- Testing Groq ---")
-    key = secrets.get("GROQ_API_KEY")
-    model = secrets.get("GROQ_FALLBACK_MODEL", "llama-3.3-70b-versatile")
-
-    if not key:
-        print("⚠️ Groq API key not found in secrets.")
-        return
-
-    try:
-        client = Groq(api_key=key)
-        completion = client.chat.completions.create(
-            model=model,
-            messages=[{"role": "user", "content": "Ping"}],
-            max_tokens=5
-        )
-        print(f"✅ Groq: Success! (Model: {model})")
-    except Exception as e:
-        print(f"❌ Groq: Failed - {e}")
-
 def test_openrouter(secrets):
     print("\n--- Testing OpenRouter ---")
     key = secrets.get("OPENROUTER_API_KEY")
-    model = secrets.get("OPENROUTER_FALLBACK_MODEL", "google/gemini-2.0-flash-001")
+    model = secrets.get("OPENROUTER_FALLBACK_MODEL", "google/gemini-3.5-flash-lite")
 
     if not key:
         print("⚠️ OpenRouter API key not found in secrets.")
@@ -141,13 +75,9 @@ def main():
     if not secrets:
         return
 
-    # 1. Test Platform/Internal Keys
-    test_gemini_studio(secrets)
-    test_vertex_ai(secrets)
-    
-    # 2. Test Fallback Keys
-    test_groq(secrets)
+    # Test the platform primary and fallback providers.
     test_openrouter(secrets)
+    test_gemini_studio(secrets)
 
     print("\n=================================")
     print("Verification Complete.")

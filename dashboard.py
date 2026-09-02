@@ -2,7 +2,7 @@ import streamlit as st
 import datetime
 import time
 from file_utils import export_to_word
-from ai_utils import validate_and_generate, transcribe_audio_with_vertex
+from ai_utils import validate_and_generate
 from auth_utils import get_secret
 from security_utils import sanitize_text_input, sanitize_notes_input
 import database as db
@@ -151,22 +151,6 @@ def main():
     *Example: 'Struggled with the RJ45 crimping tool at first but corrected the pin alignment manually after a second attempt.'*
     """)
 
-    # --- ADMIN-ONLY: Voice Dictation ---
-    if role == 'admin':
-        with st.expander("🎤 Voice Dictation (Admin Only)", expanded=False):
-            audio_bytes = st.audio_input("Record observation notes by voice")
-            if audio_bytes:
-                st.audio(audio_bytes, format="audio/wav")
-                if st.button("Transcribe Audio", key="transcribe_btn"):
-                    with st.spinner("Transcribing..."):
-                        transcript, err = transcribe_audio_with_vertex(audio_bytes)
-                        if transcript:
-                            st.session_state.observation_notes_input = transcript
-                            st.toast("Transcription complete.")
-                            st.rerun()
-                        else:
-                            st.error(f"Transcription failed: {err}")
-
     # --- ADMIN-ONLY: Evidence Matrix Auto-Mapper ---
     if role == 'admin':
         if st.button("✨ Suggest PCs from Notes", key="suggest_pcs_btn"):
@@ -279,7 +263,7 @@ Return a JSON array of the PC strings that are demonstrably evidenced in the not
             st.error("⚠️ **Observation Notes** (Step 3) cannot be empty. Describe what the candidate did during the session.")
         elif not selected_pcs:
             st.warning("Please select at least one Performance Criterion above.")
-        elif not dev_mode and provider != "VertexAI" and not keys: # Check if keys list is empty
+        elif not dev_mode and not keys: # Check if keys list is empty
             st.warning(f"Please enter the {provider} API key(s) in the sidebar.")
         else:
             for key in (

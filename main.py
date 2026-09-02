@@ -282,12 +282,12 @@ def main():
     if not show_byok:
         st.session_state.ai_provider = ai_policy["default_provider"]
         st.session_state.target_model = ai_policy["default_model"]
-        # Non-BYOK users use the platform Gemini key (free tier) or fall back to platform keys.
+        # Non-BYOK users use the platform OpenRouter key or its Gemini fallback.
         st.session_state.target_keys = []
-        if st.session_state.ai_provider == "Gemini":
-            internal_key = get_secret(["INTERNAL_AI_KEY"], "INTERNAL_AI_KEY")
-            if internal_key:
-                st.session_state.target_keys = [k.strip() for k in str(internal_key).split(',') if k.strip()]
+        platform_key_name = "OPENROUTER_API_KEY" if st.session_state.ai_provider == "OpenRouter" else "INTERNAL_AI_KEY"
+        platform_key = get_secret([platform_key_name], platform_key_name)
+        if platform_key:
+            st.session_state.target_keys = [k.strip() for k in str(platform_key).split(',') if k.strip()]
 
     if show_byok:
         with st.sidebar.expander("📡 AI Provider Settings", expanded=False):
@@ -301,11 +301,7 @@ def main():
                 st.session_state.last_verified_key = ""
                 st.session_state.last_provider = st.session_state.ai_provider
 
-            if st.session_state.ai_provider == "VertexAI":
-                st.session_state.target_keys = []
-                st.session_state.target_model = ai_policy["default_model"]
-                st.info("Using Platform AI (Vertex AI)")
-            elif st.session_state.ai_provider == "Gemini":
+            if st.session_state.ai_provider == "Gemini":
                 st.text_input("Gemini API Key", type="password", key="gemini_api_key_input", on_change=update_api_key_session, args=("gemini_api_key_input",))
                 if not st.session_state.target_keys and "gemini_api_key_input" in st.session_state and st.session_state.gemini_api_key_input:
                     st.session_state.target_keys = [k.strip() for k in st.session_state.gemini_api_key_input.split(',') if k.strip()]
@@ -314,16 +310,7 @@ def main():
                     st.session_state.target_model = st.text_input("Custom Gemini Model", placeholder="e.g. gemini-3.1-pro-preview", key="gemini_custom_model")
                 else:
                     st.session_state.target_model = gemini_model_choice
-            elif st.session_state.ai_provider == "Groq":
-                st.text_input("Groq API Key", type="password", key="groq_api_key_input", on_change=update_api_key_session, args=("groq_api_key_input",))
-                if not st.session_state.target_keys and "groq_api_key_input" in st.session_state and st.session_state.groq_api_key_input:
-                    st.session_state.target_keys = [st.session_state.groq_api_key_input.strip()]
-                groq_model_choice = st.selectbox("Groq Model", ["llama-3.3-70b-versatile", "llama-3.1-8b-instant", "Other (Custom)"])
-                if groq_model_choice == "Other (Custom)":
-                    st.session_state.target_model = st.text_input("Custom Groq Model", placeholder="e.g. llama-3.3-70b-specdec", key="groq_custom_model")
-                else:
-                    st.session_state.target_model = groq_model_choice
-            elif st.session_state.ai_provider == "OpenRouter":
+            else:
                 st.text_input("OpenRouter API Key", type="password", key="openrouter_api_key_input", on_change=update_api_key_session, args=("openrouter_api_key_input",))
                 if not st.session_state.target_keys and "openrouter_api_key_input" in st.session_state and st.session_state.openrouter_api_key_input:
                     st.session_state.target_keys = [st.session_state.openrouter_api_key_input.strip()]
@@ -334,10 +321,7 @@ def main():
                     st.session_state.target_model = or_model_choice
 
             curr_keys_for_verification = st.session_state.get('target_keys', [])
-            if st.session_state.ai_provider == "VertexAI":
-                st.session_state.connection_success = True
-                st.session_state.connection_msg = "✅ Connected to Vertex AI"
-            elif curr_keys_for_verification:
+            if curr_keys_for_verification:
                 first_key_for_verification = curr_keys_for_verification[0]
                 if first_key_for_verification != st.session_state.get('last_verified_key'):
                     with st.spinner("Verifying connection..."):
@@ -346,7 +330,7 @@ def main():
                         st.session_state.connection_success = ("✅ Connected" in str(res))
                         st.session_state.connection_msg = res
 
-            if st.session_state.ai_provider != "VertexAI" and curr_keys_for_verification:
+            if curr_keys_for_verification:
                 if st.session_state.get('connection_success'):
                     st.success(st.session_state.connection_msg)
                 else:
@@ -358,8 +342,9 @@ def main():
         # Paid tier without a pasted key, with platform fallback available.
         st.session_state.ai_provider = ai_policy["default_provider"]
         st.session_state.target_model = ai_policy["default_model"]
-        internal_key = get_secret(["INTERNAL_AI_KEY"], "INTERNAL_AI_KEY")
-        st.session_state.target_keys = [k.strip() for k in str(internal_key).split(',') if k.strip()] if internal_key else []
+        platform_key_name = "OPENROUTER_API_KEY" if st.session_state.ai_provider == "OpenRouter" else "INTERNAL_AI_KEY"
+        platform_key = get_secret([platform_key_name], platform_key_name)
+        st.session_state.target_keys = [k.strip() for k in str(platform_key).split(',') if k.strip()] if platform_key else []
         using_byok = bool(st.session_state.get('target_keys'))
     st.session_state.using_byok = using_byok
 

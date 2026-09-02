@@ -304,9 +304,12 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
     *   [x] Refill free tier to 5 credits on login after 7 days from `last_credit_depletion`.
     *   [x] Wired in `finalize_session()`; no pg_cron extension required.
 
-*   [ ] **Provider cost documentation**
-    *   [ ] Document Gemini Flash per-token cost so margin is transparent.
-    *   [ ] Define target margin: charge ~₦50–₦100/report while API cost stays under ₦10/report.
+*   [x] **Provider cost documentation**
+    *   [x] Free Gemini key → platform model `gemini-3.5-flash`.
+    *   [x] Paid OpenRouter key → platform fallback `google/gemini-3.5-flash-lite`.
+    *   [x] OpenRouter pricing (per 1M tokens): Flash Lite $0.30 input / $2.50 output; Flash $1.50 input / $9.00 output.
+    *   [x] Estimated report cost (~3.5k input / 2k output tokens): Flash Lite ≈ ₦9, Flash ≈ ₦35 (at ₦1,500/USD).
+    *   [x] Target margin confirmed: all credit packs stay profitable with Flash Lite (₦50/33/25 vs ≈₦9 cost).
 
 #### Tier 4 — Automation (post-revenue)
 

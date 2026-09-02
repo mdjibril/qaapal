@@ -77,15 +77,11 @@ def main():
         
         # Determine API Presence without throwing errors on missing secrets
         gemini_present = bool(get_secret(["INTERNAL_AI_KEY"], "INTERNAL_AI_KEY"))
-        groq_present = bool(get_secret(["GROQ_API_KEY"], "GROQ_API_KEY"))
         openrouter_present = bool(get_secret(["OPENROUTER_API_KEY"], "OPENROUTER_API_KEY"))
-        vertex_present = bool(get_secret(["vertex_ai", "service_account_json"], "VERTEX_AI"))
 
-        c1, c2, c3, c4 = st.columns(4)
+        c1, c2 = st.columns(2)
         c1.metric("Gemini API", "Configured" if gemini_present else "Missing")
-        c2.metric("Groq API", "Configured" if groq_present else "Missing")
-        c3.metric("OpenRouter API", "Configured" if openrouter_present else "Missing")
-        c4.metric("Vertex AI", "Configured" if vertex_present else "Missing")
+        c2.metric("OpenRouter API", "Configured" if openrouter_present else "Missing")
 
         st.divider()
 

@@ -107,7 +107,7 @@ def main():
     if st.button("Generate Witness Statement", type="primary", disabled=is_out_of_credits):
         if not witness_notes or not selected_pcs or not witness_name or not candidate_name:
             st.error("Please fill in all details, select at least one PC, and provide observation notes.")
-        elif provider != "VertexAI" and not keys: # Check if keys list is empty
+        elif not keys: # Check if keys list is empty
             st.warning("Please enter your AI API key(s) in the sidebar.")
         else:
             st.session_state.pop("fb_submitted_witness_statement", None)
