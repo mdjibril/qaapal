@@ -29,6 +29,7 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
         if provider == "Gemini":
             num_keys = len(api_keys)
             _gemini_key_index %= num_keys
+            last_error = None
             for _ in range(num_keys):
                 current_key_index = _gemini_key_index
                 current_api_key = api_keys[current_key_index]
@@ -51,13 +52,12 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                         )
                         return f"✅ Connected: {model_name}"
                 except Exception as e:
+                    last_error = str(e)
                     _gemini_key_index = (current_key_index + 1) % num_keys
+                    # If more keys are available, try the next one.
                     if num_keys > 1:
                         continue
-                    else:
-                        if "429" in str(e):
-                            return "API_ERROR: The free AI service is currently at capacity. Please try again in a minute."
-                        return f"API_ERROR: {str(e)}"
+                    # Single key failed; keep the error but still run fallbacks below.
 
             # --- FALLBACK MECHANISM ---
             # If all Gemini keys fail during a generation request, try other providers if keys exist in secrets
@@ -76,6 +76,10 @@ def validate_and_generate(provider, model_name, api_keys, prompt=None, system_pr
                     st.toast(f"🔄 Gemini/Groq exhausted. Attempting OpenRouter ({or_model}) fallback...", icon="⚠️")
                     return validate_and_generate("OpenRouter", or_model, [or_fallback_key], prompt, system_prompt)
 
+            if last_error:
+                if "429" in last_error:
+                    return "API_ERROR: The free AI service is currently at capacity. Please try again in a minute."
+                return f"API_ERROR: {last_error}"
             return "API_ERROR: All available Gemini keys were exhausted and no fallback was found."
 
         elif provider == "Groq":
