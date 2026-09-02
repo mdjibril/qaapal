@@ -175,7 +175,7 @@ def main():
     st.session_state['_ai_policy'] = ai_policy
     show_byok = ai_policy["allow_byok"]
     platform_quota = ai_policy.get("platform_quota")
-    using_byok = bool(st.session_state.get('target_keys'))
+    using_byok = False
 
     if tier == 'platform_pass' and is_platform_pass_expired:
         st.session_state['subscription_tier'] = 'free'
@@ -338,6 +338,12 @@ def main():
 
     # Phase 7 Tier 2: determine whether this generation uses BYOK or platform quota.
     # platform_quota == 0 means BYOK-only (no platform fallback).
+    selected_key_name = (
+        "gemini_api_key_input"
+        if st.session_state.ai_provider == "Gemini"
+        else "openrouter_api_key_input"
+    )
+    using_byok = bool(str(st.session_state.get(selected_key_name, "")).strip())
     if show_byok and not using_byok and platform_quota != 0:
         # Paid tier without a pasted key, with platform fallback available.
         st.session_state.ai_provider = ai_policy["default_provider"]
@@ -345,7 +351,7 @@ def main():
         platform_key_name = "OPENROUTER_API_KEY" if st.session_state.ai_provider == "OpenRouter" else "INTERNAL_AI_KEY"
         platform_key = get_secret([platform_key_name], platform_key_name)
         st.session_state.target_keys = [k.strip() for k in str(platform_key).split(',') if k.strip()] if platform_key else []
-        using_byok = bool(st.session_state.get('target_keys'))
+        using_byok = False
     st.session_state.using_byok = using_byok
 
     if role == 'admin':
