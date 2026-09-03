@@ -1,6 +1,6 @@
 import streamlit as st
 from auth_utils import check_auth, login_form, get_secret, reset_password_form, finalize_session
-import dashboard, history, personal_statement, witness_statement, subscription_page, account_settings, admin_panel, student_portfolio, bulk_csv_import, database as db
+import dashboard, history, personal_statement, witness_statement, subscription_page, account_settings, admin_panel, student_portfolio, bulk_csv_import, workbook_generator, database as db
 from ai_utils import validate_and_generate
 from ai_policy import get_ai_access_policy
 from app_state import ensure_session_defaults
@@ -380,6 +380,7 @@ def main():
                 "📝 Dashboard": dashboard.main,
                 "✍️ Student Statement": personal_statement.main,
                 "📑 Witness Statement": witness_statement.main,
+                "📚 Workbook Generator": workbook_generator.main,
                 "📜 My History": history.main,
                 "⚙️ Account Settings": account_settings.main,
                 "💳 My Subscription": subscription_page.main

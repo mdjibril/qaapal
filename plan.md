@@ -323,37 +323,213 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
     *   [ ] Alert before a paid quota is exhausted.
     *   [ ] Notify before provider free-tier rate limits are hit.
 
+#### Tier 4 Implementation Walkthrough
+
+This is the planned execution path for completing the automation work. The
+payment workflow should be implemented before usage analytics so revenue and
+credit fulfillment are reliable first.
+
+##### 1. Add payment transaction storage
+
+Create a `payment_transactions` table in Supabase to make webhook processing
+auditable and idempotent. The provider reference must be unique because Selar
+may retry the same webhook.
+
+Suggested fields:
+
+* `provider`
+* `provider_reference` (unique)
+* `org_id`
+* `customer_email`
+* `product_name`
+* `amount`
+* `status`
+* `credits_applied`
+* `raw_payload` (`jsonb`)
+* `created_at`
+* `refunded_at`
+
+Enable RLS and restrict normal users from reading payment records. Webhook
+processing should use the Supabase service-role client.
+
+##### 2. Make credit fulfillment atomic
+
+Add a database function or protected server-side operation that:
+
+1. Checks whether `provider_reference` already exists.
+2. Inserts the transaction if it is new.
+3. Adds the purchased credits to `organizations.credits_balance`.
+4. Increments `ai_credits_purchased`.
+5. Returns the result as `applied`, `duplicate`, or `failed`.
+
+The transaction insert and credit update must succeed or fail together. This
+prevents duplicate credits when a webhook is retried or partial updates occur.
+
+##### 3. Extend the Selar Edge Function
+
+Update `supabase/functions/selar-webhook/index.ts` while keeping the existing
+`x-bridge-secret` check. The function should:
+
+1. Accept only `POST` requests.
+2. Parse and validate the successful-payment payload.
+3. Extract the customer email and provider transaction reference.
+4. Find the linked organization.
+5. Classify the product:
+     * `20 reports` -> add 20 credits
+     * `150 reports` -> add 150 credits
+     * `400 reports` -> add 400 credits
+     * `Platform Pass` -> change the tier to `platform_pass`
+     * `Lifetime` -> change the tier to `lifetime`
+6. Call the idempotent fulfillment operation.
+7. Return success for both newly applied and duplicate events so Selar does
+     not retry a correctly processed payment.
+
+The current implementation updates subscription tiers but intentionally ignores
+products containing `report`; this branch must be replaced with credit-pack
+fulfillment.
+
+##### 4. Handle refunds and chargebacks
+
+Add a separate reversal path keyed by the original provider reference. It
+should:
+
+* Mark the original transaction as refunded.
+* Prevent the same refund from being applied twice.
+* Subtract only the credits originally granted by that transaction, subject to
+    a business rule for credits already spent.
+* Record the refund payload and timestamp.
+* Avoid silently downgrading a subscription unless the payment event is a
+    confirmed subscription refund or chargeback.
+
+##### 5. Add AI usage event tracking
+
+Create an `ai_usage_events` table for successful generations. Store:
+
+* `org_id`
+* `user_id`
+* `provider`
+* `model`
+* `credential_source` (`byok`, `platform`, or `master_api_key`)
+* `report_type` (`dashboard`, `personal_statement`, or `witness_statement`)
+* `input_tokens`
+* `output_tokens`
+* `estimated_cost`
+* `created_at`
+
+Add indexes on `(org_id, created_at)` and `(created_at)` for monthly and daily
+reports. Do not store API keys in this table.
+
+##### 6. Record usage from a shared helper
+
+Add one database helper such as `record_ai_usage(...)`. Call it only after a
+successful AI response, from the three generation flows:
+
+* `dashboard.py`
+* `personal_statement.py`
+* `witness_statement.py`
+
+Derive the credential source from the existing `using_byok` state so the
+analytics label matches the key actually used. Prefer returning token usage
+metadata from `validate_and_generate`; until provider metadata is available,
+record a clearly labelled estimated cost.
+
+##### 7. Add analytics and alerts
+
+Add an admin-only usage view showing:
+
+* Daily and monthly generations per organization.
+* Usage by provider and model.
+* Estimated spend by organization.
+* BYOK versus platform-key usage.
+* Organizations approaching their quota.
+
+Use warning thresholds at 70%, 85%, and 100%. Provider rate-limit alerts can
+initially be based on `429` responses and repeated API errors, then upgraded to
+provider-specific usage APIs if needed.
+
+##### 8. Verification checklist
+
+Before marking Tier 4 complete, test:
+
+* A successful 20/150/400-report purchase adds the exact number of credits.
+* A repeated webhook does not add credits twice.
+* An unknown product is ignored safely.
+* A failed payment does not change credits or tier.
+* A refund reverses the original transaction once.
+* A subscription payment updates the correct tier and start date.
+* A successful BYOK generation records `credential_source = byok`.
+* A platform-key generation records `credential_source = platform`.
+* Failed AI requests do not create successful usage events.
+* Non-admin users cannot read other organizations' payment or usage records.
+
 ---
 
 ### Phase 8 — NOS Assessment Workbook & Instructor Guide Generator
 
-Generate, from any NOS trade JSON, a **Student Workbook** (questions only) and an **Instructor Guide** (questions + ideal answers + marking schemes), downloadable as Word documents for assessors to share with students.
+Generate, from the NOS trade and level selected in the existing sidebar, a **Student Workbook** (questions only) and an **Instructor Guide** (questions + ideal answers + marking schemes), downloadable as Word documents for assessors to share with students. The first implementation will reuse the existing database-backed NOS data rather than add a second JSON upload workflow.
 
 *   [ ] **Input**
-    *   [ ] Accept a NOS trade JSON object (`trade_name`, `level`, `units → learning_outcomes → performance_criteria`).
-    *   [ ] Let assessors upload/paste JSON or select an existing course/trade from the app.
+    *   [x] Read `selected_trade_id` and `selected_trade_level_id` from the existing sidebar session state.
+    *   [x] Load the selected NOS through the existing cached `db.fetch_nested_nos(trade_id, trade_level_id)` helper.
+    *   [x] Show the selected trade, level, unit count, and total performance-criteria count before generation.
+    *   [x] Do not copy the full NOS into persistent session state; keep it local to the workbook-generation request.
+    *   [defer] Upload/paste JSON support is deferred until a later iteration.
 
 *   [ ] **Generation**
-    *   [ ] One assessment item per `performance_criteria` (`pc_code`).
-    *   [ ] Vary question types: Direct, Scenario-Based, Step-by-Step Procedure, Labeled Diagram, Narrative Explanation.
-    *   [ ] Align language/complexity to `level` (Level 2 = foundational; Level 3 = analytical).
-    *   [ ] Produce the identical question set in both documents.
+    *   [x] Normalize the nested database result into records containing unit, learning outcome, and PC metadata (`unit_code`, `unit_title`, `lo_num`, `lo_description`, `pc_code`, `pc_description`).
+    *   [x] One assessment item per `performance_criteria` (`pc_code`).
+    *   [x] Vary question types: Direct, Scenario-Based, Step-by-Step Procedure, Labeled Diagram, Narrative Explanation.
+    *   [x] Align language and complexity to the selected level (Level 2 = foundational; Level 3 = analytical; higher levels = supervisory, evaluative, or design-focused where applicable).
+    *   [x] Generate one canonical structured assessment-item list containing the question, type, weight, ideal answer, and marking scheme.
+    *   [x] Produce both documents from that same validated assessment-item list.
+    *   [x] Display the existing credential source message: BYOK or internal platform key.
+    *   [x] Apply the existing AI credit/quota rules and consume one unit only after successful generation.
 
 *   [ ] **Output documents**
-    *   [ ] Student Workbook: questions only, with `Question Type` and `Weight` per PC.
-    *   [ ] Instructor Guide: identical questions + comprehensive ideal answers + bulleted grading rubrics.
-    *   [ ] Export both as `.docx` (Word) for download/sharing.
+    *   [x] Student Workbook: questions only, with `Question Type` and `Weight` per PC.
+        *   [x] Cover page contains the trade name, level, and student name.
+        *   [x] Questions begin on the next page.
+        *   [x] Each unit starts on a new page.
+        *   [x] Each question includes a fixed eight-line `Answer:` space.
+    *   [x] Instructor Guide: identical questions + comprehensive ideal answers + bulleted grading rubrics.
+        *   [x] Use the same unit, learning outcome, PC, question number, question type, weight, and question text as the Student Workbook.
+        *   [x] Add the ideal answer, marking scheme, total marks, assessor score, and comments area.
+    *   [x] Export both as `.docx` (Word) for download/sharing.
+    *   [x] Generate documents in memory with `BytesIO`; do not create temporary files on Railway.
 
 *   [ ] **Constraints**
-    *   [ ] Never skip a PC.
-    *   [ ] Answers must be specific (real standards, pin-outs, safety acts) — no generic "accept any valid answer."
-    *   [ ] Student and Instructor question text must match exactly.
+    *   [x] Never skip a PC.
+    *   [x] Answers must be specific (real standards, pin-outs, safety acts) — no generic "accept any valid answer."
+    *   [x] Student and Instructor question text must match exactly.
+    *   [x] Validate the AI JSON before creating either document.
+    *   [x] Reject missing, duplicate, or unexpected PC codes and show the affected codes to the user.
+    *   [x] Do not generate separate AI question sets for the Student Workbook and Instructor Guide.
+    *   [x] Keep the first version scoped to one selected trade and level at a time to control memory use.
+
+*   [ ] **Implementation structure**
+    *   [x] Add a dedicated `workbook_generator.py` Streamlit page.
+    *   [x] Register the page in `main.py` using the existing navigation pattern.
+    *   [x] Add focused normalization and AI-output validation helpers in `workbook_utils.py`.
+    *   [x] Add `export_student_workbook_to_word(...)` and `export_instructor_guide_to_word(...)` to `file_utils.py`.
+    *   [x] Reuse the existing `python-docx` and `BytesIO` export conventions.
+    *   [x] Keep database fetching, AI generation, validation, and document rendering as separate steps.
+
+*   [ ] **Verification**
+    *   [x] Confirm the page uses the sidebar-selected trade and level.
+    *   [x] Confirm the displayed PC count matches the normalized input count.
+    *   [x] Confirm every source PC appears exactly once in the generated list.
+    *   [x] Confirm Student Workbook and Instructor Guide question text is identical.
+    *   [x] Confirm each unit starts on a new page and each question has exactly eight answer lines.
+    *   [x] Confirm the Student Workbook contains no ideal answers or marking schemes.
+    *   [x] Confirm the Instructor Guide contains answers and marking schemes for every PC.
+    *   [x] Confirm failed validation produces no downloadable documents and no credit is consumed.
+    *   [x] Confirm successful BYOK and platform-key generation use the existing credential routing.
 
 #### Sample Generation Prompt
 
-> You are an expert curriculum developer and instructional designer specializing in vocational and technical education. Your task is to ingest a National Occupational Standards (NOS) JSON object and generate two distinct documents: a **Student Workbook (Questions Only)** and an **Instructor Guide (Questions, Answers, and Marking Schemes)**.
+> You are an expert curriculum developer and instructional designer specializing in vocational and technical education. Your task is to ingest the selected National Occupational Standards (NOS) data and generate one canonical assessment-item list for two distinct documents: a **Student Workbook (Questions Only)** and an **Instructor Guide (Questions, Answers, and Marking Schemes)**.
 >
-> **Input schema:** `trade_name`, `level`, and `units` containing `code`, `title`, and `learning_outcomes` (each with `lo_num`, `description`, and `performance_criteria` containing `pc_code` and `description`).
+> **Input structure:** selected `trade_name`, `level`, and nested `units` containing `code`, `title`, and `learning_outcomes` (each with `lo_num`, `description`, and `performance_criteria` containing `pc_code` and `description`).
 >
 > For every `pc_code`, generate exactly one level-appropriate assessment item, varying type by competency nature (Direct, Scenario-Based, Step-by-Step, Diagrammatic, or Narrative). Align complexity to `level` (Level 2 foundational; Level 3 analytical).
 >
@@ -361,6 +537,7 @@ Generate, from any NOS trade JSON, a **Student Workbook** (questions only) and a
 > **Document 2 — Instructor Guide:** identical questions plus comprehensive ideal answers and bulleted grading rubrics.
 >
 > Never skip a PC; reference real-world technologies, standards, and safety laws; and ensure the question text matches exactly across both documents.
+> Return structured JSON only. Return exactly one assessment item for every source `pc_code`, with no missing, duplicate, or invented PC codes. Include `pc_code`, `question_type`, `question`, `weight`, `ideal_answer`, and `marking_scheme` for each item.
 
 ---
 ### Completed Phases Summary

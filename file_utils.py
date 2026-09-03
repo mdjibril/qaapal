@@ -464,6 +464,98 @@ def export_personal_statement_to_word(name, date, statement_text, selected_pcs=N
     doc.save(bio)
     return bio.getvalue()
 
+
+def _add_workbook_header(doc, trade_name, level, student_name):
+    """Add the shared workbook metadata and cover page."""
+    title = doc.add_paragraph()
+    title.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    title.add_run("NATIONAL SKILLS QUALIFICATION\n").bold = True
+    title.add_run("NOS ASSESSMENT WORKBOOK").bold = True
+    doc.add_paragraph()
+    for label, value in (("Trade Name", trade_name), ("Level", level), ("Student Name", student_name or "____________________________")):
+        paragraph = doc.add_paragraph()
+        paragraph.add_run(f"{label}: ").bold = True
+        paragraph.add_run(str(value))
+
+
+def _add_answer_lines(doc, count=8):
+    doc.add_paragraph("Answer:").runs[0].bold = True
+    for _ in range(count):
+        doc.add_paragraph("________________________________________________________________________")
+
+
+def export_student_workbook_to_word(trade_name, level, student_name, assessment_items):
+    """Generate a question-only workbook with fixed answer space."""
+    doc = Document()
+    _add_workbook_header(doc, trade_name, level, student_name)
+    doc.add_page_break()
+    current_unit = None
+    current_lo = None
+    question_number = 0
+    for item in assessment_items:
+        if item["unit_code"] != current_unit:
+            if current_unit is not None:
+                doc.add_page_break()
+            current_unit = item["unit_code"]
+            current_lo = None
+            doc.add_heading(f"Unit {item['unit_code']}: {item['unit_title']}", level=1)
+        lo_key = (item["lo_num"], item["lo_description"])
+        if lo_key != current_lo:
+            current_lo = lo_key
+            doc.add_heading(f"Learning Outcome {item['lo_num']}: {item['lo_description']}", level=2)
+        question_number += 1
+        doc.add_paragraph(f"Question {question_number} - PC: {item['pc_code']}").runs[0].bold = True
+        doc.add_paragraph(f"Question Type: {item['question_type']}")
+        doc.add_paragraph(f"Weight: {item['weight']} marks")
+        doc.add_paragraph(item["question"])
+        _add_answer_lines(doc)
+    bio = BytesIO()
+    doc.save(bio)
+    return bio.getvalue()
+
+
+def export_instructor_guide_to_word(trade_name, level, student_name, assessment_items):
+    """Generate an instructor guide from the same canonical item list."""
+    doc = Document()
+    _add_workbook_header(doc, trade_name, level, student_name)
+    doc.add_paragraph("INSTRUCTOR GUIDE").runs[0].bold = True
+    doc.add_page_break()
+    current_unit = None
+    current_lo = None
+    total_marks = 0
+    question_number = 0
+    for item in assessment_items:
+        if item["unit_code"] != current_unit:
+            if current_unit is not None:
+                doc.add_page_break()
+            current_unit = item["unit_code"]
+            current_lo = None
+            doc.add_heading(f"Unit {item['unit_code']}: {item['unit_title']}", level=1)
+        lo_key = (item["lo_num"], item["lo_description"])
+        if lo_key != current_lo:
+            current_lo = lo_key
+            doc.add_heading(f"Learning Outcome {item['lo_num']}: {item['lo_description']}", level=2)
+        question_number += 1
+        total_marks += item["weight"]
+        doc.add_paragraph(f"Question {question_number} - PC: {item['pc_code']}").runs[0].bold = True
+        doc.add_paragraph(f"Question Type: {item['question_type']}")
+        doc.add_paragraph(f"Weight: {item['weight']} marks")
+        doc.add_paragraph(item["question"])
+        doc.add_paragraph("Ideal Answer:").runs[0].bold = True
+        for answer in item["ideal_answer"]:
+            doc.add_paragraph(answer, style="List Bullet")
+        doc.add_paragraph("Marking Scheme:").runs[0].bold = True
+        for mark in item["marking_scheme"]:
+            doc.add_paragraph(mark, style="List Bullet")
+    doc.add_paragraph(f"Total Marks: {total_marks}").runs[0].bold = True
+    doc.add_paragraph("Assessor Score: ______ / ______")
+    doc.add_paragraph("Assessor Comments:")
+    for _ in range(5):
+        doc.add_paragraph("________________________________________________________________________")
+    bio = BytesIO()
+    doc.save(bio)
+    return bio.getvalue()
+
 def create_zip_from_reports(reports, table_type):
     """
     Takes a list of fetched report dictionaries (with full text) and the table_type.

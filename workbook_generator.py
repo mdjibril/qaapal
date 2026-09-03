@@ -1,0 +1,158 @@
+import streamlit as st
+
+import database as db
+from ai_utils import validate_and_generate
+from file_utils import export_instructor_guide_to_word, export_student_workbook_to_word
+from workbook_utils import build_workbook_prompt, normalize_nos, validate_workbook_items
+
+
+def _generation_blocked(role, tier, credits, using_byok, policy):
+    if role == "admin":
+        return False
+    if tier == "free":
+        return credits <= 0
+    quota = policy.get("platform_quota")
+    if using_byok or quota is None:
+        return False
+    if quota == 0:
+        return True
+    return (st.session_state.get("ai_quota_used", 0) or 0) >= quota
+
+
+def main():
+    st.title("📚 NOS Workbook Generator")
+    st.info("Generate a Student Workbook and matching Instructor Guide from the selected sidebar NOS.")
+
+    trade_id = st.session_state.get("selected_trade_id")
+    trade_level_id = st.session_state.get("selected_trade_level_id")
+    trade_name = st.session_state.get("selected_trade_name", "Selected Trade")
+    level_name = st.session_state.get("selected_trade_level_name", "Selected Level")
+    if not trade_id or not trade_level_id:
+        st.warning("Please select a trade and level in the sidebar first.")
+        return
+
+    nos_data = db.fetch_nested_nos(trade_id=trade_id, trade_level_id=trade_level_id)
+    records = normalize_nos(nos_data)
+    selection_fingerprint = (trade_id, trade_level_id)
+    if st.session_state.get("workbook_selection_fingerprint") != selection_fingerprint:
+        for key in (
+            "workbook_items",
+            "workbook_student_name",
+            "workbook_trade_name",
+            "workbook_level_name",
+        ):
+            st.session_state.pop(key, None)
+        st.session_state.workbook_selection_fingerprint = selection_fingerprint
+    unit_count = len({record["unit_code"] for record in records})
+    st.write(f"**Trade:** {trade_name}  |  **Level:** {level_name}")
+    st.write(f"**Units:** {unit_count}  |  **Performance Criteria:** {len(records)}")
+    if not records:
+        st.warning("No performance criteria were found for the selected trade and level.")
+        return
+
+    student_name = st.text_input("Student Name", placeholder="Enter the student name")
+    role = st.session_state.get("user_role", "assessor")
+    tier = st.session_state.get("subscription_tier", "free")
+    using_byok = st.session_state.get("using_byok", False)
+    policy = st.session_state.get("_ai_policy", {})
+    blocked = _generation_blocked(
+        role,
+        tier,
+        st.session_state.get("credits_balance", 0),
+        using_byok,
+        policy,
+    )
+    if blocked:
+        if policy.get("platform_quota") == 0:
+            st.warning("Your plan requires your own AI key to generate a workbook.")
+        else:
+            st.warning("You have no AI generation allowance available.")
+
+    if st.button("Generate Workbook and Instructor Guide", type="primary", disabled=blocked):
+        if not student_name.strip():
+            st.error("Please enter the student name first.")
+            return
+
+        provider = st.session_state.get("ai_provider")
+        keys = st.session_state.get("target_keys", [])
+        model = st.session_state.get("target_model")
+        if not keys:
+            st.warning(f"Please enter the {provider} API key(s) in the sidebar.")
+            return
+
+        prompt = build_workbook_prompt(trade_name, level_name, records)
+        with st.status("Preparing workbook...", expanded=True) as status:
+            source = "your BYOK" if using_byok else "the internal platform key"
+            st.write(f"🔑 Using {source}.")
+            st.write("🧾 Generating one assessment item for each performance criterion...")
+            response = validate_and_generate(
+                provider=provider,
+                model_name=model,
+                api_keys=keys,
+                prompt=prompt,
+                system_prompt="Return only the requested JSON assessment-item list.",
+            )
+            if "API_ERROR" in str(response):
+                st.error(response)
+                return
+            try:
+                items = validate_workbook_items(response, records)
+            except ValueError as exc:
+                st.error(f"Workbook validation failed: {exc}")
+                return
+
+            if role != "admin":
+                allowed, reason = db.consume_ai_credit(
+                    st.session_state.org_id,
+                    tier,
+                    using_byok,
+                )
+                if not allowed:
+                    st.error(f"Generation allowance unavailable: {reason}")
+                    return
+                if reason == "free_credit":
+                    st.session_state.credits_balance -= 1
+                elif reason == "platform_quota":
+                    st.session_state.ai_quota_used = st.session_state.get("ai_quota_used", 0) + 1
+
+            st.session_state.workbook_items = items
+            st.session_state.workbook_student_name = student_name.strip()
+            st.session_state.workbook_trade_name = trade_name
+            st.session_state.workbook_level_name = level_name
+            st.session_state.workbook_selection_fingerprint = selection_fingerprint
+            status.update(label="✅ Workbook package ready", state="complete", expanded=False)
+
+    items = st.session_state.get("workbook_items")
+    if items:
+        st.markdown("---")
+        st.success(f"Validated {len(items)} assessment items. Both documents use the same questions.")
+        student_doc = export_student_workbook_to_word(
+            st.session_state.workbook_trade_name,
+            st.session_state.workbook_level_name,
+            st.session_state.workbook_student_name,
+            items,
+        )
+        instructor_doc = export_instructor_guide_to_word(
+            st.session_state.workbook_trade_name,
+            st.session_state.workbook_level_name,
+            st.session_state.workbook_student_name,
+            items,
+        )
+        col_student, col_instructor = st.columns(2)
+        with col_student:
+            st.download_button(
+                "📥 Student Workbook (.docx)",
+                student_doc,
+                f"{trade_name}_Student_Workbook.docx",
+                type="primary",
+            )
+        with col_instructor:
+            st.download_button(
+                "📥 Instructor Guide (.docx)",
+                instructor_doc,
+                f"{trade_name}_Instructor_Guide.docx",
+            )
+
+
+if __name__ == "__main__":
+    main()
