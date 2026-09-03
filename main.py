@@ -58,12 +58,12 @@ st.markdown("""
 
 # Callback function for API key inputs
 def update_api_key_session(key_name):
-    """Callback to update st.session_state.target_key when an API key input changes."""
+    """Callback to store user-entered BYOK keys when an API key input changes."""
     if st.session_state[key_name]:
         # Split by comma to support rotation even for BYOK users
-        st.session_state.target_keys = [k.strip() for k in st.session_state[key_name].split(',') if k.strip()]
+        st.session_state.byok_keys = [k.strip() for k in st.session_state[key_name].split(',') if k.strip()]
     else:
-        st.session_state.target_keys = []
+        st.session_state.byok_keys = []
 
 def clear_previews_on_trade_change():
     """Clears generated statement previews and all checkbox selections when the trade changes."""
@@ -298,43 +298,45 @@ def main():
 
             if 'target_keys' not in st.session_state or st.session_state.get('last_provider') != st.session_state.ai_provider:
                 st.session_state.target_keys = []
-                st.session_state.last_verified_key = ""
+                st.session_state.byok_keys = []
+                st.session_state.verification_result = None
+                st.session_state.verification_fingerprint = None
                 st.session_state.last_provider = st.session_state.ai_provider
 
             if st.session_state.ai_provider == "Gemini":
                 st.text_input("Gemini API Key", type="password", key="gemini_api_key_input", on_change=update_api_key_session, args=("gemini_api_key_input",))
-                if not st.session_state.target_keys and "gemini_api_key_input" in st.session_state and st.session_state.gemini_api_key_input:
-                    st.session_state.target_keys = [k.strip() for k in st.session_state.gemini_api_key_input.split(',') if k.strip()]
-                gemini_model_choice = st.selectbox("Gemini Preference", ["gemini-3.5-flash", "gemini-3.1-flash", "gemini-3.1-flash-lite", "Other (Custom)"])
+                byok_keys = [k.strip() for k in st.session_state.get("gemini_api_key_input", "").split(",") if k.strip()]
+                gemini_model_choice = st.selectbox("Gemini Preference", ["gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-3.1-flash", "gemini-3.1-flash-lite", "Other (Custom)"])
                 if gemini_model_choice == "Other (Custom)":
                     st.session_state.target_model = st.text_input("Custom Gemini Model", placeholder="e.g. gemini-3.1-pro-preview", key="gemini_custom_model")
                 else:
                     st.session_state.target_model = gemini_model_choice
             else:
                 st.text_input("OpenRouter API Key", type="password", key="openrouter_api_key_input", on_change=update_api_key_session, args=("openrouter_api_key_input",))
-                if not st.session_state.target_keys and "openrouter_api_key_input" in st.session_state and st.session_state.openrouter_api_key_input:
-                    st.session_state.target_keys = [st.session_state.openrouter_api_key_input.strip()]
-                or_model_choice = st.selectbox("OpenRouter Model", ["google/gemini-3.5-flash", "nvidia/nemotron-3-super-120b-a12b:free", "poolside/laguna-m.1:free", "Other (Custom)"])
+                byok_keys = [k.strip() for k in st.session_state.get("openrouter_api_key_input", "").split(",") if k.strip()]
+                or_model_choice = st.selectbox("OpenRouter Model", ["google/gemini-3.5-flash", "google/gemini-3.5-flash-lite", "nvidia/nemotron-3-super-120b-a12b:free", "poolside/laguna-m.1:free", "Other (Custom)"])
                 if or_model_choice == "Other (Custom)":
                     st.session_state.target_model = st.text_input("Custom OpenRouter Model", placeholder="e.g. anthropic/claude-3-haiku", key="or_custom_model")
                 else:
                     st.session_state.target_model = or_model_choice
 
-            curr_keys_for_verification = st.session_state.get('target_keys', [])
-            if curr_keys_for_verification:
-                first_key_for_verification = curr_keys_for_verification[0]
-                if first_key_for_verification != st.session_state.get('last_verified_key'):
-                    with st.spinner("Verifying connection..."):
-                        res = validate_and_generate(st.session_state.ai_provider, st.session_state.target_model, curr_keys_for_verification)
-                        st.session_state.last_verified_key = first_key_for_verification
-                        st.session_state.connection_success = ("✅ Connected" in str(res))
-                        st.session_state.connection_msg = res
+            st.session_state.byok_keys = byok_keys
+            verification_fingerprint = (st.session_state.ai_provider, st.session_state.target_model, tuple(byok_keys))
+            if st.button("Verify Key", key="verify_ai_key", disabled=not byok_keys):
+                with st.spinner("Verifying connection..."):
+                    st.session_state.verification_result = validate_and_generate(
+                        st.session_state.ai_provider,
+                        st.session_state.target_model,
+                        byok_keys,
+                    )
+                    st.session_state.verification_fingerprint = verification_fingerprint
 
-            if curr_keys_for_verification:
-                if st.session_state.get('connection_success'):
-                    st.success(st.session_state.connection_msg)
+            if st.session_state.get("verification_fingerprint") == verification_fingerprint:
+                verification_result = st.session_state.get("verification_result")
+                if "✅ Connected" in str(verification_result):
+                    st.success(verification_result)
                 else:
-                    st.error(f"❌ {st.session_state.get('connection_msg')}")
+                    st.error(f"❌ {verification_result}")
 
     # Phase 7 Tier 2: determine whether this generation uses BYOK or platform quota.
     # platform_quota == 0 means BYOK-only (no platform fallback).
@@ -344,6 +346,8 @@ def main():
         else "openrouter_api_key_input"
     )
     using_byok = bool(str(st.session_state.get(selected_key_name, "")).strip())
+    if show_byok and using_byok:
+        st.session_state.target_keys = st.session_state.get("byok_keys", [])
     if show_byok and not using_byok and platform_quota != 0:
         # Paid tier without a pasted key, with platform fallback available.
         st.session_state.ai_provider = ai_policy["default_provider"]
