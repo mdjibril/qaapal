@@ -504,9 +504,7 @@ def export_student_workbook_to_word(trade_name, level, student_name, assessment_
             current_lo = lo_key
             doc.add_heading(f"Learning Outcome {item['lo_num']}: {item['lo_description']}", level=2)
         question_number += 1
-        doc.add_paragraph(f"Question {question_number} - PC: {item['pc_code']}").runs[0].bold = True
-        doc.add_paragraph(f"Question Type: {item['question_type']}")
-        doc.add_paragraph(f"Weight: {item['weight']} marks")
+        doc.add_paragraph(f"Question {question_number} - PC: {item['pc_code']} ({item['question_type']})").runs[0].bold = True
         doc.add_paragraph(item["question"])
         _add_answer_lines(doc)
     bio = BytesIO()
@@ -537,9 +535,7 @@ def export_instructor_guide_to_word(trade_name, level, student_name, assessment_
             doc.add_heading(f"Learning Outcome {item['lo_num']}: {item['lo_description']}", level=2)
         question_number += 1
         total_marks += item["weight"]
-        doc.add_paragraph(f"Question {question_number} - PC: {item['pc_code']}").runs[0].bold = True
-        doc.add_paragraph(f"Question Type: {item['question_type']}")
-        doc.add_paragraph(f"Weight: {item['weight']} marks")
+        doc.add_paragraph(f"Question {question_number} - PC: {item['pc_code']} ({item['question_type']})").runs[0].bold = True
         doc.add_paragraph(item["question"])
         doc.add_paragraph("Ideal Answer:").runs[0].bold = True
         for answer in item["ideal_answer"]:

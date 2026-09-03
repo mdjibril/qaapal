@@ -42,6 +42,8 @@ class WorkbookDocumentsTest(unittest.TestCase):
         self.assertLess(text.index("Trade Name:"), text.index("Unit ICT/301:"))
         self.assertIn("Student Name: Ada", text)
         self.assertNotIn("Ideal Answer:", text)
+        self.assertNotIn("Weight:", text)
+        self.assertIn("Question 1 - PC: 1.1 (Scenario-Based)", text)
         self.assertEqual(text.count("Answer:"), 2)
         self.assertEqual(text.count("________________________________________________________________________"), 16)
         self.assertGreaterEqual(document.element.body.xml.count('w:type="page"'), 2)
@@ -56,6 +58,8 @@ class WorkbookDocumentsTest(unittest.TestCase):
             self.assertEqual(instructor_text.count(item["question"]), 1)
         self.assertIn("Ideal Answer:", instructor_text)
         self.assertIn("Marking Scheme:", instructor_text)
+        self.assertNotIn("Weight:", instructor_text)
+        self.assertIn("Question 1 - PC: 1.1 (Scenario-Based)", instructor_text)
 
 
 if __name__ == "__main__":

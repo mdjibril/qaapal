@@ -51,6 +51,44 @@ def main():
         return
 
     student_name = st.text_input("Student Name", placeholder="Enter the student name")
+    user_id = st.session_state.user_session.id
+    st.markdown("### Previous Workbooks")
+    previous_workbooks = db.list_workbooks(user_id)
+    if previous_workbooks:
+        workbook_options = {
+            workbook["id"]: (
+                f"{workbook['student_name']} | {workbook['trade_name']} | "
+                f"{workbook['level_name']} | {workbook['created_at'][:10]}"
+            )
+            for workbook in previous_workbooks
+        }
+        selected_workbook_id = st.selectbox(
+            "Open a previously generated workbook",
+            options=[None, *workbook_options.keys()],
+            format_func=lambda workbook_id: "Select a workbook" if workbook_id is None else workbook_options[workbook_id],
+            key="selected_workbook_id",
+        )
+        if selected_workbook_id and st.button("Load Previous Workbook"):
+            workbook = db.fetch_workbook(selected_workbook_id, user_id)
+            if workbook and workbook.get("assessment_items"):
+                st.session_state.workbook_items = workbook["assessment_items"]
+                st.session_state.workbook_id = workbook["id"]
+                st.session_state.workbook_student_name = workbook["student_name"]
+                st.session_state.workbook_trade_name = workbook["trade_name"]
+                st.session_state.workbook_level_name = workbook["level_name"]
+                st.success("Previous workbook loaded. No AI request or credit was used.")
+                st.rerun()
+        if selected_workbook_id and st.button("Delete Previous Workbook"):
+            success, error = db.delete_workbook(selected_workbook_id, user_id)
+            if success:
+                st.session_state.pop("workbook_items", None)
+                st.session_state.pop("workbook_id", None)
+                st.success("Workbook deleted.")
+                st.rerun()
+            st.error(f"Could not delete workbook: {error}")
+    else:
+        st.caption("No previous workbooks found.")
+
     role = st.session_state.get("user_role", "assessor")
     tier = st.session_state.get("subscription_tier", "free")
     using_byok = st.session_state.get("using_byok", False)
@@ -120,6 +158,20 @@ def main():
             st.session_state.workbook_trade_name = trade_name
             st.session_state.workbook_level_name = level_name
             st.session_state.workbook_selection_fingerprint = selection_fingerprint
+            saved, save_result = db.save_workbook(
+                org_id=st.session_state.get("org_id"),
+                created_by=user_id,
+                trade_id=trade_id,
+                trade_level_id=trade_level_id,
+                trade_name=trade_name,
+                level_name=level_name,
+                student_name=student_name.strip(),
+                assessment_items=items,
+            )
+            if saved:
+                st.session_state.workbook_id = save_result.get("id")
+            else:
+                st.warning(f"Workbook generated but could not be saved: {save_result}")
             status.update(label="✅ Workbook package ready", state="complete", expanded=False)
 
     items = st.session_state.get("workbook_items")
@@ -138,6 +190,7 @@ def main():
             st.session_state.workbook_student_name,
             items,
         )
+        st.caption("These documents are regenerated locally from the saved workbook; no AI request is made.")
         col_student, col_instructor = st.columns(2)
         with col_student:
             st.download_button(

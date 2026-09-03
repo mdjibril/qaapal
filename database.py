@@ -466,6 +466,81 @@ def insert_student_statement(user_id, student_name, trade_id, unit_codes, reflec
     except Exception as e:
         return False, str(e)
 
+
+def save_workbook(org_id, created_by, trade_id, trade_level_id, trade_name, level_name, student_name, assessment_items):
+    """Persist validated workbook content for later document downloads."""
+    supabase = get_supabase()
+    try:
+        if not org_id or not created_by or not assessment_items:
+            return False, "Workbook ownership or content is missing."
+        data = {
+            "org_id": org_id,
+            "created_by": created_by,
+            "trade_id": int(trade_id) if trade_id else None,
+            "trade_level_id": int(trade_level_id) if trade_level_id else None,
+            "trade_name": str(trade_name),
+            "level_name": str(level_name),
+            "student_name": str(student_name),
+            "item_count": len(assessment_items),
+            "total_marks": sum(int(item["weight"]) for item in assessment_items),
+            "assessment_items": assessment_items,
+        }
+        response = _execute_query(supabase.table("workbooks").insert(data))
+        if response.data:
+            return True, response.data[0]
+        return False, "Workbook was not returned after saving."
+    except Exception as e:
+        return False, str(e)
+
+
+def list_workbooks(created_by, limit=50):
+    """List workbook metadata without loading assessment item JSON."""
+    supabase = get_supabase()
+    try:
+        response = _execute_query(
+            supabase.table("workbooks")
+            .select("id, trade_name, level_name, student_name, item_count, total_marks, created_at")
+            .eq("created_by", created_by)
+            .order("created_at", desc=True)
+            .limit(limit)
+        )
+        return response.data or []
+    except Exception as e:
+        st.error(f"Error loading previous workbooks: {e}")
+        return []
+
+
+def fetch_workbook(workbook_id, created_by):
+    """Fetch one owner-scoped workbook, including its validated assessment items."""
+    supabase = get_supabase()
+    try:
+        response = _execute_query(
+            supabase.table("workbooks")
+            .select("*")
+            .eq("id", workbook_id)
+            .eq("created_by", created_by)
+            .single()
+        )
+        return response.data if response.data else None
+    except Exception as e:
+        st.error(f"Error loading workbook: {e}")
+        return None
+
+
+def delete_workbook(workbook_id, created_by):
+    """Delete one owner-scoped workbook."""
+    supabase = get_supabase()
+    try:
+        _execute_query(
+            supabase.table("workbooks")
+            .delete()
+            .eq("id", workbook_id)
+            .eq("created_by", created_by)
+        )
+        return True, None
+    except Exception as e:
+        return False, str(e)
+
 def insert_witness_statement(user_id, witness_name, witness_role, candidate_name, trade_id, unit_codes, witness_notes, statement_text):
     """
     Inserts a witness statement into the database.

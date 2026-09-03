@@ -137,6 +137,32 @@ CREATE TABLE public.witness_statements (
     created_by uuid REFERENCES public.user_profiles(id) ON DELETE SET NULL
 );
 
+-- Phase 8: Persist validated workbook content for later downloads without AI.
+CREATE TABLE IF NOT EXISTS public.workbooks (
+    id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+    org_id uuid REFERENCES public.organizations(id) ON DELETE CASCADE NOT NULL,
+    created_by uuid REFERENCES public.user_profiles(id) ON DELETE CASCADE NOT NULL,
+    trade_id bigint REFERENCES public.trades(id) ON DELETE SET NULL,
+    trade_level_id bigint REFERENCES public.trade_levels(id) ON DELETE SET NULL,
+    trade_name text NOT NULL CHECK (char_length(trade_name) <= 200),
+    level_name text NOT NULL CHECK (char_length(level_name) <= 100),
+    student_name text NOT NULL CHECK (char_length(student_name) <= 150),
+    item_count integer NOT NULL CHECK (item_count > 0),
+    total_marks integer NOT NULL CHECK (total_marks > 0),
+    assessment_items jsonb NOT NULL,
+    generator_version text NOT NULL DEFAULT 'phase-8-v1',
+    prompt_version text NOT NULL DEFAULT 'phase-8-v1',
+    created_at timestamptz NOT NULL DEFAULT now(),
+    updated_at timestamptz NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS idx_workbooks_created_by
+    ON public.workbooks(created_by);
+CREATE INDEX IF NOT EXISTS idx_workbooks_org_created_at
+    ON public.workbooks(org_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_workbooks_trade_level
+    ON public.workbooks(trade_id, trade_level_id);
+
 -- 4. Enable Row Level Security (RLS)
 ALTER TABLE public.user_profiles ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.trades ENABLE ROW LEVEL SECURITY;
@@ -148,6 +174,7 @@ ALTER TABLE public.performance_criteria ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.assessment_reports ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.student_statements ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.witness_statements ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.workbooks ENABLE ROW LEVEL SECURITY;
 
 -- 5. Policies
 -- NOS Library (Public/Authenticated Read Access)
@@ -160,6 +187,11 @@ CREATE POLICY "Allow authenticated read for PCs" ON public.performance_criteria 
 -- Assessment Reports
 CREATE POLICY "Creators can view their own reports" ON public.assessment_reports FOR SELECT USING (auth.uid() = created_by);
 CREATE POLICY "Creators can insert their own reports" ON public.assessment_reports FOR INSERT WITH CHECK (auth.uid() = created_by);
+
+-- Workbooks are owner-scoped; generated content contains student information.
+CREATE POLICY "Creators can view their own workbooks" ON public.workbooks FOR SELECT TO authenticated USING (auth.uid() = created_by);
+CREATE POLICY "Creators can insert their own workbooks" ON public.workbooks FOR INSERT TO authenticated WITH CHECK (auth.uid() = created_by);
+CREATE POLICY "Creators can delete their own workbooks" ON public.workbooks FOR DELETE TO authenticated USING (auth.uid() = created_by);
 
 -- User Profiles
 CREATE POLICY "Users can view their own profile" ON public.user_profiles FOR SELECT USING (auth.uid() = id);

@@ -48,10 +48,11 @@ The selected trade is: {trade_name}
 The selected level is: {level}
 
 Return JSON only, with this exact top-level shape:
-{{"items": [{{"pc_code": "...", "question_type": "...", "question": "...", "weight": 5, "ideal_answer": ["..."], "marking_scheme": ["..." ]}}]}}
+{{"items": [{{"unit_code": "...", "lo_num": "...", "pc_code": "...", "question_type": "...", "question": "...", "weight": 5, "ideal_answer": ["..."], "marking_scheme": ["..." ]}}]}}
 
 Allowed question_type values: {', '.join(QUESTION_TYPES)}.
-Use one question per pc_code. Match the selected level: foundational for Level 2,
+Use one question per unit_code/lo_num/pc_code identity. Include the exact unit_code
+and lo_num from the source for every item. Match the selected level: foundational for Level 2,
 analytical for Level 3, and supervisory, evaluative, or design-focused for higher
 levels where the criterion supports it. Questions must be practical and specific
 to the trade. Ideal answers must be concrete, and marking_scheme must list marks
@@ -81,20 +82,45 @@ def validate_workbook_items(response, records):
     except (TypeError, ValueError, json.JSONDecodeError) as exc:
         raise ValueError(f"Invalid workbook JSON: {exc}") from exc
 
-    source_codes = [record["pc_code"] for record in records]
-    if len(source_codes) != len(set(source_codes)):
-        raise ValueError("Source NOS contains duplicate PC codes")
-    source_set = set(source_codes)
-    seen_codes = []
+    def pc_identity(record):
+        return (
+            record["unit_code"],
+            record["lo_num"],
+            record["pc_code"],
+        )
+
+    source_identities = [pc_identity(record) for record in records]
+    if len(source_identities) != len(set(source_identities)):
+        raise ValueError("Source NOS contains duplicate PCs in the same unit and learning outcome")
+    source_by_code = {}
+    for record in records:
+        source_by_code.setdefault(record["pc_code"], []).append(record)
+    seen_identities = []
     validated = []
     for item in items:
         if not isinstance(item, dict):
             raise ValueError("Each assessment item must be a JSON object")
         pc_code = str(item.get("pc_code", "")).strip()
-        if pc_code not in source_set:
+        source_matches = source_by_code.get(pc_code, [])
+        if not source_matches:
             raise ValueError(f"Unexpected PC code: {pc_code or '(missing)'}")
-        if pc_code in seen_codes:
-            raise ValueError(f"Duplicate PC code: {pc_code}")
+        unit_code = str(item.get("unit_code", "")).strip()
+        lo_num = str(item.get("lo_num", "")).strip()
+        if len(source_matches) > 1 and (not unit_code or not lo_num):
+            raise ValueError(f"PC {pc_code} occurs in multiple locations; unit_code and lo_num are required")
+        source = next(
+            (
+                record for record in source_matches
+                if (not unit_code or record["unit_code"] == unit_code)
+                and (not lo_num or record["lo_num"] == lo_num)
+            ),
+            None,
+        )
+        if source is None:
+            raise ValueError(f"PC {pc_code} does not match its unit or learning outcome")
+        identity = pc_identity(source)
+        if identity in seen_identities:
+            raise ValueError(f"Duplicate PC: {source['unit_code']} / LO {source['lo_num']} / {pc_code}")
         question = str(item.get("question", "")).strip()
         question_type = str(item.get("question_type", "")).strip()
         ideal_answer = item.get("ideal_answer")
@@ -113,13 +139,13 @@ def validate_workbook_items(response, records):
             raise ValueError(f"Invalid weight for PC {pc_code}") from exc
         if weight <= 0:
             raise ValueError(f"Weight must be positive for PC {pc_code}")
-        source = next(record for record in records if record["pc_code"] == pc_code)
         validated.append({**source, "question": question, "question_type": question_type, "weight": weight,
                           "ideal_answer": [str(value).strip() for value in ideal_answer],
                           "marking_scheme": [str(value).strip() for value in marking_scheme]})
-        seen_codes.append(pc_code)
+        seen_identities.append(identity)
 
-    missing = [code for code in source_codes if code not in seen_codes]
+    missing = [identity for identity in source_identities if identity not in seen_identities]
     if missing:
-        raise ValueError(f"Missing PC code(s): {', '.join(missing)}")
+        formatted = ", ".join(f"{unit} / LO {lo} / {pc}" for unit, lo, pc in missing)
+        raise ValueError(f"Missing PC(s): {formatted}")
     return validated

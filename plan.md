@@ -486,14 +486,15 @@ Generate, from the NOS trade and level selected in the existing sidebar, a **Stu
     *   [x] Apply the existing AI credit/quota rules and consume one unit only after successful generation.
 
 *   [ ] **Output documents**
-    *   [x] Student Workbook: questions only, with `Question Type` and `Weight` per PC.
+    *   [x] Student Workbook: questions only, with `Question Type` per PC.
         *   [x] Cover page contains the trade name, level, and student name.
         *   [x] Questions begin on the next page.
         *   [x] Each unit starts on a new page.
         *   [x] Each question includes a fixed eight-line `Answer:` space.
     *   [x] Instructor Guide: identical questions + comprehensive ideal answers + bulleted grading rubrics.
-        *   [x] Use the same unit, learning outcome, PC, question number, question type, weight, and question text as the Student Workbook.
-        *   [x] Add the ideal answer, marking scheme, total marks, assessor score, and comments area.
+        *   [x] Use the same unit, learning outcome, PC, question number, question type, and question text as the Student Workbook.
+        *   [x] Add the ideal answer, marking scheme, assessor score, and comments area.
+    *   [defer] Reintroduce visible question weights and total marks later if assessment scoring is required.
     *   [x] Export both as `.docx` (Word) for download/sharing.
     *   [x] Generate documents in memory with `BytesIO`; do not create temporary files on Railway.
 
