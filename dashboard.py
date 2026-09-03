@@ -31,6 +31,7 @@ def main():
     assessor_name = st.session_state.get('assessor_name', 'Jibril Dauda Muhammad')
     # assessor_id = st.session_state.get('assessor_id', 'QAA/XXXX/ICT')
     dev_mode = st.session_state.get('dev_mode', False)
+    credential_source = "your BYOK" if st.session_state.get('using_byok', False) else "the internal platform key"
 
     user_id = st.session_state.user_session.id
     role = st.session_state.user_role
@@ -274,6 +275,7 @@ Return a JSON array of the PC strings that are demonstrably evidenced in the not
                 st.session_state.pop(key, None)
             st.session_state.last_request_time = current_time
             with st.status(f"Using {provider} ({target_model}) to synthesize...", expanded=True) as status:
+                st.write(f"🔑 Using {credential_source}.")
                 st.write("🔍 Preparing assessment context and mapping criteria...")
                 
                 unique_units = list(set([pc.split(' - ')[0] for pc in selected_pcs]))

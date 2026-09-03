@@ -23,6 +23,7 @@ def main():
     provider = st.session_state.get('ai_provider')
     keys = st.session_state.get('target_keys', []) # Now expects a list of keys
     target_model = st.session_state.get('target_model')
+    credential_source = "your BYOK" if st.session_state.get('using_byok', False) else "the internal platform key"
 
     st.subheader("Step 1: Witness & Candidate Info")
     with st.container(border=True):
@@ -112,6 +113,7 @@ def main():
         else:
             st.session_state.pop("fb_submitted_witness_statement", None)
             with st.status("Synthesizing formal testimony...", expanded=True) as status:
+                st.write(f"🔑 Using {credential_source}.")
                 st.write("📄 Converting witness notes into formal industrial language...")
                 trade_context = st.session_state.get("selected_trade_level_name") or st.session_state.get("selected_trade_name") or 'the specific trade'
                 prompt_bundle = build_witness_statement_prompt(
