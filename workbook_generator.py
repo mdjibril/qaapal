@@ -10,7 +10,7 @@ def _generation_blocked(role, tier, credits, using_byok, policy):
     if role == "admin":
         return False
     if tier == "free":
-        return credits <= 0
+        return True
     quota = policy.get("platform_quota")
     if using_byok or quota is None:
         return False
@@ -22,6 +22,13 @@ def _generation_blocked(role, tier, credits, using_byok, policy):
 def main():
     st.title("📚 NOS Workbook Generator")
     st.info("Generate a Student Workbook and matching Instructor Guide from the selected sidebar NOS.")
+
+    role = st.session_state.get("user_role", "assessor")
+    tier = st.session_state.get("subscription_tier", "free")
+    is_superadmin = role == "admin"
+    if role != "admin" and tier not in ("platform_pass", "lifetime", "enterprise"):
+        st.error("Workbook generation is available on Platform Pass, Lifetime, and Enterprise plans.")
+        return
 
     trade_id = st.session_state.get("selected_trade_id")
     trade_level_id = st.session_state.get("selected_trade_level_id")
@@ -52,47 +59,18 @@ def main():
 
     student_name = st.text_input("Student Name", placeholder="Enter the student name")
     user_id = st.session_state.user_session.id
-    st.markdown("### Previous Workbooks")
-    previous_workbooks = db.list_workbooks(user_id)
-    if previous_workbooks:
-        workbook_options = {
-            workbook["id"]: (
-                f"{workbook['student_name']} | {workbook['trade_name']} | "
-                f"{workbook['level_name']} | {workbook['created_at'][:10]}"
-            )
-            for workbook in previous_workbooks
-        }
-        selected_workbook_id = st.selectbox(
-            "Open a previously generated workbook",
-            options=[None, *workbook_options.keys()],
-            format_func=lambda workbook_id: "Select a workbook" if workbook_id is None else workbook_options[workbook_id],
-            key="selected_workbook_id",
-        )
-        if selected_workbook_id and st.button("Load Previous Workbook"):
-            workbook = db.fetch_workbook(selected_workbook_id, user_id)
-            if workbook and workbook.get("assessment_items"):
-                st.session_state.workbook_items = workbook["assessment_items"]
-                st.session_state.workbook_id = workbook["id"]
-                st.session_state.workbook_student_name = workbook["student_name"]
-                st.session_state.workbook_trade_name = workbook["trade_name"]
-                st.session_state.workbook_level_name = workbook["level_name"]
-                st.success("Previous workbook loaded. No AI request or credit was used.")
-                st.rerun()
-        if selected_workbook_id and st.button("Delete Previous Workbook"):
-            success, error = db.delete_workbook(selected_workbook_id, user_id)
-            if success:
-                st.session_state.pop("workbook_items", None)
-                st.session_state.pop("workbook_id", None)
-                st.success("Workbook deleted.")
-                st.rerun()
-            st.error(f"Could not delete workbook: {error}")
-    else:
-        st.caption("No previous workbooks found.")
-
     role = st.session_state.get("user_role", "assessor")
     tier = st.session_state.get("subscription_tier", "free")
     using_byok = st.session_state.get("using_byok", False)
     policy = st.session_state.get("_ai_policy", {})
+    previous_workbooks = db.list_workbooks(user_id, admin=is_superadmin)
+    matching_workbooks = [
+        workbook for workbook in previous_workbooks
+        if workbook.get("trade_id") == trade_id
+        and workbook.get("trade_level_id") == trade_level_id
+    ]
+    duplicate_workbook = matching_workbooks[0] if matching_workbooks else None
+    duplicate_blocked = duplicate_workbook is not None and not is_superadmin
     blocked = _generation_blocked(
         role,
         tier,
@@ -100,13 +78,11 @@ def main():
         using_byok,
         policy,
     )
-    if blocked:
-        if policy.get("platform_quota") == 0:
-            st.warning("Your plan requires your own AI key to generate a workbook.")
-        else:
-            st.warning("You have no AI generation allowance available.")
-
-    if st.button("Generate Workbook and Instructor Guide", type="primary", disabled=blocked):
+    if st.button(
+        "Generate Workbook and Instructor Guide",
+        type="primary",
+        disabled=blocked or duplicate_blocked,
+    ):
         if not student_name.strip():
             st.error("Please enter the student name first.")
             return
@@ -173,6 +149,76 @@ def main():
             else:
                 st.warning(f"Workbook generated but could not be saved: {save_result}")
             status.update(label="✅ Workbook package ready", state="complete", expanded=False)
+
+    st.markdown("### Previous Workbooks")
+    if duplicate_workbook:
+        if is_superadmin:
+            st.info("A workbook already exists for this trade and level. You may regenerate it as Super Admin.")
+        else:
+            st.warning(
+                "A workbook already exists for this trade and level. "
+                "Download the previous workbook below before generating another one."
+            )
+        existing_workbook = db.fetch_workbook(duplicate_workbook["id"], user_id, admin=is_superadmin)
+        if existing_workbook and existing_workbook.get("assessment_items"):
+            existing_items = existing_workbook["assessment_items"]
+            existing_student_doc = export_student_workbook_to_word(
+                existing_workbook["trade_name"], existing_workbook["level_name"],
+                existing_workbook["student_name"], existing_items,
+            )
+            existing_instructor_doc = export_instructor_guide_to_word(
+                existing_workbook["trade_name"], existing_workbook["level_name"],
+                existing_workbook["student_name"], existing_items,
+            )
+            existing_col_student, existing_col_instructor = st.columns(2)
+            with existing_col_student:
+                st.download_button("Download Previous Student Workbook", existing_student_doc,
+                                   f"{trade_name}_Previous_Student_Workbook.docx",
+                                   key="download_previous_student_workbook")
+            with existing_col_instructor:
+                st.download_button("Download Previous Instructor Guide", existing_instructor_doc,
+                                   f"{trade_name}_Previous_Instructor_Guide.docx",
+                                   key="download_previous_instructor_guide")
+    if previous_workbooks:
+        workbook_options = {
+            workbook["id"]: (
+                f"{workbook['student_name']} | {workbook['trade_name']} | "
+                f"{workbook['level_name']} | {workbook['created_at'][:10]}"
+            )
+            for workbook in previous_workbooks
+        }
+        selected_workbook_id = st.selectbox(
+            "Open a previously generated workbook",
+            options=[None, *workbook_options.keys()],
+            format_func=lambda workbook_id: "Select a workbook" if workbook_id is None else workbook_options[workbook_id],
+            key="selected_workbook_id",
+        )
+        if selected_workbook_id and st.button("Load Previous Workbook"):
+            workbook = db.fetch_workbook(selected_workbook_id, user_id, admin=is_superadmin)
+            if workbook and workbook.get("assessment_items"):
+                st.session_state.workbook_items = workbook["assessment_items"]
+                st.session_state.workbook_id = workbook["id"]
+                st.session_state.workbook_student_name = workbook["student_name"]
+                st.session_state.workbook_trade_name = workbook["trade_name"]
+                st.session_state.workbook_level_name = workbook["level_name"]
+                st.success("Previous workbook loaded. No AI request or credit was used.")
+                st.rerun()
+        if selected_workbook_id and st.button("Delete Previous Workbook"):
+            success, error = db.delete_workbook(selected_workbook_id, user_id)
+            if success:
+                st.session_state.pop("workbook_items", None)
+                st.session_state.pop("workbook_id", None)
+                st.success("Workbook deleted.")
+                st.rerun()
+            st.error(f"Could not delete workbook: {error}")
+    else:
+        st.caption("No previous workbooks found.")
+
+    if blocked:
+        if policy.get("platform_quota") == 0:
+            st.warning("Your plan requires your own AI key to generate a workbook.")
+        else:
+            st.warning("You have no AI generation allowance available.")
 
     items = st.session_state.get("workbook_items")
     if items:

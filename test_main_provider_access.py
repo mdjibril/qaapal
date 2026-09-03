@@ -12,6 +12,7 @@ class MainProviderAccessTest(unittest.TestCase):
         self.assertIn("providers = ai_policy[\"provider_options\"]", source)
         self.assertIn("st.session_state.ai_provider = ai_policy[\"default_provider\"]", source)
         self.assertIn("st.session_state.target_model = ai_policy[\"default_model\"]", source)
+        self.assertIn("tier in ('platform_pass', 'lifetime', 'enterprise')", source)
 
 
 if __name__ == "__main__":

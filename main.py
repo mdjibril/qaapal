@@ -380,15 +380,15 @@ def main():
                 "📝 Dashboard": dashboard.main,
                 "✍️ Student Statement": personal_statement.main,
                 "📑 Witness Statement": witness_statement.main,
-                "📚 Workbook Generator": workbook_generator.main,
+                **({"📚 Workbook Generator": workbook_generator.main} if role == 'admin' or tier in ('platform_pass', 'lifetime', 'enterprise') else {}),
                 "📜 My History": history.main,
+                "💳 My Subscription": subscription_page.main,
                 "⚙️ Account Settings": account_settings.main,
-                "💳 My Subscription": subscription_page.main
             }
             if role == 'admin':
-                pages["🛡️ Super Admin Dashboard"] = admin_panel.main
                 pages["🎓 Student Portfolios"] = student_portfolio.main
                 pages["📋 Bulk CSV Import"] = bulk_csv_import.main
+                pages["🛡️ Super Admin Dashboard"] = admin_panel.main
 
         selection = st.radio("Go to", list(pages.keys()), label_visibility="collapsed")
 

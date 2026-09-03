@@ -475,6 +475,11 @@ Generate, from the NOS trade and level selected in the existing sidebar, a **Stu
     *   [x] Do not copy the full NOS into persistent session state; keep it local to the workbook-generation request.
     *   [defer] Upload/paste JSON support is deferred until a later iteration.
 
+*   [x] **Access rules**
+    *   [x] Free users do not see the Workbook Generator in navigation and cannot access it directly.
+    *   [x] Platform Pass users can access the page only when using their own BYOK key.
+    *   [x] Lifetime and Enterprise users can use their own BYOK key or the internal platform fallback.
+
 *   [ ] **Generation**
     *   [x] Normalize the nested database result into records containing unit, learning outcome, and PC metadata (`unit_code`, `unit_title`, `lo_num`, `lo_description`, `pc_code`, `pc_description`).
     *   [x] One assessment item per `performance_criteria` (`pc_code`).
@@ -507,6 +512,16 @@ Generate, from the NOS trade and level selected in the existing sidebar, a **Stu
     *   [x] Do not generate separate AI question sets for the Student Workbook and Instructor Guide.
     *   [x] Keep the first version scoped to one selected trade and level at a time to control memory use.
 
+*   [x] **Persistence and previous workbooks**
+    *   [x] Add the `workbooks` table, indexes, and owner-scoped RLS policies to `setup_full_db.sql`.
+    *   [x] Save the validated assessment-item JSON and workbook metadata after successful generation.
+    *   [x] List previous workbooks using metadata-only queries.
+    *   [x] Load previous workbooks with owner-scoped access checks.
+    *   [x] Regenerate Student Workbook and Instructor Guide Word files locally without AI calls or credit consumption.
+    *   [x] Allow users to delete their own saved workbooks.
+    *   [x] Clear generated workbook state when the sidebar trade or level changes.
+    *   [x] Do not store API keys in workbook records.
+
 *   [ ] **Implementation structure**
     *   [x] Add a dedicated `workbook_generator.py` Streamlit page.
     *   [x] Register the page in `main.py` using the existing navigation pattern.
@@ -534,11 +549,11 @@ Generate, from the NOS trade and level selected in the existing sidebar, a **Stu
 >
 > For every `pc_code`, generate exactly one level-appropriate assessment item, varying type by competency nature (Direct, Scenario-Based, Step-by-Step, Diagrammatic, or Narrative). Align complexity to `level` (Level 2 foundational; Level 3 analytical).
 >
-> **Document 1 — Student Workbook:** questions only, with `Question Type` and `Weight` per PC.
-> **Document 2 — Instructor Guide:** identical questions plus comprehensive ideal answers and bulleted grading rubrics.
+> **Document 1 — Student Workbook:** questions only, with `Question Type` per PC.
+> **Document 2 — Instructor Guide:** identical questions plus comprehensive ideal answers and bulleted grading rubrics. Visible weights are currently deferred.
 >
 > Never skip a PC; reference real-world technologies, standards, and safety laws; and ensure the question text matches exactly across both documents.
-> Return structured JSON only. Return exactly one assessment item for every source `pc_code`, with no missing, duplicate, or invented PC codes. Include `pc_code`, `question_type`, `question`, `weight`, `ideal_answer`, and `marking_scheme` for each item.
+> Return structured JSON only. Return exactly one assessment item for every source `unit_code`/`lo_num`/`pc_code` identity, with no missing, duplicate, or invented PCs. Include `unit_code`, `lo_num`, `pc_code`, `question_type`, `question`, `weight`, `ideal_answer`, and `marking_scheme` for each item. The weight remains internal for possible future scoring and is not displayed in the current documents.
 
 ---
 ### Completed Phases Summary

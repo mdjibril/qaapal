@@ -493,34 +493,33 @@ def save_workbook(org_id, created_by, trade_id, trade_level_id, trade_name, leve
         return False, str(e)
 
 
-def list_workbooks(created_by, limit=50):
-    """List workbook metadata without loading assessment item JSON."""
-    supabase = get_supabase()
+def list_workbooks(created_by=None, limit=50, admin=False):
+    """List workbook metadata, optionally across all owners for Super Admin."""
+    supabase = get_admin_supabase() if admin else get_supabase()
     try:
-        response = _execute_query(
-            supabase.table("workbooks")
-            .select("id, trade_name, level_name, student_name, item_count, total_marks, created_at")
-            .eq("created_by", created_by)
-            .order("created_at", desc=True)
-            .limit(limit)
-        )
+        query = supabase.table("workbooks") \
+            .select("id, trade_id, trade_level_id, trade_name, level_name, student_name, item_count, total_marks, created_at")
+        if not admin:
+            query = query.eq("created_by", created_by)
+        response = _execute_query(query.order("created_at", desc=True).limit(limit))
         return response.data or []
     except Exception as e:
         st.error(f"Error loading previous workbooks: {e}")
         return []
 
 
-def fetch_workbook(workbook_id, created_by):
-    """Fetch one owner-scoped workbook, including its validated assessment items."""
-    supabase = get_supabase()
+def fetch_workbook(workbook_id, created_by=None, admin=False):
+    """Fetch one workbook, with optional Super Admin access across owners."""
+    supabase = get_admin_supabase() if admin else get_supabase()
     try:
-        response = _execute_query(
+        query = (
             supabase.table("workbooks")
             .select("*")
             .eq("id", workbook_id)
-            .eq("created_by", created_by)
-            .single()
         )
+        if not admin:
+            query = query.eq("created_by", created_by)
+        response = _execute_query(query.single())
         return response.data if response.data else None
     except Exception as e:
         st.error(f"Error loading workbook: {e}")
