@@ -3,7 +3,12 @@ import streamlit as st
 import database as db
 from ai_utils import validate_and_generate
 from file_utils import export_instructor_guide_to_word, export_student_workbook_to_word
-from workbook_utils import build_workbook_prompt, normalize_nos, validate_workbook_items
+from workbook_utils import (
+    build_workbook_prompt,
+    normalize_nos,
+    split_workbook_records,
+    validate_workbook_items,
+)
 
 
 def _generation_blocked(role, tier, credits, using_byok, policy):
@@ -94,26 +99,28 @@ def main():
             st.warning(f"Please enter the {provider} API key(s) in the sidebar.")
             return
 
-        prompt = build_workbook_prompt(trade_name, level_name, records)
         with st.status("Preparing workbook...", expanded=True) as status:
             source = "your BYOK" if using_byok else "the internal platform key"
             st.write(f"🔑 Using {source}.")
-            st.write("🧾 Generating one assessment item for each performance criterion...")
-            response = validate_and_generate(
-                provider=provider,
-                model_name=model,
-                api_keys=keys,
-                prompt=prompt,
-                system_prompt="Return only the requested JSON assessment-item list.",
-            )
-            if "API_ERROR" in str(response):
-                st.error(response)
-                return
-            try:
-                items = validate_workbook_items(response, records)
-            except ValueError as exc:
-                st.error(f"Workbook validation failed: {exc}")
-                return
+            batches = split_workbook_records(records)
+            items = []
+            for batch_number, batch_records in enumerate(batches, start=1):
+                st.write(f"🧾 Generating batch {batch_number} of {len(batches)} ({len(batch_records)} PCs)...")
+                response = validate_and_generate(
+                    provider=provider,
+                    model_name=model,
+                    api_keys=keys,
+                    prompt=build_workbook_prompt(trade_name, level_name, batch_records),
+                    system_prompt="Return only the requested JSON assessment-item list for this batch.",
+                )
+                if "API_ERROR" in str(response):
+                    st.error(f"Workbook batch {batch_number} failed: {response}")
+                    return
+                try:
+                    items.extend(validate_workbook_items(response, batch_records))
+                except ValueError as exc:
+                    st.error(f"Workbook batch {batch_number} validation failed: {exc}")
+                    return
 
             if role != "admin":
                 allowed, reason = db.consume_ai_credit(

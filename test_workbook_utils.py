@@ -1,7 +1,7 @@
 import json
 import unittest
 
-from workbook_utils import normalize_nos, validate_workbook_items
+from workbook_utils import normalize_nos, split_workbook_records, validate_workbook_items
 
 
 class WorkbookUtilsTest(unittest.TestCase):
@@ -20,6 +20,11 @@ class WorkbookUtilsTest(unittest.TestCase):
         self.assertEqual([record["pc_code"] for record in self.records], ["1.1", "1.2"])
         self.assertEqual(self.records[0]["unit_code"], "ICT/301")
         self.assertEqual(self.records[0]["lo_num"], "1")
+
+    def test_splits_large_workbook_into_bounded_batches(self):
+        batches = split_workbook_records(self.records, batch_size=1)
+        self.assertEqual(len(batches), 2)
+        self.assertEqual(sum(len(batch) for batch in batches), len(self.records))
 
     def test_rejects_missing_pc(self):
         response = {"items": [self._item("1.1")]}

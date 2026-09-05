@@ -8,6 +8,7 @@ QUESTION_TYPES = (
     "Labeled Diagram",
     "Narrative Explanation",
 )
+WORKBOOK_BATCH_SIZE = 20
 
 
 def normalize_nos(nos_data):
@@ -61,6 +62,13 @@ that add up to weight. Never invent, omit, or duplicate a pc_code.
 Source performance criteria:
 {source}
 """
+
+
+def split_workbook_records(records, batch_size=WORKBOOK_BATCH_SIZE):
+    """Split large NOS selections into bounded AI requests."""
+    if batch_size <= 0:
+        raise ValueError("batch_size must be positive")
+    return [records[index:index + batch_size] for index in range(0, len(records), batch_size)]
 
 
 def _load_json_response(response):
