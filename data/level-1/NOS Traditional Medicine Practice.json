@@ -1,0 +1,522 @@
+{
+  "trade_name": "NOS Traditional Medicine Practice",
+  "level": 1,
+  "units": [
+    {
+      "code": "HS/TMP/001/L1",
+      "title": "COMMUNICATION IN TRADITIONAL MEDICINE WORKPLACE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Communication in Traditional Medicine Practice",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the term communication in Traditional Medicine Practice"
+            },
+            {
+              "pc_code": "1.2",
+              "description": " List types of communication in Traditional Medicine Practice Verbal Written Sign, etc. "
+            },
+            {
+              "pc_code": "1.3",
+              "description": "EExplain communication cycle Sender Receiver End-User"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "State the importance of communication"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Mode of Communication in Traditional Medicine",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "List communication channels :Interpersonal, Social Media Platforms, Spiritual, Culture"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List types of spiritual communication: Divination Incantation Prayers, etc."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the significance of spiritual communication"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Cultural aspect of Communication PERFORMANCE CRITERIA",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the term culture"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State types of culture"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "State the importance of culture in Traditional Medicine Practice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HS/TMP/002/L1",
+      "title": "TEAMWORK IN TRADITIONAL MEDICINE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Teamwork in Traditional Medicine",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Team/Teamwork"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the benefit (s) of working as a Team with others"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "State the disadvantage (s) of not working as a Team in Traditional Medicine Practice"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "State the challenges of Teamwork in Traditional Medicine Practice"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Leadership in Teamwork",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State the qualities of a good Leader in Traditional Medicine Practice: Compassion, Mutual respect, Knowledgeable, Competent and Confident Good listener, etc."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the benefits of good Leadership in Traditional Medicine Practice"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State the benefits of loyalty and confidentiality in Traditional Medicine Practice"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand good working relationship in a Team:",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State the essence of good working relationship in a Team"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State the contributions of other Team members to ensure good health and social wellbeing in the Traditional Medicine workplace."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify strategies for good working relationship in Traditional Medicine Practice: Support for Team members Honesty Empathy Respect for authority etc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HS/TMP/003/L1",
+      "title": "HEALTH AND SAFETY IN WORKPLACE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the effect of Environment on Traditional Medicine Practice",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain good working Environment in Traditional Medicine Practice."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the effects of environmental temperature and humidity in Traditional Medicine Practice"
+            },
+            {
+              "pc_code": "1.3",
+              "description": " List common environmental hazards/risks associated with Traditional Medicine Practice: Injury in the use of equipment Accident Infection Snake bite Spiritual attack Poison etc"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain ways to prevent hazards/risks in Traditional Medicine Practice"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "List the benefits of working in a good and safe environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand personal hygiene in Traditional Medicine Practice",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain personal hygiene in Traditional Medicine Practice"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List the elements of personal hygiene in Traditional Medicine Practice: Constant washing of hands Cutting of nails Wearing of gloves Wearing of apparels etc"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the benefits of personal hygiene in Traditional Medicine practice"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Safety in Traditional Medicine Practice",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "List safety precautions in the use of equipment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify safety precautions in the work area"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify safety precautions in preparation area"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Recognise the use of herbs, animals, minerals, prayer, incantation, spiritual protection etc, in Traditional Medicine Practice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HS/TMP/004/L1",
+      "title": "BASIC CONCEPT OF HUMAN ANATOMY IN TRADITIONAL",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Basic concept of Traditional Anatomy",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define the Body in Traditional Medicine"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List parts not hosted in the body trunk as understood in Traditional Medicine: Brain, Eye, Nose, Ear, Mouth, Head, Hand, Leg"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List the internal body organs: Heart, Lung, Mind, Stomach, Liver, Spleen, Gall bladder etc"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Body Organs",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "List the internal body organs in relation to their position in the trunk: Lung - Upper trunk, Liver - Middle trunk, Bladder - Lower trunk, etc."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State the organs related to reproduction in Traditional Medicine: Kidney Male/Female Reproductive Organs, etc."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State the non- anatomical organs in the context of Traditional Medicine: Mind Soul"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Humours and Energy",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "List the two humours: Blood, Phlegm"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "List the two energies: Sugar, Lipid"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Relate the humour to the relevant organ: Liver-Blood Kidney \u2013 phlegm"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Relate the energies to the relevant organs: Stomach \u2013 Sugar Liver - lipid"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HS/TMP/005/L1",
+      "title": "IDENTIFICATION AND COLLECTION OF MEDICINAL PLANTS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Identification of Medicinal Plants",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State parts of plants: Leaves, Flowers, Roots etc. "
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List the parameters for identifying Medicinal Plants: name, habitat, odour etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the shape, colour, texture etc, of Medicinal plants"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "State the challenges in the Identification of Medicinal Plants"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the Procedures of Collection of Medicinal Plants",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State most desirable days of the week and season of the year for the collection of different Medicinal Plant Parts"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe most desirable time of the day in which the medicinal plants can be collected"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify stages of maturity of the plant parts to be collected"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "State some procedures in collection of Medicinal Plants"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "State the significance of direction in collection of Medicinal Plants"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand general rules of Collection of Medicinal Plants",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State the spiritual, cultural and traditional rules for collection of Medicinal Plants."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "List the criteria for collection of different parts of Medicinal Plants e.g: Flowers Leaves Seeds Fruits Barks Roots etc."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify different tools for collection of Medicinal Plant Parts: Stone Knife Digger Hoes Cutlasses etc."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HS/TMP/006/L1",
+      "title": "BASIC PREPARATION OF TRADITIONAL MEDICINES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify the Sources of Medicinal Plants",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "List sources of Medicinal Plants: Cultivated Wild, etc."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify plants obtained from cultivated sources"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify plants obtained from wild sources"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "List the advantages of cultivated plants"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "List the disadvantages of cultivated plants"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "List the advantages of wild plants"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "List the disadvantages of wild plants"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "State the challenges in collection of Medicinal Plants"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Processing of Medicinal Plants",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify Medicinal Plants for processing"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Collect and Sort Medicinal Plants"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Clean and remove sand and debris"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Wash and cut Medicinal Plants into pieces (where applicable)"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Dry, pound/grind Medicinal Plants into powder (where applicable)."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Store fresh, powdered/ dried Medicinal Plants (where applicable)."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the different Forms of Medicinal Plants Preparations",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe Methods of Medicinal Plant preparations: External, Internal "
+            },
+            {
+              "pc_code": "3.2",
+              "description": " List the forms of Medicinal Plants preparations: Solids (Powders, Teas, Capsules), etc. Liquids (Infusions, Decoctions and Tinctures), etc."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the use of adjuvants in Medicinal Plant preparations (Vehicle, Flavours, Sweeteners, Preservatives), etc."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the importance of preservation and storage in Traditional Medicine preparation"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "State the challenges in Preservation of Medicinal plants."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HS/TMP/007/L1",
+      "title": "ADMINISTRATION OF TRADITIONAL MEDICINES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Traditional Medicines",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Traditional Medicine"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Define Medicines in Traditional Medicine"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List the origin of Traditional Medicine: Revelation Inspiration Dream Trial, etc."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "List sources of Traditional Medicine materials: Plants Animal Mineral Spiritual etc."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "State benefits of Traditional Medicines: Management Cure Prevention of diseases."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Explain side effects in Traditional Medicine: Allergy Disability, etc."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Dosage Forms in Traditional Medicines",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "List the dosage forms in Traditional Medicine Practice: Liquid Solid Semi solid Vapour Gas, etc."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain how to determine the quantity of medicine per dosage"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State duration of treatment"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Describe Traditional and modern packaging of Traditional Medicine"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "State the purpose of labelling in Traditional Medicine"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand the route of Administration in Traditional Medicine",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define route of Administration in Traditional Medicine"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Mention the route of Administration: Incision Oral Topical Bathing Steaming Inhalation, etc."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "List reasons for determining route of Administration"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
