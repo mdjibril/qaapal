@@ -21,6 +21,11 @@ def _find_json_files():
             unique_files.append(path)
     return unique_files
 
+def _resolve_json_files(path):
+    if os.path.isdir(path):
+        return sorted(glob.glob(os.path.join(path, "**", "*.json"), recursive=True))
+    return [path]
+
 def _infer_level(file_path, data):
     if isinstance(data.get("level"), int):
         return data["level"]
@@ -81,7 +86,7 @@ def seed_nos_data():
         print("📂 Created 'data' directory. Please place your JSON files there.")
 
     if args.file_path:
-        json_files = [args.file_path]
+        json_files = _resolve_json_files(args.file_path)
     else:
         json_files = _find_json_files()
     

@@ -96,6 +96,7 @@ A professional AI-powered assessment report generator for the National Skills Qu
    Useful targeted seeding commands:
    ```bash
    python3 seed.py --file "data/level-3/NOS ICT Web Development L3.json"  # Seed one exact NOS file
+   python3 seed.py --file "data/level-3/"  # Seed every NOS JSON file in a level folder
    python3 seed.py --trade "ICT Web Development"  # Seed every NOS file for one trade
    python3 seed.py --trade "ICT Web Development" --level 3  # Seed only Level 3 for that trade
    ```
