@@ -44,7 +44,7 @@
         },
         {
           "lo_num": "3",
-          "description": "Apply Emergency Procedures and First Aid in the Workplace Ref. Page No.",
+          "description": "Apply Emergency Procedures and First Aid in the Workplace",
           "performance_criteria": [
             {
               "pc_code": "3.1",
@@ -240,7 +240,7 @@
         },
         {
           "lo_num": "3",
-          "description": "Understand the use of Hardware components of a computer.",
+          "description": "Understand the use of Hardware components of a computer",
           "performance_criteria": [
             {
               "pc_code": "3.1",
@@ -282,7 +282,7 @@
         },
         {
           "lo_num": "2",
-          "description": "Understand the Operating Systems 2.3 ins",
+          "description": "Understand the Operating Systems",
           "performance_criteria": [
             {
               "pc_code": "2.1",
@@ -319,7 +319,7 @@
               "description": "Copy files into the Folder"
             },
             {
-              "pc_code": "3.4",
+              "pc_code": "3.5",
               "description": "Demonstrate how to delete folders"
             }
           ]
@@ -643,7 +643,7 @@
               "description": "Print the design"
             }
           ]
-        }
+        } 
       ]
     },
     {

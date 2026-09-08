@@ -1,0 +1,1502 @@
+{
+  "trade_name": "NOS Mobile Phone Repairs and Maintenance",
+  "level": 2,
+  "units": [
+    {
+      "code": "ICT/GRM/001/L2",
+      "title": "OCCUPATIONAL HEALTH AND SAFETY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Occupational Health and Safety (OHS) Regulations",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify Relevant OHS Regulations"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use Relevant OHS Laws and Regulations"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify potential hazards in a mobile phone repair setting, including risks from electrical equipment, toxic chemicals, ergonomic issues, and tools."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use appropriate safety measures needed in mobile phone industry"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Use safety equipment in mobile phone Industry",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify safety equipment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain how to use each safety equipment"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate how to handle each safety equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Adhere to adequate safety precautions when using mobile phone equipment.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify standard operating procedures (SOP) that are in line with industry best practices when handling mobile phones repair and maintenance equipment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use the standard operating procedures (SOP)"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain how to maintain hygienic, safe and secure workplace."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the importance of using the correct tools during mobile phone repairs"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Safely Handle Mobile Phone Components and Tools",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use proper disassembly and reassembly techniques to avoid damage to mobile phones and components."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use sharp tools (e.g., screwdrivers, prying tools) and heated equipment (e.g., soldering irons) safely"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use correct procedures for using electrical equipment like multi-meters and power supplies."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use Safety Protocols for ESD (Electrostatic Discharge)"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand emergency preparedness and first Aid",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Define emergency"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Define first aid"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Explain how to provide first aid to handle cuts and electrical shock"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Apply Personal Protective Equipment (PPE)",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Define Personal Protective Equipment (PPE)"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Demonstrate the correct use of personal protective equipment (PPE) such as anti-static wristbands, safety goggles, gloves, and heat-resistant gloves to protect against physical, electrical, or chemical risks."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Use PPE in various repair tasks, including when handling batteries, soldering, or disassembling devices"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/GRM/002/L2",
+      "title": "COMMUNICATION IN MOBILE PHONES WORLD",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand terms and Terminologies used in mobile phones industry",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify appropriate terms to use in mobile phone industry"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Define mobile phone terms"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain mobile phone terms"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use appropriate terms to communicate effectively"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Apply the appropriate mobile phone acronyms used in the Mobile Phone industry",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify common acronyms used in the industry such as GSM, SIM, etc"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the full meaning of each acronym"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use appropriate acronyms to communicate effectively"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Digital Etiquette (Netiquette)",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify appropriate timing to call or text someone"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate professionalism in communication through the use of tone and content"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use of neutral language when discussing sensitive topics over the phone."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Technical Communication Skills",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use mobile phones efficiently\u2014such as making calls, sending messages, using mobile data, and managing apps"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use translation apps to facilitate multilingual communication"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use emojis and Media to communicate effectively"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/GRM/003/L2",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the benefits of Working in a Team at Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "List the advantages of working as a team."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the attributes of a team player: \u2022 Mutual respect \u2022 Common goal \u2022 Discipline \u2022 Mutual understanding \u2022 Trust \u2022 Honesty and sincerity, etc."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "List members that constitute a team in the ICT work environment: \u2022 Systems Analysts \u2022 Software Developers \u2022 Database Administrators (DBAs) \u2022 Network Engineers \u2022 Security Analysts \u2022 Help Desk Technicians, etc."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify team members in a environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand how to relate with team members",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the need for good working relationship with team members at the workplace."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the roles of other team members."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Discuss your own role in achieving the objectives of the team."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain the role of a Network Administrator in an ICT work environment."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Discuss the relationship between the Network Administrator and positions within the ICT team."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Observe Positive Work Relationships with colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State the qualities of a good Network Administrator: \u2022 Strong technical skills \u2022 Problem-solving abilities \u2022 Communication skills \u2022 Customer service orientation \u2022 Attention to detail \u2022 Adaptability \u2022 Teamwork"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Relate with other members at workplace"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the importance of effective communication and collaboration with other team members to ensure smooth operations"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Communicate information that may affect other workers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/GRM/004/L2",
+      "title": "INTRODUCTION TO MOBILE AND WIRELESS TECHNOLOGIES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Wireless Communication",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the basic principles of wireless communication, including signal propagation, frequency spectrum, and modulation techniques."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Discuss emerging trends in wireless technologies, such as 5G, the Internet of Things (IoT), and mobile edge computing"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Discuss the potential future applications of emerging trends in wireless technologies"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know components of Mobile and wireless Network",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the components of mobile and wireless communication networks, including cellular networks (2G, 3G, 4G, and 5G), Wi-Fi, and Bluetooth."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the functions of the components of mobile and wireless communication networks"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Describe various types of network topologies"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Wireless Communication Standards",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify key wireless communication standards such as GSM, CDMA, LTE, 5G, and Wi-Fi"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe key wireless communication standards such as GSM, CDMA, LTE, 5G, and Wi-Fi"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the role of key wireless communication standards in enabling wireless communication"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know mobile devices",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify various types of mobile devices, including their hardware components and mobile operating systems"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Design simple mobile applications"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Develop simple mobile applications"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/GRM/005/L2",
+      "title": "HANDLING MOBILE PHONE BATTERIES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand batteries used in mobile phones",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify different types of phone batteries"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe their characteristics"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain battery specifications"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Diagnose Common Battery Issues",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify battery problems"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe the cause of battery problem"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Test battery health"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know tools used in handling and servicing batteries",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify tools used in handling and servicing batteries"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the purpose of tools used in handling and servicing batteries"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Handle battery with care"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate how to service a battery"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Replace damaged battery"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/GRM/006/L2",
+      "title": "MOBILE PHONE REPAIR TOOLS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know mobile phone Repair Tools",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify hardware repair tools"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify software repair tools"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the purpose of each tool"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Use mobile phone Repair Tools",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use various repair tools effectively and efficiently"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Practice safety while using repair tools"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Conduct repairs without damaging delicate parts"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Diagnose Common Mobile Phone Issues",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify common types of issues (Hardware/Software)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify diagnostic tools and equipment to use"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Diagnose an issue using systematic troubleshooting process"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Repair the phone issue"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Observe Safety Protocols in Mobile Repair",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify Standard Operating Procedures (SOPs)"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use Appropriate Personal Protective Equipment (PPE)"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use Electrostatic Discharge (ESD) Prevention"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Handle tools safely and appropriately"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Use proper ventilation and chemical safety"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Perform work in a clean and organized environment"
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Ensure device and data Security"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Apply the tools to fix phone problems",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Select appropriate tools for diagnosis"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Use diagnostic software effectively"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Troubleshoot Battery and Charging Issues"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Resolve Connectivity Issues (Wi-Fi, Bluetooth, etc.)"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Perform Software Reset and Reinstallation"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Test and Verify Repair Success"
+            },
+            {
+              "pc_code": "5.7",
+              "description": "Document the Troubleshooting and Repair Process"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/GRM/007/L2",
+      "title": "DIAGNOSING AND REPAIRING MOBILE PHONES HARDWARE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Structure and Function of Mobile Phone Hardware",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the various components of a phone"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Differentiate between internal components (e.g., processor, RAM, storage) and external components (e.g., screen, casing, buttons)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the functions of each components"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Recognize the various forms of each component"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Diagnose Common Hardware Problems",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify Hardware Issues"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the possible causes of a problem"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Select appropriate repair tools"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use tools to diagnose the problem"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Disassemble a phone"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Repair a phone using the correct tools"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Assemble a phone"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Test the repaired phone"
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Document the solution"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Enhance Troubleshooting Skills",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify phone hardware issues/problems"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Develop troubleshooting skills"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Solve phone hardware related issues"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate to others what the problem is and how to repair it."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Demonstrate documentation skills"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/GRM/008/L2",
+      "title": "DIAGNOSING AND REPAIRING MOBILE PHONES SOFTWARE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Mobile Operating Systems (OS)",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the major mobile phone OS platforms such as Andrios, iOS, etc\u2026"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain how the OS manage hardware, app and interfaces"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Install mobile phone firmware and OS"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Update mobile phone OS"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Troubleshoot software Related Problems Mobile Phones",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify Common Software Issues: \u2022 Operating system crashes \u2022 Slow performance \u2022 Application errors and crashes \u2022 Connectivity issues (Wi-Fi, Bluetooth, GSM network) \u2022 Firmware corruption \u2022 Security issues (malware, viruses)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the possible causes of the problem"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use appropriate repair tools to properly identify the root cause of a problem"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Perform Data backup whenever necessary"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Perform the repairs"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Perform Firmware and OS Updates where necessary"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Apply mobile phone-Specific Software Fixes where necessary"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Perform Recovery whenever necessary"
+            },
+            {
+              "pc_code": "2.9",
+              "description": "Test and Verify Software Repairs"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Enhance Troubleshooting Skills",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify phone software issues/problems"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Develop troubleshooting skills"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Solve phone software related issues"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate to others what the problem is and how to repair it."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know Data Backup and Recovery Procedures",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Define Backup and Recovery"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the importance of regularly backing up user data such as contacts, photos, messages, etc."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe the procedures for data backup and recovery"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify the Data to backup"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Use different backup methods such as cloud storage or local backups."
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Perform Data Recovery"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/GRM/009/L2",
+      "title": "DATA PRIVACY AND PROTECTION FOR MOBILE PHONES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Data Privacy and Protection",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Data Privacy"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Define Data Protection"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain why Data Privacy and Protection for mobile phones is important"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Professional Ethics",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define Professional Ethics"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify Privacy Laws and Regulations"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use Privacy Laws and Regulations"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Implement accountability practices"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Use confidentiality"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Demonstrate Responsible Data Usage and Ethical Practices"
+            },
+            {
+              "pc_code": "2.7",
+              "description": "Implement Compliance with Laws and Regulations"
+            },
+            {
+              "pc_code": "2.8",
+              "description": "Implement data retention policies"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Safeguard Personal Information",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define Identity Theft"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify Personal Data to Protect"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify measures to Protect Personal Data"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Implement measures to Protect Personal Data"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Prevent Unauthorized Access and Data Breaches",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain unauthorized access and data breaches"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use encryption and secure authentication techniques"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Implement mitigation measure to minimize data breach risks"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Prevent Surveillance and Monitoring",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify unauthorized monitoring"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Identify techniques to prevent unauthorized monitoring"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Implement measures that will prevent unauthorized monitoring"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/GRM/010/L2",
+      "title": "COMPONENTS OF A MOBILE PHONE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Components of a Mobile Phone",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the key hardware components of a mobile phone such as the motherboard, battery, screen, camera, speakers, antennas, e.t.c"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the roles of each component and how they contribute to the phone\u2019s overall functionality"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the key softwares of a mobile phone such as the operating system (OS), firmware, and applications"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain how the hardware and software components interact to perform various tasks like calling, texting, and browsing the internet"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Mobile Phone Repair and Maintenance",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify faulty components"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Determine necessary repairs or replacements."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Troubleshoot common problems, such as screen malfunctions, power issues, network problems, and software bugs"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Assembly and Disassembly Mobile Phone",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Disassemble mobile phones"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Assemble mobile phones"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use specialized tools required for mobile phone repairs, such as screwdrivers, opening picks, suction cups, and anti-static equipment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/GRM/011/L2",
+      "title": "ADVANCE MOBILE PHONES SPARE PARTS BUSINESS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Mobile phone Industry",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the various spare parts of a Mobile Phone"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify industry stakeholders (end user, manufacturers, etc) in the value chain"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify industry trend"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand Market Demand",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify popular phone brands, models and their repair needs"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Gather information about new phone models, discontinued models and availability of their parts"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Determine spare parts that are in high demand"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Sourcing Quality Spare Parts",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Select reliable suppliers, manufacturer, or wholesalers who provide quality spare parts"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Gather parts for common repairs such as screens, charging ports, SIM trays and other essential components."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Differentiate the different categories of spare parts via classification."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Inventory Management",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify a suitable Inventory Management System (IMS) software"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Implement the IMS to track the availability of parts, restock popular items, and avoid overstocking of low-demand products"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use IMS software or point-of-sale (POS) systems that allow efficient tracking of inventory levels, order history, and supplier performance"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Offer a wide range of products",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Maintain a comprehensive variety of spare parts as well as accessories"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Provide Mobile phone hardware repair tools"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Provide Mobile phone software repair tools"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Know Ensure quality control and testing",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Test every spare part for functionality and quality before stocking."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Deliver high quality parts to customers"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Know competitive pricing strategy",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Deliver competitive pricing while maintaining quality"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Provide discounts to bulk buyers"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Deliver flexible pricing options for regular customers"
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Understand Customer Service and Technical Support",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Explain to customers, especially repair technicians who may need guidance in selecting the correct parts for different phone models"
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Deliver excellent customer service by offering support before and after the sale and handling product inquiries"
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Address Customer Complaints Efficiently"
+            }
+          ]
+        },
+        {
+          "lo_num": "9",
+          "description": "Build an online and offline presence",
+          "performance_criteria": [
+            {
+              "pc_code": "9.1",
+              "description": "Locate a suitable place to conduct the business"
+            },
+            {
+              "pc_code": "9.2",
+              "description": "Maintain a well-organized retail shop or distribution center where local customers can browse and purchase parts in person."
+            },
+            {
+              "pc_code": "9.3",
+              "description": "Develop a user-friendly e-commerce platform where customers can easily find the parts they need, view technical specifications, and place orders"
+            }
+          ]
+        },
+        {
+          "lo_num": "10",
+          "description": "Know logistics and delivery",
+          "performance_criteria": [
+            {
+              "pc_code": "10.1",
+              "description": "Explain what logistics and delivery are"
+            },
+            {
+              "pc_code": "10.2",
+              "description": "Carry out same-day or next-day delivery to local repair shops"
+            },
+            {
+              "pc_code": "10.3",
+              "description": "Operate logistics system to ensure fast and accurate delivery of spare parts to customers"
+            }
+          ]
+        },
+        {
+          "lo_num": "11",
+          "description": "Know warranty and return policy",
+          "performance_criteria": [
+            {
+              "pc_code": "11.1",
+              "description": "Describe their warranty and return procedure"
+            },
+            {
+              "pc_code": "11.2",
+              "description": "Provide warranties on spare parts to ensure customers feel confident in the products they purchase."
+            },
+            {
+              "pc_code": "11.3",
+              "description": "Implement a clear return and replacement policy to handle defective parts and customer complaints effectively."
+            }
+          ]
+        },
+        {
+          "lo_num": "12",
+          "description": "Understand Compliance with legal and environmental regulations",
+          "performance_criteria": [
+            {
+              "pc_code": "12.1",
+              "description": "Identify all relevant regulations regarding the sale of mobile phone parts, including warranties, trade laws, and consumer rights"
+            },
+            {
+              "pc_code": "12.2",
+              "description": "Explain the relevant regulations"
+            },
+            {
+              "pc_code": "12.3",
+              "description": "Implement environmentally friendly practices, such as recycling used parts and responsibly disposing of electronic waste"
+            }
+          ]
+        },
+        {
+          "lo_num": "13",
+          "description": "Understand the need to build partnership with repair technicians",
+          "performance_criteria": [
+            {
+              "pc_code": "13.1",
+              "description": "Identify strategic partner such as mobile repair shops, technicians, and service centers to supply them with parts regularly."
+            },
+            {
+              "pc_code": "13.2",
+              "description": "Maintain relationship with the strategic partners"
+            },
+            {
+              "pc_code": "13.3",
+              "description": "Discuss customized product requirement with partners."
+            },
+            {
+              "pc_code": "13.4",
+              "description": "Implement bulk discounts and loyalty programs to help foster long-term relationships."
+            }
+          ]
+        },
+        {
+          "lo_num": "14",
+          "description": "Know Financial Management and planning",
+          "performance_criteria": [
+            {
+              "pc_code": "14.1",
+              "description": "Identify financial sources for the business"
+            },
+            {
+              "pc_code": "14.2",
+              "description": "Implement proper financial management, including cash flow, pricing strategies, and profit margins to sustain the business in a competitive market."
+            },
+            {
+              "pc_code": "14.3",
+              "description": "Operate the business to make profit"
+            },
+            {
+              "pc_code": "14.4",
+              "description": "Plan for future expansion"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/GRM/012/L2",
+      "title": "ADVANCE MOBILE PHONES WORKSHOP BUSINESS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Mobile phone Industry",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify various Mobile Phones"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify industry stakeholders (end user, manufacturers, etc) in the value chain"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify industry trend"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Professional Mobile Phone Repair Services",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify Mobile Phone problem"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Determine fixing the hardware and/or software issue/s"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Repair the Mobile Phone"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Specialize Mobile Technology Repairs",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Select the right set of tools to repair hardware issues"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Select the right set of tools to repair software issues"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use the tools to fix the issue"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand Inventory Management",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify a suitable Customer and Inventory Management System (IMS)"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Implement the IMS to track the availability of parts, restock popular items, and avoid overstocking of low-demand products"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use IMS software or point-of-sale (POS) systems that allow efficient tracking of inventory levels, order and customer history, and supplier performance."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Apply Advanced Diagnostic Services",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify Complex Hardware and Software issues that may not be easily detectable."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Use repair tools to diagnose the issue"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Repair the device"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Test the device for proper functionality"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Know quality control and testing",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Test every spare part for functionality and quality before using it for repairs"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Deliver top-notch service to customers by ensuring that repairs are done accurately and efficiently"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Know Longevity of Mobile Devices",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Explain to the user best way to charge the devices"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Use mindful charging"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Use high quality phone charging cables"
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Provide timely repairs and maintenance services"
+            }
+          ]
+        },
+        {
+          "lo_num": "8",
+          "description": "Understand Customer Service and Technical Support",
+          "performance_criteria": [
+            {
+              "pc_code": "8.1",
+              "description": "Explain to customers who may need guidance"
+            },
+            {
+              "pc_code": "8.2",
+              "description": "Deliver excellent customer service by offering support before and after the repairs"
+            },
+            {
+              "pc_code": "8.3",
+              "description": "Address Customer Complaints Efficiently"
+            }
+          ]
+        },
+        {
+          "lo_num": "9",
+          "description": "Build an online and offline presence",
+          "performance_criteria": [
+            {
+              "pc_code": "9.1",
+              "description": "Locate a suitable place to conduct the business"
+            },
+            {
+              "pc_code": "9.2",
+              "description": "Maintain a well-organized workshop where local customers can bring their devices for repairs"
+            },
+            {
+              "pc_code": "9.3",
+              "description": "Develop a user-friendly web application customers can easily find information about the status of the repairs"
+            }
+          ]
+        },
+        {
+          "lo_num": "10",
+          "description": "Educate Customers on Mobile Phone Care and Maintenance",
+          "performance_criteria": [
+            {
+              "pc_code": "10.1",
+              "description": "Explain the benefits of phone care and maintenance to customers"
+            },
+            {
+              "pc_code": "10.2",
+              "description": "Demonstrate to the customer on how to care and maintain their phones"
+            },
+            {
+              "pc_code": "10.3",
+              "description": "Maintain regular check-up with customers to remind them about their phone care and maintenance"
+            }
+          ]
+        },
+        {
+          "lo_num": "11",
+          "description": "Know warranty and return policy",
+          "performance_criteria": [
+            {
+              "pc_code": "11.1",
+              "description": "Describe their warranty policy"
+            },
+            {
+              "pc_code": "11.2",
+              "description": "Provide warranties on repairs"
+            },
+            {
+              "pc_code": "11.3",
+              "description": "Implement a clear repair and replacement policy"
+            }
+          ]
+        },
+        {
+          "lo_num": "12",
+          "description": "Understand Compliance with legal and environmental regulations",
+          "performance_criteria": [
+            {
+              "pc_code": "12.1",
+              "description": "Identify all relevant regulations including warranties, trade laws, and consumer rights"
+            },
+            {
+              "pc_code": "12.2",
+              "description": "Explain the relevant regulations"
+            },
+            {
+              "pc_code": "12.3",
+              "description": "Implement environmentally friendly practices, such as recycling used parts and responsibly disposing of electronic waste"
+            }
+          ]
+        },
+        {
+          "lo_num": "13",
+          "description": "Understand the need to build partnership with other repair technicians",
+          "performance_criteria": [
+            {
+              "pc_code": "13.1",
+              "description": "Identify strategic partners such as mobile repair shops, technicians, and service centers"
+            },
+            {
+              "pc_code": "13.2",
+              "description": "Develop and maintain relationship with strategic partners"
+            },
+            {
+              "pc_code": "13.3",
+              "description": "Discuss customized product requirement with partners."
+            },
+            {
+              "pc_code": "13.4",
+              "description": "Implement bulk discounts and loyalty programs to help foster long-term relationships."
+            }
+          ]
+        },
+        {
+          "lo_num": "14",
+          "description": "Know Financial Management and planning",
+          "performance_criteria": [
+            {
+              "pc_code": "14.1",
+              "description": "Identify financial sources for the business"
+            },
+            {
+              "pc_code": "14.2",
+              "description": "Implement proper financial management, including cash flow, pricing strategies, and profit margins to sustain the business in a competitive market."
+            },
+            {
+              "pc_code": "14.3",
+              "description": "Operate the business to make profit"
+            },
+            {
+              "pc_code": "14.4",
+              "description": "Plan for future expansion"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
