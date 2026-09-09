@@ -974,6 +974,8 @@ def main():
                                 st.info("Select a performance criterion to edit.")
 
         with sub_tab_delete:
+            if st.session_state.pop("nos_delete_success", False):
+                st.success("✅ NOS content deleted successfully.")
             st.subheader("Danger Zone: Remove NOS Content")
             st.warning(
                 "Deleting a trade will remove its trade levels and units through database cascades. "
@@ -1102,7 +1104,7 @@ def main():
                                                 success, err = db.delete_nos_trade_level(selected_trade_level["id"])
 
                                             if success:
-                                                st.success("✅ NOS content deleted successfully.")
+                                                st.session_state["nos_delete_success"] = True
                                                 st.rerun()
                                             else:
                                                 st.error(f"Deletion failed: {err}")
