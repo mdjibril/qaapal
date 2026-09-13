@@ -1,5 +1,5 @@
 {
-  "trade_name": "NOS Welding and Fabrication Levels",
+  "trade_name": "NOS Welding Inspector Basics",
   "level": 3,
   "units": [
     {
@@ -363,7 +363,7 @@
       ]
     },
     {
-      "code": "ENGG/WFI/017/L3",
+      "code": "ENGG/WF/017/L3",
       "title": "WELDING DRAWINGS AND WELDING PROCEDURE",
       "learning_outcomes": [
         {
