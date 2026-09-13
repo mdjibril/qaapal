@@ -1,0 +1,1008 @@
+{
+  "trade_name": "NOS ICT Mobile App Development",
+  "level": 5,
+  "units": [
+    {
+      "code": "ICT/MOB/001/L5",
+      "title": "OCCUPATIONAL HEALTH AND SAFETY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Safe working Practices and Instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain safe work practice and instructions."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify safety signs and symbols."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use signs and symbols correctly."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Carry out safe work practices and instructions."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Comply to accordance with health and safety best practices."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate Understanding of Safety Hazards and risks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify work environment hazards."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List various ways to avoid common workplace hazards"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State methods to reduce the risk of work hazards."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Possess the ability to take appropriate actions during accident/injuries",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify basic first aid equipment."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "identify the benefits of first aid equipment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "State how to maintain hygienic, safe and secure workplace."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "State the uses of safety equipment in a mobile application work environment."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Demonstrate safe work habit and clean work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use safe access and exit routes in the work environment."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Have knowledge of safe work habit and clean work environment."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Dispose all wastes appropriately to designated waste facilities"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/MOB/002/L5",
+      "title": "COMMUNICATION AND INTERPERSONAL SKILLS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate knowledge of the importance of good communication",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "State reasons why good communication is important."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List ways to communicate effectively."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Exhibit patience and a mild demeanour while communicating with colleagues, managers and clients."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Speak in a professional manner."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use respectful body language even when in a bad mood or while under pressure."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate ability to follow documented instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Read accurately follow steps in a mobile framework/plugin installation documentation."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Interpret and understand mobile app documentation."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "While programming, find specific class definitions and method descriptions in documentations."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate ability to create documented instructions",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Determine what is needed in a documented instruction"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe how the scope of the documented instruction is valid"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the importance of the documented instruction."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/MOB/003/L5",
+      "title": "TEAMWORK",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know team roles and responsibilities",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify key roles within a mobile app development team. Explain functions of these roles collaborate to complete a project."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Define tasks assignment."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Know importance of cross-functional collaboration between development, design, and testing."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Define Agile Driven Methodologies."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Work collaboratively to contribute to mobile app development goals.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain sprint goals in an agile team."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe agile ceremonies such as stand-ups, sprint planning, and retrospectives, contributing to team discussions and decisions."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State tasks assignment on time while aligning personal goals with the team's development goals."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Communicate effectively with team members",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use communication tools (e.g., Slack, Microsoft Teams) to provide clear and timely updates on development progress, roadblocks, and changes."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Ensure that code changes, pull requests, and project documentation are properly communicated through tools like GitHub, JIRA, or Confluence to maintain team transparency."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Effectively communicate app development progress or technical details to non-technical stakeholders, such as product owners or clients."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Foster a collaborative and inclusive app development environment."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Lead and support teams through app development challenges"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Adapt to evolving team structures and project requirements."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Evaluate and enhance team performance in app development projects.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Participate actively in sprint retrospectives"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Review code or project deliverables collaboratively."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use metrics such as sprint velocity, defect rates, or app performance metrics to evaluate the team\u2019s overall success in achieving project goals."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use version control systems like Git to collaborate on code with other developers."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Describe project management platforms like JIRA, Trello, or Asana to track tasks, manage workflows, and ensure everyone is aligned on sprint priorities."
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Leverage cloud platforms such as Firebase, AWS, or Google Cloud to collaboratively build, test, and deploy mobile apps."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/MOB/004/L5",
+      "title": "ESSENTIALS OF DATA HANDLING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand persistent and non-persistent storage techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Differentiate between volatile and non-volatile memory"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the concept of persistent data"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Differentiate data types that can be transferred non-persistently"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the advantages of non-persistent data with regards to speed of access."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "State the limitations of non-persistent data with regards to maximum data size and volatility."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Be able to Work with internal and external storage media",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Differentiate between internal and external storage"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe Data Storage on internal and External device"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Store data to external storage (SD Card)"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Download and store static resources (Files, Images, Audio, Video) in an organized and secure manner"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand techniques on mobile SQLite storage",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain Structured Query Language (SQL) for mobile application"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Mention popular SQL databases used on mobile devices"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "State some advantages of SQLite database for more mobile devices"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Develop mobile application that can perform Create, Read, Update, Delete (CRUD) on SQLite database"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Develop a mobile app that backs up and restores SQLite table data"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Develop a mobile app that migrates data to new SQL tables with different structure"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Show ability to use cloud storage services",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify different cloud storage services available for mobile platforms"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain various benefits of cloud storage services."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Develop a mobile app that stores data on the cloud using a popular cloud service."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/MOB/005/L5",
+      "title": "DEVELOPING BACKGROUND SERVICES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Use background services",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify background service equivalents in popular mobile development platforms."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain differences between background service equivalents in popular mobile development platforms."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Perform long running tasks."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Perform repeated tasks."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Perform asynchronous tasks."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Be able to Demonstrate multi-threading",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Differentiate between threads and processes."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the advantages of multi-threading."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain thread life cycle."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry out specific task on thread on mobile application."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Demonstrate synchronize techniques threads and use thread priority."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Be able to show inter-process communications",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain Inter Process Communication (IPC)."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State IPC features of popular mobile development platforms."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Develop mobile application that utilizes IPC."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/MOB/006/L5",
+      "title": "TESTING AND DEBUGGING MOBILE APPLICATIONS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Be able to Carry out mobile application testing.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain software testing."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the different types of software testing."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Execute unit testing on a mobile app."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Execute functional/usability testing on a mobile app."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Execute performance testing on a mobile app."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate ability to prepare and use feedback forms",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Overview of Feedback in Mobile App testing"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State some benefits of using a feedback form."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain how to structure questions correctly."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Prepare a feedback form for users to access the usability of a mobile app."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain how to assess feedback form responses to extract useful information."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate debugging abilities",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain root cause of errors."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use online development forums to find solutions to bugs."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use IDE\u2019s log console to trace errors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/MOB/007/L5",
+      "title": "PUBLISHING MOBILE APPS ONLINE",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate ability to bundle app for release on app stores",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the popular mobile App stores"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the application publishing procedure of popular App Stores (e.g. Google Play Store, Apple Store)"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Ability to bundle application for release on a popular App Store"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Be able to prepare app license and terms of use",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "State the benefits of including a license and/or terms of use in an application"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Differentiate between popular open source licenses (e.g. MIT, GPL, Apache, BSD)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Develop draft license for a mobile app."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Draft terms of use document for a mobile app."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate the ability to display adverts on the application",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the concept of advertising in mobile apps."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Differentiate between popular advertising services for mobile apps."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Integrate a popular advert service on a mobile application."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/MOB/008/L5",
+      "title": "MONETIZATION OF MOBILE APPLICATIONS",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Demonstrate the concept involved in monetization.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the concept of monetization."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the concept of subscribing in relation to monetization."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the concept of In-app billing in relation to monetization."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the concept of merchandising and product cataloguing."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Demonstrate the knowledge of the concept of payment gateway.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain how a payment gateway can be integrated in an app."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe various payment solutions like google checkout, paypal and others."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Write a mobile app to demonstrate how a payment gateway might be used."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate strategy involved in selling goods within an app",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the concept in selling virtual goods within an app."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the concept of selling physical goods within an app"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Demonstrate the risk involved in selling within an app."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate the process to retain profit with the sales in selling within an app."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/MOB/009/L5",
+      "title": "LICENSING AND INTEGRATION WITH LIBRARIES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand concept of APIs",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the concept of APIs."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the benefits of APIs."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify and differentiate between 1st party and 3rd party APIs."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Develop mobile app which uses X (Twitter API)."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand concept of Licensing",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the concept of Licensing in mobile apps."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the benefits of licensing"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the challenges involved in licensing."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify ways to gain traction in the app store"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain the process involved in licensing a mobile product to another company"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Demonstrate the process of integration with major API.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Resources for mobile development with YouTube."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Understanding mobile payment libraries"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Demonstrate the process involved in developing a mobile library application"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/MOB/010/L5",
+      "title": "ARCHITECTURAL PATTERNS IN MOBILE DEVELOPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand architectural patterns",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain architectural patterns."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State examples of architectural patterns."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify and differentiate between the various architectural patterns."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand importance of architectural patterns",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the reason for various architectural patterns"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the importance of each architectural pattern"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "State the problem that architectural patterns solve."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement architectural patterns in an app.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe steps involved in setting up an architecture in an app."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate knowledge of implementing an architecture pattern."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Implement a known architectural pattern in a mobile application"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/MOB/011/L5",
+      "title": "REPOSITORIES IN MOBILE APPLICATION DEVELOPMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Basics of version control.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the concept of version control."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the benefits of version control."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify various remote ways to access Mobile Applications."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Be able to Manage repositories in Mobile Application",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the concept of code repository service."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify popular repository service."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Implement code repository setup."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carry out connection to a code repository service."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Show ways of contributing to SDK development using a repository service"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand version control integration.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe how to import version control in the mobile platform."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the process of viewing a repository log."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain how to commit, pull and push code changes to repositories"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Implement version control integration within a mobile application platform."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/MOB/012/L5",
+      "title": "PROJECT MANAGEMENT IN MOBILE APPLICATION",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand project management",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define project management."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State advantages of project management"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the phases in project management"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand requirement gathering and analysis",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the concept of requirement gathering and analysis"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Mention 5 factors to Consider while carrying out analysis"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Mention 5 channels of information gathering"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Develop project specification document stating project milestones and timeline"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Develop project plan in mobile apps development",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain the concept of project plan"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Discuss the importance of a project plan"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the concept of activities, critical activities, scheduling and timeline."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Develop gantt chart using project management tool"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Generate project plan for a simple app showing activities, critical activities and corresponding timeline."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understanding project Design",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the concept of project design"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "List the key members of a design team"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Show use of mock-ups, storyboard or wireframes in a simple app idea."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand Product Development",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain the concept of prototyping."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain modular development in the context of an app having multiple features."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Perform module integration."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Understand of Testing",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Explain the importance of testing"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Explain the different types of testing and demonstrate when they are required in the development process"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Integrate tests as determined by the nature of the application"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Understanding Project maintenance and upgrade",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Explain the concept of maintenance."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Enumerate factors that can necessitate upgrade and maintenance operation."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "List maintenance operations that can be carried out on a mobile app"
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Enumerate upgrade operations that can be carried out on a mobile app."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

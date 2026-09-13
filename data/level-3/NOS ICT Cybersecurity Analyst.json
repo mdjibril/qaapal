@@ -1,9 +1,9 @@
 {
-  "trade_name": "NOS ICT Cybersecurity Engineering L5",
-  "level": 5,
+  "trade_name": "NOS ICT Cybersecurity Analyst",
+  "level": 3,
   "units": [
     {
-      "code": "IS/CCE/001/L5",
+      "code": "IS/CCA/001/L3",
       "title": "Health, Safety and Environment",
       "learning_outcomes": [
         {
@@ -141,11 +141,11 @@
               "description": "State why a fire should never be approached unless it is safe to."
             },
             {
-              "pc_code": "4.17",
+              "pc_code": "4.16",
               "description": "Describe organizational security procedures and why these are important"
             },
             {
-              "pc_code": "4.18",
+              "pc_code": "4.17",
               "description": "State the importance of reporting all usual or non-routine incidents to the appropriate personnel."
             }
           ]
@@ -153,7 +153,7 @@
       ]
     },
     {
-      "code": "IS/CCE/002/L5",
+      "code": "IS/CCA/002/L3",
       "title": "Communication and Interpersonal Skill",
       "learning_outcomes": [
         {
@@ -233,7 +233,7 @@
       ]
     },
     {
-      "code": "IS/CCE/003/L5",
+      "code": "IS/CCA/003/L3",
       "title": "Teamwork",
       "learning_outcomes": [
         {
@@ -282,7 +282,7 @@
         },
         {
           "lo_num": "3",
-          "description": "Compliance with policy of organisation",
+          "description": "Compliance with policy of organisation (PC)",
           "performance_criteria": [
             {
               "pc_code": "3.1",
@@ -301,554 +301,560 @@
       ]
     },
     {
-      "code": "IS/CCE/004/L5",
-      "title": "Cybersecurity Governance",
+      "code": "IS/CCA/004/L3",
+      "title": "Cybersecurity Principles",
       "learning_outcomes": [
         {
           "lo_num": "1",
-          "description": "Demonstrate understanding of security compliance frameworks",
+          "description": "Know cybersecurity",
           "performance_criteria": [
             {
               "pc_code": "1.1",
-              "description": "Demonstrate understanding of cybersecurity frameworks like NIST 2.0, PCI DSS v4.0, CIS, CMMC, etc."
+              "description": "Describe the concepts of cybersecurity"
             },
             {
               "pc_code": "1.2",
-              "description": "Analyse the role of cybersecurity governance within an organization."
+              "description": "Explain the importance of cybersecurity "
             },
             {
               "pc_code": "1.3",
-              "description": "Assess risk management policies and procedures."
+              "description": "Explain the consequences and implications of inadequate cybersecurity"
             },
             {
               "pc_code": "1.4",
-              "description": "Describe the impact of cybersecurity laws and regulations on business operations."
-            },
-            {
-              "pc_code": "1.5",
-              "description": "Advise stakeholders on implementing governance structures for security compliance."
+              "description": "Define core terminologies used in cybersecurity"
             }
           ]
         },
         {
           "lo_num": "2",
-          "description": "Develop policies and strategies for security governance",
+          "description": "Know the Behaviours of Threat Actors",
           "performance_criteria": [
             {
               "pc_code": "2.1",
-              "description": "Create security policies that align with organizational objectives."
+              "description": "Explain the terms: good actors and bad actors"
             },
             {
               "pc_code": "2.2",
-              "description": "Evaluate the effectiveness of current security frameworks."
+              "description": " Describe the behaviours of good actors and bad actors (Ethical hackers, Gray Hat hackers, Black Hat hackers ) "
             },
             {
               "pc_code": "2.3",
-              "description": "Implement security training programs to promote policy compliance and awareness"
+              "description": "Explain the motivations of good actors and bad actors "
             },
             {
               "pc_code": "2.4",
-              "description": "Support the creation of incident response plans in compliance with security governance."
-            },
-            {
-              "pc_code": "2.5",
-              "description": "Inspect policy effectiveness through internal audits."
+              "description": "Identify key sectors that are most vulnerable to cyber-attacks"
             }
           ]
         },
         {
           "lo_num": "3",
-          "description": "Evaluate cybersecurity risk management frameworks",
+          "description": "Know security by design",
           "performance_criteria": [
             {
               "pc_code": "3.1",
-              "description": "Identify and Analyse potential risks related to cybersecurity threats."
+              "description": " Describe the term security by design "
             },
             {
               "pc_code": "3.2",
-              "description": "Assess the likelihood and impact of security risks."
+              "description": "Explain the principles of security by design"
             },
             {
               "pc_code": "3.3",
-              "description": "Develop risk mitigation strategies for identified threats."
+              "description": "Describe the consequences of not considering security during design phase"
             },
             {
               "pc_code": "3.4",
-              "description": "Explain risk management tools and models."
-            },
-            {
-              "pc_code": "3.5",
-              "description": "Apply appropriate risk management model."
-            },
-            {
-              "pc_code": "3.6",
-              "description": "Evaluate the organization's risk tolerance and security posture."
-            }
-          ]
-        },
-        {
-          "lo_num": "4",
-          "description": "Plan and develop compliance monitoring mechanisms Objective (LO)",
-          "performance_criteria": [
-            {
-              "pc_code": "4.1",
-              "description": "Select appropriate tools to monitor cybersecurity compliance."
-            },
-            {
-              "pc_code": "4.2",
-              "description": "Create processes to audit and assess cybersecurity measures."
-            },
-            {
-              "pc_code": "4.3",
-              "description": "Demonstrat your understanding ongoing monitoring and adjustments to risk management procedures."
-            },
-            {
-              "pc_code": "4.4",
-              "description": "Compare different approaches to compliance monitoring."
-            },
-            {
-              "pc_code": "4.5",
-              "description": "Analyse monitoring results and propose improvements."
+              "description": "Describe the advantages and disadvantages of security by design"
             }
           ]
         }
       ]
     },
     {
-      "code": "IS/CCE/005/L5",
-      "title": "Network Security Management",
+      "code": "IS/CCA/005/L3",
+      "title": "Threat Intelligence in Cybersecurity",
       "learning_outcomes": [
         {
           "lo_num": "1",
-          "description": "Implement secure network architectures",
+          "description": "Know cyber threat intelligence",
           "performance_criteria": [
             {
               "pc_code": "1.1",
-              "description": "Access the integrity of network security protocols and firewalls."
+              "description": "Identify key concepts of cyber threat intelligence"
             },
             {
               "pc_code": "1.2",
-              "description": "Analyse network vulnerabilities and threat vectors."
+              "description": "Explain the following terms in relation to cybersecurity: \u2212 Threats \u2212 Exploits \u2212 Vulnerabilities \u2212 Risk"
             },
             {
               "pc_code": "1.3",
-              "description": "Create a secure network architecture based on organizational requirements."
+              "description": "Describe threat intelligence lifecycle"
             },
             {
               "pc_code": "1.4",
-              "description": "Inspect network traffic for suspicious activities and potential breaches."
+              "description": "Explain emerging attack techniques and how to recognise them"
             },
             {
               "pc_code": "1.5",
-              "description": "Reviwe network configuration to enhance security measures."
+              "description": "Explain the importance of using reliable and valid Open- Source Intelligence information"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Identify organization\u2019s current threat status"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Recommend countermeasures based on 1.7"
             }
           ]
         },
         {
           "lo_num": "2",
-          "description": "Evaluate the effectiveness of network security controls",
+          "description": "Know threat models",
           "performance_criteria": [
             {
               "pc_code": "2.1",
-              "description": "Access network security breaches and suggest corrective actions."
+              "description": "Describe range of threat models"
             },
             {
               "pc_code": "2.2",
-              "description": "Compare intrusion detection and prevention systems (IDPS)."
+              "description": "Identify the steps within a threat model"
             },
             {
               "pc_code": "2.3",
-              "description": "Assess firewall and router configurations for gaps in security."
-            },
-            {
-              "pc_code": "2.4",
-              "description": "Analyse network segmentation to minimize threat impact."
-            },
-            {
-              "pc_code": "2.5",
-              "description": "Observe and interpret the performance of network security controls."
+              "description": "Evaluate a threat model"
             }
           ]
         },
         {
           "lo_num": "3",
-          "description": "Implement secure access management",
+          "description": "Know malicious software",
           "performance_criteria": [
             {
               "pc_code": "3.1",
-              "description": "Develop secure authentication and authorization mechanisms."
+              "description": "Identify types of malicious software"
             },
             {
               "pc_code": "3.2",
-              "description": "Explain how to adherence to least privilege access principles."
+              "description": "Describe the effects of different types of malicious software on an infected system"
             },
             {
               "pc_code": "3.3",
-              "description": "Investigate access control issues and take appropriate actions."
+              "description": "Explain the motives for using specific malicious software"
             },
             {
               "pc_code": "3.4",
-              "description": "Implement multi-factor authentication (MFA) across network systems."
-            },
-            {
-              "pc_code": "3.5",
-              "description": "Support user awareness programs on secure access management."
+              "description": "Explain how specific malicious software attacks are made more effective due to human factors"
             }
           ]
         },
         {
           "lo_num": "4",
-          "description": "Operate and maintain network security infrastructure Objective (LO)",
+          "description": "Know social engineering",
           "performance_criteria": [
             {
               "pc_code": "4.1",
-              "description": "Implement routine maintenance of network security tools."
+              "description": "Explain the term \u2018social engineering\u2019"
             },
             {
               "pc_code": "4.2",
-              "description": "Implement automated mechanisms for continuous monitoring of network health."
+              "description": "Show examples of how Open- Source Intelligence can be used for social engineering"
             },
             {
               "pc_code": "4.3",
-              "description": "Manage the operation of VPNs, IDS, IPS, and firewalls."
-            },
-            {
-              "pc_code": "4.4",
-              "description": "Supervise network administrators to ensure compliance with security protocols."
-            },
-            {
-              "pc_code": "4.5",
-              "description": "Plan for the upgrade and renewal of network security systems."
+              "description": "Demonstrate ways a social engineering attack could take place"
             }
           ]
         }
       ]
     },
     {
-      "code": "IS/CCE/006/L5",
-      "title": "Information Security Management",
+      "code": "IS/CCA/006/L3",
+      "title": "Cybersecurity Testing, Vulnerabilities and Controls",
       "learning_outcomes": [
         {
           "lo_num": "1",
-          "description": "Assess information security risks",
+          "description": "Know the common types of testing in cybersecurity",
           "performance_criteria": [
             {
               "pc_code": "1.1",
-              "description": "Analyse organizational data to identify potential risks."
+              "description": "Explain different types of cybersecurity testing"
             },
             {
               "pc_code": "1.2",
-              "description": "Evaluate the impact of data breaches on operations, financial impacts reputation, etc"
+              "description": "Identify why cybersecurity testing is important"
             },
             {
               "pc_code": "1.3",
-              "description": "Describe the process of data classification and prioritization."
+              "description": "Demonstrate types of cybersecurity testing"
             },
             {
               "pc_code": "1.4",
-              "description": "Support the organization in complying with applicable data protection laws."
+              "description": "Show mitigations following cybersecurity testing"
             },
             {
               "pc_code": "1.5",
-              "description": "Develop risk mitigation strategies for data protection."
+              "description": "Demonstrate why it is important to retest following any changes made"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Display how the outcomes of cybersecurity testing can be reported"
             }
           ]
         },
         {
           "lo_num": "2",
-          "description": "Implement data protection measures",
+          "description": "Be able to mitigate potential cybersecurity vulnerabilities",
           "performance_criteria": [
             {
               "pc_code": "2.1",
-              "description": ",Investigate data protection systems for weaknesses"
+              "description": "Identify cybersecurity vulnerabilities"
             },
             {
               "pc_code": "2.2",
-              "description": "Ensure the encryption of critical data assets."
+              "description": "Demonstrate the steps to be taken when a vulnerability has been identified"
             },
             {
               "pc_code": "2.3",
-              "description": "Semulute policies to protect sensitive information."
+              "description": "Apply the correct response to the vulnerability"
             },
             {
               "pc_code": "2.4",
-              "description": "Implement robust access control for sensitive data."
-            },
-            {
-              "pc_code": "2.5",
-              "description": "Plan incident response processes for data breaches."
+              "description": "Develop an appropriate communication plan to mitigate future vulnerabilities"
             }
           ]
         },
         {
           "lo_num": "3",
-          "description": "Operate data protection systems",
+          "description": "Know controls in cybersecurity",
           "performance_criteria": [
             {
               "pc_code": "3.1",
-              "description": "Participate in data protection measures such as the maintenance, encryption of systems and backups."
+              "description": "Identify cybersecurity controls"
             },
             {
               "pc_code": "3.2",
-              "description": "Analyse the performance of data protection measures."
+              "description": "Develop a basic cybersecurity framework"
             },
             {
               "pc_code": "3.3",
-              "description": "Compare different encryption algorithms and their effectiveness."
+              "description": "Evaluate a cybersecurity framework"
             },
             {
               "pc_code": "3.4",
-              "description": "Implement measures to prevent data loss.( Policies and DLP etc)"
-            },
-            {
-              "pc_code": "3.5",
-              "description": "Interpret reports from data protection monitoring systems."
+              "description": "Identify how specific malicious software attacks are made more effective due to human factors"
             }
           ]
         },
         {
           "lo_num": "4",
-          "description": "Ensure compliance with data protection regulations Objective (LO)",
+          "description": "Be able to apply a cybersecurity control",
           "performance_criteria": [
             {
               "pc_code": "4.1",
-              "description": "Ensure alignment with GDPR, HIPAA, NDPA or any other local data laws."
+              "description": "Demonstrate how to apply controls"
             },
             {
               "pc_code": "4.2",
-              "description": "Develop internal data protection audits and inspections approches"
+              "description": "Implement a basic cybersecurity control"
             },
             {
               "pc_code": "4.3",
-              "description": "Evaluate the organization's compliance posture."
+              "description": "Justify the implementation of a chosen cybersecurity control"
             },
             {
               "pc_code": "4.4",
-              "description": "Implement necessary measures to address compliance gaps."
-            },
-            {
-              "pc_code": "4.5",
-              "description": "Advise stakeholders on the implications of data protection regulations."
+              "description": "Explain why a control might not be applied"
             }
           ]
         }
       ]
     },
     {
-      "code": "IS/CCE/007/L5",
-      "title": "Threat Intelligence and Monitoring",
+      "code": "IS/CCA/007/L3",
+      "title": "Cybersecurity Incident Response",
       "learning_outcomes": [
         {
           "lo_num": "1",
-          "description": "Analyse emerging cybersecurity threats",
+          "description": "Know what is meant by a cybersecurity incident response plan",
           "performance_criteria": [
             {
               "pc_code": "1.1",
-              "description": "Investigate new attack vectors and threat actors."
+              "description": "Describe what a cybersecurity incident response plan is used for"
             },
             {
               "pc_code": "1.2",
-              "description": "Compare emerging cybersecurity technologies."
+              "description": "Explain when a cybersecurity incident response plan is used"
             },
             {
               "pc_code": "1.3",
-              "description": "Evaluate the potential impact of new threats on the organization."
-            },
-            {
-              "pc_code": "1.4",
-              "description": "Create threat models to understand potential vulnerabilities."
-            },
-            {
-              "pc_code": "1.5",
-              "description": "Support continuous threat monitoring efforts."
+              "description": "Describe the stages of a cybersecurity incident response lifecycle"
             }
           ]
         },
         {
           "lo_num": "2",
-          "description": "Implement threat detection systems",
+          "description": "Be able to develop a cybersecurity incident response plan",
           "performance_criteria": [
             {
               "pc_code": "2.1",
-              "description": "Plan the integration of threat intelligence platforms (TIPs)."
+              "description": "Explain why it is important to maintain an up-to-date cybersecurity incident log"
             },
             {
               "pc_code": "2.2",
-              "description": "Implement automated threat detection mechanisms."
+              "description": "Explain the steps to be included within a cybersecurity incident response plan"
             },
             {
               "pc_code": "2.3",
-              "description": "Compare and select intrusion detection systems."
+              "description": "Explain why it is important to have a cybersecurity incident response plan"
             },
             {
               "pc_code": "2.4",
-              "description": "Operate threat intelligence feeds for real-time monitoring."
-            },
-            {
-              "pc_code": "2.5",
-              "description": "Evaluate the effectiveness of implemented detection systems."
+              "description": "Develop a cybersecurity incident response plan for an organisation"
             }
           ]
         },
         {
           "lo_num": "3",
-          "description": "Response to cyber incidents",
+          "description": "Be able to develop an incident postmortem report",
           "performance_criteria": [
             {
               "pc_code": "3.1",
-              "description": "Ensure proper incident response procedures are followed."
+              "description": "Explain what is meant by incident postmortem"
             },
             {
               "pc_code": "3.2",
-              "description": "Analyse cyber incident reports for root causes."
+              "description": "Explain the structure of an incident postmortem"
             },
             {
               "pc_code": "3.3",
-              "description": "Investigate compromised systems and contain threats."
+              "description": "Explain the importance of the following when carrying out an incident postmortem: \u2212 Integrity \u2212 Rigour \u2212 Discipline"
             },
             {
               "pc_code": "3.4",
-              "description": "Develop forensic investigation reports."
+              "description": "Create a postmortem report of an incident"
             },
             {
               "pc_code": "3.5",
-              "description": "Support recovery efforts after incidents."
-            }
-          ]
-        },
-        {
-          "lo_num": "4",
-          "description": "Supervise proactive threat hunting",
-          "performance_criteria": [
-            {
-              "pc_code": "4.1",
-              "description": "Plan proactive threat-hunting activities."
-            },
-            {
-              "pc_code": "4.2",
-              "description": "Investigate malicious activity (systems for hidden )."
-            },
-            {
-              "pc_code": "4.3",
-              "description": "Create strategies for continuous threat-hunting improvements."
-            },
-            {
-              "pc_code": "4.4",
-              "description": "Supervise junior security analysts during threat-hunting missions."
-            },
-            {
-              "pc_code": "4.5",
-              "description": "Evaluate and interpret the results of threat-hunting exercises."
+              "description": "Analyse report and make recommendations based on the findings"
             }
           ]
         }
       ]
     },
     {
-      "code": "IS/CCE/008/L5",
-      "title": "Incident Management and Forensic Investigation",
+      "code": "IS/CCA/008/L3",
+      "title": "Understand Regulations, Standards, Policies and",
       "learning_outcomes": [
         {
           "lo_num": "1",
-          "description": "Develop incident response procedures",
+          "description": "Know regulations and polices relating to cybersecurity",
           "performance_criteria": [
             {
               "pc_code": "1.1",
-              "description": "Create incident response protocols and escalation paths."
+              "description": "Explain the importance of regulations and, policies in cybersecurity"
             },
             {
               "pc_code": "1.2",
-              "description": "Ensure incident response plans comply with regulatory requirements."
+              "description": "Explain of various regulations in cybersecurity"
             },
             {
               "pc_code": "1.3",
-              "description": "Develop communication plans for stakeholders during incidents."
+              "description": "Explain the application of different regulations"
             },
             {
               "pc_code": "1.4",
-              "description": "Select appropriate tools for incident management."
-            },
-            {
-              "pc_code": "1.5",
-              "description": "Initiate drills to test incident response readiness."
+              "description": "Explain different policies in an organization"
             }
           ]
         },
         {
           "lo_num": "2",
-          "description": "Investigate security incidents and breaches",
+          "description": "Know information security standards and frameworks",
           "performance_criteria": [
             {
               "pc_code": "2.1",
-              "description": "Examine logs and digital evidence for signs of compromise."
+              "description": "Identify ISO standards related to cybersecurity"
             },
             {
               "pc_code": "2.2",
-              "description": "Develop root cause analysis reports."
+              "description": "Demonstrate the understanding of cybersecurity frameworks"
             },
             {
               "pc_code": "2.3",
-              "description": "Support collaboration with external cybersecurity teams during incidents."
+              "description": "Demonstrate how ISO standards are used to support cybersecurity"
             },
             {
               "pc_code": "2.4",
-              "description": "Obtained fornensic evidence that complies with legal requirements."
-            },
-            {
-              "pc_code": "2.5",
-              "description": "Investigate the scope of data loss during breaches"
+              "description": "Describe the usefulness of the ISO/IEC 27001 family in cybersecurity"
             }
           ]
         },
         {
           "lo_num": "3",
-          "description": "Supervise post- incident recovery efforts",
+          "description": "Know the usefulness of configuration guides",
           "performance_criteria": [
             {
               "pc_code": "3.1",
-              "description": "Evaluate the organization\u2019s readiness for post-incident recovery."
+              "description": "Explain what benchmarks and configuration guides are used for"
             },
             {
               "pc_code": "3.2",
-              "description": "Create plans for restoring affected systems and services."
+              "description": "Demonstrate the understanding of various types of configurations guides"
             },
             {
               "pc_code": "3.3",
-              "description": "Ensure continuity and disaster recovery procedures are in place."
+              "description": "Give two examples each of software and hardware configuration guides content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCA/009/L3",
+      "title": "Attack Vectors",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Common Attack Vectors",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define attack vectors"
             },
             {
-              "pc_code": "3.4",
-              "description": "Supervise the implementation of lessons learned from incidents."
+              "pc_code": "1.2",
+              "description": "Identify different attack vectors"
             },
             {
-              "pc_code": "3.5",
-              "description": "Support the update of incident response plans post-recovery."
+              "pc_code": "1.3",
+              "description": "Describe the methods used in each attack vector"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain the potential impacts of each attack vector"
             }
           ]
         },
         {
-          "lo_num": "4",
-          "description": "Evaluate incident management processes ",
+          "lo_num": "2",
+          "description": "Analyse the Impact of Attack Vectors on the CIA Triad",
           "performance_criteria": [
             {
-              "pc_code": "4.1",
-              "description": "Interpret post-incident reports to identify process improvements."
+              "pc_code": "2.1",
+              "description": "Identify the impact of attack vectors on data integrity"
             },
             {
-              "pc_code": "4.2",
-              "description": "Compare different incident management frameworks."
+              "pc_code": "2.2",
+              "description": "Evaluate the impact of attack vectors on data confidentiality"
             },
             {
-              "pc_code": "4.3",
-              "description": "Ensure alignment between incident management and organizational strategy."
+              "pc_code": "2.3",
+              "description": "Assess the effect of attack vectors on data availability"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Countermeasures for Common Attack Vectors",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify common defence mechanisms for attack vectors"
             },
             {
-              "pc_code": "4.4",
-              "description": "Assess the effectiveness of current incident management procedures."
+              "pc_code": "3.2",
+              "description": "Explain best practices to prevent social engineering attacks"
             },
             {
-              "pc_code": "4.5",
-              "description": "Provied recommendations for improving incident response capabilities"
+              "pc_code": "3.3",
+              "description": "Monitor system logs for indicators of attack vectors"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Detect cyber security attacks"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Respond to 3.4 by following incident response procedures"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IS/CCA/010/L3",
+      "title": "Ethical Behaviour in Cybersecurity",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know ethical theories and frameworks in the context of cybersecurity",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain ethical theories in cyber securities"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Analyse cybersecurity cases in the context of ethical frameworks,"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the ethical issues involved in 1.2"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain ethical approaches in resolving conflicts in cybersecurity."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Apply ethical (Procedures) to make informed decisions in hypothetical cybersecurity scenarios."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Justify the approach based on ethical theories."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Evaluate the legal and social responsibilities of cybersecurity professionals",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify laws and regulations that govern ethical behaviour in cybersecurity"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the ethical implications of data breaches, cyberattacks, and surveillance on society and individual privacy"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the role of professional codes of ethics, such as those from (ISC)\u00b2, ISACA, or IEEE, in guiding cybersecurity practices"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Evaluate the social responsibilities of cybersecurity professionals, including balancing security needs with the rights of individuals"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Promote ethical culture and awareness within cybersecurity teams and organizations.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify and address potential ethical vulnerabilities within organizational cybersecurity policies and practices"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Evaluate potential consequences of cybersecurity actions on stakeholders"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Create a personal code of ethics that reflects both professional standards and personal values"
             }
           ]
         }

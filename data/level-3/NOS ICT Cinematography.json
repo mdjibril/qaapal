@@ -1,0 +1,1146 @@
+{
+  "trade_name": "NOS ICT Cinematography",
+  "level": 3,
+  "units": [
+    {
+      "code": "ICT/CIN/001/L3",
+      "title": "Occupational Health and Safety",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Workplace Health and Safety Regulations",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain key OHS legislation and regulations relevant to Cinematography."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the roles and responsibilities of individuals and organizations in maintaining a safe work environment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the process for reporting health and safety risks and incidents."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Identify Workplace Hazards and Implement Control Measures",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify common hazards in work environments: \u2022 Electrical \u2022 Ergonomic \u2022 Data-related risks"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Assess the severity and likelihood of potential hazards in specific cinematography tasks."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Implement appropriate control measures, such as safe cabling practices, ergonomic workstation setup, and electrical safety protocols."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply Emergency Procedures and First Aid in the Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Demonstrate the correct procedure for responding to workplace emergencies, such as electrical fires or equipment malfunctions."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Perform basic first aid techniques, including treating minor injuries and using first aid equipment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Communicate effectively with emergency services and other relevant personnel during a workplace incident."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Apply Safety and Ethical Standards",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Follow industry safety protocols."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Respect the intellectual property rights of others."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Handle equipment safely."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Ensure ethical portrayal in visual storytelling."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Maintain a professional working environment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CIN/002/L3",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Roles and Responsibilities within a Team",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the different roles and functions within an Cinematography team"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the key responsibilities and contributions of each team member."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Recognize the importance of each role in achieving the team's objectives."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Foster Positive Working Relationships within a Team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate techniques for effective interpersonal communication and conflict resolution in a team environment."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Show the ability to provide constructive feedback and actively listen to others' contributions"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Promote inclusivity and collaboration among team members to ensure participation and engagement from all."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Contribute to Team Problem-Solving and Decision-Making",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Participate in group discussions to identify and analyse cinematography-related problems."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Suggest innovative solutions and support team decision-making processes."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Evaluate the effectiveness of team decisions and propose improvements where necessary."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CIN/003/L3",
+      "title": "Communication skills",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Communicate Technical Information Clearly and Accurately",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain Cinematography concepts, procedures, and solutions in a manner appropriate to the audience, whether technical or non-technical."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use industry-standard terminology correctly when describing technical processes"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Adapt communication methods to suit the context, such as written reports, emails, or verbal presentations."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Utilize Digital Communication Tools Effectively",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use digital tools for communication, such as email, messaging platforms, and collaboration software (e.g., Slack, Teams)."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Adhere to best practices for professional digital communication, including email etiquette and secure file sharing."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use collaborative tools to share and receive feedback on documents, code, or project updates."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Listen and Respond Appropriately in a Professional Context",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Demonstrate active listening skills during team discussions or client meetings."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Respond to questions, concerns, and feedback clearly and effectively."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Clarify misunderstandings and summarize discussions to ensure mutual understanding."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CIN/004/L3",
+      "title": "Fundamentals of Cinematography",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand basic cinematography concepts",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain of framing, composition, and camera angles."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the impact of different camera movements on storytelling."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify various types of lenses and their effects on the image"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Analyse the use of color and lighting in cinematography."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Create compelling scenes in storytelling"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Master Camera Operations",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Set up a camera."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Adjust camera settings."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Handle camera movements."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Troubleshoot camera issues."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Maintain camera equipment."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Develop Storytelling Skills",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use cinematography to enhance emotion."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Balance natural and artificial light sources for optimal results."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Evaluate cinematography choices."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Integrate sound and visual elements to support the narrative of choices in 3.3."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Apply Post-Production Techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use industry-standard software for video editing and post-production"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Perform colour correction and grading to enhance visual quality"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Implement techniques for adding visual effects and transitions."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Synchronize audio and video tracks"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Export final projects in different formats and platforms"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CIN/005/L3",
+      "title": "Camera Techniques",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Camera Types and Functions",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe the features of camera types."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the functions of camera types in shooting scenarios."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Compare and contrast the capabilities of camera types."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe of camera specifications and their impact on image quality."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Select the appropriate camera type for specific cinematography task"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Master Camera Settings",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Adjust camera settings such as focus, exposure, white balance, and ISO."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain the impact of different settings on the final image."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate changes in camera settings."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Troubleshoot common issues related to camera settings."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Maintain optimal camera settings throughout a shoot."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Implement Camera Movements",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Execute smooth panning, tilting, and tracking shots."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use tripods, dollies, and stabilisers"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Execute complex camera movements."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Adjust camera movements to match the narrative flow."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Ensure camera movements are steady and controlled."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Utilise Advanced Focus Techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Apply techniques such as rack focus and depth of field."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain the creative use of focus in storytelling."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Demonstrate the ability to achieve sharp focus on moving subjects."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use focus to guide the viewer's attention."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Troubleshoot focus issues during a shoot."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Apply Composition Principles",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Use the rule of thirds, leading lines, and framing to compose shots."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain how composition affects the visual impact of a scene."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Create visually balanced and dynamic shots."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Adjust composition to enhance the narrative."
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Evaluate the effectiveness of different compositions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CIN/006/L3",
+      "title": "Lighting for Cinematography",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the principles of light and shadow in cinematography",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Control shadows to enhance visual storytelling."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use various lighting techniques to manipulate light and shadow"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Analyse the impact of light and shadow on the mood and tone of a scene."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Apply principles of light and shadow to different genres and styles of cinematography."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Evaluate the effectiveness of light and shadow in completed film projects."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Master the use of key, fill, and backlighting techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Balance key, fill, and backlighting to achieve desired lighting effects."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Set up shooting scenarios."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Adjust key, fill, and backlights in various shooting scenarios."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Analyse the role of key, fill, and backlighting in creating depth and dimension in a scene."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Experiment with different ratios of key, fill, and backlighting to achieve specific visual outcomes."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Evaluate the impact of key, fill, and backlighting on the overall composition of a shot"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Use natural and artificial light sources.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Integrate natural and artificial light sources in shooting environments."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Modify natural light using reflectors, diffusers, and other tools."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Analyse the characteristics of artificial light sources"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the applications."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Combine natural and artificial light to achieve desired lighting effects."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Evaluate the effectiveness of natural and artificial light sources in different shooting conditions."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know color temperature and white balance adjustments.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Adjust color temperature and white balance to maintain consistent and accurate colour representation."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use color temperature and white balance settings on cameras."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Analyse the impact of colour temperature and white balance on the mood and tone of a scene."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use different colour temperatures to achieve specific visual effects."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Evaluate the effectiveness of colour temperature and white balance adjustments in completed film projects."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Use lighting to convey mood and atmosphere.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Create lighting setups that effectively convey the intended mood and atmosphere of a scene."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Use lighting to enhance the emotional impact of a scene."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Analyze the role of lighting in establishing the visual style of a film."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Use different lighting techniques to evoke specific emotions and atmospheres."
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Evaluate the effectiveness of lighting in conveying mood and atmosphere in completed film projects."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CIN/007/L3",
+      "title": "Post-Production and Editing",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the fundamentals of video editing software.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Demonstrate the use of key features of video editing software."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Organize media files efficiently within the software."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Apply basic editing techniques such as cutting, trimming, and sequencing."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Utilize keyboard shortcuts to enhance editing speed and efficiency."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Export edited videos in various formats suitable for different platforms."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know color correction and grading.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Adjust color balance to achieve natural-looking footage."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Apply color grading techniques to enhance the visual style of a video."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use props and backgrounds to enhance the portrait."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Match color across different shots to maintain visual consistency."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Evaluate the impact of color correction and grading on the overall mood of the video."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Master the art of sound editing and mixing",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Sync audio with video"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply noise reduction techniques to improve audio quality."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Balance audio levels to ensure clarity and consistency."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Use sound effects and music to enhance the storytelling."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Export audio in formats suitable for various distribution channels."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know visual effects and compositing.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Apply basic visual effects to enhance video content."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use compositing techniques to combine multiple elements seamlessly."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Stabilize footage to correct camera movements."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Integrate motion graphics into video projects."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Evaluate the effectiveness of visual effects in enhancing the narrative."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know postproduction process",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Manage the post-production workflow"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Develop a structured workflow for managing post-production tasks."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Collaborate with other team members during post-production."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Maintain organized project files and backups."
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Adhere to deadlines and deliverables in a professional manner."
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Evaluate the efficiency of the post-production workflow and make improvements as needed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CIN/008/L3",
+      "title": "Sound for Cinematography",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the fundamentals of sound recording for film.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Demonstrate the use of types of microphones and recording equipment."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Setup sound recording equipment on set."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Capture clear and high-quality dialogue and ambient sounds."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Troubleshoot common sound recording issues on set."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Maintain sound recording equipment."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know sound design and effects.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Integrate sound effects that enhance the visual storytelling."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use reflectors, diffusers, and other tools to modify natural light."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Layer multiple sound elements to create a cohesive soundscape."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Analyse the impact of sound effects on the mood and atmosphere of a scene."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Evaluate the effectiveness of sound design in completed film projects."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know dialogue editing and ADR (Automated Dialogue Replacement).",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Edit dialogue tracks to ensure clarity and consistency."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Synchronize ADR with on-screen lip movements accurately."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Apply noise reduction techniques to improve dialogue quality."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Balance dialogue levels with other sound elements in the mix."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Evaluate the effectiveness of dialogue editing and ADR in enhancing the narrative."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Master the art of sound mixing",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Balance audio levels to ensure clarity and consistency across all sound elements."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Apply equalization, compression, and other audio processing techniques."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Create a final sound mix that supports the visual storytelling."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use mixing software and hardware to achieve professional-quality sound."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Evaluate the effectiveness of the final sound mix in completed film projects."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Use sound to convey mood and atmosphere.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Create soundscapes that convey the intended mood and atmosphere of a scene."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Use music and ambient sounds to enhance the emotional impact of a scene."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Analyze the role of sound in establishing the visual style of a film."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Demonstrate sound techniques to evoke specific emotions and atmospheres."
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Evaluate the effectiveness of sound in conveying mood and atmosphere in completed film projects."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CIN/009/L3",
+      "title": "Post-Production Techniques",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Post-production Workflow",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the stages of post-production: \u2022 Importing \u2022 Editing \u2022 VFX \u2022 Colour grading \u2022 Sound editing \u2022 Exporting"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the roles and responsibilities of the post-production team."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Create a post-production schedule."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use appropriate software for different stages of post-production."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Troubleshoot common issues encountered during the post-production process."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Edit Footage",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use editing software to import and organize footage."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform cuts, transitions, and sequencing to create a coherent narrative."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Apply techniques to enhance pacing and storytelling."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Utilize keyboard shortcuts and editing tools to improve efficiency."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Export edited footage in various formats for different platforms."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Apply Colour Correction and Grading.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Adjust brightness, contrast, and saturation to achieve desired visual effects."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use colour grading techniques to enhance the mood and tone of the footage."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Match colour across different shots to ensure visual continuity."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Utilize colour correction tools to fix exposure and white balance issues."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Apply industry-standard colour grading workflows."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Add Visual Effects (VFX)",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Integrate basic visual effects, such as titles, transitions, and animations, into the footage."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use software tools to create and apply visual effects."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Integrate visual effects to enhance the narrative."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Troubleshoot common issues related to visual effects integration."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Evaluate the impact of visual effects on the overall production quality."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know Sound Editing and Mixing.",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Edit dialogue, sound effects, and music to synchronize with the visual elements."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Apply techniques to clean up audio and remove unwanted noise."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Mix multiple audio tracks to achieve a balanced and cohesive soundscape."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Use software tools to add audio effects"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Ensure that the final audio mix enhances the overall storytelling and viewing experience."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CIN/010/L3",
+      "title": "Drone and Cinematography",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Basics of Drone Cinematography.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the history and evolution of drone technology"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify types of drones used in cinematography"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the fundamental principles of aerial photography and videography"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe the components and functions of a drone"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Demonstrate basic drone flight mechanics."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Master Drone Operation and Safety",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Perform pre-flight inspections and safety checks"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Operate a drone safely in various environments and conditions"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Follow local and national regulations for drone usage"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Implement emergency procedures for drone operation"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Maintain a flight log and document operational data"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Capture High-Quality Aerial Footage",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Execute aerial shots for different scenes"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Adjust camera settings to optimize image quality"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use gimbal and stabilization techniques to achieve smooth footage"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate angles and movements for dynamic shots"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Review captured footage for quality and improvement"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Apply Post-Production Techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Edit drone footage using professional software"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Perform color grading to enhance visual appeal"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Integrate drone footage with other video elements"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Add special effects and transitions to drone shots"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Export final projects in appropriate formats for distribution"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Demonstrate Professionalism in Cinematography",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Communicate effectively with team members and clients"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Show initiative in learning new skills and technologies"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Maintain punctuality and reliability in project timelines"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Adhere to ethical standards and best practices"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Provide constructive feedback during collaborative projects."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

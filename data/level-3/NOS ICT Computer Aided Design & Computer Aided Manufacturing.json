@@ -1,0 +1,928 @@
+{
+  "trade_name": "NOS ICT Computer Aided Design & Computer Aided Manufacturing",
+  "level": 3,
+  "units": [
+    {
+      "code": "ICT/CDM/001/L3",
+      "title": "OCCUPATIONAL HEALTH AND SAFETY",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand Workplace Health and Safety Regulations",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain key OHS legislation and regulations relevant to the IT sector."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the roles and responsibilities of individuals and organizations in maintaining a safe work environment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Describe the process for reporting health and safety risks and incidents."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Workplace Hazards and Implement Control Measures",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify common hazards in IT work environments, including electrical, ergonomic, and data-related risks"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Assess the severity and likelihood of potential hazards in specific IT tasks."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Implement appropriate control measures, such as safe cabling practices, ergonomic workstation setup, and electrical safety protocols."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know Emergency Procedures and First Aid in the Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Demonstrate the correct procedure for responding to workplace emergencies, such as electrical fires or equipment malfunctions."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Perform basic first aid techniques, including treating minor injuries and using first aid equipment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Communicate effectively with emergency services and other relevant personnel during a workplace incident."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CDM/002/L3",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the Roles and Responsibilities within a Team",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the different roles and functions within an IT team (e.g., network engineers, system administrators, software developers)."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the key responsibilities and contributions of each team member."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Recognize the importance of each role in achieving the team's objectives."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know Positive Working Relationships within a Team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate techniques for effective interpersonal communication and conflict resolution in a team environment."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Show the ability to provide constructive feedback and actively listen to others' contributions"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Promote inclusivity and collaboration among team members to ensure participation and engagement from all."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Contribute to Team Problem-Solving and Decision-Making",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Participate in group discussions to identify and analyse IT-related problems."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Suggest innovative solutions and support team decision-making processes."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Evaluate the effectiveness of team decisions and propose improvements where necessary."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CDM/003/L3",
+      "title": "Communication",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Communicate Technical Information Clearly and Accurately",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain IT concepts, procedures, and solutions in a manner appropriate to the audience, whether technical or non-technical."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use industry-standard terminology correctly when describing technical processes"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Adapt communication methods to suit the context, such as written reports, emails, or verbal presentations."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Utilize Digital Communication Tools Effectively",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate proficiency in using digital tools for communication, such as email, messaging platforms, and collaboration software (e.g., Slack, Teams)."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Adhere to best practices for professional digital communication, including email etiquette and secure file sharing."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use collaborative tools to share and receive feedback on documents, code, or project updates."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Listen and Respond Appropriately in a Professional Context",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Demonstrate active listening skills during team discussions or client meetings."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Respond to questions, concerns, and feedback clearly and effectively."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Clarify misunderstandings and summarize discussions to ensure mutual understanding."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CDM/004/L3",
+      "title": "FUNDAMENTALS OF COMPUTER AIDED DESIGN",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know Computer Design and Drafting Process.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain advantages and disadvantages of computer in design process"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the evolution of CAD software."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the Principles of Operation and system requirements of Auto CADD."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand the link between CAD and CAM",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Design to Manufacturing Workflow"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain Data Integration"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain Simulation and Optimisation"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain Automation and Efficiency"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know popular CAD software.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify popular CAD software"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Install CAD software."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Navigate CAD interface and basic work space."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand the principles, system requirements and functionalities of CAD software.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain principles of CAD software"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain Operational Capabilities of CAD Software"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain System Requirements for CAD Software."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify different input methods in CAD"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know icons on CAD interface",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Prepare the size of the drawing field (work space)."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Use HELP Menu in solving CAD problems"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Identify draw panel and modification panel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CDM/005/L3",
+      "title": "BASIC 2D DRAWING AND DRAFTING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know tools in draw panel.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify basic 2D shapes"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Work with layers, line types, and dimensions."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Construct polygons and squares to given dimensions"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know tools in modify panel",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Draw polar and rectangular arrays of any given 2D shape with array tool."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use offset Command to produce multiple items."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate how to Erase objects"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Demonstrate how to Trim objects"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Demonstrate how to fillet and chamfer angles"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know annotation tools",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Write letters and numbers on drawings"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Perform dimensioning of simple 2D shapes"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Add tolerances to dimensions."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Create linear, angular and aligned dimensions."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Create hatch on any existing work"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know simple 2D editing tools",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Use trim tool for editing simple 2D shapes"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use extend tool for editing simple 2D shapes"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use mirror and array tools for editing simple 2D shapes."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Understand plot, and print in CAD",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain Plotting and Printing in CAD."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Set up plot environment."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Configure paper size and layout"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Perform task involving Plot Styles and Line weights"
+            },
+            {
+              "pc_code": "5.5",
+              "description": "Demonstrate how to Scale Drawings for Plotting"
+            },
+            {
+              "pc_code": "5.6",
+              "description": "Create basic Layouts and Viewports"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CDM/006/L3",
+      "title": "ADVANCED 2D DRAWING TECHNIQUES",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Know reusable elements in drawings.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain parametric constraints."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Create basic blocks"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Demonstrate how to manage block attributes and parameters."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use blocks in drawings"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Perform editing and updating of blocks"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Understand coordinate systems.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain Coordinate Systems in CAD"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain World Coordinate System (WCS)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain User Coordinate System (UCS)"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use coordinate entry methods."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Perform task with Snap, grid, and object snap (OSNAP) tools."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know drawing presentation and printing.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Explain drawing preparation for presentation"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use of Layouts and Viewports"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Add Title Blocks and Borders to drawings."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate Annotation for Presentation Drawings"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Use Layers for Presentation Control"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Set up Plot Styles and Plot Configurations."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Explore advanced editing techniques for complex drawings.",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain advanced editing in CAD."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Perform task on advanced selection techniques."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Perform task on advanced modify commands."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use Advance Fillet, Chamfer, and Blend Commands on existing drawings."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Use Splines, Polylines, and Curve Editing in 2D drawings."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Apply 2D drawing techniques to real-world scenarios",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Draw a 2D floor plan showing the layout of rooms, furniture placement, and door openings in a house."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Draw a detailed 2D machine component showing exact measurements, tolerances, and materials."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Sketch a new smartphone design showing front, back, and side views with annotations for buttons and features."
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Develop a 2D site plan for a park showing paths, playgrounds, and green spaces."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CDM/007/L3",
+      "title": "3D MODELLING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand the basic principles and concepts of 3D modelling.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Demonstrate how to move an object along the X, Y, Z-axis."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use geometry types: Solid, Surface, and Mesh Modeling for modeling objects."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Use a cylinder as a base for modeling a column or a sphere."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Perform task involving Transformations: Move, Rotate, Scale."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know 3D modelling tools in CAD",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use extrude tool to converts 2D shapes into 3D solids."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Create a 3D object by rotating a 2D shape around a specified axis."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Create a 3D object by sweeping a 2D profile along a specified path."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use loft tool to create a 3D solid by blending multiple 2D shapes positioned on different planes."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Modify the height of walls or create openings in solids using the press-pull tool."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know 3D basic modelling tools.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Create basic 3D shapes with primitives."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Create 3D Shapes with extrusion tool."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Create circular objects with revolve tool."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Modify shapes with Boolean operations."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Create simple assemblies combining multiple shapes, to build more complex models"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CDM/008/L3",
+      "title": "FUNDAMENTALS OF COMPUTER AIDED MANUFACTURING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand CAM in modern manufacturing.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define CAM"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the role of CAM in the design-to-manufacturing process."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Differentiate between CAD and CAM"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain Computer Integrated Manufacturing (CIM)."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain manufacturing processes that benefit from CAM: \u2022 Milling \u2022 Turning \u2022 Laser cutting, etc."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Explain real-world applications of CAM in industries: \u2022 Automotive, \u2022 Aerospace, \u2022 Consumer goods, etc."
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Identify the common CAM software\u2019s (e.g., Mastercam, Fusion 360, Solid CAM)."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Know CNC Milling Machines \u2013 Setup and Operation.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Apply safety protocols when working with CNC machines."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Explain milling process, tool types, and machine setup."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate proper mounting of cutting tools, setting tool offsets, and zeroing the machine."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Carryout a step-by-step setup of a CNC milling machine,"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Perform basic milling operations by writing G & M codes to create slots and pockets."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Perform changing tools and recalibration of machine for different operations."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Know CNC Lathes and Turning Centres.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Set up a CNC lathe, including workpiece mounting, tool selection, and setting tool offsets."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Create basic cylindrical component from writing G & M codes, to perform turning, facing, and threading operations."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use threading tools to cut internal and external threads on the lathe."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Understand CNC Routers \u2013 Applications and Operations",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Set up a CNC router for cutting a plywood sheet: \u2022 Securing the material \u2022 Calibrating the machine."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use pre-programmed toolpaths to cut a simple shape or sign."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Test cutting different materials (wood, plastic, aluminum) to understand machine adjustments."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Know CNC Precision Cutting Techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Cut a simple metal shape using a plasma cutter."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Engrave a small design on acrylic or wood with a laser cutter."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Adjust machine settings for different material thicknesses and types."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Know CNC Machine Maintenance and Troubleshooting.",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Resolve common CNC machine errors: \u2022 Tool misalignment, \u2022 Programming errors"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Perform calibration checks to ensure machine accuracy."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Perform basic maintenance on a CNC machine."
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Diagnose a simulated machine error during operation."
+            },
+            {
+              "pc_code": "6.5",
+              "description": "Fix machine faults from diagnoses"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ICT/CDM/009/L3",
+      "title": "3D PRINTING",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Understand fundamental of 3D Printing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify 3D printing software"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Create 3D CAD model for 3D printing"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Prepare the model for transfer to the 3D printer"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Verify the model prepared"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Perform printing of the model"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Develop CAD Skills for 3D Printing",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Create 3D models using CAD software,"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate how to design parts that are optimised for additive manufacturing."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Perform task on the entire 3D printing process, from model creation, slicing, printer setup and operation."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Demonstrate how to adjust print settings"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Understand Material Properties and Selection",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify common 3D printing materials"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the impact of material choice on print quality, strength, flexibility, and end-use performance."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Carryout task based on material selection"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "Know Post-Processing Techniques",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain sanding as a post-processing method."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Perform basic post-processing methods."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Identify safety considerations and practices when handling 3D printed parts and post-processing materials."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "Develop Problem-Solving Skills for 3D Printing Challenges",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify common 3D printing issues."
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Troubleshoot common 3D printing issues, such as warping, layer adhesion problems, and print failures."
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Solve problems related to complex prints or challenging geometries."
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "Understand the Role of 3D Printing in Industry",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Explain applications of 3D printing in various sectors."
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Identify the future trends of 3D printing, including advancements in multi-material printing, bioprinting, and large-scale applications."
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Explain industry sectors utilising 3D printing"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Explain current challenges, including material limitations, print speed, quality control, and the need for post-processing."
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "Know Emerging Trends and the Future of 3D Printing",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Explain cutting-edge developments like multi-material printing, large-scale 3D printing, and the use of AI and machine learning to optimise printing processes."
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Explain the role of 3D printing in sustainable manufacturing."
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Explain smart materials and 4D printing as an emerging trend."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
