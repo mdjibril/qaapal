@@ -52,12 +52,15 @@ Return JSON only, with this exact top-level shape:
 {{"items": [{{"unit_code": "...", "lo_num": "...", "pc_code": "...", "question_type": "...", "question": "...", "weight": 5, "ideal_answer": ["..."], "marking_scheme": ["..." ]}}]}}
 
 Allowed question_type values: {', '.join(QUESTION_TYPES)}.
-Use one question per unit_code/lo_num/pc_code identity. Include the exact unit_code
-and lo_num from the source for every item. Match the selected level: foundational for Level 2,
-analytical for Level 3, and supervisory, evaluative, or design-focused for higher
-levels where the criterion supports it. Questions must be practical and specific
-to the trade. Ideal answers must be concrete, and marking_scheme must list marks
-that add up to weight. Never invent, omit, or duplicate a pc_code.
+Set question_type to exactly one of those allowed values. Do not use level descriptions
+such as "analytical", "foundational", "supervisory", "evaluative", or "design-focused"
+as the question_type value. Use one question per unit_code/lo_num/pc_code identity.
+Include the exact unit_code and lo_num from the source for every item. Make the question
+content level-appropriate: foundational for Level 2, analytical for Level 3, and
+supervisory, evaluative, or design-focused for higher levels where the criterion supports
+it. Questions must be practical and specific to the trade. Ideal answers must be concrete,
+and marking_scheme must list marks that add up to weight. Never invent, omit, or duplicate
+a pc_code.
 
 Source performance criteria:
 {source}
