@@ -74,6 +74,12 @@ def seed_nos_data():
         type=int,
         help="Seed only files for this NOS level.",
     )
+    parser.add_argument(
+        "--delete-missing",
+        dest="delete_missing",
+        action="store_true",
+        help="Delete DB records under each trade level that are no longer present in the JSON file.",
+    )
     args, _ = parser.parse_known_args()
 
     client = get_admin_supabase()
@@ -100,6 +106,13 @@ def seed_nos_data():
         "units": 0,
         "learning_outcomes": 0,
         "performance_criteria": 0,
+        "trade_levels_updated": 0,
+        "units_updated": 0,
+        "learning_outcomes_updated": 0,
+        "performance_criteria_updated": 0,
+        "units_deleted": 0,
+        "learning_outcomes_deleted": 0,
+        "performance_criteria_deleted": 0,
     }
     matched_files = 0
     trade_filter = args.trade_name.strip().lower() if args.trade_name else None
@@ -156,7 +169,19 @@ def seed_nos_data():
             )
             if trade_level_res.data:
                 trade_level_id = trade_level_res.data[0]["id"]
-                print(f"✅ Trade level '{level_display_name}' verified (ID: {trade_level_id})")
+                existing_level = trade_level_res.data[0]
+                level_updates = {}
+                if existing_level.get("display_name") != level_display_name:
+                    level_updates["display_name"] = level_display_name
+                source_file = os.path.basename(file_path)
+                if existing_level.get("source_file") != source_file:
+                    level_updates["source_file"] = source_file
+                if level_updates:
+                    client.table("trade_levels").update(level_updates).eq("id", trade_level_id).execute()
+                    stats["trade_levels_updated"] += 1
+                    print(f"🔄 Updated trade level '{level_display_name}'")
+                else:
+                    print(f"✅ Trade level '{level_display_name}' verified (ID: {trade_level_id})")
             else:
                 print(f"➕ Inserting Trade Level: {level_display_name}")
                 ins_trade_level = client.table("trade_levels").insert({
@@ -169,6 +194,7 @@ def seed_nos_data():
                 stats["trade_levels"] += 1
 
             # 2. Handle Units
+            seen_unit_ids = set()
             for unit in units:
                 unit_code = unit.get("code")
                 unit_title = unit.get("title")
@@ -182,6 +208,9 @@ def seed_nos_data():
                 )
                 if unit_res.data:
                     unit_id = unit_res.data[0]['id']
+                    if unit_title and unit_res.data[0].get("title") != unit_title:
+                        client.table("units").update({"title": unit_title}).eq("id", unit_id).execute()
+                        stats["units_updated"] += 1
                 else:
                     print(f"  + Unit: {unit_code}")
                     ins_unit = client.table("units").insert({
@@ -192,6 +221,13 @@ def seed_nos_data():
                     }).execute()
                     unit_id = ins_unit.data[0]['id']
                     stats["units"] += 1
+                seen_unit_ids.add(unit_id)
+
+                existing_lo_ids = set()
+                if args.delete_missing and unit_res.data:
+                    existing_lo_rows = client.table("learning_outcomes").select("id").eq("unit_id", unit_id).execute().data
+                    existing_lo_ids = {row["id"] for row in existing_lo_rows}
+                seen_lo_ids = set()
 
                 # 3. Handle Learning Outcomes
                 for lo in unit.get("learning_outcomes", []):
@@ -201,6 +237,9 @@ def seed_nos_data():
                     lo_res = client.table("learning_outcomes").select("id").eq("unit_id", unit_id).eq("lo_num", lo_num).execute()
                     if lo_res.data:
                         lo_id = lo_res.data[0]['id']
+                        if lo_desc and lo_res.data[0].get("description") != lo_desc:
+                            client.table("learning_outcomes").update({"description": lo_desc}).eq("id", lo_id).execute()
+                            stats["learning_outcomes_updated"] += 1
                     else:
                         ins_lo = client.table("learning_outcomes").insert({
                             "unit_id": unit_id,
@@ -209,6 +248,13 @@ def seed_nos_data():
                         }).execute()
                         lo_id = ins_lo.data[0]['id']
                         stats["learning_outcomes"] += 1
+                    seen_lo_ids.add(lo_id)
+
+                    existing_pc_ids = set()
+                    if args.delete_missing and lo_res.data:
+                        existing_pc_rows = client.table("performance_criteria").select("id").eq("lo_id", lo_id).execute().data
+                        existing_pc_ids = {row["id"] for row in existing_pc_rows}
+                    seen_pc_ids = set()
 
                     # 4. Handle Performance Criteria
                     for pc in lo.get("performance_criteria", []):
@@ -216,9 +262,33 @@ def seed_nos_data():
                         pc_desc = pc.get("description")
                         
                         pc_check = client.table("performance_criteria").select("id").eq("lo_id", lo_id).eq("pc_code", pc_code).execute()
-                        if not pc_check.data:
-                            client.table("performance_criteria").insert({"lo_id": lo_id, "pc_code": pc_code, "description": pc_desc}).execute()
+                        if pc_check.data:
+                            pc_id = pc_check.data[0]["id"]
+                            if pc_desc and pc_check.data[0].get("description") != pc_desc:
+                                client.table("performance_criteria").update({"description": pc_desc}).eq("id", pc_id).execute()
+                                stats["performance_criteria_updated"] += 1
+                        else:
+                            ins_pc = client.table("performance_criteria").insert({"lo_id": lo_id, "pc_code": pc_code, "description": pc_desc}).execute()
+                            pc_id = ins_pc.data[0]["id"]
                             stats["performance_criteria"] += 1
+                        seen_pc_ids.add(pc_id)
+
+                    if args.delete_missing:
+                        for stale_pc_id in existing_pc_ids - seen_pc_ids:
+                            client.table("performance_criteria").delete().eq("id", stale_pc_id).execute()
+                            stats["performance_criteria_deleted"] += 1
+
+                if args.delete_missing:
+                    for stale_lo_id in existing_lo_ids - seen_lo_ids:
+                        client.table("learning_outcomes").delete().eq("id", stale_lo_id).execute()
+                        stats["learning_outcomes_deleted"] += 1
+
+            if args.delete_missing:
+                current_units = client.table("units").select("id").eq("trade_level_id", trade_level_id).execute().data
+                current_unit_ids = {row["id"] for row in current_units}
+                for stale_unit_id in current_unit_ids - seen_unit_ids:
+                    client.table("units").delete().eq("id", stale_unit_id).execute()
+                    stats["units_deleted"] += 1
         
         except Exception as e:
             print(f"❌ Error processing {trade_name}: {e}")
@@ -237,7 +307,14 @@ def seed_nos_data():
         f"{stats['trade_levels']} trade levels, "
         f"{stats['units']} units, "
         f"{stats['learning_outcomes']} learning outcomes, "
-        f"{stats['performance_criteria']} performance criteria inserted."
+        f"{stats['performance_criteria']} performance criteria inserted; "
+        f"{stats['trade_levels_updated']} trade levels, "
+        f"{stats['units_updated']} units, "
+        f"{stats['learning_outcomes_updated']} learning outcomes, "
+        f"{stats['performance_criteria_updated']} performance criteria updated; "
+        f"{stats['units_deleted']} units, "
+        f"{stats['learning_outcomes_deleted']} learning outcomes, "
+        f"{stats['performance_criteria_deleted']} performance criteria deleted."
     )
 
 if __name__ == "__main__":

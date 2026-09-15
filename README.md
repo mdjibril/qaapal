@@ -14,6 +14,7 @@ A professional AI-powered assessment report generator for the National Skills Qu
 - **Observation Reports:** Synthesis of professional technical narratives from assessor notes and selected Performance Criteria (PC).
 - **Personal Statements:** Student-focused tool to convert self-reflections into formal first-person statements of competence.
 - **Witness Testimonies:** Formal validation tool for supervisors and expert witnesses to provide evidence of candidate performance.
+- **Workbook Generator:** Generates level-appropriate assessment workbooks — one question per performance criterion, with ideal answers and marking schemes.
 - **Word Export:** One-click generation of standardized NSQ forms (CPN-ARF-02) using `python-docx`.
 
 ### 🤖 AI Intelligence & Routing
@@ -35,7 +36,7 @@ A professional AI-powered assessment report generator for the National Skills Qu
 ## 🏷️ Release Notes
 
 - **Current version:** `v1.1.0`
-- **Highlights:** Fish farming NOS export parsing now supports mixed-case codes like `AqCS/FFA/007/L3`, the seed script supports `--file`, `--trade`, and `--level`, and history rows now display the report level next to the trade name.
+- **Highlights:** Fish farming NOS export parsing now supports mixed-case codes like `AqCS/FFA/007/L3`, the seed script supports `--file`, `--trade`, and `--level`, and history rows now display the report level next to the trade name. The new Workbook Generator produces level-appropriate assessment workbooks, the seed script now updates changed text and supports `--delete-missing`, and NOS hierarchy deletes cascade through levels, units, LOs, and PCs.
 
 ## 🛠️ Tech Stack
 
@@ -86,7 +87,7 @@ A professional AI-powered assessment report generator for the National Skills Qu
    "https://app.nsqassessment.com.ng"
    ```
 4. **Initialize Database:**
-   - Copy the contents of `setup_db_supabase.sql` and run them in the **SQL Editor** of your Supabase dashboard.
+   - Copy the contents of `setup_full_db.sql` and run them in the **SQL Editor** of your Supabase dashboard.
    - Enable RLS or set up policies as required.
 5. **Seed Data:**
    Set your database environment variables and run the seed script to populate the NOS criteria:
@@ -100,6 +101,16 @@ A professional AI-powered assessment report generator for the National Skills Qu
    python3 seed.py --trade "ICT Web Development"  # Seed every NOS file for one trade
    python3 seed.py --trade "ICT Web Development" --level 3  # Seed only Level 3 for that trade
    ```
+
+   The seed script syncs existing records too: if a unit title, learning outcome description, or performance criterion description changed in the JSON, re-running it updates the matching row in Supabase.
+   To also delete records that no longer exist in the JSON, add `--delete-missing` to the same command:
+   ```bash
+   python seed.py --delete-missing                                                        # Sync the whole data directory
+   python seed.py --file "data/level-3/NOS ICT Web Development L3.json" --delete-missing  # One NOS file
+   python seed.py --file "data/level-3/" --delete-missing                                 # Every NOS JSON file in a level folder
+   python seed.py --trade "ICT Web Development" --delete-missing                           # Every level of one trade/course
+   python seed.py --trade "ICT Web Development" --level 3 --delete-missing                 # One level of one trade/course
+   ```
 6. **Run the app:**
    ```bash
    streamlit run main.py
@@ -112,6 +123,7 @@ A professional AI-powered assessment report generator for the National Skills Qu
 - If the trigger looks outdated, re-run the patched function and trigger definition from the SQL Editor instead of re-running the full database setup script.
 - User profile updates now live in **Account Settings**. Use that page to change your display name, phone number, or login password.
 - When seeding a specific NOS file, use `--file`; when you want a whole trade, use `--trade`; when you want one level, add `--level`.
+- Deleting a trade cascades through `trade_levels` → `units` → `learning_outcomes` → `performance_criteria` when the NOS foreign keys use `ON DELETE CASCADE`. If deletion fails with a `23503` foreign key error, run the migration-safe cascade block in `setup_full_db.sql` (the `ALTER TABLE public.units ...` section).
 
 ## 🚂 Deployment on Railway.io
 
