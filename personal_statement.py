@@ -3,7 +3,7 @@ import datetime
 import database as db
 from ai_utils import validate_and_generate
 from auth_utils import get_secret
-from file_utils import export_personal_statement_to_word
+from file_utils import export_personal_statement_to_word, normalize_inline_mapping_lo_prefix
 from security_utils import sanitize_text_input, sanitize_notes_input
 import components
 from prompt_builders import build_personal_statement_prompt
@@ -147,6 +147,7 @@ def main():
                 if "API_ERROR" in str(ai_statement):
                     st.error(ai_statement)
                 else:
+                    ai_statement = normalize_inline_mapping_lo_prefix(ai_statement)
                     st.write("📝 Finalizing first-person perspective and mapping summary...")
                     # Generate mapping summary just like dashboard.py
                     summary_block = "\n\n----- SUMMARY OF CRITERIA COVERED -----\n\n"

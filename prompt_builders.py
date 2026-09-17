@@ -38,11 +38,11 @@ def build_dashboard_prompt(student_name, assessment_date, time_frame, atmosphere
                 10. **The Timeline**: Strictly include the commencement time (extracted from '{time_frame}') in the opening paragraph and the atmospheric details '{atmosphere}'. Strictly include the conclusion time (extracted from '{time_frame}') in the final closing paragraph.
                 11. **Volume**: Generate a dynamic number of dense, technical paragraphs based on the total PCs selected. Keep the report concise, but ensure every paragraph carries at least 2 PCs.
                 12. **The Hook**: Integrate the breakthrough moment strictly as factual physical actions where multiple criteria were met.
-                13. **Candidate Name Usage**: Use the candidate's full name "{student_name}" only once, in the opening paragraph. After that first full-name mention, refer to the candidate only as "{candidate_first_name}". Do not repeat the full name in later paragraphs.
+                13. **Candidate Name Usage**: Use the candidate's full name "{student_name}" only once, in the opening paragraph. After that first full-name mention, refer to the candidate only as "{candidate_first_name}". Mention "{candidate_first_name}" at most once per paragraph (at the beginning, middle, or end, whichever fits best), and use an appropriate pronoun (he/she/they) for the rest of that paragraph. Never use "the candidate".
 
                 ### CRITERIA INTEGRATION & MAPPING
                 14. **Reverse-Engineer the PC**: Look at the PC description and describe the minimum necessary action to prove that specific criteria. 
-                15. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria. The format MUST BE EXACTLY: (UnitCode - LO#:PC #.#). Do NOT deviate from this format. Example: (ICT/SMC/004/L2 - LO3:PC 3.3). NEVER omit the "LO" prefix.
+                15. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria. The format MUST BE EXACTLY: (UnitCode - LO#:PC #.#). Do NOT deviate from this format. Example: (ICT/SMC/004/L2 - LO3:PC 3.3). ALWAYS include the "LO" prefix (write LO2:PC 2.1, never 2:PC 2.1).
                 16. **Exhaustive Usage**: You MUST use every PC provided in the user's list exactly once. Do not hallucinate or invent PC codes. Weave 2-3 PCs logically into every paragraph.
                 17. **No Sequential Listing**: Do NOT write the Performance Criteria in numeric order. Do NOT produce a linear list such as 1.2, 1.3, 1.4 ... 2.1, 2.2, 2.3 or group them strictly by unit or LO.
                 18. **Mixed Unit/LO Weaving**: Blend criteria from different units and LOs across paragraphs. Each paragraph should mix multiple PCs, and each paragraph must contain at least 2 PCs.
@@ -98,7 +98,7 @@ def build_personal_statement_prompt(student_name, statement_date, reflection, tr
 
                 ### NARRATIVE STRUCTURE & MAPPING
                 8. **Volume**: Generate a dynamic number of dense, technical paragraphs based on the total PCs selected. Keep the statement concise, but ensure every paragraph carries at least 2 PCs.
-                9. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria. The format MUST BE EXACTLY: (UnitCode - LO#:PC #.#). Do NOT deviate from this format. Example: (ICT/SMC/004/L2 - LO1:PC 1.2). NEVER omit the "LO" prefix.
+                9. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria. The format MUST BE EXACTLY: (UnitCode - LO#:PC #.#). Do NOT deviate from this format. Example: (ICT/SMC/004/L2 - LO1:PC 1.2). ALWAYS include the "LO" prefix (write LO1:PC 1.2, never 1:PC 1.2).
                 10. **Reverse-Engineer the PC**: Look at the PC description and describe the minimum necessary action you took to prove that specific criteria.
                 11. **Exhaustive Usage**: You MUST use every PC provided in the list exactly once. Weave at least 2 PCs logically into every paragraph.
                 12. **No Sequential Listing**: Do NOT write the Performance Criteria in numeric order. Do NOT produce a linear list such as 1.2, 1.3, 1.4 ... 2.1, 2.2, 2.3 or group them strictly by unit or LO.
@@ -124,6 +124,7 @@ def build_personal_statement_prompt(student_name, statement_date, reflection, tr
 
 def build_witness_statement_prompt(witness_name, witness_role, candidate_name, observation_date, witness_notes, trade_context, selected_pcs):
     formatted_date = observation_date.strftime("%B %d, %Y")
+    candidate_first_name = candidate_name.strip().split()[0]
     system_prompt = f"""You are an Industrial Supervisor / Expert Witness writing an NSQ Witness Statement.
                 Your goal is to transform raw observation notes into a strict, objective, and audit-ready process-documentation that proves the candidate's competence without relying on storytelling or assumptions.
 
@@ -140,7 +141,7 @@ def build_witness_statement_prompt(witness_name, witness_role, candidate_name, o
                 4. Record ONLY the candidate's independent decisions and actions. If the candidate makes a mistake, record the physical mistake and their subsequent attempt to rectify it independently. Do not offer opinions or judgments.
 
                 ### WITNESS LOG PERSONA (LINGUISTIC PATTERNS)
-                5. **Perspective**: THIRD PERSON singular (refer to the candidate by name or "the candidate").
+                5. **Perspective**: THIRD PERSON singular. Use the candidate's full name "{candidate_name}" once in the opening paragraph. After that, mention the candidate's first name "{candidate_first_name}" at most once per paragraph (at the beginning, middle, or end, whichever fits best), and use an appropriate pronoun (he/she/they) for the rest of that paragraph. Never use "the candidate".
                 6. AVOID transition words like "Moreover", "Additionally", "Furthermore", or "Notably".
                 7. AVOID flowery or evaluative adjectives like "Impressive", "Excellent", "Great", or "Strong". Use objective terms like "Successful", "Compliant", "Accurate", or "Correct". Keep the tone industrial, professional, brief, and factual.
 
@@ -150,7 +151,7 @@ def build_witness_statement_prompt(witness_name, witness_role, candidate_name, o
 
                 ### NARRATIVE STRUCTURE & MAPPING
                 10. **Volume**: Generate a dynamic number of dense, technical paragraphs based on the total PCs selected. Keep the testimony concise, but ensure every paragraph carries at least 2 PCs.
-                11. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria. The format MUST BE EXACTLY: (UnitCode - LO#:PC #.#). Do NOT deviate from this format. Example: (ICT/SMC/004/L2 - LO1:PC 1.2). NEVER omit the "LO" prefix.
+                11. **Inline Mapping**: Place the mapping inline, immediately after the sentence that demonstrates the criteria. The format MUST BE EXACTLY: (UnitCode - LO#:PC #.#). Do NOT deviate from this format. Example: (ICT/SMC/004/L2 - LO1:PC 1.2). ALWAYS include the "LO" prefix (write LO1:PC 1.2, never 1:PC 1.2).
                 12. **Reverse-Engineer the PC**: Look at the PC description and describe the minimum necessary action the candidate took to prove that specific criteria.
                 13. **Exhaustive Usage**: You MUST use every PC provided in the list exactly once. Weave at least 2 PCs logically into every paragraph.
                 14. **No Sequential Listing**: Do NOT write the Performance Criteria in numeric order. Do NOT produce a linear list such as 1.2, 1.3, 1.4 ... 2.1, 2.2, 2.3 or group them strictly by unit or LO.

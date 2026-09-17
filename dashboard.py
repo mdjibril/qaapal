@@ -1,7 +1,7 @@
 import streamlit as st
 import datetime
 import time
-from file_utils import export_to_word
+from file_utils import export_to_word, normalize_inline_mapping_lo_prefix
 from ai_utils import validate_and_generate
 from auth_utils import get_secret
 from security_utils import sanitize_text_input, sanitize_notes_input
@@ -313,6 +313,7 @@ Return a JSON array of the PC strings that are demonstrably evidenced in the not
                 if isinstance(ai_narrative, str) and "API_ERROR" in ai_narrative:
                     st.error(ai_narrative)
                 else:
+                    ai_narrative = normalize_inline_mapping_lo_prefix(ai_narrative)
                     st.write("📊 Generating criteria summary block...")
                     summary_block = "\n\n----- SUMMARY OF CRITERIA COVERED -----\n\n"
                     u_dict = {}

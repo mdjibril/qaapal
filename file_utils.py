@@ -90,6 +90,15 @@ def _parse_single_mapping(inner_content):
     final_mapping = "; ".join(mapping_parts)
     return final_units, final_mapping
 
+def normalize_inline_mapping_lo_prefix(text):
+    """Ensure inline mappings always include the LO prefix."""
+    return re.sub(
+        rf'(\(\s*{MAPPING_UNIT_CODE_PATTERN}\s*-\s*)(\d+\s*:\s*PC\b)',
+        r'\1LO\2',
+        str(text),
+        flags=re.IGNORECASE,
+    )
+
 def parse_report_chunks(text):
     """
     Parses the full text and yields chunks of (narrative, unit, mapping, is_last_in_paragraph).
@@ -109,10 +118,11 @@ def parse_report_chunks(text):
         
         line_chunks = []
         narrative_acc = ""
-        
-        for part in parts:
-            part = part.strip()
+        i = 0
+        while i < len(parts):
+            part = parts[i].strip()
             if not part:
+                i += 1
                 continue
                 
             if re.match(rf'^\({MAPPING_UNIT_CODE_PATTERN}\s*-\s*(?:LO)?\s*\d+[^)]*\)$', part, flags=re.IGNORECASE):
@@ -120,25 +130,42 @@ def parse_report_chunks(text):
                 u_num, mapping = _parse_single_mapping(mapping_str)
                 # Clean up any trailing punctuation on the narrative
                 cleaned_narrative = re.sub(r'\s*[.,;:]+$', '', narrative_acc.strip()).strip()
+
+                # If the mapping is followed by punctuation, that punctuation
+                # belongs to the sentence BEFORE the mapping, so move it back
+                # onto the end of the previous narrative row.
+                if i + 1 < len(parts):
+                    next_part = parts[i + 1].strip()
+                    lead_punct_match = re.match(r'^([.,;:]+)\s*(.*)$', next_part, flags=re.DOTALL)
+                    if lead_punct_match:
+                        cleaned_narrative = (cleaned_narrative + lead_punct_match.group(1)).strip()
+                        narrative_acc = lead_punct_match.group(2)
+                        i += 1
+                    else:
+                        narrative_acc = ""
+                else:
+                    narrative_acc = ""
+
                 line_chunks.append({
                     'narrative': cleaned_narrative,
                     'unit': u_num,
                     'mapping': mapping
                 })
-                narrative_acc = ""
             else:
                 narrative_acc += (" " if narrative_acc else "") + part
+            i += 1
                 
         if narrative_acc.strip():
             cleaned_narrative = re.sub(r'\s*[.,;:]+$', '', narrative_acc.strip()).strip()
-            line_chunks.append({
-                'narrative': cleaned_narrative,
-                'unit': "",
-                'mapping': ""
-            })
+            if cleaned_narrative:
+                line_chunks.append({
+                    'narrative': cleaned_narrative,
+                    'unit': "",
+                    'mapping': ""
+                })
             
-        for i, lc in enumerate(line_chunks):
-            lc['is_last_in_paragraph'] = (i == len(line_chunks) - 1)
+        for idx, lc in enumerate(line_chunks):
+            lc['is_last_in_paragraph'] = (idx == len(line_chunks) - 1)
             chunks.append(lc)
             
     return chunks

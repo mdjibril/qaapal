@@ -99,7 +99,9 @@ A professional AI-powered assessment report generator for the National Skills Qu
    python3 seed.py --file "data/level-3/NOS ICT Web Development L3.json"  # Seed one exact NOS file
    python3 seed.py --file "data/level-3/"  # Seed every NOS JSON file in a level folder
    python3 seed.py --trade "ICT Web Development"  # Seed every NOS file for one trade
+   python3 seed.py --trade "ICT Web Development, Autobody Works, Fish Farming"  # Seed multiple trades
    python3 seed.py --trade "ICT Web Development" --level 3  # Seed only Level 3 for that trade
+   python3 seed.py --trade "ICT Web Development, Autobody Works" --level 3  # Seed Level 3 for multiple trades
    ```
 
    The seed script syncs existing records too: if a unit title, learning outcome description, or performance criterion description changed in the JSON, re-running it updates the matching row in Supabase.
@@ -109,7 +111,9 @@ A professional AI-powered assessment report generator for the National Skills Qu
    python seed.py --file "data/level-3/NOS ICT Web Development L3.json" --delete-missing  # One NOS file
    python seed.py --file "data/level-3/" --delete-missing                                 # Every NOS JSON file in a level folder
    python seed.py --trade "ICT Web Development" --delete-missing                           # Every level of one trade/course
+   python seed.py --trade "ICT Web Development, Autobody Works, Fish Farming" --delete-missing  # Multiple trades/courses
    python seed.py --trade "ICT Web Development" --level 3 --delete-missing                 # One level of one trade/course
+   python seed.py --trade "ICT Web Development, Autobody Works" --level 3 --delete-missing  # One level of multiple trades/courses
    ```
 6. **Run the app:**
    ```bash

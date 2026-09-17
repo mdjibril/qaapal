@@ -66,7 +66,7 @@ def seed_nos_data():
     parser.add_argument(
         "--trade",
         dest="trade_name",
-        help="Seed only files whose trade_name matches this value.",
+        help="Seed only files whose trade_name matches this value. Use commas to target multiple trades.",
     )
     parser.add_argument(
         "--level",
@@ -115,7 +115,13 @@ def seed_nos_data():
         "performance_criteria_deleted": 0,
     }
     matched_files = 0
-    trade_filter = args.trade_name.strip().lower() if args.trade_name else None
+    trade_filter = None
+    if args.trade_name:
+        trade_filter = {
+            name.strip().lower()
+            for name in args.trade_name.split(",")
+            if name.strip()
+        }
 
     for file_path in json_files:
         print(f"🔍 Processing {file_path}...")
@@ -134,7 +140,7 @@ def seed_nos_data():
         if not trade_name:
             print(f"Skipping {file_path}: Missing trade_name")
             continue
-        if trade_filter and trade_name.strip().lower() != trade_filter:
+        if trade_filter and trade_name.strip().lower() not in trade_filter:
             print(f"Skipping {file_path}: trade_name '{trade_name}' does not match '{args.trade_name}'.")
             continue
         if level is None:

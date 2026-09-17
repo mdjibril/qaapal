@@ -3,7 +3,7 @@ import datetime
 import database as db
 from ai_utils import validate_and_generate
 from auth_utils import get_secret
-from file_utils import export_witness_to_word
+from file_utils import export_witness_to_word, normalize_inline_mapping_lo_prefix
 from security_utils import sanitize_text_input, sanitize_notes_input
 import components
 from prompt_builders import build_witness_statement_prompt
@@ -141,6 +141,7 @@ def main():
                 if "API_ERROR" in str(ai_output):
                     st.error(ai_output)
                 else:
+                    ai_output = normalize_inline_mapping_lo_prefix(ai_output)
                     st.write("✅ Validating third-person tone and cross-referencing criteria...")
                     # Generate mapping summary block
                     summary_block = "\n\n----- SUMMARY OF CRITERIA COVERED -----\n\n"
