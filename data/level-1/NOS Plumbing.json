@@ -3,110 +3,282 @@
   "level": 1,
   "units": [
     {
-      "code": "CON/PL/005/L1",
-      "title": "BASIC PLUMBING",
+      "code": "CON/PL/001/L1",
+      "title": "Health and safety in Plumbing",
       "learning_outcomes": [
         {
           "lo_num": "1",
-          "description": "Know the Types of Pipes and its Application in Plumbing.",
+          "description": "Confirm that the materials, tools and equipment required for the installation process are fit for their intended purposes.",
           "performance_criteria": [
             {
               "pc_code": "1.1",
-              "description": "Explain various types of pipe used in plumbing."
+              "description": "Identify tools and equipment in a secure and friendly environment."
             },
             {
               "pc_code": "1.2",
-              "description": "Describe plumbing signs and symbol."
+              "description": "Use of tools and equipment in line with health and safety practices in the construction industry."
             },
             {
               "pc_code": "1.3",
-              "description": "State 3 types of pipes that can be used in cold and hot water supply and their application"
+              "description": "Operate equipment based on approved health and safety practices."
             },
             {
               "pc_code": "1.4",
-              "description": "Identify fittings that match various types of pipes mentioned in 1.3 above."
+              "description": "Select intended appropriate tools to yield result in safe environment."
             },
             {
               "pc_code": "1.5",
-              "description": "Select fittings that match various types of pipes identified."
+              "description": "Recognize tools and equipment that are work friendly based on approved health and safety practices in the construction industry."
             },
             {
               "pc_code": "1.6",
-              "description": "Perform connection of 2 pipes and fittings identified."
+              "description": "Couple equipment after usage in line with approved health and safety practices in the building and construction industry."
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Perform simple and routine task using appropriate tools on site in line with health and safety practices in the building and construction industry."
             }
           ]
         },
         {
           "lo_num": "2",
-          "description": "Demonstrate the Use of basic tools and equipment required for simple tasks.",
+          "description": "Take precautionary actions to prevent the unauthorised use of uncommissioned systems and components.",
           "performance_criteria": [
             {
               "pc_code": "2.1",
-              "description": "Identify tools and equipment for plumbing installation."
+              "description": "Perform task based on health and safety procedures during work at heights."
             },
             {
               "pc_code": "2.2",
-              "description": "Select tools, equipment and materials that can be used for installation of wash hand basin and water closet."
+              "description": "Explain the use and content of first aid box."
             },
             {
               "pc_code": "2.3",
-              "description": "Apply the appropriate tools and equipment to perform the WC and wash hand basin installation."
+              "description": "Use personal protective equipment such as head fall protector, foot protector, face and eye protector, hand and body protector and respiratory protector."
             },
             {
               "pc_code": "2.4",
-              "description": "Use appropriate tools and equipment in accordance with health and safety."
+              "description": "Identify precautionary cautions in a workshop."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Identify and recognize systems or operations that cause accident and avoid them based on health and safety in the construction industry."
             }
           ]
         },
         {
           "lo_num": "3",
-          "description": "Understand basic water supply and distribution",
+          "description": "Understanding of Signs and Symbols",
           "performance_criteria": [
             {
               "pc_code": "3.1",
-              "description": "Identify sources of water supply."
+              "description": "Explain precautionary symbols in order to prevent accident."
             },
             {
               "pc_code": "3.2",
-              "description": "Sketch water supply at a height of a bungalow building. Show by sketch the method of connecting water supply from overhead tank"
+              "description": "Sketch signs and symbols signifying danger to visitors and operators."
             },
             {
               "pc_code": "3.3",
-              "description": "Differentiate between direct and indirect water supply by sketching"
-            }
-          ]
-        },
-        {
-          "lo_num": "4",
-          "description": "Understand basic water puriﬁcation",
-          "performance_criteria": [
-            {
-              "pc_code": "4.1",
-              "description": "Differentiate between clean and contaminated water."
-            },
-            {
-              "pc_code": "4.2",
-              "description": "Identify and explain what can render water impure."
-            },
-            {
-              "pc_code": "4.3",
-              "description": "Perform cleaning process of overhead tank."
+              "description": "Sketch readable signs on systems components on appropriate methods of operations in line with health and safety standards."
             }
           ]
         }
       ]
     },
     {
-      "code": "CON/PL/006/L1",
-      "title": "MATERIAL HANDLING AND STORAGE",
+      "code": "CON/PL/002/L1",
+      "title": "Communication in Plumbing",
       "learning_outcomes": [
         {
           "lo_num": "1",
-          "description": "Demonstrate Material Handling",
+          "description": "Communicate to the immediate job supervisor or customer, circumstances that affect the progress of work.",
           "performance_criteria": [
             {
               "pc_code": "1.1",
-              "description": "Identify the simple procedures for loading and offloading of plumbing materials in line with environmental health and safety requirement."
+              "description": "Identify the circumstances that affect progress of installation."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Distinguish and report simple instructions."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Recognize line of communication."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Use of Plumbing code and communication gadget",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify basic plumbing codes."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Operate simple communication gadget."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify and use basic symbol to communicate."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Record and carry out instruction."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PL/003/L1",
+      "title": "Team Work in Plumbing",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Positive working relationship with colleagues.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the need for developing positive working relationship with colleagues."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Recognize the importance of relating with other people in a way that makes them feel valued and respected."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Report to the appropriate personnel when request for assistance fall outside area of responsibility."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate information to colleagues about own work that might affect others."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Take responsibilities within the team.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Recognize own role and responsibilities within the team."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform individual tasks in line with the team rules and regulations."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Participate effectively in teamwork."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Compliance with policy of organisation.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Work in line with organizational standard."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use organization code of practice."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain organizational code of conduct."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PL/004/L1",
+      "title": "Understand and Demonstrate Basic Plumbing",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Describe Basic Plumbing",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Comply with the given relevant legislation and official guidance to carry out work and maintain safe and healthy work practices."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Read plumbing signs and symbols."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify plumbing materials, tools and equipment."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Recognize pipes, fittings and work as a team during cutting and installations."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Communicate the processes and procedures of plumbing."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Care and maintain tools and equipment with colleagues and plumbers."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Confirm the tools and equipment required for the task",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Select tools and equipment for plumbing."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Use the appropriate tools and equipment for cutting and installation."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "Water purification",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Distinguish between pure and impure water."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Identify and explain what can render water impure."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Perform tasks leading to the removal of impurities."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PL/005/L1",
+      "title": "Material Handling and Storage",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Plumbing Material",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the procedures for loading and offloading of plumbing materials in line with environmental health and safety requirement."
             },
             {
               "pc_code": "1.2",
@@ -114,57 +286,65 @@
             },
             {
               "pc_code": "1.3",
-              "description": "Carry out proper storing and stacking of tools and materials."
+              "description": "Carry out proper storing and stacking of tools and other construction materials."
             },
             {
               "pc_code": "1.4",
-              "description": "Observe individual work and teamwork for lifting, loading and offloading of materials."
+              "description": "Understand storage of inflammable substances in line with plumbing standard."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Recognise individual work and teamwork for lifting, loading and offloading of materials."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Identify different plumbing materials."
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Use methods and sequence of Loading and offloading of materials such as pipes and fittings."
             }
           ]
         },
         {
           "lo_num": "2",
-          "description": "Use the Procedures and process of storage and stacking of tools.",
+          "description": "Procedure for material storage.",
           "performance_criteria": [
             {
               "pc_code": "2.1",
-              "description": "Use material storage method last in first out (LIFO) and first in last out (FILO)."
+              "description": "Explain the process of storing and stacking of tools, inflammable and other construction materials."
             },
             {
               "pc_code": "2.2",
-              "description": "Load and offload materials such as pipes and fittings."
+              "description": "Identify material storage method (last in first out LIFO and first in last out FILO)."
             },
             {
               "pc_code": "2.3",
-              "description": "Use the procedure of storing and stacking of inflammables construction materials"
+              "description": "Carry out good housekeeping practices."
             },
             {
               "pc_code": "2.4",
-              "description": "Carryout maintenance requirements of tools and equipment."
+              "description": "Use safety rules for materials storage."
             },
             {
               "pc_code": "2.5",
-              "description": "Apply safety rules for material storage."
-            },
-            {
-              "pc_code": "2.6",
               "description": "Use safe access to storage areas."
             },
             {
-              "pc_code": "2.7",
-              "description": "Checks for safe storage conditions with up-to-date records."
+              "pc_code": "2.6",
+              "description": "Recognise care and maintenance requirements of tools and equipment and checks for safe storage condition with up-to-date records."
             }
           ]
         }
       ]
     },
     {
-      "code": "CON/PL/007/L1",
-      "title": "CUTTTING, THREADING AND COUPLING OF PIPES",
+      "code": "CON/PL/006/L1",
+      "title": "Cutting and Threading of Pipes",
       "learning_outcomes": [
         {
           "lo_num": "1",
-          "description": "Demonstrate Pipe Cutting process.",
+          "description": "Pipes and pipe cutting tools.",
           "performance_criteria": [
             {
               "pc_code": "1.1",
@@ -172,87 +352,97 @@
             },
             {
               "pc_code": "1.2",
-              "description": "Select the cutting tool use for cutting light gauge copper, PVC and PPR Pipes."
+              "description": "Identify the different types of pipes used for conveying portable water."
             },
             {
               "pc_code": "1.3",
-              "description": "Explain at least 3 importance of using pipe cutting tools."
+              "description": "Select the appropriate cutting tool used for cutting pipes."
             },
             {
               "pc_code": "1.4",
-              "description": "Use cutting tools to cut out PVC, PPR and Light gauge copper pipes."
+              "description": "Explain the importance of using appropriate pipe cutting tool."
             }
           ]
         },
         {
           "lo_num": "2",
-          "description": "Demonstrate Pipes Threading.",
+          "description": "Cutting, threading and coupling of pipes",
           "performance_criteria": [
             {
               "pc_code": "2.1",
-              "description": "Identify 3 types of pipes that can be threaded"
+              "description": "Select the right size of dies for threading pipes."
             },
             {
               "pc_code": "2.2",
-              "description": "Select the right size of dies for threading pipes of w.c and bath supply"
+              "description": "Perform minor threading on the pipes."
             },
             {
               "pc_code": "2.3",
-              "description": "Perform basic threading on the following PVC pipes, \u00bd\u201d and 1\u201d"
-            },
-            {
-              "pc_code": "2.4",
               "description": "Explain the importance of using the right size of dies for cutting threads."
             },
             {
-              "pc_code": "2.5",
-              "description": "Couple the threaded pipes to form a simple network."
+              "pc_code": "2.4",
+              "description": "Couple the threaded PP pipes to form a minor pipe network."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CON/PL/007/L1",
+      "title": "Work Plan in Plumbing",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "Identify from the work specification what resources are required to carry out the work efficiently and where necessary, identify suitable alternatives",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify tools, plants, vehicles and equipment required to carry out plumbing task effectively."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Develop a work sequence on accurate use of tools and equipment in a given plumbing task."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Implement a workable and defined work plan that will enable effective management of equipment available for use in a construction site."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "Discuss and agree a programme of works which includes, where necessary, effective coordination with the work of other contractors and make an accurate estimate of the time the job should take to complete.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Develop an appropriate programme of works which will aid productivity in work environment."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Perform routine task for proper estimate on work environment."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Implement plan that will aid effective coordination of contractors on construction site."
             }
           ]
         },
         {
           "lo_num": "3",
-          "description": "Demonstrate Coupling Mild Steel, Light gauge copper and PVC Pipes.",
+          "description": "Establish plan for compliance",
           "performance_criteria": [
             {
               "pc_code": "3.1",
-              "description": "Explain joint in mild steel, light gauge copper and pvc/plastic pipes."
+              "description": "Deliver a plan of work for compliance in work place."
             },
             {
               "pc_code": "3.2",
-              "description": "State tools and materials required for mild steel coupling."
+              "description": "Sketch the work plan to aid routine task in a work environment."
             },
             {
               "pc_code": "3.3",
-              "description": "Identify 3 different types of mild steel i.e screwed joint, flanged joint and welded joint."
-            },
-            {
-              "pc_code": "3.4",
-              "description": "Carry out the 3 types of joints used in mild steel."
-            },
-            {
-              "pc_code": "3.5",
-              "description": "Enumerate tools and materials required for joints in light gauge copper pipes."
-            },
-            {
-              "pc_code": "3.6",
-              "description": "Identify 4 different types of joints in light gauge copper pipes i.e Manipulator Compression joint, Non Manipulator Compression joint, Capillary joint and Self formed socket joint."
-            },
-            {
-              "pc_code": "3.7",
-              "description": "Carry out the four types of joints in light gauge copper pipes in line with safety precautions."
-            },
-            {
-              "pc_code": "3.8",
-              "description": "Explain joints in plastic pipes (PVC)"
-            },
-            {
-              "pc_code": "3.9",
-              "description": "Identify different types of joints in plastic pipes i.e push fit joint, solvent cement joint and compression joint"
-            },
-            {
-              "pc_code": "3.10",
-              "description": "Carry out 3 types of joints on plastic pipe (PVC) in line with safety precaution."
+              "description": "Check the planned steps and outcome to ensure conformity with instructions."
             }
           ]
         }
@@ -260,109 +450,77 @@
     },
     {
       "code": "CON/PL/008/L1",
-      "title": "BENDING OF PLUMBING PIPES",
+      "title": "Organising Work Environment",
       "learning_outcomes": [
         {
           "lo_num": "1",
-          "description": "Demonstrate method of Bending mild steel pipe in plumbing work",
+          "description": "Identification of the programme of work from the work specification",
           "performance_criteria": [
             {
               "pc_code": "1.1",
-              "description": "Explain bending of plumbing pipe"
+              "description": "Discuss and agree a program of work that includes, where necessary, effective co-ordination with the work of other contractors."
             },
             {
               "pc_code": "1.2",
-              "description": "Describe machine bending of mild steel and G.I pipes in plumbing work"
+              "description": "Estimate time the job should be completed."
             },
             {
               "pc_code": "1.3",
-              "description": "Enumerate 6 types of tools used in mild steel bending of plumbing pipes."
+              "description": "Provide a program of work that will aid a given plumbing task."
             },
             {
               "pc_code": "1.4",
-              "description": "Sketch a working drawing or template for making 90\u2019 bend"
-            },
-            {
-              "pc_code": "1.5",
-              "description": "Follow the operational steps and make a 90\u2019 bend of galvanize or mild steel pipe with hydraulic bending machine"
+              "description": "Interpret a program of work for plumbing jobs."
             }
           ]
         },
         {
           "lo_num": "2",
-          "description": "Demonstrate method of bending light gauge copper pipe in plumbing work",
+          "description": "How to identify resources and time to complete a task from specification.",
           "performance_criteria": [
             {
               "pc_code": "2.1",
-              "description": "Explain light gauge copper pipe machine bending"
+              "description": "Identify from work specification what resources (e.g. Materials, tool, plants vehicles, or equipment) are required for the task."
             },
             {
               "pc_code": "2.2",
-              "description": "Describe floor mounted bending machine to make a 90\u2019 light"
+              "description": "Identify suitable alternative materials, tools, etc required for the given task."
             },
             {
               "pc_code": "2.3",
-              "description": "Enumerate 6 types tools used in light gauge copper pipe machine"
+              "description": "Interpret the work specification."
             },
             {
               "pc_code": "2.4",
-              "description": "BendSketch a working drawing or template for making the center of the bend"
-            },
-            {
-              "pc_code": "2.5",
-              "description": "Use the operational steps and make a 90\u2019 light gauge copper pipe bend with floor mounted copper machine."
+              "description": "Estimate the duration of time for completion of a giving plumbing task."
             }
           ]
         },
         {
           "lo_num": "3",
-          "description": "Understand Heat bending to mild steel, light gauge copper and plastic pipes in plumbing",
+          "description": "How to communicate with others clearly and concisely",
           "performance_criteria": [
             {
               "pc_code": "3.1",
-              "description": "Explain heat bending of pipes in plumbing work"
-            },
-            {
-              "pc_code": "3.2",
-              "description": "Demonstrate 3 different types of heat bending applicable on plumbing pipes."
-            },
-            {
-              "pc_code": "3.3",
-              "description": "Enumerate specific tools used in heat bending of plumbing pipes."
-            },
-            {
-              "pc_code": "3.4",
-              "description": "Use the operational steps involved in heat bending method to make a 90\u2019 bend on mild steel, light gauge copper and plastic"
+              "description": "Ensure that all communications are clear, accurate and appropriate to the situation."
             }
           ]
         },
         {
           "lo_num": "4",
-          "description": "Spring bending for light gauge copper, lead and plastic pipes",
+          "description": "Know the organization operations",
           "performance_criteria": [
             {
               "pc_code": "4.1",
-              "description": "Explain spring bending for light gauge copper, lead and plastic pipes"
+              "description": "Identify the responsibilities to the employer and the customers."
             },
             {
               "pc_code": "4.2",
-              "description": "State two different types of bending spring of plumbing pipes i.e internal and external springs."
+              "description": "Understand the scope, purpose and requirements of the work operations with which you are involved and for which you are responsible."
             },
             {
               "pc_code": "4.3",
-              "description": "Explain simple jig and hot air jet method of plumbing pipes bending."
-            },
-            {
-              "pc_code": "4.4",
-              "description": "Enumerate 6 tools required for spring bending for light gauge copper, lead and plastic pipes i.e Blow lamps, Tung, Tri-square, Jig for bending of pipe, pipe reamer."
-            },
-            {
-              "pc_code": "4.5",
-              "description": "Sketch working drawing or template for marking the heat length for a 90\u2019 bend from the working drawing."
-            },
-            {
-              "pc_code": "4.6",
-              "description": "Use the step by step process of working out the heat length for a 90\u2019 bends on a piece of 25mm diameter plastic pipe."
+              "description": "Understand the job role, its scope and when it involve someone with higher responsibilities."
             }
           ]
         }
