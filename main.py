@@ -147,8 +147,6 @@ def main():
             st.session_state["reset_mode"] = True
         st.query_params.clear()
 
-    update_environment_preset()
-
     if not st.session_state.get('user_session') and not st.session_state.get('reset_mode'):
         try:
             client = db.get_supabase()
