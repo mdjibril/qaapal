@@ -1,3 +1,4 @@
+# Tests workbook normalization, splitting, and validation helpers.
 import json
 import unittest
 
@@ -35,6 +36,23 @@ class WorkbookUtilsTest(unittest.TestCase):
         response = {"items": [self._item("1.1"), self._item("1.1")]}
         with self.assertRaisesRegex(ValueError, "Duplicate PC"):
             validate_workbook_items(json.dumps(response), self.records)
+
+    def test_accepts_response_with_trailing_text(self):
+        response = json.dumps({"items": [self._item("1.1"), self._item("1.2")]}) + "\nExtra trailing text."
+        items = validate_workbook_items(response, self.records)
+        self.assertEqual(len(items), 2)
+
+    def test_accepts_json_wrapped_in_prose_and_fences(self):
+        payload = json.dumps({"items": [self._item("1.1"), self._item("1.2")]})
+        response = f"Here is your result:\n```json\n{payload}\n```\nDone."
+        items = validate_workbook_items(response, self.records)
+        self.assertEqual(len(items), 2)
+
+    def test_accepts_concatenated_json_objects(self):
+        first = json.dumps({"items": [self._item("1.1"), self._item("1.2")]})
+        second = json.dumps({"items": []})
+        items = validate_workbook_items(first + second, self.records)
+        self.assertEqual(len(items), 2)
 
     def test_allows_same_pc_code_in_different_units(self):
         records = normalize_nos(

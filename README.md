@@ -120,6 +120,69 @@ A professional AI-powered assessment report generator for the National Skills Qu
    streamlit run main.py
    ```
 
+## 🧪 Running Tests
+
+Tests live in the `tests/` directory and are collected by `pytest`. The `pytest.ini` file already sets `testpaths = tests` and adds the repository root to the Python path, so you can run the commands below from the repository root.
+
+### Run everything
+
+```bash
+pytest
+```
+
+or
+
+```bash
+python3 -m pytest
+```
+
+### Run one test file
+
+```bash
+python3 -m pytest tests/test_ai_policy.py
+python3 -m pytest tests/test_prompt_builders.py
+python3 -m pytest tests/test_file_utils.py
+```
+
+### Run a single test
+
+```bash
+python3 -m pytest tests/test_ai_policy.py::AiPolicyTest::test_free_tier_policy
+```
+
+### Filter tests by name
+
+```bash
+python3 -m pytest -k prompt
+```
+
+### Useful flags
+
+- `-v` — verbose output, one line per test.
+- `-q` — quiet output, summary only.
+- `--lf` — re-run only the tests that failed in the last run.
+- `-k <substring>` — run only tests whose names contain the substring.
+
+### Manual API connectivity check
+
+The API verifier is a standalone script and is **not** part of the pytest suite, because it needs live credentials and network access:
+
+```bash
+python3 scripts/verify_api_connections.py
+```
+
+### Test layout
+
+- `tests/helpers.py` — shared NOS fixture loader and fake Supabase client.
+- `tests/test_ai_policy.py` — AI access-policy rules.
+- `tests/test_prompt_builders.py` — prompt content rules for dashboard, personal, and witness flows.
+- `tests/test_file_utils.py` — report parsing and unit-code helpers.
+- `tests/test_workbook_utils.py` — workbook normalization and validation.
+- `tests/test_workbook_access.py` — workbook generation access rules.
+- `tests/test_workbook_documents.py` — Word document export.
+- `tests/test_database_fetch.py` — database NOS and trade-level fetching (mocked).
+- `tests/test_source_wiring.py` — source-level wiring checks.
+
 ## 🛠️ Database Maintenance
 
 - If signup marketing fields are not showing up in `user_profiles`, verify the `on_auth_user_created` trigger in the Supabase SQL Editor.

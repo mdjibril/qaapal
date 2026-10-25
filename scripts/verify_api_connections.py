@@ -5,7 +5,8 @@ from google import genai
 
 def load_secrets():
     """Loads Streamlit secrets from the .streamlit/secrets.toml file."""
-    secrets_path = os.path.join(".streamlit", "secrets.toml")
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    secrets_path = os.path.join(project_root, ".streamlit", "secrets.toml")
     if not os.path.exists(secrets_path):
         print(f"❌ Error: {secrets_path} not found.")
         return None

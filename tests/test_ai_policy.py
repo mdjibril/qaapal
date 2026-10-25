@@ -1,3 +1,4 @@
+# Tests the AI access-policy rules returned by ai_policy.get_ai_access_policy.
 import unittest
 
 from ai_policy import get_ai_access_policy

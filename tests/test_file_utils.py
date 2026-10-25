@@ -1,54 +1,5 @@
+# Tests report parsing and unit-code helpers in file_utils.
 import unittest
-import sys
-import types
-
-
-def _install_docx_stubs():
-    if "docx" in sys.modules:
-        return
-
-    docx = types.ModuleType("docx")
-    docx.Document = object
-    sys.modules["docx"] = docx
-
-    shared = types.ModuleType("docx.shared")
-    shared.Pt = lambda value: value
-    shared.Inches = lambda value: value
-    sys.modules["docx.shared"] = shared
-
-    enum_text = types.ModuleType("docx.enum.text")
-    enum_text.WD_ALIGN_PARAGRAPH = types.SimpleNamespace(CENTER=1)
-    sys.modules["docx.enum.text"] = enum_text
-
-    enum_table = types.ModuleType("docx.enum.table")
-    enum_table.WD_ALIGN_VERTICAL = types.SimpleNamespace(CENTER=1, TOP=2)
-    sys.modules["docx.enum.table"] = enum_table
-
-    oxml = types.ModuleType("docx.oxml")
-    oxml.OxmlElement = lambda *_args, **_kwargs: types.SimpleNamespace(
-        append=lambda *_a, **_k: None,
-        set=lambda *_a, **_k: None,
-        find=lambda *_a, **_k: None,
-        get_or_add_tcPr=lambda: types.SimpleNamespace(
-            find=lambda *_a, **_k: None,
-            append=lambda *_a, **_k: None,
-        ),
-        _tc=types.SimpleNamespace(
-            get_or_add_tcPr=lambda: types.SimpleNamespace(
-                find=lambda *_a, **_k: None,
-                append=lambda *_a, **_k: None,
-            )
-        ),
-        _r=types.SimpleNamespace(append=lambda *_a, **_k: None),
-    )
-    sys.modules["docx.oxml"] = oxml
-
-    oxml_ns = types.ModuleType("docx.oxml.ns")
-    oxml_ns.qn = lambda value: value
-    sys.modules["docx.oxml.ns"] = oxml_ns
-
-
-_install_docx_stubs()
 
 from file_utils import get_unit_number, parse_report_chunks
 

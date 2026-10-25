@@ -1,3 +1,4 @@
+# Tests workbook generation access rules in workbook_generator._generation_blocked.
 import unittest
 
 from workbook_generator import _generation_blocked

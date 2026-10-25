@@ -74,11 +74,25 @@ def split_workbook_records(records, batch_size=WORKBOOK_BATCH_SIZE):
     return [records[index:index + batch_size] for index in range(0, len(records), batch_size)]
 
 
+def _extract_first_json_value(text):
+    """Return the first JSON object or array found in text, ignoring prose and trailing data."""
+    decoder = json.JSONDecoder()
+    for index, char in enumerate(text):
+        if char not in "{[":
+            continue
+        try:
+            value, _ = decoder.raw_decode(text, index)
+            return value
+        except json.JSONDecodeError:
+            continue
+    raise ValueError("No JSON object or array found in the AI response")
+
+
 def _load_json_response(response):
     text = str(response or "").strip()
     if text.startswith("```"):
         text = re.sub(r"^```(?:json)?\s*|\s*```$", "", text, flags=re.IGNORECASE | re.DOTALL).strip()
-    parsed = json.loads(text)
+    parsed = _extract_first_json_value(text)
     if isinstance(parsed, dict):
         parsed = parsed.get("items")
     if not isinstance(parsed, list):

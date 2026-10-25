@@ -1,3 +1,4 @@
+# Tests Word document export for student workbooks and instructor guides.
 import unittest
 from io import BytesIO
 
