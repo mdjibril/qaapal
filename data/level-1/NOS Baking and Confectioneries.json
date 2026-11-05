@@ -1,0 +1,792 @@
+{
+  "trade_name": "NOS Baking and Confectioneries",
+  "level": 1,
+  "units": [
+    {
+      "code": "HTT/BKC/001/L1",
+      "title": "Safe, Hygienic and Secure Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Understand safety and hygiene in a bakery environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Safety"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Define food safety Hazards"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify workplace hazards associated with bakery operations, including cross-contamination, burns, slips, cuts and electrical hazards."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Define personal hygiene practices"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Carry out proper handwashing"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Keep the work area clean and tidy"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Clean tools according to Standard Operating Procedures."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Safely handle and store bakery ingredients and products.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Store dry raw materials according to safety standard"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Store wet raw materials according to safety standard"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Store finished goods according to safety standard"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Handle food safely to maintain hygiene standards."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Safely dispose waste materials in the designated areas."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Demonstrate compliance with security procedures in the bakery",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Follow security protocols regarding access to the bakery premises."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Report any safety or security hazards immediately to the supervisor."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Practice emergency procedures correctly"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify workplace safety signs and their meanings."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "4.0 Understand first aid in baking and confectionery industry",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Define first aid"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "List the importance of first aid"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "List the component of a first aid box"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Identify signs and symbols of first aid"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/002/L1",
+      "title": "Communication System in a Work Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Understand the importance of good communication.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define Communication"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "List Types of work place Communication"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "State the importance of good communication in food production"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "List effective communication methods."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Demonstrate courteous, respectful and professional behaviour with colleagues, managers, and clients."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Understand basic communication in the workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify simple methods of communication used in a bakery (verbal, non-verbal, written)."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Recognize common workplace instructions and signs."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify appropriate personnel to whom workplace issues should be reported to in the workplace."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Understand interpersonal interactions.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use respectful speech and body language during workplace interactions."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Participate in meetings through appropriate information sharing."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Provide responses to customer and colleague queries."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "4.0 Communicate effectively with supervisors and colleagues",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Follow simple instructions from supervisors."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Ask questions politely when clarification is needed."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Respond appropriately to instructions and feedback."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use respectful language when interacting with others."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/003/L1",
+      "title": "Teamwork in a Bakery",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Communicate effectively with team members",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define teamwork"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the importance of teamwork."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Follow simple verbal instructions from supervisors or colleagues."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Use polite and respectful language when interacting with team members."
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Report issues (e.g., missing items, equipment faults) to the appropriate person."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Respond appropriately to feedback from team members."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Perform assigned tasks as part of a team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Carry out basic assigned duties (e.g., cleaning workspace) correctly."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Complete assigned tasks within specified timeline under supervision."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Assist team members when required."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Follow standard operating procedures during tasks."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Maintain a positive attitude in a bakery team",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Demonstrate a cooperative and helpful attitude."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Show respect for cultural and individual differences."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Maintain concentration while performing assigned duties."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Maintain a friendly and productive working environment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/004/L1",
+      "title": "Raw Materials and Ingredients",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Understand the characteristics, functions, and proper selection of basic ingredients for bakery products.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify major ingredients required for bread and confectionery products."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe the quality of ingredients based on sensory characteristics."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "State the functions of ingredients."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Describe composite flours."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Understand safe handling, hygienic storage procedures, and ingredient rotation.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define First-In-First-Out (FIFO)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Define First-Expired, First-Out (FEFO)."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain stock rotation using the (FIFO) method."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain stock rotation using the (FEFO) method."
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Store raw materials under approved storage conditions in accordance with food safety requirements."
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Practice safe handling of perishable ingredients."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Understand the principles of accurate weighing and measuring of raw materials for consistent production.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe weighing scales according to Standard Operating Procedures."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe volumetric measurement according to Standard Operating Procedures (SOP)."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Describe ingredients measurement according to a given formulation."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Demonstrate accurate weighing of ingredients using digital and mechanical scales."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/005/L1",
+      "title": "Basic Tools Identification",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Recognize common baking tools and equipment.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Name mixing tools"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Name measuring tools"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Name cutting tools"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Name baking tools"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Classify tools according to their functions."
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Match specific bakery products with their essential tools and pans."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Select appropriate tools and equipment for specific baking tasks, following health and safety guidelines.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify the correct tool for measuring dry ingredients."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify the correct tool for measuring liquid ingredients."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Select appropriate pans/tray for different bakery products."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify personal protective equipment (PPE) required for handling tools."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Demonstrate safe handling of baking tools",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Handle tools carefully to avoid damage or injury."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Follow basic safety rules when using tools (e.g., avoid touching hot surfaces)."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Use protective items such as oven gloves when necessary."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Maintain cleanliness during and after tool use."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Clean tools using appropriate materials according to food safety standards."
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Inspect tools before storage and report defective equipment."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Identify damaged tools and report to supervisor/instructor."
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Follow basic hygiene practices in handling tools."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/006/L1",
+      "title": "Product Types",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Recognize types of bread and confectionery products.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify standard ingredients for dough."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify standard ingredients for batter."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Classify bread types"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Distinguish basic confectionery items"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Identify basic baking and confectionery product types",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "List common baking products such as bread, cakes, biscuits, and pastries."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify basic confectionery items such as sweets, chocolates, and simple desserts."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Recognize product types from pictures or real samples."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Group products correctly into baking or confectionery categories."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Describe the basic production process for bread and confectionery products.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Describe the stages of dough mixing."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Describe common mixing methods used in bakery production."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain mixing ingredients according to standard procedures."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain dough cutting processes"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Explain dough fermentation"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Describe use of ovens at correct temperatures."
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Describe product quality based on texture"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Describe product quality based on appearance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/007/L1",
+      "title": "Measurements Awareness",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Understand the necessity of baking measurements and ingredient weights",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify appropriate measuring tools for dry ingredients."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify appropriate measuring tools for liquid ingredients."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Differentiate between volume and weight measurements in a bakery."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "State the importance of accurate measurements for product consistency."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Understand proper techniques for measuring ingredients to ensure consistency, safety, and quality.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Demonstrate accurate weighing techniques for dry ingredients using scales."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate accurate measurement of liquids using transparent measuring jugs."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate correct levelling techniques for measuring spoon."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Follow safety, sanitation, and waste reduction procedures regarding measurements.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Maintain clean measuring tools"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Follow safe handling procedures for all ingredients during the measuring process."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Measure ingredients in a manner that minimizes waste."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/008/L1",
+      "title": "Time and Workflow Awareness",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Understand the importance of time management and sequence of operations in a bakery.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Define mise en place"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Arrange ingredients mise en place according to the daily production schedule."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Organize tools mise en place according to the daily production schedule."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify the correct sequence of baking stages for common bakery products."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Understand individual and team workflow efficiently",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Work independently while following instructions"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Participate effectively in team tasks when required."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Communicate simply with others"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Follow directions from supervisors"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Demonstrate cooperation and respect when working with others."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Carrying out tasks within a given time frame following steps-by-steps instruction.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Follows step-by-step instruction to perform tasks."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Completes tasks within the given time"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Demonstrates basic awareness of time"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/009/L1",
+      "title": "Introduction to Industry Regulations, Bodies, and Stakeholders",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Know Industry Associations",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify common industry associations in baking and confectionery (PBAN, AMBCN, ICES)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State the roles of professional associations."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the benefits of belonging to an association (training, standards, networking)."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Explain how associations support industry development"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Identify opportunities for skill development through associations"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Identify Industry Stakeholders",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify key stakeholders (producers, suppliers, customers, regulators)"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Describe basic roles of each stakeholder in the industry"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Explain the relationship between stakeholders in the value chain"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Discuss awareness of customer expectations"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Identify the importance of teamwork in meeting stakeholder needs"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Identify Key Regulatory Bodies in the Industry",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Identify key regulatory bodies such as NAFDAC and Standards Organisation of Nigeria (SON)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "State the basic roles of these regulatory bodies"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the importance of inspections and certifications"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify basic documentation required by regulatory authorities"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Explain the implications of non-compliance with regulatory requirements in the workplace"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "4.0 Career path in baking and confectionery setting",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain career path"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Identify the different career levels in baking and confectionery setting"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Describe the duties and responsibilities associated with each career level"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Outline opportunities for professional growth and specialization within the baking industry."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

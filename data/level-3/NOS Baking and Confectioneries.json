@@ -1,0 +1,818 @@
+{
+  "trade_name": "NOS Baking and Confectioneries",
+  "level": 3,
+  "units": [
+    {
+      "code": "HTT/BKC/001/L3",
+      "title": "Safe, Hygienic and Secure Baking Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Implement food safety and hygiene regulations in a baking environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Interpret food safety guidelines"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Interpret organizational hygiene policies in relation to regulatory standards"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Demonstrate personal hygiene protocols, including wound management"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Apply appropriate protective equipment (PPE) selection"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Identify potential physical, chemical, and biological hazards"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Adopt organisational strategies for prevention of the hazards"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Monitor sanitation of the baking area and equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Formulate cleaning schedules for different areas, surfaces and baking equipment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Utilize appropriate cleaning agents and disinfectants."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Monitor the cleaning and sanitation procedures."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Manage safe disposal of bakery waste"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Implement preventive pest-control measures"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Manage workplace security and hazard control",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Im plement standard operating procedures (SOPs) for operating equipment (e.g., large mixers, industrial ovens)"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Se cure proper storage for bakery equipment, raw and packaging materials and finished products"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Implement organisation\u2019s emergency action plans, including fire safety, accident reporting, and first-aid protocols"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Adopt Government regulations on health and safety in Industry (OHS Act 2012)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/002/L3",
+      "title": "Teamwork in a Bakery",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Coordinate Team Activities in the Bakery",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Allocate tasks to team members based on skill level and production requirements"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Develop daily production schedules for team members"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Monitor workflow to ensure timely completion of tasks."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Adjust task allocation to address changes in production demand or staff availability"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Ensure compliance with standard operating procedures (SOPs) during team operations."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Communicate Effectively within the Team",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Use clear and professional communication when giving instructions."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Facilitate team briefings and debriefings before and after production."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Provide constructive feedback to team members to improve performance."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Actively listen and respond appropriately to team members\u2019 concerns"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Maintain proper documentation and communication records where necessary."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Demonstrate leadership and supervision skills",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Lead by example in maintaining hygiene, safety, and quality standards."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Motivate team members to achieve production targets."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Supervise team members to ensure adherence to processes and procedures"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Identify training needs and support skill development within the team."
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Evaluate team performance and recommend improvements"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "4.0 Resolve conflict and promote team cohesion",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Identify sources of conflict within the team promptly."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Apply appropriate conflict resolution techniques to address issues."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Encourage mutual respect and positive working relationships among team members."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Resolve disputes fairly and professionally."
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Foster an inclusive and supportive team environment."
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Escalate unresolved issues to management promptly"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/003/L3",
+      "title": "Communication System in a Work in Environment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Use a Non-complex Communication System in a Work environment.",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Use simple verbal means to pass on necessary information"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use non-verbal means to pass on necessary information"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Interpret symbols and signs appropriately"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Identify the source of information in a Work Environment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Locate the Source of information in an organization or Work Environment"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Relate appropriately with the source of information"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use the various information flow systems in a work environment"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use information to avoid challenges in a work situation"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Report findings in accordance to procedures in a work environment"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Demonstrate the means of communication in a work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Locate the various communication equipment in the work environment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Use the various communication equipment effectively in a work environment"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Pass information effectively to the right personnel"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Pass information effectively using symbols, signs and codes"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Follow instructions in line with ethics of the work environment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/004/L3",
+      "title": "Bakery Capacity Utilization",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Understand capacity planning concepts and techniques in baking",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the capacity of equipment (e.g., oven, mixer, generator, packaging lines)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain capacity planning strategies (e.g., increasing batch sizes, overtime, outsourcing"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Apply capacity planning strategies that eliminate wastage"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Determine capacity requirements for bakery products",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Analyze demand forecast for bread, cakes and pastries."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Identify capacity constraints (e.g., oven availability, skilled labor)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify measures to overcome constraints in 2.2"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Develop capacity plan",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Formulate a production schedule that aligns dough/batter preparation and baking times with fluctuating order volumes"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Evaluate the operational impact of alternative plans such as night shifts versus early morning scaling"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Allocate staff efficiently throughout the production shift"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "4.0 Monitor and review capacity performance",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Adopt Key Performance Indicators (KPIs) such as yield of usable product per batch and energy consumption per loaf"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Implement logging mechanisms to track actual production output against the planned schedule"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Recommend corrective actions or adjustments, such as mixing sequences when ingredients variations occur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/005/L3",
+      "title": "Baking Ingredients for Bakery Products",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Understand the functional properties of basic ingredients",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the chemical composition, such as protein, moisture and starch in different flour"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain specific applications of 1.1 in dough and batter production"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain how nutritive and non-nutritive sweeteners influence moisture retention, structure and crust color in baked goods"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Differentiate the functions of the various fats and emulsifiers (e.g. butter, shortening, oil) regarding fat crystallization, aeration and shortening power"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Evaluate role of leavening agents/ liquid in baking formulation.",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Apply the appropriate use and activation requirements of leavening agents for different products"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "State the effect of liquid temperature, pH and hydration levels on enzyme activity and gluten development"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Calculate baker\u2019s percentages to adjust recipes for scaling and formulation balance."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Apply knowledge of basic and optional ingredients to modify baked products.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "State the function of binders, thickeners and preservatives in maintaining product quality and shelf life."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Formulate Various bread varieties using optional ingredients such as butter bread, chocolate bread, sardine bread."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Formulate bread varieties for dietary restrictions \u2013 such as low sugar, wheat bread, baguette."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Formulate Various pastry varieties using optional ingredients."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/006/L3",
+      "title": "Bakery Processes and Procedures",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Maintain bakery equipment and work environment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Implement good manufacturing practices (GMPs)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Carry out pre and post productions checks on weighing, measuring, and temperature-monitoring devices"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain Hazard Analysis Critical Control Point (HACCP) protocols for the cleaning and sanitizing of the workspace"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Select, weigh, and mix a variety of bakery ingredients to precise specifications",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Adjust ingredient quantities to accommodate different batch sizes and scaling factors."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Evaluate the quality and freshness of raw materials and ingredients, reporting any non-conformities before use."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Use mixing techniques to create diverse doughs, laminated doughs, and batters."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Manage fermentation, Proofing, and baking environments.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Regulate humidity and temperature in the proofing cabinet to control fermentation rates precisely."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Adjust baking parameters (temperature profiles, steam injection, and airflow) for various product types"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Identify common defects during the baking process."
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Troubleshoot common defects during the baking process, implementing corrective actions in real time."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "4.0 Implement Quality Control and Post-Baking Procedures",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Evaluate finished products against sensory, texture, and visual quality standards."
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Manage the cooling, slicing, and finishing (glazing, icing, or dusting) processes to maintain structural integrity"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "manage post-baking processes including cooling, wrapping, and storage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/007/L3",
+      "title": "Handling, Packaging and Labelling Baked Products",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Prepare packaging and labelling materials",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Select appropriate packaging materials based on the size and type of the product."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Inspect all packaging materials for cleanliness, integrity, and damage prior to use."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Prepare labelling machinery or formulate clear, legible, and accurate labels containing mandatory product information"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Calculate the necessary quantity of packaging materials required to meet production targets without excessive waste"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Package baked products safely and hygienically",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Check that baked products have cooled to the appropriate temperature before packaging"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Handle products using sanitary techniques (e.g., using tongs, gloves, or clean workspace surfaces)"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Seal packaged product securely using suitable techniques (e.g., heat-sealing, twisting, or vacuum-sealing) ]"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Pack items uniformly into primary and secondary containers, verifying product count and quality standards"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Label packages with accurate product and regulatory information",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Use packaging Label that conform with regulatory standard"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Fix labels accurately and securely to the packaging in accordance with organizational guidelines"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Maintain uniformity of labelling across all packaged products."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/008/L3",
+      "title": "Display and Sale of Bakery Products",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Display Bakery Products",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Inspect bakery products for quality, freshness, and structural integrity prior to display."
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Transfer finished products using appropriate tools and techniques to prevent damage or contamination"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Display products to optimize visual appeal and product accessibility while maintaining appropriate temperature controls (where applicable)."
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Attach accurate and compliant pricing to all products or display units."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Advise Customers and Process Sales",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Greet customers in a courteous and professional manner"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Provide accurate information to customers regarding product ingredients, flavour profiles, and dietary suitability (e.g., gluten-free, vegan, or nut-free options)."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Process sales transactions correctly using standard point-of-sale (POS) equipment, Cash or digital systems"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Maintain Hygienic, Safety, and Stock Control",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Monitor stock levels and apply the First-In, First-Out (FIFO) method to ensure the freshness and rotation of baked goods."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Monitor stock levels and apply the First-Expire-First-Out (FEFO) method to ensure the freshness and rotation of baked goods."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Maintain the cleanliness and sanitation of the display counters, shelving, and surrounding retail environment throughout the shift"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Dispose of unsellable or expired bakery items safely in accordance with waste management and environmental policies"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Address customer feedback or complaints promptly and professionally."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/009/L3",
+      "title": "INVENTORY MANAGEMENT",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Understand the principles of inventory management in a commercial bakery",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain the importance of stock rotation (e.g., FEFO, FIFO) for perishable and temperature-sensitive bakery ingredients"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe different types of inventory (raw materials, semi-finished, finished products"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Analyse inventory control systems (FIFO, LIFO, FEFO)"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify key documentation used in inventory management (stock cards, bin cards, requisition forms)"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Implement procedures for receiving and storing bakery stocks",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Inspect incoming deliveries against purchase orders, verifying quantity, quality, temperature, and expiration dates"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Store ingredients and packaging materials according to organizational food safety standards and manufacturer guidelines"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Maintain complete and accurate records of received, transferred, and discarded stock"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Monitor and control daily inventory levels and usage.",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Conduct physical stock counts and reconcile discrepancies between actual stock and recorded balances"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Calculate ingredient usage and yield against production schedules to identify variances and prevent shortages"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Report damaged, expired, or spoiled stock following workplace and environmental regulations"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "4.0 Monitor inventory usage and control cost",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Track stock movement and usage rates in production"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Calculate stock levels and reorder levels"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Use inventory data to identify trends and variances"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Implement cost control measures to reduce waste and losses"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/010/L3",
+      "title": "Documentation in bakery operation",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Prepare accurate bakery production records",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Record production data accurately (quantities, time, process stages)"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Document ingredient usage and stock levels correctly"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Maintain batch records for different bakery products"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Ensure records are clear, legible, and completed in real-time"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Use appropriate formats (manual or digital systems) for documentation"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Apply documentation to support food safety and quality assurance",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Record critical control points (CCPs) in line with Hazard Analysis Critical Control Point (HACCP) principles"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Document temperature controls for storage, baking, and cooling processes"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Maintain cleaning and sanitation logs according to hygiene standards"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Report deviations and corrective actions accurately"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Ensure documentation supports compliance with food safety regulations"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Organize bakery documentation systems",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Organize records for easy retrieval and audit purposes"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Store documentation securely (physical and digital formats)"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Update records regularly to reflect current operations"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Ensure confidentiality and integrity of bakery record"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Implement basic filing and archiving systems"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

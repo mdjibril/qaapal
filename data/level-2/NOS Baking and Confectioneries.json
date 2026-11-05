@@ -1,0 +1,798 @@
+{
+  "trade_name": "NOS Baking and Confectioneries",
+  "level": 2,
+  "units": [
+    {
+      "code": "HTT/BKC/001/L2",
+      "title": "Communication at Work",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Understand communication",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain communication"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe how communication takes place"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the components of effective workplace communication."
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Describe the medium of communication",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Communicate effectively through non-verbal means."
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Communicate professionally using telephone and approved digital communication platforms."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Prepare simple workplace documents using appropriate written communication techniques."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Communicate in Workplace",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Communicate with a supervisor"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Communicate with peers"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Communicate with subordinates"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Communicate with customers"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/002/L2",
+      "title": "Teamwork",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Understand teamwork",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain what a team is"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Describe teamwork"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the purpose of a team"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Know the importance of teamwork",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain the importance of Organizational goals"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "List the attributes of a good team member"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "List the benefits of a team"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Know how to achieve an effective team",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Define job roles"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Outline methods for promoting cooperation and mutual support among colleagues."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Report workplace conflicts through appropriate reporting channels."
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "4.0 Understand the Motivation of a team",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain what motivation is"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Describe the importance of Motivation"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "State the effect of Incentives"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/003/L2",
+      "title": "Health and Safety",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Carry out Personal Hygiene and Cleanliness",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Wear clean, hygienic clothes and uniforms suitable for the tasks to be carried out"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Use Personal Protective Equipment"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Report any accidents promptly to the appropriate personnel"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Engage in Food handlers' practices",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Comply with the hygienic use of the cloak room"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Wash hands before entering food preparation areas and whenever contamination may occur."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Demonstrate appropriate personal hygiene before and during bakery operations."
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Explain allergy in relation to bakery"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Observe Work Environment Hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Clean worktables and Equipment"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Apply the 5s workplace organization principles within the bakery production area."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain Pest/insect control"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Dispose waste promptly and safely"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "4.0 Store Ingredients Safely",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain the importance of temperature management in storing foods"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Use the appropriate environment for storing different baked products at the right atmospheric conditions"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Store ingredients to prevent cross contamination."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "5.0 Understand visual factory",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify different signages in workplace"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Interpret signages in workplace"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Explain the importance of signages"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/004/L2",
+      "title": "Recipe Formulation",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Understand ingredients used in Baking",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify the types of Flours"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify the types of fats"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify the types of leavening agents"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify the types of Emulsifiers"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Explain the function of Salt in relation to baking"
+            },
+            {
+              "pc_code": "1.6",
+              "description": "Explain the function of Sugar in relation to baking"
+            },
+            {
+              "pc_code": "1.7",
+              "description": "Explain the function of Enzymes in relation to baking"
+            },
+            {
+              "pc_code": "1.8",
+              "description": "Identify Baking additives"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Understand Baker\u2019s percentage",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Define baker\u2019s percentage"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Calculate ingredient percentages using the Baker's Percentage method."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Convert recipe formulations into standard metric (SI) units."
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Recipe formulation",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Prepare standard recipes for bread."
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Prepare standard recipes for Milk/Butter Bread."
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Prepare standard recipes for oat bread"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Prepare standard recipes for biskvite"
+            },
+            {
+              "pc_code": "3.5",
+              "description": "Prepare standard recipes for pound cake"
+            },
+            {
+              "pc_code": "3.6",
+              "description": "Prepare standard recipes for vanilla cake"
+            },
+            {
+              "pc_code": "3.7",
+              "description": "Prepare standard recipes for basic scones"
+            },
+            {
+              "pc_code": "3.8",
+              "description": "Prepare standard recipes for meat pie"
+            },
+            {
+              "pc_code": "3.9",
+              "description": "Prepare standard recipes for basic puff puff"
+            },
+            {
+              "pc_code": "3.10",
+              "description": "Prepare standard recipes for Donut"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/005/L2",
+      "title": "Tools and Equipment",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Identify the classes of tools and Equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Identify cake-making tools and bakeware"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Identify fried and Baked pastry tools and bakeware"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Identify bread-making tools and bakeware"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Identify different mixing machines"
+            },
+            {
+              "pc_code": "1.5",
+              "description": "Identify types of ovens"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Use basic baking equipment",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Identify different power supply parts"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Operate bakery equipment safely by following start-up and shut-down procedures."
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Identify change-over switches"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Identify machines with moving parts with safety rules"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Identify heat-generating equipment and its safety rules"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Explain Safety rules for using blades/knives"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Understand Equipment and Tool Hygiene",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Clean Blades/Knives"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Explain the importance cleaning/sanitizing of movable parts of machines"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Explain the importance of cleaning/sanitizing of worktables and bowls"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Explain the importance of cleaning heat-generating equipment"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "4.0 Store equipment and Tools",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Explain safe storage of blades/knives"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Explain safe storage of bakeware"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Store equipment and tools in designated locations to prevent damage and loss."
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Maintain storage areas in a clean, orderly, and safe condition."
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "5.0 Maintain Equipment and Tools",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Identify types of Maintenance practices in the Bakery"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Explain how to schedule equipment maintenance"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Explain the cleaning of Equipment surfaces"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Identify error modes in equipment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/006/L2",
+      "title": "Processes and Procedures of Baking",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Understand Mis en place",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Explain mis en place"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "State benefits of Mis en place"
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Arrange ingredients in the order of use"
+            },
+            {
+              "pc_code": "1.4",
+              "description": "Scale and measure basic raw materials"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Know Mixing methods",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Explain mixing methods"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Demonstrate kneading techniques"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Carry out manual Batter mixing"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Use Mixing Equipment"
+            },
+            {
+              "pc_code": "2.5",
+              "description": "Explain mixing time and temperature"
+            },
+            {
+              "pc_code": "2.6",
+              "description": "Demonstrate mixing Tests"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Cut and Mould dough",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Demonstrate scaling and measuring units"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Demonstrate cutting and moulding techniques"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Operate cutting and moulding machines under supervision"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "4.0 Understand Fermentation Process/Proofing",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Demonstrate Yeast experimentation in relation to proofing time and humidity"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Test the viability of yeast"
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Explain variation in atmospheric proofing condition"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Use a proofer"
+            },
+            {
+              "pc_code": "4.5",
+              "description": "Use the manual 2-stage proofing technique"
+            },
+            {
+              "pc_code": "4.6",
+              "description": "Demonstrate the use of Chemical leavening agent"
+            },
+            {
+              "pc_code": "4.7",
+              "description": "Explain how to rest batter"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "5.0 Understand the Baking Process",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Explain the relationship between product weight, oven temperature and baking time"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Load baking trays/pans into the oven"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Explain the de-panning methods"
+            },
+            {
+              "pc_code": "5.4",
+              "description": "Safely handle freshly baked bread, cake, and pastries"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "6.0 Cool and Package",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Carry out different cooling methods: \uf0b7 Natural \uf0b7 Artificial"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Use cooling equipment \uf0b7 Heat Extractor, \uf0b7 ACs \uf0b7 Chillers/Refrigerators"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Package products using appropriate packaging materials"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Explain proper packaging techniques."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "HTT/BKC/007/L2",
+      "title": "Art of Baking-Bread Making and Confectionery",
+      "learning_outcomes": [
+        {
+          "lo_num": "1",
+          "description": "1.0 Understand the art of Baking",
+          "performance_criteria": [
+            {
+              "pc_code": "1.1",
+              "description": "Describe baking as an art of crafting"
+            },
+            {
+              "pc_code": "1.2",
+              "description": "Explain the benefits of crafting baked products."
+            },
+            {
+              "pc_code": "1.3",
+              "description": "Explain the tool requirements for Crafting"
+            }
+          ]
+        },
+        {
+          "lo_num": "2",
+          "description": "2.0 Demonstrate the Art of Baking \u2013Bread",
+          "performance_criteria": [
+            {
+              "pc_code": "2.1",
+              "description": "Outline Bread with optional ingredients"
+            },
+            {
+              "pc_code": "2.2",
+              "description": "Make Milk Bread in Burger Buns and Hot Dog Buns"
+            },
+            {
+              "pc_code": "2.3",
+              "description": "Make Butter and Chocolate bread in a weaving twist ]"
+            },
+            {
+              "pc_code": "2.4",
+              "description": "Make Sardine and Fruit bread in loaves with scores"
+            }
+          ]
+        },
+        {
+          "lo_num": "3",
+          "description": "3.0 Demonstrate the art of Baking -Bread-based premium products",
+          "performance_criteria": [
+            {
+              "pc_code": "3.1",
+              "description": "Make Wheat bread / Oat bread in an open-cover pan"
+            },
+            {
+              "pc_code": "3.2",
+              "description": "Make Cinnamon/custard cream rolls in a pan"
+            },
+            {
+              "pc_code": "3.3",
+              "description": "Make a single-layered burger"
+            },
+            {
+              "pc_code": "3.4",
+              "description": "Make Hot dog bread"
+            }
+          ]
+        },
+        {
+          "lo_num": "4",
+          "description": "4.0 Demonstrate the art of Baking -Fried Pastries",
+          "performance_criteria": [
+            {
+              "pc_code": "4.1",
+              "description": "Make a small chop in the full package"
+            },
+            {
+              "pc_code": "4.2",
+              "description": "Make Designers puff-puff consisting of Plain, peppered, chocolate, and red velvet innovation."
+            },
+            {
+              "pc_code": "4.3",
+              "description": "Make a doughnut with sprinkles"
+            },
+            {
+              "pc_code": "4.4",
+              "description": "Make Con-rolls and Scotch egg"
+            }
+          ]
+        },
+        {
+          "lo_num": "5",
+          "description": "5.0 Demonstrate the art of Baking-Pastry/Dessert",
+          "performance_criteria": [
+            {
+              "pc_code": "5.1",
+              "description": "Make Quiches"
+            },
+            {
+              "pc_code": "5.2",
+              "description": "Make Canap\u00e9s"
+            },
+            {
+              "pc_code": "5.3",
+              "description": "Make Scones"
+            }
+          ]
+        },
+        {
+          "lo_num": "6",
+          "description": "6.0 Demonstrate the art of Baking \u2013 Cakes",
+          "performance_criteria": [
+            {
+              "pc_code": "6.1",
+              "description": "Make Muffins"
+            },
+            {
+              "pc_code": "6.2",
+              "description": "Make Banana Bread"
+            },
+            {
+              "pc_code": "6.3",
+              "description": "Make Fruit cakes"
+            },
+            {
+              "pc_code": "6.4",
+              "description": "Pound cake"
+            }
+          ]
+        },
+        {
+          "lo_num": "7",
+          "description": "7.0 Demonstrate the art of Baking \u2013 Cake Covering/decoration",
+          "performance_criteria": [
+            {
+              "pc_code": "7.1",
+              "description": "Make Whipped Cream Decoration for a celebration cake"
+            },
+            {
+              "pc_code": "7.2",
+              "description": "Make an ice cream Decoration for a celebration cake"
+            },
+            {
+              "pc_code": "7.3",
+              "description": "Make cupcakes covering"
+            },
+            {
+              "pc_code": "7.4",
+              "description": "Make Ganache and Mousse"
+            },
+            {
+              "pc_code": "7.5",
+              "description": "Make a fondant decoration."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
