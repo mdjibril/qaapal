@@ -3,7 +3,13 @@ from auth_utils import get_supabase, get_admin_supabase
 from ai_policy import get_ai_access_policy
 import time
 import functools
+import re
 from datetime import datetime, timedelta, timezone
+
+
+def _natural_sort_key(s):
+    """Split string into alphanumeric chunks with integers converted to int for natural sorting."""
+    return [int(text) if text.isdigit() else text.casefold() for text in re.split(r'(\d+)', str(s))]
 
 
 def _is_retryable_db_error(error):
@@ -103,7 +109,8 @@ def fetch_units_by_trade_level(trade_level_id):
             .eq("trade_level_id", int(trade_level_id))
             .order("code")
         )
-        return response.data if response.data else []
+        units = response.data if response.data else []
+        return sorted(units, key=lambda u: _natural_sort_key(u.get('code') or ''))
     except Exception as e:
         st.error(f"Error fetching units: {e}")
         return []
@@ -218,9 +225,13 @@ def fetch_nested_nos(trade_id=None, trade_level_id=None):
         else:
             return {}
 
+        query = query.order("code")
         response = _execute_query(query)
         
-        raw_units = response.data
+        raw_units = sorted(
+            response.data or [],
+            key=lambda u: _natural_sort_key(u.get("code") or "")
+        )
         
         # Now we transform this nested list into the Dictionary format 
         # your dashboard.py currently expects: { "Unit: Title": { "LO: Desc": [PC List] } }
@@ -230,10 +241,18 @@ def fetch_nested_nos(trade_id=None, trade_level_id=None):
             unit_key = f"{unit['code']}: {unit['title']}"
             structured_data[unit_key] = {}
             
-            for lo in unit.get('learning_outcomes', []):
+            raw_los = sorted(
+                unit.get("learning_outcomes", []) or [],
+                key=lambda lo: _natural_sort_key(lo.get("lo_num") or "")
+            )
+            for lo in raw_los:
                 lo_key = f"LO {lo['lo_num']}: {lo['description']}"
                 # Get all PC descriptions for this LO
-                pcs = [f"{pc['pc_code']}: {pc['description']}" for pc in lo.get('performance_criteria', [])]
+                raw_pcs = sorted(
+                    lo.get("performance_criteria", []) or [],
+                    key=lambda pc: _natural_sort_key(pc.get("pc_code") or "")
+                )
+                pcs = [f"{pc['pc_code']}: {pc['description']}" for pc in raw_pcs]
                 structured_data[unit_key][lo_key] = pcs
                 
         return structured_data

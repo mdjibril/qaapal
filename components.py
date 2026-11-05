@@ -1,4 +1,11 @@
+import re
 import streamlit as st
+
+
+def _natural_sort_key(s):
+    """Split string into alphanumeric chunks with integers converted to int for natural sorting."""
+    return [int(text) if text.isdigit() else text.casefold() for text in re.split(r'(\d+)', str(s))]
+
 
 @st.fragment
 def render_nos_selection(nos_data, prefix, persistent_set_key, result_list_key, select_key_prefix):
@@ -36,7 +43,7 @@ def render_nos_selection(nos_data, prefix, persistent_set_key, result_list_key, 
             if key.startswith(f"{prefix}chk_") or key.startswith(f"{prefix}unit_all_"):
                 st.session_state[key] = False
 
-    unit_titles = list(nos_data.keys())
+    unit_titles = sorted(list(nos_data.keys()), key=_natural_sort_key)
     
     col1, col2 = st.columns([3, 1])
     with col1:
