@@ -266,7 +266,7 @@ def main():
                 if using_byok:
                     st.success("🔑 BYOK active — no platform quota used.")
                 elif tier == "free":
-                    st.caption(f"Weekly allowance: {credits} of 5 reports remaining.")
+                    st.caption(f"Available AI reports: {credits}.")
                 else:
                     quota = ai_policy.get("platform_quota")
                     if quota == 0:

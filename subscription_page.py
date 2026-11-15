@@ -44,7 +44,7 @@ def main():
     if user_role == "admin":
         credits_display = "Unlimited"
     elif current_tier == "free":
-        credits_display = f"{credits_balance} of 5 weekly"
+        credits_display = f"{credits_balance} reports"
     else:
         policy = st.session_state.get('_ai_policy', {})
         quota = policy.get('platform_quota')
@@ -57,7 +57,10 @@ def main():
             credits_display = f"{used} of {quota} monthly"
 
     with col_b:
-        st.metric("AI Platform Quota", credits_display)
+        st.metric(
+            "Available AI Reports" if current_tier == "free" and user_role != "admin" else "AI Platform Quota",
+            credits_display,
+        )
 
     if user_role != "admin" and current_tier != "platform_pass":
         st.markdown("---")
@@ -154,9 +157,12 @@ def main():
         
         if credits_balance <= 0:
             st.error("You have run out of free credits.")
-            st.info("💡 Your 5 free reports refresh every 7 days. You can wait for the weekly renewal, buy a credit pack, or upgrade now for unlimited access!")
+            st.info("💡 Your 5 free credits are restored 7 days after your balance reaches zero. You can wait for the refill, buy a credit pack, or upgrade now for unlimited access.")
         else:
-            st.info(f"You are currently on the Free plan with {credits_balance} of 5 weekly reports remaining.")
+            st.info(
+                f"You have {credits_balance} AI reports available. This balance includes any purchased credits. "
+                "Free credits are restored 7 days after your balance reaches zero."
+            )
             
         st.write("Upgrade to **Platform Pass** (BYOK access) or our **Lifetime Tier** (unlimited platform fallback + BYOK), or buy an **AI credit pack** for low-cost pay-as-you-go generation!")
         

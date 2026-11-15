@@ -644,7 +644,8 @@ def consume_ai_credit(org_id, tier, using_byok):
       - allowed=False: generation should be blocked (reason explains why).
 
     BYOK generations never consume platform credits.
-    Free tier consumes the weekly credits_balance.
+    Free tier consumes credits_balance, which includes both free refills and
+    purchased credit packs.
     Paid tiers consume monthly ai_quota_used (with platform_quota as the cap).
     """
     supabase = get_admin_supabase()
