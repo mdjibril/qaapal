@@ -11,7 +11,12 @@ UPDATE public.organizations
 SET credits_balance = GREATEST(COALESCE(credits_balance, 0), 0),
     free_credits_remaining = LEAST(GREATEST(COALESCE(credits_balance, 0), 0), 5),
     purchased_credits_remaining = GREATEST(COALESCE(credits_balance, 0) - 5, 0),
-    free_credits_reset_at = now() + interval '7 days'
+    free_credits_reset_at = CASE
+        WHEN COALESCE(credits_balance, 0) <= 0
+             AND last_credit_depletion IS NOT NULL
+        THEN last_credit_depletion + interval '7 days'
+        ELSE now() + interval '7 days'
+    END
 WHERE free_credits_remaining IS NULL
    OR purchased_credits_remaining IS NULL
    OR free_credits_reset_at IS NULL;
