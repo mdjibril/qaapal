@@ -6,12 +6,35 @@ ALTER TABLE public.organizations
 
 -- Preserve each organization's current visible balance. Since the old balance
 -- mixed free and purchased credits, assign up to five to the free bucket and
--- carry the remainder as purchased credits.
+-- carry the remainder as purchased credits. Enterprise accounts with the
+-- legacy 999999 marker use it to represent unlimited access, not report credits.
 UPDATE public.organizations
-SET credits_balance = GREATEST(COALESCE(credits_balance, 0), 0),
-    free_credits_remaining = LEAST(GREATEST(COALESCE(credits_balance, 0), 0), 5),
-    purchased_credits_remaining = GREATEST(COALESCE(credits_balance, 0) - 5, 0),
+SET credits_balance = CASE
+        WHEN subscription_tier = 'enterprise'
+             AND credits_balance = 999999
+             AND COALESCE(ai_credits_purchased, 0) = 0
+        THEN 5
+        ELSE GREATEST(COALESCE(credits_balance, 0), 0)
+    END,
+    free_credits_remaining = CASE
+        WHEN subscription_tier = 'enterprise'
+             AND credits_balance = 999999
+             AND COALESCE(ai_credits_purchased, 0) = 0
+        THEN 5
+        ELSE LEAST(GREATEST(COALESCE(credits_balance, 0), 0), 5)
+    END,
+    purchased_credits_remaining = CASE
+        WHEN subscription_tier = 'enterprise'
+             AND credits_balance = 999999
+             AND COALESCE(ai_credits_purchased, 0) = 0
+        THEN 0
+        ELSE GREATEST(COALESCE(credits_balance, 0) - 5, 0)
+    END,
     free_credits_reset_at = CASE
+        WHEN subscription_tier = 'enterprise'
+             AND credits_balance = 999999
+             AND COALESCE(ai_credits_purchased, 0) = 0
+        THEN now() + interval '7 days'
         WHEN COALESCE(credits_balance, 0) <= 0
              AND last_credit_depletion IS NOT NULL
         THEN last_credit_depletion + interval '7 days'
