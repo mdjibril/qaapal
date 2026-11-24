@@ -131,9 +131,7 @@ def main():
                 if not allowed:
                     st.error(f"Generation allowance unavailable: {reason}")
                     return
-                if reason == "free_credit":
-                    st.session_state.credits_balance -= 1
-                elif reason == "platform_quota":
+                if reason == "platform_quota":
                     st.session_state.ai_quota_used = st.session_state.get("ai_quota_used", 0) + 1
 
             st.session_state.workbook_items = items

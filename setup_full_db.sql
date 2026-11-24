@@ -7,7 +7,20 @@ CREATE EXTENSION IF NOT EXISTS pg_trgm WITH SCHEMA extensions;
 
 -- 0.1 Organizations Table
 -- subscription_tier is a PostgreSQL ENUM type (not plain text)
-CREATE TYPE IF NOT EXISTS public.subscription_tier AS ENUM ('free', 'platform_pass', 'lifetime', 'enterprise');
+DO $$
+BEGIN
+    IF NOT EXISTS (
+        SELECT 1
+        FROM pg_type t
+        JOIN pg_namespace n ON n.oid = t.typnamespace
+        WHERE n.nspname = 'public'
+          AND t.typname = 'subscription_tier'
+    ) THEN
+        CREATE TYPE public.subscription_tier
+        AS ENUM ('free', 'platform_pass', 'lifetime', 'enterprise');
+    END IF;
+END
+$$;
 
 -- Migration-safe: add 'lifetime' in case the type already exists without it
 ALTER TYPE public.subscription_tier ADD VALUE IF NOT EXISTS 'lifetime';
@@ -17,6 +30,9 @@ CREATE TABLE IF NOT EXISTS public.organizations (
     name text NOT NULL,
     subscription_tier public.subscription_tier DEFAULT 'free',
     credits_balance int DEFAULT 5,
+    free_credits_remaining int DEFAULT 5,
+    free_credits_reset_at timestamptz DEFAULT (now() + interval '7 days'),
+    purchased_credits_remaining int DEFAULT 0,
     master_api_key text,
     subscription_start_date timestamptz DEFAULT now(),
     last_credit_depletion timestamptz
@@ -31,6 +47,12 @@ ALTER TABLE IF EXISTS public.organizations
 ADD COLUMN IF NOT EXISTS ai_quota_used int DEFAULT 0;
 ALTER TABLE IF EXISTS public.organizations
 ADD COLUMN IF NOT EXISTS ai_quota_reset_at timestamptz DEFAULT now();
+ALTER TABLE IF EXISTS public.organizations
+ADD COLUMN IF NOT EXISTS free_credits_remaining int;
+ALTER TABLE IF EXISTS public.organizations
+ADD COLUMN IF NOT EXISTS free_credits_reset_at timestamptz;
+ALTER TABLE IF EXISTS public.organizations
+ADD COLUMN IF NOT EXISTS purchased_credits_remaining int;
 
 -- 1. User Profiles
 CREATE TABLE public.user_profiles (
@@ -284,11 +306,11 @@ CREATE TRIGGER on_auth_user_created
 -- Set search_path and revoke public execute for security definer functions
 -- to prevent search-path hijacking and unauthorized API access.
 
-ALTER FUNCTION public.handle_new_user_setup() SET search_path = public;
-REVOKE EXECUTE ON FUNCTION public.handle_new_user_setup() FROM PUBLIC;
+-- ALTER FUNCTION public.handle_new_user_setup() SET search_path = public;
+-- REVOKE EXECUTE ON FUNCTION public.handle_new_user_setup() FROM PUBLIC;
 
-ALTER FUNCTION public.rls_auto_enable() SET search_path = public;
-REVOKE EXECUTE ON FUNCTION public.rls_auto_enable() FROM PUBLIC;
+-- ALTER FUNCTION public.rls_auto_enable() SET search_path = public;
+-- REVOKE EXECUTE ON FUNCTION public.rls_auto_enable() FROM PUBLIC;
 
 -- 6.2 Auto-Renew Free Credits Logic
 -- Trigger to record when an organization's credit drops to zero

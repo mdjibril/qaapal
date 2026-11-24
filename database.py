@@ -53,6 +53,39 @@ def retry_db_call(max_attempts=3, base_delay=0.25):
 def _execute_query(query):
     return query.execute()
 
+
+def _credit_snapshot(data):
+    if isinstance(data, list) and len(data) == 1:
+        data = data[0]
+    if not isinstance(data, dict):
+        raise ValueError("Credit balance response was invalid.")
+    return {
+        "free_credits_remaining": int(data["free_credits_remaining"]),
+        "purchased_credits_remaining": int(data["purchased_credits_remaining"]),
+        "credits_balance": int(data["credits_balance"]),
+        "free_credits_reset_at": data["free_credits_reset_at"],
+    }
+
+
+def _sync_credit_session(snapshot):
+    st.session_state["free_credits_remaining"] = snapshot["free_credits_remaining"]
+    st.session_state["purchased_credits_remaining"] = snapshot["purchased_credits_remaining"]
+    st.session_state["credits_balance"] = snapshot["credits_balance"]
+    st.session_state["free_credits_reset_at"] = snapshot["free_credits_reset_at"]
+
+
+def refresh_ai_credit_balance(org_id):
+    """Apply any due weekly refill and return the current split credit balances."""
+    supabase = get_admin_supabase()
+    try:
+        response = _execute_query(
+            supabase.rpc("refresh_ai_credit_balance", {"p_org_id": org_id})
+        )
+        return True, _credit_snapshot(response.data)
+    except Exception as e:
+        return False, str(e)
+
+
 def fetch_trades():
     # Use the admin client to fetch the trade list to ensure it's always available 
     # in the sidebar, bypassing RLS restrictions for this specific lookup.
@@ -585,27 +618,22 @@ def upgrade_org_tier(org_id, new_tier='platform_pass'):
     """Updates the organization's tier and sets the subscription start date."""
     supabase = get_admin_supabase()
     try:
-        # Set subscription_start_date to now() when upgrading
-        _execute_query(supabase.table("organizations").update({"subscription_tier": new_tier, "subscription_start_date": "now()"}).eq("id", org_id))
+        response = _execute_query(
+            supabase.rpc(
+                "set_org_subscription_tier",
+                {"p_org_id": org_id, "p_new_tier": new_tier},
+            )
+        )
+        if response.data is False:
+            return False, "Organization not found."
         return True, None
     except Exception as e:
         return False, str(e)
 
 def decrement_credits(org_id):
     """Subtracts one credit from the organization's balance."""
-    supabase = get_admin_supabase()
-    try:
-        # Get current balance
-        res = _execute_query(supabase.table("organizations").select("credits_balance").eq("id", org_id).single())
-        current_balance = res.data.get("credits_balance", 0)
-        
-        if current_balance > 0:
-            _execute_query(supabase.table("organizations").update({"credits_balance": current_balance - 1}).eq("id", org_id))
-            return True
-        return False
-    except Exception as e:
-        print(f"Credit deduction error: {e}")
-        return False
+    allowed, _ = consume_ai_credit(org_id, "free", False)
+    return allowed
 
 def maybe_reset_ai_quota(org_id):
     """Resets a paid tier's monthly platform quota if 30 days have passed."""
@@ -644,8 +672,7 @@ def consume_ai_credit(org_id, tier, using_byok):
       - allowed=False: generation should be blocked (reason explains why).
 
     BYOK generations never consume platform credits.
-    Free tier consumes credits_balance, which includes both free refills and
-    purchased credit packs.
+    Free tier consumes the renewable free allowance first, then purchased credits.
     Paid tiers consume monthly ai_quota_used (with platform_quota as the cap).
     """
     supabase = get_admin_supabase()
@@ -654,21 +681,14 @@ def consume_ai_credit(org_id, tier, using_byok):
             return True, "byok"
 
         if tier == "free":
-            res = _execute_query(
-                supabase.table("organizations")
-                .select("credits_balance")
-                .eq("id", org_id)
-                .single()
+            response = _execute_query(
+                supabase.rpc("consume_ai_credit", {"p_org_id": org_id})
             )
-            balance = (res.data or {}).get("credits_balance", 0)
-            if balance <= 0:
-                return False, "no_free_credits"
-            _execute_query(
-                supabase.table("organizations")
-                .update({"credits_balance": balance - 1})
-                .eq("id", org_id)
-            )
-            return True, "free_credit"
+            data = response.data
+            if not isinstance(data, dict):
+                raise ValueError("Credit consumption response was invalid.")
+            _sync_credit_session(_credit_snapshot(data))
+            return bool(data.get("allowed")), data.get("reason", "error")
 
         # Paid tier: use monthly platform quota.
         # None = unlimited platform fallback; 0 = BYOK-only (no platform fallback).
@@ -711,7 +731,7 @@ def consume_ai_credit(org_id, tier, using_byok):
         return True, "platform_quota"
     except Exception as e:
         print(f"AI credit consumption error: {e}")
-        return False, "error"
+        return False, f"error: {e}"
 
 def check_platform_pass_expiry():
     """Checks if the platform_pass subscription has expired."""
@@ -822,7 +842,14 @@ def update_org_credits(org_id, new_balance):
     """Manually adjust credits for an organization."""
     supabase = get_admin_supabase()
     try:
-        _execute_query(supabase.table("organizations").update({"credits_balance": new_balance}).eq("id", org_id))
+        response = _execute_query(
+            supabase.rpc(
+                "set_ai_credit_balance",
+                {"p_org_id": org_id, "p_balance": new_balance},
+            )
+        )
+        if response.data is False:
+            return False, "Organization not found."
         return True, None
     except Exception as e:
         return False, str(e)
@@ -832,17 +859,19 @@ def top_up_org_credits(org_id, amount):
     """Add AI credits to an organization's purchased balance (credit packs)."""
     supabase = get_admin_supabase()
     try:
-        res = _execute_query(supabase.table("organizations").select("ai_credits_purchased, credits_balance").eq("id", org_id).single())
-        purchased = (res.data or {}).get("ai_credits_purchased", 0) or 0
-        balance = (res.data or {}).get("credits_balance", 0) or 0
-        _execute_query(
-            supabase.table("organizations")
-            .update({
-                "ai_credits_purchased": purchased + amount,
-                "credits_balance": balance + amount
-            })
-            .eq("id", org_id)
+        response = _execute_query(
+            supabase.rpc(
+                "grant_purchased_ai_credits",
+                {
+                    "p_org_id": org_id,
+                    "p_amount": amount,
+                    "p_provider": "admin",
+                    "p_product_name": "Admin credit top-up",
+                },
+            )
         )
+        if not isinstance(response.data, dict) or response.data.get("status") != "applied":
+            raise ValueError("The credit top-up was not applied.")
         return True, None
     except Exception as e:
         return False, str(e)

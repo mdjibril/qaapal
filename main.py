@@ -165,8 +165,18 @@ def main():
 
     role = st.session_state.get('user_role', 'assessor')
     tier = st.session_state.get('subscription_tier', 'free')
-    credits = st.session_state.get('credits_balance', 0)
     is_superadmin = (role == 'admin')
+    org_id = st.session_state.get('org_id')
+    if not is_superadmin and org_id:
+        balance_loaded, credit_snapshot = db.refresh_ai_credit_balance(org_id)
+        if balance_loaded:
+            st.session_state['free_credits_remaining'] = credit_snapshot['free_credits_remaining']
+            st.session_state['purchased_credits_remaining'] = credit_snapshot['purchased_credits_remaining']
+            st.session_state['credits_balance'] = credit_snapshot['credits_balance']
+            st.session_state['free_credits_reset_at'] = credit_snapshot['free_credits_reset_at']
+        else:
+            st.error(f"Could not refresh AI credits: {credit_snapshot}")
+    credits = st.session_state.get('credits_balance', 0)
     is_platform_pass_expired = db.check_platform_pass_expiry()
 
     ai_policy = get_ai_access_policy(role, tier, is_platform_pass_expired)
@@ -178,11 +188,20 @@ def main():
     if tier == 'platform_pass' and is_platform_pass_expired:
         st.session_state['subscription_tier'] = 'free'
         tier = 'free'
-        st.session_state['credits_balance'] = 0
-        credits = 0
-        org_id = st.session_state.get('org_id')
         if org_id:
-            db.upgrade_org_tier(org_id, 'free')
+            downgraded, error = db.upgrade_org_tier(org_id, 'free')
+            if downgraded:
+                balance_loaded, credit_snapshot = db.refresh_ai_credit_balance(org_id)
+                if balance_loaded:
+                    st.session_state['free_credits_remaining'] = credit_snapshot['free_credits_remaining']
+                    st.session_state['purchased_credits_remaining'] = credit_snapshot['purchased_credits_remaining']
+                    st.session_state['credits_balance'] = credit_snapshot['credits_balance']
+                    st.session_state['free_credits_reset_at'] = credit_snapshot['free_credits_reset_at']
+                    credits = credit_snapshot['credits_balance']
+                else:
+                    st.error(f"Could not refresh AI credits after plan downgrade: {credit_snapshot}")
+            else:
+                st.error(f"Could not downgrade the expired plan: {error}")
         ai_policy = get_ai_access_policy(role, tier, is_platform_pass_expired)
         st.session_state['_ai_policy'] = ai_policy
         show_byok = ai_policy["allow_byok"]
@@ -266,7 +285,14 @@ def main():
                 if using_byok:
                     st.success("🔑 BYOK active — no platform quota used.")
                 elif tier == "free":
-                    st.caption(f"Available AI reports: {credits}.")
+                    free_credits = st.session_state.get('free_credits_remaining', 0)
+                    purchased_credits = st.session_state.get('purchased_credits_remaining', 0)
+                    reset_at = st.session_state.get('free_credits_reset_at')
+                    reset_date = str(reset_at)[:10] if reset_at else "not scheduled"
+                    st.caption(
+                        f"Free: {free_credits}/5 (refills {reset_date}) · "
+                        f"Purchased: {purchased_credits} · Total: {credits}"
+                    )
                 else:
                     quota = ai_policy.get("platform_quota")
                     if quota == 0:

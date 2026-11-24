@@ -163,11 +163,11 @@ def main():
                         allowed, reason = db.consume_ai_credit(
                             st.session_state.org_id, tier, using_byok
                         )
-                        if allowed:
-                            if reason == "free_credit":
-                                st.session_state.credits_balance -= 1
-                            elif reason == "platform_quota":
-                                st.session_state.ai_quota_used = st.session_state.get("ai_quota_used", 0) + 1
+                        if not allowed:
+                            st.error(f"Could not consume an AI report: {reason}")
+                            return
+                        if reason == "platform_quota":
+                            st.session_state.ai_quota_used = st.session_state.get("ai_quota_used", 0) + 1
                     
                     st.session_state.current_witness_statement = ai_output + summary_block
                     status.update(label="✅ Witness Statement Ready!", state="complete", expanded=False)

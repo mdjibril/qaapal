@@ -185,6 +185,9 @@ python3 scripts/verify_api_connections.py
 
 ## 🛠️ Database Maintenance
 
+- Apply `supabase/migrations/20261124_ai_credit_buckets.sql` before deploying the split credit-balance code. The old combined amount cannot be split exactly, so migration assigns up to five existing credits to the free bucket and the remainder to purchased credits while preserving the visible total. It starts a new seven-day refill schedule and creates the atomic credit and payment RPCs.
+- The old `credits_balance` column remains a synchronized total for compatibility. Free reports refill to five every seven days independently; generation consumes free reports first, then purchased reports.
+- The Selar bridge must forward a stable payment reference as `transaction_id`, `transaction_reference`, `reference`, or `order_id` for credit-pack fulfillment. The webhook returns an error if a successful credit-pack payment has no reference; duplicate references are only granted once.
 - If signup marketing fields are not showing up in `user_profiles`, verify the `on_auth_user_created` trigger in the Supabase SQL Editor.
 - The trigger function should store `marketing_source`, `primary_trade`, `monthly_report_volume`, and `assessor_role` from `auth.users.raw_user_meta_data`.
 - If the trigger looks outdated, re-run the patched function and trigger definition from the SQL Editor instead of re-running the full database setup script.

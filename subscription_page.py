@@ -19,6 +19,9 @@ def main():
     org_id = st.session_state.get('org_id')
     current_tier = st.session_state.get('subscription_tier', 'free')
     credits_balance = st.session_state.get('credits_balance', 0)
+    free_credits = st.session_state.get('free_credits_remaining', 0)
+    purchased_credits = st.session_state.get('purchased_credits_remaining', 0)
+    free_credits_reset_at = st.session_state.get('free_credits_reset_at')
     subscription_start_date_str = st.session_state.get('subscription_start_date')
     
     selar_base = get_secret(["payments", "selar_link"], "payments__selar_link") or "https://selar.com/nsqassessment-platformpass"
@@ -134,8 +137,15 @@ def main():
                         success, err = db.upgrade_org_tier(org_id, 'free')
                         if success:
                             st.session_state['subscription_tier'] = 'free'
-                            st.session_state['credits_balance'] = 5
-                            st.toast("Downgraded to Free plan. You now have 5 credits.")
+                            balance_loaded, credit_snapshot = db.refresh_ai_credit_balance(org_id)
+                            if balance_loaded:
+                                st.session_state['free_credits_remaining'] = credit_snapshot['free_credits_remaining']
+                                st.session_state['purchased_credits_remaining'] = credit_snapshot['purchased_credits_remaining']
+                                st.session_state['credits_balance'] = credit_snapshot['credits_balance']
+                                st.session_state['free_credits_reset_at'] = credit_snapshot['free_credits_reset_at']
+                                st.toast("Downgraded to Free plan. Your 5 free reports are available.")
+                            else:
+                                st.error(f"Plan downgraded, but the credit balance could not be refreshed: {credit_snapshot}")
                             st.rerun()
                         else:
                             st.error(f"Failed to downgrade: {err}")
@@ -154,15 +164,15 @@ def main():
     elif current_tier == 'free':
         st.markdown("---")
         st.subheader("Upgrade Your Plan")
+        reset_date = str(free_credits_reset_at)[:10] if free_credits_reset_at else "not scheduled"
+        st.info(
+            f"Free reports: {free_credits}/5 (next refill {reset_date}). "
+            f"Purchased reports: {purchased_credits} (carry over)."
+        )
         
         if credits_balance <= 0:
-            st.error("You have run out of free credits.")
-            st.info("💡 Your 5 free credits are restored 7 days after your balance reaches zero. You can wait for the refill, buy a credit pack, or upgrade now for unlimited access.")
-        else:
-            st.info(
-                f"You have {credits_balance} AI reports available. This balance includes any purchased credits. "
-                "Free credits are restored 7 days after your balance reaches zero."
-            )
+            st.error("You have no AI reports available. You can wait for your next free refill, buy a credit pack, or upgrade.")
+        st.caption(f"Total available AI reports: {credits_balance}.")
             
         st.write("Upgrade to **Platform Pass** (BYOK access) or our **Lifetime Tier** (unlimited platform fallback + BYOK), or buy an **AI credit pack** for low-cost pay-as-you-go generation!")
         

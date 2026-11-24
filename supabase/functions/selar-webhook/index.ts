@@ -16,15 +16,15 @@ Deno.serve(async (req: Request) => {
 
     const payload = await req.json()
     const source = payload.source || "unknown"
-    console.log(`Received Webhook from ${source}:`, payload)
+    console.log(`Received Webhook from ${source}.`)
 
     // 1. Basic Validation
     // Selar status usually returns "success" for completed payments
-    if (payload.status !== 'success') {
+    if (String(payload.status || "").toLowerCase() !== 'success') {
       return new Response('Ignored: Transaction not successful', { status: 200 })
     }
 
-    const customerEmail = payload.customer?.email
+    const customerEmail = String(payload.customer?.email || "").trim().toLowerCase()
     if (!customerEmail) {
       return new Response('Error: No customer email found', { status: 400 })
     }
@@ -52,11 +52,59 @@ Deno.serve(async (req: Request) => {
     const orgId = profile.org_id
 
     // 4. Map the purchased product to a subscription tier
-    const product = (payload.product || "").toLowerCase()
+    const productName = String(payload.product || "")
+    const product = productName.toLowerCase()
 
-    // Credit-pack sales (20/150/400 Report) must not change the subscription tier.
+    // Credit-pack sales must not change the subscription tier.
     if (product.includes("report")) {
-      return new Response('Ignored: credit pack sale (tier unchanged)', { status: 200 })
+      const packMatch = product.match(/\b(20|150|400)\s*reports?\b/)
+      if (!packMatch) {
+        console.error(`Unsupported credit-pack product: ${productName}`)
+        return new Response('Unsupported credit-pack product', { status: 422 })
+      }
+
+      const providerReference = String(
+        payload.transaction_id
+          ?? payload.transaction_reference
+          ?? payload.reference
+          ?? payload.order_id
+          ?? ""
+      ).trim()
+      if (!providerReference) {
+        console.error("Credit-pack payment is missing a provider transaction reference.")
+        return new Response('Missing payment transaction reference', { status: 400 })
+      }
+
+      const parsedAmountPaid = Number(payload.amount_paid ?? payload.amount)
+      const amountPaid = Number.isFinite(parsedAmountPaid) ? parsedAmountPaid : null
+      const currency = payload.currency ? String(payload.currency) : null
+      const { data: fulfillment, error: fulfillmentError } = await supabaseAdmin.rpc(
+        "grant_purchased_ai_credits",
+        {
+          p_org_id: orgId,
+          p_amount: Number(packMatch[1]),
+          p_provider_reference: providerReference,
+          p_provider: "selar",
+          p_customer_email: customerEmail,
+          p_product_name: productName,
+          p_amount_paid: amountPaid,
+          p_currency: currency,
+        },
+      )
+
+      if (fulfillmentError) {
+        console.error("Credit-pack fulfillment failed:", fulfillmentError)
+        return new Response('Credit-pack fulfillment failed', { status: 500 })
+      }
+      if (fulfillment?.status !== "applied" && fulfillment?.status !== "duplicate") {
+        console.error("Credit-pack fulfillment returned an unexpected result.")
+        return new Response('Credit-pack fulfillment failed', { status: 500 })
+      }
+
+      return new Response(JSON.stringify({ message: fulfillment.status }), {
+        headers: { 'Content-Type': 'application/json' },
+        status: 200,
+      })
     }
 
     let tier = "platform_pass"
