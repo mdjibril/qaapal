@@ -300,9 +300,10 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
     *   [x] Show AI credit balance/quota separately from platform access.
     *   [x] Add "Buy AI Credits" links alongside upgrade/downgrade controls.
 
-*   [x] **Weekly free-credit renewal (Python-side)**
-    *   [x] Refill free tier to 5 credits on login after 7 days from `last_credit_depletion`.
-    *   [x] Wired in `finalize_session()`; no pg_cron extension required.
+*   [x] **Split free and purchased report balances**
+    *   [x] Refill the free allowance to 5 every seven days, independently of purchased credits.
+    *   [x] Consume free reports before purchased reports and show both balances in the UI.
+    *   [x] Use database RPCs for atomic consumption and credit-pack grants.
 
 *   [x] **Provider cost documentation**
     *   [x] Free Gemini key → platform model `gemini-3.5-flash`.
@@ -314,8 +315,9 @@ These features target Quality Assurance Assessors (QAA, IQA, EQA) to make the to
 #### Tier 4 — Automation (post-revenue)
 
 *   [ ] **Selar webhook integration**
-    *   [ ] Auto-credit organizations when a credit-pack or subscription payment clears.
-    *   [ ] Store transaction reference for reconciliation.
+    *   [x] Auto-credit organizations when a credit-pack payment clears.
+    *   [x] Store a unique provider transaction reference for credit-pack idempotency.
+    *   [ ] Store transaction references for subscription payments.
     *   [ ] Handle refunds/chargebacks gracefully.
 
 *   [ ] **Usage analytics & alerts**
@@ -331,34 +333,33 @@ credit fulfillment are reliable first.
 
 ##### 1. Add payment transaction storage
 
-Create a `payment_transactions` table in Supabase to make webhook processing
-auditable and idempotent. The provider reference must be unique because Selar
-may retry the same webhook.
+The `payment_transactions` table now makes credit-pack webhook processing
+auditable and idempotent. Its provider reference is unique because Selar may
+retry the same webhook.
 
-Suggested fields:
+The current table records:
 
 * `provider`
 * `provider_reference` (unique)
 * `org_id`
 * `customer_email`
 * `product_name`
-* `amount`
+* `amount_paid`
+* `currency`
 * `status`
 * `credits_applied`
-* `raw_payload` (`jsonb`)
 * `created_at`
-* `refunded_at`
 
-Enable RLS and restrict normal users from reading payment records. Webhook
-processing should use the Supabase service-role client.
+RLS is enabled and normal users cannot read payment records. Webhook processing
+uses the Supabase service-role client.
 
 ##### 2. Make credit fulfillment atomic
 
-Add a database function or protected server-side operation that:
+The `grant_purchased_ai_credits` database function:
 
 1. Checks whether `provider_reference` already exists.
 2. Inserts the transaction if it is new.
-3. Adds the purchased credits to `organizations.credits_balance`.
+3. Adds the purchased credits to `organizations.purchased_credits_remaining`.
 4. Increments `ai_credits_purchased`.
 5. Returns the result as `applied`, `duplicate`, or `failed`.
 
@@ -384,9 +385,8 @@ Update `supabase/functions/selar-webhook/index.ts` while keeping the existing
 7. Return success for both newly applied and duplicate events so Selar does
      not retry a correctly processed payment.
 
-The current implementation updates subscription tiers but intentionally ignores
-products containing `report`; this branch must be replaced with credit-pack
-fulfillment.
+Credit-pack fulfillment is implemented. Subscription changes still use the
+existing tier-update path and are not yet recorded in `payment_transactions`.
 
 ##### 4. Handle refunds and chargebacks
 

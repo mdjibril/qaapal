@@ -12,6 +12,7 @@ archived/
 .streamlit/secrets.toml
 .streamlit/cache/
 .streamlit/credentials.toml
+.streamlit/secrets.local.toml
 
 # Supabase & Deno locals
 supabase/.temp/

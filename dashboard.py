@@ -334,11 +334,11 @@ Return a JSON array of the PC strings that are demonstrably evidenced in the not
                         allowed, reason = db.consume_ai_credit(
                             st.session_state.org_id, tier, using_byok
                         )
-                        if allowed:
-                            if reason == "free_credit":
-                                st.session_state.credits_balance -= 1
-                            elif reason == "platform_quota":
-                                st.session_state.ai_quota_used = st.session_state.get("ai_quota_used", 0) + 1
+                        if not allowed:
+                            st.error(f"Could not consume an AI report: {reason}")
+                            return
+                        if reason == "platform_quota":
+                            st.session_state.ai_quota_used = st.session_state.get("ai_quota_used", 0) + 1
                     
                     full_report_text = ai_narrative + summary_block
                     st.session_state['current_assessment_report'] = full_report_text
